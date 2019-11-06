@@ -34,12 +34,17 @@
   
   <url>
     <loc>https://mostafatouny.github.io/post/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:02:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/writing-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/linux-despise-windows-gui/</loc>
+    <lastmod>2019-11-06T00:02:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/post/favorite-books-list/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -83,11 +88,6 @@
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/jupyter/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mostafatouny.github.io/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
@@ -120,11 +120,6 @@
   <url>
     <loc>https://mostafatouny.github.io/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mostafatouny.github.io/post/getting-started/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
