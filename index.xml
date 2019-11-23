@@ -106,6 +106,52 @@
     </item>
     
     <item>
+      <title>Emotion Annotation: W3C&#39;s EmotionML</title>
+      <link>https://mostafatouny.github.io/post/emotionml-annot/</link>
+      <pubDate>Sat, 23 Nov 2019 00:10:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/emotionml-annot/</guid>
+      <description>
+
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;Considering the hype of data-science, Most probably, you have heard of analyzing users to adapt the content shown to them. Such analysis is closely related to human emotions as decision makers wish to know what users tend to and get influenced by. For example, Advertisments served by Google are adapted to what is expected to attract you. Some video-games assess your skill and accordingly tune the difficulty so that you neither feel frustrated of inaccessible challenge nor bored of trivial walkthrough. Check out Square Enix&amp;rsquo;s GDC slides, &lt;a href=&#34;https://www.gdcvault.com/play/1026416/Changing-the-Game-Measuring-and&#34; target=&#34;_blank&#34;&gt;Changing the Game: Measuring and Influencing Player Emotions Through Meta AI&lt;/a&gt;. Regardless of the application, In case we wished machines to communicate or process humans emotions, Then the data associated with emotions must be formed in some representation. Usually, The models which describe emotions are developed in psychology and cognitive science literature. However, I shall use these models in describing computer data related to emotions. This is not the first time cognitive science and computer science go hand in hand. On the contrary, The interplay of both of them is deeply rooted. In fact, One of the main pillars of the revolution of cognitive science is psychological mechanisms being modeled as AI models!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prototype-emotion-annotation&#34;&gt;Prototype: Emotion Annotation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#future-and-potential&#34;&gt;Future and Potential&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;prototype-emotion-annotation&#34;&gt;Prototype: Emotion Annotation&lt;/h3&gt;
+
+&lt;p&gt;I shall now present a basic prototype. It is based on &lt;a href=&#34;https://www.w3.org/TR/emotionml/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;W3C&lt;/em&gt;&amp;rsquo;s Emotion Markup Language (2014)&lt;/a&gt;, so check it out in order to grasp the scene behind my prototype. In addition, You might wish to consult &lt;a href=&#34;https://www.gamasutra.com/blogs/RizkyWinanda/20140513/217622/A_Better_Narrative_using_OCC_Emotional_Model.php&#34; target=&#34;_blank&#34;&gt;Rizky Winanda&amp;rsquo;s article&lt;/a&gt;, as the OCC model is the most successfull model in computer science for simulating emotions in AI agents. Winanda&amp;rsquo;s article is going to familiarize you with emotion modelling.&lt;/p&gt;
+
+&lt;p&gt;My prototype is a very primtive proof of concept and has nothing to do with fancy modelling or content generation. It is basically a manual-entry of emotion-based annotation. These annotations are linked to entities via unique IDs. Each entity is described by filling values of an emotion-based model. IDs and their associated values are stored in an XML file. Check out the &lt;a href=&#34;https://github.com/mostafatouny/Emotion-Annotation-W3C-EmotionML&#34; target=&#34;_blank&#34;&gt;github repo&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;future-and-potential&#34;&gt;Future and Potential&lt;/h3&gt;
+
+&lt;p&gt;It is commonly said that in the same way the twentieth century had been an astonishing strike for physicists —by quantum mechanics, The twenty-first century is going to be for cognitive-scientists. Nonetheless, I had never heard of any notable work which integrates cognitive mechanisms into data-science. Seemingly, Stakeholders would wait for some time untill cognition see the light in their data-driven business models.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, Researchers have a huge uncharted ground to explore as the disciple of affective computing is still in its infancy. While physics enjoyed brights like Issac Newton, James Clark Maxwell and Einstein, The scene in cognitive or affective science saw no similar accomplishments. I personally believe the next step forward in understanding human emotions shall not be by cognitive-science community but data scientists who aspire to model users&amp;rsquo; emotions, explain how some patterns contribute to users engagement, and even adapt emotion-based content for them. I partially attribute my stance due to the ever increasing demand of monetization via data-driven business models. Currently, Industries measure users engagement by pure statistical metrics like the average session time of using some application. Notably, Cognitive and emotion sciences theories are largely based upon statistics as well. I find it so curious for an engineering disciple to influence a scientific one, Computer programs acting as precise models for psychologists! You should know where to look now for such intriguing investigations.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;Today&amp;rsquo;s machines are hoped to effictively process and communicate emotions. The industrial impact of modelling users and generate adapted content is mind-boggling. While the current state of the art relies upon pure statistical metrics for measuring users engagement, Further developments in cognition or affection are expected to see the light in data-science. The interplay of computing and affection is going to impact affection researchers alongside engineers and stakeholders.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Lacking Sample Data? Generate it</title>
       <link>https://mostafatouny.github.io/post/gen-emo-data/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
