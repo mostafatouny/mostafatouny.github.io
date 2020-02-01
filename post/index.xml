@@ -189,7 +189,7 @@ f.close()
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 
 import matplotlib.pyplot as plt
-from scipy import stats 
+from scipy import stats
 
 data = [
 	[],
@@ -207,7 +207,7 @@ while(1):
 	line = f.readline()
 	if (line == &amp;quot;&amp;quot;):
 		break
-	
+
 	# split at space; last character, &#39;\n&#39;, is unwittingly ignored
 	line_split = line.split()
 
@@ -236,7 +236,7 @@ for i in range (len(data[0])):
 # show intercept, slope, .. etc
 print(res)
 
-# plot both the original and fitted models, colored blue and red, respectively 
+# plot both the original and fitted models, colored blue and red, respectively
 plt.plot(data[0], data[1], &#39;o&#39;, label=&#39;generated data&#39;)
 plt.plot(data[0], resData, &#39;r&#39;, label=&#39;fitted data&#39;)
 plt.legend()
@@ -377,6 +377,117 @@ from the gaming industry including giants like Unity. I believe it is a good pra
 &lt;p&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/41WhAf5mykL._SX313_BO1,204,203,200_.jpg&#34; alt=&#34;Artificial Intelligence and Games. Springer&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yannakakis and Togelius&amp;rsquo;s modern &lt;a href=&#34;https://www.amazon.com/Artificial-Intelligence-Games-Georgios-Yannakakis/dp/3319635182/ref=sr_1_1&#34; target=&#34;_blank&#34;&gt;masterpiece&lt;/a&gt;. Whether you do gaming AI for science, or science for fun video-game design, this book is still targeting you. Its topics include modelling players, procedural content generation, and autonomous AI agents (NPCs). In addition to an excellent overview of traditional AI methods taught in introductory AI course, up to the recent trend of applying machine learning in gaming AI, The book is promosing to be the standard survey for both practitioners and academics. It shall be your first station to any problem related to the intersection of games and AI.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scraping Data of 2019 Best PS4 Games on Metacritic</title>
+      <link>https://mostafatouny.github.io/post/scraping-metacritic/</link>
+      <pubDate>Fri, 01 Feb 2019 00:17:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/scraping-metacritic/</guid>
+      <description>
+
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;The post you are currently reading shall demonstrate how far our data published on social media is being heavily gathered for data analysis. The demonstration holds as a beginner kid like me is going to scrape data, i.e store data on a file, after only two weeks of learning. Not only the code I built works solely on the website I shall be presenting but rather on any website! However, It is not robust enough to rely upon except for simple cases.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#motivation&#34;&gt;Motivation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#code-on-github&#34;&gt;Code on Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-the-code-works&#34;&gt;How The Code Works?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
+
+&lt;p&gt;Machine learning, The prettiest-looking AI nowadays, does not work without data. In fact, one of the fundamental pillars of AI&amp;rsquo;s success is the availability of right data. Unfortunately, industries do not like to share them. Most probably, due to the sensitivity of competition, as rivals would always favor to stay ahead of their competitors. So, what do you do if you needed data for research, business, or even for a hobbyist-project but could not find it? Buying data costs you too much, and not everyone has tight relationships with industries whose platforms generate desired data. Scraping websites, i.e gathering data on web into a readable format by the computer, is a highly recommended skill for data analysts.&lt;/p&gt;
+
+&lt;h3 id=&#34;code-on-github&#34;&gt;Code on Github&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mostafatouny/data-scraper&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; is the scraper I built. Even-though its design is not restricted to a specific website, I only test it on metacritic. The code contains an example on scraping &lt;a href=&#34;https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&#34; target=&#34;_blank&#34;&gt;metacritic&amp;rsquo;s 2019 best PS4 games&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-the-code-works&#34;&gt;How The Code Works?&lt;/h3&gt;
+
+&lt;p&gt;The following is a brief illustration of metacritic&amp;rsquo;s example on github&amp;rsquo;s repo. If you checked out metacritic&amp;rsquo;s link, you would see a list of games, each with its own score and release date. First, Let&amp;rsquo;s take a look on what your machine actually reads in order to render that page.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol class=&amp;quot;list_products list_product_condensed&amp;quot;
+  &amp;lt;li class=&amp;quot;product game_product&amp;quot;&amp;gt;
+    ...
+  &amp;lt;/li&amp;gt;
+  &amp;lt;li class=&amp;quot;product game_product&amp;quot;&amp;gt;
+    ...
+  &amp;lt;/li&amp;gt;
+  &amp;lt;li class=&amp;quot;product game_product&amp;quot;&amp;gt;
+    ..
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;each &lt;code&gt;li&lt;/code&gt; tag corresponds to some game on the list. While &lt;code&gt;ol&lt;/code&gt; tag corresponds to a wrapper of all games on the list. Here is a sample of what is inside each game&amp;rsquo;s tag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;li class=&amp;quot;product game_product&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;product_wrap&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;basic_stat product_title&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;/game/playstation-4/nier-automata---game-of-the-yorha-edition&amp;quot;
+        NieR: Automata - Game of the YoRHa Edition
+      &amp;lt;/a&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/li&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, How does the program scrapes data of websites? There are three steps to get the code working, (I) enter the link which contains data intended to be scraped,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mainURL = &amp;quot;https://www.metacritic.com&amp;quot;
+subURL = &amp;quot;/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(II) specify the tags&amp;rsquo; path from root up to the tag which wraps all games list,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;listNodeSequence = tagSequence.tagSequence([(&#39;ol&#39;, {&amp;quot;class&amp;quot;:&amp;quot;list_products list_product_condensed&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_condensed&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;: &amp;quot;body_wrap&amp;quot; ..
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then (III) for each data desired to be scraped, alike game name, game score, game release date, specify the path from the game&amp;rsquo;s tag up to that data. make sure not to type any game-specific data like the href of &lt;em&gt;nier: automata&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;columns_paths = tagsPaths.tagsPaths(
+    [
+    (&#39;title&#39;, [(&#39;a&#39;,), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;basic_stat product_title&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_wrap&amp;quot;})], -1),
+
+    (&#39;critic_rating&#39;, [(&#39;div&#39;,), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_score&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_wrap&amp;quot;})], -1),
+
+    (&#39;user_rating&#39;, [(&#39;span&#39;, {&amp;quot;class&amp;quot;:&amp;quot;textscore&amp;quot;}), (&#39;li&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_avguserscore&amp;quot;}), (&#39;ul&#39;,), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;condensed_stats&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_wrap&amp;quot;})], -1),
+
+    (&#39;release_date&#39;, [(&#39;span&#39;, {&amp;quot;class&amp;quot;:&amp;quot;data&amp;quot;}), (&#39;li&#39;, {&amp;quot;class&amp;quot;:&amp;quot;release_date&amp;quot;}), (&#39;ul&#39;,), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;condensed_stats&amp;quot;}), (&#39;div&#39;, {&amp;quot;class&amp;quot;:&amp;quot;product_wrap&amp;quot;})], -1)
+    ]
+    )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;after running the program, you should obtain a list of containing all games, not just one of them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+	{
+		&amp;quot;critic_rating&amp;quot;: &amp;quot;91&amp;quot;,
+		&amp;quot;release_date&amp;quot;: &amp;quot;Jul  2, 2019&amp;quot;,
+		&amp;quot;title&amp;quot;: &amp;quot;Final Fantasy XIV: Shadowbringers&amp;quot;,
+		&amp;quot;user_rating&amp;quot;: &amp;quot;8.3&amp;quot;
+	},
+	{
+		&amp;quot;critic_rating&amp;quot;: &amp;quot;91&amp;quot;,
+		&amp;quot;release_date&amp;quot;: &amp;quot;Feb 26, 2019&amp;quot;,
+		&amp;quot;title&amp;quot;: &amp;quot;NieR: Automata - Game of the YoRHa Edition&amp;quot;,
+		&amp;quot;user_rating&amp;quot;: &amp;quot;8.4&amp;quot;
+	},
+  ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The remaining of the code sample are available in the github&amp;rsquo;s repo. They are named _metacritic2019&lt;em&gt;main.py&lt;/em&gt;, _metacritic2019&lt;em&gt;functions.py.&lt;/em&gt; and _metacritic2019&lt;em&gt;data.json&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;that&amp;rsquo;s it! for any website, just provide the link which contains data, and the two paths, one from root up to wrapper tag, and the other from each record&amp;rsquo;s tag up to desired data.&lt;/p&gt;
 </description>
     </item>
     
