@@ -106,6 +106,59 @@
     </item>
     
     <item>
+      <title>Users Ratings Re-weighted: Putting Trust Into Statistics</title>
+      <link>https://mostafatouny.github.io/post/ratings-reweighted/</link>
+      <pubDate>Wed, 19 Feb 2020 00:23:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/ratings-reweighted/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-of-consumers-Subjectivity&#34;&gt;Problem of Consumers&#39; Subjectivity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-did-i-approach-the-problem&#34;&gt;How did I approach the problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#showing-off-my-solution&#34;&gt;Showing off My Solution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#am-i-sure-of-my-math&#34;&gt;Am I Sure of My Math?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id=&#34;problem-of-consumers-subjectivity&#34;&gt;Problem of Consumers&#39; Subjectivity&lt;/h3&gt;
+
+&lt;p&gt;Consumers ratings are usually not based on objective metrics. Rather, They represent a personal subjective user experience such as dis-likeness of interface or aesthetic design. Could such subjective data be utilized for a rigor analysis of consumers behavior? Could we understand why consumers behave in some manner in response to some event/situation? The problem illustrated here is specially devoted to ratings of games made by the community of gamers.&lt;/p&gt;
+
+&lt;h3 id=&#34;how-did-i-approach-the-problem&#34;&gt;How did I approach the problem?&lt;/h3&gt;
+
+&lt;p&gt;We hypothesize a representative rating as follows: &lt;strong&gt;(I)&lt;/strong&gt; A game with both great technical specifications and fun gameplay deserves highest rating, &lt;strong&gt;(II)&lt;/strong&gt; A game with both low technical specifications and fun gameplay deserves lowest rating, &lt;strong&gt;(III)&lt;/strong&gt; A game with great technical specifications and poor gameplay deserves low rating slightly greater than &lt;em&gt;case (II)&lt;/em&gt;, &lt;strong&gt;(IV)&lt;/strong&gt; A game with low technical specifications and great gameplay deserves high rating slightly lower than &lt;em&gt;case(I)&lt;/em&gt;. The hypothesis is based on observations such as: &lt;strong&gt;(I)&lt;/strong&gt; &lt;em&gt;Minecraft&lt;/em&gt;, Even-though its graphics is extremely primitive, It is excessively praised by the community of gamers. &lt;a href=&#34;https://www.guinnessworldrecords.com/news/2014/11/minecraft-ten-of-the-best-block-busting-world-records-61744&#34;&gt;The game is one of the most successfull entertainment franchises&lt;/a&gt;. &lt;strong&gt;(II)&lt;/strong&gt; &lt;em&gt;Anthem&lt;/em&gt;, Even-though its graphics is fascinating, It was excessively disappointing for the community. &lt;a href=&#34;https://gizmodo.com/congratulations-to-ea-games-for-posting-the-most-hated-1820391000&#34;&gt;EA&#39;s comment on the game is the most hated comment in reddit history&lt;/a&gt;. Generally speaking, It is perceived that great gameplay dominates poor technicalities, While great technical specifications do not forgive poor gameplay.&lt;/p&gt;
+
+&lt;h3 id=&#34;showing-off-my-solution&#34;&gt;Showing off My Solution&lt;/h3&gt;
+
+&lt;p&gt;You have already seen it. It is displayed as a figure at the beginning of page. I shall give you the function of it in a moment. First, We assume community ratings are mostly based on gameplay and how far they enjoyed the game, and assume journalism ratings are mostly based on technical specification like graphics fidelity. We construct a weighted map, i.e function, of both ratings as:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[repRat = (jw \times jr) + (cw \times cr)\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;where $jr$ and $cr$ represent ratings given by journalism and community, respectively. How do we define weights of both journalism and community ratings, namely, $jw$ and $cw$? Recall that we wish to achieve the idea illustrated in the previous paragraph, that is, weighting gameplay more than technical specifications. You might think of constant weights such as $0.75$ and $0.25$ but I do not think a linear model shall best-fit our desired &lt;em&gt;representative-rating&lt;/em&gt;. Rather, I think an exponential grow rate is better. we define weight of journalism ratings as a map of community ratings. as:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[jw = \frac{cr^{0.3}}{2}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We define weight of community ratings as:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[1 - tw\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The core of the trick here is that the lower a community rating is, which we assumed to represent gameplay experience, the the greater the rate of decrease becomes, as illustrated by the graph above. So, the lower the gameplay experience is, the less influence technical-specifications have.&lt;/p&gt;
+
+&lt;h3 id=&#34;am-i-sure-of-my-math&#34;&gt;Am I Sure of My Math?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;NO!!&lt;/strong&gt; What I have covered so far is at best a naive approximation based on domain-knowledge expertise. The assumptions about community and journalism ratings are not accurate enough. Also, The curve is not verified to fit some objective data. Conclusions made here are based on subjective intuition rather than rigor and accurate statistical analysis. However, the intuition here is slightly enhanced by extremely primitive mathematical toolbox and basic experience with gaming industry. It is our hope to devise a more rigor analysis motivated by one illustrated here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creativity vs Winning</title>
       <link>https://mostafatouny.github.io/post/creativity-vs-winning/</link>
       <pubDate>Sat, 01 Feb 2020 00:23:00 +0000</pubDate>
