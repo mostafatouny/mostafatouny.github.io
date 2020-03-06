@@ -5,12 +5,2401 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 19 Feb 2020 00:23:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/img/icon-32.png</url>
       <title>Blog</title>
       <link>https://mostafatouny.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Analyzing Disparity Between Users and Journalists Ratings</title>
+      <link>https://mostafatouny.github.io/post/permutation-test/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/permutation-test/</guid>
+      <description>
+
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;In this post we analyze and compare &lt;a href=&#34;https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&#34; target=&#34;_blank&#34;&gt;metacritic ratings of best 2019 games&lt;/a&gt;, Given by both the gaming community and professional journalism. It is divided into three sections, namely, &lt;em&gt;data preprocessing&lt;/em&gt;, &lt;em&gt;exploratory analysis&lt;/em&gt;, and &lt;em&gt;systematic test&lt;/em&gt;. I launched a similar post upto &lt;em&gt;exploratory analysis&lt;/em&gt; on &lt;a href=&#34;https://www.reddit.com/r/truegaming/comments/ez7oc2/analysing_top_praised_games_by_the_community_not/&#34; target=&#34;_blank&#34;&gt;this Reddit post&lt;/a&gt;. Surprisingly, The community shared with me great insights and feedbacks. If you have already seen my notebook on &lt;em&gt;reddit&amp;rsquo;s post&lt;/em&gt;, Then skip to &lt;em&gt;systematic test&lt;/em&gt;. There is a summary of each section if you&amp;rsquo;re lazy to read the whole kernel. Check summaries out in &lt;em&gt;table of contents&lt;/em&gt; below. On the other extreme, If you are willing to read every detail of the kernel, I provided for you the full sourcecode used in this blog post &lt;a href=&#34;https://github.com/mostafatouny/disparity-blog-post&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, The goal of this blog post is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Analyzing top games got high ratings from professional critics but not from community of users.&lt;/li&gt;
+&lt;li&gt;Analyzing top games got high ratings from community of users but not from progessional critics.&lt;/li&gt;
+&lt;li&gt;Graph of percentage of games whose disparity between critics and users are low, moderate, or high.&lt;/li&gt;
+&lt;li&gt;Do above steps on four platforms, namely, PS4, Xbox One, Switch, and PC. Then we compare them.&lt;/li&gt;
+&lt;li&gt;Apply permutation and p-values systematic test on each platforms pairs distributions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-i-have-learned-from-reddit-community&#34;&gt;What I Have Learned From Reddit Community&lt;/h2&gt;
+
+&lt;p&gt;In this paragraph I shall highlight and review reddit&amp;rsquo;s community comments which I found most useful. I am going to just quote the user&amp;rsquo;s name, and summarize his comment. To see his full comment, just &lt;code&gt;CTRL+F&lt;/code&gt; his name on reddit&amp;rsquo;s page. After each summary, I spot what I learned, and how analysis could be furtherly improved according to it. However, None of these spots are implemented here.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ArtKorvalay&lt;/strong&gt;
+A gamer who dislikes a game but finds no outrage from the community does not add up his voice. A gamer who moderates a game but finds an outrage from the community adds up a negative voice&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We could consider ratings along whether the game is hyped or outraged from the community. In that way, we might reach more accurate analysis.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ArtKorvalay&lt;/strong&gt;
+Some games like &lt;em&gt;disco elsiym&lt;/em&gt; gets played by only those who like such genre of games. A humble 2d-graphics like this shall not be played by any casual gamer who gets attracted by marketing and high graphics. So, a gamer who chooses to play it must be a fan of that style. As a result, the game got rated only by those who like it. Hence, ratings are biased.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We could consider ratings along whether a game&amp;rsquo;s marketing budget is high or low. In that way, we might reach more accurate analysis.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;EoceneMiacid&lt;/strong&gt;
+&lt;em&gt;Terminator Resistance&lt;/em&gt; case study is typical for disparity between users and critics. Have a look &lt;a href=&#34;https://www.youtube.com/watch?v=H5wi-c0v2wk&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; how the problem was highlighted by media.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Exploring this case study might reveal new insights as it is typical of the problem of disparity between users and professional critics. We might test our new techniques on this case study and see how our techniques perform up against it. Testing analysis techniques on a case we already know about emphatically shall help us on detecting mistakes in our analysis.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;p&gt;Preface&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-i-have-learned-from-reddit-community&#34;&gt;What I Have Learned From Reddit Community&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Data Preprocessing&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#import-libraries-and-local-files&#34;&gt;Import Libraries and Local Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#read-data&#34;&gt;Read Data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-cleansing&#34;&gt;Data Cleansing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-preprocessing-summary&#34;&gt;Data Preprocessing Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Exploratory Analysis&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#compute-disparity-difference-between-users-and-critics&#34;&gt;Compute Disparity (Difference) Between Users and Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#discretize-disparity-computed-earlier-into-categories&#34;&gt;Discretize Disparity Computed Earlier Into Categories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sort-according-to-disparity-between-users-and-critics&#34;&gt;Sort According to Disparity Between Users and Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-stats-on-disparity-between-users-and-critics&#34;&gt;Basic Stats on Disparity Between Users and Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#graphing-disparity-between-users-and-critics&#34;&gt;Graphing Disparity Between Users and Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#maximum-disparity-between-users-and-critics-ratings&#34;&gt;Maximum Disparity Between Users and Critics Ratings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#minimum-disparity-between-users-and-critics&#34;&gt;Minimum Disparity Between Users and Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#games-which-got-higher-ratings-from-users-than-from-critics&#34;&gt;Games Which Got Higher Ratings From Users Than From Critics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploratoy-analysis-summary&#34;&gt;Exploratoy Analysis Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Systematic Test&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-single-permutation-shuffle-based-trial-with-histogram-probability-density-function&#34;&gt;A Single Permutation Shuffle Based Trial With Histogram &amp;amp; Probability Density Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#permutation-test-and-p-value-based-statistical-significance&#34;&gt;Permutation Test and P-Value Based Statistical Significance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#systematic-test-summary&#34;&gt;Systematic Test Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;import-libraries-and-local-files&#34;&gt;Import Libraries and Local Files&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 3rd-party libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+# local-files
+import jsonRW as jsRW
+import graphs.pie as pieGraph
+import graphs.categoricalHeatmap as categoricalHeatmapGraph
+import graphs.groupedBars as groupedBarsGraph
+import graphs.histogramPdf as histogramPdfGraph
+import transformations.transformations as transform
+import transformations.discretizeIntoCategories as discIntCat
+import statTests.permutationTest as permTest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;read-data&#34;&gt;Read Data&lt;/h2&gt;
+
+&lt;h3 id=&#34;read-local-json-data-into-a-pandas-dataframe&#34;&gt;Read Local JSON Data Into a Pandas Dataframe&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# a map from each platform to its corresponding dataframe
+platform_df = {}
+# platform names and their corresonding data file names
+platformsNames = [&#39;ps4&#39;, &#39;xbox&#39;, &#39;switch&#39;, &#39;pc&#39;]
+filesNames = [&#39;ps4.csv&#39;, &#39;xbox.csv&#39;, &#39;switch.csv&#39;, &#39;pc.csv&#39;]
+
+# for each platform, then 
+for name in platformsNames:
+    # read its local json file
+    metacritic_list = jsRW.readJson(name)
+    # parse it as pandas dataframe, then map platform name to it
+    platform_df[name] = pd.DataFrame(metacritic_list)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# take a look at a dataframe
+platform_df[&#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;th&gt;release_date&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Jul  2, 2019&lt;/td&gt;
+      &lt;td&gt;final fantasy xiv: shadowbringers&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Feb 26, 2019&lt;/td&gt;
+      &lt;td&gt;nier: automata - game of the yorha edition&lt;/td&gt;
+      &lt;td&gt;8.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Jan 25, 2019&lt;/td&gt;
+      &lt;td&gt;resident evil 2&lt;/td&gt;
+      &lt;td&gt;8.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Mar 22, 2019&lt;/td&gt;
+      &lt;td&gt;sekiro: shadows die twice&lt;/td&gt;
+      &lt;td&gt;7.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Sep  6, 2019&lt;/td&gt;
+      &lt;td&gt;monster hunter: world - iceborne&lt;/td&gt;
+      &lt;td&gt;8.4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;335&lt;/th&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;336&lt;/td&gt;
+      &lt;td&gt;Oct 15, 2019&lt;/td&gt;
+      &lt;td&gt;zombieland: double tap - road trip&lt;/td&gt;
+      &lt;td&gt;4.6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;337&lt;/td&gt;
+      &lt;td&gt;Mar  5, 2019&lt;/td&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;338&lt;/td&gt;
+      &lt;td&gt;Mar  5, 2019&lt;/td&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;3.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;339&lt;/td&gt;
+      &lt;td&gt;May 30, 2019&lt;/td&gt;
+      &lt;td&gt;dayz&lt;/td&gt;
+      &lt;td&gt;2.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;340&lt;/td&gt;
+      &lt;td&gt;Mar 29, 2019&lt;/td&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;3.2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;340 rows × 5 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;data-cleansing&#34;&gt;Data Cleansing&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# drop unneeded columns and re-organize them 
+for name in platformsNames:
+    platform_df[name] = platform_df[name][[&#39;title&#39;, &#39;user_rating&#39;, &#39;critic_rating&#39;]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# take a look at a dataframe, again
+platform_df[&#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;final fantasy xiv: shadowbringers&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;nier: automata - game of the yorha edition&lt;/td&gt;
+      &lt;td&gt;8.5&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;resident evil 2&lt;/td&gt;
+      &lt;td&gt;8.8&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;sekiro: shadows die twice&lt;/td&gt;
+      &lt;td&gt;7.9&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;monster hunter: world - iceborne&lt;/td&gt;
+      &lt;td&gt;8.4&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;335&lt;/th&gt;
+      &lt;td&gt;zombieland: double tap - road trip&lt;/td&gt;
+      &lt;td&gt;4.6&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;3.8&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;dayz&lt;/td&gt;
+      &lt;td&gt;2.8&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;3.2&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;340 rows × 3 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&#34;remarks&#34;&gt;remarks&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;user_rating must be on the same scale as critic_rating&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;data types need to be checked&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# check columns data types
+platform_df[&#39;ps4&#39;].dtypes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;title            object
+user_rating      object
+critic_rating    object
+dtype: object&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# convert ratings into a numeric value
+#      error ahead!
+#df[&#39;user_rating&#39;] = pd.to_numeric(df[&#39;user_rating&#39;])
+#df[&#39;critic_rating&#39;] = pd.to_numeric(df[&#39;critic_rating&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get rid of user_rating with value equal to &amp;quot;tbd&amp;quot;
+
+# for each platform
+for name in platformsNames:
+# get its dataframe
+df = platform_df[name]
+# get index set in which user_rating is tbd, a non-numeric value
+tbdIndex = df[df[&#39;user_rating&#39;]==&amp;quot;tbd&amp;quot;].index
+# drop rows specified by indices in which user_rating is tbd
+df = df.drop(labels=tbdIndex, axis=&#39;index&#39;)
+# set updated data to platform_df
+platform_df[name] = df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# convert ratings to a numeric type
+
+# for each platform
+for name in platformsNames:
+# get its dataframe
+df = platform_df[name]
+# convert to a numeric type
+df[&#39;user_rating&#39;] = pd.to_numeric(df[&#39;user_rating&#39;])
+df[&#39;critic_rating&#39;] = pd.to_numeric(df[&#39;critic_rating&#39;])
+# set updated data to platform_df
+platform_df[name] = df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# check data types
+platform_df[&#39;ps4&#39;].dtypes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;title             object
+user_rating      float64
+critic_rating      int64
+dtype: object&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# user ratings must be on the same scale as critics ratings, so we multiply them by 10
+
+# for each platform
+for platformName in platform_df:
+platform_df[platformName][&#39;user_rating&#39;] = platform_df[platformName][&#39;user_rating&#39;] * 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;final fantasy xiv: shadowbringers&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;nier: automata - game of the yorha edition&lt;/td&gt;
+      &lt;td&gt;85.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;resident evil 2&lt;/td&gt;
+      &lt;td&gt;88.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;sekiro: shadows die twice&lt;/td&gt;
+      &lt;td&gt;79.0&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;monster hunter: world - iceborne&lt;/td&gt;
+      &lt;td&gt;84.0&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;335&lt;/th&gt;
+      &lt;td&gt;zombieland: double tap - road trip&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;dayz&lt;/td&gt;
+      &lt;td&gt;28.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;310 rows × 3 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;optional-store-cleaned-data-into-a-csv-file&#34;&gt;Optional: Store Cleaned Data Into a CSV File&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;quot;&amp;quot;&amp;quot;
+# store data to a csv file
+
+# for each platform
+for platformName in platform_df:
+    # save to a csv file
+    platform_df[platformName].to_csv(str(platformName)+&#39;.csv&#39;)
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;quot;\n# store data to a csv file\n\n# for each platform\nfor platformName in platform_df:\n    # save to a csv file\n    platform_df[platformName].to_csv(str(platformName)+&#39;.csv&#39;)\n&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;data-preprocessing-summary&#34;&gt;Data Preprocessing Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Data stored as JSON format are transformed into csv&lt;/li&gt;
+&lt;li&gt;Unneded columns are dropped&lt;/li&gt;
+&lt;li&gt;Suitable data types are recognized by &lt;em&gt;pandas&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;compute-disparity-difference-between-users-and-critics&#34;&gt;Compute Disparity (Difference) Between Users and Critics&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# for each platform
+for name in platform_df:
+    # get dataframe of the platform
+    df = platform_df[name]
+    # for each record, compute distance between user and critic ratings, then set result to a new column
+    df[&#39;userCritic_difference&#39;] = df.apply(lambda x: abs(x[&#39;user_rating&#39;]-x[&#39;critic_rating&#39;]), axis=1)
+    # assign updates back to our dataframe
+    platform_df[name] = df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;final fantasy xiv: shadowbringers&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;8.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;nier: automata - game of the yorha edition&lt;/td&gt;
+      &lt;td&gt;85.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;6.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;resident evil 2&lt;/td&gt;
+      &lt;td&gt;88.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;sekiro: shadows die twice&lt;/td&gt;
+      &lt;td&gt;79.0&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;monster hunter: world - iceborne&lt;/td&gt;
+      &lt;td&gt;84.0&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;5.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;335&lt;/th&gt;
+      &lt;td&gt;zombieland: double tap - road trip&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;7.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;dayz&lt;/td&gt;
+      &lt;td&gt;28.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;310 rows × 4 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;discretize-disparity-computed-earlier-into-categories&#34;&gt;Discretize Disparity Computed Earlier Into Categories&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# categories names and their corresponding intervals
+# category at location x corresponds to interval equal or greater than intervals location x and less than location x + 1
+# except for last category, has no end
+categories = pd.Series([&amp;quot;low&amp;quot;, &amp;quot;moderate&amp;quot;, &amp;quot;high&amp;quot;, &amp;quot;very_high&amp;quot;, &amp;quot;extremely_high&amp;quot;])
+intervals_categories = [0, 20, 30, 40, 50]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# compute categories as defined earlier
+
+# loop on platforms
+for platformName in platform_df:
+    # get dataframe of the platform
+    df = platform_df[platformName]
+    # add category based on difference just defined
+    df[&#39;difference_category&#39;] = df.apply(discIntCat.numToCat, axis=1, args=(&#39;userCritic_difference&#39;, categories, intervals_categories))
+    
+    # let categories be recognized by pandas
+    df[&#39;difference_category&#39;] = df[&#39;difference_category&#39;].astype(&amp;quot;category&amp;quot;)
+    # re-order categories
+    df[&#39;difference_category&#39;] = df[&#39;difference_category&#39;].cat.set_categories(categories, ordered=True)
+    
+    
+    # assign back to our dataframe
+    platform_df[platformName] = df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# take a look after our new columns added
+platform_df[&#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;final fantasy xiv: shadowbringers&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;8.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;nier: automata - game of the yorha edition&lt;/td&gt;
+      &lt;td&gt;85.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;6.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;resident evil 2&lt;/td&gt;
+      &lt;td&gt;88.0&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;sekiro: shadows die twice&lt;/td&gt;
+      &lt;td&gt;79.0&lt;/td&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;monster hunter: world - iceborne&lt;/td&gt;
+      &lt;td&gt;84.0&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;5.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;335&lt;/th&gt;
+      &lt;td&gt;zombieland: double tap - road trip&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;7.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;dayz&lt;/td&gt;
+      &lt;td&gt;28.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;310 rows × 5 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;sort-according-to-disparity-between-users-and-critics&#34;&gt;Sort According to Disparity Between Users and Critics&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# for each platform
+for platformName in platform_df:
+    # get platform dataframe
+    df = platform_df[platformName]
+    # sort it by userCritic_difference
+    df = df.sort_values(axis=0, by=&#39;userCritic_difference&#39;, ascending=False)
+    # assign sorted dataframe back to our dataframe
+    platform_df[platformName] = df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;basic-stats-on-disparity-between-users-and-critics&#34;&gt;Basic Stats on Disparity Between Users and Critics&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# for each platform
+for platformName in platform_df:
+    # print platform name
+    print(&amp;quot;\n&amp;quot;, &amp;quot;on &amp;quot;, platformName)
+    # show basic stat
+    print(platform_df[platformName][&#39;userCritic_difference&#39;].describe())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt; on  ps4
+count    310.000000
+mean      15.893548
+std       13.074530
+min        0.000000
+25%        5.000000
+50%       12.000000
+75%       23.000000
+max       69.000000
+Name: userCritic_difference, dtype: float64
+
+ on  xbox
+count    186.000000
+mean      14.801075
+std       13.192881
+min        0.000000
+25%        5.000000
+50%       11.000000
+75%       21.000000
+max       69.000000
+Name: userCritic_difference, dtype: float64
+
+ on  switch
+count    364.000000
+mean       6.876374
+std        8.741062
+min        0.000000
+25%        1.750000
+50%        4.000000
+75%        9.000000
+max       58.000000
+Name: userCritic_difference, dtype: float64
+
+ on  pc
+count    327.000000
+mean      13.547401
+std       12.322982
+min        0.000000
+25%        4.000000
+50%       10.000000
+75%       19.000000
+max       63.000000
+Name: userCritic_difference, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;categories-size&#34;&gt;Categories Size&lt;/h2&gt;
+
+&lt;h3 id=&#34;platform-x-category-2d-sizes-dataframe&#34;&gt;Platform x Category 2D Sizes Dataframe&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_category_size = transform.map_columnCount(platform_df, &#39;difference_category&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_category_size
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;low&lt;/th&gt;
+      &lt;th&gt;moderate&lt;/th&gt;
+      &lt;th&gt;high&lt;/th&gt;
+      &lt;th&gt;very_high&lt;/th&gt;
+      &lt;th&gt;extremely_high&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ps4&lt;/th&gt;
+      &lt;td&gt;211&lt;/td&gt;
+      &lt;td&gt;52&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;xbox&lt;/th&gt;
+      &lt;td&gt;131&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;switch&lt;/th&gt;
+      &lt;td&gt;334&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;pc&lt;/th&gt;
+      &lt;td&gt;249&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;category-x-platform-2d-sizes-dataframe&#34;&gt;Category x Platform 2D Sizes Dataframe&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;category_platform_size = platform_category_size.transpose()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;category_platform_size
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;ps4&lt;/th&gt;
+      &lt;th&gt;xbox&lt;/th&gt;
+      &lt;th&gt;switch&lt;/th&gt;
+      &lt;th&gt;pc&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;low&lt;/th&gt;
+      &lt;td&gt;211&lt;/td&gt;
+      &lt;td&gt;131&lt;/td&gt;
+      &lt;td&gt;334&lt;/td&gt;
+      &lt;td&gt;249&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;moderate&lt;/th&gt;
+      &lt;td&gt;52&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;high&lt;/th&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;very_high&lt;/th&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;extremely_high&lt;/th&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;category_platform_size.loc[&#39;low&#39;, &#39;ps4&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;211
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;graphing-disparity-between-users-and-critics&#34;&gt;Graphing Disparity Between Users and Critics&lt;/h2&gt;
+
+&lt;h3 id=&#34;pie-graph&#34;&gt;Pie Graph&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for columnName in category_platform_size:
+    platSeries = category_platform_size[columnName]
+    platName = platSeries.name
+    pieGraph.showPieGraph(platSeries, platName + &#39; categories percentages&#39;, 6, 6)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_53_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_53_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_53_2.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_53_3.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;grouped-bar&#34;&gt;Grouped Bar&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;groupedBarsGraph.showGroupedBars(platform_category_size, platformsNames, &#39;categories size&#39;, &#39;categories size by platform&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_55_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;categorical-heatmap&#34;&gt;Categorical Heatmap&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;categoricalHeatmapGraph.showCategoricalHeatmap(8, 8, category_platform_size, &amp;quot;categories sizes among platforms&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_57_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;maximum-disparity-between-users-and-critics-ratings&#34;&gt;Maximum Disparity Between Users and Critics Ratings&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;ps4&#39;].head(20)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;93&lt;/th&gt;
+      &lt;td&gt;nba 2k20&lt;/td&gt;
+      &lt;td&gt;9.0&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;69.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;82&lt;/th&gt;
+      &lt;td&gt;fifa 20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;68.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;116&lt;/th&gt;
+      &lt;td&gt;madden nfl 20&lt;/td&gt;
+      &lt;td&gt;16.0&lt;/td&gt;
+      &lt;td&gt;76&lt;/td&gt;
+      &lt;td&gt;60.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;79&lt;/th&gt;
+      &lt;td&gt;gravity ghost: deluxe edition&lt;/td&gt;
+      &lt;td&gt;27.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;52.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;172&lt;/th&gt;
+      &lt;td&gt;simulacra&lt;/td&gt;
+      &lt;td&gt;21.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;51.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;36&lt;/th&gt;
+      &lt;td&gt;mortal kombat 11&lt;/td&gt;
+      &lt;td&gt;33.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;49.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;58&lt;/th&gt;
+      &lt;td&gt;call of duty: modern warfare&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;199&lt;/th&gt;
+      &lt;td&gt;hitman hd enhanced collection&lt;/td&gt;
+      &lt;td&gt;21.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;217&lt;/th&gt;
+      &lt;td&gt;mxgp 2019&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;68&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;224&lt;/th&gt;
+      &lt;td&gt;we. the revolution&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;47.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;218&lt;/th&gt;
+      &lt;td&gt;giga wrecker alt.&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;47.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;65&lt;/th&gt;
+      &lt;td&gt;dauntless&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;285&lt;/th&gt;
+      &lt;td&gt;darksiders iii: keepers of the void&lt;/td&gt;
+      &lt;td&gt;18.0&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;286&lt;/th&gt;
+      &lt;td&gt;attack of the earthlings&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;299&lt;/th&gt;
+      &lt;td&gt;the lego movie 2 videogame&lt;/td&gt;
+      &lt;td&gt;18.0&lt;/td&gt;
+      &lt;td&gt;57&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;275&lt;/th&gt;
+      &lt;td&gt;asterix &amp;amp; obelix xxl 3: the crystal menhir&lt;/td&gt;
+      &lt;td&gt;21.0&lt;/td&gt;
+      &lt;td&gt;60&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;68&lt;/th&gt;
+      &lt;td&gt;lonely mountains: downhill&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;256&lt;/th&gt;
+      &lt;td&gt;a knight&#39;s quest&lt;/td&gt;
+      &lt;td&gt;24.0&lt;/td&gt;
+      &lt;td&gt;63&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;21&lt;/th&gt;
+      &lt;td&gt;far: lone sails&lt;/td&gt;
+      &lt;td&gt;44.0&lt;/td&gt;
+      &lt;td&gt;83&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;xbox&#39;].head(20)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;70&lt;/th&gt;
+      &lt;td&gt;nba 2k20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;69.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;74&lt;/th&gt;
+      &lt;td&gt;fifa 20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;68.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;75&lt;/th&gt;
+      &lt;td&gt;madden nfl 20&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;59.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;9&lt;/th&gt;
+      &lt;td&gt;mortal kombat 11&lt;/td&gt;
+      &lt;td&gt;31.0&lt;/td&gt;
+      &lt;td&gt;86&lt;/td&gt;
+      &lt;td&gt;55.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;115&lt;/th&gt;
+      &lt;td&gt;timespinner&lt;/td&gt;
+      &lt;td&gt;23.0&lt;/td&gt;
+      &lt;td&gt;74&lt;/td&gt;
+      &lt;td&gt;51.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;169&lt;/th&gt;
+      &lt;td&gt;wolfenstein: youngblood&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;68&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;57&lt;/th&gt;
+      &lt;td&gt;call of duty: modern warfare&lt;/td&gt;
+      &lt;td&gt;37.0&lt;/td&gt;
+      &lt;td&gt;81&lt;/td&gt;
+      &lt;td&gt;44.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;10&lt;/th&gt;
+      &lt;td&gt;nhl 20&lt;/td&gt;
+      &lt;td&gt;42.0&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;43.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;143&lt;/th&gt;
+      &lt;td&gt;disney classic games: aladdin and the lion king&lt;/td&gt;
+      &lt;td&gt;30.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;42.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;24&lt;/th&gt;
+      &lt;td&gt;far: lone sails&lt;/td&gt;
+      &lt;td&gt;43.0&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;45&lt;/th&gt;
+      &lt;td&gt;dauntless&lt;/td&gt;
+      &lt;td&gt;43.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;106&lt;/th&gt;
+      &lt;td&gt;far cry new dawn&lt;/td&gt;
+      &lt;td&gt;37.0&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;76&lt;/th&gt;
+      &lt;td&gt;grid&lt;/td&gt;
+      &lt;td&gt;45.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;248&lt;/th&gt;
+      &lt;td&gt;wwe 2k20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;92&lt;/th&gt;
+      &lt;td&gt;assassin&#39;s creed iii remastered&lt;/td&gt;
+      &lt;td&gt;43.0&lt;/td&gt;
+      &lt;td&gt;77&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;160&lt;/th&gt;
+      &lt;td&gt;genesis alpha one&lt;/td&gt;
+      &lt;td&gt;35.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;17&lt;/th&gt;
+      &lt;td&gt;trials rising&lt;/td&gt;
+      &lt;td&gt;52.0&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;33.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;19&lt;/th&gt;
+      &lt;td&gt;crash team racing: nitro-fueled&lt;/td&gt;
+      &lt;td&gt;51.0&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;33.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;204&lt;/th&gt;
+      &lt;td&gt;narcos: rise of the cartels&lt;/td&gt;
+      &lt;td&gt;30.0&lt;/td&gt;
+      &lt;td&gt;63&lt;/td&gt;
+      &lt;td&gt;33.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;td&gt;fell seal: arbiter&#39;s mark&lt;/td&gt;
+      &lt;td&gt;54.0&lt;/td&gt;
+      &lt;td&gt;86&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;pc&#39;].head(20)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;203&lt;/th&gt;
+      &lt;td&gt;nba 2k20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;74&lt;/td&gt;
+      &lt;td&gt;63.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;234&lt;/th&gt;
+      &lt;td&gt;fifa 20&lt;/td&gt;
+      &lt;td&gt;11.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;61.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;237&lt;/th&gt;
+      &lt;td&gt;madden nfl 20&lt;/td&gt;
+      &lt;td&gt;12.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;60.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;77&lt;/th&gt;
+      &lt;td&gt;call of duty: modern warfare&lt;/td&gt;
+      &lt;td&gt;25.0&lt;/td&gt;
+      &lt;td&gt;81&lt;/td&gt;
+      &lt;td&gt;56.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;48&lt;/th&gt;
+      &lt;td&gt;mortal kombat 11&lt;/td&gt;
+      &lt;td&gt;27.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;55.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;279&lt;/th&gt;
+      &lt;td&gt;hearthstone: heroes of warcraft - saviors of u...&lt;/td&gt;
+      &lt;td&gt;19.0&lt;/td&gt;
+      &lt;td&gt;68&lt;/td&gt;
+      &lt;td&gt;49.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;19&lt;/th&gt;
+      &lt;td&gt;the sims 4: realm of magic&lt;/td&gt;
+      &lt;td&gt;37.0&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;264&lt;/th&gt;
+      &lt;td&gt;wolfenstein: youngblood&lt;/td&gt;
+      &lt;td&gt;22.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;47.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;383&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;86.0&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;96&lt;/th&gt;
+      &lt;td&gt;bury me, my love&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;red dead redemption 2&lt;/td&gt;
+      &lt;td&gt;48.0&lt;/td&gt;
+      &lt;td&gt;93&lt;/td&gt;
+      &lt;td&gt;45.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;235&lt;/th&gt;
+      &lt;td&gt;oninaki&lt;/td&gt;
+      &lt;td&gt;31.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;47&lt;/th&gt;
+      &lt;td&gt;the sims 4: discover university&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;41.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;360&lt;/th&gt;
+      &lt;td&gt;wolfenstein: cyberpilot&lt;/td&gt;
+      &lt;td&gt;15.0&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;187&lt;/th&gt;
+      &lt;td&gt;assassin&#39;s creed iii remastered&lt;/td&gt;
+      &lt;td&gt;36.0&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;181&lt;/th&gt;
+      &lt;td&gt;defector&lt;/td&gt;
+      &lt;td&gt;36.0&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;68&lt;/th&gt;
+      &lt;td&gt;the elder scrolls online: dragonhold&lt;/td&gt;
+      &lt;td&gt;42.0&lt;/td&gt;
+      &lt;td&gt;81&lt;/td&gt;
+      &lt;td&gt;39.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;130&lt;/th&gt;
+      &lt;td&gt;surviving mars: green planet&lt;/td&gt;
+      &lt;td&gt;40.0&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;28&lt;/th&gt;
+      &lt;td&gt;dirt rally 2.0&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;150&lt;/th&gt;
+      &lt;td&gt;plants vs. zombies: battle for neighborville&lt;/td&gt;
+      &lt;td&gt;40.0&lt;/td&gt;
+      &lt;td&gt;77&lt;/td&gt;
+      &lt;td&gt;37.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;switch&#39;].head(20)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;240&lt;/th&gt;
+      &lt;td&gt;nba 2k20&lt;/td&gt;
+      &lt;td&gt;15.0&lt;/td&gt;
+      &lt;td&gt;73&lt;/td&gt;
+      &lt;td&gt;58.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;66&lt;/th&gt;
+      &lt;td&gt;pillars of eternity: complete edition&lt;/td&gt;
+      &lt;td&gt;27.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;55.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;94&lt;/th&gt;
+      &lt;td&gt;pokemon sword / shield dual pack&lt;/td&gt;
+      &lt;td&gt;29.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;51.0&lt;/td&gt;
+      &lt;td&gt;extremely_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;416&lt;/th&gt;
+      &lt;td&gt;catan&lt;/td&gt;
+      &lt;td&gt;18.0&lt;/td&gt;
+      &lt;td&gt;61&lt;/td&gt;
+      &lt;td&gt;43.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;123&lt;/th&gt;
+      &lt;td&gt;mortal kombat 11&lt;/td&gt;
+      &lt;td&gt;36.0&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;42.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;87&lt;/th&gt;
+      &lt;td&gt;pokemon shield&lt;/td&gt;
+      &lt;td&gt;44.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;36.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;91&lt;/th&gt;
+      &lt;td&gt;pokemon sword&lt;/td&gt;
+      &lt;td&gt;45.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;35.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;492&lt;/th&gt;
+      &lt;td&gt;fifa 20: legacy edition&lt;/td&gt;
+      &lt;td&gt;9.0&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;476&lt;/th&gt;
+      &lt;td&gt;devil may cry 2&lt;/td&gt;
+      &lt;td&gt;84.0&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;345&lt;/th&gt;
+      &lt;td&gt;giga wrecker alt.&lt;/td&gt;
+      &lt;td&gt;35.0&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;359&lt;/th&gt;
+      &lt;td&gt;wolfenstein: youngblood&lt;/td&gt;
+      &lt;td&gt;35.0&lt;/td&gt;
+      &lt;td&gt;65&lt;/td&gt;
+      &lt;td&gt;30.0&lt;/td&gt;
+      &lt;td&gt;high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;280&lt;/th&gt;
+      &lt;td&gt;mutant year zero: road to eden - deluxe edition&lt;/td&gt;
+      &lt;td&gt;42.0&lt;/td&gt;
+      &lt;td&gt;71&lt;/td&gt;
+      &lt;td&gt;29.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;237&lt;/th&gt;
+      &lt;td&gt;dauntless&lt;/td&gt;
+      &lt;td&gt;44.0&lt;/td&gt;
+      &lt;td&gt;73&lt;/td&gt;
+      &lt;td&gt;29.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;398&lt;/th&gt;
+      &lt;td&gt;rad rodgers: radical edition&lt;/td&gt;
+      &lt;td&gt;34.0&lt;/td&gt;
+      &lt;td&gt;62&lt;/td&gt;
+      &lt;td&gt;28.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;432&lt;/th&gt;
+      &lt;td&gt;farming simulator 20&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;27.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;466&lt;/th&gt;
+      &lt;td&gt;whipseey and the lost atlas&lt;/td&gt;
+      &lt;td&gt;80.0&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;26.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;263&lt;/th&gt;
+      &lt;td&gt;my time at portia&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;26.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;374&lt;/th&gt;
+      &lt;td&gt;deponia&lt;/td&gt;
+      &lt;td&gt;38.0&lt;/td&gt;
+      &lt;td&gt;64&lt;/td&gt;
+      &lt;td&gt;26.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;496&lt;/th&gt;
+      &lt;td&gt;car mechanic simulator&lt;/td&gt;
+      &lt;td&gt;15.0&lt;/td&gt;
+      &lt;td&gt;41&lt;/td&gt;
+      &lt;td&gt;26.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;499&lt;/th&gt;
+      &lt;td&gt;blades of time&lt;/td&gt;
+      &lt;td&gt;63.0&lt;/td&gt;
+      &lt;td&gt;38&lt;/td&gt;
+      &lt;td&gt;25.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def searchforTitleInPlatform(platformStr_in, game_in):
+    tem_df = platform_df[platformStr_in][platform_df[platformStr_in][&#39;title&#39;] == game_in]
+    if len(tem_df) == 1:
+        return tem_df.iloc[0]
+    elif len(tem_df) == 0:
+        return -1
+    else:
+        raise ValueError(&amp;quot;unexpected no of games found&amp;quot;)
+        
+searchforTitleInPlatform(&#39;xbox&#39;, &amp;quot;hitman hd enhanced collection&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;title                    hitman hd enhanced collection
+user_rating                                         46
+critic_rating                                       66
+userCritic_difference                               20
+difference_category                           moderate
+Name: 187, dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;minimum-disparity-between-users-and-critics&#34;&gt;Minimum Disparity Between Users and Critics&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;ps4&#39;].tail(20)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;55&lt;/th&gt;
+      &lt;td&gt;five nights at freddy&#39;s vr: help wanted&lt;/td&gt;
+      &lt;td&gt;78.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;251&lt;/th&gt;
+      &lt;td&gt;metal wolf chaos xd&lt;/td&gt;
+      &lt;td&gt;62.0&lt;/td&gt;
+      &lt;td&gt;63&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;201&lt;/th&gt;
+      &lt;td&gt;erica&lt;/td&gt;
+      &lt;td&gt;70.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;113&lt;/th&gt;
+      &lt;td&gt;blazing chrome&lt;/td&gt;
+      &lt;td&gt;75.0&lt;/td&gt;
+      &lt;td&gt;76&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;207&lt;/th&gt;
+      &lt;td&gt;sea of solitude&lt;/td&gt;
+      &lt;td&gt;68.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;88&lt;/th&gt;
+      &lt;td&gt;blasphemous&lt;/td&gt;
+      &lt;td&gt;77.0&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;where the bees make honey&lt;/td&gt;
+      &lt;td&gt;32.0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;22&lt;/th&gt;
+      &lt;td&gt;bloodstained: ritual of the night&lt;/td&gt;
+      &lt;td&gt;84.0&lt;/td&gt;
+      &lt;td&gt;83&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;317&lt;/th&gt;
+      &lt;td&gt;eden-tomorrow&lt;/td&gt;
+      &lt;td&gt;53.0&lt;/td&gt;
+      &lt;td&gt;52&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;78&lt;/th&gt;
+      &lt;td&gt;knights and bikes&lt;/td&gt;
+      &lt;td&gt;78.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;38&lt;/th&gt;
+      &lt;td&gt;efootball pes 2020&lt;/td&gt;
+      &lt;td&gt;81.0&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;75&lt;/th&gt;
+      &lt;td&gt;children of morta&lt;/td&gt;
+      &lt;td&gt;78.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;306&lt;/th&gt;
+      &lt;td&gt;ice age: scrat&#39;s nutty adventure&lt;/td&gt;
+      &lt;td&gt;56.0&lt;/td&gt;
+      &lt;td&gt;55&lt;/td&gt;
+      &lt;td&gt;1.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;110&lt;/th&gt;
+      &lt;td&gt;motogp 19&lt;/td&gt;
+      &lt;td&gt;76.0&lt;/td&gt;
+      &lt;td&gt;76&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;188&lt;/th&gt;
+      &lt;td&gt;lost ember&lt;/td&gt;
+      &lt;td&gt;70.0&lt;/td&gt;
+      &lt;td&gt;70&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;198&lt;/th&gt;
+      &lt;td&gt;chocobo&#39;s mystery dungeon: every buddy!&lt;/td&gt;
+      &lt;td&gt;69.0&lt;/td&gt;
+      &lt;td&gt;69&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;330&lt;/th&gt;
+      &lt;td&gt;submersed&lt;/td&gt;
+      &lt;td&gt;44.0&lt;/td&gt;
+      &lt;td&gt;44&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;214&lt;/th&gt;
+      &lt;td&gt;effie&lt;/td&gt;
+      &lt;td&gt;68.0&lt;/td&gt;
+      &lt;td&gt;68&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;76&lt;/th&gt;
+      &lt;td&gt;star wars jedi: fallen order&lt;/td&gt;
+      &lt;td&gt;79.0&lt;/td&gt;
+      &lt;td&gt;79&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;56&lt;/th&gt;
+      &lt;td&gt;blood &amp;amp; truth&lt;/td&gt;
+      &lt;td&gt;80.0&lt;/td&gt;
+      &lt;td&gt;80&lt;/td&gt;
+      &lt;td&gt;0.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;games-which-got-higher-ratings-from-users-than-from-critics&#34;&gt;Games Which Got Higher Ratings From Users Than From Critics&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def higherUserRatings(platform_in):
+    return platform_df[platform_in][platform_df[platform_in][&#39;user_rating&#39;] &amp;gt; platform_df[platform_in][&#39;critic_rating&#39;]].head(10)
+    
+higherUserRatings(&#39;pc&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;title&lt;/th&gt;
+      &lt;th&gt;user_rating&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;userCritic_difference&lt;/th&gt;
+      &lt;th&gt;difference_category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;383&lt;/th&gt;
+      &lt;td&gt;left alive&lt;/td&gt;
+      &lt;td&gt;86.0&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;46.0&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;376&lt;/th&gt;
+      &lt;td&gt;paranoia: happiness is mandatory&lt;/td&gt;
+      &lt;td&gt;71.0&lt;/td&gt;
+      &lt;td&gt;47&lt;/td&gt;
+      &lt;td&gt;24.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;355&lt;/th&gt;
+      &lt;td&gt;little misfortune&lt;/td&gt;
+      &lt;td&gt;80.0&lt;/td&gt;
+      &lt;td&gt;57&lt;/td&gt;
+      &lt;td&gt;23.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;348&lt;/th&gt;
+      &lt;td&gt;terminator: resistance&lt;/td&gt;
+      &lt;td&gt;82.0&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;23.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;384&lt;/th&gt;
+      &lt;td&gt;eternity: the last unicorn&lt;/td&gt;
+      &lt;td&gt;61.0&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;22.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;341&lt;/th&gt;
+      &lt;td&gt;summer catchers&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;61&lt;/td&gt;
+      &lt;td&gt;22.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;365&lt;/th&gt;
+      &lt;td&gt;bannermen&lt;/td&gt;
+      &lt;td&gt;72.0&lt;/td&gt;
+      &lt;td&gt;52&lt;/td&gt;
+      &lt;td&gt;20.0&lt;/td&gt;
+      &lt;td&gt;moderate&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;374&lt;/th&gt;
+      &lt;td&gt;i love you, colonel sanders! a finger lickin&#39; ...&lt;/td&gt;
+      &lt;td&gt;68.0&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;18.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;344&lt;/th&gt;
+      &lt;td&gt;medieval kingdom wars&lt;/td&gt;
+      &lt;td&gt;77.0&lt;/td&gt;
+      &lt;td&gt;60&lt;/td&gt;
+      &lt;td&gt;17.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;302&lt;/th&gt;
+      &lt;td&gt;outbuddies&lt;/td&gt;
+      &lt;td&gt;83.0&lt;/td&gt;
+      &lt;td&gt;66&lt;/td&gt;
+      &lt;td&gt;17.0&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;exploratoy-analysis-summary&#34;&gt;Exploratoy Analysis Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NBA, Fifa, Madden, COD: modern warefare games are on top of nearly all platforms lists of maximum disparity between users and professional critics&lt;/li&gt;
+&lt;li&gt;Star Wars Jedi: Fallen Order got zero disparity between users and professional critics ratings&lt;/li&gt;
+&lt;li&gt;Left Alive is the most praised game by the community not appreciated by professional critics&lt;/li&gt;
+&lt;li&gt;Switch games got much lower percentage of high and moderate disparity&lt;/li&gt;
+&lt;li&gt;Switch games got a mean of 7 disparity, nearly half of other platforms&amp;rsquo; disparity which got about 14&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;a-single-permutation-shuffle-based-trial-with-histogram-probability-density-function&#34;&gt;A Single Permutation Shuffle Based Trial With Histogram &amp;amp; Probability Density Function&lt;/h2&gt;
+
+&lt;p&gt;We compare platforms distributions through permutation-test. It is a more systematic approach than relying upon intuition of visualizing and comparing distributions. Given two platforms, We concatenate them into one group. That group&amp;rsquo;s elements are randomly shuffled. Then we divide the group into new two groups. We compare the two distributions of the new two groups and assess whether the insight is still present as in the case of the two original groups of platforms. If the insight is not present in the two new groups, then that would count an evidence on behalf of our hypothesis. That is, The insight (difference in distribution) of original distributions is attributed to the two platforms. In addition, We consider average a p-value of a distribution and utilize it in our test. In Next section, We apply this method iteratively.&lt;/p&gt;
+
+&lt;h3 id=&#34;ensure-series-data-are-ascendingly-ordered&#34;&gt;Ensure Series Data are Ascendingly Ordered&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(platform_df[&#39;ps4&#39;][&#39;userCritic_difference&#39;])
+print(&amp;quot;&amp;quot;)
+print(platform_df[&#39;switch&#39;][&#39;userCritic_difference&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;93     69.0
+82     68.0
+116    60.0
+79     52.0
+172    51.0
+       ... 
+198     0.0
+330     0.0
+214     0.0
+76      0.0
+56      0.0
+Name: userCritic_difference, Length: 310, dtype: float64
+
+240    58.0
+66     55.0
+94     51.0
+416    43.0
+123    42.0
+       ... 
+443     0.0
+89      0.0
+106     0.0
+53      0.0
+208     0.0
+Name: userCritic_difference, Length: 364, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ps4-distribution&#34;&gt;PS4 Distribution&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;histogramPdfGraph.showHistPdf(platform_df[&#39;ps4&#39;][&#39;userCritic_difference&#39;], 30, &#39;#e3e2e2&#39;, &#39;black&#39;, &#39;disparity&#39;, &#39;ps4&#39;, 10, 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_74_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;average-of-ps4-s-disparity&#34;&gt;Average of PS4&amp;rsquo;s Disparity&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;ps4&#39;][&#39;userCritic_difference&#39;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;15.893548387096773
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;switch-distribution&#34;&gt;Switch Distribution&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;histogramPdfGraph.showHistPdf(platform_df[&#39;switch&#39;][&#39;userCritic_difference&#39;], 30, &#39;#e3e2e2&#39;, &#39;black&#39;, &#39;disparity&#39;, &#39;switch&#39;, 10, 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_78_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;average-of-switch-disparity&#34;&gt;Average of Switch Disparity&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;platform_df[&#39;switch&#39;][&#39;userCritic_difference&#39;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;6.876373626373627
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The difference between &lt;em&gt;ps4&lt;/em&gt; and &lt;em&gt;switch&lt;/em&gt; distributions is notable&lt;/li&gt;
+&lt;li&gt;The difference between &lt;em&gt;ps4&lt;/em&gt; and &lt;em&gt;switch&lt;/em&gt; means is about 9&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;concatenate-both-ps4-and-switch&#34;&gt;Concatenate Both PS4 and Switch&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;bothGroups = pd.concat([platform_df[&#39;switch&#39;][&#39;userCritic_difference&#39;], platform_df[&#39;ps4&#39;][&#39;userCritic_difference&#39;]])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;shuffle-and-divide&#34;&gt;Shuffle and Divide&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# permutation based shuffling
+rng = np.random.default_rng()
+bothGroups = rng.permutation(bothGroups)
+# divide into two groups
+firstGroup = bothGroups[:int(len(bothGroups)/2)]
+secondGroup = bothGroups[int(len(bothGroups)/2):]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;first-group-distribution&#34;&gt;First Group Distribution&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;histogramPdfGraph.showHistPdf(firstGroup, 30, &#39;#e3e2e2&#39;, &#39;black&#39;, &#39;disparity&#39;, &#39;first group&#39;, 10, 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_87_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;first-group-average&#34;&gt;First Group Average&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;firstGroup.mean()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;9.928783382789318
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;second-group-distribution&#34;&gt;Second Group Distribution&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;histogramPdfGraph.showHistPdf(secondGroup, 30, &#39;#e3e2e2&#39;, &#39;black&#39;, &#39;disparity&#39;, &#39;second group&#39;, 10, 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;index_files/index_91_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;second-group-average&#34;&gt;Second Group Average&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;secondGroup.mean()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;12.118694362017804
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;conclusion-1&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The difference between first and second groups distributions is not notable alike ps4 and switch&lt;/li&gt;
+&lt;li&gt;The difference between first and second groups means is much less than disparity between ps4 and switch distributions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;permutation-test-and-p-value-based-statistical-significance&#34;&gt;Permutation Test and P-Value Based Statistical Significance&lt;/h2&gt;
+
+&lt;p&gt;We apply the above method iteratively. The more tests, The more confident we are of our hypothesis. That is, The pattern of two distributions is attributed to the difference in two platforms.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# computes average of a list
+def avgOfList(list_in):
+    return pd.Series(list_in).mean()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# loop on pairs of platforms
+for idx, platformName in enumerate(platformsNames):
+    for idx_, platformName_ in enumerate(platformsNames):
+        # compare only unique pairs
+        if idx_ &amp;gt; idx:
+            # print pairs of platforms which are compared
+            print(platformName, platformName_)
+            # apply test for 25 iterations on first and second platforms of the nested loop
+            testResults = permTest.permutationTest(25, platform_df[platformName][&#39;userCritic_difference&#39;], platform_df[platformName_][&#39;userCritic_difference&#39;])
+            # print results average
+            print(avgOfList(testResults))
+            print(&amp;quot;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;ps4 xbox
+0.4872043010752686
+
+ps4 switch
+8.135987817102968
+
+ps4 pc
+1.6799676922757263
+
+xbox switch
+7.305647096989032
+
+xbox pc
+0.6697090501544217
+
+switch pc
+6.10385164806027
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;conclusion-2&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;switch has greatest statistical significance in comparison with other platforms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;systematic-test-summary&#34;&gt;Systematic Test Summary&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For &lt;em&gt;ps4&lt;/em&gt; and &lt;em&gt;switch&lt;/em&gt;, The difference between distributions and means is notable&lt;/li&gt;
+&lt;li&gt;For the two randomly generated, through shuffling, groups, The difference between distributions and means is not notable alike original &lt;em&gt;ps4&lt;/em&gt; and &lt;em&gt;switch&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;The disappearance of noted pattern in the two randomly generated groups counts as an evidence of our hypothesis. That is, the pattern (difference) of &lt;em&gt;switch&lt;/em&gt; and &lt;em&gt;ps4&lt;/em&gt; distributions is attributed to platforms factor.&lt;/li&gt;
+&lt;li&gt;Switch has greatest statistical significance in comparison with other platforms&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Users Ratings Re-weighted: Putting Trust Into Statistics</title>
