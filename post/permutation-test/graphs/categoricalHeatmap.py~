@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def showCategoricalHeatmap(ySize_in, xSize_in, categoriesSize_in, categoriesSize_2dList_in, groupsNames_in, title_in):
+    # construct figure and axes
+    fig = plt.figure(figsize=(ySize_in, xSize_in))
+    ax = plt.subplot()
+
+    im = ax.imshow(categoriesSize_2dList_in)
+
+    # We want to show all ticks...
+    ax.set_xticks(np.arange(len(groupsNames_in)))
+    ax.set_yticks(np.arange(len(categoriesSize_in)))
+    # ... and label them with the respective list entries
+    ax.set_xticklabels(groupsNames_in)
+    ax.set_yticklabels((list(categoriesSize_in)))
+
+    # Rotate the tick labels and set their alignment.
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
+         rotation_mode="anchor")
+
+    # Loop over data dimensions and create text annotations.
+    for siIn, size in enumerate(categoriesSize_in):
+        platforms = categoriesSize_in[size]
+        for plIn, plat in enumerate(platforms):
+            text = ax.text(plIn, siIn, plat,
+            ha="center", va="center", color="w")
+
+    ax.set_title(title_in)
+    fig.tight_layout()
+    plt.show()

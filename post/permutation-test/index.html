@@ -1449,27 +1449,27 @@ Name: userCritic_difference, dtype: float64
     pieGraph.showPieGraph(platSeries, platName + ' categories percentages', 6, 6)
 </code></pre>
 
-<p><img src="index_files/index_53_0.png" alt="png" /></p>
+<p><img src="./index_53_0.png" alt="png" /></p>
 
-<p><img src="index_files/index_53_1.png" alt="png" /></p>
+<p><img src="./index_53_1.png" alt="png" /></p>
 
-<p><img src="index_files/index_53_2.png" alt="png" /></p>
+<p><img src="./index_53_2.png" alt="png" /></p>
 
-<p><img src="index_files/index_53_3.png" alt="png" /></p>
+<p><img src="./index_53_3.png" alt="png" /></p>
 
 <h3 id="grouped-bar">Grouped Bar</h3>
 
 <pre><code class="language-python">groupedBarsGraph.showGroupedBars(platform_category_size, platformsNames, 'categories size', 'categories size by platform')
 </code></pre>
 
-<p><img src="index_files/index_55_0.png" alt="png" /></p>
+<p><img src="./index_55_0.png" alt="png" /></p>
 
 <h3 id="categorical-heatmap">Categorical Heatmap</h3>
 
 <pre><code class="language-python">categoricalHeatmapGraph.showCategoricalHeatmap(8, 8, category_platform_size, &quot;categories sizes among platforms&quot;)
 </code></pre>
 
-<p><img src="index_files/index_57_0.png" alt="png" /></p>
+<p><img src="./index_57_0.png" alt="png" /></p>
 
 <h3 id="maximum-disparity-between-users-and-critics-ratings">Maximum Disparity Between Users and Critics Ratings</h3>
 
@@ -2633,7 +2633,7 @@ Name: userCritic_difference, Length: 364, dtype: float64
 <pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['ps4']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'ps4', 10, 8)
 </code></pre>
 
-<p><img src="index_files/index_74_0.png" alt="png" /></p>
+<p><img src="./index_74_0.png" alt="png" /></p>
 
 <h3 id="average-of-ps4-s-disparity">Average of PS4&rsquo;s Disparity</h3>
 
@@ -2648,7 +2648,7 @@ Name: userCritic_difference, Length: 364, dtype: float64
 <pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['switch']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'switch', 10, 8)
 </code></pre>
 
-<p><img src="index_files/index_78_0.png" alt="png" /></p>
+<p><img src="./index_78_0.png" alt="png" /></p>
 
 <h3 id="average-of-switch-disparity">Average of Switch Disparity</h3>
 
@@ -2685,14 +2685,14 @@ secondGroup = bothGroups[int(len(bothGroups)/2):]
 <pre><code class="language-python">histogramPdfGraph.showHistPdf(firstGroup, 30, '#e3e2e2', 'black', 'disparity', 'first group', 10, 8)
 </code></pre>
 
-<p><img src="index_files/index_87_0.png" alt="png" /></p>
+<p><img src="./index_87_0.png" alt="png" /></p>
 
 <h3 id="first-group-average">First Group Average</h3>
 
 <pre><code class="language-python">firstGroup.mean()
 </code></pre>
 
-<pre><code>9.928783382789318
+<pre><code>11.0
 </code></pre>
 
 <h3 id="second-group-distribution">Second Group Distribution</h3>
@@ -2700,14 +2700,14 @@ secondGroup = bothGroups[int(len(bothGroups)/2):]
 <pre><code class="language-python">histogramPdfGraph.showHistPdf(secondGroup, 30, '#e3e2e2', 'black', 'disparity', 'second group', 10, 8)
 </code></pre>
 
-<p><img src="index_files/index_91_0.png" alt="png" /></p>
+<p><img src="./index_91_0.png" alt="png" /></p>
 
 <h3 id="second-group-average">Second Group Average</h3>
 
 <pre><code class="language-python">secondGroup.mean()
 </code></pre>
 
-<pre><code>12.118694362017804
+<pre><code>11.047477744807122
 </code></pre>
 
 <h3 id="conclusion-1">Conclusion</h3>
@@ -2743,22 +2743,22 @@ for idx, platformName in enumerate(platformsNames):
 </code></pre>
 
 <pre><code>ps4 xbox
-0.4872043010752686
+0.6639999999999998
 
 ps4 switch
-8.135987817102968
+8.21812431561929
 
 ps4 pc
-1.6799676922757263
+1.5160265239233675
 
 xbox switch
-7.305647096989032
+7.010956187898123
 
 xbox pc
-0.6697090501544217
+0.5826510174543579
 
 switch pc
-6.10385164806027
+6.286296818538614
 </code></pre>
 
 <h3 id="conclusion-2">Conclusion</h3>
