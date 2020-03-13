@@ -5,12 +5,1515 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/img/icon-32.png</url>
       <title>Blog</title>
       <link>https://mostafatouny.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Applying Machine Learning Is Not Enough, Predicting Ratings From Games Genres</title>
+      <link>https://mostafatouny.github.io/post/first-machine-learning/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/first-machine-learning/</guid>
+      <description>
+
+&lt;h3 id=&#34;preface&#34;&gt;Preface&lt;/h3&gt;
+
+&lt;p&gt;In this blog post we fit a &lt;em&gt;naive Bayes&lt;/em&gt; model to predict games &lt;em&gt;critic ratings&lt;/em&gt; given their genres. Data are scraped from &lt;a href=&#34;https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&#34; target=&#34;_blank&#34;&gt;best metacritic ps4 games&lt;/a&gt; through a &lt;a href=&#34;https://github.com/mostafatouny/data-scraper/&#34; target=&#34;_blank&#34;&gt;scrapper of mine&lt;/a&gt;. We do not claim a result of value. An introductory recommender system course yields results much more accurate and reliable than approach presented here. Why am I doing this then? As machine learning today is overwhelmingly hyped, It is nice to have a facet of it in my portfolio. Jump directly to &lt;a href=&#34;#discussion&#34;&gt;discussion&lt;/a&gt; to briefly get into the gist of this post.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;table-of-contentes&#34;&gt;Table of Contentes&lt;/h2&gt;
+
+&lt;p&gt;Intro&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Data Preprocessing&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-cleansing&#34;&gt;Data Cleansing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#discretize-critic-rating&#34;&gt;Discretize Critic Rating&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#obtain-unique-series-of-genres&#34;&gt;Obtain Unique Series of Genres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#create-column-For-each-genre-its-value-corresponds-to-whether-it-is-in-Games-Genres&#34;&gt;Create Column For Each Genre. Its Value Corresponds To Whether It is in Game&amp;rsquo;s Genres&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Applying Machine Learning&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#naive-gaussian-bayes&#34;&gt;Naive Gaussian Bayes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#predicting-upcoming-games&#34;&gt;Predicting Upcoming Games&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#discussion&#34;&gt;Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;import-libraries-and-local-files&#34;&gt;Import Libraries and Local Files&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 3rd-party libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+# local-files
+import jsonRW as jsRW
+import discretizeIntoCategories as discIntCat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;data-cleansing&#34;&gt;Data Cleansing&lt;/h2&gt;
+
+&lt;h3 id=&#34;read-data&#34;&gt;Read Data&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# read its local json file
+metacritic_json = jsRW.readJson(&#39;metacritic2019ps4_data&#39;)
+# parse it as pandas dataframe, then map platform name to it
+df = pd.DataFrame(metacritic_json)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;developer&lt;/th&gt;
+      &lt;th&gt;genres&lt;/th&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;publisher&lt;/th&gt;
+      &lt;th&gt;release_data&lt;/th&gt;
+      &lt;th&gt;users_rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;Square Enix&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Massively Multiplayer]&lt;/td&gt;
+      &lt;td&gt;Final Fantasy XIV: Shadowbringers&lt;/td&gt;
+      &lt;td&gt;Square Enix&lt;/td&gt;
+      &lt;td&gt;Jul  2, 2019&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;PlatinumGames&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;NieR: Automata - Game of the YoRHa Edition&lt;/td&gt;
+      &lt;td&gt;Square Enix&lt;/td&gt;
+      &lt;td&gt;Feb 26, 2019&lt;/td&gt;
+      &lt;td&gt;8.5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;Capcom R&amp;amp;D Division 1&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, Survival]&lt;/td&gt;
+      &lt;td&gt;Resident Evil 2&lt;/td&gt;
+      &lt;td&gt;Capcom&lt;/td&gt;
+      &lt;td&gt;Jan 25, 2019&lt;/td&gt;
+      &lt;td&gt;8.8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;From Software&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;Sekiro: Shadows Die Twice&lt;/td&gt;
+      &lt;td&gt;Activision&lt;/td&gt;
+      &lt;td&gt;Mar 22, 2019&lt;/td&gt;
+      &lt;td&gt;7.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;Capcom&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;Monster Hunter: World - Iceborne&lt;/td&gt;
+      &lt;td&gt;Capcom&lt;/td&gt;
+      &lt;td&gt;Sep  6, 2019&lt;/td&gt;
+      &lt;td&gt;8.4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;High Voltage Software&lt;/td&gt;
+      &lt;td&gt;[Action, Shooter, Shoot-&#39;Em-Up, Top-Down]&lt;/td&gt;
+      &lt;td&gt;Zombieland: Double Tap - Road Trip&lt;/td&gt;
+      &lt;td&gt;GameMill Entertainment&lt;/td&gt;
+      &lt;td&gt;Oct 15, 2019&lt;/td&gt;
+      &lt;td&gt;4.6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;Square Enix, ilinx inc.&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;Left Alive&lt;/td&gt;
+      &lt;td&gt;Square Enix&lt;/td&gt;
+      &lt;td&gt;Mar  5, 2019&lt;/td&gt;
+      &lt;td&gt;8.3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;Void Studios&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;Eternity: The Last Unicorn&lt;/td&gt;
+      &lt;td&gt;1C Company&lt;/td&gt;
+      &lt;td&gt;Mar  5, 2019&lt;/td&gt;
+      &lt;td&gt;3.6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;Dean &#39;Rocket&#39; Hall&lt;/td&gt;
+      &lt;td&gt;[Sci-Fi, Action, Shooter, First-Person, Arcade]&lt;/td&gt;
+      &lt;td&gt;DayZ&lt;/td&gt;
+      &lt;td&gt;Bohemia Interactive&lt;/td&gt;
+      &lt;td&gt;May 30, 2019&lt;/td&gt;
+      &lt;td&gt;2.9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;Wakefield Interactive&lt;/td&gt;
+      &lt;td&gt;[Puzzle, Action]&lt;/td&gt;
+      &lt;td&gt;Where the Bees Make Honey&lt;/td&gt;
+      &lt;td&gt;Wakefield Interactive&lt;/td&gt;
+      &lt;td&gt;Mar 29, 2019&lt;/td&gt;
+      &lt;td&gt;3.2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 7 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;drop-irrelevant-columns&#34;&gt;Drop Irrelevant Columns&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.drop([&#39;developer&#39;, &#39;name&#39;, &#39;publisher&#39;, &#39;release_data&#39;, &#39;users_rating&#39;], axis=1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;genres&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Massively Multiplayer]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, Survival]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;[Action, Shooter, Shoot-&#39;Em-Up, Top-Down]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;[Sci-Fi, Action, Shooter, First-Person, Arcade]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;[Puzzle, Action]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 2 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;critic-rating-data-type-to-integer&#34;&gt;Critic Rating Data Type To Integer&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dtypes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;critic_rating    object
+genres           object
+dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&#39;critic_rating&#39;] = pd.to_numeric(df[&#39;critic_rating&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dtypes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;critic_rating     int64
+genres           object
+dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;discretize-critic-rating&#34;&gt;Discretize Critic Rating&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# categories to be mapped as they fall within certain ranges
+categories = pd.Series([&amp;quot;very_low&amp;quot;, &amp;quot;low&amp;quot;, &amp;quot;moderate&amp;quot;, &amp;quot;high&amp;quot;, &amp;quot;very_high&amp;quot;])
+# critic ratings ranges to be mapped
+intervals_categories = [0, 20, 40, 60, 80]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# compute categories according to ranges specified
+df[&#39;category&#39;] = df.apply(discIntCat.numToCat, axis=1, args=(&#39;critic_rating&#39;, categories, intervals_categories))
+# let categories be recognized by pandas
+df[&#39;category&#39;] = df[&#39;category&#39;].astype(&amp;quot;category&amp;quot;)
+# order categories
+df[&#39;category&#39;] = df[&#39;category&#39;].cat.set_categories(categories, ordered=True)    
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;critic_rating&lt;/th&gt;
+      &lt;th&gt;genres&lt;/th&gt;
+      &lt;th&gt;category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Massively Multiplayer]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, Survival]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;90&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;[Action, Shooter, Shoot-&#39;Em-Up, Top-Down]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;[Sci-Fi, Action, Shooter, First-Person, Arcade]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;[Puzzle, Action]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 3 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;drop-critic-rating&#34;&gt;Drop Critic Rating&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.drop([&#39;critic_rating&#39;], axis=1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;genres&lt;/th&gt;
+      &lt;th&gt;category&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[Role-Playing, Massively Multiplayer]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[Action Adventure, Survival]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;very_high&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;[Action, Shooter, Shoot-&#39;Em-Up, Top-Down]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;[Action Adventure, General]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;[Role-Playing, Action RPG]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;[Sci-Fi, Action, Shooter, First-Person, Arcade]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;[Puzzle, Action]&lt;/td&gt;
+      &lt;td&gt;low&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 2 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;obtain-unique-series-of-genres&#34;&gt;Obtain Unique Series of Genres&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sr_genres = df[&#39;genres&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sr_genres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;0                [Role-Playing, Massively Multiplayer]
+1                           [Role-Playing, Action RPG]
+2                         [Action Adventure, Survival]
+3                          [Action Adventure, General]
+4                           [Role-Playing, Action RPG]
+                            ...                       
+336          [Action, Shooter, Shoot-&#39;Em-Up, Top-Down]
+337                        [Action Adventure, General]
+338                         [Role-Playing, Action RPG]
+339    [Sci-Fi, Action, Shooter, First-Person, Arcade]
+340                                   [Puzzle, Action]
+Name: genres, Length: 341, dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# concatenate genres lists, then filter duplicated elements
+unique_genres = np.unique(np.concatenate(sr_genres, axis=0))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unique_genres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;array([&#39;2D&#39;, &#39;3D&#39;, &#39;4X&#39;, &#39;Action&#39;, &#39;Action Adventure&#39;, &#39;Action RPG&#39;,
+       &#39;Adventure&#39;, &#39;Arcade&#39;, &#39;Automobile&#39;, &#39;Baseball&#39;, &#39;Basketball&#39;,
+       &amp;quot;Beat-&#39;Em-Up&amp;quot;, &#39;Biking&#39;, &#39;Billiards&#39;, &#39;Boxing / Martial Arts&#39;,
+       &#39;Business / Tycoon&#39;, &#39;Card Battle&#39;, &#39;Career&#39;, &#39;Civilian&#39;, &#39;Combat&#39;,
+       &#39;Command&#39;, &#39;Compilation&#39;, &#39;Cricket&#39;, &#39;Dancing&#39;, &#39;Defense&#39;,
+       &#39;Fantasy&#39;, &#39;Fighting&#39;, &#39;First-Person&#39;, &#39;Flight&#39;, &#39;Football&#39;,
+       &#39;General&#39;, &#39;Golf&#39;, &#39;Government&#39;, &#39;Ice Hockey&#39;, &#39;Individual&#39;,
+       &#39;Japanese-Style&#39;, &#39;Light Gun&#39;, &#39;Linear&#39;, &#39;Management&#39;, &#39;Marine&#39;,
+       &#39;Massively Multiplayer&#39;, &#39;Matching&#39;, &#39;Miscellaneous&#39;, &#39;Music&#39;,
+       &#39;Open-World&#39;, &#39;Other&#39;, &#39;Party / Minigame&#39;, &#39;Platformer&#39;,
+       &#39;Point-and-Click&#39;, &#39;Puzzle&#39;, &#39;Racing&#39;, &#39;Real-Time&#39;, &#39;Rhythm&#39;,
+       &#39;Roguelike&#39;, &#39;Role-Playing&#39;, &#39;Sandbox&#39;, &#39;Sci-Fi&#39;, &amp;quot;Shoot-&#39;Em-Up&amp;quot;,
+       &#39;Shooter&#39;, &#39;Sim&#39;, &#39;Simulation&#39;, &#39;Skate / Skateboard&#39;, &#39;Soccer&#39;,
+       &#39;Space&#39;, &#39;Sports&#39;, &#39;Strategy&#39;, &#39;Survival&#39;, &#39;Tactical&#39;, &#39;Tactics&#39;,
+       &#39;Team&#39;, &#39;Third-Person&#39;, &#39;Top-Down&#39;, &#39;Turn-Based&#39;, &#39;Vehicle&#39;,
+       &#39;Virtual&#39;, &#39;Virtual Life&#39;, &#39;Visual Novel&#39;, &#39;Western-Style&#39;,
+       &#39;Wrestling&#39;], dtype=&#39;&amp;lt;U21&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;remove-spaces-slashes-and-dashes-from-genres-names&#34;&gt;Remove Spaces, Slashes and Dashes From Genres Names&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# spaces, slashes and dashes converter to underscores and empty string
+def underscoreCleaner(strLis_in):
+    tem_string = strLis_in
+    tem_string = tem_string.replace(&#39; &#39;, &#39;_&#39;)
+    tem_string = tem_string.replace(&#39;/&#39;, &#39;&#39;)
+    tem_string = tem_string.replace(&#39;-&#39;, &#39;_&#39;)
+    return tem_string
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;temLis = pd.Series(unique_genres)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# apply cleaner
+temLis = temLis.apply(underscoreCleaner)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cleanedUniqueGenres = temLis
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cleanedUniqueGenres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;0                   2D
+1                   3D
+2                   4X
+3               Action
+4     Action_Adventure
+            ...       
+74             Virtual
+75        Virtual_Life
+76        Visual_Novel
+77       Western_Style
+78           Wrestling
+Length: 79, dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;create-column-for-each-genre-its-value-corresponds-to-whether-it-is-in-game-s-genres&#34;&gt;Create Column For Each Genre. Its Value Corresponds To Whether It is in Game&amp;rsquo;s Genres&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# maps genresList_in to a boolean array, corresponding to whether a genre is in game&#39;s genres list
+def isGenreIn(row_in, column_in, genresList_in):
+    # game&#39;s genres list
+    row_value = pd.Series(row_in[column_in])
+    # all unique genres
+    genresSer = pd.Series(genresList_in)
+    # check whether each genre in all unique genres is in game&#39;s genres list
+    # return a boolean array, corresponding to whether genre is found in game&#39;s list.
+    return genresSer.isin(row_value)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# apply above function
+genresAsColumns = df.apply(isGenreIn, axis=1, args=(&#39;genres&#39;, cleanedUniqueGenres))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# rename columns to all unique genres
+genresAsColumns.columns = cleanedUniqueGenres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;genresAsColumns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;2D&lt;/th&gt;
+      &lt;th&gt;3D&lt;/th&gt;
+      &lt;th&gt;4X&lt;/th&gt;
+      &lt;th&gt;Action&lt;/th&gt;
+      &lt;th&gt;Action_Adventure&lt;/th&gt;
+      &lt;th&gt;Action_RPG&lt;/th&gt;
+      &lt;th&gt;Adventure&lt;/th&gt;
+      &lt;th&gt;Arcade&lt;/th&gt;
+      &lt;th&gt;Automobile&lt;/th&gt;
+      &lt;th&gt;Baseball&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;Team&lt;/th&gt;
+      &lt;th&gt;Third_Person&lt;/th&gt;
+      &lt;th&gt;Top_Down&lt;/th&gt;
+      &lt;th&gt;Turn_Based&lt;/th&gt;
+      &lt;th&gt;Vehicle&lt;/th&gt;
+      &lt;th&gt;Virtual&lt;/th&gt;
+      &lt;th&gt;Virtual_Life&lt;/th&gt;
+      &lt;th&gt;Visual_Novel&lt;/th&gt;
+      &lt;th&gt;Western_Style&lt;/th&gt;
+      &lt;th&gt;Wrestling&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;True&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;True&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;True&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;True&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 79 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# map boolean values to integers. True to 1 and False to 0
+genresAsColumns = genresAsColumns.astype(int)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;genresAsColumns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;2D&lt;/th&gt;
+      &lt;th&gt;3D&lt;/th&gt;
+      &lt;th&gt;4X&lt;/th&gt;
+      &lt;th&gt;Action&lt;/th&gt;
+      &lt;th&gt;Action_Adventure&lt;/th&gt;
+      &lt;th&gt;Action_RPG&lt;/th&gt;
+      &lt;th&gt;Adventure&lt;/th&gt;
+      &lt;th&gt;Arcade&lt;/th&gt;
+      &lt;th&gt;Automobile&lt;/th&gt;
+      &lt;th&gt;Baseball&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;Team&lt;/th&gt;
+      &lt;th&gt;Third_Person&lt;/th&gt;
+      &lt;th&gt;Top_Down&lt;/th&gt;
+      &lt;th&gt;Turn_Based&lt;/th&gt;
+      &lt;th&gt;Vehicle&lt;/th&gt;
+      &lt;th&gt;Virtual&lt;/th&gt;
+      &lt;th&gt;Virtual_Life&lt;/th&gt;
+      &lt;th&gt;Visual_Novel&lt;/th&gt;
+      &lt;th&gt;Western_Style&lt;/th&gt;
+      &lt;th&gt;Wrestling&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;336&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;337&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;338&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;339&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;340&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;341 rows × 79 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;map-classes-to-their-corresponding-numeric-indices&#34;&gt;Map Classes To Their Corresponding Numeric Indices&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# a mapper from class string to its index
+classesArr = np.array([&amp;quot;very_low&amp;quot;, &amp;quot;low&amp;quot;, &amp;quot;moderate&amp;quot;, &amp;quot;high&amp;quot;, &amp;quot;very_high&amp;quot;])
+catToIndDict = {&amp;quot;very_low&amp;quot;:0, &amp;quot;low&amp;quot;:1, &amp;quot;moderate&amp;quot;:2, &amp;quot;high&amp;quot;:3, &amp;quot;very_high&amp;quot;:4}
+def catToInd(str_in):
+    return catToIndDict[str_in]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes = df[&#39;category&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;0      very_high
+1      very_high
+2      very_high
+3      very_high
+4      very_high
+         ...    
+336          low
+337          low
+338          low
+339          low
+340          low
+Name: category, Length: 341, dtype: category
+Categories (5, object): [very_low &amp;lt; low &amp;lt; moderate &amp;lt; high &amp;lt; very_high]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# apply above mapper
+classes = classes.apply(lambda x: catToInd(x))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;0      4
+1      4
+2      4
+3      4
+4      4
+      ..
+336    1
+337    1
+338    1
+339    1
+340    1
+Name: category, Length: 341, dtype: category
+Categories (5, int64): [0 &amp;lt; 1 &amp;lt; 2 &amp;lt; 3 &amp;lt; 4]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;naive-gaussian-bayes&#34;&gt;Naive Gaussian Bayes&lt;/h2&gt;
+
+&lt;h3 id=&#34;convert-x-and-y-to-numpy-arrays&#34;&gt;Convert X and Y To Numpy Arrays&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;genresAsColumns = genresAsColumns.to_numpy()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes = classes.to_numpy()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;genresAsColumns
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;array([[0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       ...,
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0],
+       [0, 0, 0, ..., 0, 0, 0]])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+       4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+       4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+       4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+       3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;split-data-for-testing-and-training&#34;&gt;Split Data For Testing and Training&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;X_train, X_test, y_train, y_test = train_test_split(genresAsColumns, classes, test_size=0.3, random_state=0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;fit-model&#34;&gt;Fit Model&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# initialize a guassian model
+gnb = GaussianNB()
+# fit model games genres and classes
+clf = gnb.fit(X_train, y_train)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;predicting-test-data&#34;&gt;Predicting Test Data&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;y_pred = clf.predict(X_test)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;accuracy&#34;&gt;Accuracy&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Number of correctly labeled points out of total, respectively
+correctlyLabeledNum = (y_test == y_pred).sum()
+totalPointsNum = X_test.shape[0]
+print(&amp;quot;Number of Correctly Labeled: &amp;quot;, correctlyLabeledNum)
+print(&amp;quot;Number of Total Points: &amp;quot;, totalPointsNum)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Number of Correctly Labeled:  17
+Number of Total Points:  103
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Accuracy Percentage: &amp;quot;, correctlyLabeledNum/totalPointsNum)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Accuracy Percentage:  0.1650485436893204
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;predicting-upcoming-games&#34;&gt;Predicting Upcoming Games&lt;/h2&gt;
+
+&lt;h3 id=&#34;a-mapper-from-a-series-element-to-its-corresponding-index&#34;&gt;A Mapper From A Series Element To Its Corresponding Index&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def indexFromName(series_in, str_in):
+    return series_in[series_in == str_in].index[0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;indexFromName(cleanedUniqueGenres, &#39;2D&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;construct-array-of-indices-from-strings&#34;&gt;Construct Array of Indices From Strings&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def arrayFromNames(series_in, strLis_in):
+    # Initialize an array of 79 zeros, corresponding to genres numbers
+    gameGenres = np.array([0] * 79)
+    
+    # for each input genre, set its corresponding value to 1
+    for name in strLis_in:
+        gameGenres[indexFromName(series_in, name)] = 1
+        
+    return gameGenres
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;predict-class-name-from-genres-strings&#34;&gt;Predict Class Name From Genres Strings&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def predictClassFromGenres(strLis_in):
+    # map genres strings to their corresponding indices
+    gameGenreArray = arrayFromNames(cleanedUniqueGenres, strLis_in)
+    # prediction of class numeric value
+    gamePred = clf.predict([
+        gameGenreArray
+    ])
+    # return predicted class name
+    return classesArr[gamePred[0]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;doom-eternal&#34;&gt;Doom Eternal&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;./doom-eternal.png&#34; alt=&#34;doom-eternal&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;predictClassFromGenres([&#39;Action&#39;, &#39;Shooter&#39;, &#39;First_Person&#39;, &#39;Arcade&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;low&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;control-the-foundation&#34;&gt;Control: The Foundation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;./control-the-foundation.png&#34; alt=&#34;control-the-foundation&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;predictClassFromGenres([&#39;Action_Adventure&#39;, &#39;General&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;low&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;resident-evil-3&#34;&gt;Resident Evil 3&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;./resident-evil-3.png&#34; alt=&#34;resident-evil-3&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;predictClassFromGenres([&#39;Action_Adventure&#39;, &#39;Survival&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;moderate&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;discussion&#34;&gt;Discussion&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s now analyze the embarrassing results I reached. A realization of ignorance is not as bad as an ignorance of being ignorant. For the latter case, There is no chance for remediation, but for the former, I am skeptic of guaranteed chances.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;There is no pattern to be fitted&lt;/strong&gt;. I have seen plenty of computer science students who just care about machine learning models and give no interest to the data itself! That is exactly alike claiming astronomy is all about telescopes. In fact, Data science is all based about our understanding of real-life data and whether we could discover and verify patterns found in them. Machine learning models are toolbox for the data scientist so that he could reveal insights in data, but they are not his principal goal. Regarding our case in this blog post, It is well-known that genres are not indicators of a game&amp;rsquo;s quality at all. If the data contains no pattern, then the hypothesized pattern shall not emerge from whatever model you apply. I would doubt my self in case the model reached a high accuracy rate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Features vectors is ridiculously simplifing the item&lt;/strong&gt;. Two &lt;em&gt;action-adventure&lt;/em&gt; &lt;em&gt;3rd-person&lt;/em&gt; games probably have totally different playing-style/theme. Simplifing games by their genres is alike describing a student&amp;rsquo;s skills qualifications through his faculty. Is graduating from CS major an indicator of student&amp;rsquo;s skills? He might be either a lazy or a dedicated student. A curious and challenging inquiry arises here. How do we represent aesthetics in terms of numbers? How do we objectively measure a game&amp;rsquo;s degree of fun? Is it even possible for science to reach at someday objective measures of human-feelings? The only aspect I am sure of is that no one is sure of answers to these questions (sounds like a self-contradictory statement, right?)&lt;/p&gt;
+
+&lt;p&gt;Finally, Note that &lt;em&gt;naive bayes&lt;/em&gt; is based on the assumption that features are independant from each other, which is not the case here. &lt;em&gt;Action&lt;/em&gt; games are more likely to be &lt;em&gt;adventure&lt;/em&gt;, for instance.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Analyzing Disparity Between Users and Journalists Ratings</title>
