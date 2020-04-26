@@ -33,12 +33,17 @@
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/first-machine-learning/</loc>
-    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/</loc>
+    <loc>https://mostafatouny.github.io/post/shifting-roads/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/post/first-machine-learning/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -85,6 +90,11 @@
   <url>
     <loc>https://mostafatouny.github.io/post/favorite-books-list/</loc>
     <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -189,10 +199,6 @@
   
   <url>
     <loc>https://mostafatouny.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mostafatouny.github.io/courses/</loc>
   </url>
   
 </urlset>

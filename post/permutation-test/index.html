@@ -394,14 +394,9 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<h2 id="intro">Intro</h2>
-
-<p>In this post we analyze and compare <a href="https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019" target="_blank">metacritic ratings of best 2019 games</a>, Given by both the gaming community and professional journalism. It is divided into three sections, namely, <em>data preprocessing</em>, <em>exploratory analysis</em>, and <em>systematic test</em>. I launched a similar post upto <em>exploratory analysis</em> on <a href="https://www.reddit.com/r/truegaming/comments/ez7oc2/analysing_top_praised_games_by_the_community_not/" target="_blank">this Reddit post</a>. Surprisingly, The community shared with me great insights and feedbacks. If you have already seen my notebook on <em>reddit&rsquo;s post</em>, Then skip to <em>systematic test</em>. There is a summary of each section if you&rsquo;re lazy to read the whole kernel. Check summaries out in <em>table of contents</em> below. On the other extreme, If you are willing to read every detail of the kernel, I provided for you the full sourcecode used in this blog post <a href="https://github.com/mostafatouny/disparity-blog-post" target="_blank">here</a>.</p>
-
+      <h2 id="intro">Intro</h2>
+<p>In this post we analyze and compare <a href="https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019">metacritic ratings of best 2019 games</a>, Given by both the gaming community and professional journalism. It is divided into three sections, namely, <em>data preprocessing</em>, <em>exploratory analysis</em>, and <em>systematic test</em>. I launched a similar post upto <em>exploratory analysis</em> on <a href="https://www.reddit.com/r/truegaming/comments/ez7oc2/analysing_top_praised_games_by_the_community_not/">this Reddit post</a>. Surprisingly, The community shared with me great insights and feedbacks. If you have already seen my notebook on <em>reddit&rsquo;s post</em>, Then skip to <em>systematic test</em>. There is a summary of each section if you&rsquo;re lazy to read the whole kernel. Check summaries out in <em>table of contents</em> below. On the other extreme, If you are willing to read every detail of the kernel, I provided for you the full sourcecode used in this blog post <a href="https://github.com/mostafatouny/disparity-blog-post">here</a>.</p>
 <p>In a nutshell, The goal of this blog post is:</p>
-
 <ul>
 <li>Analyzing top games got high ratings from professional critics but not from community of users.</li>
 <li>Analyzing top games got high ratings from community of users but not from progessional critics.</li>
@@ -409,54 +404,38 @@
 <li>Do above steps on four platforms, namely, PS4, Xbox One, Switch, and PC. Then we compare them.</li>
 <li>Apply permutation and p-values systematic test on each platforms pairs distributions.</li>
 </ul>
-
 <h2 id="what-i-have-learned-from-reddit-community">What I Have Learned From Reddit Community</h2>
-
 <p>In this paragraph I shall highlight and review reddit&rsquo;s community comments which I found most useful. I am going to just quote the user&rsquo;s name, and summarize his comment. To see his full comment, just <code>CTRL+F</code> his name on reddit&rsquo;s page. After each summary, I spot what I learned, and how analysis could be furtherly improved according to it. However, None of these spots are implemented here.</p>
-
 <blockquote>
 <p><strong>ArtKorvalay</strong>
 A gamer who dislikes a game but finds no outrage from the community does not add up his voice. A gamer who moderates a game but finds an outrage from the community adds up a negative voice</p>
 </blockquote>
-
 <p>We could consider ratings along whether the game is hyped or outraged from the community. In that way, we might reach more accurate analysis.</p>
-
 <blockquote>
 <p><strong>ArtKorvalay</strong>
 Some games like <em>disco elsiym</em> gets played by only those who like such genre of games. A humble 2d-graphics like this shall not be played by any casual gamer who gets attracted by marketing and high graphics. So, a gamer who chooses to play it must be a fan of that style. As a result, the game got rated only by those who like it. Hence, ratings are biased.</p>
 </blockquote>
-
 <p>We could consider ratings along whether a game&rsquo;s marketing budget is high or low. In that way, we might reach more accurate analysis.</p>
-
 <blockquote>
 <p><strong>EoceneMiacid</strong>
-<em>Terminator Resistance</em> case study is typical for disparity between users and critics. Have a look <a href="https://www.youtube.com/watch?v=H5wi-c0v2wk" target="_blank">here</a> how the problem was highlighted by media.</p>
+<em>Terminator Resistance</em> case study is typical for disparity between users and critics. Have a look <a href="https://www.youtube.com/watch?v=H5wi-c0v2wk">here</a> how the problem was highlighted by media.</p>
 </blockquote>
-
 <p>Exploring this case study might reveal new insights as it is typical of the problem of disparity between users and professional critics. We might test our new techniques on this case study and see how our techniques perform up against it. Testing analysis techniques on a case we already know about emphatically shall help us on detecting mistakes in our analysis.</p>
-
-<hr />
-
+<hr>
 <h2 id="table-of-contents">Table of Contents</h2>
-
 <p>Preface</p>
-
 <ul>
 <li><a href="#preface">Preface</a></li>
 <li><a href="#what-i-have-learned-from-reddit-community">What I Have Learned From Reddit Community</a></li>
 </ul>
-
 <p>Data Preprocessing</p>
-
 <ul>
 <li><a href="#import-libraries-and-local-files">Import Libraries and Local Files</a></li>
 <li><a href="#read-data">Read Data</a></li>
 <li><a href="#data-cleansing">Data Cleansing</a></li>
 <li><a href="#data-preprocessing-summary">Data Preprocessing Summary</a></li>
 </ul>
-
 <p>Exploratory Analysis</p>
-
 <ul>
 <li><a href="#compute-disparity-difference-between-users-and-critics">Compute Disparity (Difference) Between Users and Critics</a></li>
 <li><a href="#discretize-disparity-computed-earlier-into-categories">Discretize Disparity Computed Earlier Into Categories</a></li>
@@ -468,772 +447,229 @@ Some games like <em>disco elsiym</em> gets played by only those who like such ge
 <li><a href="#games-which-got-higher-ratings-from-users-than-from-critics">Games Which Got Higher Ratings From Users Than From Critics</a></li>
 <li><a href="#exploratoy-analysis-summary">Exploratoy Analysis Summary</a></li>
 </ul>
-
 <p>Systematic Test</p>
-
 <ul>
 <li><a href="#a-single-permutation-shuffle-based-trial-with-histogram-probability-density-function">A Single Permutation Shuffle Based Trial With Histogram &amp; Probability Density Function</a></li>
 <li><a href="#permutation-test-and-p-value-based-statistical-significance">Permutation Test and P-Value Based Statistical Significance</a></li>
 <li><a href="#systematic-test-summary">Systematic Test Summary</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="import-libraries-and-local-files">Import Libraries and Local Files</h3>
-
-<pre><code class="language-python"># 3rd-party libraries
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-# local-files
-import jsonRW as jsRW
-import graphs.pie as pieGraph
-import graphs.categoricalHeatmap as categoricalHeatmapGraph
-import graphs.groupedBars as groupedBarsGraph
-import graphs.histogramPdf as histogramPdfGraph
-import transformations.transformations as transform
-import transformations.discretizeIntoCategories as discIntCat
-import statTests.permutationTest as permTest
-</code></pre>
-
-<hr />
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 3rd-party libraries</span>
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#75715e"># local-files</span>
+<span style="color:#f92672">import</span> jsonRW <span style="color:#f92672">as</span> jsRW
+<span style="color:#f92672">import</span> graphs.pie <span style="color:#f92672">as</span> pieGraph
+<span style="color:#f92672">import</span> graphs.categoricalHeatmap <span style="color:#f92672">as</span> categoricalHeatmapGraph
+<span style="color:#f92672">import</span> graphs.groupedBars <span style="color:#f92672">as</span> groupedBarsGraph
+<span style="color:#f92672">import</span> graphs.histogramPdf <span style="color:#f92672">as</span> histogramPdfGraph
+<span style="color:#f92672">import</span> transformations.transformations <span style="color:#f92672">as</span> transform
+<span style="color:#f92672">import</span> transformations.discretizeIntoCategories <span style="color:#f92672">as</span> discIntCat
+<span style="color:#f92672">import</span> statTests.permutationTest <span style="color:#f92672">as</span> permTest
+</code></pre></div><hr>
 <h2 id="read-data">Read Data</h2>
-
 <h3 id="read-local-json-data-into-a-pandas-dataframe">Read Local JSON Data Into a Pandas Dataframe</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># a map from each platform to its corresponding dataframe</span>
+platform_df <span style="color:#f92672">=</span> {}
+<span style="color:#75715e"># platform names and their corresonding data file names</span>
+platformsNames <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ps4&#39;</span>, <span style="color:#e6db74">&#39;xbox&#39;</span>, <span style="color:#e6db74">&#39;switch&#39;</span>, <span style="color:#e6db74">&#39;pc&#39;</span>]
+filesNames <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ps4.csv&#39;</span>, <span style="color:#e6db74">&#39;xbox.csv&#39;</span>, <span style="color:#e6db74">&#39;switch.csv&#39;</span>, <span style="color:#e6db74">&#39;pc.csv&#39;</span>]
 
-<pre><code class="language-python"># a map from each platform to its corresponding dataframe
-platform_df = {}
-# platform names and their corresonding data file names
-platformsNames = ['ps4', 'xbox', 'switch', 'pc']
-filesNames = ['ps4.csv', 'xbox.csv', 'switch.csv', 'pc.csv']
+<span style="color:#75715e"># for each platform, then </span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> platformsNames:
+    <span style="color:#75715e"># read its local json file</span>
+    metacritic_list <span style="color:#f92672">=</span> jsRW<span style="color:#f92672">.</span>readJson(name)
+    <span style="color:#75715e"># parse it as pandas dataframe, then map platform name to it</span>
+    platform_df[name] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(metacritic_list)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># take a look at a dataframe</span>
+platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-# for each platform, then 
-for name in platformsNames:
-    # read its local json file
-    metacritic_list = jsRW.readJson(name)
-    # parse it as pandas dataframe, then map platform name to it
-    platform_df[name] = pd.DataFrame(metacritic_list)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python"># take a look at a dataframe
-platform_df['ps4']
-</code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>critic_rating</th>
-      <th>id</th>
-      <th>release_date</th>
-      <th>title</th>
-      <th>user_rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>91</td>
-      <td>1</td>
-      <td>Jul  2, 2019</td>
-      <td>final fantasy xiv: shadowbringers</td>
-      <td>8.3</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>91</td>
-      <td>2</td>
-      <td>Feb 26, 2019</td>
-      <td>nier: automata - game of the yorha edition</td>
-      <td>8.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>91</td>
-      <td>3</td>
-      <td>Jan 25, 2019</td>
-      <td>resident evil 2</td>
-      <td>8.8</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>90</td>
-      <td>4</td>
-      <td>Mar 22, 2019</td>
-      <td>sekiro: shadows die twice</td>
-      <td>7.9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>89</td>
-      <td>5</td>
-      <td>Sep  6, 2019</td>
-      <td>monster hunter: world - iceborne</td>
-      <td>8.4</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>39</td>
-      <td>336</td>
-      <td>Oct 15, 2019</td>
-      <td>zombieland: double tap - road trip</td>
-      <td>4.6</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>37</td>
-      <td>337</td>
-      <td>Mar  5, 2019</td>
-      <td>left alive</td>
-      <td>8.3</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>36</td>
-      <td>338</td>
-      <td>Mar  5, 2019</td>
-      <td>eternity: the last unicorn</td>
-      <td>3.8</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>31</td>
-      <td>339</td>
-      <td>May 30, 2019</td>
-      <td>dayz</td>
-      <td>2.8</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>31</td>
-      <td>340</td>
-      <td>Mar 29, 2019</td>
-      <td>where the bees make honey</td>
-      <td>3.2</td>
-    </tr>
-  </tbody>
-</table>
-<p>340 rows × 5 columns</p>
-</div>
-
-<hr />
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<hr>
 <h2 id="data-cleansing">Data Cleansing</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># drop unneeded columns and re-organize them </span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> platformsNames:
+    platform_df[name] <span style="color:#f92672">=</span> platform_df[name][[<span style="color:#e6db74">&#39;title&#39;</span>, <span style="color:#e6db74">&#39;user_rating&#39;</span>, <span style="color:#e6db74">&#39;critic_rating&#39;</span>]]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># take a look at a dataframe, again</span>
+platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python"># drop unneeded columns and re-organize them 
-for name in platformsNames:
-    platform_df[name] = platform_df[name][['title', 'user_rating', 'critic_rating']]
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python"># take a look at a dataframe, again
-platform_df['ps4']
-</code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>final fantasy xiv: shadowbringers</td>
-      <td>8.3</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>nier: automata - game of the yorha edition</td>
-      <td>8.5</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>resident evil 2</td>
-      <td>8.8</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>sekiro: shadows die twice</td>
-      <td>7.9</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>monster hunter: world - iceborne</td>
-      <td>8.4</td>
-      <td>89</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>zombieland: double tap - road trip</td>
-      <td>4.6</td>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>left alive</td>
-      <td>8.3</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>eternity: the last unicorn</td>
-      <td>3.8</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>dayz</td>
-      <td>2.8</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>where the bees make honey</td>
-      <td>3.2</td>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
-<p>340 rows × 3 columns</p>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h4 id="remarks">remarks</h4>
-
 <ul>
 <li>user_rating must be on the same scale as critic_rating</li>
-
-<li><p>data types need to be checked</p>
-
-<pre><code class="language-python"># check columns data types
-platform_df['ps4'].dtypes
-</code></pre>
-
-<p>title            object
+<li>data types need to be checked</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># check columns data types</span>
+platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]<span style="color:#f92672">.</span>dtypes
+</code></pre></div><pre><code>title            object
 user_rating      object
 critic_rating    object
-dtype: object</p>
-
-<pre><code class="language-python"># convert ratings into a numeric value
-#      error ahead!
-#df['user_rating'] = pd.to_numeric(df['user_rating'])
-#df['critic_rating'] = pd.to_numeric(df['critic_rating'])
+dtype: object
 </code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># convert ratings into a numeric value</span>
+<span style="color:#75715e">#      error ahead!</span>
+<span style="color:#75715e">#df[&#39;user_rating&#39;] = pd.to_numeric(df[&#39;user_rating&#39;])</span>
+<span style="color:#75715e">#df[&#39;critic_rating&#39;] = pd.to_numeric(df[&#39;critic_rating&#39;])</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get rid of user_rating with value equal to &#34;tbd&#34;</span>
 
-<pre><code class="language-python"># get rid of user_rating with value equal to &quot;tbd&quot;
+<span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> platformsNames:
+    <span style="color:#75715e"># get its dataframe</span>
+    df <span style="color:#f92672">=</span> platform_df[name]
+    <span style="color:#75715e"># get index set in which user_rating is tbd, a non-numeric value</span>
+    tbdIndex <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;user_rating&#39;</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;tbd&#34;</span>]<span style="color:#f92672">.</span>index
+    <span style="color:#75715e"># drop rows specified by indices in which user_rating is tbd</span>
+    df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>drop(labels<span style="color:#f92672">=</span>tbdIndex, axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;index&#39;</span>)
+    <span style="color:#75715e"># set updated data to platform_df</span>
+    platform_df[name] <span style="color:#f92672">=</span> df
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># convert ratings to a numeric type</span>
 
-# for each platform
-for name in platformsNames:
-# get its dataframe
-df = platform_df[name]
-# get index set in which user_rating is tbd, a non-numeric value
-tbdIndex = df[df['user_rating']==&quot;tbd&quot;].index
-# drop rows specified by indices in which user_rating is tbd
-df = df.drop(labels=tbdIndex, axis='index')
-# set updated data to platform_df
-platform_df[name] = df
-</code></pre>
-
-<pre><code class="language-python"># convert ratings to a numeric type
-
-# for each platform
-for name in platformsNames:
-# get its dataframe
-df = platform_df[name]
-# convert to a numeric type
-df['user_rating'] = pd.to_numeric(df['user_rating'])
-df['critic_rating'] = pd.to_numeric(df['critic_rating'])
-# set updated data to platform_df
-platform_df[name] = df
-</code></pre>
-
-<pre><code class="language-python"># check data types
-platform_df['ps4'].dtypes
-</code></pre>
-
-<p>title             object
+<span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> platformsNames:
+    <span style="color:#75715e"># get its dataframe</span>
+    df <span style="color:#f92672">=</span> platform_df[name]
+    <span style="color:#75715e"># convert to a numeric type</span>
+    df[<span style="color:#e6db74">&#39;user_rating&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[<span style="color:#e6db74">&#39;user_rating&#39;</span>])
+    df[<span style="color:#e6db74">&#39;critic_rating&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_numeric(df[<span style="color:#e6db74">&#39;critic_rating&#39;</span>])
+    <span style="color:#75715e"># set updated data to platform_df</span>
+    platform_df[name] <span style="color:#f92672">=</span> df
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># check data types</span>
+platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]<span style="color:#f92672">.</span>dtypes
+</code></pre></div><pre><code>title             object
 user_rating      float64
 critic_rating      int64
-dtype: object</p>
-
-<pre><code class="language-python"># user ratings must be on the same scale as critics ratings, so we multiply them by 10
-
-# for each platform
-for platformName in platform_df:
-platform_df[platformName]['user_rating'] = platform_df[platformName]['user_rating'] * 10
+dtype: object
 </code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># user ratings must be on the same scale as critics ratings, so we multiply them by 10</span>
 
-<pre><code class="language-python">platform_df['ps4']
-</code></pre></li>
-</ul>
+<span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> platformName <span style="color:#f92672">in</span> platform_df:
+    platform_df[platformName][<span style="color:#e6db74">&#39;user_rating&#39;</span>] <span style="color:#f92672">=</span> platform_df[platformName][<span style="color:#e6db74">&#39;user_rating&#39;</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>final fantasy xiv: shadowbringers</td>
-      <td>83.0</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>nier: automata - game of the yorha edition</td>
-      <td>85.0</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>resident evil 2</td>
-      <td>88.0</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>sekiro: shadows die twice</td>
-      <td>79.0</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>monster hunter: world - iceborne</td>
-      <td>84.0</td>
-      <td>89</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>zombieland: double tap - road trip</td>
-      <td>46.0</td>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>left alive</td>
-      <td>83.0</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>eternity: the last unicorn</td>
-      <td>38.0</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>dayz</td>
-      <td>28.0</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>where the bees make honey</td>
-      <td>32.0</td>
-      <td>31</td>
-    </tr>
-  </tbody>
-</table>
-<p>310 rows × 3 columns</p>
-</div>
-
-<hr />
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<hr>
 <h3 id="optional-store-cleaned-data-into-a-csv-file">Optional: Store Cleaned Data Into a CSV File</h3>
-
-<pre><code class="language-python">&quot;&quot;&quot;
-# store data to a csv file
-
-# for each platform
-for platformName in platform_df:
-    # save to a csv file
-    platform_df[platformName].to_csv(str(platformName)+'.csv')
-&quot;&quot;&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74"># store data to a csv file
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"># for each platform
+</span><span style="color:#e6db74">for platformName in platform_df:
+</span><span style="color:#e6db74">    # save to a csv file
+</span><span style="color:#e6db74">    platform_df[platformName].to_csv(str(platformName)+&#39;.csv&#39;)
+</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</code></pre></div><pre><code>&quot;\n# store data to a csv file\n\n# for each platform\nfor platformName in platform_df:\n    # save to a csv file\n    platform_df[platformName].to_csv(str(platformName)+'.csv')\n&quot;
 </code></pre>
-
-<pre><code>&quot;\n# store data to a csv file\n\n# for each platform\nfor platformName in platform_df:\n    # save to a csv file\n    platform_df[platformName].to_csv(str(platformName)+'.csv')\n&quot;
-</code></pre>
-
 <h3 id="data-preprocessing-summary">Data Preprocessing Summary</h3>
-
 <ul>
 <li>Data stored as JSON format are transformed into csv</li>
 <li>Unneded columns are dropped</li>
 <li>Suitable data types are recognized by <em>pandas</em></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="compute-disparity-difference-between-users-and-critics">Compute Disparity (Difference) Between Users and Critics</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> name <span style="color:#f92672">in</span> platform_df:
+    <span style="color:#75715e"># get dataframe of the platform</span>
+    df <span style="color:#f92672">=</span> platform_df[name]
+    <span style="color:#75715e"># for each record, compute distance between user and critic ratings, then set result to a new column</span>
+    df[<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: abs(x[<span style="color:#e6db74">&#39;user_rating&#39;</span>]<span style="color:#f92672">-</span>x[<span style="color:#e6db74">&#39;critic_rating&#39;</span>]), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#75715e"># assign updates back to our dataframe</span>
+    platform_df[name] <span style="color:#f92672">=</span> df
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python"># for each platform
-for name in platform_df:
-    # get dataframe of the platform
-    df = platform_df[name]
-    # for each record, compute distance between user and critic ratings, then set result to a new column
-    df['userCritic_difference'] = df.apply(lambda x: abs(x['user_rating']-x['critic_rating']), axis=1)
-    # assign updates back to our dataframe
-    platform_df[name] = df
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python">platform_df['ps4']
-</code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>final fantasy xiv: shadowbringers</td>
-      <td>83.0</td>
-      <td>91</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>nier: automata - game of the yorha edition</td>
-      <td>85.0</td>
-      <td>91</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>resident evil 2</td>
-      <td>88.0</td>
-      <td>91</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>sekiro: shadows die twice</td>
-      <td>79.0</td>
-      <td>90</td>
-      <td>11.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>monster hunter: world - iceborne</td>
-      <td>84.0</td>
-      <td>89</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>zombieland: double tap - road trip</td>
-      <td>46.0</td>
-      <td>39</td>
-      <td>7.0</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>left alive</td>
-      <td>83.0</td>
-      <td>37</td>
-      <td>46.0</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>eternity: the last unicorn</td>
-      <td>38.0</td>
-      <td>36</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>dayz</td>
-      <td>28.0</td>
-      <td>31</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>where the bees make honey</td>
-      <td>32.0</td>
-      <td>31</td>
-      <td>1.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>310 rows × 4 columns</p>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h3 id="discretize-disparity-computed-earlier-into-categories">Discretize Disparity Computed Earlier Into Categories</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># categories names and their corresponding intervals</span>
+<span style="color:#75715e"># category at location x corresponds to interval equal or greater than intervals location x and less than location x + 1</span>
+<span style="color:#75715e"># except for last category, has no end</span>
+categories <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>Series([<span style="color:#e6db74">&#34;low&#34;</span>, <span style="color:#e6db74">&#34;moderate&#34;</span>, <span style="color:#e6db74">&#34;high&#34;</span>, <span style="color:#e6db74">&#34;very_high&#34;</span>, <span style="color:#e6db74">&#34;extremely_high&#34;</span>])
+intervals_categories <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">50</span>]
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># compute categories as defined earlier</span>
 
-<pre><code class="language-python"># categories names and their corresponding intervals
-# category at location x corresponds to interval equal or greater than intervals location x and less than location x + 1
-# except for last category, has no end
-categories = pd.Series([&quot;low&quot;, &quot;moderate&quot;, &quot;high&quot;, &quot;very_high&quot;, &quot;extremely_high&quot;])
-intervals_categories = [0, 20, 30, 40, 50]
-</code></pre>
-
-<pre><code class="language-python"># compute categories as defined earlier
-
-# loop on platforms
-for platformName in platform_df:
-    # get dataframe of the platform
-    df = platform_df[platformName]
-    # add category based on difference just defined
-    df['difference_category'] = df.apply(discIntCat.numToCat, axis=1, args=('userCritic_difference', categories, intervals_categories))
+<span style="color:#75715e"># loop on platforms</span>
+<span style="color:#66d9ef">for</span> platformName <span style="color:#f92672">in</span> platform_df:
+    <span style="color:#75715e"># get dataframe of the platform</span>
+    df <span style="color:#f92672">=</span> platform_df[platformName]
+    <span style="color:#75715e"># add category based on difference just defined</span>
+    df[<span style="color:#e6db74">&#39;difference_category&#39;</span>] <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>apply(discIntCat<span style="color:#f92672">.</span>numToCat, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, args<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>, categories, intervals_categories))
     
-    # let categories be recognized by pandas
-    df['difference_category'] = df['difference_category'].astype(&quot;category&quot;)
-    # re-order categories
-    df['difference_category'] = df['difference_category'].cat.set_categories(categories, ordered=True)
+    <span style="color:#75715e"># let categories be recognized by pandas</span>
+    df[<span style="color:#e6db74">&#39;difference_category&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;difference_category&#39;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;category&#34;</span>)
+    <span style="color:#75715e"># re-order categories</span>
+    df[<span style="color:#e6db74">&#39;difference_category&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;difference_category&#39;</span>]<span style="color:#f92672">.</span>cat<span style="color:#f92672">.</span>set_categories(categories, ordered<span style="color:#f92672">=</span>True)
     
     
-    # assign back to our dataframe
-    platform_df[platformName] = df
+    <span style="color:#75715e"># assign back to our dataframe</span>
+    platform_df[platformName] <span style="color:#f92672">=</span> df
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># take a look after our new columns added</span>
+platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python"># take a look after our new columns added
-platform_df['ps4']
-</code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>final fantasy xiv: shadowbringers</td>
-      <td>83.0</td>
-      <td>91</td>
-      <td>8.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>nier: automata - game of the yorha edition</td>
-      <td>85.0</td>
-      <td>91</td>
-      <td>6.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>resident evil 2</td>
-      <td>88.0</td>
-      <td>91</td>
-      <td>3.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>sekiro: shadows die twice</td>
-      <td>79.0</td>
-      <td>90</td>
-      <td>11.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>monster hunter: world - iceborne</td>
-      <td>84.0</td>
-      <td>89</td>
-      <td>5.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>zombieland: double tap - road trip</td>
-      <td>46.0</td>
-      <td>39</td>
-      <td>7.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>left alive</td>
-      <td>83.0</td>
-      <td>37</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>eternity: the last unicorn</td>
-      <td>38.0</td>
-      <td>36</td>
-      <td>2.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>dayz</td>
-      <td>28.0</td>
-      <td>31</td>
-      <td>3.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>where the bees make honey</td>
-      <td>32.0</td>
-      <td>31</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-  </tbody>
-</table>
-<p>310 rows × 5 columns</p>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h3 id="sort-according-to-disparity-between-users-and-critics">Sort According to Disparity Between Users and Critics</h3>
-
-<pre><code class="language-python"># for each platform
-for platformName in platform_df:
-    # get platform dataframe
-    df = platform_df[platformName]
-    # sort it by userCritic_difference
-    df = df.sort_values(axis=0, by='userCritic_difference', ascending=False)
-    # assign sorted dataframe back to our dataframe
-    platform_df[platformName] = df
-</code></pre>
-
-<h3 id="basic-stats-on-disparity-between-users-and-critics">Basic Stats on Disparity Between Users and Critics</h3>
-
-<pre><code class="language-python"># for each platform
-for platformName in platform_df:
-    # print platform name
-    print(&quot;\n&quot;, &quot;on &quot;, platformName)
-    # show basic stat
-    print(platform_df[platformName]['userCritic_difference'].describe())
-</code></pre>
-
-<pre><code> on  ps4
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> platformName <span style="color:#f92672">in</span> platform_df:
+    <span style="color:#75715e"># get platform dataframe</span>
+    df <span style="color:#f92672">=</span> platform_df[platformName]
+    <span style="color:#75715e"># sort it by userCritic_difference</span>
+    df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>sort_values(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;userCritic_difference&#39;</span>, ascending<span style="color:#f92672">=</span>False)
+    <span style="color:#75715e"># assign sorted dataframe back to our dataframe</span>
+    platform_df[platformName] <span style="color:#f92672">=</span> df
+</code></pre></div><h3 id="basic-stats-on-disparity-between-users-and-critics">Basic Stats on Disparity Between Users and Critics</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># for each platform</span>
+<span style="color:#66d9ef">for</span> platformName <span style="color:#f92672">in</span> platform_df:
+    <span style="color:#75715e"># print platform name</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74">&#34;on &#34;</span>, platformName)
+    <span style="color:#75715e"># show basic stat</span>
+    <span style="color:#66d9ef">print</span>(platform_df[platformName][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>]<span style="color:#f92672">.</span>describe())
+</code></pre></div><pre><code> on  ps4
 count    310.000000
 mean      15.893548
 std       13.074530
@@ -1277,1309 +713,152 @@ min        0.000000
 max       63.000000
 Name: userCritic_difference, dtype: float64
 </code></pre>
-
-<hr />
-
+<hr>
 <h2 id="categories-size">Categories Size</h2>
-
 <h3 id="platform-x-category-2d-sizes-dataframe">Platform x Category 2D Sizes Dataframe</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_category_size <span style="color:#f92672">=</span> transform<span style="color:#f92672">.</span>map_columnCount(platform_df, <span style="color:#e6db74">&#39;difference_category&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_category_size
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python">platform_category_size = transform.map_columnCount(platform_df, 'difference_category')
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python">platform_category_size
-</code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>low</th>
-      <th>moderate</th>
-      <th>high</th>
-      <th>very_high</th>
-      <th>extremely_high</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>ps4</th>
-      <td>211</td>
-      <td>52</td>
-      <td>33</td>
-      <td>9</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>xbox</th>
-      <td>131</td>
-      <td>31</td>
-      <td>14</td>
-      <td>5</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>switch</th>
-      <td>334</td>
-      <td>19</td>
-      <td>6</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>pc</th>
-      <td>249</td>
-      <td>43</td>
-      <td>22</td>
-      <td>8</td>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h3 id="category-x-platform-2d-sizes-dataframe">Category x Platform 2D Sizes Dataframe</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">category_platform_size <span style="color:#f92672">=</span> platform_category_size<span style="color:#f92672">.</span>transpose()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">category_platform_size
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python">category_platform_size = platform_category_size.transpose()
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<pre><code class="language-python">category_platform_size
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">category_platform_size<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;low&#39;</span>, <span style="color:#e6db74">&#39;ps4&#39;</span>]
+</code></pre></div><pre><code>211
 </code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ps4</th>
-      <th>xbox</th>
-      <th>switch</th>
-      <th>pc</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>low</th>
-      <td>211</td>
-      <td>131</td>
-      <td>334</td>
-      <td>249</td>
-    </tr>
-    <tr>
-      <th>moderate</th>
-      <td>52</td>
-      <td>31</td>
-      <td>19</td>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>high</th>
-      <td>33</td>
-      <td>14</td>
-      <td>6</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>very_high</th>
-      <td>9</td>
-      <td>5</td>
-      <td>2</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>extremely_high</th>
-      <td>5</td>
-      <td>5</td>
-      <td>3</td>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<pre><code class="language-python">category_platform_size.loc['low', 'ps4']
-</code></pre>
-
-<pre><code>211
-</code></pre>
-
-<hr />
-
+<hr>
 <h2 id="graphing-disparity-between-users-and-critics">Graphing Disparity Between Users and Critics</h2>
-
 <h3 id="pie-graph">Pie Graph</h3>
-
-<pre><code class="language-python">for columnName in category_platform_size:
-    platSeries = category_platform_size[columnName]
-    platName = platSeries.name
-    pieGraph.showPieGraph(platSeries, platName + ' categories percentages', 6, 6)
-</code></pre>
-
-<p><img src="./index_53_0.png" alt="png" /></p>
-
-<p><img src="./index_53_1.png" alt="png" /></p>
-
-<p><img src="./index_53_2.png" alt="png" /></p>
-
-<p><img src="./index_53_3.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> columnName <span style="color:#f92672">in</span> category_platform_size:
+    platSeries <span style="color:#f92672">=</span> category_platform_size[columnName]
+    platName <span style="color:#f92672">=</span> platSeries<span style="color:#f92672">.</span>name
+    pieGraph<span style="color:#f92672">.</span>showPieGraph(platSeries, platName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; categories percentages&#39;</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>)
+</code></pre></div><p><img src="./index_53_0.png" alt="png"></p>
+<p><img src="./index_53_1.png" alt="png"></p>
+<p><img src="./index_53_2.png" alt="png"></p>
+<p><img src="./index_53_3.png" alt="png"></p>
 <h3 id="grouped-bar">Grouped Bar</h3>
-
-<pre><code class="language-python">groupedBarsGraph.showGroupedBars(platform_category_size, platformsNames, 'categories size', 'categories size by platform')
-</code></pre>
-
-<p><img src="./index_55_0.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">groupedBarsGraph<span style="color:#f92672">.</span>showGroupedBars(platform_category_size, platformsNames, <span style="color:#e6db74">&#39;categories size&#39;</span>, <span style="color:#e6db74">&#39;categories size by platform&#39;</span>)
+</code></pre></div><p><img src="./index_55_0.png" alt="png"></p>
 <h3 id="categorical-heatmap">Categorical Heatmap</h3>
-
-<pre><code class="language-python">categoricalHeatmapGraph.showCategoricalHeatmap(8, 8, category_platform_size, &quot;categories sizes among platforms&quot;)
-</code></pre>
-
-<p><img src="./index_57_0.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">categoricalHeatmapGraph<span style="color:#f92672">.</span>showCategoricalHeatmap(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>, category_platform_size, <span style="color:#e6db74">&#34;categories sizes among platforms&#34;</span>)
+</code></pre></div><p><img src="./index_57_0.png" alt="png"></p>
 <h3 id="maximum-disparity-between-users-and-critics-ratings">Maximum Disparity Between Users and Critics Ratings</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python">platform_df['ps4'].head(20)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;xbox&#39;</span>]<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>93</th>
-      <td>nba 2k20</td>
-      <td>9.0</td>
-      <td>78</td>
-      <td>69.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>fifa 20</td>
-      <td>11.0</td>
-      <td>79</td>
-      <td>68.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>madden nfl 20</td>
-      <td>16.0</td>
-      <td>76</td>
-      <td>60.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>gravity ghost: deluxe edition</td>
-      <td>27.0</td>
-      <td>79</td>
-      <td>52.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>172</th>
-      <td>simulacra</td>
-      <td>21.0</td>
-      <td>72</td>
-      <td>51.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>mortal kombat 11</td>
-      <td>33.0</td>
-      <td>82</td>
-      <td>49.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>call of duty: modern warfare</td>
-      <td>32.0</td>
-      <td>80</td>
-      <td>48.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>199</th>
-      <td>hitman hd enhanced collection</td>
-      <td>21.0</td>
-      <td>69</td>
-      <td>48.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>217</th>
-      <td>mxgp 2019</td>
-      <td>20.0</td>
-      <td>68</td>
-      <td>48.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>224</th>
-      <td>we. the revolution</td>
-      <td>20.0</td>
-      <td>67</td>
-      <td>47.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>218</th>
-      <td>giga wrecker alt.</td>
-      <td>20.0</td>
-      <td>67</td>
-      <td>47.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>left alive</td>
-      <td>83.0</td>
-      <td>37</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>dauntless</td>
-      <td>34.0</td>
-      <td>80</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>285</th>
-      <td>darksiders iii: keepers of the void</td>
-      <td>18.0</td>
-      <td>59</td>
-      <td>41.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>286</th>
-      <td>attack of the earthlings</td>
-      <td>20.0</td>
-      <td>59</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>299</th>
-      <td>the lego movie 2 videogame</td>
-      <td>18.0</td>
-      <td>57</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>275</th>
-      <td>asterix &amp; obelix xxl 3: the crystal menhir</td>
-      <td>21.0</td>
-      <td>60</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>lonely mountains: downhill</td>
-      <td>41.0</td>
-      <td>80</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>256</th>
-      <td>a knight's quest</td>
-      <td>24.0</td>
-      <td>63</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>far: lone sails</td>
-      <td>44.0</td>
-      <td>83</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<pre><code class="language-python">platform_df['xbox'].head(20)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;pc&#39;</span>]<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>70</th>
-      <td>nba 2k20</td>
-      <td>11.0</td>
-      <td>80</td>
-      <td>69.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>fifa 20</td>
-      <td>11.0</td>
-      <td>79</td>
-      <td>68.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>75</th>
-      <td>madden nfl 20</td>
-      <td>20.0</td>
-      <td>79</td>
-      <td>59.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>mortal kombat 11</td>
-      <td>31.0</td>
-      <td>86</td>
-      <td>55.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>timespinner</td>
-      <td>23.0</td>
-      <td>74</td>
-      <td>51.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>wolfenstein: youngblood</td>
-      <td>20.0</td>
-      <td>68</td>
-      <td>48.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>call of duty: modern warfare</td>
-      <td>37.0</td>
-      <td>81</td>
-      <td>44.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>nhl 20</td>
-      <td>42.0</td>
-      <td>85</td>
-      <td>43.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>143</th>
-      <td>disney classic games: aladdin and the lion king</td>
-      <td>30.0</td>
-      <td>72</td>
-      <td>42.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>far: lone sails</td>
-      <td>43.0</td>
-      <td>84</td>
-      <td>41.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>dauntless</td>
-      <td>43.0</td>
-      <td>82</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>far cry new dawn</td>
-      <td>37.0</td>
-      <td>75</td>
-      <td>38.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>grid</td>
-      <td>45.0</td>
-      <td>79</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>248</th>
-      <td>wwe 2k20</td>
-      <td>11.0</td>
-      <td>45</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>assassin's creed iii remastered</td>
-      <td>43.0</td>
-      <td>77</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>160</th>
-      <td>genesis alpha one</td>
-      <td>35.0</td>
-      <td>69</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>trials rising</td>
-      <td>52.0</td>
-      <td>85</td>
-      <td>33.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>crash team racing: nitro-fueled</td>
-      <td>51.0</td>
-      <td>84</td>
-      <td>33.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>204</th>
-      <td>narcos: rise of the cartels</td>
-      <td>30.0</td>
-      <td>63</td>
-      <td>33.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>fell seal: arbiter's mark</td>
-      <td>54.0</td>
-      <td>86</td>
-      <td>32.0</td>
-      <td>high</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<pre><code class="language-python">platform_df['pc'].head(20)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;switch&#39;</span>]<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">20</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>203</th>
-      <td>nba 2k20</td>
-      <td>11.0</td>
-      <td>74</td>
-      <td>63.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>234</th>
-      <td>fifa 20</td>
-      <td>11.0</td>
-      <td>72</td>
-      <td>61.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>237</th>
-      <td>madden nfl 20</td>
-      <td>12.0</td>
-      <td>72</td>
-      <td>60.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>77</th>
-      <td>call of duty: modern warfare</td>
-      <td>25.0</td>
-      <td>81</td>
-      <td>56.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>mortal kombat 11</td>
-      <td>27.0</td>
-      <td>82</td>
-      <td>55.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>279</th>
-      <td>hearthstone: heroes of warcraft - saviors of u...</td>
-      <td>19.0</td>
-      <td>68</td>
-      <td>49.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>the sims 4: realm of magic</td>
-      <td>37.0</td>
-      <td>85</td>
-      <td>48.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>264</th>
-      <td>wolfenstein: youngblood</td>
-      <td>22.0</td>
-      <td>69</td>
-      <td>47.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>383</th>
-      <td>left alive</td>
-      <td>86.0</td>
-      <td>40</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>bury me, my love</td>
-      <td>34.0</td>
-      <td>80</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>red dead redemption 2</td>
-      <td>48.0</td>
-      <td>93</td>
-      <td>45.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>235</th>
-      <td>oninaki</td>
-      <td>31.0</td>
-      <td>72</td>
-      <td>41.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>the sims 4: discover university</td>
-      <td>41.0</td>
-      <td>82</td>
-      <td>41.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>360</th>
-      <td>wolfenstein: cyberpilot</td>
-      <td>15.0</td>
-      <td>54</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>187</th>
-      <td>assassin's creed iii remastered</td>
-      <td>36.0</td>
-      <td>75</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>defector</td>
-      <td>36.0</td>
-      <td>75</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>the elder scrolls online: dragonhold</td>
-      <td>42.0</td>
-      <td>81</td>
-      <td>39.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>surviving mars: green planet</td>
-      <td>40.0</td>
-      <td>78</td>
-      <td>38.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>dirt rally 2.0</td>
-      <td>46.0</td>
-      <td>84</td>
-      <td>38.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>plants vs. zombies: battle for neighborville</td>
-      <td>40.0</td>
-      <td>77</td>
-      <td>37.0</td>
-      <td>high</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<pre><code class="language-python">platform_df['switch'].head(20)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>240</th>
-      <td>nba 2k20</td>
-      <td>15.0</td>
-      <td>73</td>
-      <td>58.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>66</th>
-      <td>pillars of eternity: complete edition</td>
-      <td>27.0</td>
-      <td>82</td>
-      <td>55.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>pokemon sword / shield dual pack</td>
-      <td>29.0</td>
-      <td>80</td>
-      <td>51.0</td>
-      <td>extremely_high</td>
-    </tr>
-    <tr>
-      <th>416</th>
-      <td>catan</td>
-      <td>18.0</td>
-      <td>61</td>
-      <td>43.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>mortal kombat 11</td>
-      <td>36.0</td>
-      <td>78</td>
-      <td>42.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>pokemon shield</td>
-      <td>44.0</td>
-      <td>80</td>
-      <td>36.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>pokemon sword</td>
-      <td>45.0</td>
-      <td>80</td>
-      <td>35.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>492</th>
-      <td>fifa 20: legacy edition</td>
-      <td>9.0</td>
-      <td>43</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>476</th>
-      <td>devil may cry 2</td>
-      <td>84.0</td>
-      <td>50</td>
-      <td>34.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>345</th>
-      <td>giga wrecker alt.</td>
-      <td>35.0</td>
-      <td>67</td>
-      <td>32.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>359</th>
-      <td>wolfenstein: youngblood</td>
-      <td>35.0</td>
-      <td>65</td>
-      <td>30.0</td>
-      <td>high</td>
-    </tr>
-    <tr>
-      <th>280</th>
-      <td>mutant year zero: road to eden - deluxe edition</td>
-      <td>42.0</td>
-      <td>71</td>
-      <td>29.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>237</th>
-      <td>dauntless</td>
-      <td>44.0</td>
-      <td>73</td>
-      <td>29.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>398</th>
-      <td>rad rodgers: radical edition</td>
-      <td>34.0</td>
-      <td>62</td>
-      <td>28.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>432</th>
-      <td>farming simulator 20</td>
-      <td>32.0</td>
-      <td>59</td>
-      <td>27.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>466</th>
-      <td>whipseey and the lost atlas</td>
-      <td>80.0</td>
-      <td>54</td>
-      <td>26.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>263</th>
-      <td>my time at portia</td>
-      <td>46.0</td>
-      <td>72</td>
-      <td>26.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>374</th>
-      <td>deponia</td>
-      <td>38.0</td>
-      <td>64</td>
-      <td>26.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>496</th>
-      <td>car mechanic simulator</td>
-      <td>15.0</td>
-      <td>41</td>
-      <td>26.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>499</th>
-      <td>blades of time</td>
-      <td>63.0</td>
-      <td>38</td>
-      <td>25.0</td>
-      <td>moderate</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<pre><code class="language-python">def searchforTitleInPlatform(platformStr_in, game_in):
-    tem_df = platform_df[platformStr_in][platform_df[platformStr_in]['title'] == game_in]
-    if len(tem_df) == 1:
-        return tem_df.iloc[0]
-    elif len(tem_df) == 0:
-        return -1
-    else:
-        raise ValueError(&quot;unexpected no of games found&quot;)
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">searchforTitleInPlatform</span>(platformStr_in, game_in):
+    tem_df <span style="color:#f92672">=</span> platform_df[platformStr_in][platform_df[platformStr_in][<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">==</span> game_in]
+    <span style="color:#66d9ef">if</span> len(tem_df) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">return</span> tem_df<span style="color:#f92672">.</span>iloc[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">elif</span> len(tem_df) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;unexpected no of games found&#34;</span>)
         
-searchforTitleInPlatform('xbox', &quot;hitman hd enhanced collection&quot;)
-</code></pre>
-
-<pre><code>title                    hitman hd enhanced collection
+searchforTitleInPlatform(<span style="color:#e6db74">&#39;xbox&#39;</span>, <span style="color:#e6db74">&#34;hitman hd enhanced collection&#34;</span>)
+</code></pre></div><pre><code>title                    hitman hd enhanced collection
 user_rating                                         46
 critic_rating                                       66
 userCritic_difference                               20
 difference_category                           moderate
 Name: 187, dtype: object
 </code></pre>
-
 <h3 id="minimum-disparity-between-users-and-critics">Minimum Disparity Between Users and Critics</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>]<span style="color:#f92672">.</span>tail(<span style="color:#ae81ff">20</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<pre><code class="language-python">platform_df['ps4'].tail(20)
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>55</th>
-      <td>five nights at freddy's vr: help wanted</td>
-      <td>78.0</td>
-      <td>80</td>
-      <td>2.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>251</th>
-      <td>metal wolf chaos xd</td>
-      <td>62.0</td>
-      <td>63</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>201</th>
-      <td>erica</td>
-      <td>70.0</td>
-      <td>69</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>blazing chrome</td>
-      <td>75.0</td>
-      <td>76</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>207</th>
-      <td>sea of solitude</td>
-      <td>68.0</td>
-      <td>69</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>blasphemous</td>
-      <td>77.0</td>
-      <td>78</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>where the bees make honey</td>
-      <td>32.0</td>
-      <td>31</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>bloodstained: ritual of the night</td>
-      <td>84.0</td>
-      <td>83</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>317</th>
-      <td>eden-tomorrow</td>
-      <td>53.0</td>
-      <td>52</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>knights and bikes</td>
-      <td>78.0</td>
-      <td>79</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>efootball pes 2020</td>
-      <td>81.0</td>
-      <td>82</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>75</th>
-      <td>children of morta</td>
-      <td>78.0</td>
-      <td>79</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>306</th>
-      <td>ice age: scrat's nutty adventure</td>
-      <td>56.0</td>
-      <td>55</td>
-      <td>1.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>110</th>
-      <td>motogp 19</td>
-      <td>76.0</td>
-      <td>76</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>188</th>
-      <td>lost ember</td>
-      <td>70.0</td>
-      <td>70</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>chocobo's mystery dungeon: every buddy!</td>
-      <td>69.0</td>
-      <td>69</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>330</th>
-      <td>submersed</td>
-      <td>44.0</td>
-      <td>44</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>214</th>
-      <td>effie</td>
-      <td>68.0</td>
-      <td>68</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>star wars jedi: fallen order</td>
-      <td>79.0</td>
-      <td>79</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>blood &amp; truth</td>
-      <td>80.0</td>
-      <td>80</td>
-      <td>0.0</td>
-      <td>low</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h3 id="games-which-got-higher-ratings-from-users-than-from-critics">Games Which Got Higher Ratings From Users Than From Critics</h3>
-
-<pre><code class="language-python">def higherUserRatings(platform_in):
-    return platform_df[platform_in][platform_df[platform_in]['user_rating'] &gt; platform_df[platform_in]['critic_rating']].head(10)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">higherUserRatings</span>(platform_in):
+    <span style="color:#66d9ef">return</span> platform_df[platform_in][platform_df[platform_in][<span style="color:#e6db74">&#39;user_rating&#39;</span>] <span style="color:#f92672">&gt;</span> platform_df[platform_in][<span style="color:#e6db74">&#39;critic_rating&#39;</span>]]<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">10</span>)
     
-higherUserRatings('pc')
+higherUserRatings(<span style="color:#e6db74">&#39;pc&#39;</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
 </code></pre>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>user_rating</th>
-      <th>critic_rating</th>
-      <th>userCritic_difference</th>
-      <th>difference_category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>383</th>
-      <td>left alive</td>
-      <td>86.0</td>
-      <td>40</td>
-      <td>46.0</td>
-      <td>very_high</td>
-    </tr>
-    <tr>
-      <th>376</th>
-      <td>paranoia: happiness is mandatory</td>
-      <td>71.0</td>
-      <td>47</td>
-      <td>24.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>355</th>
-      <td>little misfortune</td>
-      <td>80.0</td>
-      <td>57</td>
-      <td>23.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>terminator: resistance</td>
-      <td>82.0</td>
-      <td>59</td>
-      <td>23.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>384</th>
-      <td>eternity: the last unicorn</td>
-      <td>61.0</td>
-      <td>39</td>
-      <td>22.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>341</th>
-      <td>summer catchers</td>
-      <td>83.0</td>
-      <td>61</td>
-      <td>22.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>365</th>
-      <td>bannermen</td>
-      <td>72.0</td>
-      <td>52</td>
-      <td>20.0</td>
-      <td>moderate</td>
-    </tr>
-    <tr>
-      <th>374</th>
-      <td>i love you, colonel sanders! a finger lickin' ...</td>
-      <td>68.0</td>
-      <td>50</td>
-      <td>18.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>344</th>
-      <td>medieval kingdom wars</td>
-      <td>77.0</td>
-      <td>60</td>
-      <td>17.0</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>302</th>
-      <td>outbuddies</td>
-      <td>83.0</td>
-      <td>66</td>
-      <td>17.0</td>
-      <td>low</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h3 id="exploratoy-analysis-summary">Exploratoy Analysis Summary</h3>
-
 <ul>
 <li>NBA, Fifa, Madden, COD: modern warefare games are on top of nearly all platforms lists of maximum disparity between users and professional critics</li>
 <li>Star Wars Jedi: Fallen Order got zero disparity between users and professional critics ratings</li>
@@ -2587,21 +866,14 @@ higherUserRatings('pc')
 <li>Switch games got much lower percentage of high and moderate disparity</li>
 <li>Switch games got a mean of 7 disparity, nearly half of other platforms&rsquo; disparity which got about 14</li>
 </ul>
-
-<hr />
-
-<h2 id="a-single-permutation-shuffle-based-trial-with-histogram-probability-density-function">A Single Permutation Shuffle Based Trial With Histogram &amp; Probability Density Function</h2>
-
+<hr>
+<h2 id="a-single-permutation-shuffle-based-trial-with-histogram--probability-density-function">A Single Permutation Shuffle Based Trial With Histogram &amp; Probability Density Function</h2>
 <p>We compare platforms distributions through permutation-test. It is a more systematic approach than relying upon intuition of visualizing and comparing distributions. Given two platforms, We concatenate them into one group. That group&rsquo;s elements are randomly shuffled. Then we divide the group into new two groups. We compare the two distributions of the new two groups and assess whether the insight is still present as in the case of the two original groups of platforms. If the insight is not present in the two new groups, then that would count an evidence on behalf of our hypothesis. That is, The insight (difference in distribution) of original distributions is attributed to the two platforms. In addition, We consider average a p-value of a distribution and utilize it in our test. In Next section, We apply this method iteratively.</p>
-
 <h3 id="ensure-series-data-are-ascendingly-ordered">Ensure Series Data are Ascendingly Ordered</h3>
-
-<pre><code class="language-python">print(platform_df['ps4']['userCritic_difference'])
-print(&quot;&quot;)
-print(platform_df['switch']['userCritic_difference'])
-</code></pre>
-
-<pre><code>93     69.0
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>])
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;&#34;</span>)
+<span style="color:#66d9ef">print</span>(platform_df[<span style="color:#e6db74">&#39;switch&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>])
+</code></pre></div><pre><code>93     69.0
 82     68.0
 116    60.0
 79     52.0
@@ -2627,122 +899,72 @@ Name: userCritic_difference, Length: 310, dtype: float64
 208     0.0
 Name: userCritic_difference, Length: 364, dtype: float64
 </code></pre>
-
 <h3 id="ps4-distribution">PS4 Distribution</h3>
-
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['ps4']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'ps4', 10, 8)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">histogramPdfGraph<span style="color:#f92672">.</span>showHistPdf(platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>], <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;#e3e2e2&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>, <span style="color:#e6db74">&#39;disparity&#39;</span>, <span style="color:#e6db74">&#39;ps4&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>)
+</code></pre></div><p><img src="./index_74_0.png" alt="png"></p>
+<h3 id="average-of-ps4s-disparity">Average of PS4&rsquo;s Disparity</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>]<span style="color:#f92672">.</span>mean()
+</code></pre></div><pre><code>15.893548387096773
 </code></pre>
-
-<p><img src="./index_74_0.png" alt="png" /></p>
-
-<h3 id="average-of-ps4-s-disparity">Average of PS4&rsquo;s Disparity</h3>
-
-<pre><code class="language-python">platform_df['ps4']['userCritic_difference'].mean()
-</code></pre>
-
-<pre><code>15.893548387096773
-</code></pre>
-
 <h3 id="switch-distribution">Switch Distribution</h3>
-
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['switch']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'switch', 10, 8)
-</code></pre>
-
-<p><img src="./index_78_0.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">histogramPdfGraph<span style="color:#f92672">.</span>showHistPdf(platform_df[<span style="color:#e6db74">&#39;switch&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>], <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;#e3e2e2&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>, <span style="color:#e6db74">&#39;disparity&#39;</span>, <span style="color:#e6db74">&#39;switch&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>)
+</code></pre></div><p><img src="./index_78_0.png" alt="png"></p>
 <h3 id="average-of-switch-disparity">Average of Switch Disparity</h3>
-
-<pre><code class="language-python">platform_df['switch']['userCritic_difference'].mean()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">platform_df[<span style="color:#e6db74">&#39;switch&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>]<span style="color:#f92672">.</span>mean()
+</code></pre></div><pre><code>6.876373626373627
 </code></pre>
-
-<pre><code>6.876373626373627
-</code></pre>
-
 <h3 id="conclusion">Conclusion</h3>
-
 <ul>
 <li>The difference between <em>ps4</em> and <em>switch</em> distributions is notable</li>
 <li>The difference between <em>ps4</em> and <em>switch</em> means is about 9</li>
 </ul>
-
 <h3 id="concatenate-both-ps4-and-switch">Concatenate Both PS4 and Switch</h3>
-
-<pre><code class="language-python">bothGroups = pd.concat([platform_df['switch']['userCritic_difference'], platform_df['ps4']['userCritic_difference']])
-</code></pre>
-
-<h3 id="shuffle-and-divide">Shuffle and Divide</h3>
-
-<pre><code class="language-python"># permutation based shuffling
-rng = np.random.default_rng()
-bothGroups = rng.permutation(bothGroups)
-# divide into two groups
-firstGroup = bothGroups[:int(len(bothGroups)/2)]
-secondGroup = bothGroups[int(len(bothGroups)/2):]
-</code></pre>
-
-<h3 id="first-group-distribution">First Group Distribution</h3>
-
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(firstGroup, 30, '#e3e2e2', 'black', 'disparity', 'first group', 10, 8)
-</code></pre>
-
-<p><img src="./index_87_0.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bothGroups <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([platform_df[<span style="color:#e6db74">&#39;switch&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>], platform_df[<span style="color:#e6db74">&#39;ps4&#39;</span>][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>]])
+</code></pre></div><h3 id="shuffle-and-divide">Shuffle and Divide</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># permutation based shuffling</span>
+rng <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>default_rng()
+bothGroups <span style="color:#f92672">=</span> rng<span style="color:#f92672">.</span>permutation(bothGroups)
+<span style="color:#75715e"># divide into two groups</span>
+firstGroup <span style="color:#f92672">=</span> bothGroups[:int(len(bothGroups)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)]
+secondGroup <span style="color:#f92672">=</span> bothGroups[int(len(bothGroups)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>):]
+</code></pre></div><h3 id="first-group-distribution">First Group Distribution</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">histogramPdfGraph<span style="color:#f92672">.</span>showHistPdf(firstGroup, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;#e3e2e2&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>, <span style="color:#e6db74">&#39;disparity&#39;</span>, <span style="color:#e6db74">&#39;first group&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>)
+</code></pre></div><p><img src="./index_87_0.png" alt="png"></p>
 <h3 id="first-group-average">First Group Average</h3>
-
-<pre><code class="language-python">firstGroup.mean()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">firstGroup<span style="color:#f92672">.</span>mean()
+</code></pre></div><pre><code>11.0
 </code></pre>
-
-<pre><code>11.0
-</code></pre>
-
 <h3 id="second-group-distribution">Second Group Distribution</h3>
-
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(secondGroup, 30, '#e3e2e2', 'black', 'disparity', 'second group', 10, 8)
-</code></pre>
-
-<p><img src="./index_91_0.png" alt="png" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">histogramPdfGraph<span style="color:#f92672">.</span>showHistPdf(secondGroup, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#39;#e3e2e2&#39;</span>, <span style="color:#e6db74">&#39;black&#39;</span>, <span style="color:#e6db74">&#39;disparity&#39;</span>, <span style="color:#e6db74">&#39;second group&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>)
+</code></pre></div><p><img src="./index_91_0.png" alt="png"></p>
 <h3 id="second-group-average">Second Group Average</h3>
-
-<pre><code class="language-python">secondGroup.mean()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">secondGroup<span style="color:#f92672">.</span>mean()
+</code></pre></div><pre><code>11.047477744807122
 </code></pre>
-
-<pre><code>11.047477744807122
-</code></pre>
-
 <h3 id="conclusion-1">Conclusion</h3>
-
 <ul>
 <li>The difference between first and second groups distributions is not notable alike ps4 and switch</li>
 <li>The difference between first and second groups means is much less than disparity between ps4 and switch distributions</li>
 </ul>
-
-<hr />
-
+<hr>
 <h2 id="permutation-test-and-p-value-based-statistical-significance">Permutation Test and P-Value Based Statistical Significance</h2>
-
 <p>We apply the above method iteratively. The more tests, The more confident we are of our hypothesis. That is, The pattern of two distributions is attributed to the difference in two platforms.</p>
-
-<pre><code class="language-python"># computes average of a list
-def avgOfList(list_in):
-    return pd.Series(list_in).mean()
-</code></pre>
-
-<pre><code class="language-python"># loop on pairs of platforms
-for idx, platformName in enumerate(platformsNames):
-    for idx_, platformName_ in enumerate(platformsNames):
-        # compare only unique pairs
-        if idx_ &gt; idx:
-            # print pairs of platforms which are compared
-            print(platformName, platformName_)
-            # apply test for 25 iterations on first and second platforms of the nested loop
-            testResults = permTest.permutationTest(25, platform_df[platformName]['userCritic_difference'], platform_df[platformName_]['userCritic_difference'])
-            # print results average
-            print(avgOfList(testResults))
-            print(&quot;&quot;)
-</code></pre>
-
-<pre><code>ps4 xbox
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># computes average of a list</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">avgOfList</span>(list_in):
+    <span style="color:#66d9ef">return</span> pd<span style="color:#f92672">.</span>Series(list_in)<span style="color:#f92672">.</span>mean()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># loop on pairs of platforms</span>
+<span style="color:#66d9ef">for</span> idx, platformName <span style="color:#f92672">in</span> enumerate(platformsNames):
+    <span style="color:#66d9ef">for</span> idx_, platformName_ <span style="color:#f92672">in</span> enumerate(platformsNames):
+        <span style="color:#75715e"># compare only unique pairs</span>
+        <span style="color:#66d9ef">if</span> idx_ <span style="color:#f92672">&gt;</span> idx:
+            <span style="color:#75715e"># print pairs of platforms which are compared</span>
+            <span style="color:#66d9ef">print</span>(platformName, platformName_)
+            <span style="color:#75715e"># apply test for 25 iterations on first and second platforms of the nested loop</span>
+            testResults <span style="color:#f92672">=</span> permTest<span style="color:#f92672">.</span>permutationTest(<span style="color:#ae81ff">25</span>, platform_df[platformName][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>], platform_df[platformName_][<span style="color:#e6db74">&#39;userCritic_difference&#39;</span>])
+            <span style="color:#75715e"># print results average</span>
+            <span style="color:#66d9ef">print</span>(avgOfList(testResults))
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;&#34;</span>)
+</code></pre></div><pre><code>ps4 xbox
 0.6639999999999998
 
 ps4 switch
@@ -2760,15 +982,11 @@ xbox pc
 switch pc
 6.286296818538614
 </code></pre>
-
 <h3 id="conclusion-2">Conclusion</h3>
-
 <ul>
 <li>switch has greatest statistical significance in comparison with other platforms</li>
 </ul>
-
 <h3 id="systematic-test-summary">Systematic Test Summary</h3>
-
 <ul>
 <li>For <em>ps4</em> and <em>switch</em>, The difference between distributions and means is notable</li>
 <li>For the two randomly generated, through shuffling, groups, The difference between distributions and means is not notable alike original <em>ps4</em> and <em>switch</em></li>

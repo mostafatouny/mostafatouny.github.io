@@ -394,37 +394,23 @@
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<h3 id="introduction">Introduction</h3>
-
+      <h3 id="introduction">Introduction</h3>
 <p>The post you are currently reading shall demonstrate how far our data published on social media is being heavily gathered for data analysis. The demonstration holds as a beginner kid like me is going to scrape data, i.e store data on a file, after only two weeks of learning. Not only the code I built works solely on the website I shall be presenting but rather on any website! However, It is not robust enough to rely upon except for simple cases.</p>
-
-<hr />
-
+<hr>
 <h3 id="contents">Contents</h3>
-
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#motivation">Motivation</a></li>
 <li><a href="#code-on-github">Code on Github</a></li>
 <li><a href="#how-the-code-works">How The Code Works?</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="motivation">Motivation</h3>
-
 <p>Machine learning, The prettiest-looking AI nowadays, does not work without data. In fact, one of the fundamental pillars of AI&rsquo;s success is the availability of right data. Unfortunately, industries do not like to share them. Most probably, due to the sensitivity of competition, as rivals would always favor to stay ahead of their competitors. So, what do you do if you needed data for research, business, or even for a hobbyist-project but could not find it? Buying data costs you too much, and not everyone has tight relationships with industries whose platforms generate desired data. Scraping websites, i.e gathering data on web into a readable format by the computer, is a highly recommended skill for data analysts.</p>
-
 <h3 id="code-on-github">Code on Github</h3>
-
-<p><a href="https://github.com/mostafatouny/data-scraper" target="_blank">Here</a> is the scraper I built. Even-though its design is not restricted to a specific website, I only test it on metacritic. The code contains an example on scraping <a href="https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019" target="_blank">metacritic&rsquo;s 2019 best PS4 games</a>.</p>
-
+<p><a href="https://github.com/mostafatouny/data-scraper">Here</a> is the scraper I built. Even-though its design is not restricted to a specific website, I only test it on metacritic. The code contains an example on scraping <a href="https://www.metacritic.com/browse/games/score/metascore/year/ps4/filtered?year_selected=2019">metacritic&rsquo;s 2019 best PS4 games</a>.</p>
 <h3 id="how-the-code-works">How The Code Works?</h3>
-
 <p>The following is a brief illustration of metacritic&rsquo;s example on github&rsquo;s repo. If you checked out metacritic&rsquo;s link, you would see a list of games, each with its own score and release date. First, Let&rsquo;s take a look on what your machine actually reads in order to render that page.</p>
-
 <pre><code>&lt;ol class=&quot;list_products list_product_condensed&quot;
   &lt;li class=&quot;product game_product&quot;&gt;
     ...
@@ -435,10 +421,7 @@
   &lt;li class=&quot;product game_product&quot;&gt;
     ..
 &lt;/ol&gt;
-</code></pre>
-
-<p>each <code>li</code> tag corresponds to some game on the list. While <code>ol</code> tag corresponds to a wrapper of all games on the list. Here is a sample of what is inside each game&rsquo;s tag.</p>
-
+</code></pre><p>each <code>li</code> tag corresponds to some game on the list. While <code>ol</code> tag corresponds to a wrapper of all games on the list. Here is a sample of what is inside each game&rsquo;s tag.</p>
 <pre><code>&lt;li class=&quot;product game_product&quot;&gt;
   &lt;div class=&quot;product_wrap&quot;&gt;
     &lt;div class=&quot;basic_stat product_title&quot;&gt;
@@ -448,21 +431,12 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/li&gt;
-</code></pre>
-
-<p>Now, How does the program scrapes data of websites? There are three steps to get the code working, (I) enter the link which contains data intended to be scraped,</p>
-
+</code></pre><p>Now, How does the program scrapes data of websites? There are three steps to get the code working, (I) enter the link which contains data intended to be scraped,</p>
 <pre><code>mainURL = &quot;https://www.metacritic.com&quot;
 subURL = &quot;/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&quot;
-</code></pre>
-
-<p>(II) specify the tags&rsquo; path from root up to the tag which wraps all games list,</p>
-
+</code></pre><p>(II) specify the tags&rsquo; path from root up to the tag which wraps all games list,</p>
 <pre><code>listNodeSequence = tagSequence.tagSequence([('ol', {&quot;class&quot;:&quot;list_products list_product_condensed&quot;}), ('div', {&quot;class&quot;:&quot;product_condensed&quot;}), ('div', {&quot;class&quot;: &quot;body_wrap&quot; ..
-</code></pre>
-
-<p>then (III) for each data desired to be scraped, alike game name, game score, game release date, specify the path from the game&rsquo;s tag up to that data. make sure not to type any game-specific data like the href of <em>nier: automata</em></p>
-
+</code></pre><p>then (III) for each data desired to be scraped, alike game name, game score, game release date, specify the path from the game&rsquo;s tag up to that data. make sure not to type any game-specific data like the href of <em>nier: automata</em></p>
 <pre><code>columns_paths = tagsPaths.tagsPaths(
     [
     ('title', [('a',), ('div', {&quot;class&quot;:&quot;basic_stat product_title&quot;}), ('div', {&quot;class&quot;:&quot;product_wrap&quot;})], -1),
@@ -474,10 +448,7 @@ subURL = &quot;/browse/games/score/metascore/year/ps4/filtered?year_selected=201
     ('release_date', [('span', {&quot;class&quot;:&quot;data&quot;}), ('li', {&quot;class&quot;:&quot;release_date&quot;}), ('ul',), ('div', {&quot;class&quot;:&quot;condensed_stats&quot;}), ('div', {&quot;class&quot;:&quot;product_wrap&quot;})], -1)
     ]
     )
-</code></pre>
-
-<p>after running the program, you should obtain a list of containing all games, not just one of them.</p>
-
+</code></pre><p>after running the program, you should obtain a list of containing all games, not just one of them.</p>
 <pre><code>[
 	{
 		&quot;critic_rating&quot;: &quot;91&quot;,
@@ -492,10 +463,7 @@ subURL = &quot;/browse/games/score/metascore/year/ps4/filtered?year_selected=201
 		&quot;user_rating&quot;: &quot;8.4&quot;
 	},
   ...
-</code></pre>
-
-<p>The remaining of the code sample are available in the github&rsquo;s repo. They are named _metacritic2019<em>main.py</em>, _metacritic2019<em>functions.py.</em> and _metacritic2019<em>data.json</em></p>
-
+</code></pre><p>The remaining of the code sample are available in the github&rsquo;s repo. They are named <em>metacritic2019_main.py</em>, <em>metacritic2019_functions.py.</em> and <em>metacritic2019_data.json</em></p>
 <p>that&rsquo;s it! for any website, just provide the link which contains data, and the two paths, one from root up to wrapper tag, and the other from each record&rsquo;s tag up to desired data.</p>
 
     </div>
