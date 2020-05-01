@@ -71,6 +71,133 @@
     </item>
     
     <item>
+      <title>UVa, Laser Sculpture - 11683. My Solution to a Competitive Programming Problem</title>
+      <link>https://mostafatouny.github.io/post/laser-sclupture/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:01 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/laser-sclupture/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;In this blog post, We solve &lt;a href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=2730&#34;&gt;UVa&amp;rsquo;s Laser Sculpture - 11683&lt;/a&gt; problem and prove our solution&amp;rsquo;s correctness via formal logic. In case the proof is not flawed, Then the solution is guaranteed to yield the correct answer without any bug or error. Your feedback, inquiries and suggestions are highly welcomed.&lt;/p&gt;
+&lt;h2 id=&#34;proposed-solution-intuitively&#34;&gt;Proposed Solution, Intuitively&lt;/h2&gt;
+&lt;p&gt;Before delving into mathematical rigour details, Let me give you an intuitive description of the solution and why it works.&lt;/p&gt;
+&lt;p&gt;Note that the laser only sculpts a layer of height equal to one while it is still on. If we wish to sculpts a layer of height 2, Then the laser must be toggled on and off twice. That suggests each layer intended to be sculpted counts on the laser to be turned on after being on off state. What if there are more than one sculpture on the same layer, but separated by couple of unsculpted units? then each sculpture on this layer counts per se.&lt;/p&gt;
+&lt;p&gt;Think of the following, where &lt;em&gt;b&lt;/em&gt; indicates a sculpted unit and &lt;em&gt;x&lt;/em&gt; indicates an unsculpted unit. A height equal to three is made here for a simple illustration.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;X_i&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;X_i+1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;x&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;if $X_i$ here is $X_1$, then certainly the blank unit counts as a laser is turned on. What about $X_1$, Would the two blank units count each on laser? Considering the fact that a laser could move horizontally while it is still being turned on allows two blanks crossing $X_0$ and $X_1$ to be sculpted on one count. What about the second blank of $X_1$? Clearly, The laser must sculp the blank above it first, So the second blank would be an additional count. Seemingly, We came across a condition here. if a blank in $X_i+1$ came after a blank in $X_i$, Then it should not count but if it came after an unsculpted unit, Then it counts.&lt;/p&gt;
+&lt;p&gt;The observation suggests the following. A column which tracks counts on each layer, and the state of the last scanned unit, i.e whether it is sculpted or not. Initially, It would be&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;count&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;unit&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;x&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;x&lt;/em&gt; units initialized here are on behalf of the left most outer border. We proceed as follows, For a given &lt;em&gt;X_i&lt;/em&gt; determine units &lt;em&gt;b&lt;/em&gt; sculpted and units &lt;em&gt;x&lt;/em&gt; unsculpted. If a unit is &lt;em&gt;x&lt;/em&gt;, Then leave count as it is. If a unit is &lt;em&gt;b&lt;/em&gt;, Then check the unit before it, If it is &lt;em&gt;b&lt;/em&gt; leave count but if it is &lt;em&gt;x&lt;/em&gt; increment count by one. Afterward, Update unit column with the new unit. Do these steps on all vertical units. Repeat the procedure on each $X_i$. The correct result is the sum of all counts.&lt;/p&gt;
+&lt;p&gt;We could furtherly improve. Why do we need to track each layer on a separated &lt;em&gt;count&lt;/em&gt; for it? Instead, We could define only one variable which gets incremented whenever any layer detects a new laser sculpture. In addition, For the unit column, We do not need to check every unit and compare it with the previous one in order to find blank units preceeded by unsculpted x units. max(0, $X_i$ - $X_{i+1}$) would do the trick of finding blank units b in $X_{i+1}$ preceeded by x unit.&lt;/p&gt;
+&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#define usi unsigned short int
+
+int main() {
+  usi h, w;
+  int X_bef, X_cur, cou;
+
+  while(true) {
+    scanf(&amp;quot;%hu %hu&amp;quot;, &amp;amp;h, &amp;amp;w);
+
+    if (h == 0)
+      break;
+
+    cou = 0;
+    X_bef = h;
+    
+    for (usi i=0; i&amp;lt;w; ++i) {
+      scanf(&amp;quot;%d&amp;quot;, &amp;amp;X_cur);
+      cou = cou + std::max(0, X_bef-X_cur);
+      X_bef = X_cur;
+    }
+
+    printf(&amp;quot;%d\n&amp;quot;, cou);
+  }
+  
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;formal-logic&#34;&gt;Formal Logic&lt;/h2&gt;
+&lt;p&gt;Here comes the formal-logic based proof of our algorithm&amp;rsquo;s correctness. Kindly, note that it might still be flawed. However, If it is not, Then we guarantee the algorithm to yield the correct answer without any bugs or errors. Anyway, Before getting into the proof, We need to rigoursly model the problem of &lt;em&gt;Laser Sculpture - 11683&lt;/em&gt;. Those rigor definitions and constraints are derived from our understanding of the problem.&lt;/p&gt;
+&lt;h3 id=&#34;definitions&#34;&gt;Definitions&lt;/h3&gt;
+&lt;p&gt;For the following, We assume $h$, $w$ $\in \mathcal{N}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Board&lt;/strong&gt;: A 2d-array-alike corresponding to overall units. board is $b = (h \times w)$, units $u_{i,j}$ indexed (labeled) by a cartesian product of board&amp;rsquo;s height and width.&lt;/p&gt;
+&lt;p&gt;$X_0$: We define an imaginary height equal to $h$ of a given board. It serves on behalf the left most outer border for the first iteration of our algorithm.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sculpture set on board&lt;/strong&gt;: A family of sets where each set is the set of units sculpted by the laser while it is still on. The sculpture set is $S = ${$ S_1, S_2, .., S_k$} such that $\cup S \subseteq b$, $S_i \cap S_j = \phi$ for any distinct i and j, $S_i \neq \phi$ for any i. That says sculptures are subset of the original board units, no two sculptures are intersecting, and there&amp;rsquo;s no empty sculpture. That conforms with our understanding that a unit cannot be shot twice by a laser, and a laser is not going to be turned on without sculpting some unit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Top-first&lt;/strong&gt;: That is a condition which ensures no sculpture occurs on some layer before the layer above it is sculptured. For any $S_q \in S$, $\forall u_{i,j} \in S_q( ${$ u_{x,j} \in b | x &amp;lt; i $}$ \subseteq S_{q-1} \cup S_{q-2} \cup .. \cup S_{1} )$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;One-row&lt;/strong&gt;: That is a condition which ensures a continuous row of units are sculptured at once, not sculptured on multiple times in which the laser is turned on and off multiple times as well. For any two distinct $S_k$ and $S_q$, $\neg( \exists j_0  \exists j_1, u_{i_0,j_0} \in S_q \wedge u_{i_1,j_1} \in S_k \wedge j_1=j_0+1)$ for some $u_{i_0,j_0}$ and $u_{i_1,j_1}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uniqueness&lt;/strong&gt;: It is assumed that there is a unique number of times for the laser to be toggled on and off regardless of of the &lt;em&gt;sculpture set&lt;/em&gt;. In other words, Even if there are two possible different sculptures which achieve the desired X&amp;rsquo;s, The number of times the laser needs to be toggled on and off is the same.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Existince of a Solution&lt;/strong&gt;: It is assumed that given height $h$, and width $w$ of the whole board $b$, and given heights $X_1$, $X_2$, .., $X_w$ of position $i$ in the board, There exists a &lt;em&gt;sculpture set&lt;/em&gt; $S$ &lt;em&gt;on board&lt;/em&gt; $b$ such that $b - S = \cup_{p \in 1, 2, .., w }$ {$ u_{i,p} \in b $} whereby each set {$ u_{i,p_0} \in b $} has a cardinality of $X_{p_0}$. In other words, The set yielded from subtracting the board from sculpture set is composed of units conforming to desired $X$&#39;s heights.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Principal Problem Statement&lt;/strong&gt; (finally): Given a board $b_{h \times w}$ of height $h$ and width $w \in \mathcal{Z}^+$, and given heights $X_1$, $X_2$, .., $X_w$, The cardinality of $\textit{sculpture set on board}$ $b$ is equal to $\Sigma_{i=0}^{w-1}min(0, X_i-X_{i+1})$&lt;/p&gt;
+&lt;h3 id=&#34;proof&#34;&gt;Proof&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;: For $b-S$, where $b$ is a board of height $h$ and width $w \geq 2$ and $S$ is a &lt;em&gt;sculpture set on&lt;/em&gt; $b$ conforming to given heights of unsculpted units of last two board columns $X_{w-1}$ and $X_w$,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; if $X_{w} &amp;lt; i \leq X_{w-1}$, a unit $u_{i, w}$ is contained in some $S_k$ and no other unit is in $S_k$. That is, for some $S_k \in S$, $S_k = ${$ u_{i, w} $}.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2)&lt;/strong&gt; if $X_{w} \leq X_{w-1} &amp;lt; i$, a unit $u_{i, w}$ is contained in some $S_k$ which is per se contains an element of $\textit{board}$ $b^{&#39;} = b_{h \times w-1}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(1) Solution&lt;/strong&gt;: Assume $X_{w} &amp;lt; i \leq X_{w-1}$. Clearly, unit $u_{i, w} \in \cup S$, As it is above height of column $X_w$. So, $u_{i, w} \in S_k$ for some $S_k \in S$. $S_k$ does not contain other units  which are above, below, or diagonal to $u_{i, w}$. Otherwise, $\textit{top first}$ or $\textit{one row}$ conditions shall be violated. Also, no other units are left to $u_{i, w}$ in $S_k$, As $i \leq X_{w-1}$. Hence, $S_k = ${$ u_{i, w} $}.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2) Solution&lt;/strong&gt;: Assume $X_{w} \leq X_{w-1} &amp;lt; i$. Similar to $\textbf{(1) solution}$, unit $u_{i, w} \in \cup S$, As it is above height of column $X_w$. So, $u_{i, w} \in S_k$ for some $S_k \in S$. $S_k$ does not contain other units  which are above, below, or diagonal to $u_{i, w}$. Otherwise, $\textit{top first}$ or $\textit{one row}$ conditions shall be violated. However, unlike $\textbf{(1) solution}$, Nothing precludes a unit left to $u_{i, w}$ to be contained in $S_k$, As $X_{w-1} &amp;lt; i$. On the contrary, if $S_k = ${$ u_{i, w} $} then $\textit{one row}$ condition shall be violated as two sculptures are going to be on the same row without any non-blank separator between them. Through $\textit{proof by contradiction}$, $S_k \neq ${$ u_{i, w} $}. Hence, there are some units $u \in S_k$. Since units from all directions are excluded, except only the left direction, $u_{i, w-1} \in S_k$, which is clearly a unit of $\textit{board}$ $b^{&#39;} = b_{h \times w-1}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Corollary&lt;/strong&gt;: From &lt;strong&gt;Lemma (1)&lt;/strong&gt;, Obviously, $S_k$ is not an element of $\textit{sculpture set on board}$ $b^{&#39;} = b_{h \times w-1}$ due to the fact that $S_k \not\subseteq b^{&#39;}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Problem Statement&lt;/strong&gt; (main proof): First we re-write the statement defined above in a more convenient form for induction proof.&lt;/p&gt;
+&lt;p&gt;for $w \in \mathcal{Z}^+$,&lt;br&gt;
+Given $h \in \mathcal{N}$, and heights $X_1$, $X_2$, .., $X_w$, sculpture set on board $b_{h \times w}$ has a cardinality of $\Sigma_{i=0}^{w-1}min(0, X_i-X_{i+1})$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;:&lt;br&gt;
+base, for $w = 1$,&lt;br&gt;
+Assume we are given $h \in \mathcal{N}$, and heights $X_1$, $X_2$, .., $X_w$. A board $b_{h \times w}$ has a sculpture set on it, by assumption.
+Assume $X_{1} &amp;lt; i$. By definition $X_0 = h$. So, $X_1 &amp;lt; i &amp;lt; X_0$. via $\textbf{Lemma (1)}$, each unit $u_{i, 1}$ is contained in some $S_k$ and no other unit is in $S_k$. In other words, cardinality of {$ u_{i, 1} | X_1 &amp;lt; i $} is equal to $S$, the sculpture set on board $b$. clearly, it is also equal to ($X_0$ - $X_1$). since $X_0 \geq X_1$, ($X_0$ - $X_1$) = min(0, $X_0$ - $X_1$) which justifies our problem statement.&lt;/p&gt;
+&lt;p&gt;induction hypothesis, for $w^{&#39;} \in \mathcal{Z}^+$ we assume problem statement&amp;rsquo;s validity.&lt;/p&gt;
+&lt;p&gt;induction step, for $w = w^{&#39;}+1$,&lt;br&gt;
+Assume we are given $h \in \mathcal{N}$, and heights $X_1$, $X_2$, .., $X_w$. A board $b_{h \times w}$ has a sculpture set on it, by assumption.
+Assume $X_{w} &amp;lt; i$.&lt;br&gt;
+$\textbf{case 1}$: if it is the case the $i \leq X_{w-1}$, then similarly to base case, each unit $u_{i, w}$ counts a new element in $S$, the sculpture set on board $b$. Recall from $\textbf{corollary}$ that those are not in $S^{&#39;}$, sculpture set on board $b^{&#39;}_{h \times w-1}$. cardinality of units $u_{i, w}$ are clearly equal to $X_{w-1} - X_{w}$. Also, It is clear that $X_{w-1} &amp;gt; X_{w}$, Hence, $X_{w-1} - X_{w}$ = $min(0, X_{w-1} - X_{w})$.&lt;/p&gt;
+&lt;p&gt;$\textbf{case 2}$: But if $i &amp;gt; X_{w-1}$, then by $\textbf{lemma (1)}$ each unit $u_{i, w}$ is contained in some $S_k$ which is per se an element of $S^{&#39;}$, the sculpture set on board $b^{&#39;}_{h \times w-1}$. Hence, Those units do not contribute new counts to $S$, the sculpture set on board $b_{h \times w}$ than counted in $S^{&#39;}$. On the other hand, It is clear that $X_{w-1} \leq X_{w}$, So $X_{w-1} - X_{w} \leq 0$. So, $min(0, X_{w-1} - X_{w}) = 0$ which conforms with what we just proved that no new sculptures are added than those in board $b^{&#39;}$.&lt;/p&gt;
+&lt;p&gt;From &lt;strong&gt;case 1&lt;/strong&gt; and &lt;strong&gt;case 2&lt;/strong&gt;, $min(0, X_{w-1} - X_{w})$ is equal to new sculptures not in sculpture set $S^{&#39;}$ on board $b^{&#39;}_{h \times w-1}$. Therefore, cardinality of set $S$ is equal to cardinality set $S^{&#39;}$ plus $min(0, X_{w-1} - X_{w})$. via induction hypothesis, cardinality of $S^{&#39;} = \Sigma_{i=0}^{w^{&#39;}-1}min(0, X_i-X_{i+1})$. So, cardinality of $S = \Sigma_{i=0}^{w-2}min(0, X_i-X_{i+1}) + min(0, X_{w-1}-X_{w}) = \Sigma_{i=0}^{w-1}min(0, X_i-X_{i+1})$
+QED&lt;/p&gt;
+&lt;h3 id=&#34;precautionary-note&#34;&gt;Precautionary Note&lt;/h3&gt;
+&lt;p&gt;The code snippet above got accepted on UVa&amp;rsquo;s online judge from the first time. Certainly, The mathematical rigor illustrated above played a key role in ensuring the code correctness. Nonetheless, That is not enough. The proof illustrated is suspected by me to contain a logical flaw. In addition, I tested the code on my own generated test-cases, which showed an error in my code! I am not sure whether that error is attributed to the algorithm or logic inferences I made, or is attributed to a technical programming issue. In other words, the justification I illustrated, whether logic-proof or UVa&amp;rsquo;s acceptance, is not the best. However, For a beginner like me, It is a great achievement and progress I made.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>UVa, The Snail - 573. My Solution to a Competitive Programming Problem</title>
       <link>https://mostafatouny.github.io/post/the-snail/</link>
       <pubDate>Sun, 26 Apr 2020 00:00:01 +0000</pubDate>
