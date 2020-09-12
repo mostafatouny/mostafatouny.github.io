@@ -3,73 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mostafatouny.github.io/post/guarini/</loc>
+    <lastmod>2020-06-18T00:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mostafatouny.github.io/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-18T00:00:01+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mostafatouny.github.io/post/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-18T00:00:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/writing-technical-content/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/hunting-patterns/</loc>
+    <lastmod>2020-06-11T00:00:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/authors/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/laser-sclupture/</loc>
+    <lastmod>2020-05-01T00:00:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/jupyter/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/the-snail/</loc>
+    <lastmod>2020-04-26T00:00:01+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/author/nelson-bighetti/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/shifting-roads/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/tag/academic/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/first-machine-learning/</loc>
+    <lastmod>2020-03-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/post/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/permutation-test/</loc>
+    <lastmod>2020-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/categories/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/ratings-reweighted/</loc>
+    <lastmod>2020-02-19T00:23:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/category/demo/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/creativity-vs-winning/</loc>
+    <lastmod>2020-02-01T00:23:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/tags/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/scraping-metacritic/</loc>
+    <lastmod>2020-02-01T00:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/global-ai-bootcamp/</loc>
+    <lastmod>2019-12-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/tag/%E5%BC%80%E6%BA%90/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/emotionml-annot/</loc>
+    <lastmod>2019-11-23T00:10:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mostafatouny.github.io/category/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/post/gen-emo-data/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/post/identify-crackpot/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/post/favorite-books-list/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -77,7 +92,23 @@
   </url>
   
   <url>
+    <loc>https://mostafatouny.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/author/mostafa-touny/</loc>
+  </url>
+  
+  <url>
     <loc>https://mostafatouny.github.io/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mostafatouny.github.io/tags/</loc>
   </url>
   
 </urlset>
