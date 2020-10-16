@@ -5,12 +5,68 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 18 Jun 2020 00:00:01 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Jun 2020 00:00:01 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Proving Graphical Steiner Tree is NP-Complete</title>
+      <link>https://mostafatouny.github.io/post/steiner-tree-np-complete/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:01 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/steiner-tree-np-complete/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;We prove the &lt;em&gt;graphical 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Steiner_tree_problem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;steiner tree&lt;/a&gt;&lt;/em&gt; problem is &lt;em&gt;NP-complete&lt;/em&gt; by reducing 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Vertex_cover&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vertex cover&lt;/a&gt; to it. The version of it is taken from our favorite &lt;em&gt;Kleinberg and Tardos&amp;rsquo; Algorithm Design&lt;/em&gt; book&amp;rsquo;s exercises. We assume the reader is familiar with &lt;em&gt;vertex cover&lt;/em&gt;, what &lt;em&gt;NP-completeness&lt;/em&gt; is and the general approach for proving it by &lt;em&gt;reduction&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;graphical-steiner-tree-definition&#34;&gt;Graphical Steiner Tree Definition&lt;/h2&gt;
+&lt;p&gt;Here is a clear definition of the problem we prove its NP-completeness, Taken from &lt;em&gt;klienberg and tardos&amp;rsquo; exercise 38&lt;/em&gt; of &lt;em&gt;chapter 8&lt;/em&gt;, &lt;em&gt;NP and computational intractability&lt;/em&gt;.
+&lt;img src=&#34;./ex.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-and-high-level-overview&#34;&gt;Example and High-Level Overview&lt;/h2&gt;
+&lt;p&gt;Before showing a rigour proof, We present a simple example which demonstrates our approach. We begin with a &lt;em&gt;vertix cover&lt;/em&gt; example, then accordingly encode it into an instance of the &lt;em&gt;graphical steiner tree&lt;/em&gt; problem. We give some insights why finding a solution to the latter accounts for a solution to the former, and Hence argue our claimed proof is correct.&lt;/p&gt;
+&lt;h3 id=&#34;vertex-cover&#34;&gt;Vertex Cover&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s consider a simple example of &lt;em&gt;vertex cover&lt;/em&gt; problem. A graph $G$ has vertices $G(V) = \set {1, 2, 3, 4}$ colored in red and purple, and edges $G(E) = \set {1, 2, 3, 4 }$ colored in &lt;em&gt;green&lt;/em&gt;. Finally, Let $k=2$
+&lt;img src=&#34;./vertex.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Clearly, A subset $G(V)_{red} = \set {1, 2}$ has the minimum possible number of elements which enables covering all edges $G(E)$. Now let&amp;rsquo;s see how it is going to be encoded into an instance of a &lt;em&gt;graphical steiner tree&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;graphical-steiner-tree&#34;&gt;Graphical Steiner Tree&lt;/h3&gt;
+&lt;p&gt;Construct a graph $G&#39;$ whose vertices $G&amp;rsquo;(V)$ are the unions of,&lt;/p&gt;
+&lt;p&gt;$\set {S}$ a special vertex, $\set {1, 2, 3, 4} = G&amp;rsquo;(V)_e$ colored in green corresponding to edges of the vertex cover $G(E)$, $\set {1&amp;rsquo;, 2&amp;rsquo;, 3&amp;rsquo;, 4&amp;rsquo;} = G&amp;rsquo;(V)_v$ colored in red and purple corresponding to vertices of the vertex cover $G(V)$, and $\set {1_0, 2_0, 3_0, 4_0} = G&amp;rsquo;(V)_o$ contains an additional vertex colored in white for each element of $G&amp;rsquo;(V)_v$. Note vertices in $G&amp;rsquo;(V)_o$ and vertex $S$ are not corresponded to anything in the &lt;em&gt;vertex cover&lt;/em&gt; instance.&lt;/p&gt;
+&lt;p&gt;$G&#39;$&#39;s edges $G&amp;rsquo;(E)$ are the unions of,&lt;/p&gt;
+&lt;p&gt;$G&amp;rsquo;(E)_c$ corresponding to edges which connect $G&amp;rsquo;(V)_v$ with $G&amp;rsquo;(V)_e$ in case an edge is covered by a vertex in the &lt;em&gt;vertex cover&lt;/em&gt; instance, and $G&amp;rsquo;(E)_S$ contains two edges for each element of $G&amp;rsquo;(V)_v$ connecting it to the special vertex $S$ via $G&amp;rsquo;(V)_o$. Note edges in $G&amp;rsquo;(E)_S$ are not corresponded to anything in the &lt;em&gt;vertex cover&lt;/em&gt; instance.&lt;/p&gt;
+&lt;p&gt;Define $X&amp;rsquo; = \set{S} \cup G&amp;rsquo;(V)_v \cup G&amp;rsquo;(V)_e$&lt;/p&gt;
+&lt;p&gt;Define $k&amp;rsquo; = ||G&amp;rsquo;(V)_e|| + 2(k) + (||G&amp;rsquo;(V)_v||-(k))$ $=$ $||G&amp;rsquo;(V)_e|| + 2(2) + (||G&amp;rsquo;(V)_v||-(2))$ where $k$ is taken from &lt;em&gt;vertex cover&lt;/em&gt; instance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./graph.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;accounting-a-solution-for-vertex-cover&#34;&gt;Accounting a Solution for Vertex Cover&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s remark how a solution of encoded &lt;em&gt;Graphical Steiner Tree&lt;/em&gt; yields a solution to &lt;em&gt;Vertex Cover&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;By definition of &lt;em&gt;Graphical Steiner Tree&lt;/em&gt;, and definition of X, $G&amp;rsquo;(V)_v$ vertices must be connected to $S$. For each, There are two pathways, Either connecting backward via $G&amp;rsquo;(V)_o$ with cost of two edges, or connecting forward via $G&amp;rsquo;(V)_e$. So there is a penalty on connecting backward, and the algorithm is obliged to connect forward as much as possible to reduce the number of edges. In other words, We could reform the algorithm&amp;rsquo;s goal as, In order to connect $X$ in a single component with least possible edges, What is the minimum number of vertices of $G&amp;rsquo;(V)_v$ needs to be connected backward;y?&lt;/p&gt;
+&lt;p&gt;The trick here as shown from the example is that we reduced vertices covering edges in &lt;em&gt;vertex cover&lt;/em&gt; to vertices connected to other vertices in &lt;em&gt;graphical steiner tree&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;more-rigour-remarks&#34;&gt;More Rigour Remarks&lt;/h2&gt;
+&lt;p&gt;Now let&amp;rsquo;s present some more rigour remarks of our reduction. For the sake of readability, We intentionally omit the definition of constructed encoded instance of &lt;em&gt;graphical steiner tree&lt;/em&gt;. We believe the above discussion suffices to convince the reader. In addition, We assume on behalf of the reader to see why both &lt;em&gt;theorem 1&lt;/em&gt; and &lt;em&gt;theorem 2&lt;/em&gt; suffices to prove intended NP-completeness.&lt;/p&gt;
+&lt;h3 id=&#34;theorem-1&#34;&gt;Theorem 1&lt;/h3&gt;
+&lt;p&gt;If a &lt;em&gt;vertex cover&lt;/em&gt; instance is &lt;em&gt;decided&lt;/em&gt; to be covered by at most $k$ vertices, Then the encoded &lt;em&gt;graphical steiner tree&lt;/em&gt; is decided to be solved by at most $k&#39;$ edges.&lt;/p&gt;
+&lt;p&gt;Note the definition of $k&#39;$ is stated above.&lt;/p&gt;
+&lt;h4 id=&#34;proof&#34;&gt;Proof&lt;/h4&gt;
+&lt;p&gt;Let $X \subseteq G(V)$ be the chosen vertices in &lt;em&gt;vertex cover&lt;/em&gt; instance which cover all its edges. Let $G&amp;rsquo;(V)_X \subseteq G&amp;rsquo;(V)_v$ containing elements corresponding to $X$.&lt;/p&gt;
+&lt;p&gt;Construct $F \subseteq G&amp;rsquo;(E)$ containing,&lt;/p&gt;
+&lt;p&gt;One edge from each element of $G&amp;rsquo;(V)_e$ to some element in $G&amp;rsquo;(V)_X$, Two edges from each element of $G&amp;rsquo;(V)_X$ along the path to $S$, and one edge from each element of to $G&amp;rsquo;(V)_v - G&amp;rsquo;(V)_X$ to any remaining $G&amp;rsquo;(V)_e$.&lt;/p&gt;
+&lt;p&gt;Clearly, Mentioned edges exist. Also, $X&#39;$ (see its definition above) is a single component in the graph, As all needed vertices are connected to $S$.&lt;/p&gt;
+&lt;p&gt;By definition, The number of elements in $X$ is at most $k$. Clearly, All mentioned edges of $X&#39;$ are distinct from each other. Hence, The number of them is at most $k&#39;$ following $F$&#39;s construction.&lt;/p&gt;
+&lt;h3 id=&#34;theorem-2&#34;&gt;Theorem 2&lt;/h3&gt;
+&lt;p&gt;If the encoded &lt;em&gt;graphical steiner tree&lt;/em&gt; is decided to be solved by at most $k&#39;$ edges, Then &lt;em&gt;vertex cover&lt;/em&gt; instance is &lt;em&gt;decided&lt;/em&gt; to be covered by at most $k$ vertices.&lt;/p&gt;
+&lt;h4 id=&#34;proof-1&#34;&gt;Proof&lt;/h4&gt;
+&lt;p&gt;Let $X&#39;$ be the solution of encoded &lt;em&gt;graphical steiner tree&lt;/em&gt;. Since $X&#39;$ is a single-component in the graph, All vertices must be connected to $S$ including $G&amp;rsquo;(V)_v$. Those are connected either &lt;em&gt;backward&lt;/em&gt; through $G&amp;rsquo;(V)_o$ or forward through $G&amp;rsquo;(V)_e$. Let $G&amp;rsquo;(V)_b$ be those which are connected backwardly. Let $k&amp;rsquo;_b$ be equal to its number of elements.&lt;/p&gt;
+&lt;p&gt;Construct $X \subseteq G(V)$ containing vertices in &lt;em&gt;vertex cover&lt;/em&gt; instance corresponding to $G&amp;rsquo;(V)_b$ in $X&#39;$. It is not hard to see those vertices cover all edges in &lt;em&gt;vertex cover&lt;/em&gt;. Clearly, In $X&#39;$ each element of $G(V)_e$ is connected to some element in $G(V)_b$, Otherwise they won&amp;rsquo;t be connected to $S$ violating $X&#39;$ definition. Hence, every edge in &lt;em&gt;vertex cover&lt;/em&gt; must be covered by $X$.&lt;/p&gt;
+&lt;p&gt;What is remaining is to prove $X$&#39;s cardinality is at most $k$. In other words, We need to show $k&amp;rsquo;_b$ is at most $k$. Assume for the sake of contradiction that $k&amp;rsquo;_b &amp;gt; k$. Then $||X&#39;|| \geq ||G&amp;rsquo;(V)_e|| + 2(k&amp;rsquo;_b) + (||G&amp;rsquo;(V)_v||-(k&amp;rsquo;_b))$ $&amp;gt;$ $||G&amp;rsquo;(V)_e|| + 2(k) + (||G&amp;rsquo;(V)_v||-(k))$ $=$ $k&#39;$ violating $X&#39;$ to be at most $k&#39;$ as defined.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I acknowledge that might not be a complete proof, However we believe it suffices for anyone with minimum familiarity of &lt;em&gt;computational complexity theory&lt;/em&gt; or &lt;em&gt;NP-completeness&lt;/em&gt;. We did really enjoy figuring the trick of reducing covering edges by vertices to connecting vertices to other vertices. After all, The literature is crammed with proved NP-complete problems. I guess a first-look in &lt;em&gt;Computers and Intractability: A Guide to the Theory of NP-completeness&lt;/em&gt; by &lt;em&gt;Garey&lt;/em&gt; and &lt;em&gt;Johnson&lt;/em&gt; delineates this blog post trivial. However, I am happy that I was able to think from a different perspective to figure this problem out by only the aid of &lt;em&gt;Kleinberg&lt;/em&gt; and &lt;em&gt;Tardos&lt;/em&gt;&amp;rsquo; book.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kleinberg and Tardos. Algorithm Design. Pearson&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Guarini&#39;s Puzzle, A Less Elegant Solution</title>
