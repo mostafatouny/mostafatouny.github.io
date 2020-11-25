@@ -5,12 +5,282 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Jun 2020 00:00:01 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Nov 2020 00:00:01 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/images/icon_hue80eb6f7e06414c6d0a29e5083f6eed7_3149066_512x512_fill_lanczos_center_2.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Quantum-interference-inspired Classical Problem Exercise</title>
+      <link>https://mostafatouny.github.io/post/quantum-interference/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:01 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/quantum-interference/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;In this post we initiate an exercise which we claim is of interest for anyone interested in &lt;em&gt;quantum-computing&lt;/em&gt;. We justify the accessibility of this post by the fact that the author is not rigoursly trained in mathematics. For researchers, What we pose here serves as a joke for them. For high-school students, undergraduates, or even the lay audience, It serves as an insightful yet approachable exercise. In either cases, This post contributes to the good of society. No &lt;em&gt;quantum-mechanics&lt;/em&gt; or &lt;em&gt;quantum-computing&lt;/em&gt; background is assumed. In fact, A goal of this post is to pave the reader&amp;rsquo;s way for further readings in &lt;em&gt;quantum algorithms&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;The first two sections, &lt;em&gt;Quantum Parallelism The Big Promise But Not So Obvious&lt;/em&gt; and &lt;em&gt;Quantum-interference-alike Classical Problem&lt;/em&gt; are background intros to &lt;em&gt;quantum computing&lt;/em&gt;. In their own rights, They serve as a popular science blog post. The contribution of this blog begins with the section following them, &lt;em&gt;Quantum-interference-alike Classical Problem&lt;/em&gt;. Finally, We end this blog post with personal retrospections and a call-out for my other fellow students to continue advancing the pathway this post paves.&lt;/p&gt;
+&lt;p&gt;The popular science part attempts to show how hard quantum algorithm design is, As it is very counter intuitive, Even for the physicist. Then it proceeds to the problem Deutsch-Josza&amp;rsquo;s algorithm solves without any technical treatment of the algorithm.&lt;/p&gt;
+&lt;p&gt;Then our contribution comes where we try to contrive classical problems which follow the same spirit as quantum-interference pattern in quantum algorithms.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#quantum-parallelism-the-big-promise-but-not-so-obvious&#34;&gt;Quantum Parallelism The Big Promise But Not So Obvious&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#superposition&#34;&gt;Superposition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#measurement&#34;&gt;Measurement&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#heroic-computer-scientists&#34;&gt;Heroic Computer Scientists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#deutsch-joszas-algorithm&#34;&gt;Deutsch-Josza&amp;rsquo;s Algorithm&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#the-problem-it-solves&#34;&gt;The Problem It Solves&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#quantum-interference&#34;&gt;Quantum-interference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#quantum-interference-alike-classical-problem&#34;&gt;Quantum-interference-alike Classical Problem&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#approach-1-number-of-non-empty-intersections&#34;&gt;Approach 1: Number of Non-empty Intersections&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#approach-2-complete-or-balanced-bipartite&#34;&gt;Approach 2: Complete or Balanced-Bipartite?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#personal-remarks&#34;&gt;Personal Remarks&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#learning-progress&#34;&gt;Learning Progress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#too-quickly&#34;&gt;Too Quickly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#further-you-could-contribute&#34;&gt;Further: You Could Contribute&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quantum-parallelism-the-big-promise-but-not-so-obvious&#34;&gt;Quantum Parallelism: The Big Promise But Not So Obvious&lt;/h2&gt;
+&lt;p&gt;The central promise of &lt;em&gt;quantum computing&lt;/em&gt; lies in &lt;em&gt;quantum parallelism&lt;/em&gt; where one-step operation computes many states simultaneously. In classical computing, if $c_0 = false$ and $c_1 = true$, Reversing both bits requires two operations. But for a &lt;em&gt;quantum-bit&lt;/em&gt; $q$, It might exist in a &lt;em&gt;superposition&lt;/em&gt; of $true$ and $false$ where one-step reversing operation on $q$ accounts for reversing both $true$ and $false$. So, Applying a set of operations on one $q$ saves us half the operations if we were applying them on two classical bits, $c_0$ and $c_1$. But what happens when you read $q$? Do you get the two resulting states? The answer is &lt;strong&gt;NO&lt;/strong&gt;. Measuring $q$ yields only one state of the two. And that state is chosen randomly.&lt;/p&gt;
+&lt;p&gt;So, Could we benefit from &lt;em&gt;quantum parallelism&lt;/em&gt; if &lt;em&gt;measurement&lt;/em&gt; yields only one &lt;em&gt;state&lt;/em&gt;? And what is meant by &lt;em&gt;superposition&lt;/em&gt;?&lt;/p&gt;
+&lt;h3 id=&#34;superposition&#34;&gt;Superposition&lt;/h3&gt;
+&lt;p&gt;In popular media articles, It is common to draw an analogy by a coin, Where &lt;em&gt;heads&lt;/em&gt; represents $true$ and &lt;em&gt;tails&lt;/em&gt; represents $false$, so that a &lt;em&gt;superposition coin&lt;/em&gt; is a coin in-between both of them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./coin.jpeg&#34; alt=&#34;coin&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Personally speaking, I find such analogy &lt;strong&gt;misleading&lt;/strong&gt;. If we interpreted $true$ as $1$ and $false$ as $0$, Then what the coin-analogy might indicate is that a &lt;em&gt;superposition&lt;/em&gt; is $0.5$, which is totally a mistaken interpretation.&lt;/p&gt;
+&lt;p&gt;Philosophers attempted to interpret &lt;em&gt;superposition&lt;/em&gt; in different ways. For them, It is very gratifying that a new physics-paradigm defied philosophical assumptions which were once taken for granted by physicists. Yet, Even after &lt;em&gt;quantum-mechanics&lt;/em&gt;, Philosophers stil feel unappreciated.&lt;/p&gt;
+&lt;p&gt;Try to think with me on the following:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./3d.jpeg&#34; alt=&#34;3d&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You bought a new video-game and after running it, It turned-out the game contains no quality-content but repeates itself in a fatigue open-world quests. Then suddenly, A bug occurs where you fell in the cube above such that all the walls you see are the blue ones.&lt;/p&gt;
+&lt;p&gt;We wish to think of the wall you did not see as a &lt;em&gt;superposition wall&lt;/em&gt; of colors &lt;em&gt;black&lt;/em&gt; and &lt;em&gt;white&lt;/em&gt;, and think of moving your &lt;em&gt;mouse&lt;/em&gt; or your &lt;em&gt;right analog stick&lt;/em&gt; so that a pixel of the &lt;em&gt;superposition wall&lt;/em&gt; appears at your screen, As measuring the &lt;em&gt;superposition wall&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, you move your &lt;em&gt;mouse&lt;/em&gt; untill the &lt;em&gt;superposition wall&lt;/em&gt; appears at your screen. Then, You find-out this wall is colored white. As nothing interests you, You restart the game in hope of not falling into the same bug. However, As games are shipped via &lt;em&gt;crunshing&lt;/em&gt; these days, You fall again into the bug. Again, You move your mouse but this time you find the &lt;em&gt;superposition wall&lt;/em&gt; colored black! The third time, black; the forth time, white.&lt;/p&gt;
+&lt;p&gt;Probably, You think the &lt;em&gt;superposition wall&lt;/em&gt; color was determined once you restarted the game. However, That is not the case. The wall was neither black nor white. It got &lt;em&gt;collapsed&lt;/em&gt; into one of these states once a pixel of the wall appeared at your screen. In other words, The wall&amp;rsquo;s state is determined only when you measure it!&lt;/p&gt;
+&lt;p&gt;You might be wondering the following. If this game is nothing but a software code running, Then this weird &lt;em&gt;superposition&lt;/em&gt; state is just some programming error. As it is technically feasible to trace the code, i.e follow-up the program&amp;rsquo;s variables line-by-line, Then we could determine the &lt;em&gt;superposition wall&lt;/em&gt; color, Given the gamer&amp;rsquo;s input. Hence, Nothing is weird and everything is safely explainable.&lt;/p&gt;
+&lt;p&gt;That concern is correct. Anyway, For the sake of this analogy, Try to think of the game appearing at your screen as the observable natural world, and the software code as something unknownable beyond our realm. All what you have got as a gamer is the graphics you are seeing but not beyond that. Similarly, All what physicists have is the natural world but not beyond that.&lt;/p&gt;
+&lt;p&gt;So, again, What is meant by that &lt;em&gt;superposition&lt;/em&gt;? &lt;strong&gt;No one knows&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;measurement&#34;&gt;Measurement&lt;/h3&gt;
+&lt;p&gt;If reading a qubit, i.e &lt;em&gt;quantum bit&lt;/em&gt;, Shows only one state among many, Then wouldn&amp;rsquo;t that render &lt;em&gt;quantum parallelism&lt;/em&gt; as useless? In addition, The state measured is selected randomly. So, Afterall, If we obtain a random state, Why don&amp;rsquo;t we just use a &lt;em&gt;psuedo-random-number-generator&lt;/em&gt;? In other words, Why should we celebrate doing one-step operation on many states of the &lt;em&gt;quantum&lt;/em&gt; world, If we could only read the result of only one of these states?&lt;/p&gt;
+&lt;h3 id=&#34;heroic-computer-scientists&#34;&gt;Heroic Computer Scientists&lt;/h3&gt;
+&lt;p&gt;That was messy. &lt;em&gt;Superpositions&lt;/em&gt; are confusing physicists; Measurements do not show us the whole results of computation. Yet, On a heroic movement, Computer scientists attempt to engineer &lt;em&gt;superposition&lt;/em&gt; states, Whereby a probabilistic measurement outcome, Enables them to conclude answers to algorithmic problems! Computer scientists are aspiring to utilize what physicists do not understand; To reach &lt;strong&gt;nearly&lt;/strong&gt; certain answers from probabilistic measurements!&lt;/p&gt;
+&lt;p&gt;This is a big reason why the physics community is interested in &lt;em&gt;quantum computing&lt;/em&gt;. It is believed if computer scientists succeeded in figuring some pattern of quantum-mechanical computations, Then physicists will gain some insight about their quantum-mechanics theory.&lt;/p&gt;
+&lt;h2 id=&#34;deutsch-joszas-algorithm&#34;&gt;Deutsch-Josza&amp;rsquo;s Algorithm&lt;/h2&gt;
+&lt;p&gt;Let me present you &lt;em&gt;Deutsch-Josza&lt;/em&gt;&amp;rsquo;s algorithm. Particularly, I show the problem it solves, and its trick, Without any mathematical details. Nonetheless, We claim our blog post captures an interesting insight of the algorithm. We assure the reader all what he requires to read the algorithm is high-school linear algebra, and refer him to &lt;em&gt;[YM]&lt;/em&gt; for a more complete treatment.&lt;/p&gt;
+&lt;h3 id=&#34;the-problem-it-solves&#34;&gt;The Problem It Solves&lt;/h3&gt;
+&lt;p&gt;Think of a software made by Apple. Probably you guessed it isn&amp;rsquo;t compatable with anything but Apple&amp;rsquo;s ecosystem. As usual, Apple imposes strict policies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(1)&lt;/strong&gt; You cannot see the software&amp;rsquo;s inner source-code, You can only enter some input and the software responds with an output. So, You cannot know how the software computes the output shown to you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Apple emails you that some of your group were granted a promotion. In order to know whom was granted, Enter the pin-code of each of your group in the software.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(2)&lt;/strong&gt; That input pin-code is composed of only zeros and ones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rumors about the promotion policy confirmed to you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(3)&lt;/strong&gt; Either
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(1)&lt;/strong&gt; All your group have the same result. That is, All your group was granted the promotion or None of your group was granted it; Or&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(2)&lt;/strong&gt; Exactly half of your group got the promotion and the other half did not.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As you are curious more about leaking news, Your goal is not to know specifically whom of your group got the promotion. Rather,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(4)&lt;/strong&gt; Given the software provided by Apple, You wish to know which of the two above policies, Namely &lt;strong&gt;(3)&lt;/strong&gt;, Apple is following.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are lucky enough, Two trials showing two different results is sufficient to confirm you Apple&amp;rsquo;s policiy &lt;strong&gt;(3-2)&lt;/strong&gt;. In worst case, You will need to use Apple&amp;rsquo;s software half the number of your group in addition to one.&lt;/p&gt;
+&lt;p&gt;Deutsch-Josza&amp;rsquo;s Algorithm solves this problem using Apple&amp;rsquo;s software only one time!&lt;/p&gt;
+&lt;p&gt;In more technical terms, You are given a function $f:\set{ 0, 1}^n \rightarrow \set{0, 1}$ which accepts a binary string of size n and outputs 0 or 1. You need to determine whether the function is &lt;em&gt;balanced&lt;/em&gt; or &lt;em&gt;constant&lt;/em&gt;, and you are assured it is exlusively either cases. You cannot see its definition, All the interaction you have with the function is evaluating inputs on it.&lt;/p&gt;
+&lt;h3 id=&#34;quantum-interference&#34;&gt;Quantum-interference&lt;/h3&gt;
+&lt;p&gt;Qubit&amp;rsquo;s measurement, i.e reading a quantum state, is probabilistic. For instance, State $\ket{+}$ has a 50-50 chance to yield $0$ and $1$. Through &lt;em&gt;Deutsch–Jozsa&lt;/em&gt;&amp;rsquo;s algorithm, The qubit&amp;rsquo;s state measurement probabilities depend on the given function $f$. Via the illustrated above analogy, Apple&amp;rsquo;s policy &lt;strong&gt;(3)&lt;/strong&gt; determine probabilities of reading the resulting qubit. Particularly, The probability of measuring $\ket{0}$,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If $f$ is &lt;em&gt;constant&lt;/em&gt;, is 1; and&lt;/li&gt;
+&lt;li&gt;If $f$ is &lt;em&gt;balanced&lt;/em&gt;, is 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, Upon only one measurement, We could safely conclude whether function $f$ is &lt;em&gt;balanced&lt;/em&gt; or &lt;em&gt;constant&lt;/em&gt;. For example, If we run &lt;em&gt;Deutsch–Jozsa&lt;/em&gt;&amp;rsquo;s algorithm and obtained any result other than $\ket{0}$, Then certainly $\ket{0}$&#39;s probability is 0 and hence $f$ is &lt;em&gt;balanced&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quantum-interference-alike-classical-problem&#34;&gt;Quantum-interference-alike Classical Problem&lt;/h2&gt;
+&lt;p&gt;Strictly speaking, We shall no longer deal with quantum computing Nonetheless, We don&amp;rsquo;t give up on tackling the trick &lt;em&gt;Deutsch-Josza&lt;/em&gt;&amp;rsquo;s algorithm achieved. Namely, &lt;em&gt;quantum-interference&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We propose the following approach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Input&lt;/strong&gt;: A mathematical object known to have one of well-defined characteristics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initial state&lt;/strong&gt;: A vector or whatever object which represents probabilities.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: A set of matrices, or whatever operations, which are applied to - initial state. Those somehow depend on the input or encode it in someway.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution&lt;/strong&gt;: Apply encoded operations on the state.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reflection&lt;/strong&gt;: The final state is ought to reflect the input&amp;rsquo;s characteristic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This approach follows the same spirit implemented in nearly every quantum algorithm including &lt;em&gt;Deutsch-Josza&lt;/em&gt; illustrated above. If this relaxed version taught us something, Then hopefully we obtain a new insight on quantum algorithms, By trying to relate obtained results back to quantum circuits.&lt;/p&gt;
+&lt;h3 id=&#34;approach-1-number-of-non-empty-intersections&#34;&gt;Approach 1: Number of Non-empty Intersections&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./all-intersect.jpg&#34; alt=&#34;all-intersect&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s think of a simple concrete example, Then generalize the approach. As shown in the above picture for the left diagram, We are given sets $A, B, C$ and told there is a non-empty intersection, i.e some elements, common in $A$ and $B$; $A$ and $C$; and, $B$ and $C$. We have a great number of non-empty intersections, and in fact this is a characteristic we wish to detect. Also, we wish to detect if we have low number of non-empty intersections, As is the case for the right diagram.&lt;/p&gt;
+&lt;p&gt;We detect both of these characteristics as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set a variable $x = 0$, Then&lt;/li&gt;
+&lt;li&gt;List all possible intersections: $(A, B)$, $(A, C)$, $(B, C)$.&lt;/li&gt;
+&lt;li&gt;For each possible intersection, Increment $x$ by one if it occurs on given sets, i.e there are some elements between the two sets; and Decrease $x$ otherwise, i.e The intersection is empty.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For the left diagram, We would have $x = 0 + 1 + 1 + 1 = 3$. For the right diagram, $x = 0 - 1 - 1 - 1 = -3$.&lt;/p&gt;
+&lt;p&gt;In more technical and general terms, The approach here is as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;: Sets, $A, B, \dots$, whose distinguishing characteristic is the number of non-empty intersections among them&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Initial State&lt;/strong&gt;: A vector whose length is the number of sets plus one. First element is $0$ and remaining ones are $1$
+$$
+\ket{\psi_0} =
+\begin{bmatrix}
+0 \newline
+1 \newline
+\vdots \newline
+1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: A matrix for each set $X$ which encodes whether all other sets have a non-empty intersection with it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+A_m =
+\begin{bmatrix}
+1 &amp;amp; 0 &amp;amp; b_a &amp;amp; c_a &amp;amp; \dots &amp;amp; z_a \newline
+0 &amp;amp; 1 &amp;amp; 0   &amp;amp; 0   &amp;amp; \dots &amp;amp; 0   \newline
+0 &amp;amp; 0 &amp;amp; 1  &amp;amp; 0   &amp;amp; \dots &amp;amp; 0   \newline
+\vdots
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+B_m =
+\begin{bmatrix}
+1 &amp;amp; a_b &amp;amp; 0 &amp;amp; c_b &amp;amp; \dots &amp;amp; z_b \newline
+0 &amp;amp; 1 &amp;amp; 0   &amp;amp; 0   &amp;amp; \dots &amp;amp; 0   \newline
+0 &amp;amp; 0 &amp;amp; 1  &amp;amp; 0   &amp;amp; \dots &amp;amp; 0   \newline
+\vdots
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;Where the element in (first-row, first-column) is always one; The rest of the elements in the first row, $x_y$, represents whether set $y$ has a non-empty intersection with set $x$. Specifically, It equals $1$ if there is, and $-1$ if there is not.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Execution&lt;/strong&gt;: We multiply encoded matrices, $A_m, B_m, \dots$, by $\ket{\psi_0}$. Then, We take the absolute values of $\ket{\psi_n}$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reflection&lt;/strong&gt;: The first element of the final state $\ket{\psi_{n+1}}$ is great only if the number of intersections is either too low or too many.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Naively&lt;/strong&gt; speaking, We wish to think of elements of state $\ket{\psi_i}$ as probabilities. We wish also to think of measuring the state $\ket{\psi_i}$ as, reading an index, whereby a greater element&amp;rsquo;s probability indicates we are more likely to measure the index corresponding to it.&lt;/p&gt;
+&lt;p&gt;In our case, We are more likely to measure index $0$ if the number of non-empty intersections is high or low.&lt;/p&gt;
+&lt;h3 id=&#34;approach-2-complete-or-balanced-bipartite&#34;&gt;Approach 2: Complete or Balanced-Bipartite?&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./graph.jpg&#34; alt=&#34;graph&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Similarly, Let’s pick-up a simple concrete example, Then generalize. We are given two graphs, &lt;em&gt;complete&lt;/em&gt; $c$ and &lt;em&gt;balanced-bipartite&lt;/em&gt; $b$. They are encoded straight-forwardly by a matrix where cell $(i, j)$ is 1 if nodes $i$ and $j$ are connected, and 0 otherwise. For graph $c$ It is&lt;/p&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 \newline
+1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 &amp;amp; 1\newline
+1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;For graph $b$ it is&lt;/p&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \newline
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 \newline
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \newline
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \newline
+0 &amp;amp; 1 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\newline
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;Upon multiplying by an initial state&lt;/p&gt;
+&lt;p&gt;$$
+\ket{\psi_0} =
+\begin{bmatrix}
+0 \newline
+0 \newline
+0 \newline
+1 \newline
+1 \newline
+1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;The graph $c$ swaps zeros with non-zers, Moving the first three zeros to the bottom. For graph $b$, No zero is going to remain.&lt;/p&gt;
+&lt;p&gt;Again, In more technical and general terms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Input&lt;/strong&gt;: A graph known to be &lt;em&gt;complete&lt;/em&gt; or &lt;em&gt;balanced-bipartite&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Initial state&lt;/strong&gt;: Vector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\ket{\psi_0} =
+\begin{bmatrix}
+0 \newline
+\vdots \newline
+0 \newline
+1 \newline
+\vdots \newline
+1
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;where the top part is all zeros and the down part is all ones, and the number of zeros and ones is the same.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Encoding&lt;/strong&gt;: The input graph is encoded into a matrix straight-forwardly where cell $(i, j)$ is 1 if nodes $i$ and $j$ are connected, and 0 otherwise.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution&lt;/strong&gt;: multiply the encoded matrix by $\ket{\psi_0}$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reflection&lt;/strong&gt;: If the graph is &lt;em&gt;balanced-bipartite&lt;/em&gt;, Then zeros in final state $\ket{\psi_n}$ get swapped with non-zeros. If the graph is &lt;em&gt;complete&lt;/em&gt;, Then the final state $\ket{\psi_n}$ shall contain no zeros.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By &lt;em&gt;balanced-bipartite&lt;/em&gt; we mean the number of nodes of both sides is the same.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Naively&lt;/strong&gt; speaking, We wish to think of elements of state $\ket{\psi_n}$ as probabilities. We wish also to think of measuring the state $\ket{\psi_i}$ as, reading an index, whereby a zero element indicates we are certainly not going to measure the index corresponding to it.&lt;/p&gt;
+&lt;p&gt;In our case, If we measured final state $\ket{\psi_n}$ couple of times, and obtained indices from both the top and bottom indices, Then we could safely conclude the graph is &lt;em&gt;complete&lt;/em&gt;. On the other hand, If we obtained only from the bottom indices, Then we could &lt;strong&gt;guess&lt;/strong&gt; by a very good probabilistic bound that the graph is &lt;em&gt;balanced-bipartite&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;There is a concern worth to mention. If the graphs&amp;rsquo; nodes were labeled differently, Then our &lt;strong&gt;reflection&lt;/strong&gt; would not in fact occur. This problem could be mitigated by assuming some label protocol as follows. Let $n$ be the number of nodes. Pick-up a random node then label it by $1$; Traverse to nodes adjacent to it then assign $n, n-1, \dots$ to them. For each last assigned node, Traverse to their adjacent nodes and label $2, 3, \dots$.&lt;/p&gt;
+&lt;h2 id=&#34;personal-remarks&#34;&gt;Personal Remarks&lt;/h2&gt;
+&lt;h3 id=&#34;learning-progress&#34;&gt;Learning Progress&lt;/h3&gt;
+&lt;p&gt;While results presented here are laughably trivial, I am personally very happy for them. In my previous blog posts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Competitive Programming&lt;/strong&gt;, The problem is well-defined, known to have a solution, known how to approach it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NP-Completeness Proof&lt;/strong&gt; &amp;amp; &lt;strong&gt;Guarini&lt;/strong&gt;, The problem is well-defined, known to have a solution, known how to approach it, Yet the solution is not straight-forward.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;This Post&lt;/strong&gt;, The problem is not well-defined, not known to have a solution, not known how to approach it. Here, I had to somehow envision the approach on a higher-conceptual-level.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That shows there&amp;rsquo;s a progress in my learning.&lt;/p&gt;
+&lt;h3 id=&#34;too-quickly&#34;&gt;Too Quickly&lt;/h3&gt;
+&lt;p&gt;My first reaction when I started planning for this post was, If I am lucky enough I will need to delve deep into disncrete mathematics, Hunting for some special structure. Remarkably for me, A trivial result like the two shown above were found only from a quick skim on some definitions on Rosen&amp;rsquo;s book &lt;em&gt;[Ro]&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;further-you-could-contribute&#34;&gt;Further: You Could Contribute&lt;/h2&gt;
+&lt;p&gt;For mainstream researchers, I greatly raise my doubts whether this post would be useful. For anyone else, What I tried to show here is you do not have to learn symbolically tedious math in order to figure a new insight. I am writing this post while I did not complete even an undergrad course in &lt;em&gt;quantum computing&lt;/em&gt;! I believe anyone with minimal possible background could find a new pattern. Even for quantum circuits, You do not need more than high-school applied linear algebra. It is not that faraway to attempt to relate your findings back to quantum circuits.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[YM]&lt;/strong&gt; Yanofsky &amp;amp; Mannucci. Quantum Computing for Computer Scientists. Cambridge&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[Ro]&lt;/strong&gt; Rosen. Discrete Mathematics and Its Applications. Pearson
+$\require{braket}$&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Proving Graphical Steiner Tree is NP-Complete</title>
@@ -5812,49 +6082,37 @@ switch pc
       <pubDate>Wed, 19 Feb 2020 00:23:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/post/ratings-reweighted/</guid>
       <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;...&lt;/p&gt;
-
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
-
 &lt;h3 id=&#34;contents&#34;&gt;Contents&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#problem-of-consumers-Subjectivity&#34;&gt;Problem of Consumers&#39; Subjectivity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#how-did-i-approach-the-problem&#34;&gt;How did I approach the problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#showing-off-my-solution&#34;&gt;Showing off My Solution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#am-i-sure-of-my-math&#34;&gt;Am I Sure of My Math?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#preface&#34;&gt;Preface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#problem-of-consumers-Subjectivity&#34;&gt;Problem of Consumers&amp;rsquo; Subjectivity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#how-did-i-approach-the-problem&#34;&gt;How did I approach the problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#showing-off-my-solution&#34;&gt;Showing off My Solution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#am-i-sure-of-my-math&#34;&gt;Am I Sure of My Math?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;hr&gt;
-
-&lt;h3 id=&#34;problem-of-consumers-subjectivity&#34;&gt;Problem of Consumers&#39; Subjectivity&lt;/h3&gt;
-
+&lt;h3 id=&#34;problem-of-consumers-subjectivity&#34;&gt;Problem of Consumers&amp;rsquo; Subjectivity&lt;/h3&gt;
 &lt;p&gt;Consumers ratings are usually not based on objective metrics. Rather, They represent a personal subjective user experience such as dis-likeness of interface or aesthetic design. Could such subjective data be utilized for a rigor analysis of consumers behavior? Could we understand why consumers behave in some manner in response to some event/situation? The problem illustrated here is specially devoted to ratings of games made by the community of gamers.&lt;/p&gt;
-
 &lt;h3 id=&#34;how-did-i-approach-the-problem&#34;&gt;How did I approach the problem?&lt;/h3&gt;
-
-&lt;p&gt;We hypothesize a representative rating as follows: &lt;strong&gt;(I)&lt;/strong&gt; A game with both great technical specifications and fun gameplay deserves highest rating, &lt;strong&gt;(II)&lt;/strong&gt; A game with both low technical specifications and fun gameplay deserves lowest rating, &lt;strong&gt;(III)&lt;/strong&gt; A game with great technical specifications and poor gameplay deserves low rating slightly greater than &lt;em&gt;case (II)&lt;/em&gt;, &lt;strong&gt;(IV)&lt;/strong&gt; A game with low technical specifications and great gameplay deserves high rating slightly lower than &lt;em&gt;case(I)&lt;/em&gt;. The hypothesis is based on observations such as: &lt;strong&gt;(I)&lt;/strong&gt; &lt;em&gt;Minecraft&lt;/em&gt;, Even-though its graphics is extremely primitive, It is excessively praised by the community of gamers. &lt;a href=&#34;https://www.guinnessworldrecords.com/news/2014/11/minecraft-ten-of-the-best-block-busting-world-records-61744&#34;&gt;The game is one of the most successfull entertainment franchises&lt;/a&gt;. &lt;strong&gt;(II)&lt;/strong&gt; &lt;em&gt;Anthem&lt;/em&gt;, Even-though its graphics is fascinating, It was excessively disappointing for the community. &lt;a href=&#34;https://gizmodo.com/congratulations-to-ea-games-for-posting-the-most-hated-1820391000&#34;&gt;EA&#39;s comment on the game is the most hated comment in reddit history&lt;/a&gt;. Generally speaking, It is perceived that great gameplay dominates poor technicalities, While great technical specifications do not forgive poor gameplay.&lt;/p&gt;
-
+&lt;p&gt;We hypothesize a representative rating as follows: &lt;strong&gt;(I)&lt;/strong&gt; A game with both great technical specifications and fun gameplay deserves highest rating, &lt;strong&gt;(II)&lt;/strong&gt; A game with both low technical specifications and fun gameplay deserves lowest rating, &lt;strong&gt;(III)&lt;/strong&gt; A game with great technical specifications and poor gameplay deserves low rating slightly greater than &lt;em&gt;case (II)&lt;/em&gt;, &lt;strong&gt;(IV)&lt;/strong&gt; A game with low technical specifications and great gameplay deserves high rating slightly lower than &lt;em&gt;case(I)&lt;/em&gt;. The hypothesis is based on observations such as: &lt;strong&gt;(I)&lt;/strong&gt; &lt;em&gt;Minecraft&lt;/em&gt;, Even-though its graphics is extremely primitive, It is excessively praised by the community of gamers. 
+&lt;a href=&#34;https://www.guinnessworldrecords.com/news/2014/11/minecraft-ten-of-the-best-block-busting-world-records-61744&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The game is one of the most successfull entertainment franchises&lt;/a&gt;. &lt;strong&gt;(II)&lt;/strong&gt; &lt;em&gt;Anthem&lt;/em&gt;, Even-though its graphics is fascinating, It was excessively disappointing for the community. 
+&lt;a href=&#34;https://gizmodo.com/congratulations-to-ea-games-for-posting-the-most-hated-1820391000&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EA&amp;rsquo;s comment on the game is the most hated comment in reddit history&lt;/a&gt;. Generally speaking, It is perceived that great gameplay dominates poor technicalities, While great technical specifications do not forgive poor gameplay.&lt;/p&gt;
 &lt;h3 id=&#34;showing-off-my-solution&#34;&gt;Showing off My Solution&lt;/h3&gt;
-
 &lt;p&gt;You have already seen it. It is displayed as a figure at the beginning of page. I shall give you the function of it in a moment. First, We assume community ratings are mostly based on gameplay and how far they enjoyed the game, and assume journalism ratings are mostly based on technical specification like graphics fidelity. We construct a weighted map, i.e function, of both ratings as:&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[repRat = (jw \times jr) + (cw \times cr)\]&lt;/span&gt;&lt;/p&gt;
-
+&lt;p&gt;$$repRat = (jw \times jr) + (cw \times cr)$$&lt;/p&gt;
 &lt;p&gt;where $jr$ and $cr$ represent ratings given by journalism and community, respectively. How do we define weights of both journalism and community ratings, namely, $jw$ and $cw$? Recall that we wish to achieve the idea illustrated in the previous paragraph, that is, weighting gameplay more than technical specifications. You might think of constant weights such as $0.75$ and $0.25$ but I do not think a linear model shall best-fit our desired &lt;em&gt;representative-rating&lt;/em&gt;. Rather, I think an exponential grow rate is better. we define weight of journalism ratings as a map of community ratings. as:&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[jw = \frac{cr^{0.3}}{2}\]&lt;/span&gt;&lt;/p&gt;
-
+&lt;p&gt;$$jw = \frac{cr^{0.3}}{2}$$&lt;/p&gt;
 &lt;p&gt;We define weight of community ratings as:&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[1 - tw\]&lt;/span&gt;&lt;/p&gt;
-
+&lt;p&gt;$$1 - tw$$&lt;/p&gt;
 &lt;p&gt;The core of the trick here is that the lower a community rating is, which we assumed to represent gameplay experience, the the greater the rate of decrease becomes, as illustrated by the graph above. So, the lower the gameplay experience is, the less influence technical-specifications have.&lt;/p&gt;
-
 &lt;h3 id=&#34;am-i-sure-of-my-math&#34;&gt;Am I Sure of My Math?&lt;/h3&gt;
-
 &lt;p&gt;&lt;strong&gt;NO!!&lt;/strong&gt; What I have covered so far is at best a naive approximation based on domain-knowledge expertise. The assumptions about community and journalism ratings are not accurate enough. Also, The curve is not verified to fit some objective data. Conclusions made here are based on subjective intuition rather than rigor and accurate statistical analysis. However, the intuition here is slightly enhanced by extremely primitive mathematical toolbox and basic experience with gaming industry. It is our hope to devise a more rigor analysis motivated by one illustrated here.&lt;/p&gt;
 </description>
     </item>

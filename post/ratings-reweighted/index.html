@@ -574,11 +574,6 @@
   
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
 
   
   
@@ -620,49 +615,37 @@
 
     <div class="article-style">
       <h3 id="introduction">Introduction</h3>
-
-<p>...</p>
-
+<p>&hellip;</p>
 <hr>
-
 <h3 id="contents">Contents</h3>
-
 <ul>
-<li><a href="#preface">Preface</a></li>
-<li><a href="#problem-of-consumers-Subjectivity">Problem of Consumers' Subjectivity</a></li>
-<li><a href="#how-did-i-approach-the-problem">How did I approach the problem</a></li>
-<li><a href="#showing-off-my-solution">Showing off My Solution</a></li>
-<li><a href="#am-i-sure-of-my-math">Am I Sure of My Math?</a></li>
+<li>
+<a href="#preface">Preface</a></li>
+<li>
+<a href="#problem-of-consumers-Subjectivity">Problem of Consumers&rsquo; Subjectivity</a></li>
+<li>
+<a href="#how-did-i-approach-the-problem">How did I approach the problem</a></li>
+<li>
+<a href="#showing-off-my-solution">Showing off My Solution</a></li>
+<li>
+<a href="#am-i-sure-of-my-math">Am I Sure of My Math?</a></li>
 </ul>
-
 <hr>
-
-<h3 id="problem-of-consumers-subjectivity">Problem of Consumers' Subjectivity</h3>
-
+<h3 id="problem-of-consumers-subjectivity">Problem of Consumers&rsquo; Subjectivity</h3>
 <p>Consumers ratings are usually not based on objective metrics. Rather, They represent a personal subjective user experience such as dis-likeness of interface or aesthetic design. Could such subjective data be utilized for a rigor analysis of consumers behavior? Could we understand why consumers behave in some manner in response to some event/situation? The problem illustrated here is specially devoted to ratings of games made by the community of gamers.</p>
-
 <h3 id="how-did-i-approach-the-problem">How did I approach the problem?</h3>
-
-<p>We hypothesize a representative rating as follows: <strong>(I)</strong> A game with both great technical specifications and fun gameplay deserves highest rating, <strong>(II)</strong> A game with both low technical specifications and fun gameplay deserves lowest rating, <strong>(III)</strong> A game with great technical specifications and poor gameplay deserves low rating slightly greater than <em>case (II)</em>, <strong>(IV)</strong> A game with low technical specifications and great gameplay deserves high rating slightly lower than <em>case(I)</em>. The hypothesis is based on observations such as: <strong>(I)</strong> <em>Minecraft</em>, Even-though its graphics is extremely primitive, It is excessively praised by the community of gamers. <a href="https://www.guinnessworldrecords.com/news/2014/11/minecraft-ten-of-the-best-block-busting-world-records-61744">The game is one of the most successfull entertainment franchises</a>. <strong>(II)</strong> <em>Anthem</em>, Even-though its graphics is fascinating, It was excessively disappointing for the community. <a href="https://gizmodo.com/congratulations-to-ea-games-for-posting-the-most-hated-1820391000">EA's comment on the game is the most hated comment in reddit history</a>. Generally speaking, It is perceived that great gameplay dominates poor technicalities, While great technical specifications do not forgive poor gameplay.</p>
-
+<p>We hypothesize a representative rating as follows: <strong>(I)</strong> A game with both great technical specifications and fun gameplay deserves highest rating, <strong>(II)</strong> A game with both low technical specifications and fun gameplay deserves lowest rating, <strong>(III)</strong> A game with great technical specifications and poor gameplay deserves low rating slightly greater than <em>case (II)</em>, <strong>(IV)</strong> A game with low technical specifications and great gameplay deserves high rating slightly lower than <em>case(I)</em>. The hypothesis is based on observations such as: <strong>(I)</strong> <em>Minecraft</em>, Even-though its graphics is extremely primitive, It is excessively praised by the community of gamers. 
+<a href="https://www.guinnessworldrecords.com/news/2014/11/minecraft-ten-of-the-best-block-busting-world-records-61744" target="_blank" rel="noopener">The game is one of the most successfull entertainment franchises</a>. <strong>(II)</strong> <em>Anthem</em>, Even-though its graphics is fascinating, It was excessively disappointing for the community. 
+<a href="https://gizmodo.com/congratulations-to-ea-games-for-posting-the-most-hated-1820391000" target="_blank" rel="noopener">EA&rsquo;s comment on the game is the most hated comment in reddit history</a>. Generally speaking, It is perceived that great gameplay dominates poor technicalities, While great technical specifications do not forgive poor gameplay.</p>
 <h3 id="showing-off-my-solution">Showing off My Solution</h3>
-
 <p>You have already seen it. It is displayed as a figure at the beginning of page. I shall give you the function of it in a moment. First, We assume community ratings are mostly based on gameplay and how far they enjoyed the game, and assume journalism ratings are mostly based on technical specification like graphics fidelity. We construct a weighted map, i.e function, of both ratings as:</p>
-
-<p><span  class="math">\[repRat = (jw \times jr) + (cw \times cr)\]</span></p>
-
+<p>$$repRat = (jw \times jr) + (cw \times cr)$$</p>
 <p>where $jr$ and $cr$ represent ratings given by journalism and community, respectively. How do we define weights of both journalism and community ratings, namely, $jw$ and $cw$? Recall that we wish to achieve the idea illustrated in the previous paragraph, that is, weighting gameplay more than technical specifications. You might think of constant weights such as $0.75$ and $0.25$ but I do not think a linear model shall best-fit our desired <em>representative-rating</em>. Rather, I think an exponential grow rate is better. we define weight of journalism ratings as a map of community ratings. as:</p>
-
-<p><span  class="math">\[jw = \frac{cr^{0.3}}{2}\]</span></p>
-
+<p>$$jw = \frac{cr^{0.3}}{2}$$</p>
 <p>We define weight of community ratings as:</p>
-
-<p><span  class="math">\[1 - tw\]</span></p>
-
+<p>$$1 - tw$$</p>
 <p>The core of the trick here is that the lower a community rating is, which we assumed to represent gameplay experience, the the greater the rate of decrease becomes, as illustrated by the graph above. So, the lower the gameplay experience is, the less influence technical-specifications have.</p>
-
 <h3 id="am-i-sure-of-my-math">Am I Sure of My Math?</h3>
-
 <p><strong>NO!!</strong> What I have covered so far is at best a naive approximation based on domain-knowledge expertise. The assumptions about community and journalism ratings are not accurate enough. Also, The curve is not verified to fit some objective data. Conclusions made here are based on subjective intuition rather than rigor and accurate statistical analysis. However, the intuition here is slightly enhanced by extremely primitive mathematical toolbox and basic experience with gaming industry. It is our hope to devise a more rigor analysis motivated by one illustrated here.</p>
 
     </div>
@@ -675,90 +658,6 @@
 
 
 
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://mostafatouny.github.io/post/ratings-reweighted/&amp;text=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://mostafatouny.github.io/post/ratings-reweighted/&amp;t=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics&amp;body=https://mostafatouny.github.io/post/ratings-reweighted/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://mostafatouny.github.io/post/ratings-reweighted/&amp;title=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics%20https://mostafatouny.github.io/post/ratings-reweighted/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://mostafatouny.github.io/post/ratings-reweighted/&amp;title=Users%20Ratings%20Re-weighted:%20Putting%20Trust%20Into%20Statistics" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
 
 
 
@@ -794,7 +693,7 @@
 
       <div class="media-body">
         <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-        <h6 class="card-subtitle">CS Undergrad</h6>
+        <h6 class="card-subtitle">Software Engineering Undergrad</h6>
         
         <ul class="network-icon" aria-hidden="true">
   
@@ -861,28 +760,6 @@
 
 
 
-
-<div class="article-widget">
-  
-<div class="post-nav">
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/post/permutation-test/" rel="next">Analyzing Disparity Between Users and Journalists Ratings</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/post/creativity-vs-winning/" rel="prev">Creativity vs Winning</a>
-  </div>
-  
-</div>
-
-</div>
 
 
 
