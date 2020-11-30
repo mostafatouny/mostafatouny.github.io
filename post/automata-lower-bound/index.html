@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Overview  Table of Contents   Overview   Motivating Example Usual DFA The problem the above $\textit{deterministic finite automata}$ ($\textit{DFA})$ solves is finding whether the number of ones in the input binary string is even or odd.">
+  <meta name="description" content="The most beautiful moment I have felt while working on this problem was when a pure deductive reasoning yielded a reasonable approach, which in turn yielded a logic-based established truth">
 
   
   <link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/post/automata-lower-bound/">
@@ -271,7 +271,7 @@
   <meta property="og:site_name" content="Mostafa Touny">
   <meta property="og:url" content="https://mostafatouny.github.io/post/automata-lower-bound/">
   <meta property="og:title" content="Proving a Space Lower-bound on a Contrived Automata | Mostafa Touny">
-  <meta property="og:description" content="Overview  Table of Contents   Overview   Motivating Example Usual DFA The problem the above $\textit{deterministic finite automata}$ ($\textit{DFA})$ solves is finding whether the number of ones in the input binary string is even or odd."><meta property="og:image" content="https://mostafatouny.github.io/post/automata-lower-bound/featured.jpg">
+  <meta property="og:description" content="The most beautiful moment I have felt while working on this problem was when a pure deductive reasoning yielded a reasonable approach, which in turn yielded a logic-based established truth"><meta property="og:image" content="https://mostafatouny.github.io/post/automata-lower-bound/featured.jpg">
   <meta property="twitter:image" content="https://mostafatouny.github.io/post/automata-lower-bound/featured.jpg"><meta property="og:locale" content="en-us">
   
     
@@ -325,7 +325,7 @@
       "url": "https://mostafatouny.github.io/images/icon_hue80eb6f7e06414c6d0a29e5083f6eed7_3149066_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Overview  Table of Contents   Overview   Motivating Example Usual DFA The problem the above $\\textit{deterministic finite automata}$ ($\\textit{DFA})$ solves is finding whether the number of ones in the input binary string is even or odd."
+  "description": "The most beautiful moment I have felt while working on this problem was when a pure deductive reasoning yielded a reasonable approach, which in turn yielded a logic-based established truth"
 }
 </script>
 
@@ -552,6 +552,8 @@
   <h1>Proving a Space Lower-bound on a Contrived Automata</h1>
 
   
+  <p class="page-subtitle">A Surprise Moment is Awaiting You</p>
+  
 
   
 
@@ -615,11 +617,54 @@
 
     <div class="article-style">
       <h2 id="overview">Overview</h2>
+<p>In this post we contrive a new kind of Automata, Then prove a space lower-bound on it, for a contrived problem. We begin with an example which shall motivate our whole approach, Then we imagine a thought experiment which is the basis of the proof, Finally we present the formal proof itself. The most beautiful moment I have felt while working on this problem was when a pure deductive reasoning yielded a reasonable approach, which in turn yielded a logic-based established truth. This is why I wrote a separate section called <em>Thought Experiment</em>. In addition, We strongly recommend the reader not to miss $appendix, fun facts$ section.</p>
 <hr>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li>
 <a href="#overview">Overview</a></li>
+<li>
+<a href="#motivating-example">Motivating Example</a>
+<ul>
+<li>
+<a href="#usual-dfa">Usual DFA</a></li>
+<li>
+<a href="#a-new-definition-for-a-new-problem">A New Definition For A New Problem</a></li>
+<li>
+<a href="#first-remark-on-solving-the-new-problem">First Remark On Solving The New Problem</a></li>
+</ul>
+</li>
+<li>
+<a href="#thought-experiment">Thought Experiment</a>
+<ul>
+<li>
+<a href="#information-reserving-definition">Information-reserving Definition?</a></li>
+<li>
+<a href="#surprise-moment">Surprise Moment</a></li>
+<li>
+<a href="#interpreting-derived-proof">Interpreting Derived Proof</a></li>
+</ul>
+</li>
+<li>
+<a href="#informal-proof">Informal Proof</a></li>
+<li>
+<a href="#formal-proof">Formal Proof</a>
+<ul>
+<li>
+<a href="#definitions">Definitions</a></li>
+<li>
+<a href="#proof">Proof</a></li>
+</ul>
+</li>
+<li>
+<a href="#appendix">Appendix</a>
+<ul>
+<li>
+<a href="#fun-facts">Fun Facts</a></li>
+<li>
+<a href="#paper-notes-of-surprise-moment">Paper Notes of Surprise Moment</a></li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="motivating-example">Motivating Example</h2>
@@ -670,7 +715,7 @@
 <p>Let $q_{i,j}$ and $q_{i&rsquo;,j&rsquo;}$ be any two arbitrary states, such that it is not the case $i=i&rsquo; \wedge j=j'$. So, Either $i \neq i'$ or $j \neq j'$. For the former, It is obvious $q_{i,j} \neq q_{i&rsquo;,j&rsquo;}$. Otherwise, A sole state would output both $i$ and $i'$. That does not conform with our notion of a state outputting a unique label. Let&rsquo;s consider the latter, $j \neq j'$. It is safe to assume $i = i'$ as we handled the case $i \neq i'$. If $q_{i,j} = q_{i,j&rsquo;}$, Then the number of states which output $i$ is less than $i+1$. From the discussion above, It is clear that leads to a contradiction.</p>
 <h3 id="space-bounds">Space Bounds</h3>
 <p>At this point, We have shown there are $1+2+3+\dots+(n+1) = \frac{(n+2)(n+1)}{2} = \Omega(n^2)$ distinct states. It is easy to see that it is possible to construct a machine of $\frac{(n+2)(n+1)}{2} = \mathcal{O}(n^2)$ states, As shown in this section&rsquo;s diagram, That solves finding longest 1s sequence problem. Hence, A space tight-bound $\Theta(n^2)$ is proved.</p>
-<h2 id="proof">Proof</h2>
+<h2 id="formal-proof">Formal Proof</h2>
 <p>Instead of proving concrete examples as we did before, We present here a general proof. But we do not prove states&rsquo; uniqueness as we see the discussion of $\textit{informal proof}, {uniqueness}$ sufficies for that. Here we aim to provide a more mathematically matured illustration of states&rsquo; existince proof.</p>
 <p>Before doing so, We give precise definitions of the finite automata and the problem we have been working through.</p>
 <h3 id="definitions">Definitions</h3>
@@ -688,7 +733,7 @@
 <h4 id="longest-1s-sequence-problem">Longest 1s Sequence Problem</h4>
 <p>For an input binary string $w = \set{0, 1}^*$ of length $n \in \mathcal{N}$, It could be re-written as $0^{k_1}1^{k_2} \dots 0^{k_{n-1}}1^{k_{n}}0^{k_{n+1}}$, such that $\Sigma_i k_i = n$. $0^{k_{n+1}}$ is added so that this representation accommodates $w$ in case its first bit is 1.</p>
 <p>The $\textit{Longest 1s Sequence}$ problem asks for a $SODFA$ machine to halt on an accept state $q'$ such that $L(q&rsquo;) = max \hspace{2mm} \set{\hspace{2mm} k_i \hspace{1mm} | \hspace{1mm} 1^{k_i} \hspace{0.5mm}\ \text{is a substring of} \hspace{2mm} w \hspace{2mm}}$.</p>
-<h4 id="showing-the-existince-of-q_ij-states">Showing The Existince of $q_{i,j}$ States</h4>
+<h3 id="proof">Proof</h3>
 <p>We show:</p>
 <p>For an arbitrary $SODFA$ machine $M$, if it solves $\textit{Longest 1s Sequence Problem}$ for inputs of size $n$, Then:
 For any $0 \leq i \leq n$,</p>
