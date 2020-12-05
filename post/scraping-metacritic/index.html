@@ -662,7 +662,7 @@
 <pre><code>mainURL = &quot;https://www.metacritic.com&quot;
 subURL = &quot;/browse/games/score/metascore/year/ps4/filtered?year_selected=2019&quot;
 </code></pre>
-<p>(II) specify the tags&rsquo; path from root up to the tag which wraps all games list,</p>
+<p>(II) specify the tags' path from root up to the tag which wraps all games list,</p>
 <pre><code>listNodeSequence = tagSequence.tagSequence([('ol', {&quot;class&quot;:&quot;list_products list_product_condensed&quot;}), ('div', {&quot;class&quot;:&quot;product_condensed&quot;}), ('div', {&quot;class&quot;: &quot;body_wrap&quot; ..
 </code></pre>
 <p>then (III) for each data desired to be scraped, alike game name, game score, game release date, specify the path from the game&rsquo;s tag up to that data. make sure not to type any game-specific data like the href of <em>nier: automata</em></p>

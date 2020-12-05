@@ -609,21 +609,21 @@
 <thead>
 <tr>
 <th>X_i</th>
-<th align="center">X_i+1</th>
+<th style="text-align:center">X_i+1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>b</td>
-<td align="center">b</td>
+<td style="text-align:center">b</td>
 </tr>
 <tr>
 <td>x</td>
-<td align="center">b</td>
+<td style="text-align:center">b</td>
 </tr>
 <tr>
 <td>x</td>
-<td align="center">x</td>
+<td style="text-align:center">x</td>
 </tr>
 </tbody>
 </table>
@@ -633,21 +633,21 @@
 <thead>
 <tr>
 <th>count</th>
-<th align="center">unit</th>
+<th style="text-align:center">unit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td align="center">x</td>
+<td style="text-align:center">x</td>
 </tr>
 <tr>
 <td>0</td>
-<td align="center">x</td>
+<td style="text-align:center">x</td>
 </tr>
 <tr>
 <td>0</td>
-<td align="center">x</td>
+<td style="text-align:center">x</td>
 </tr>
 </tbody>
 </table>
@@ -693,7 +693,7 @@ int main() {
 <p><strong>Top-first</strong>: That is a condition which ensures no sculpture occurs on some layer before the layer above it is sculptured. For any $S_q \in S$, $\forall u_{i,j} \in S_q( ${$ u_{x,j} \in b | x &lt; i $}$ \subseteq S_{q-1} \cup S_{q-2} \cup .. \cup S_{1} )$.</p>
 <p><strong>One-row</strong>: That is a condition which ensures a continuous row of units are sculptured at once, not sculptured on multiple times in which the laser is turned on and off multiple times as well. For any two distinct $S_k$ and $S_q$, $\neg( \exists j_0  \exists j_1, u_{i_0,j_0} \in S_q \wedge u_{i_1,j_1} \in S_k \wedge j_1=j_0+1)$ for some $u_{i_0,j_0}$ and $u_{i_1,j_1}$.</p>
 <p><strong>Uniqueness</strong>: It is assumed that there is a unique number of times for the laser to be toggled on and off regardless of of the <em>sculpture set</em>. In other words, Even if there are two possible different sculptures which achieve the desired X&rsquo;s, The number of times the laser needs to be toggled on and off is the same.</p>
-<p><strong>Existince of a Solution</strong>: It is assumed that given height $h$, and width $w$ of the whole board $b$, and given heights $X_1$, $X_2$, .., $X_w$ of position $i$ in the board, There exists a <em>sculpture set</em> $S$ <em>on board</em> $b$ such that $b - S = \cup_{p \in 1, 2, .., w }$ {$ u_{i,p} \in b $} whereby each set {$ u_{i,p_0} \in b $} has a cardinality of $X_{p_0}$. In other words, The set yielded from subtracting the board from sculpture set is composed of units conforming to desired $X$'s heights.</p>
+<p><strong>Existince of a Solution</strong>: It is assumed that given height $h$, and width $w$ of the whole board $b$, and given heights $X_1$, $X_2$, .., $X_w$ of position $i$ in the board, There exists a <em>sculpture set</em> $S$ <em>on board</em> $b$ such that $b - S = \cup_{p \in 1, 2, .., w }$ {$ u_{i,p} \in b $} whereby each set {$ u_{i,p_0} \in b $} has a cardinality of $X_{p_0}$. In other words, The set yielded from subtracting the board from sculpture set is composed of units conforming to desired $X$&rsquo;s heights.</p>
 <p><strong>Principal Problem Statement</strong> (finally): Given a board $b_{h \times w}$ of height $h$ and width $w \in \mathcal{Z}^+$, and given heights $X_1$, $X_2$, .., $X_w$, The cardinality of $\textit{sculpture set on board}$ $b$ is equal to $\Sigma_{i=0}^{w-1}min(0, X_i-X_{i+1})$</p>
 <h3 id="proof">Proof</h3>
 <p><strong>Lemma</strong>: For $b-S$, where $b$ is a board of height $h$ and width $w \geq 2$ and $S$ is a <em>sculpture set on</em> $b$ conforming to given heights of unsculpted units of last two board columns $X_{w-1}$ and $X_w$,</p>

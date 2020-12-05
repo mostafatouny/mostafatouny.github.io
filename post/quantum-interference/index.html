@@ -728,7 +728,7 @@
 <li>If $f$ is <em>constant</em>, is 1; and</li>
 <li>If $f$ is <em>balanced</em>, is 0</li>
 </ul>
-<p>So, Upon only one measurement, We could safely conclude whether function $f$ is <em>balanced</em> or <em>constant</em>. For example, If we run <em>Deutsch–Jozsa</em>&rsquo;s algorithm and obtained any result other than $\ket{0}$, Then certainly $\ket{0}$'s probability is 0 and hence $f$ is <em>balanced</em>.</p>
+<p>So, Upon only one measurement, We could safely conclude whether function $f$ is <em>balanced</em> or <em>constant</em>. For example, If we run <em>Deutsch–Jozsa</em>&rsquo;s algorithm and obtained any result other than $\ket{0}$, Then certainly $\ket{0}$&rsquo;s probability is 0 and hence $f$ is <em>balanced</em>.</p>
 <h2 id="quantum-interference-alike-classical-problem">Quantum-interference-alike Classical Problem</h2>
 <p>Strictly speaking, We shall no longer deal with quantum computing Nonetheless, We don&rsquo;t give up on tackling the trick <em>Deutsch-Josza</em>&rsquo;s algorithm achieved. Namely, <em>quantum-interference</em>.</p>
 <p>We propose the following approach:</p>
@@ -858,7 +858,7 @@ $$</p>
 <p>By <em>balanced-bipartite</em> we mean the number of nodes of both sides is the same.</p>
 <p><strong>Naively</strong> speaking, We wish to think of elements of state $\ket{\psi_n}$ as probabilities. We wish also to think of measuring the state $\ket{\psi_i}$ as, reading an index, whereby a zero element indicates we are certainly not going to measure the index corresponding to it.</p>
 <p>In our case, If we measured final state $\ket{\psi_n}$ couple of times, and obtained indices from both the top and bottom indices, Then we could safely conclude the graph is <em>complete</em>. On the other hand, If we obtained only from the bottom indices, Then we could <strong>guess</strong> by a very good probabilistic bound that the graph is <em>balanced-bipartite</em>.</p>
-<p>There is a concern worth to mention. If the graphs&rsquo; nodes were labeled differently, Then our <strong>reflection</strong> would not in fact occur. This problem could be mitigated by assuming some label protocol as follows. Let $n$ be the number of nodes. Pick-up a random node then label it by $1$; Traverse to nodes adjacent to it then assign $n, n-1, \dots$ to them. For each last assigned node, Traverse to their adjacent nodes and label $2, 3, \dots$.</p>
+<p>There is a concern worth to mention. If the graphs' nodes were labeled differently, Then our <strong>reflection</strong> would not in fact occur. This problem could be mitigated by assuming some label protocol as follows. Let $n$ be the number of nodes. Pick-up a random node then label it by $1$; Traverse to nodes adjacent to it then assign $n, n-1, \dots$ to them. For each last assigned node, Traverse to their adjacent nodes and label $2, 3, \dots$.</p>
 <h2 id="personal-remarks">Personal Remarks</h2>
 <h3 id="learning-progress">Learning Progress</h3>
 <p>While results presented here are laughably trivial, I am personally very happy for them. In my previous blog posts:</p>
