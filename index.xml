@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 29 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 30 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/images/icon_hue80eb6f7e06414c6d0a29e5083f6eed7_3149066_512x512_fill_lanczos_center_2.png</url>
       <title>Mostafa Touny</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Proving a Space Lower-bound on a Contrived Automata</title>
       <link>https://mostafatouny.github.io/post/automata-lower-bound/</link>
-      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/post/automata-lower-bound/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;In this post we contrive a new kind of Automata, Then prove a space lower-bound on it, for a contrived problem. We begin with an example which shall motivate our whole approach, Then we imagine a thought experiment which is the basis of the proof, Finally we present the formal proof itself. The most beautiful moment I have felt while working on this problem was when a pure deductive reasoning yielded a reasonable approach, which in turn yielded a logic-based established truth. This is why I wrote a separate section called &lt;em&gt;Thought Experiment&lt;/em&gt;. In addition, We strongly recommend the reader not to miss $appendix, fun facts$ section.&lt;/p&gt;
