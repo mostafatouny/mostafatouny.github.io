@@ -13,6 +13,53 @@
     </image>
     
     <item>
+      <title>A Hobbyist&#39;s Dialogue on Theoretical CS and Overview of Computational Complexity</title>
+      <link>https://mostafatouny.github.io/post/hobbyist-talk/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/hobbyist-talk/</guid>
+      <description>&lt;h2 id=&#34;playing-the-video&#34;&gt;Playing The Video&lt;/h2&gt;
+&lt;p&gt;At the bottom right of the above picture, There is a hyperlinked caption. Click on it to play the video.&lt;/p&gt;
+&lt;h2 id=&#34;talk-abstract&#34;&gt;Talk Abstract&lt;/h2&gt;
+&lt;p&gt;If people thought of something fascinating about computers, Then it would usually be about some fancy practical application. In this talk we tackle computers, but their theory or pure-math perspective. A central goal is to show everyone that theory developments are no less exciting and fascinating than practical computing. We hope to expose attendees to wear different shoes for theoretical CS. Particularly, We give an overview of computational complexity theory, which deals with classes of computational problems as a whole, not concrete individual problems like algorithms. The talk assumes no technical background, and is composed mainly of historical developments. The speaker is an undergrad student, and he is in no way an expert or authorized in this field. Rather, We give more personal reflections and hope for the talk to be as interactive as possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;#talk-abstract&#34;&gt;Talk Abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#how-it-all-started&#34;&gt;How it All Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;#good-shots&#34;&gt;Good Shots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-it-all-started&#34;&gt;How it All Started&lt;/h2&gt;
+&lt;p&gt;It all started with a linkedin chat message I sent to 
+&lt;a href=&#34;https://www.linkedin.com/in/laurence-bordowitz-053b573a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Larry&lt;/a&gt;, For making an online-based study group with other hobbyists from 
+&lt;a href=&#34;https://www.reddit.com/r/compsci/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;compsci-subreddit&lt;/a&gt;. Unfortuantely, The study group did not sustain. While we were speaking together, I mentioned how cool 
+&lt;a href=&#34;https://www.cs.stonybrook.edu/people/faculty/StevenSkiena&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;prof. Steven Skiena&lt;/a&gt; is. It turned out he was Larry&amp;rsquo;s professor back when Larry was an undergrad student at Stony Brook university!. It was very kind of Larry that he wanted to support me by joining me in Stony Brook&amp;rsquo;s Algorithms seminar.&lt;/p&gt;
+&lt;p&gt;Then I sent an email to the seminar&amp;rsquo;s mailing list, Expressing my wish to give a talk on history of computational complexity, Inspired by 
+&lt;a href=&#34;https://www.researchgate.net/profile/Lance-Fortnow/publication/220530495_A_Short_History_of_Computational_Complexity/links/0deec52bd7ab603fef000000/A-Short-History-of-Computational-Complexity.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fortnow&amp;rsquo;s and Homer&lt;/a&gt; brief historical survey. prof. Skiena emailed me (yaay!) informing that there is no space for me to give the talk and that even grad students who attend the seminar taking credit for it, Do not usually present anything.&lt;/p&gt;
+&lt;p&gt;Luckly, My email sent to Stony Brook&amp;rsquo;s mailing list, Was received by 
+&lt;a href=&#34;https://www4.comp.polyu.edu.hk/~bo2li/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bo Li&lt;/a&gt;, A previously PhD student at Stony Brook. Then I received an email from him, Where he expressed he wishes me to give the talk for him!. It was very kind and encouraging for me, That he allowed me to give the talk with all his PhD students.&lt;/p&gt;
+&lt;h2 id=&#34;good-shots&#34;&gt;Good Shots&lt;/h2&gt;
+&lt;h3 id=&#34;physicists-success-in-popular-science&#34;&gt;Physicists Success in Popular Science&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./sabine.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;why-not-an-engineer&#34;&gt;Why Not an Engineer?&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./expectation.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;theory-is-no-less-fascinating&#34;&gt;Theory is No Less Fascinating&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./theory-fascinating.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-usefulness-of-useless-knowledge&#34;&gt;The Usefulness of Useless Knowledge&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./featured.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;shafi-and-silvios-seminal-paper&#34;&gt;Shafi and Silvio&amp;rsquo;s Seminal Paper&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./shafi-silvio.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;interactive-proof-system&#34;&gt;Interactive Proof System&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./pcp-0.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;avis-abel-prize-2021-award&#34;&gt;Avi&amp;rsquo;s Abel Prize 2021 Award&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./avi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Auditing Honors Linear Algebra at UCLA, A Gratitude and Retrospection.</title>
       <link>https://mostafatouny.github.io/post/math115ah/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
