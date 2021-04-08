@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 08 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/images/icon_hud14ba63c944e204bfe92999c10566992_599512_512x512_fill_lanczos_center_2.png</url>
       <title>Blog</title>
@@ -15,12 +15,14 @@
     <item>
       <title>A Hobbyist&#39;s Dialogue on Theoretical CS and Overview of Computational Complexity</title>
       <link>https://mostafatouny.github.io/post/hobbyist-talk/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/post/hobbyist-talk/</guid>
       <description>&lt;h2 id=&#34;playing-the-video&#34;&gt;Playing The Video&lt;/h2&gt;
 &lt;p&gt;At the bottom right of the above picture, There is a hyperlinked caption. Click on it to play the video.&lt;/p&gt;
 &lt;h2 id=&#34;talk-abstract&#34;&gt;Talk Abstract&lt;/h2&gt;
 &lt;p&gt;If people thought of something fascinating about computers, Then it would usually be about some fancy practical application. In this talk we tackle computers, but their theory or pure-math perspective. A central goal is to show everyone that theory developments are no less exciting and fascinating than practical computing. We hope to expose attendees to wear different shoes for theoretical CS. Particularly, We give an overview of computational complexity theory, which deals with classes of computational problems as a whole, not concrete individual problems like algorithms. The talk assumes no technical background, and is composed mainly of historical developments. The speaker is an undergrad student, and he is in no way an expert or authorized in this field. Rather, We give more personal reflections and hope for the talk to be as interactive as possible.&lt;/p&gt;
+&lt;p&gt;You can see the slides 
+&lt;a href=&#34;https://cryptpad.fr/slide/#/2/slide/view/-Z&amp;#43;uoSIn9G&amp;#43;3Zrpqf&amp;#43;H39fkUaBs55djg68doVzEVOzU/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
 &lt;ul&gt;
