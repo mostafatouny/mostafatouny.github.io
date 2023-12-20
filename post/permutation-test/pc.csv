@@ -1,0 +1,328 @@
+,critic_rating,id,release_date,title,user_rating
+0,93,1,"May 21, 2019",beat saber,76.0
+1,93,2,"Nov  5, 2019",red dead redemption 2,48.0
+2,91,3,"Jul  2, 2019",final fantasy xiv: shadowbringers,90.0
+3,91,4,"Oct 15, 2019",disco elysium,83.0
+4,90,5,"Jul 23, 2019",tetris effect,67.0
+5,89,6,"Jan 25, 2019",resident evil 2,90.0
+6,89,7,"Mar  7, 2019",devil may cry 5,87.0
+7,89,8,"Jan 23, 2019",slay the spire,69.0
+8,88,9,"Oct 10, 2019",asgard's wrath,84.0
+9,88,10,"Mar 22, 2019",sekiro: shadows die twice,78.0
+10,88,11,"Nov 12, 2019",unity of command ii,64.0
+11,88,12,"Feb  4, 2019",apex legends,59.0
+12,87,13,"Mar 13, 2019",baba is you,78.0
+13,87,14,"Jun 27, 2019",f1 2019,70.0
+14,86,15,"Jan 31, 2019",sunless skies,68.0
+15,86,16,"Oct 10, 2019",valfaris,80.0
+16,86,17,"Jul 30, 2019",oxygen not included,81.0
+17,85,18,"Aug 27, 2019",control,72.0
+18,85,19,"Jul 18, 2019",gorn,66.0
+19,85,20,"Sep 10, 2019",the sims 4: realm of magic,37.0
+20,85,21,"Feb 19, 2019",devotion,72.0
+21,85,22,"Dec  3, 2019",life is strange 2: episode 5 - wolves,60.0
+22,85,23,"Dec 10, 2019",dragon quest builders 2,63.0
+24,85,25,"Apr  5, 2019",supraland,91.0
+25,85,26,"Jun 20, 2019",amid evil,71.0
+26,85,27,"May 23, 2019",total war: three kingdoms,78.0
+27,85,28,"May 30, 2019",outer wilds,74.0
+28,84,29,"Feb 26, 2019",dirt rally 2.0,46.0
+29,84,30,"Aug 27, 2019",the bard's tale iv: director's cut,66.0
+30,84,31,"Jun 21, 2019",the sims 4: island living,47.0
+31,84,32,"Oct 18, 2019",manifold garden,76.0
+32,84,33,"Aug 12, 2019",eliza,55.0
+33,84,34,"Sep 19, 2019",what the golf?,73.0
+34,84,35,"Nov 18, 2019",football manager 2020,50.0
+35,84,36,"Mar 15, 2019",tom clancy's the division 2,62.0
+36,84,37,"Aug 23, 2019",telling lies,68.0
+37,84,38,"Dec 10, 2019",shovel knight: king of cards,74.0
+38,83,39,"Jun 18, 2019",bloodstained: ritual of the night,84.0
+39,83,40,"Jun  4, 2019",reventure,67.0
+40,83,41,"Feb 26, 2019",trials rising,47.0
+41,83,42,"Feb 28, 2019",ape out,66.0
+42,83,43,"Apr 18, 2019",katana zero,89.0
+43,83,44,"Nov 14, 2019",age of empires ii: definitive edition,88.0
+44,82,45,"Jul 25, 2019",monster boy and the cursed kingdom,81.0
+45,82,46,"Mar 12, 2019",hypnospace outlaw,65.0
+46,82,47,"Oct 25, 2019",the outer worlds,74.0
+47,82,48,"Dec 17, 2019",the sims 4: discover university,41.0
+48,82,49,"Apr 23, 2019",mortal kombat 11,27.0
+49,82,50,"Sep  6, 2019",creature in the well,60.0
+50,82,51,"May  9, 2019",yakuza kiwami 2,85.0
+51,82,52,"Feb 15, 2019",metro exodus,69.0
+52,82,53,"Aug 22, 2019",life is strange 2: episode 4 - faith,46.0
+53,82,54,"Sep 20, 2019",ni no kuni: wrath of the white witch remastered,79.0
+54,82,55,"Dec  3, 2019",halo: reach remastered,71.0
+55,82,56,"Nov  7, 2019",pistol whip,60.0
+56,82,57,"Feb  1, 2019",wargroove,60.0
+57,82,58,"Sep  3, 2019",children of morta,83.0
+58,82,59,"Sep 10, 2019",gears 5,68.0
+59,82,60,"Apr 15, 2019",one finger death punch 2,83.0
+60,82,61,"Apr  4, 2019",islanders,82.0
+61,81,62,"Aug 27, 2019",world of warcraft classic,61.0
+62,81,63,"Apr 25, 2019",yuppie psycho,80.0
+63,81,64,"Sep 10, 2019",efootball pes 2020,75.0
+64,81,65,"Nov 15, 2019",star wars jedi: fallen order,81.0
+66,81,67,"Nov 14, 2019",stormland,73.0
+68,81,69,"Oct 21, 2019",the elder scrolls online: dragonhold,42.0
+69,81,70,"May 16, 2019",irony curtain: from matryoshka with love,77.0
+70,81,71,"Jan 23, 2019",unruly heroes,65.0
+71,81,72,"Sep 26, 2019",stygian: reign of the old ones,80.0
+72,81,73,"Apr 29, 2019",mordhau,82.0
+73,81,74,"Sep 13, 2019",borderlands 3,52.0
+75,81,76,"Aug 27, 2019",hunt: showdown,74.0
+76,81,77,"Apr 16, 2019",anno 1800,79.0
+77,81,78,"Oct 25, 2019",call of duty: modern warfare,25.0
+78,81,79,"Aug  6, 2019",age of wonders: planetfall,73.0
+79,81,80,"Nov  5, 2019",planet zoo,79.0
+80,81,81,"Jun 20, 2019",my friend pedro,80.0
+81,81,82,"Oct  8, 2019",trine 4: the nightmare prince,82.0
+82,81,83,"Oct  8, 2019",yooka-laylee and the impossible lair,70.0
+83,81,84,"May 13, 2019",a plague tale: innocence,87.0
+84,81,85,"Jul 18, 2019",horace,78.0
+85,81,86,"Sep 19, 2019",mutazione,65.0
+86,80,87,"Apr  9, 2019",phoenix wright: ace attorney trilogy,81.0
+87,80,88,"May 20, 2019",the elder scrolls online: elsweyr,75.0
+88,80,89,"May 28, 2019",spellforce 3: soul harvest,86.0
+90,80,91,"Feb 14, 2019",sid meier's civilization vi: gathering storm,66.0
+91,80,92,"Oct 17, 2019",the jackbox party pack 6,88.0
+93,80,94,"May 28, 2019",void bastards,77.0
+94,80,95,"Sep  5, 2019",wrc 8 fia world rally championship,53.0
+95,80,96,"Sep  5, 2019",fantasy general ii,73.0
+96,80,97,"Jan 10, 2019","bury me, my love",34.0
+97,80,98,"Feb 19, 2019",yakuza kiwami,83.0
+98,80,99,"Jun  7, 2019",octopath traveler,62.0
+99,80,100,"Jan 10, 2019",catherine classic,79.0
+100,80,101,"Aug 13, 2019",dicey dungeons,72.0
+101,80,102,"Jan 23, 2019",when ski lifts go wrong,48.0
+102,80,103,"Jan 10, 2019",tales of vesperia: definitive edition,83.0
+103,80,104,"Oct 17, 2019",autonauts,77.0
+104,80,105,"Feb  8, 2019",monster energy supercross - the official videogame 2,68.0
+105,79,106,"Oct 23, 2019",lonely mountains: downhill,79.0
+106,79,107,"Sep 26, 2019",wanderlust travel stories,81.0
+107,79,108,"Aug 26, 2019",knights and bikes,74.0
+108,79,109,"Aug 15, 2019",ion fury,61.0
+109,79,110,"May 30, 2019",gato roboto,76.0
+110,79,111,"Jul 11, 2019",blazing chrome,70.0
+111,79,112,"Dec 12, 2019",detroit: become human,59.0
+112,79,113,"Dec 10, 2019",avicii invector,74.0
+113,79,114,"Oct 31, 2019",the wanderer: frankenstein's creature,82.0
+114,79,115,"Jan 24, 2019",life is strange 2: episode 2 - rules,50.0
+116,79,117,"Jun  4, 2019",atelier lulua: the scion of arland,66.0
+117,79,118,"Mar 19, 2019",fate/extella link,78.0
+118,79,119,"May 21, 2019",observation,74.0
+119,79,120,"May 21, 2019",dauntless,53.0
+120,79,121,"Sep 20, 2019",untitled goose game,61.0
+121,79,122,"Dec  3, 2019",arise: a simple story,77.0
+122,79,123,"May 15, 2019",druidstone: the secret of the menhir forest,70.0
+123,78,124,"May  7, 2019",descenders,62.0
+124,78,125,"Feb  7, 2019",angry birds vr: isle of pigs,43.0
+125,78,126,"Nov 22, 2019",lost ember,74.0
+126,78,127,"Oct  8, 2019",indivisible,65.0
+127,78,128,"Jul 30, 2019",a short hike,82.0
+128,78,129,"Jan 31, 2019",ace combat 7: skies unknown,71.0
+130,78,131,"May 16, 2019",surviving mars: green planet,40.0
+131,78,132,"May  9, 2019",life is strange 2: episode 3 - wastelands,60.0
+132,78,133,"Aug 19, 2019",remnant: from the ashes,68.0
+134,78,135,"Mar 29, 2019",tropico 6,66.0
+135,78,136,"Feb 14, 2019",the textorcist: the story of ray bibbia,60.0
+136,78,137,"Sep 20, 2019",the sojourn,62.0
+137,78,138,"Apr 18, 2019",forager,80.0
+138,78,139,"May 28, 2019",kingdom come: deliverance - a woman's lot,64.0
+139,78,140,"Feb 13, 2019",eastshade,80.0
+140,78,141,"Jan 10, 2019",a fisherman's tale,50.0
+143,78,144,"May 16, 2019",dark future: blood red states,60.0
+144,77,145,"Apr  9, 2019",vacation simulator,53.0
+145,77,146,"Jan 24, 2019",battlefleet gothic: armada 2,76.0
+146,77,147,"Mar 26, 2019",the walking dead: the telltale series - the final season episode 4: take us back,85.0
+147,77,148,"Aug 13, 2019",rebel galaxy outlaw,57.0
+148,77,149,"Oct  1, 2019",destiny 2: shadowkeep,59.0
+149,77,150,"Jun 18, 2019",they are billions,62.0
+150,77,151,"Oct 18, 2019",plants vs. zombies: battle for neighborville,40.0
+151,77,152,"Sep 10, 2019",blasphemous,58.0
+152,77,153,"Mar 21, 2019",space junkies,50.0
+153,77,154,"Apr 17, 2019",whispers of a machine,72.0
+154,77,155,"Jun  4, 2019",trover saves the universe,78.0
+155,77,156,"May  9, 2019",blood: fresh supply,82.0
+156,77,157,"May 29, 2019",assetto corsa competizione,68.0
+157,77,158,"Sep  5, 2019",green hell,73.0
+158,77,159,"Oct 17, 2019",little big workshop,66.0
+159,77,160,"Dec  5, 2019",darksiders genesis,81.0
+160,77,161,"Mar 29, 2019",operencia: the stolen sun,64.0
+161,76,162,"Sep 24, 2019",cat quest ii: the lupus empire,69.0
+162,76,163,"Nov 20, 2019",still there,81.0
+163,76,164,"Apr 18, 2019",driftland: the magic revival,81.0
+165,76,166,"Jul 11, 2019",earth defense force 5,74.0
+166,76,167,"Mar  1, 2019",toejam & earl: back in the groove,65.0
+168,76,169,"Sep 23, 2019",the surge 2,62.0
+169,76,170,"Dec 11, 2019",transport fever 2,73.0
+170,76,171,"Oct  3, 2019",neo cab,46.0
+171,76,172,"Apr 25, 2019",imperator: rome,46.0
+172,76,173,"Apr 16, 2019",heaven's vault,53.0
+176,76,177,"Jul 11, 2019",field of glory: empires,66.0
+177,76,178,"Jan 17, 2019",feudal alloy,72.0
+178,76,179,"Jul 22, 2019",beyond: two souls,76.0
+179,75,180,"Mar 21, 2019",we. the revolution,71.0
+180,75,181,"Aug 29, 2019",the dark pictures - man of medan,62.0
+181,75,182,"Jul 11, 2019",defector,36.0
+182,75,183,"Apr 18, 2019",god's trigger,84.0
+183,75,184,"Oct 29, 2019",atelier ryza: ever darkness & the secret hideout,80.0
+184,75,185,"Sep 19, 2019",police stories,73.0
+185,75,186,"Sep  3, 2019",spyro reignited trilogy,86.0
+186,75,187,"Nov 12, 2019",superliminal,77.0
+187,75,188,"Mar 29, 2019",assassin's creed iii remastered,36.0
+188,75,189,"Dec 19, 2019",borderlands 3: moxxi's heist of the handsome jackpot,51.0
+189,75,190,"Sep 18, 2019",crying suns,75.0
+190,75,191,"Jun 24, 2019",heavy rain,70.0
+191,75,192,"Oct 29, 2019",afterparty,70.0
+192,74,193,"Jan 15, 2019",the walking dead: the telltale series - the final season episode 3: broken toys,75.0
+195,74,196,"Oct  8, 2019",grid,50.0
+196,74,197,"Mar  1, 2019",dawn of man,67.0
+197,74,198,"Dec  3, 2019",phoenix point,60.0
+198,74,199,"Aug  7, 2019",gibbous -  a cthulhu adventure,64.0
+199,74,200,"Jan 24, 2019",pikuniku,64.0
+200,74,201,"Nov 12, 2019",the legend of bum-bo,66.0
+202,74,203,"Oct 17, 2019",the beast inside,76.0
+203,74,204,"Sep  6, 2019",nba 2k20,11.0
+204,74,205,"Aug 21, 2019",winds of change,79.0
+206,73,207,"Oct  8, 2019",john wick hex,38.0
+207,73,208,"Feb 15, 2019",far cry new dawn,37.0
+208,73,209,"Dec 10, 2019",mechwarrior 5: mercenaries,51.0
+210,73,211,"Jul 19, 2019",nowhere prophet,59.0
+211,73,212,"Jul 25, 2019",a place for the unwilling,71.0
+212,73,213,"May  2, 2019",guard duty,80.0
+213,73,214,"Mar  1, 2019",dead or alive 6,49.0
+214,73,215,"Jan  5, 2019",the eternal castle remastered,63.0
+215,73,216,"Jun 20, 2019",steel division 2,78.0
+216,73,217,"Jan 15, 2019",my time at portia,69.0
+217,73,218,"Jan 17, 2019",while true: learn,78.0
+218,73,219,"May 13, 2019",rage 2,54.0
+219,73,220,"May 29, 2019",draugen,69.0
+220,73,221,"Dec 17, 2019",wattam,62.0
+221,73,222,"Aug 27, 2019",minoria,69.0
+222,73,223,"Sep 26, 2019",code vein,77.0
+224,73,225,"Nov 14, 2019",the curious tale of the stolen pets,83.0
+226,72,227,"Dec 10, 2019",boneworks,79.0
+228,72,229,"Mar 29, 2019",unheard,76.0
+229,72,230,"Sep  9, 2019",greedfall,77.0
+232,72,233,"Apr 25, 2019",dark devotion,73.0
+233,72,234,"Apr  4, 2019",super dragon ball heroes: world mission,70.0
+234,72,235,"Sep 27, 2019",fifa 20,11.0
+235,72,236,"Aug 22, 2019",oninaki,31.0
+236,72,237,"Nov  8, 2019",need for speed heat,55.0
+237,72,238,"Aug  2, 2019",madden nfl 20,12.0
+238,71,239,"Sep  3, 2019",final fantasy viii remastered,51.0
+239,71,240,"May  7, 2019",shakedown hawaii,45.0
+240,71,241,"Feb  6, 2019",astroneer,71.0
+241,71,242,"Aug  8, 2019",apsulov: end of gods,67.0
+242,71,243,"Feb  8, 2019",god eater 3,61.0
+244,71,245,"Jul 30, 2019",mutant year zero: road to eden - seed of evil,56.0
+245,71,246,"Aug 19, 2019",rad,57.0
+246,71,247,"Oct 17, 2019",felix the reaper,76.0
+247,71,248,"Dec  5, 2019",mosaic,68.0
+250,71,251,"Jun 27, 2019",the sinking city,58.0
+251,71,252,"Oct 31, 2019",song of horror,75.0
+252,70,253,"Aug 15, 2019",darq,76.0
+253,70,254,"Nov 22, 2019",sniper ghost warrior contracts,67.0
+254,70,255,"Nov 14, 2019",sparklite,65.0
+255,70,256,"May 28, 2019",layers of fear 2,61.0
+256,70,257,"Jul 11, 2019",tiny metal: full metal rumble,72.0
+257,70,258,"Jan 30, 2019",mage's initiation: reign of the elements,74.0
+259,70,260,"Feb 27, 2019",tech support: error unknown,51.0
+260,70,261,"Apr  9, 2019",dangerous driving,38.0
+261,70,262,"Apr 16, 2019",world war z,60.0
+262,70,263,"Dec 11, 2019",vampire: the masquerade - coteries of new york,73.0
+263,70,264,"Jul 22, 2019",swords & souls: neverseen,74.0
+264,69,265,"Jul 26, 2019",wolfenstein: youngblood,22.0
+265,69,266,"Sep 17, 2019",rebel cops,67.0
+267,69,268,"Nov 27, 2019",sd gundam g generation cross rays,68.0
+268,69,269,"Aug 30, 2019",blair witch,63.0
+270,69,271,"May 31, 2019",warhammer: chaosbane,51.0
+271,69,272,"May 28, 2019",pathologic 2,85.0
+272,69,273,"Feb 13, 2019",tannenberg,78.0
+274,69,275,"Jul 18, 2019",etherborn,75.0
+276,69,277,"Sep 19, 2019",overland,66.0
+277,69,278,"Oct 22, 2019",moons of madness,54.0
+278,68,279,"Jul 17, 2019",night call,44.0
+279,68,280,"Aug  6, 2019",hearthstone: heroes of warcraft - saviors of uldum,19.0
+280,68,281,"Jul 23, 2019",elsinore,52.0
+281,68,282,"Jan 22, 2019",the hong kong massacre,54.0
+282,68,283,"Apr 11, 2019",pathway,65.0
+284,68,285,"May 24, 2019",splitgate: arena warfare,69.0
+285,68,286,"Oct 10, 2019",deliver us the moon,80.0
+286,68,287,"Oct  4, 2019",rain of reflections: chapter 1,78.0
+287,68,288,"Mar  5, 2019",the occupation,41.0
+290,68,291,"Aug  2, 2019",dry drowning,78.0
+291,67,292,"Mar 26, 2019",outward,73.0
+292,67,293,"Nov 19, 2019",shenmue iii,63.0
+293,67,294,"Oct  4, 2019",ghostbusters: the video game remastered,32.0
+294,67,295,"Aug  8, 2019",total war: three kingdoms - eight princes,50.0
+295,67,296,"Feb  1, 2019",rainswept,57.0
+296,67,297,"Apr 11, 2019",weedcraft inc,69.0
+297,67,298,"Jan 29, 2019",genesis alpha one,46.0
+299,67,300,"Jan 15, 2019",onimusha: warlords,65.0
+302,66,303,"Oct 15, 2019",outbuddies,83.0
+303,66,304,"May 21, 2019",american fugitive,68.0
+305,66,306,"Mar 12, 2019",truberbrook: a nerd saves the world,45.0
+307,66,308,"Sep 26, 2019",rage 2: rise of the ghosts,40.0
+308,65,309,"Dec  5, 2019",interrogation: you will be deceived,72.0
+309,65,310,"May  2, 2019",close to the sun,50.0
+310,65,311,"Dec 10, 2019",shovel knight showdown,70.0
+311,65,312,"Nov  5, 2019",blacksad: under the skin,78.0
+312,65,313,"Aug  2, 2019",the church in the darkness,60.0
+313,65,314,"Oct  8, 2019",the bradwell conspiracy,69.0
+315,65,316,"Oct 10, 2019",radio commander,47.0
+317,65,318,"Aug  6, 2019",metal wolf chaos xd,55.0
+319,64,320,"Aug 27, 2019",ancestors: the humankind odyssey,56.0
+320,64,321,"Jan 17, 2019",yiik: a postmodern rpg,29.0
+321,64,322,"Mar 26, 2019",xenon racer,54.0
+323,64,324,"Jun  6, 2019",cooking simulator,56.0
+324,64,325,"Apr 17, 2019",pagan online,53.0
+325,64,326,"Jul  5, 2019",sea of solitude,65.0
+326,64,327,"Oct  2, 2019",warsaw,72.0
+327,63,328,"Jan 23, 2019",jon shafer's at the gates,54.0
+329,63,330,"Oct 10, 2019",deliver us the moon: fortuna,56.0
+331,63,332,"Jul 29, 2019",the blackout club,73.0
+332,63,333,"Jul 22, 2019",vane,53.0
+333,63,334,"Jul 10, 2019",solseraph,55.0
+334,62,335,"Jun 20, 2019",198x,52.0
+336,62,337,"Sep 17, 2019",daymare: 1998,63.0
+337,62,338,"May 29, 2019",conan unconquered,48.0
+338,62,339,"Jul  4, 2019",stranger things 3: the game,44.0
+339,62,340,"Nov 18, 2019",kingdom under fire ii,35.0
+340,62,341,"Mar 28, 2019",warparty,45.0
+341,61,342,"Jul 16, 2019",summer catchers,83.0
+342,61,343,"May 14, 2019",sniper elite v2 remastered,39.0
+344,60,345,"Jan  3, 2019",medieval kingdom wars,77.0
+345,60,346,"Feb 15, 2019",jump force,40.0
+347,59,348,"May 28, 2019",vambrace: cold soul,49.0
+348,59,349,"Nov 14, 2019",terminator: resistance,82.0
+349,59,350,"Oct 23, 2019",crossroads inn,74.0
+350,59,351,"Feb 22, 2019",anthem,40.0
+351,58,352,"Mar 14, 2019",rico,40.0
+352,58,353,"Nov 14, 2019",bee simulator,56.0
+353,58,354,"Aug 13, 2019",vicious circle,53.0
+354,57,355,"Apr 30, 2019",fade to silence,47.0
+355,57,356,"Sep 18, 2019",little misfortune,80.0
+356,57,357,"Oct  4, 2019",tom clancy's ghost recon: breakpoint,23.0
+357,57,358,"Aug  1, 2019",forged of blood,68.0
+359,55,360,"Jan 31, 2019",re-legion,61.0
+360,54,361,"Jul 25, 2019",wolfenstein: cyberpilot,15.0
+361,54,362,"Aug 14, 2019",the great perhaps,67.0
+362,54,363,"Feb 15, 2019",crackdown 3,27.0
+363,54,364,"Mar 26, 2019",grimshade,60.0
+365,52,366,"Feb 21, 2019",bannermen,72.0
+366,51,367,"May  9, 2019",swag and sorcery,44.0
+367,51,368,"Mar 15, 2019",one piece: world seeker,54.0
+370,51,371,"Mar 26, 2019",generation zero,53.0
+371,51,372,"Aug  6, 2019",silver chains,48.0
+374,50,375,"Sep 24, 2019","i love you, colonel sanders! a finger lickin' good dating simulator",68.0
+375,47,376,"Sep 17, 2019",devil's hunt,57.0
+376,47,377,"Oct  3, 2019",paranoia: happiness is mandatory,71.0
+377,47,378,"Nov 22, 2019",rune ii,52.0
+378,46,379,"Dec  4, 2019",everreach: project eden,43.0
+379,45,380,"Nov 19, 2019",narcos: rise of the cartels,34.0
+380,43,381,"Oct 22, 2019",wwe 2k20,11.0
+382,40,383,"Dec 10, 2019",supermash,40.0
+383,40,384,"Mar  5, 2019",left alive,86.0
+384,39,385,"Mar  5, 2019",eternity: the last unicorn,61.0

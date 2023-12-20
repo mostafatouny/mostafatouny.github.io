@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 20, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Ex. 2-1 done
+Ex. 2-2 For our own convenience of avoiding tedious computations, we multiply $A(x) = -10 &#43; x$ with $B(x) = 3 - 6x$.
+Double-degree form
+$A(x) = -10 &#43; x &#43; 0x^2 &#43; 0x^3$" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/erik-alg-post/pset02/" />
+<link rel="canonical" href="https://mostafatouny.github.io/erik-alg-post/pset02/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/erik-alg-post/pset02/" />
+<meta property="og:title" content="Problem Set 02 | Mostafa Touny" />
+<meta property="og:description" content="Ex. 2-1 done
+Ex. 2-2 For our own convenience of avoiding tedious computations, we multiply $A(x) = -10 &#43; x$ with $B(x) = 3 - 6x$.
+Double-degree form
+$A(x) = -10 &#43; x &#43; 0x^2 &#43; 0x^3$" /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-02-26T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-02-26T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Problem Set 02 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="51fa5db15e829fb93ba198c6c6243bb7" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Problem Set 02</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Feb 26, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="ex-2-1">Ex. 2-1</h2>
+<p>done</p>
+<h2 id="ex-2-2">Ex. 2-2</h2>
+<p>For our own convenience of avoiding tedious computations, we multiply $A(x) = -10 + x$ with $B(x) = 3 - 6x$.</p>
+<p><strong>Double-degree form</strong></p>
+<p>$A(x) = -10 + x + 0x^2 + 0x^3$</p>
+<p>$B(x) = 3 - 6x + 0x^2 + 0x^3$</p>
+<p><strong>Computing A(x) on sample</strong></p>
+<pre><code>Recursive-FFT(-10, 1, 0, 0)
+  n = 4
+  w_4 = e^{2 pi i / 4}
+  w = w_4^0 = 1
+  a[even] = (-10, 0)
+  a[odd] = (1, 0)
+  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
+  y[odd] = Recursive-FFT(1, 0) = (1, 1)
+  for k=0 to 1
+    k=0
+	  y_0 = (-10) + (1)(1) = -9
+	  y_2 = (-10) - (1)(1) = -11
+	  w = w_4^1
+	k=1
+	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
+	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
+	  w = w_4^2
+  return (-9, -10+i, -11, -10-i)
+</code></pre>
+<pre><code>Recursive-FFT(-10, 0)
+  n = 2
+  w_2 = e^{2 pi i / 2}
+  w = w_2^0 = 1
+  a[even] = (-10)
+  a[odd] = (0)
+  y[even] = Recursive-FFT(-10) = (-10)  // base case
+  y[odd] = Recursive-FFT(0) = (0)
+  for k=0 to 0
+    k=0
+	  y_0 = (-10) + w (0) = -10
+	  y_1 = (-10) - w (0) = -10
+	  w = w_2^1
+  return (-10, -10)
+</code></pre>
+<pre><code>Recursive-FFT(1, 0)
+  n = 2
+  w_2 = e^{2 pi i / 2}
+  w = w_2^0 = 1
+  a[even] = (1)
+  a[odd] = (0)
+  y[even] = Recursive-FFT(1) = (1) // base case
+  y[odd] = Recursive-FFT(0) = (0)
+  for k=0 to 0
+    k=0
+	  y_0 = 1 + w(0) = 1
+	  y_1 = 1 - w(0) = 1
+	  w = w_2^1
+  return (1, 1)
+</code></pre>
+<p><strong>Computing B(x) on sample</strong></p>
+<p>Similarly, we get $y=(-3, 3-6i, 9, 3+6i)$</p>
+<p><strong>Computing C(x) on sample, By multiplying corresponding sample points of A and B</strong></p>
+<p>$y = ((-9)(-3), (-10+i)(3-6i), (-11)(9), (-10-i)(3+6i)) = (27, -24+63i, -99, -24-63i)$</p>
+<p><strong>Interpolating C(x) coefficients</strong></p>
+<pre><code>Recursive-IFFT(27, -24+63i, -99, -24-63i)
+  n = 4
+  w_4^-1 = e^{-1 i 2 pi / 4}
+  w = w_4^0 = 1
+  y[even] = (27, -99)
+  y[odd] = (-24+63i, -24-63i)
+  a[even] = Recursive-IFFT(27, -99) = (-72, 126)
+  a[odd] = Recursive-IFFT(-24+63i, -24-63i) = (-48, 126i)
+  for k=0 to 1
+    k=0
+	  y_0 = (-72) + (1)(-48) = -120
+	  y_2 = (-72) - (1)(-48) = -24
+	  w = w_4^-1
+	
+	k=1
+	  y_1 = (126) + (e^{-1 i 2 pi / 4})(126i) = 252
+	  y_3 = (126) - (e^{-1 i 2 pi / 4})(126i) = 0
+	  w = w_4^-2
+  return (-120, 252, -24, 0)
+</code></pre>
+<pre><code>Recursive-IFFT(27, -99)
+  n = 2
+  w_2^-1 = e^{-1 i 2 pi / 2}
+  w = w_2^0 = 1
+  y[even] = (27)
+  y[odd] (-99)
+  a[even] = Recursive-IFFT(27) = (27)  // base case
+  a[odd] = Recursive-IFFT(-99) = (-99)
+  for k=0 to 0
+    k=0
+	  y_0 = 27 + (1)(-99) = -72
+	  y_1 = 27 - (1)(-99) = 126
+	  w = w_2^-1
+  return (-72, 126)
+</code></pre>
+<pre><code>Recursive-IFFT(-24+63i, -24-63i)
+  n = 2
+  w_2^-1 = e^{-1 i 2 pi /2}
+  w = w_2^0 = 1
+  y[even] = (-24+63i)
+  y[odd] = (-24-63i)
+  a[even] = Recursive-IFFT(-24+63i) = (-24+63i)
+  a[odd] = Recursive-IFFT(-24-63i) = (-24-63i)
+  for k=0 to 0
+    k=0
+	  y_0 = (-24+63i) + (1)(-24-63i) = -48
+	  y_1 = (-24+63i) - (1)(-24-63i) = 126i
+  return (-48, 126i)
+</code></pre>
+<p>Hence, Final answer is (-120, 252, -24, 0)/4 = (-30, 63, -6, 0), and resulting polynomial is $C(x) = -30 + 63x - 6x^2$.</p>
+<h2 id="ex-2-3">Ex. 2-3</h2>
+<p>Modifying <code>Recursive-FFT</code>, by switching $a$ and $y$, replacing $w_n$ by $w_n^{-1}$. Finally, result vector is divided by $n$.</p>
+<pre><code>Recursive-IFFT(y)
+  n = y.length
+  if n == 1
+    return y
+  w_n^-1 = e^{-1 2 pi i / n}
+  w = 1
+  y[even] = (y_0, y_2, ..., y_n-2})
+  y[odd] = (y_1, y_3, ..., y_n-1)
+  a[even] = Recursive-IFFT(y[even])
+  a[odd] = Recursive-IFFT(y[odd])
+  for k=0 to n/2 - 1
+    a_k = a[even]_k + w a[odd]_k
+	a_k+(n/2) = a[even]_k - w a[odd]_k
+	w = w w_n^-1
+  return a
+  
+a = a/n
+</code></pre>
+<h2 id="ex-2-4">Ex. 2-4</h2>
+<p>done</p>
+<h2 id="ex-2-5">Ex. 2-5</h2>
+<p>Create operation accounts for number of pointers filled. Insert operations are modified to allow up to $2t-1$ keys in case of internal node, and up to $(2t-1) + (2t) = 4t-1$ keys in case of leaf node. That, by basically modifying the if condition. Also, insertion in place of pointers happens by checking whether a leaf have $2t-1$ keys.</p>
+<p>Note we haven&rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.</p>
+<pre><code>B-TREE-CREATE(T)
+  x = ALLOCATE-NODE()
+  x.leaf = TRUE
+  x.n = 0
+  x.n' = 0  // number of pointers to children filled
+  DISK-WRITE(x)
+  T.root = x
+</code></pre>
+<pre><code>B-TREE-INSERT(T,k)
+  r = T.root
+  if (r.n == 2t-1 and not r.leaf) or (r.n == 4t-1 and r.leaf)  // different cases for internal and leaf nodes
+    s = ALLOCATE-NODE()
+	T.root = s
+	s.leaf = FALSE
+	s.n = 0
+	s.c1 = r
+	B-TREE-SPLIT-CHILD(s,1)
+	B-TREE-INSERT-NONFULL(s,k)
+  else
+    B-TREE-INSERT-NONFULL(r,k)
+</code></pre>
+<pre><code>B-TREE-INSERT-NONFULL(x,k)
+  if x.leaf
+    i = x.n + x.n'  // sum of both keys and pointers
+
+    while i &gt;= x.n + 1 and k &lt; x.c_(i-x.n)
+	  x.c_(i-x.n+1) = x.c_(i-x.n)
+	  i = i-1
+    while i &gt;= 1 and k &lt; x.key_i
+	  x.key_i+1 = x.key_i
+	  i = i-1
+	
+	if i &gt;= x.n + 1
+	  x.c_i+1 = k
+	  x.n' = x.n' + 1
+	else
+	  x.key_i+1 = k
+	  x.n = x.n + 1
+	
+	DISK-WRITE(x)
+
+  else
+    i = x.n
+  
+    while i&gt;=1 and k&lt;x.key_i
+	  i = i-1
+	i = i+1
+	
+	DISK-READ(x,c_i)
+	
+	if (x.c_i).n == 2t-1  // note this is an internal node
+	  B-TREE-SPLIT-CHILD(x,i)
+	  if k &gt; x.key_i
+	    i = i+1
+	
+	B-TREE-INSERT-NONFULL(x.c_i, k)
+</code></pre>
+<h2 id="ex-3-2">Ex. 3-2</h2>
+<p>We implement the prescription described in p.500.</p>
+<p>Note we haven&rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.</p>
+<pre><code>B-TREE-DELETE(x, k)
+  // check if k is in node x
+  i = x.n
+  while i&gt;=1 and x.key_i != k
+    i = i-1
+
+  // k is found
+  if i&gt;=1
+
+    // x is a leaf node
+    if x.leaf
+      key_i = NULL
+      x.n = x.n - 1
+      x.shiftKeysAndPointers()  // for brevity we ignore implementing this subroutine
+
+    // x is an internal node
+    else
+	  y = x.c_i  // child preceeding k
+	  z = x.c_i+1  // child following k
+	  
+	  // number of keys in child preceeding k is at least t
+	  if y.n &gt;= t
+	    k' = y.lastKey()  // implementation is ignored
+		B-TREE-DELETE(y, k')
+        key_i = k = k'
+	
+	  // number of keys in child following k is at least t
+	  else if z.n &gt;= t
+		// symmetrically replace k by k'
+
+      // number of keys in both child following and preceeding k, is less than t
+      else 
+        mergeInto([y, k, z])  // merge k and z into y. implementation is ignored
+		x.c_i+1 = NULL
+		B-TREE-DELETE(k)
+
+
+  // k isn't found in x
+  else
+    // find k in children
+	i = x.n
+    while i &gt;= 1 and k &lt; x.key_i
+	  i = i-1
+    y = x.c_(i+1) // subtree y containing k
+
+    // guarantee we descend to a node containing at least t keys
+	if y.n == t-1
+	
+   	  if i+2 &lt;= x.n
+	    z = x.c_(i+2)  // immediate forward sibling of y
+	  if i &gt;= 1
+	    r = x.c_(i)  // immediate preceeding sibling of y
+	
+	  // some sibling contains at least t keys
+      if z and z.n &gt;= t
+	    B-TREE-INSERT(y, key_i)
+	    B-TREE-DELETE(key_i)
+	    B-TREE-INSERT(x, z.firstKey())
+	    B-TREE-DELETE(z, z.firstKey())
+	    // don't get why a pointer from sibling should be moved to y
+	  else if r and r.n &gt;= t
+	    // symmetrically
+	
+	  // both immediate siblings have t-1 keys
+	  else
+	    mergeInto([r, key_i, y])
+		x.c_(i+1) = NULL
+        B-TREE-DELETE(x, key_i)
+    
+	// remove k from child y
+    B-TREE-DELETE(y, k)  
+</code></pre>
+<hr>
+<h2 id="problem-2-1">Problem 2-1</h2>
+<h3 id="a">a</h3>
+<pre><code>Match(S, P)
+  n = S.length
+  m = P.length
+  
+  M = []
+  
+  for i = 0..n-m+1
+    flag = true
+    for j = 0..m
+	  if P[j] != S[i+j] flag = false
+	if flag M.append(i)
+
+  return M
+</code></pre>
+<h3 id="b">b</h3>
+<p>Source string $S$ gets encoded as $S(x) = s_0x^0 + s_1x^1 + \dots + s_{n-1}x^{n-1}$, and pattern string $P$ as $P(x) = p_0x^{m-1} + p_1x^{m-2} + \dots + p_{m-1}x^0$, where $s_i$ and $p_i$ are, $1$ or $-1$, if characters $S[i]$ and $P[i]$, are $a$ or $b$, respectively. If $P[i] = *$, Then $p_i = 0$.</p>
+<p>Observe $s_jp_k = 1$ if $S[j] = P[k]$, $s_jp_k = -1$ if $S[j] \neq P[k]$, and $s_jp_k = 0$ if $P[k] = *$. Observe for resulting polynomial $(s \cdot p)(x) = r_0x^0 + r_1x^1 + \cdots + r_{m+n-2}x^{m+n-2}$, Coefficient $r_i = \sum_{j+k=i} s_jp_k$, Exactly matches the sum of multiplying $s_{i-m+1}$, $s_{i-m+2}$, $\dots$, $s_{i-1}$, $s_i$ with $p_0$, $p_1$, $\dots$, $p_{m-1}$, respectively, for $i = m-1, m, \dots, n-1$. If and only if, All corresponding alphabetic characters are equal, Then each contributes to the sum by $+1$. Asterik $*$ always contributes nothing to the sum. Therefore, if $k$ is the number of alphabetic character in $P$ (non asterik characters), Then $r_i = k$ if and only if $P$ matches substring $S[i-m+1..i]$.</p>
+<p>Now we can set output $M$ to be the ordered list of $i$ such that $r_i = k$, Then subtract each entry by $m-1$, so that $i$ matches the position of the first character of the substring.</p>
+<p>Note coefficients $r_0$, $r_1$, $\dots$, $r_{m-2}$ are irrelevant to our consideration, Since they do not consider a matching with the whole characters of pattern string $P$.</p>
+<p>For the example, $S = ababbab$ and $P = ab*$,
+\begin{align*}
+S(x) &amp;= (1)x^0 + (-1)x^1 + (1)x^2 + (-1)x^3 + (-1)x^4 + (1)x^5 + (-1)x^6 \\
+P(x) &amp;= (1)x^2 + (-1)x^1 + (0)x^0 \\
+(S \cdot P)(x) &amp;= (-1)x^1 + (x)x^2 + (-2)x^3 + (2)x^4 + (1)x^7 + (-1)x^8 \\
+M &amp;= [2, 4] \\
+M &amp;= [2 - (m-1), 4 - (m-1)] = [2 - (3-1), 4 - (3-1)] \\
+M &amp;= [0, 2]
+\end{align*}</p>
+<h3 id="c">c</h3>
+<p>$\mathcal{O}(n \lg n)$, Since each operation of my algorithm requires at most a linear scan of complexity $\mathcal{O}(n)$</p>
+<h3 id="d">d</h3>
+<p>Exactly as $b$, but characters are encoded as</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>C</th>
+<th>G</th>
+<th>T</th>
+<th>*</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>1</td>
+<td>-1</td>
+<td>i</td>
+<td>-i</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P</td>
+<td>1</td>
+<td>-1</td>
+<td>-i</td>
+<td>i</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Note if characters are matching, Then as before, each contributes to the sum by $+1$. In case of non-matching, A number less than $+1$ or an imaginary number is contributed.</p>
+<h2 id="problem-2-2">Problem 2-2</h2>
+<h3 id="a-1">a</h3>
+<p>Merge roots of $T_1$ and $T_2$, placing $k$ in between them. If new root&rsquo;s keys are greater than $2t-1$, Apply the standard operation of split and push median up.</p>
+<p>Note roots of $T_1$ and $T_2$, each has at most $2t-1$ keys. When merging the new root is at most $(2t-1) + (2t-1) + 1 = 4t-1$. If we spllitted, We get a new root of key size exactly 1 and two childs, Each is of size at most $2t-1$.</p>
+<h3 id="b-1">b</h3>
+<p>Modify $T_1$ to decrease its height by one, Then apply the same procedure of <em>a</em>. That, by merging all of $T_1$&rsquo;s children into its root. In other words, $Merge(x.c_0, key_0, x.c_1, key_1, \dots, x.c_{n-1}, key_{n-1}, x.c_{n})$. Note new root of $T_1$ has at most $(2t-1) + (2t)(2t-1) = (2t+1)(2t-1) = 4t^2 - 1$ keys.</p>
+<p>As in <em>a</em>, Merge $T_1$, $k$, and $T_2$. The new root has at most $(4t^2 - 1) + (2t-1) + 1 = (2t+2)(2t-1) + 1 = 4t^2 + 2t - 1$ keys. Hence we are going to split around $\mathcal{O}(\lg t^2) = \mathcal{O}(\lg t)$ times. Note that shall result in many one-key nodes. So, at most $\mathcal{O}(\lg t)$ merge of one-key nodes, to finally fix the tree. But since $t$ is assumed to be a constant, the total complexity is $\mathcal{O}(1)$.</p>
+<h3 id="c-1">c</h3>
+<p>The tree&rsquo;s height is increased only when the root has a full capacity of keys, and a new root is allocated.</p>
+<pre><code>B-TREE-INSERT(T,k)
+r = T.root
+if r.n == 2t-1
+  s = ALLOCATE-NODE()
+  T.root = s
+  s.leaf = FALSE
+  s.n = 0
+  s.c1 = r
+  s.height = r.height+1  // new root is of height +1 than the previous one
+  B-TREE-SPLIT-CHILD(s,1)
+  B-TREE-INSERT-NONFULL(s,k)
+else
+  B-TREE-INSERT-NONFULL(r,k)
+</code></pre>
+<p>Tree shrinks only when a merge happens with the root alongside its children. If we assumed the new root is updated to point to one of the children, Then no height variable needs to be updated.</p>
+<h3 id="d-1">d</h3>
+<p>Without the loss of generality assume $h_1 \geq h_2$. Then the procedure of $b$ is applied $h_1 - h_2$ times so $T_1$ and $T_2$ have the same weight. Then the procedure of <em>a</em> is applied to combine them. Each operation costs a constant time, Hence a complexity upperbounded by $\mathcal{O}((h_1 - h_2) + 1)$.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

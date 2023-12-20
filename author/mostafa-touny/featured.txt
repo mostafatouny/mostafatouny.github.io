@@ -1,0 +1,4 @@
+SE
+- [crud](https://gitlab.com/mostafatouny/clinictouny)
+- [twitter summarizer](https://github.com/mostafatouny/Touny-180185-MSA-Grad)
+- [scraper](https://github.com/mostafatouny/data-scraper)

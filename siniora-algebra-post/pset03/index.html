@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 20, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Problems 2 $(Q, &#43;)$. ${ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} }$.
+$(Q^*, *)$. ${ 2^x \mid x \in \mathcal{Z}^&#43; } \cup { \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^&#43; } \cup { 1 }$." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/siniora-algebra-post/pset03/" />
+<link rel="canonical" href="https://mostafatouny.github.io/siniora-algebra-post/pset03/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/siniora-algebra-post/pset03/" />
+<meta property="og:title" content="Chapter 03 | Mostafa Touny" />
+<meta property="og:description" content="Problems 2 $(Q, &#43;)$. ${ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} }$.
+$(Q^*, *)$. ${ 2^x \mid x \in \mathcal{Z}^&#43; } \cup { \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^&#43; } \cup { 1 }$." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-11-16T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-11-16T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Chapter 03 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="eaa9ef0f021f7307c9c7c5f38a00510c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Chapter 03</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 16, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="problems" class="unnumbered">Problems</h2>
+<h3 id="section" class="unnumbered">2</h3>
+<p>$(Q, +)$. ${ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} }$.</p>
+<p>$(Q^*, *)$. ${ 2^x \mid x \in \mathcal{Z}^+ } \cup { \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^+ } \cup { 1 }$.</p>
+<h3 id="section-1" class="unnumbered">4</h3>
+<p>Consider $|x| = n$. Then $x^n = 1$ and no positive $r &lt; n$ where $x^r = 1$. It follows.
+\begin{aligned}
+(x^n)^{-1} &amp;= (1)^{-1} \\
+(x \cdot x \cdot \dots \cdot x)^{-1} &amp;= 1 \\
+x^{-1} \cdot \dots \cdot x^{-1} &amp;= \\
+(x^{-1})^n &amp;=
+\end{aligned}
+Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &lt; n$.</p>
+<h3 id="b" class="unnumbered">6(b)</h3>
+<p>Identity is $e = 0$.</p>
+<p>$|3| = 4$. $|8| = 3$. $|11| = 12$.</p>
+<h3 id="section-2" class="unnumbered">7</h3>
+<p><strong>Fact.</strong> For any element $x$ in any group, $x^{n+m} = x^n x^m$.</p>
+<p><strong>Fact.</strong> For any element $x$ in any group, $(x^{k})^m = x^{km}$.
+\begin{aligned}
+(a^4 c^{-2} b^4)^{-1} &amp;= (b^4)^{-1} (c^{-2})^{-1} (a^4)^{-1} \\
+&amp;= (b^4)^{-1} (c^2 ) (a^4)^{-1} \\
+&amp;= (b^7 b^{-3})^{-1} (c^2) (a^6 a^{-2})^{-1} \\
+&amp;= (b^{-3})^{-1} (c^2) (a^{-2})^{-1} \\
+&amp;= b^3 c^2 a^2
+\end{aligned}</p>
+<h3 id="section-3" class="unnumbered">10</h3>
+<p>We naively construct all possible subgroups, pruning possible branches by their properties.</p>
+<p>Any subgroup must have the identity element. ${R_0}$. (+1)</p>
+<p>${R_0, X}$ is a subgroup for any reflection $X = H,V,D,D&rsquo;$. (+4)</p>
+<p>Considering a subgroup with ${R_0, X_0, X_1}$ for distinct reflections $X_0, X_1$ it must be the case we get rotation $R_s$ for $s \neq 0$. So we cannot have a subgroup restricted on reflections other than the aforementioned case.</p>
+<p>${ R_0, R_{180} }$. (+1)</p>
+<p>For any subgroup with $R_{90}$ or $R_{270}$, since it is closed it must contain also ${ R_0, R_{90}, R_{180}, R_{270} }$. (+1)</p>
+<p>For any subgroup containing ${ R_0, R_{180}, H }$ it must contain also ${ R_0, R_{180}, H, V }$. For any subgroup containing ${ R_0, R_{180}, V }$ it must contain also ${ R_0, R_{180}, V, H }$.
+(+1)</p>
+<p>For any subgroup containing ${ R_0, R_{180}, D }$ it must contain also ${ R_0,    R_{180}, D, D&rsquo; }$. For any subgroup containing ${ R_0, R_{180}, D&rsquo; }$ it must contain also ${ R_0, R_{180}, D, D&rsquo; }$. (+1)</p>
+<p>For any subgroup containing $R_s$ for $s \neq 180$ and any reflection $X = H, V, D, D&rsquo;$, since it is closed, it must contain also ${ R_0, R_{90}, R_{180}, R_{270}, H, V, D, D&rsquo;}$. (+1)</p>
+<p>So far we counted 10 subgroups.</p>
+<h3 id="section-4" class="unnumbered">19</h3>
+<p>We show the contrapositive. Assume $a^m = a^n$ for $m &gt; n$. Then $a^m a^{-n} = a^n a^{-n}$ implying $a^{m-n} = e$, but $m - n &gt; 0$ so $a$ is of a finite order.</p>
+<h3 id="section-5" class="unnumbered">30</h3>
+<p>The question presumes the uniqueness of $H$. We won&rsquo;t prove it.</p>
+<p>$H = { 2 (9 k_1 + 15 k_2 + 20 k_3) \mid k_1,k_2,k_3 \in \mathcal{Z} }$.</p>
+<p>Taking $k_1 = k_2 = k_3 = 0$ yields the identity $e = 0$. For $x \in H$ corresponding to $k_i$, Take $-(k_i)$ to obtain the inverse. Closed property is clear from the definition. Associativity follows from $G$. Odd numbers are excluded conforming to the fact $H$ is a proper subgroup.</p>
+<h3 id="section-6" class="unnumbered">34</h3>
+<p>Since $e \in H$ and $e \in K$ by definition, We have $e \in H$.</p>
+<p>if $x,y,z \in H \cap K$, then $x,y,z \in H$ and associativity follows.</p>
+<p>if $x \in H \cap K$, then $-x \in H$ and $-x \in K$, and any element has an inverse.</p>
+<p>if $x,y \in H \cap K$, then $x + y \in H$ and $x + y \in K$ by properties of a group.</p>
+<p>A trivial argument by induction shows the intersection of any number of subgroups.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: November 18, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="A problem-set solved from MIT&#39;s open courseware" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/post/mit-analysis1c-pset02/" />
+<link rel="canonical" href="https://mostafatouny.github.io/post/mit-analysis1c-pset02/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/post/mit-analysis1c-pset02/featured.jpg" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/post/mit-analysis1c-pset02/" />
+<meta property="og:title" content="Pset02, MIT-Analysis1C Opencourseware | Mostafa Touny" />
+<meta property="og:description" content="A problem-set solved from MIT&#39;s open courseware" /><meta property="og:image" content="https://mostafatouny.github.io/post/mit-analysis1c-pset02/featured.jpg" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-02-12T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-02-12T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mostafatouny.github.io/post/mit-analysis1c-pset02/"
+  },
+  "headline": "Pset02, MIT-Analysis1C Opencourseware",
+  
+  "image": [
+    "https://mostafatouny.github.io/post/mit-analysis1c-pset02/featured.jpg"
+  ],
+  
+  "datePublished": "2023-02-12T00:00:00Z",
+  "dateModified": "2023-02-12T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Mostafa Touny"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mostafa Touny",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "A problem-set solved from MIT's open courseware"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Pset02, MIT-Analysis1C Opencourseware | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="4eb4b17bbc83b4aba893434118d965c8" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Pset02, MIT-Analysis1C Opencourseware</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Feb 12, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
+  <div style="position: relative">
+    <img src="/post/mit-analysis1c-pset02/featured_hu64169e4c6d656f26e9e0a6cc018c06a0_102106_720x2500_fit_q75_h2_lanczos.webp" width="720" height="405" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="problem-set-02-sourcehttpsocwmiteducourses18-100c-real-analysis-fall-2012resourcesmit18_100cf12_ps2"><a href="https://ocw.mit.edu/courses/18-100c-real-analysis-fall-2012/resources/mit18_100cf12_ps2/" target="_blank" rel="noopener">Problem-set 02 Source</a></h2>
+<h2 id="solutions-in-pdfsourcepdf"><a href="./source.pdf">Solutions in PDF</a></h2>
+<p>In case LaTeX failed to render.</p>
+<h2 id="problem.-1" class="unnumbered">Problem. 1</h2>
+<p>We prove each axiom as listed by <em>Rudin</em> in page 5.</p>
+<p><strong>A1</strong> $(a_0+a_1) + \sqrt{2} (b_0+b_1) \in \mathcal{Q}(\sqrt{2})$, As
+$(a_0+a_1), (b_0+b_1) \in \mathcal{Q}$.</p>
+<p><strong>A2</strong> Follows immediately by properties of $\mathcal{Q}$.</p>
+<p><strong>A3</strong> Follows immediately by properties of $\mathcal{Q}$.</p>
+<p><strong>A4</strong> $0_{\mathcal{Q}(2)}$ here is the number
+$0 + \sqrt{2} ; 0 = 0_{\mathcal{R}}$.</p>
+<p><strong>A5</strong> For an $x_{\mathcal{Q}(2)}$,
+$-x_{\mathcal{Q}(2)} = -a + \sqrt{2} (-b)$.</p>
+<p><strong>M1</strong> The product is
+$(a_0a_1 + 2b_0 b_1) + \sqrt{2} (a_0 b_1 + a_1 b_0)$, Where the formed
+$a$ and $b$ are in $\mathcal{Q}$.</p>
+<p><strong>M2</strong> Following properties of $\mathcal{Q}$, The product we formed in
+<em>M1</em> is the same in cases of $xy$ and $yx$.</p>
+<p><strong>M3</strong> Following properties of $\mathcal{Q}$, The product we formed in
+<em>M1</em> is the same in cases of $(xy)z$ and $x(yz)$.</p>
+<p><strong>M4</strong> $1_{\mathcal{Q}(\sqrt{2})}$ here is
+$1_{\mathcal{R}} \neq 0_{\mathcal{R}} = 0_{\mathcal{Q}(2)}$.</p>
+<p><strong>M5</strong> If
+$x_{\mathcal{Q}(\sqrt{2})} \neq 0_{\mathcal{Q}(2)} = 0 + \sqrt{2} \cdot 0$,
+Then we know either $a \neq 0$ or $b \neq 0$, and hence
+$x_{\mathcal{Q}(\sqrt{2})} = a + b \sqrt{2} \neq 0$. Define
+$x_{\mathcal{Q}(\sqrt{2})}^{-1} = \frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}}$.
+What is remaining is to show
+$\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \in \mathcal{Q}(2)$
+by a multiplication by its conjugate. Observe: $$\begin{aligned}
+&amp;\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \
+= &amp;\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \cdot \frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a - b \sqrt{2}}} \
+= &amp;\frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a^2 + 2 b^2}} = (\frac{\displaystyle{a}}{\displaystyle{a^2 + 2b^2}}) + (\frac{\displaystyle{-b}}{\displaystyle{a^2 + 2b^2}}) \sqrt{2}\end{aligned}$$
+And clearly
+$(\frac{\displaystyle{a}}{\displaystyle{a^2 + 2b^2}}), (\frac{\displaystyle{-b}}{\displaystyle{a^2 + 2b^2}}) \in \mathcal{Q}$.</p>
+<p><strong>D</strong> Follows by a trivial algebra.</p>
+<h2 id="problem.-2" class="unnumbered">Problem. 2</h2>
+<p>Let&rsquo;s look at the special case of $z = (x, 0)$. Then for any $r &gt; 0$,
+there exists a complex number $w = (x/r, 0)$, such that $rw = z$.</p>
+<p>From now on we focus on $z = (x, y)$ assuming $y \neq 0$. Before
+proceeding, we develop a central lemma.</p>
+<p><strong>Lemma.</strong>   For any complex number $w = (a, b)$,
+$|w| = 1 \leftrightarrow a^2 + b^2 = 1$.<br>
+Follows immediately by setting $w \cdot \overline{w} = 1$ and
+multiplying.</p>
+<p><strong>Lemma.</strong>   Given any $x$ and $y \neq 0$, Finding reals $r, a, b$ such
+that $r \cdot a = x$, $r \cdot b = y$ satisfies
+$z = (x, y) = r \cdot (a, b) = rw$<br>
+Follows immediately by a trivial algebra.</p>
+<p><strong>Theorem.</strong>   Main Problem<br>
+Now we combine <em>Lemma 1</em> and <em>Lemma 2</em> to satisfy both requirements by
+forming a combined system of equations, Given any $z = (x, y)$ where
+$y \neq 0$. $$\begin{aligned}
+r \cdot a &amp;= x \
+r \cdot b &amp;= y \
+a^2 + b^2 &amp;= 1\end{aligned}$$ It can be solved by substitution where:
+$$\begin{aligned}
+a &amp;= \sqrt{1 - b^2} \
+r &amp;= y/b ;;; \text{valid as b isn&rsquo;t zero} \
+3/b \cdot \sqrt{1-b^2} &amp;= x\end{aligned}$$ Note $b \neq 0$ lest
+$r \cdot b = r \cdot 0 = 0 = y$, Contradicting our assumption.</p>
+<p>The system uniquely determines the values $$\begin{aligned}
+b &amp;= \frac{\displaystyle{3}}{\displaystyle{\sqrt{x^2 + 9}}} \
+r &amp;= \frac{\displaystyle{y}}{\displaystyle{3}} \cdot \sqrt{x^2 + 9} \
+a &amp;= \sqrt{1 - \frac{\displaystyle{9}}{\displaystyle{x^2+9}}}\end{aligned}$$</p>
+<h2 id="problem.-3" class="unnumbered">Problem. 3</h2>
+<h3 id="a" class="unnumbered">a</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="image" srcset="
+               /post/mit-analysis1c-pset02/featured_hu64169e4c6d656f26e9e0a6cc018c06a0_102106_fc81774cb5d5cd57663f6f3799ba8b20.webp 400w,
+               /post/mit-analysis1c-pset02/featured_hu64169e4c6d656f26e9e0a6cc018c06a0_102106_6d645ebaf39e4c7dae275ad25e5e7741.webp 760w,
+               /post/mit-analysis1c-pset02/featured_hu64169e4c6d656f26e9e0a6cc018c06a0_102106_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/post/mit-analysis1c-pset02/featured_hu64169e4c6d656f26e9e0a6cc018c06a0_102106_fc81774cb5d5cd57663f6f3799ba8b20.webp"
+               width="760"
+               height="428"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>We show if arbitrary $p \in E^o$ then $p$ is an interior of $E^o$. By
+definition $p$ is an interior of $E$. So $N_{r_0}(p) \subset E$ for some
+$r_0 &gt; 0$. Let $r_1 = r_0/2$ and $h = r_0 - r_1$. It suffices to show
+$N_{r_1}(p) \subset E^o$.</p>
+<p>Consider $N_h(p&rsquo;)$ for any $p&rsquo; \in N_{r_1}(p)$. Through the picture it
+is clear this new neighbourhood shall be bounded by $N_{r_0}(p)$ and
+hence falls completely within $E$. That shows $p&rsquo; \in E^o$ and in turn
+completes our proof.</p>
+<p>In greater details, Observe $\forall q \in N_h(p&rsquo;)$,
+$d(q, p) \leq d(q, p&rsquo;) + d(p&rsquo;, p) &lt; h + r_1 = (r_0 - r_1) + r_1 = r_0$,
+and hence $q \in N_{r_0}(p) \subset E$.</p>
+<h3 id="b" class="unnumbered">b</h3>
+<p>$(\leftarrow)$ Trivial by <em>a</em>.</p>
+<p>$(\rightarrow)$ Trivially $E^o \subset E$. By hypothesis, The definition
+of open $E$ immediately concludes $E \subset E^o$.</p>
+<h3 id="c" class="unnumbered">c</h3>
+<p>Any $p \in G$ is an interior point of $G$ by definition. So there is a
+neighbourhood $N_{r_0}(p) \subset G$ for some $r_0 &gt; 0$. But we know
+$G \subset E$, So $N_{r_0}(p) \subset E$, $p$ is an interior point of
+$E$.</p>
+<h3 id="e" class="unnumbered">e</h3>
+<p>I guess Yes. We struggled with a formal proof though.</p>
+<h2 id="problem.-4" class="unnumbered">Problem. 4</h2>
+<p><strong>Definition.</strong>   Given a point $p \in X$, Define
+$V_p = { x &gt; p ; | ; [p,x] \subset X } \cup { x &lt; p ; | ; [x, p] \subset X }$.\</p>
+<p><strong>Remark.</strong>   $V_p$ constitutes a largest segment $(a,b)$, Given $X$ is
+an open-set.<br>
+Assuming $V_p = (a, b]$ derives an immediate contradiction as $b$ won&rsquo;t
+be an interior point of $X$.</p>
+<p>A more rigorous argument for showing $V_p$ is a segment can be made by
+constructing a segment $(inf , V_p, sup , V_p)$ but for brevity we
+ignore it.</p>
+<p><strong>Lemma.</strong>   Given an open-set $X$ and some $V_p \subset X$, For any
+$q \neq p$, Either $V_p = V_q$ or $V_p \cap V_q = \phi$.<br>
+Easily proven by considering the equivalent logical form of
+$V_p \cap V_q \neq \phi \rightarrow V_p = V_q$.</p>
+<p><strong>Lemma.</strong>   Given a non-empty open-set $X$ and some $V_p \subset X$,
+$X_1 = X - V_p$ is either empty or a non-empty open-set.<br>
+If $V_p = X$ then $X_1$ is empty. Consider $V_p$ as a strict or proper
+subset of $X$. Then $X_1$ is non-empty.</p>
+<p>We show now $X_1$ is an open-set. Let $q$ be an arbitrary point of
+$X_1$, Then also $q \in X$. Since $X$ is an open-set we know there&rsquo;s
+some neighbour $N_{r0}(q) \subset X$. Clearly $N_{r0}(q) \subset V_q$.
+By <em>Lemma 3</em> and since $q \not\in V_p$, It follows
+$N_{r0}(q) \cap V_p = \phi$. So $N_{r0}(q) \subset X_1$ and $q$ is an
+interior point of $X_1$.</p>
+<p><strong>Corollary.</strong>   Countable ${V_i}$<br>
+Follow the same procedure of <em>Lemma 4</em> but let the taken point $p_i$ to
+be a rational number. Take some real number $z_i$ in non-empty $X_i$; As
+it is interior there is a neighbour such that for any $q$ where
+$d(z_i, q) &lt; r_0$ for some $r_0 &gt; 0$, $q \in X$. By the density of
+rational numbers, there is a rational $p_i$ which satisfies
+$d(z_i, p_i) &lt; r_0$. Hence $p_i \in X_i$.</p>
+<p>We now know every distinct $V_{p_i}$ corresponds to a distinct rational
+number $p_i$. So the cardinality of ${V_{p_i}}$ is <em>at most
+countable</em>.</p>
+<p><strong>Theorem.</strong>   Main Problem<br>
+Following the procedure of <em>Lemma 4</em> and by <em>Corollary 5</em> we can keep
+constructing $V_{p_1}$, $V_{p_2}$, ..etc, which in turn are <em>at most
+countable</em>. There are two cases:</p>
+<ul>
+<li>
+<p>(i) We reach some empty $X_i$, So ${V_i}$ is finite. Or</p>
+</li>
+<li>
+<p>(ii) We do not ever reach an empty $X_i$, and ${ V_i }$ is
+<em>countable</em>.</p>
+</li>
+</ul>
+<p><strong>Note.</strong> I received the following support before being able to solve
+the problem. I admit it was totally unlikely to think of the formulation
+$(q-\delta, q+\epsilon) \subset X$ on my own. I admit the problem is
+completely spoiled.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="image" srcset="
+               /post/mit-analysis1c-pset02/0_hu681eda5354df090828ddf495fb3b0c20_56400_a45c15516f000e4e9fe4946979fd4e30.webp 400w,
+               /post/mit-analysis1c-pset02/0_hu681eda5354df090828ddf495fb3b0c20_56400_0771aee05ef79f7c8d862167bb8c7963.webp 760w,
+               /post/mit-analysis1c-pset02/0_hu681eda5354df090828ddf495fb3b0c20_56400_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/mit-analysis1c-pset02/0_hu681eda5354df090828ddf495fb3b0c20_56400_a45c15516f000e4e9fe4946979fd4e30.webp"
+               width="760"
+               height="508"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="image" srcset="
+               /post/mit-analysis1c-pset02/1_hu5bef43f7d65d019f4d4dc9a883a74271_24190_7a58dbbd2591ed76f8e5ac0d9a9a9f4e.webp 400w,
+               /post/mit-analysis1c-pset02/1_hu5bef43f7d65d019f4d4dc9a883a74271_24190_9a8cf061e52e0f7cf7b150931bf65767.webp 760w,
+               /post/mit-analysis1c-pset02/1_hu5bef43f7d65d019f4d4dc9a883a74271_24190_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/mit-analysis1c-pset02/1_hu5bef43f7d65d019f4d4dc9a883a74271_24190_7a58dbbd2591ed76f8e5ac0d9a9a9f4e.webp"
+               width="760"
+               height="302"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="image" srcset="
+               /post/mit-analysis1c-pset02/2_hu9d7c6766c2e6bf7d8fd5ea595f84fdbd_21610_11de46398cbb2b1499163b88a1bd0376.webp 400w,
+               /post/mit-analysis1c-pset02/2_hu9d7c6766c2e6bf7d8fd5ea595f84fdbd_21610_10f7618915dd013f7c337406276bd7a8.webp 760w,
+               /post/mit-analysis1c-pset02/2_hu9d7c6766c2e6bf7d8fd5ea595f84fdbd_21610_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/mit-analysis1c-pset02/2_hu9d7c6766c2e6bf7d8fd5ea595f84fdbd_21610_11de46398cbb2b1499163b88a1bd0376.webp"
+               width="760"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e973d49cb2d568aa6f8eaf3638337473.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

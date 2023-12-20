@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 20, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Yet, Another NP-Complete Problem. Kleinberg and Tardos&#39; exercise 38 of their algorithm design book" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/post/steiner-tree-np-complete/" />
+<link rel="canonical" href="https://mostafatouny.github.io/post/steiner-tree-np-complete/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/post/steiner-tree-np-complete/featured.png" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/post/steiner-tree-np-complete/" />
+<meta property="og:title" content="Proving Graphical Steiner Tree is NP-Complete | Mostafa Touny" />
+<meta property="og:description" content="Yet, Another NP-Complete Problem. Kleinberg and Tardos&#39; exercise 38 of their algorithm design book" /><meta property="og:image" content="https://mostafatouny.github.io/post/steiner-tree-np-complete/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2020-06-19T00:00:01&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2020-06-19T00:00:01&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mostafatouny.github.io/post/steiner-tree-np-complete/"
+  },
+  "headline": "Proving Graphical Steiner Tree is NP-Complete",
+  
+  "image": [
+    "https://mostafatouny.github.io/post/steiner-tree-np-complete/featured.png"
+  ],
+  
+  "datePublished": "2020-06-19T00:00:01Z",
+  "dateModified": "2020-06-19T00:00:01Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Mostafa Touny"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mostafa Touny",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Yet, Another NP-Complete Problem. Kleinberg and Tardos' exercise 38 of their algorithm design book"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Proving Graphical Steiner Tree is NP-Complete | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="36617fd98faacbd298f58b56ebda8f27" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Proving Graphical Steiner Tree is NP-Complete</h1>
+
+  
+  <p class="page-subtitle">Yet, Another NP-Complete Problem. Kleinberg and Tardos&rsquo; exercise 38 of their algorithm design book</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 19, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 507px; max-height: 441px;">
+  <div style="position: relative">
+    <img src="/post/steiner-tree-np-complete/featured_huf8f27ea9dca4070ae65300ad7b6328a5_19697_720x2500_fit_q75_h2_lanczos_3.webp" width="507" height="441" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="preface">Preface</h2>
+<p>We prove the <em>graphical <a href="https://en.wikipedia.org/wiki/Steiner_tree_problem" target="_blank" rel="noopener">steiner tree</a></em> problem is <em>NP-complete</em> by reducing <a href="https://en.wikipedia.org/wiki/Vertex_cover" target="_blank" rel="noopener">vertex cover</a> to it. The version of it is taken from our favorite <em>Kleinberg and Tardos&rsquo; Algorithm Design</em> book&rsquo;s exercises. We assume the reader is familiar with <em>vertex cover</em>, what <em>NP-completeness</em> is and the general approach for proving it by <em>reduction</em>.</p>
+<h2 id="graphical-steiner-tree-definition">Graphical Steiner Tree Definition</h2>
+<p>Here is a clear definition of the problem we prove its NP-completeness, Taken from <em>klienberg and tardos&rsquo; exercise 38</em> of <em>chapter 8</em>, <em>NP and computational intractability</em>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./ex.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="example-and-high-level-overview">Example and High-Level Overview</h2>
+<p>Before showing a rigour proof, We present a simple example which demonstrates our approach. We begin with a <em>vertix cover</em> example, then accordingly encode it into an instance of the <em>graphical steiner tree</em> problem. We give some insights why finding a solution to the latter accounts for a solution to the former, and Hence argue our claimed proof is correct.</p>
+<h3 id="vertex-cover">Vertex Cover</h3>
+<p>Let&rsquo;s consider a simple example of <em>vertex cover</em> problem. A graph $G$ has vertices $G(V) = \set {1, 2, 3, 4}$ colored in red and purple, and edges $G(E) = \set {1, 2, 3, 4 }$ colored in <em>green</em>. Finally, Let $k=2$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./vertex.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Clearly, A subset $G(V)_{red} = \set {1, 2}$ has the minimum possible number of elements which enables covering all edges $G(E)$. Now let&rsquo;s see how it is going to be encoded into an instance of a <em>graphical steiner tree</em>.</p>
+<h3 id="graphical-steiner-tree">Graphical Steiner Tree</h3>
+<p>Construct a graph $G&rsquo;$ whose vertices $G&rsquo;(V)$ are the unions of,</p>
+<p>$\set {S}$ a special vertex, $\set {1, 2, 3, 4} = G&rsquo;(V)_e$ colored in green corresponding to edges of the vertex cover $G(E)$, $\set {1&rsquo;, 2&rsquo;, 3&rsquo;, 4&rsquo;} = G&rsquo;(V)_v$ colored in red and purple corresponding to vertices of the vertex cover $G(V)$, and $\set {1_0, 2_0, 3_0, 4_0} = G&rsquo;(V)_o$ contains an additional vertex colored in white for each element of $G&rsquo;(V)_v$. Note vertices in $G&rsquo;(V)_o$ and vertex $S$ are not corresponded to anything in the <em>vertex cover</em> instance.</p>
+<p>$G&rsquo;$&rsquo;s edges $G&rsquo;(E)$ are the unions of,</p>
+<p>$G&rsquo;(E)_c$ corresponding to edges which connect $G&rsquo;(V)_v$ with $G&rsquo;(V)_e$ in case an edge is covered by a vertex in the <em>vertex cover</em> instance, and $G&rsquo;(E)_S$ contains two edges for each element of $G&rsquo;(V)_v$ connecting it to the special vertex $S$ via $G&rsquo;(V)_o$. Note edges in $G&rsquo;(E)_S$ are not corresponded to anything in the <em>vertex cover</em> instance.</p>
+<p>Define $X&rsquo; = \set{S} \cup G&rsquo;(V)_v \cup G&rsquo;(V)_e$</p>
+<p>Define $k&rsquo; = ||G&rsquo;(V)_e|| + 2(k) + (||G&rsquo;(V)_v||-(k))$ $=$ $||G&rsquo;(V)_e|| + 2(2) + (||G&rsquo;(V)_v||-(2))$ where $k$ is taken from <em>vertex cover</em> instance.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./graph.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="accounting-a-solution-for-vertex-cover">Accounting a Solution for Vertex Cover</h3>
+<p>Let&rsquo;s remark how a solution of encoded <em>Graphical Steiner Tree</em> yields a solution to <em>Vertex Cover</em>.</p>
+<p>By definition of <em>Graphical Steiner Tree</em>, and definition of X, $G&rsquo;(V)_v$ vertices must be connected to $S$. For each, There are two pathways, Either connecting backward via $G&rsquo;(V)_o$ with cost of two edges, or connecting forward via $G&rsquo;(V)_e$. So there is a penalty on connecting backward, and the algorithm is obliged to connect forward as much as possible to reduce the number of edges. In other words, We could reform the algorithm&rsquo;s goal as, In order to connect $X$ in a single component with least possible edges, What is the minimum number of vertices of $G&rsquo;(V)_v$ needs to be connected backward;y?</p>
+<p>The trick here as shown from the example is that we reduced vertices covering edges in <em>vertex cover</em> to vertices connected to other vertices in <em>graphical steiner tree</em>.</p>
+<h2 id="more-rigour-remarks">More Rigour Remarks</h2>
+<p>Now let&rsquo;s present some more rigour remarks of our reduction. For the sake of readability, We intentionally omit the definition of constructed encoded instance of <em>graphical steiner tree</em>. We believe the above discussion suffices to convince the reader. In addition, We assume on behalf of the reader to see why both <em>theorem 1</em> and <em>theorem 2</em> suffices to prove intended NP-completeness.</p>
+<h3 id="theorem-1">Theorem 1</h3>
+<p>If a <em>vertex cover</em> instance is <em>decided</em> to be covered by at most $k$ vertices, Then the encoded <em>graphical steiner tree</em> is decided to be solved by at most $k&rsquo;$ edges.</p>
+<p>Note the definition of $k&rsquo;$ is stated above.</p>
+<h4 id="proof">Proof</h4>
+<p>Let $X \subseteq G(V)$ be the chosen vertices in <em>vertex cover</em> instance which cover all its edges. Let $G&rsquo;(V)_X \subseteq G&rsquo;(V)_v$ containing elements corresponding to $X$.</p>
+<p>Construct $F \subseteq G&rsquo;(E)$ containing,</p>
+<p>One edge from each element of $G&rsquo;(V)_e$ to some element in $G&rsquo;(V)_X$, Two edges from each element of $G&rsquo;(V)_X$ along the path to $S$, and one edge from each element of to $G&rsquo;(V)_v - G&rsquo;(V)_X$ to any remaining $G&rsquo;(V)_e$.</p>
+<p>Clearly, Mentioned edges exist. Also, $X&rsquo;$ (see its definition above) is a single component in the graph, As all needed vertices are connected to $S$.</p>
+<p>By definition, The number of elements in $X$ is at most $k$. Clearly, All mentioned edges of $X&rsquo;$ are distinct from each other. Hence, The number of them is at most $k&rsquo;$ following $F$&rsquo;s construction.</p>
+<h3 id="theorem-2">Theorem 2</h3>
+<p>If the encoded <em>graphical steiner tree</em> is decided to be solved by at most $k&rsquo;$ edges, Then <em>vertex cover</em> instance is <em>decided</em> to be covered by at most $k$ vertices.</p>
+<h4 id="proof-1">Proof</h4>
+<p>Let $X&rsquo;$ be the solution of encoded <em>graphical steiner tree</em>. Since $X&rsquo;$ is a single-component in the graph, All vertices must be connected to $S$ including $G&rsquo;(V)_v$. Those are connected either <em>backward</em> through $G&rsquo;(V)_o$ or forward through $G&rsquo;(V)_e$. Let $G&rsquo;(V)_b$ be those which are connected backwardly. Let $k&rsquo;_b$ be equal to its number of elements.</p>
+<p>Construct $X \subseteq G(V)$ containing vertices in <em>vertex cover</em> instance corresponding to $G&rsquo;(V)_b$ in $X&rsquo;$. It is not hard to see those vertices cover all edges in <em>vertex cover</em>. Clearly, In $X&rsquo;$ each element of $G(V)_e$ is connected to some element in $G(V)_b$, Otherwise they won&rsquo;t be connected to $S$ violating $X&rsquo;$ definition. Hence, every edge in <em>vertex cover</em> must be covered by $X$.</p>
+<p>What is remaining is to prove $X$&rsquo;s cardinality is at most $k$. In other words, We need to show $k&rsquo;_b$ is at most $k$. Assume for the sake of contradiction that $k&rsquo;_b &gt; k$. Then $||X&rsquo;|| \geq ||G&rsquo;(V)_e|| + 2(k&rsquo;_b) + (||G&rsquo;(V)_v||-(k&rsquo;_b))$ $&gt;$ $||G&rsquo;(V)_e|| + 2(k) + (||G&rsquo;(V)_v||-(k))$ $=$ $k&rsquo;$ violating $X&rsquo;$ to be at most $k&rsquo;$ as defined.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I acknowledge that might not be a complete proof, However we believe it suffices for anyone with minimum familiarity of <em>computational complexity theory</em> or <em>NP-completeness</em>. We did really enjoy figuring the trick of reducing covering edges by vertices to connecting vertices to other vertices. After all, The literature is crammed with proved NP-complete problems. I guess a first-look in <em>Computers and Intractability: A Guide to the Theory of NP-completeness</em> by <em>Garey</em> and <em>Johnson</em> delineates this blog post trivial. However, I am happy that I was able to think from a different perspective to figure this problem out by only the aid of <em>Kleinberg</em> and <em>Tardos</em>&rsquo; book.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Kleinberg and Tardos. Algorithm Design. Pearson</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

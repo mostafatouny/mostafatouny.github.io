@@ -1,0 +1,2382 @@
+[
+	{
+		"critic_rating": "91",
+		"id": 1,
+		"release_date": "Jul  2, 2019",
+		"title": "final fantasy xiv: shadowbringers",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "91",
+		"id": 2,
+		"release_date": "Feb 26, 2019",
+		"title": "nier: automata - game of the yorha edition",
+		"user_rating": "8.5"
+	},
+	{
+		"critic_rating": "91",
+		"id": 3,
+		"release_date": "Jan 25, 2019",
+		"title": "resident evil 2",
+		"user_rating": "8.8"
+	},
+	{
+		"critic_rating": "90",
+		"id": 4,
+		"release_date": "Mar 22, 2019",
+		"title": "sekiro: shadows die twice",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "89",
+		"id": 5,
+		"release_date": "Sep  6, 2019",
+		"title": "monster hunter: world - iceborne",
+		"user_rating": "8.4"
+	},
+	{
+		"critic_rating": "89",
+		"id": 6,
+		"release_date": "Feb  4, 2019",
+		"title": "apex legends",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "88",
+		"id": 7,
+		"release_date": "Mar  8, 2019",
+		"title": "devil may cry 5",
+		"user_rating": "8.4"
+	},
+	{
+		"critic_rating": "88",
+		"id": 8,
+		"release_date": "May 21, 2019",
+		"title": "slay the spire",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "87",
+		"id": 9,
+		"release_date": "Oct 11, 2019",
+		"title": "frostpunk: console edition",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "87",
+		"id": 10,
+		"release_date": "Nov 22, 2019",
+		"title": "sid meier's civilization vi",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "86",
+		"id": 11,
+		"release_date": "Jul 12, 2019",
+		"title": "dragon quest builders 2",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "86",
+		"id": 12,
+		"release_date": "Feb 19, 2019",
+		"title": "steins;gate elite",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "86",
+		"id": 13,
+		"release_date": "Sep 20, 2019",
+		"title": "ni no kuni: wrath of the white witch remastered",
+		"user_rating": "8.0"
+	},
+	{
+		"critic_rating": "86",
+		"id": 14,
+		"release_date": "Apr 30, 2019",
+		"title": "fell seal: arbiter's mark",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "86",
+		"id": 15,
+		"release_date": "Mar 26, 2019",
+		"title": "mlb the show 19",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "85",
+		"id": 16,
+		"release_date": "Oct 25, 2019",
+		"title": "the outer worlds",
+		"user_rating": "8.1"
+	},
+	{
+		"critic_rating": "85",
+		"id": 17,
+		"release_date": "May  2, 2019",
+		"title": "va-11 hall-a: cyberpunk bartender action",
+		"user_rating": "5.7"
+	},
+	{
+		"critic_rating": "84",
+		"id": 18,
+		"release_date": "Feb 26, 2019",
+		"title": "dirt rally 2.0",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "84",
+		"id": 19,
+		"release_date": "Jul 23, 2019",
+		"title": "wargroove",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "84",
+		"id": 20,
+		"release_date": "Jun 25, 2019",
+		"title": "f1 2019",
+		"user_rating": "7.6"
+	},
+	{
+		"critic_rating": "84",
+		"id": 21,
+		"release_date": "Sep 19, 2019",
+		"title": "sayonara wild hearts",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "83",
+		"id": 22,
+		"release_date": "Apr  2, 2019",
+		"title": "far: lone sails",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "83",
+		"id": 23,
+		"release_date": "Jun 18, 2019",
+		"title": "bloodstained: ritual of the night",
+		"user_rating": "8.4"
+	},
+	{
+		"critic_rating": "83",
+		"id": 24,
+		"release_date": "Jun 21, 2019",
+		"title": "crash team racing: nitro-fueled",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "83",
+		"id": 25,
+		"release_date": "Jan 29, 2019",
+		"title": "kingdom hearts iii",
+		"user_rating": "8.1"
+	},
+	{
+		"critic_rating": "83",
+		"id": 26,
+		"release_date": "Aug 14, 2019",
+		"title": "no man's sky beyond",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "83",
+		"id": 27,
+		"release_date": "Dec  3, 2019",
+		"title": "fight'n rage",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "83",
+		"id": 28,
+		"release_date": "Apr 16, 2019",
+		"title": "world of warships: legends",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "83",
+		"id": 29,
+		"release_date": "Oct 29, 2019",
+		"title": "disgaea 4 complete+",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "83",
+		"id": 30,
+		"release_date": "Mar  5, 2019",
+		"title": "move or die",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "82",
+		"id": 31,
+		"release_date": "Aug 27, 2019",
+		"title": "wreckfest",
+		"user_rating": "6.8"
+	},
+	{
+		"critic_rating": "82",
+		"id": 32,
+		"release_date": "Oct 15, 2019",
+		"title": "outer wilds",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "82",
+		"id": 33,
+		"release_date": "Mar 12, 2019",
+		"title": "tom clancy's the division 2",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "82",
+		"id": 34,
+		"release_date": "Oct  8, 2019",
+		"title": "yooka-laylee and the impossible lair",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "82",
+		"id": 35,
+		"release_date": "Mar 12, 2019",
+		"title": "ghost of a tale",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "82",
+		"id": 36,
+		"release_date": "Jul 10, 2019",
+		"title": "sairento vr",
+		"user_rating": "4.8"
+	},
+	{
+		"critic_rating": "82",
+		"id": 37,
+		"release_date": "Apr 23, 2019",
+		"title": "mortal kombat 11",
+		"user_rating": "3.3"
+	},
+	{
+		"critic_rating": "82",
+		"id": 38,
+		"release_date": "Aug 27, 2019",
+		"title": "control",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "82",
+		"id": 39,
+		"release_date": "Sep 10, 2019",
+		"title": "efootball pes 2020",
+		"user_rating": "8.1"
+	},
+	{
+		"critic_rating": "82",
+		"id": 40,
+		"release_date": "Nov 26, 2019",
+		"title": "gris",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "82",
+		"id": 41,
+		"release_date": "Nov  8, 2019",
+		"title": "death stranding",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "82",
+		"id": 42,
+		"release_date": "Sep 10, 2019",
+		"title": "the walking dead: the telltale definitive series",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "82",
+		"id": 43,
+		"release_date": "Mar 19, 2019",
+		"title": "the messenger",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "82",
+		"id": 44,
+		"release_date": "Oct 22, 2019",
+		"title": "the legend of heroes: trails of cold steel iii",
+		"user_rating": "8.6"
+	},
+	{
+		"critic_rating": "82",
+		"id": 45,
+		"release_date": "Dec  3, 2019",
+		"title": "life is strange 2: episode 5 - wolves",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "81",
+		"id": 46,
+		"release_date": "May 14, 2019",
+		"title": "a plague tale: innocence",
+		"user_rating": "8.6"
+	},
+	{
+		"critic_rating": "81",
+		"id": 47,
+		"release_date": "Jul 25, 2019",
+		"title": "songbird symphony",
+		"user_rating": "4.6"
+	},
+	{
+		"critic_rating": "81",
+		"id": 48,
+		"release_date": "Apr 30, 2019",
+		"title": "boxvr",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "81",
+		"id": 49,
+		"release_date": "Jan 22, 2019",
+		"title": "futuregrind",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "81",
+		"id": 50,
+		"release_date": "Jun 25, 2019",
+		"title": "samurai shodown",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "81",
+		"id": 51,
+		"release_date": "Sep  3, 2019",
+		"title": "catherine: full body",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "81",
+		"id": 52,
+		"release_date": "Jan 11, 2019",
+		"title": "tales of vesperia: definitive edition",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "81",
+		"id": 53,
+		"release_date": "Oct 15, 2019",
+		"title": "baldur's gate and baldur's gate ii: enhanced editions",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "81",
+		"id": 54,
+		"release_date": "Sep 24, 2019",
+		"title": "l.a. noire: the vr case files",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "80",
+		"id": 55,
+		"release_date": "Sep  3, 2019",
+		"title": "final fantasy viii remastered",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "80",
+		"id": 56,
+		"release_date": "May 28, 2019",
+		"title": "five nights at freddy's vr: help wanted",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "80",
+		"id": 57,
+		"release_date": "May 28, 2019",
+		"title": "blood & truth",
+		"user_rating": "8.0"
+	},
+	{
+		"critic_rating": "80",
+		"id": 58,
+		"release_date": "Sep  3, 2019",
+		"title": "torchlight ii",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "80",
+		"id": 59,
+		"release_date": "Oct 25, 2019",
+		"title": "call of duty: modern warfare",
+		"user_rating": "3.2"
+	},
+	{
+		"critic_rating": "80",
+		"id": 60,
+		"release_date": "Apr 16, 2019",
+		"title": "ghost giant",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "80",
+		"id": 61,
+		"release_date": "Apr  9, 2019",
+		"title": "phoenix wright: ace attorney trilogy",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "80",
+		"id": 62,
+		"release_date": "Feb 15, 2019",
+		"title": "metro exodus",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "80",
+		"id": 63,
+		"release_date": "Jan 18, 2019",
+		"title": "ace combat 7: skies unknown",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "80",
+		"id": 64,
+		"release_date": "Oct  8, 2019",
+		"title": "trine 4: the nightmare prince",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "80",
+		"id": 65,
+		"release_date": "Jul 23, 2019",
+		"title": "date-a-live: rio reincarnation",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "80",
+		"id": 66,
+		"release_date": "May 21, 2019",
+		"title": "dauntless",
+		"user_rating": "3.4"
+	},
+	{
+		"critic_rating": "80",
+		"id": 67,
+		"release_date": "Mar 26, 2019",
+		"title": "the legend of heroes: trails of cold steel",
+		"user_rating": "8.6"
+	},
+	{
+		"critic_rating": "80",
+		"id": 68,
+		"release_date": "Dec 17, 2019",
+		"title": "untitled goose game",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "80",
+		"id": 69,
+		"release_date": "Oct 23, 2019",
+		"title": "lonely mountains: downhill",
+		"user_rating": "4.1"
+	},
+	{
+		"critic_rating": "80",
+		"id": 70,
+		"release_date": "Dec  3, 2019",
+		"title": "arise: a simple story",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "80",
+		"id": 71,
+		"release_date": "Sep 17, 2019",
+		"title": "ai: the somnium files",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "80",
+		"id": 72,
+		"release_date": "Nov  5, 2019",
+		"title": "valfaris",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "80",
+		"id": 73,
+		"release_date": "May 14, 2019",
+		"title": "darkwood",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "80",
+		"id": 74,
+		"release_date": "Dec 10, 2019",
+		"title": "avicii invector",
+		"user_rating": "5.9"
+	},
+	{
+		"critic_rating": "80",
+		"id": 75,
+		"release_date": "Jun 21, 2019",
+		"title": "judgment",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "79",
+		"id": 76,
+		"release_date": "Oct 15, 2019",
+		"title": "children of morta",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "79",
+		"id": 77,
+		"release_date": "Nov 15, 2019",
+		"title": "star wars jedi: fallen order",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "79",
+		"id": 78,
+		"release_date": "Jan 22, 2019",
+		"title": "wandersong",
+		"user_rating": "6.0"
+	},
+	{
+		"critic_rating": "79",
+		"id": 79,
+		"release_date": "Aug 27, 2019",
+		"title": "knights and bikes",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "79",
+		"id": 80,
+		"release_date": "Aug  6, 2019",
+		"title": "gravity ghost: deluxe edition",
+		"user_rating": "2.7"
+	},
+	{
+		"critic_rating": "79",
+		"id": 81,
+		"release_date": "Nov 19, 2019",
+		"title": "the curious tale of the stolen pets",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "79",
+		"id": 82,
+		"release_date": "Feb 26, 2019",
+		"title": "trials rising",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "79",
+		"id": 83,
+		"release_date": "Sep 24, 2019",
+		"title": "fifa 20",
+		"user_rating": "1.1"
+	},
+	{
+		"critic_rating": "79",
+		"id": 84,
+		"release_date": "Oct 22, 2019",
+		"title": "raging loop",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "79",
+		"id": 85,
+		"release_date": "Sep 10, 2019",
+		"title": "wrc 8 fia world rally championship",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "78",
+		"id": 86,
+		"release_date": "Sep 13, 2019",
+		"title": "borderlands 3",
+		"user_rating": "5.7"
+	},
+	{
+		"critic_rating": "78",
+		"id": 87,
+		"release_date": "Sep  5, 2019",
+		"title": "river city girls",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "78",
+		"id": 88,
+		"release_date": "Oct 29, 2019",
+		"title": "yakuza 4 remastered",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "78",
+		"id": 89,
+		"release_date": "Sep 10, 2019",
+		"title": "blasphemous",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "78",
+		"id": 90,
+		"release_date": "May 21, 2019",
+		"title": "atelier lulua: the scion of arland",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "78",
+		"id": 91,
+		"release_date": "Oct 24, 2019",
+		"title": "cat quest ii",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "78",
+		"id": 92,
+		"release_date": "May  7, 2019",
+		"title": "shakedown hawaii",
+		"user_rating": "5.0"
+	},
+	{
+		"critic_rating": "78",
+		"id": 93,
+		"release_date": "Jan 15, 2019",
+		"title": "the walking dead: the telltale series - the final season episode 3: broken toys",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "78",
+		"id": 94,
+		"release_date": "Sep  6, 2019",
+		"title": "nba 2k20",
+		"user_rating": "0.9"
+	},
+	{
+		"critic_rating": "78",
+		"id": 95,
+		"release_date": "Jun  4, 2019",
+		"title": "the legend of heroes: trails of cold steel ii",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "78",
+		"id": 96,
+		"release_date": "Oct 24, 2019",
+		"title": "door kickers: action squad",
+		"user_rating": "7.2"
+	},
+	{
+		"critic_rating": "78",
+		"id": 97,
+		"release_date": "Oct 18, 2019",
+		"title": "megaquarium",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "78",
+		"id": 98,
+		"release_date": "Aug  6, 2019",
+		"title": "age of wonders: planetfall",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "78",
+		"id": 99,
+		"release_date": "Aug  6, 2019",
+		"title": "sagebrush",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "78",
+		"id": 100,
+		"release_date": "Jun 25, 2019",
+		"title": "irony curtain: from matryoshka with love",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "77",
+		"id": 101,
+		"release_date": "Aug 22, 2019",
+		"title": "life is strange 2: episode 4 - faith",
+		"user_rating": "4.9"
+	},
+	{
+		"critic_rating": "77",
+		"id": 102,
+		"release_date": "Oct  8, 2019",
+		"title": "indivisible",
+		"user_rating": "6.8"
+	},
+	{
+		"critic_rating": "77",
+		"id": 103,
+		"release_date": "May 30, 2019",
+		"title": "super cane magic zero",
+		"user_rating": "5.2"
+	},
+	{
+		"critic_rating": "77",
+		"id": 104,
+		"release_date": "Feb 26, 2019",
+		"title": "stellaris: console edition",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "77",
+		"id": 105,
+		"release_date": "Oct 29, 2019",
+		"title": "disney classic games: aladdin and the lion king",
+		"user_rating": "4.8"
+	},
+	{
+		"critic_rating": "77",
+		"id": 106,
+		"release_date": "Oct 18, 2019",
+		"title": "plants vs. zombies: battle for neighborville",
+		"user_rating": "5.7"
+	},
+	{
+		"critic_rating": "77",
+		"id": 107,
+		"release_date": "Nov  5, 2019",
+		"title": "just dance 2020",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "77",
+		"id": 108,
+		"release_date": "Sep 10, 2019",
+		"title": "nhl 20",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "77",
+		"id": 109,
+		"release_date": "Aug 20, 2019",
+		"title": "remnant: from the ashes",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "77",
+		"id": 110,
+		"release_date": "Aug 20, 2019",
+		"title": "yakuza 3 remaster",
+		"user_rating": "7.2"
+	},
+	{
+		"critic_rating": "76",
+		"id": 111,
+		"release_date": "Jun  6, 2019",
+		"title": "motogp 19",
+		"user_rating": "7.6"
+	},
+	{
+		"critic_rating": "76",
+		"id": 112,
+		"release_date": "Feb 19, 2019",
+		"title": "pode",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "76",
+		"id": 113,
+		"release_date": "Sep 27, 2019",
+		"title": "tropico 6",
+		"user_rating": "7.3"
+	},
+	{
+		"critic_rating": "76",
+		"id": 114,
+		"release_date": "Jul 11, 2019",
+		"title": "blazing chrome",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "76",
+		"id": 115,
+		"release_date": "May 31, 2019",
+		"title": "trover saves the universe",
+		"user_rating": "8.0"
+	},
+	{
+		"critic_rating": "76",
+		"id": 116,
+		"release_date": "Sep 19, 2019",
+		"title": "mutazione",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "76",
+		"id": 117,
+		"release_date": "Jul 30, 2019",
+		"title": "madden nfl 20",
+		"user_rating": "1.6"
+	},
+	{
+		"critic_rating": "76",
+		"id": 118,
+		"release_date": "Apr  3, 2019",
+		"title": "borderlands: game of the year edition",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "76",
+		"id": 119,
+		"release_date": "Nov 11, 2019",
+		"title": "romancing saga 3",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "76",
+		"id": 120,
+		"release_date": "Dec  3, 2019",
+		"title": "saga: scarlet grace - ambitions",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "76",
+		"id": 121,
+		"release_date": "Dec  3, 2019",
+		"title": "stardust odyssey",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "75",
+		"id": 122,
+		"release_date": "Sep 24, 2019",
+		"title": "the surge 2",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "75",
+		"id": 123,
+		"release_date": "May 28, 2019",
+		"title": "unruly heroes",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "75",
+		"id": 124,
+		"release_date": "Nov 21, 2019",
+		"title": "deemo reborn",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "75",
+		"id": 125,
+		"release_date": "May  9, 2019",
+		"title": "life is strange 2: episode 3 - wastelands",
+		"user_rating": "5.3"
+	},
+	{
+		"critic_rating": "75",
+		"id": 126,
+		"release_date": "Jul 18, 2019",
+		"title": "etherborn",
+		"user_rating": "7.2"
+	},
+	{
+		"critic_rating": "75",
+		"id": 127,
+		"release_date": "Oct  2, 2019",
+		"title": "carly and the reaperman - escape from the underworld",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "75",
+		"id": 128,
+		"release_date": "Jun 18, 2019",
+		"title": "vacation simulator",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "75",
+		"id": 129,
+		"release_date": "Mar 19, 2019",
+		"title": "fate/extella link",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "75",
+		"id": 130,
+		"release_date": "Jun 11, 2019",
+		"title": "dragon star varnir",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "75",
+		"id": 131,
+		"release_date": "Oct 29, 2019",
+		"title": "atelier ryza: ever darkness & the secret hideout",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "75",
+		"id": 132,
+		"release_date": "Oct  8, 2019",
+		"title": "concrete genie",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "75",
+		"id": 133,
+		"release_date": "Oct 15, 2019",
+		"title": "the ninja saviors: return of the warriors",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "75",
+		"id": 134,
+		"release_date": "Apr 16, 2019",
+		"title": "my time at portia",
+		"user_rating": "4.8"
+	},
+	{
+		"critic_rating": "75",
+		"id": 135,
+		"release_date": "Mar 26, 2019",
+		"title": "the walking dead: the telltale series - the final season episode 4: take us back",
+		"user_rating": "7.1"
+	},
+	{
+		"critic_rating": "75",
+		"id": 136,
+		"release_date": "May 21, 2019",
+		"title": "observation",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "75",
+		"id": 137,
+		"release_date": "Jul  5, 2019",
+		"title": "attack on titan 2: final battle",
+		"user_rating": "5.1"
+	},
+	{
+		"critic_rating": "74",
+		"id": 138,
+		"release_date": "May 21, 2019",
+		"title": "everybody's golf vr",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "74",
+		"id": 139,
+		"release_date": "May 16, 2019",
+		"title": "castlevania anniversary collection",
+		"user_rating": "4.7"
+	},
+	{
+		"critic_rating": "74",
+		"id": 140,
+		"release_date": "Aug 20, 2019",
+		"title": "rad",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "74",
+		"id": 141,
+		"release_date": "Aug 13, 2019",
+		"title": "ancestors legacy",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "74",
+		"id": 142,
+		"release_date": "Oct  8, 2019",
+		"title": "the alliance alive hd remastered",
+		"user_rating": "3.8"
+	},
+	{
+		"critic_rating": "74",
+		"id": 143,
+		"release_date": "May 28, 2019",
+		"title": "lapis x labyrinth",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "74",
+		"id": 144,
+		"release_date": "Jul 16, 2019",
+		"title": "198x",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "74",
+		"id": 145,
+		"release_date": "May  7, 2019",
+		"title": "puyo puyo champions",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "74",
+		"id": 146,
+		"release_date": "Jun 11, 2019",
+		"title": "contra anniversary collection",
+		"user_rating": "6.0"
+	},
+	{
+		"critic_rating": "74",
+		"id": 147,
+		"release_date": "Jun  4, 2019",
+		"title": "the elder scrolls online: elsweyr",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "74",
+		"id": 148,
+		"release_date": "Mar 19, 2019",
+		"title": "snk 40th anniversary collection",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "73",
+		"id": 149,
+		"release_date": "Jan 24, 2019",
+		"title": "life is strange 2: episode 2 - rules",
+		"user_rating": "5.0"
+	},
+	{
+		"critic_rating": "73",
+		"id": 150,
+		"release_date": "Sep  3, 2019",
+		"title": "project nimbus: code mirai",
+		"user_rating": "5.5"
+	},
+	{
+		"critic_rating": "73",
+		"id": 151,
+		"release_date": "Jan 15, 2019",
+		"title": "onimusha: warlords",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "73",
+		"id": 152,
+		"release_date": "May 29, 2019",
+		"title": "cricket 19",
+		"user_rating": "8.0"
+	},
+	{
+		"critic_rating": "73",
+		"id": 153,
+		"release_date": "Oct  1, 2019",
+		"title": "one night stand",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "73",
+		"id": 154,
+		"release_date": "Jul 31, 2019",
+		"title": "bear with me: the complete collection",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "73",
+		"id": 155,
+		"release_date": "Apr  9, 2019",
+		"title": "vaporum",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "73",
+		"id": 156,
+		"release_date": "Oct  1, 2019",
+		"title": "destiny 2: shadowkeep",
+		"user_rating": "5.9"
+	},
+	{
+		"critic_rating": "73",
+		"id": 157,
+		"release_date": "Oct 11, 2019",
+		"title": "grid",
+		"user_rating": "5.2"
+	},
+	{
+		"critic_rating": "73",
+		"id": 158,
+		"release_date": "Dec  5, 2019",
+		"title": "star ocean: first departure r",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "73",
+		"id": 159,
+		"release_date": "Nov 14, 2019",
+		"title": "sparklite",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "73",
+		"id": 160,
+		"release_date": "Dec  3, 2019",
+		"title": "heroland",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "72",
+		"id": 161,
+		"release_date": "Feb  5, 2019",
+		"title": "monster energy supercross - the official videogame 2",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "72",
+		"id": 162,
+		"release_date": "Jul 30, 2019",
+		"title": "the blackout club",
+		"user_rating": "5.5"
+	},
+	{
+		"critic_rating": "72",
+		"id": 163,
+		"release_date": "May 21, 2019",
+		"title": "team sonic racing",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "72",
+		"id": 164,
+		"release_date": "Nov  1, 2019",
+		"title": "citadel: forged with fire",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "72",
+		"id": 165,
+		"release_date": "Nov  8, 2019",
+		"title": "need for speed heat",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "72",
+		"id": 166,
+		"release_date": "Mar 29, 2019",
+		"title": "assassin's creed iii remastered",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "72",
+		"id": 167,
+		"release_date": "Sep 10, 2019",
+		"title": "greedfall",
+		"user_rating": "8.0"
+	},
+	{
+		"critic_rating": "72",
+		"id": 168,
+		"release_date": "Dec  3, 2019",
+		"title": "tools up!",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "72",
+		"id": 169,
+		"release_date": "Jul  1, 2019",
+		"title": "they are billions",
+		"user_rating": "4.5"
+	},
+	{
+		"critic_rating": "72",
+		"id": 170,
+		"release_date": "Nov  5, 2019",
+		"title": "audica",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "72",
+		"id": 171,
+		"release_date": "Mar  1, 2019",
+		"title": "dead or alive 6",
+		"user_rating": "5.4"
+	},
+	{
+		"critic_rating": "72",
+		"id": 172,
+		"release_date": "Oct 15, 2019",
+		"title": "planescape: torment: enhanced edition / icewind dale: enhanced edition",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "72",
+		"id": 173,
+		"release_date": "Dec  3, 2019",
+		"title": "simulacra",
+		"user_rating": "2.1"
+	},
+	{
+		"critic_rating": "72",
+		"id": 174,
+		"release_date": "Apr  9, 2019",
+		"title": "zanki zero: last beginning",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "72",
+		"id": 175,
+		"release_date": "Dec 17, 2019",
+		"title": "wattam",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "72",
+		"id": 176,
+		"release_date": "Oct 17, 2019",
+		"title": "the jackbox party pack 6",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "71",
+		"id": 177,
+		"release_date": "Apr 18, 2019",
+		"title": "god's trigger",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "71",
+		"id": 178,
+		"release_date": "Feb 15, 2019",
+		"title": "far cry new dawn",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "71",
+		"id": 179,
+		"release_date": "Apr 26, 2019",
+		"title": "days gone",
+		"user_rating": "8.1"
+	},
+	{
+		"critic_rating": "71",
+		"id": 180,
+		"release_date": "Jun 19, 2019",
+		"title": "leisure suit larry: wet dreams don't dry",
+		"user_rating": "6.8"
+	},
+	{
+		"critic_rating": "71",
+		"id": 181,
+		"release_date": "Feb 19, 2019",
+		"title": "death end re;quest",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "71",
+		"id": 182,
+		"release_date": "Feb  5, 2019",
+		"title": "melbits world",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "71",
+		"id": 183,
+		"release_date": "Feb  8, 2019",
+		"title": "god eater 3",
+		"user_rating": "7.4"
+	},
+	{
+		"critic_rating": "71",
+		"id": 184,
+		"release_date": "Jan 29, 2019",
+		"title": "the hong kong massacre",
+		"user_rating": "5.9"
+	},
+	{
+		"critic_rating": "71",
+		"id": 185,
+		"release_date": "Sep 20, 2019",
+		"title": "the sojourn",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "71",
+		"id": 186,
+		"release_date": "Apr 16, 2019",
+		"title": "heaven's vault",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "70",
+		"id": 187,
+		"release_date": "Oct 29, 2019",
+		"title": "afterparty",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "70",
+		"id": 188,
+		"release_date": "Jan 22, 2019",
+		"title": "a fisherman's tale",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "70",
+		"id": 189,
+		"release_date": "Nov 22, 2019",
+		"title": "lost ember",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "70",
+		"id": 190,
+		"release_date": "Feb 12, 2019",
+		"title": "hyper jam",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "70",
+		"id": 191,
+		"release_date": "Sep 27, 2019",
+		"title": "code vein",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "70",
+		"id": 192,
+		"release_date": "Feb 14, 2019",
+		"title": "degrees of separation",
+		"user_rating": "5.4"
+	},
+	{
+		"critic_rating": "70",
+		"id": 193,
+		"release_date": "Sep 10, 2019",
+		"title": "nascar heat 4",
+		"user_rating": "5.1"
+	},
+	{
+		"critic_rating": "70",
+		"id": 194,
+		"release_date": "Oct 24, 2019",
+		"title": "dark devotion",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "70",
+		"id": 195,
+		"release_date": "Apr  9, 2019",
+		"title": "falcon age",
+		"user_rating": "6.0"
+	},
+	{
+		"critic_rating": "70",
+		"id": 196,
+		"release_date": "Aug  6, 2019",
+		"title": "the angry birds movie 2 vr: under pressure",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "69",
+		"id": 197,
+		"release_date": "Dec  6, 2019",
+		"title": "ancestors: the humankind odyssey",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "69",
+		"id": 198,
+		"release_date": "Aug 30, 2019",
+		"title": "the dark pictures - man of medan",
+		"user_rating": "5.9"
+	},
+	{
+		"critic_rating": "69",
+		"id": 199,
+		"release_date": "Mar 20, 2019",
+		"title": "chocobo's mystery dungeon: every buddy!",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "69",
+		"id": 200,
+		"release_date": "Jan 11, 2019",
+		"title": "hitman hd enhanced collection",
+		"user_rating": "2.1"
+	},
+	{
+		"critic_rating": "69",
+		"id": 201,
+		"release_date": "Feb 12, 2019",
+		"title": "the liar princess and the blind prince",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "69",
+		"id": 202,
+		"release_date": "Aug 19, 2019",
+		"title": "erica",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "69",
+		"id": 203,
+		"release_date": "Mar 12, 2019",
+		"title": "mx vs. atv all out: anniversary edition",
+		"user_rating": "3.6"
+	},
+	{
+		"critic_rating": "69",
+		"id": 204,
+		"release_date": "Feb  5, 2019",
+		"title": "the mage's tale",
+		"user_rating": "5.0"
+	},
+	{
+		"critic_rating": "69",
+		"id": 205,
+		"release_date": "Aug 22, 2019",
+		"title": "oninaki",
+		"user_rating": "5.3"
+	},
+	{
+		"critic_rating": "69",
+		"id": 206,
+		"release_date": "Apr 11, 2019",
+		"title": "earth defense force: iron rain",
+		"user_rating": "5.3"
+	},
+	{
+		"critic_rating": "69",
+		"id": 207,
+		"release_date": "Mar 26, 2019",
+		"title": "skyworld",
+		"user_rating": "5.2"
+	},
+	{
+		"critic_rating": "69",
+		"id": 208,
+		"release_date": "Jul  5, 2019",
+		"title": "sea of solitude",
+		"user_rating": "6.8"
+	},
+	{
+		"critic_rating": "68",
+		"id": 209,
+		"release_date": "May 28, 2019",
+		"title": "layers of fear 2",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "68",
+		"id": 210,
+		"release_date": "Nov 19, 2019",
+		"title": "shenmue iii",
+		"user_rating": "7.9"
+	},
+	{
+		"critic_rating": "68",
+		"id": 211,
+		"release_date": "Apr 17, 2019",
+		"title": "truberbrook",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "68",
+		"id": 212,
+		"release_date": "Jul 26, 2019",
+		"title": "kill la kill: if",
+		"user_rating": "7.6"
+	},
+	{
+		"critic_rating": "68",
+		"id": 213,
+		"release_date": "Mar  4, 2019",
+		"title": "assassin's creed odyssey: story arc 1 - legacy of the first blade: episode 3",
+		"user_rating": "3.0"
+	},
+	{
+		"critic_rating": "68",
+		"id": 214,
+		"release_date": "Mar 12, 2019",
+		"title": "the wizards: enhanced edition",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "68",
+		"id": 215,
+		"release_date": "Jun  4, 2019",
+		"title": "effie",
+		"user_rating": "6.8"
+	},
+	{
+		"critic_rating": "68",
+		"id": 216,
+		"release_date": "Jan 15, 2019",
+		"title": "smoke and sacrifice",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "68",
+		"id": 217,
+		"release_date": "Oct 29, 2019",
+		"title": "close to the sun",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "68",
+		"id": 218,
+		"release_date": "Aug 27, 2019",
+		"title": "mxgp 2019",
+		"user_rating": "2.0"
+	},
+	{
+		"critic_rating": "67",
+		"id": 219,
+		"release_date": "Apr 12, 2019",
+		"title": "giga wrecker alt.",
+		"user_rating": "2.0"
+	},
+	{
+		"critic_rating": "67",
+		"id": 220,
+		"release_date": "Oct 25, 2019",
+		"title": "medievil",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "67",
+		"id": 221,
+		"release_date": "Nov  1, 2019",
+		"title": "spirit of the north",
+		"user_rating": "8.1"
+	},
+	{
+		"critic_rating": "67",
+		"id": 222,
+		"release_date": "Aug 27, 2019",
+		"title": "crystar",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "67",
+		"id": 223,
+		"release_date": "Mar 26, 2019",
+		"title": "nelke & the legendary alchemists: ateliers of the new world",
+		"user_rating": "3.5"
+	},
+	{
+		"critic_rating": "67",
+		"id": 224,
+		"release_date": "Feb 19, 2019",
+		"title": "unexplored: unlocked edition",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "67",
+		"id": 225,
+		"release_date": "Jun 25, 2019",
+		"title": "we. the revolution",
+		"user_rating": "2.0"
+	},
+	{
+		"critic_rating": "67",
+		"id": 226,
+		"release_date": "Oct  8, 2019",
+		"title": "the bradwell conspiracy",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "67",
+		"id": 227,
+		"release_date": "Jun 18, 2019",
+		"title": "mini-mech mayhem",
+		"user_rating": "5.5"
+	},
+	{
+		"critic_rating": "67",
+		"id": 228,
+		"release_date": "May 14, 2019",
+		"title": "rage 2",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "67",
+		"id": 229,
+		"release_date": "Jul 19, 2019",
+		"title": "redeemer: enhanced edition",
+		"user_rating": "7.2"
+	},
+	{
+		"critic_rating": "67",
+		"id": 230,
+		"release_date": "Apr 16, 2019",
+		"title": "world war z",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "66",
+		"id": 231,
+		"release_date": "Dec  3, 2019",
+		"title": "neverwinter nights: enhanced edition",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "66",
+		"id": 232,
+		"release_date": "Mar  5, 2019",
+		"title": "beat cop",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "66",
+		"id": 233,
+		"release_date": "Oct  4, 2019",
+		"title": "ghostbusters: the video game remastered",
+		"user_rating": "6.4"
+	},
+	{
+		"critic_rating": "66",
+		"id": 234,
+		"release_date": "Feb 15, 2019",
+		"title": "toejam & earl: back in the groove",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "66",
+		"id": 235,
+		"release_date": "May 21, 2019",
+		"title": "american fugitive",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "66",
+		"id": 236,
+		"release_date": "Jun  9, 2019",
+		"title": "riverbond",
+		"user_rating": "5.1"
+	},
+	{
+		"critic_rating": "65",
+		"id": 237,
+		"release_date": "Jan 22, 2019",
+		"title": "senran kagura burst re:newal",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "65",
+		"id": 238,
+		"release_date": "Oct 29, 2019",
+		"title": "dusk diver",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "65",
+		"id": 239,
+		"release_date": "May 14, 2019",
+		"title": "sniper elite v2 remastered",
+		"user_rating": "3.6"
+	},
+	{
+		"critic_rating": "65",
+		"id": 240,
+		"release_date": "Feb 12, 2019",
+		"title": "conarium",
+		"user_rating": "3.1"
+	},
+	{
+		"critic_rating": "65",
+		"id": 241,
+		"release_date": "Nov 22, 2019",
+		"title": "sniper ghost warrior contracts",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "65",
+		"id": 242,
+		"release_date": "Dec  3, 2019",
+		"title": "blair witch",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "64",
+		"id": 243,
+		"release_date": "Feb 12, 2019",
+		"title": "the king's bird",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "64",
+		"id": 244,
+		"release_date": "Jan 29, 2019",
+		"title": "genesis alpha one",
+		"user_rating": "3.8"
+	},
+	{
+		"critic_rating": "64",
+		"id": 245,
+		"release_date": "Mar 12, 2019",
+		"title": "the caligula effect: overdose",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "64",
+		"id": 246,
+		"release_date": "Mar 26, 2019",
+		"title": "xenon racer",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "64",
+		"id": 247,
+		"release_date": "Feb 19, 2019",
+		"title": "chromagun vr",
+		"user_rating": "5.1"
+	},
+	{
+		"critic_rating": "64",
+		"id": 248,
+		"release_date": "Jun 25, 2019",
+		"title": "the sinking city",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "64",
+		"id": 249,
+		"release_date": "Nov 26, 2019",
+		"title": "story of a gladiator",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "64",
+		"id": 250,
+		"release_date": "Apr 16, 2019",
+		"title": "snooker 19",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "63",
+		"id": 251,
+		"release_date": "Jul 26, 2019",
+		"title": "wolfenstein: youngblood",
+		"user_rating": "2.6"
+	},
+	{
+		"critic_rating": "63",
+		"id": 252,
+		"release_date": "Aug  6, 2019",
+		"title": "metal wolf chaos xd",
+		"user_rating": "6.2"
+	},
+	{
+		"critic_rating": "63",
+		"id": 253,
+		"release_date": "Aug 16, 2019",
+		"title": "subdivision infinity dx",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "63",
+		"id": 254,
+		"release_date": "Apr 18, 2019",
+		"title": "arcade classics anniversary collection",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "63",
+		"id": 255,
+		"release_date": "Mar 26, 2019",
+		"title": "space junkies",
+		"user_rating": "3.4"
+	},
+	{
+		"critic_rating": "63",
+		"id": 256,
+		"release_date": "Jun 18, 2019",
+		"title": "citizens of space",
+		"user_rating": "6.0"
+	},
+	{
+		"critic_rating": "63",
+		"id": 257,
+		"release_date": "Oct 10, 2019",
+		"title": "a knight's quest",
+		"user_rating": "2.4"
+	},
+	{
+		"critic_rating": "63",
+		"id": 258,
+		"release_date": "Feb  1, 2019",
+		"title": "8-bit hordes",
+		"user_rating": "3.0"
+	},
+	{
+		"critic_rating": "63",
+		"id": 259,
+		"release_date": "Oct 17, 2019",
+		"title": "travis strikes again: no more heroes - complete edition",
+		"user_rating": "7.8"
+	},
+	{
+		"critic_rating": "63",
+		"id": 260,
+		"release_date": "Mar  5, 2019",
+		"title": "the occupation",
+		"user_rating": "3.5"
+	},
+	{
+		"critic_rating": "63",
+		"id": 261,
+		"release_date": "Jun  4, 2019",
+		"title": "warhammer: chaosbane",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "63",
+		"id": 262,
+		"release_date": "May 16, 2019",
+		"title": "bubsy: paws on fire",
+		"user_rating": "7.6"
+	},
+	{
+		"critic_rating": "63",
+		"id": 263,
+		"release_date": "Sep 10, 2019",
+		"title": "battlewake",
+		"user_rating": "4.5"
+	},
+	{
+		"critic_rating": "62",
+		"id": 264,
+		"release_date": "Sep 17, 2019",
+		"title": "groundhog day: like father like son",
+		"user_rating": "5.0"
+	},
+	{
+		"critic_rating": "62",
+		"id": 265,
+		"release_date": "Jan 15, 2019",
+		"title": "assassin's creed odyssey: story arc 1 - legacy of the first blade: episode 2",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "62",
+		"id": 266,
+		"release_date": "Apr  9, 2019",
+		"title": "dangerous driving",
+		"user_rating": "3.6"
+	},
+	{
+		"critic_rating": "62",
+		"id": 267,
+		"release_date": "Oct 29, 2019",
+		"title": "super monkey ball: banana blitz hd",
+		"user_rating": "5.5"
+	},
+	{
+		"critic_rating": "62",
+		"id": 268,
+		"release_date": "Feb 13, 2019",
+		"title": "intruders: hide and seek",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "62",
+		"id": 269,
+		"release_date": "Mar 26, 2019",
+		"title": "outward",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "62",
+		"id": 270,
+		"release_date": "Nov  5, 2019",
+		"title": "conception plus: maidens of the twelve stars",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "61",
+		"id": 271,
+		"release_date": "Oct 17, 2019",
+		"title": "monkey king: hero is back",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "61",
+		"id": 272,
+		"release_date": "Aug 22, 2019",
+		"title": "black desert",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "61",
+		"id": 273,
+		"release_date": "Aug 14, 2019",
+		"title": "bus simulator",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "60",
+		"id": 274,
+		"release_date": "Sep 16, 2019",
+		"title": "massira",
+		"user_rating": "5.5"
+	},
+	{
+		"critic_rating": "60",
+		"id": 275,
+		"release_date": "Apr  2, 2019",
+		"title": "power rangers: battle for the grid",
+		"user_rating": "6.6"
+	},
+	{
+		"critic_rating": "60",
+		"id": 276,
+		"release_date": "Nov 28, 2019",
+		"title": "asterix & obelix xxl 3: the crystal menhir",
+		"user_rating": "2.1"
+	},
+	{
+		"critic_rating": "60",
+		"id": 277,
+		"release_date": "Aug 20, 2019",
+		"title": "truck racing championship",
+		"user_rating": "2.3"
+	},
+	{
+		"critic_rating": "60",
+		"id": 278,
+		"release_date": "May 28, 2019",
+		"title": "golem gates",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "60",
+		"id": 279,
+		"release_date": "Mar 26, 2019",
+		"title": "final fantasy xv: episode ardyn",
+		"user_rating": "8.5"
+	},
+	{
+		"critic_rating": "60",
+		"id": 280,
+		"release_date": "Jun 25, 2019",
+		"title": "super neptunia rpg",
+		"user_rating": "3.4"
+	},
+	{
+		"critic_rating": "59",
+		"id": 281,
+		"release_date": "Nov 19, 2019",
+		"title": "narcos: rise of the cartels",
+		"user_rating": "2.2"
+	},
+	{
+		"critic_rating": "59",
+		"id": 282,
+		"release_date": "Jan 17, 2019",
+		"title": "yiik: a postmodern rpg",
+		"user_rating": "4.0"
+	},
+	{
+		"critic_rating": "59",
+		"id": 283,
+		"release_date": "Apr 16, 2019",
+		"title": "immortal legacy: the jade cipher",
+		"user_rating": "7.5"
+	},
+	{
+		"critic_rating": "59",
+		"id": 284,
+		"release_date": "Sep 17, 2019",
+		"title": "rebel cops",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "59",
+		"id": 285,
+		"release_date": "Nov  5, 2019",
+		"title": "blacksad: under the skin",
+		"user_rating": "5.4"
+	},
+	{
+		"critic_rating": "59",
+		"id": 286,
+		"release_date": "Jul 16, 2019",
+		"title": "darksiders iii: keepers of the void",
+		"user_rating": "1.8"
+	},
+	{
+		"critic_rating": "59",
+		"id": 287,
+		"release_date": "Mar  5, 2019",
+		"title": "attack of the earthlings",
+		"user_rating": "2.0"
+	},
+	{
+		"critic_rating": "59",
+		"id": 288,
+		"release_date": "Sep 10, 2019",
+		"title": "utawarerumono zan",
+		"user_rating": "3.8"
+	},
+	{
+		"critic_rating": "59",
+		"id": 289,
+		"release_date": "Apr 18, 2019",
+		"title": "our world is ended.",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "59",
+		"id": 290,
+		"release_date": "Nov 15, 2019",
+		"title": "golem",
+		"user_rating": "7.7"
+	},
+	{
+		"critic_rating": "58",
+		"id": 291,
+		"release_date": "Jul 19, 2019",
+		"title": "telefrag vr",
+		"user_rating": "2.3"
+	},
+	{
+		"critic_rating": "58",
+		"id": 292,
+		"release_date": "Mar 15, 2019",
+		"title": "one piece: world seeker",
+		"user_rating": "4.1"
+	},
+	{
+		"critic_rating": "58",
+		"id": 293,
+		"release_date": "Apr 22, 2019",
+		"title": "jupiter & mars",
+		"user_rating": "4.9"
+	},
+	{
+		"critic_rating": "58",
+		"id": 294,
+		"release_date": "Nov 13, 2019",
+		"title": "last labyrinth",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "58",
+		"id": 295,
+		"release_date": "Jul 30, 2019",
+		"title": "solo: islands of the heart",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "58",
+		"id": 296,
+		"release_date": "Feb 19, 2019",
+		"title": "dick wilde 2",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "58",
+		"id": 297,
+		"release_date": "Aug  2, 2019",
+		"title": "the church in the darkness",
+		"user_rating": "4.2"
+	},
+	{
+		"critic_rating": "58",
+		"id": 298,
+		"release_date": "Nov 15, 2019",
+		"title": "tokyo ghoul: re call to exist",
+		"user_rating": "6.3"
+	},
+	{
+		"critic_rating": "57",
+		"id": 299,
+		"release_date": "Jul  4, 2019",
+		"title": "stranger things 3: the game",
+		"user_rating": "4.5"
+	},
+	{
+		"critic_rating": "57",
+		"id": 300,
+		"release_date": "Feb 26, 2019",
+		"title": "the lego movie 2 videogame",
+		"user_rating": "1.8"
+	},
+	{
+		"critic_rating": "57",
+		"id": 301,
+		"release_date": "Oct  1, 2019",
+		"title": "readyset heroes",
+		"user_rating": "6.7"
+	},
+	{
+		"critic_rating": "57",
+		"id": 302,
+		"release_date": "Feb 15, 2019",
+		"title": "dreamworks dragons dawn of new riders",
+		"user_rating": "4.1"
+	},
+	{
+		"critic_rating": "56",
+		"id": 303,
+		"release_date": "Feb 15, 2019",
+		"title": "jump force",
+		"user_rating": "4.1"
+	},
+	{
+		"critic_rating": "56",
+		"id": 304,
+		"release_date": "Jun 19, 2019",
+		"title": "another sight",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "56",
+		"id": 305,
+		"release_date": "Jul  2, 2019",
+		"title": "tour de france 2019",
+		"user_rating": "4.7"
+	},
+	{
+		"critic_rating": "56",
+		"id": 306,
+		"release_date": "Oct  1, 2019",
+		"title": "tom clancy's ghost recon: breakpoint",
+		"user_rating": "2.7"
+	},
+	{
+		"critic_rating": "55",
+		"id": 307,
+		"release_date": "Oct 18, 2019",
+		"title": "ice age: scrat's nutty adventure",
+		"user_rating": "5.6"
+	},
+	{
+		"critic_rating": "55",
+		"id": 308,
+		"release_date": "Nov 12, 2019",
+		"title": "vr ping pong pro",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "55",
+		"id": 309,
+		"release_date": "Jul  2, 2019",
+		"title": "i'm hungry",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "55",
+		"id": 310,
+		"release_date": "Apr  2, 2019",
+		"title": "sword & fairy 6",
+		"user_rating": "3.4"
+	},
+	{
+		"critic_rating": "55",
+		"id": 311,
+		"release_date": "Apr 30, 2019",
+		"title": "fade to silence",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "54",
+		"id": 312,
+		"release_date": "Feb 22, 2019",
+		"title": "anthem",
+		"user_rating": "3.4"
+	},
+	{
+		"critic_rating": "54",
+		"id": 313,
+		"release_date": "Mar 26, 2019",
+		"title": "the princess guide",
+		"user_rating": "4.5"
+	},
+	{
+		"critic_rating": "53",
+		"id": 314,
+		"release_date": "Mar 12, 2019",
+		"title": "rico",
+		"user_rating": "2.2"
+	},
+	{
+		"critic_rating": "53",
+		"id": 315,
+		"release_date": "Jul 10, 2019",
+		"title": "solseraph",
+		"user_rating": "3.0"
+	},
+	{
+		"critic_rating": "53",
+		"id": 316,
+		"release_date": "Jun 25, 2019",
+		"title": "monster jam steel titans",
+		"user_rating": "3.9"
+	},
+	{
+		"critic_rating": "52",
+		"id": 317,
+		"release_date": "Nov 12, 2019",
+		"title": "doctor who: the edge of time",
+		"user_rating": "6.5"
+	},
+	{
+		"critic_rating": "52",
+		"id": 318,
+		"release_date": "Feb 12, 2019",
+		"title": "eden-tomorrow",
+		"user_rating": "5.3"
+	},
+	{
+		"critic_rating": "52",
+		"id": 319,
+		"release_date": "Sep 24, 2019",
+		"title": "contra: rogue corps",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "52",
+		"id": 320,
+		"release_date": "Feb 28, 2019",
+		"title": "fimbul",
+		"user_rating": "1.5"
+	},
+	{
+		"critic_rating": "52",
+		"id": 321,
+		"release_date": "Jan 15, 2019",
+		"title": "the grand tour game",
+		"user_rating": "6.1"
+	},
+	{
+		"critic_rating": "50",
+		"id": 322,
+		"release_date": "Jul 26, 2019",
+		"title": "wolfenstein: cyberpilot",
+		"user_rating": "3.7"
+	},
+	{
+		"critic_rating": "49",
+		"id": 323,
+		"release_date": "Jan 15, 2019",
+		"title": "vane",
+		"user_rating": "5.3"
+	},
+	{
+		"critic_rating": "47",
+		"id": 324,
+		"release_date": "Aug 27, 2019",
+		"title": "decay of logos",
+		"user_rating": "5.0"
+	},
+	{
+		"critic_rating": "47",
+		"id": 325,
+		"release_date": "Dec 10, 2019",
+		"title": "terminator: resistance",
+		"user_rating": "6.9"
+	},
+	{
+		"critic_rating": "47",
+		"id": 326,
+		"release_date": "Oct 11, 2019",
+		"title": "aeternoblade ii",
+		"user_rating": "5.4"
+	},
+	{
+		"critic_rating": "47",
+		"id": 327,
+		"release_date": "Nov 12, 2019",
+		"title": "bee simulator",
+		"user_rating": "7.0"
+	},
+	{
+		"critic_rating": "46",
+		"id": 328,
+		"release_date": "Feb  5, 2019",
+		"title": "away: journey to the unexpected",
+		"user_rating": "4.3"
+	},
+	{
+		"critic_rating": "45",
+		"id": 329,
+		"release_date": "Jul 26, 2019",
+		"title": "tetsumo party",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "45",
+		"id": 330,
+		"release_date": "Mar 26, 2019",
+		"title": "generation zero",
+		"user_rating": "5.8"
+	},
+	{
+		"critic_rating": "44",
+		"id": 331,
+		"release_date": "Jul 17, 2019",
+		"title": "submersed",
+		"user_rating": "4.4"
+	},
+	{
+		"critic_rating": "43",
+		"id": 332,
+		"release_date": "Feb  5, 2019",
+		"title": "riot: civil unrest",
+		"user_rating": "2.1"
+	},
+	{
+		"critic_rating": "43",
+		"id": 333,
+		"release_date": "Oct 22, 2019",
+		"title": "wwe 2k20",
+		"user_rating": "1.4"
+	},
+	{
+		"critic_rating": "41",
+		"id": 334,
+		"release_date": "May 24, 2019",
+		"title": "dollhouse",
+		"user_rating": "4.7"
+	},
+	{
+		"critic_rating": "39",
+		"id": 335,
+		"release_date": "Mar  5, 2019",
+		"title": "crimson keep",
+		"user_rating": "tbd"
+	},
+	{
+		"critic_rating": "39",
+		"id": 336,
+		"release_date": "Oct 15, 2019",
+		"title": "zombieland: double tap - road trip",
+		"user_rating": "4.6"
+	},
+	{
+		"critic_rating": "37",
+		"id": 337,
+		"release_date": "Mar  5, 2019",
+		"title": "left alive",
+		"user_rating": "8.3"
+	},
+	{
+		"critic_rating": "36",
+		"id": 338,
+		"release_date": "Mar  5, 2019",
+		"title": "eternity: the last unicorn",
+		"user_rating": "3.8"
+	},
+	{
+		"critic_rating": "31",
+		"id": 339,
+		"release_date": "May 30, 2019",
+		"title": "dayz",
+		"user_rating": "2.8"
+	},
+	{
+		"critic_rating": "31",
+		"id": 340,
+		"release_date": "Mar 29, 2019",
+		"title": "where the bees make honey",
+		"user_rating": "3.2"
+	}
+]

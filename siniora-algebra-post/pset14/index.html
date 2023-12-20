@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 20, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Problems 1 We use Theorem 14.1 (ideal test) (page 249).
+For $r_0 a, r_1 a \in \langle a \rangle$, We have $r_0 a - r_1 a = (r_0 - r_1) a \in \langle a \rangle$ by distributivity and $r_0 - r_1 \in R$." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/siniora-algebra-post/pset14/" />
+<link rel="canonical" href="https://mostafatouny.github.io/siniora-algebra-post/pset14/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/siniora-algebra-post/pset14/" />
+<meta property="og:title" content="Chapter 14 | Mostafa Touny" />
+<meta property="og:description" content="Problems 1 We use Theorem 14.1 (ideal test) (page 249).
+For $r_0 a, r_1 a \in \langle a \rangle$, We have $r_0 a - r_1 a = (r_0 - r_1) a \in \langle a \rangle$ by distributivity and $r_0 - r_1 \in R$." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-12-18T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-12-18T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Chapter 14 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="1de1df1c12202bbab2c10bf8c04788d5" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Chapter 14</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 18, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="problems" class="unnumbered">Problems</h2>
+<h3 id="section" class="unnumbered">1</h3>
+<p>We use <em>Theorem 14.1</em> (ideal test) (page 249).</p>
+<p>For $r_0 a, r_1 a \in \langle a \rangle$, We have $r_0 a - r_1 a = (r_0 - r_1) a \in \langle a \rangle$ by distributivity and $r_0 - r_1 \in R$.</p>
+<p>For $r \in R$ and $r_0 a \in \langle a \rangle$, We have $r(r_0 a) = (rr_0)a \in \langle a \rangle$ by associativity and $r r_0 \in R$. Also $(r_0 a)r = r_0(ar) = r_0(ra) = (r_0 r) a$ by associativity and commutativity and $r_0 r \in R$.</p>
+<h3 id="section-1" class="unnumbered">3</h3>
+<p>The proof $I$ is ideal by <em>Theorem 14.1</em> (ideal test) (page 249) is nearly identical to <em>Ex. 1</em>.</p>
+<p>Let $J$ be an arbitrary ideal that contains $a_1,a_2, \dots, a_n$. Then by definition $r a_i \in J$. Since it&rsquo;s a group $r_1 a_1 + \dots + r_n a_n \in J$ for any $r_i \in R$.</p>
+<h3 id="section-2" class="unnumbered">4</h3>
+<p>By the <em>subring test</em> (page 230), $S = \{ (x,x) \mid x \in Z \}$ is a subring as $(x,x) - (y,y) = (x-y, x-y) \in S$ and $(x,x) (y,y) = (xy,xy) \in S$.</p>
+<p>$S$ is not an ideal as $(1,1) \in S$ and $(1,2) \in \mathbb{Z} \oplus \mathbb{Z}$ but $(1,2) (1,1) = (1,2) \notin S$. In other words, $(1,1)$ did not absorb $(1,2)$.</p>
+<h3 id="section-3" class="unnumbered">5</h3>
+<p>We use <em>Theorem 12.3</em> (subring test) (page 230). $(a+bi) - (a&rsquo;+b&rsquo;i) = (a-a&rsquo;) + (b-b&rsquo;)i \in S$ as $b-b&rsquo;$ is even. $(a+bi) (a&rsquo;+b&rsquo;i) = (aa&rsquo; - bb&rsquo;) + (ab&rsquo; + a&rsquo;b)i \in S$ as $ab&rsquo; + a&rsquo;b$ is even.</p>
+<p>$1 + 2i \in S$ and $1 + 1i \in Z[i]$ but $(1 + 1i)(1 + 2i) = -1 + 3i \not\in S$ as $3$ is not even. A counter-example of $S$ being an ideal.</p>
+<h3 id="section-4" class="unnumbered">11</h3>
+<h4 id="a" class="unnumbered">a</h4>
+<p>$\langle a \rangle = \langle 1 \rangle = \mathbb{Z}$. We know $GCD(2,3) = 1$ so by <em>Theorem 0.2</em> (GCD is a linear combination) (page), there are $x, y \in \mathbb{Z}$ such that $2x + 3y = 1$. So for any integer $m$, $2(xm) + 3(ym) = m$. In other words, $\mathbb{Z} = \langle 1 \rangle \subset \langle 2 \rangle + \langle 3 \rangle$.</p>
+<h4 id="b" class="unnumbered">b</h4>
+<p>$\langle a \rangle = \langle 2 \rangle$. Trivially $\langle 6 \rangle + \langle 8 \rangle \subset \langle 2 \rangle$ as $2$ is a common divisor of $6$ and $8$. Observe $8(1) + 6(-1) = 2$. So for any multiple $2m$, We have $8(m) + 6(-m) = 2m$, concluding $\langle 2 \rangle \subset \langle 8 \rangle + \langle 6 \rangle$.</p>
+<h3 id="section-5" class="unnumbered">15</h3>
+<p>By definition $A \subset R$ and $r = r1 \in A$ for any $r \in R$.</p>
+<h3 id="section-6" class="unnumbered">32</h3>
+<p>Let $B$ be an arbitrary ideal of $\mathbb{Z} \oplus \mathbb{Z}$ such that $A \subset B \subset \mathbb{Z} \oplus \mathbb{Z}$. Assume $B$ properly contains $A$ then we show $B = \mathbb{Z} \oplus \mathbb{Z}$.</p>
+<p>By hypothesis we have $(a,b) \in B$ but not in $A$. So $a = 3q + r$ whereby either $r = 1$ or $r = 2$. Consider each case:</p>
+<ul>
+<li>$r = 1$. Since $A \subset B$, $( 3(-q), -(b-1)) \in B$. As $B$ is a group, $(3(-q), -(b-1)) + (3q+1, b) = (1,1) \in B$.</li>
+<li>$r = 2$. Similarly $(3(q+1), b+1) \in B$ and $(3(q+1), b+1) - (3q+2, b) = (1, 1) \in B$.</li>
+</ul>
+<p>By <em>Ex. 15</em> $B = \mathbb{Z} \oplus \mathbb{Z}$.</p>
+<p>Had $A$ been $\{ (4x, y) \mid x,y \in \mathbb{Z} \}$ then the property of it being a maximal ideal fails as the ideal $\{ (2x, y) \}$ is strictly larger.</p>
+<p>Generally, $\{ (rx,y) \}$ is a maximal ideal if and only if $r$ is a prime. If $r$ is composite then any divisor generates a larger ideal. If $r$ is prime then for any $m$ where $0 &lt; m &lt; r$, $gcd(r, m) = 1$. It follows by <em>Theorem 0.2</em> (GCD is a linear combination) (page 4) there is a linear combination $xr + ym = 1$.</p>
+<h3 id="section-7" class="unnumbered">37</h3>
+<p>If $(x,y), (a,b) \in \mathbb{Z} \oplus \mathbb{Z}$ and $(x,y)(a,b) = (xa,yb) \in I$ then by definition $yb = 0$. So either $y = 0$ or $b = 0$. In other words, either $(x,y) \in I$ or $(a,b) \in I$.</p>
+<p>The set $\{ (x,2y) \mid x,y \in Z \}$ is an ideal and properly contains $I$. So $I$ is not maximal.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

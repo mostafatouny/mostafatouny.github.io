@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Levitin&#39;s Algorithms | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/msa-levitin-post/</link>
+      <atom:link href="https://mostafatouny.github.io/msa-levitin-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Levitin&#39;s Algorithms</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <title>Levitin&#39;s Algorithms</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/</link>
+    </image>
+    
+    <item>
+      <title>Lab 09</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab09/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab09/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9.1.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use quotient and mod operations.&lt;/li&gt;
+&lt;li&gt;Observe why the quotient yields the maximum possible count of some coin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      # input: non negative amount n, and a decreasing array of coins D
+      # output: array C where C[i] is number of coins of ith denomination D[i]
+      def greedyCoins(integer n, D[1..m])
+        # for each coin
+        for i in 1..m
+
+            # take max possible number of it
+            C[i] = floor( n/D[i] )
+
+            # remaining amount for next iteration
+            n = n \mod D[i]
+        
+        # if there is still a remaining amount
+        if n != 0 return &amp;quot;no solution&amp;quot;
+
+        # otherwise given n is partitioned by coins
+        return C
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;9.1.15&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;9.2.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Observe &lt;code&gt;Kruskal&lt;/code&gt; works with global edges, unlike &lt;code&gt;Prim&lt;/code&gt; which searches within local neighbour edges.&lt;/li&gt;
+&lt;li&gt;What is error you think we will encounter upon running &lt;code&gt;Kruskal&lt;/code&gt; on a a tree with more than one component?&lt;/li&gt;
+&lt;li&gt;Why does looping on $|V| - 1$ works in &lt;code&gt;Kruskal&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;Modify the &lt;code&gt;while&lt;/code&gt; condition to accommodate any forest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Modify the &lt;code&gt;while&lt;/code&gt; condition in &lt;code&gt;Kruskal&lt;/code&gt; to be &lt;code&gt;ecounter &amp;lt; |E|&lt;/code&gt;, So it terminates if there are no more edges.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Bonus.&lt;/em&gt; Modify &lt;code&gt;Prim&lt;/code&gt; then use it as a subroutine to solve the general forest case.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;9.2.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;9.3.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(c) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
+&lt;li&gt;(c) Fixing vertices, What kind of modification is required on edges?&lt;/li&gt;
+&lt;li&gt;(d) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
+&lt;li&gt;(d) We will use &lt;em&gt;Dijkstra&lt;/em&gt; as a subroutine, So the graph will be transformed to the usual form given in the book.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A data structure which considers directed edges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Same algorithm. You may terminate once you find the destination.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Each vertex $v_i$ is mapped to $v_i^{st}$ and $v_i^{en}$, with directed edge $( v_i^{st}, v_i^{en} )$ whose weight is the number labeled on $v_i$. Any vertex in $G$ neighbour to $v_i$, can travel to $v_i^{st}$ but not $v_i^{en}$ in $G&amp;rsquo;$. Only vertices $v_i^{en}$ but not $v_i^{st}$ can travel to other vertices. Those edges in $G&amp;rsquo;$ are assigned zero weights.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        # input: graph G with weighted vertices
+        # output: graph G with weighted edges and no weighted vertices
+        def vertexWeightToEdgeWeight(G)
+
+            construct empty graph G&#39;
+
+            for each vertex v in G(V)
+                add vertex v_st to G&#39;
+                add vertex v_en to G&#39;
+                set (v_st, v_en).weight to v.weight
+                add edge (v_st, v_en) to G&#39;
+            
+            for each edge e = {a,b} in G(E)
+                set (a_en, b_st).weight = 0
+                add edge (a_en, b_st) to G&#39;
+                set (b_en, a_st).weight = 0
+                add edge (b_en, a_st) to G&#39;
+
+            return G&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Set the destination as source then reverse paths. If graph is directed reverse paths before running the algorithm also.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        # input: graph G
+        # output: same graph but whose edges are reversed
+        def reverseEdges(G)
+            construct empty graph G&#39;
+            clone vertices G&#39;(V) = G(V)
+
+            for every vertex v in G(V)
+                for every edge e = (v,t) in G(E)
+                    add edge (t,v) to G&#39;
+
+            return G&#39;
+
+        # input: undirected graph G, destination d
+        # output: shortest-paths of given d
+        def undirectedGraphSingleDistination(G, d)
+            compute Dijkstra(G, d) in graph G
+            return reverseEdges(G)
+        
+        # input: directed graph G, destination d
+        # output: shortest-paths of given d
+        def directedGraphSingleDestination(G, d)
+            G = reverseEdges(G)
+            compute Dijkstra(G, d) in graph G
+            return reverseEdges(G)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A data-structure based implementation is left to students. In fact this is an excellent illustration of abstraction in algorithm design.&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;9.3.7&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;9.4.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;9.4.7&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A basic recursive algorithm traversal works.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        def allHuffmanCodes(root)
+            if root is NULL
+                return [ ]
+            
+            # if root is a leaf
+            if root.rightChild is NULL and root.leftChild is NULL
+                return [ root.character ]
+
+            # if exactly one child is NULL, Concatenating an empty list does no harm
+            childCodes = allHuffmanCodes(root.leftChild) + allHuffmanCodes(root.rightChild)
+
+            # prefix each code in child with root&#39;s character
+            return [ root.character + code for code in childCodes ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We leave it to students to modify the algorithm so that it generates a 2d-array of symbols-codes as a &lt;strong&gt;homework.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 08</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab08/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab08/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8.1.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;8.1.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;8.1.6&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explain why is the formulation $F(n) = F(n-1) + p_1$ is wrong. Derive a counter example.&lt;/li&gt;
+&lt;li&gt;The optimal solution may be $F(n) = p_n$. Modify it so that it is in terms of $F(k)$ for some $k &amp;lt; n$.&lt;/li&gt;
+&lt;li&gt;Generalize.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Recursive formulation.
+\begin{aligned}
+F(0) &amp;amp;= 0 \\
+F(n) &amp;amp;= \underset{1 \leq j \leq n}{\max} {p_j + F(n-j) }
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Algorithm.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: Length n, and values of pieces of length i, P[i]
+    # output: Maximum value of all possible cuts on a rod of length n
+    def dynamicRodCut(n, P[0..n])
+
+        # a rod of length zero contributes nothing to revenue
+        P[0] = 0
+
+        # Initialize an array of size n
+        F = [] * (n+1)
+
+        # Set the base case
+        F[0] = 0
+
+        # Compute bottom-up F[i]
+        for i in 1..n
+
+            maxVal = 0
+
+            # Compute the maximum among all js
+            for j in 0..i
+                # call memoized subinstances
+                # update if found a greater value
+                maxVal = max( maxVal, P[j] + F(i-j) )
+
+            # memoize
+            F[i] = maxVal
+
+        # return max value of cuts, on given length n
+        return F[n]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Complexity. Time is $1 + \dots + n = n(n+1)/2$. Additional space is $n+1$.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;8.2.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;8.2.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;8.2.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recall for the algorithm given in the book, at each step, either we take or leave the ith item.&lt;/li&gt;
+&lt;li&gt;For our case what if we at each step, either leave all items, or take 1st item, or take 2nd item, .., or nth item. Modify the formulation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Recursive Formulation.
+\begin{aligned}
+F(W) &amp;amp;= 0 \qquad &amp;amp;\text{if } W &amp;lt; w_j, ; 1 \leq j \leq n \\
+F(W) &amp;amp;= \underset{j: W \geq w_j}{\max} F(W - w_j) + v_j &amp;amp;\text{otherwise}
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Algorithm&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # memory function
+    # input: i indicating selecting a multiset of item 1, item 2, .., item i
+             j capacity
+    # output: optimal value of a feasible multiset from item 1, item 2, .., item i
+    def MFKnapsack(i, j, weight, value, F)
+        
+        # only if not memoized, compute and cache it
+        if F[i,j] &amp;lt; 0
+
+            # find the maximum value among all cases
+            # item i added 0, 1, 2, .. times constrained by capacity
+            count = 0
+            while (count * weight[i]) &amp;lt; j
+                maxVal = max( 
+                            maxVal, 
+                            (count * value[i]) + MFKnapsack( i-1, j - (count * weight[i]) )                     
+                        )
+            
+            # memoize
+            F[i,j] = maxVal
+
+        return F[i,j]
+
+    # input: weight of ith item, value of ith item, total capacity W
+    # output: max value of a multiset of all given n items
+    #         constrained by capacity W
+    def dynamicKnapsack(weight[1..n], value[1..n], W)
+
+        # memoization table
+        # all cells -1, indicating no value is computed
+        F[0..n, 0..W] = -1
+        # except row 0 and column 0, values are 0, by definition of base case
+        for i in 0..n, F[i,0] = 0
+        for i in 0..W, F[0,i] = 0
+
+        # compute memoization table F, and read F[n, W]
+        sol = MFKnapsack(n, W, weight, value, F)
+
+        # problem solution is F[n, W]
+        return sol
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;8.3.4&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;8.3.8&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recall you have table $R$, where $R[i,j]$ contains the root of the tree of nodes $i, \dots, j$.&lt;/li&gt;
+&lt;li&gt;Recall how the optimal solution of knapsack was constructed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # global variables: table R of roots indices
+                        keys A
+    # input: root node of a tree, and indices i and j of keys covered
+    # output: None. Tree is modified so the root points to its children
+    # initialize with i = 1 and j = n
+    # def optimalBST(root, i, j)
+
+        # base case
+        if root = NULL
+            return
+
+        # index of the root of subtree of keys A_i, .., A_j
+        k = R[i,j]
+
+        # left child
+        root.left = A[ R[i, k-1] ]
+        # right child
+        root.right = A[ R[k+1, j] ]
+
+        # Recursively, Call the child
+        optimalBST(root.left, i, k-1)
+        optimalBST(root.right, k+1, j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;P.S. Anything by Donald Knuth is worthwhile studying, however for our
+pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 07</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab07/</link>
+      <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab07/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;7.1.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7.1.5&lt;/h3&gt;
+&lt;p&gt;We tell students sort by a single loop rather than a single-line.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def sortBySingleLoop(A[0..n-1])
+        # initialize a zeros list of size n
+        S = [0] * n
+
+        # loop on A values, Convert to corresponding index, Set that index
+        for i in 0..n-1
+            S[ A[i]-1 ] = A[i]
+
+        # S is A but sorted
+        return S
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;7.1.10&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;7.2.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;7.2.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;7.2.11&lt;/h3&gt;
+&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The question asks for memory. So any timely inefficient solution is acceptable.&lt;/li&gt;
+&lt;li&gt;Use naive brute-force.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: strings S[0..n-1] and T[0..n-1]
+    # output: True if and only if T is right cyclic shift
+    def bruteForceRightCyclicShift(S[0..n-1], T[0..n-1])
+        
+        # try all ith positions
+        for i in 0..n-1
+
+            # counter of matched characters
+            k = 0
+
+            # check from the ith position to last nth character, cycling if needed
+            while k &amp;lt; n and S[(i+k) mod n] = T[k]
+                k = k + 1
+
+            # all n characters are matching, i.e strings are matching
+            if k == n return True
+        
+        # if no position matches
+        return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the &lt;code&gt;mod&lt;/code&gt; operation is troublesome to students, we show&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: position x
+    # output:
+        # x if x did not pass string length n
+        # if x passed n, return only the additional length beyond n
+    def myPosition(x, n)
+        if x &amp;lt; n
+            return x
+        return x - n
+
+    # input: strings S[0..n-1] and T[0..n-1]
+    # output: True if and only if T is a right cyclic shift of S
+    def bruteForceRightCyclicShift(S[0..n-1], T[0..n-1])
+        
+        # try all ith positions
+        for i in 0..n-1
+
+            # counter of matched characters
+            k = 0
+
+            # check from the ith position to last nth character, cycling if needed
+            while k &amp;lt; n and S[ myPosition(i+k,n) ] = T[k]
+                k = k + 1
+
+            # all n characters are matching, i.e strings are matching
+            if k == n return True
+
+        # if no position matches
+        return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Observe greatest value of &lt;code&gt;x&lt;/code&gt; is $n-1 + n-1 = 2n - 2 &amp;lt; 2n$. So our function &lt;code&gt;myPosition&lt;/code&gt; is equivalent to &lt;code&gt;mod&lt;/code&gt; operation in this case.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Extra space is $\mathcal{O}(1)$. Time is $\mathcal{O}(n^2)$.&lt;/p&gt;
+&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;em&gt;Boyer-Moore&lt;/em&gt; algorithm as a subroutine.&lt;/li&gt;
+&lt;li&gt;What is the input enhancement so that a linear scan, of all possible positions, of first character, is feasible?&lt;/li&gt;
+&lt;li&gt;Repeat the input so the check is equivalent to cycling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: string S
+    # output: S but with n-1 prefix appended
+    def appendPrefix(S[0..n-1])
+        
+        # copy S
+        X = S
+
+        # for each character of n-1 prefix
+        for i in 0..n-2
+
+            # append to the end
+            X.append( X[i] )
+
+        # return appended string
+        return X
+
+    # input: string S[0..n-1] and T[0..n-1]
+    # output: True if and only if T is a cyclic right shift of S
+    def BoyerMooreRightCyclicShift(S[0..n-1], T[0..n-1])
+        
+        # enhance the input by appending n-1 prefix
+        S = appendPrefix(S)
+
+        # right cyclic shift is equivalent to matching T in enhanced input S
+        return BoyerMoore(S, T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For enhanced $X$ of given input $S$, Observe $S[i \mod n] = X[i]$. In other words, our condition on the enhanced input is equivalent to the brute-force algorithm. Since we know the brute-force is correct by definition, so is &lt;code&gt;BoyerMooreRightCyclicShift&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Time. $\Theta(n)$ for appending prefix. $\mathcal{O}(n)$ for &lt;em&gt;Boyer-Moore algorithm&lt;/em&gt; (given from the levitin).&lt;/li&gt;
+&lt;li&gt;Space. Extra space is $\Theta(n)$ for appended prefix. $\Theta(|\sum|)$ for the &lt;em&gt;good-suffix table&lt;/em&gt;. $\Theta(n)$ for the &lt;em&gt;bad-symbol table&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;7.3.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;7.3.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;7.3.4&lt;/h3&gt;
+&lt;p&gt;Given the even distribution of hash function, We have a uniform distribution. Fixing cell $c_j$ the probability of hashing to it is $Pr[R_i = c_j] = \nfrac{1}{m}$ for the ith element out of the $n$ elements. Since the hash events are pairwise independent, $Pr[C = c_j] = Pr[R_1 = c_j \wedge \dots \wedge R_n = c_j] = Pr[R_1 = c_j] \cdot .. \cdot Pr[R_n = c_j] = \left (\nfrac{1}{m} \right )^n$. Since the events of hashing all elements to a particular cell are disjoint, $Pr[C = c_0 \vee \dots \vee C_{m-1}] = Pr[C = c_0] + \dots + Pr[C = c_{m-1}] = m \left (\nfrac{1}{m} \right )^n = \nfrac{1}{m^{n-1}}$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 03</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab03/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab03/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3.1.4&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Observe we can derive $x^i$ from $x^{i-1}$, so we don&amp;rsquo;t need to recompute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Same as manual:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3-1-4.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3-1-4_1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3.1.14&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3.2.8&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z &amp;gt; i$, What can you infer?&lt;/li&gt;
+&lt;li&gt;Utilize that observation in algorithm design.&lt;/li&gt;
+&lt;li&gt;Consider a flag which stores whether character $A$ is read.&lt;/li&gt;
+&lt;li&gt;Generalize for a variable that counts how many $A$ was read.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
+      count = 0
+
+      for i in 0..n-2
+          if S[i] == A
+              for j in i+1..n-1
+                  if S[j] == B
+                      count = count + 1
+
+      return count
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The number of basic operations is upperbounded by $\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1 = \mathcal{O}(n^2)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
+      count_a = 0  # Count of &#39;A&#39; characters encountered so far
+      count_ab = 0  # Count of substrings starting with &#39;A&#39; and ending with &#39;B&#39;
+
+      for i in 0..n-2:
+          if S[i] == A
+              count_a = count_a + 1
+          else if S[i] == B
+              count_ab = count_ab + count_a
+
+      return count_ab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$\sum_{i=0}^{n-2} 1 = \Theta(n)$. Observe count of basic operations is exactly 1 per iteration.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;3.2.9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;3.3.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;3.3.9&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Think of a unique property about extreme points, in terms of coordinates.&lt;/li&gt;
+&lt;li&gt;What can you conclude about the point of maximum $x$ or $y$ coordinates?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: array of points, each point is a tuple of x and y coordinates
+    # output: a list of exactly two extreme points
+    def find_extreme_points(P[0..n]) # given n &amp;gt;= 2
+
+      # Initialize extreme points with the first point in the set
+      min_x_point, min_y_point = P[0]
+      max_x_point, max_y_point = P[0]
+
+      # Iterate through the remaining points
+      for i in P[1..n]
+          x, y = i
+
+          # Update max_x_point and max_y_point if needed
+          if x &amp;gt; max_x_point:
+              max_x_point = x
+              max_y_point = y
+          else if x == max_x_point and y &amp;gt; max_y_point:
+              max_y_point = y
+
+          # Update min_x_point and min_y_point if needed
+          if x &amp;lt; min_x_point:
+              min_x_point = x
+              min_y_point = y
+          else if x == min_x_point and y &amp;lt; min_y_point:
+              min_y_point = y
+
+      return [(min_x_point, min_y_point), (max_x_point, max_y_point)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;3.4.6&lt;/h3&gt;
+&lt;p&gt;We assume the problem would always have a solution. We leave it as an exercise for students to detect the case of the non-existince of any solution.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What can you conclude about the total sum of the whole set, given we have a partition of two subsets, each of total sum $p$?&lt;/li&gt;
+&lt;li&gt;If we selected a subset whose sum is $k$, How do we compute the total sum of the remaining elements?&lt;/li&gt;
+&lt;li&gt;Consider the special case of finding a single subset whose total sum is $p$.&lt;/li&gt;
+&lt;li&gt;Design your algorithm to only rely upon searching through the domain of subsets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There is an elegant generator based on binary numbers. Since this is not the core focus of the question, We show an easier to understand code by recursion.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def generate_subsets(A[0..n-1]):
+      if n == 0:
+          return [ [] ]
+
+      # Generate subsets without the last element
+      subsets_without_last = generate_subsets( A[0..n-2] )
+
+      # Add the last element to each subset in subsets_without_last
+      subsets_with_last = [ subset + [A[n-1]] for subset in subsets_without_last ]
+
+      # Concatenate subsets with and without the last element
+      return subsets_without_last + subsets_with_last
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;3.4.9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;3.5.7&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;3.5.8&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The hinted picture of 2-colorable might be more useful.&lt;/li&gt;
+&lt;li&gt;Try to construct a 2-colorable labeling on given graphs. Observe by symmetry you can start anywhere and with any colour.&lt;/li&gt;
+&lt;li&gt;What if a vertex must be coloured with two different colours from two different vertices? Can we conclude colouring impossibility?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;modify $dfs$ function in page 124 to maintain a two colours switching for each level, rather than $count$.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def switchColour(input_colour)
+      if input_colour is white
+        return black
+      if input_colour is black
+        return white
+
+    def dfs(v, current_colour)
+      if v.colour == NULL
+        v.colour = current_colour
+      else
+        return v.colour == current_colour
+
+      for each vertex w in V adjacent to v
+        if not dfs( w, switchColour(current_colour) )
+          return False
+      
+      return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;modify $bfs$ to maintain the depth alongside the vertex in the queue, and then colour according to whether the depth is even or odd.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def colourByDepth(depth_input)
+      if depth_input is even
+        return white
+      if depth_input is odd
+        return black
+
+    def bfs(v)
+      set v.depth = 0
+      v.colour = colourByDepth(v.depth)
+      initialize a queue with v
+      
+      while the queue is not empty do
+        for each vertex w in V adjacent to the front vertex f
+          if w.colour == NULL
+            w.depth = f.depth + 1
+            w.colour = colourByDepth(w.depth)
+            add w to the queue
+          else
+            if w.colour != colourByDepth(f.depth+1)
+              return False
+
+        remove the front vertex from the queue
+
+      return True
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 04</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab04/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab04/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;instructor-notes&#34; class=&#34;unnumbered&#34;&gt;Instructor Notes&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\lfloor \log n \rfloor + 1 = \lceil \log (n+1) \rceil$.&lt;/p&gt;
+&lt;p&gt;We know $n = 2^k + r$ for some $k \geq 0$ and $0 \leq r &amp;lt; 2^k$, By&lt;em&gt;Euclid&amp;rsquo;s Theorem&lt;/em&gt; and &lt;em&gt;Archimedean Property&lt;/em&gt;. Then
+\begin{aligned}
+k + 1 = \log 2^{k+1} \geq \log (2^k + r + 1) &amp;gt; \log (2^k + r) \geq \log 2^k = k
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Thus, $\lceil \log(n + 1) \rceil = \lceil \log (2^k + r + 1) \rceil = k + 1$ and $\lfloor \log (n+1) \rfloor  = \lfloor \log(2^k + 1) \rfloor = k$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Given $n$, If we repeatedly apply the operation $\lfloor n/2 \rfloor$ Then we reach $1$ after exactly $\lfloor \log n \rfloor + 1$.&lt;/p&gt;
+&lt;p&gt;Consider $n$ but in binary representation $(d_1 d_2 \dots d_k)_2$, where $d_1 = 1$. Then by definition $(d_1 d_2 \dots d_k)_2 / 2$&lt;/p&gt;
+&lt;p&gt;yields a quotient $(d_1 \dots d_{k-1})$ and remainder $d_k$. Since we are taking floor, We can safely ignore $d_k$. It is easy to we reach $d_1 = 1$ after exactly $k-1$ operations. But we know $k = \lfloor \log n \rfloor$.&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;4.1.4&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider the fact, for a fixed element $k$, All subsets either contain $k$, or does not contain $k$.&lt;/li&gt;
+&lt;li&gt;Given all subsets not containing $k$, What do we generate when we append $k$ to each subset?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Top-down&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      def generateSubsets(A[0..n-1])
+        # base case, empty subset
+        if A.length == 0
+          return [ [ ] ]
+        
+        lastElement = A[n-1]
+
+        # smaller instance solution
+        subsetsWithNoLast = generateSubsets(A[0..n-2])
+
+        # generate new solutions from smaller instance
+        subsetsWithLast = []
+        for subset in subsetsWithNoLast
+          subsetsWithLast.append( subset + [lastElement] )
+
+        # concatenate solutions
+        return subsetsWithNoLast + subsetsWithLast
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bottom-up (Iterative Improvement)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def generateSubsets(A[0..n-1]):
+        n = A.length
+        allSubsets = [ [ ] ]
+
+        for i in 0..n-1:
+            newSubsets = []
+            for subset in allSubsets:
+                newSubsets.append( subset + [ A[i] ] )
+            allSubsets = allSubsets + newSubsets
+
+        return allSubsets
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4.1.10&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;4.2.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; In matrix implementation $\Theta(|V|^2)$, and in adjacency list implementation $\Theta(|V| + |E|)$. Careful analysis won&amp;rsquo;t be shown as it is outside the scope of the lab, especially that students lack data structures foundations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider a stack data structure&lt;/li&gt;
+&lt;li&gt;Think in terms of recursion, Given a solved smaller instance, How do we augment it to reach a greater instance?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # a node is inserted in stack, only after calling its subgraph
+    # Input: node, visited nodes list, stack
+    # Output: NULL
+    def dfs(node, visited, stack):
+      visited.add( node )
+
+      for neighbor in graph[node]:
+        if neighbor not in visited:
+          dfs(neighbor, visited, stack)
+      
+      stack.insert(node)
+
+    # Input: directed graph in adjacency list implementation
+    # Output: Topological order of the graph
+    def topologicalSortDfs(graph G):
+      visited = set() # no multiple occurences in sets
+      stack = []
+
+      # can be omitted if we assumed graph&#39;s connectivity
+      # and given a unique root (tree)
+      for node in G(V):
+        if node not in visited:
+          dfs(node)
+
+      return stack
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another simpler implementation not based on DFS as a bonus answer. Preferred to students over DFS based implementation.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # Input: directed graph in adjacency list implementation
+    # Output: Topological order of the graph
+    def topologicalsortRecursive(graph G):
+      visited = set() # multiple occurences in sets
+      stack = []
+
+      for node in G(V):
+        if node not in visited:
+          visited.add(node)
+          topologicalSortRecursive(graph[node], visited, stack)
+          stack.insert(0, node)
+
+      return stack
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4.2.8&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;4.3.7&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For each bit string of size $n-1$, If we added $0$, What do we generate?&lt;/li&gt;
+&lt;li&gt;Combine adding $0$ and $1$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # Input: Positive integer n
+    # Output All bit strings of length n
+    def generateAllBitStrings(n):
+      # base case
+      if n == 1:
+        return [&amp;quot;0&amp;quot;, &amp;quot;1&amp;quot;]
+      else
+        # smaller instance solution
+        smallerInstanceStrings = generateAllBitsStrings(n-1)
+
+        # generate n instance from smaller instance
+
+        nInstanceWithZero = []
+        for bitString in smallerInstanceStrings
+          nInstanceWithZero.append(bitString + &amp;quot;0&amp;quot;)
+
+        nInstanceWithOne = []
+        for bitString in smallerInstanceStrings
+          nInstanceWithOne.append(bitString + &amp;quot;1&amp;quot;)
+
+        return nInstanceWithZero + nInstanceWithOne
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;4.3.10&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;4.4.2&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider n separation, in case it is odd, and in case it is even.&lt;/li&gt;
+&lt;li&gt;If odd, subtract from it only 1, to get an even number&lt;/li&gt;
+&lt;li&gt;Since we are taking floor, We only need to care about the new even number. I.e we won&amp;rsquo;t count.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def floorLog2Recursive(n):
+      
+      # Base case
+      # log2(1) = 0
+      if n == 1:
+        return 0
+
+      # n is even
+      if n % 2 == 0:
+        return 1 + floorLog2Recursive(n/2)
+      
+      # n is odd
+      else
+        return 0 + floorLog2Recursive( (n-1)/2 )
+        # Since we consider floor, the remainder does not count
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;4.4.9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;4.5.12&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;4.5.13&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Given the target $t &amp;gt;$ cell $c$, for some cell in the matrix. Which elements of the matrix can we exclude from the search?&lt;/li&gt;
+&lt;li&gt;Consider the case if the cell $c$ is at the corner.&lt;/li&gt;
+&lt;li&gt;Try to reduce the problem size by $1$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Recursive implementation&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # Input: n x n Matrix, and target value t
+    # Output: tuple (row, column) of the element found, or -1 if not found
+    def searchMatrixRecursive(matrix M[0..n-1, 0..n-1], target t, row, col):
+      if row &amp;gt;= n or col &amp;lt; 0:
+        return -1
+
+      # Base case
+      if M[row][col] == t:
+        return (row, col)
+
+      # Call smaller instances
+      else M[row][col] &amp;lt; t:
+        return searchMatrixRecursive(M, t, row + 1, col)
+      else:
+        return searchMatrixRecursive(M, t, row, col - 1)
+
+    def searchMatrix(Matrix M[0..n-1, 0..n-1], target t)
+      # initialize with row = 0 and column = n-1
+      return searchMatrixRecursive(M, t, 0, n-1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Upperbounded by $2n = \mathcal{O}(n)$ by the recurrence $T(q) = T(q-1) + 1$, where $q = n + n$, the sum of columns and rows number.&lt;/p&gt;
+&lt;p&gt;Bottom-up implementation (iterative improvement)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # Input: n x n matrix and target value t
+    # Output: tuple (row, column) of the element found, or -1 if not found
+    def searchMatrixBottomUp(matrix M[0..n-1, 0..n-1] , target t):
+      row = 0
+      col = n-1
+
+      while row &amp;lt; n and col &amp;gt;= 0:
+        if M[row][col] == t:
+          return (row, col)
+        
+        if M[row][col] &amp;lt; t:
+          row = row + 1
+        else:
+          col = col - 1
+
+      return -1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Upperbounded by $\sum_{i=1}^{2n} 2 = 2(2n) = \mathcal{O}(n)$, the sum of columns and row numbers.&lt;/p&gt;
+&lt;p&gt;P.S. It might be more elegant to consider three-comparison as a single operation. For our students we omit this discussion.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 05</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab05/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab05/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;5.1.3&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you can use floors and ceils as subroutines.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def divConqPower(a,n)
+      if n = 1
+        return a
+      return divConqPower(a, floor(n/2)) * divConqPower(a, ceil(n/2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Time of basic operations $T(n)$ are $T(n) = T( \lfloor n/2 \rfloor ) + T( \lceil n/2 \rceil) + 1$. Assuming $n = 2^k$, We get $T(n) = 2T(n/2) + 1$. By master theorem,
+$T(n) = \Theta(n)$.&lt;/p&gt;
+&lt;p&gt;For general cases of $n$, Observe $n = 2^{\log n} \leq 2^{\lceil \log n \rceil}$, So by master theorem $T(n) \leq \mathcal{O}(2^{\lceil \log n \rceil}) \leq \mathcal{O}(2^{\log n + 1}) = \mathcal{O}(n)$. Similarly $T(n) \geq \Omega(2^{\lfloor \log n \rfloor}) = \Omega(n)$. That concludes $T(n) = \Theta(n)$ for any $n$.&lt;/p&gt;
+&lt;p&gt;Complexity proof by substitution. Recurrence is
+\begin{aligned}
+T(1) &amp;amp;= 0 \\
+T(n) &amp;amp;= 2T(n/2) + 1
+\end{aligned}
+It follows
+\begin{aligned}
+T(n) &amp;amp;= 2T(n/2) + 1 \\
+&amp;amp;= 2^2 T(n/2^2) + 2^1 + 2^0 \\
+&amp;amp;= 2^3 T(n/2^3) + 2^2 + 2^1 + 2^0 \\
+&amp;amp;= 2^k T(n/2^k) + 2^{k-1} + \dots + 2^0 \\
+&amp;amp;= 2^{\log n} T(n/2^{\log n}) + 2^{(\log n) - 1} + \dots + 2^0 \\
+&amp;amp;= 2^{\log n} T(1) + 2^{(\log n) - 1} + \dots + 2^0 \\
+&amp;amp;= 2^{(\log n) - 1} + \dots + 2^0 \\
+&amp;amp;= 2^{\log n } - 1 = n - 1 = \Theta(n)
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;P.S. Generally speaking we can ignore floors and ceilings in asymptotic notation (see page 885 in MIT&amp;rsquo;s Math for CS).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c). Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5.1.10&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;5.2.8&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt; Consider pivot to be zero.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;5.2.9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;5.3.1&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recall in a binary tree, a node has at most two leaves. Apply the strategy on them&lt;/li&gt;
+&lt;li&gt;Given the height of subtrees, What can you conclude about height of the main tree?&lt;/li&gt;
+&lt;li&gt;What is subtrees have different heights?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Same as solution manual:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-5.3.1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Analysis. We know each node is going to count 1 operation. If we assumed total number of nodes to be $n$, then $T(n) = \Theta(n)$. If we assumed like the book the total number of internal nodes to be $n$ and leaves to be $x$, then $x + n = 2n$, so $T(n) = \Theta(n)$.&lt;/p&gt;
+&lt;p&gt;P.S. The book considers checking whether tree is empty to be the basic operation. My intuition tells me it is the max operation.&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;5.3.2&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider the problem size to be level of a node, not number of nodes.&lt;/li&gt;
+&lt;li&gt;Consider the base case as the tree being a single node (leaf).&lt;/li&gt;
+&lt;li&gt;Assume you can query the tree&amp;rsquo;s root, and its children.&lt;/li&gt;
+&lt;li&gt;Recall a binary tree has at most two children for each node. Given counts of both, what can we conclude?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Commentary on the given algorithm in the question. It is flawed. Given the solution of an empty tree, we reach a flawed claim about the tree of size 1 node. Remarkably we shouldn&amp;rsquo;t consider problem size to be the number of nodes, but rather the height.&lt;/p&gt;
+&lt;p&gt;Correct algorithms:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: tree T with access to its root
+    # output: count of leaves
+    def leafCounter (Tree T)
+      # base case: the tree is empty
+      if T is empty
+        return 0
+
+      # base case: the tree is a leaf node
+      if T.root.children == []
+        return 1
+      
+      # recursive step
+      return leafCounter(T_left) + leafCounter(T_right)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Analysis. We count one summation operation for each non-leaf node. Following the notation given in the book, $n$ as number of non-leaf nodes and $x$ as leaves, We get $T(n) = n$.&lt;/p&gt;
+&lt;p&gt;Alternatively we can consider $n$ to be total number of nodes. But we know $n = 2i+1$ where $i$ is number of non-leaf nodes. So $T(n) \approx n/2 = \Theta(n)$.&lt;/p&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;5.4.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt; Proving exponent rules is not germane to the course.&lt;/p&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;5.4.8&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt; Uses geometric series.&lt;/p&gt;
+&lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;5.5.1&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Among pairs of right and left subsets, What are the least-distance ones?&lt;/li&gt;
+&lt;li&gt;Use the given sorted property to deduce the least-distance pair.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Like the solution manual.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-5.5.1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;5.5.9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 06</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab06/</link>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab06/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;6.1.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sort the array as a preprocessing step.&lt;/li&gt;
+&lt;li&gt;Given a sorted array, and an adjacent pair $A[i],A[i+1]$, Could the distance between $A[i]$ and $A[j]$ where $j &amp;gt; i+1$, be strictly less?&lt;/li&gt;
+&lt;li&gt;Use that to design your algorithm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: Array of integers
+    # output: minimum distance between any pairs
+    def ClosestDistance(A[0..n-1])
+
+        # Transformation: Sort the array
+        A.sort()
+
+        # Initialize minimum distance to | A[0] - A[1] |
+        minDistance = abs( A[0] - A[1] )
+
+        # Iterate and compute the distance between adjacent elements
+        for i in 1..n-1:
+            currentDistance = | arr[i] - arr[i + 1] )
+
+            # Update the minimum distance if the current distance is smaller
+            if currentDistance &amp;lt; minDistance:
+                minDistance = currentDistance
+
+        # Return the minimum distance
+        return minDistance
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(b). Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;6.1.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;6.2.4&lt;/h3&gt;
+&lt;p&gt;We ask students whether $\Theta(n^3) - \Theta(n^3) + \Theta(n^3) = \Theta(n^3)$.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Try to given a counter example where coefficients cancel each other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We show it is not true in general true by the counter example $T_1(n) = n^3$, $T_2(n) = 2 n^3$, and $T_3(n) = n^3$.&lt;/p&gt;
+&lt;p&gt;Analysis of the algorithm is left as a &lt;strong&gt;homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;6.2.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;6.3.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The idea is similar to binary search tree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: non-empty graph, by its root
+    # output: smallest element
+    def find_smallestKey(root):
+        node = root
+
+        while node.left is not None
+            current = current.left
+
+        return current.key
+
+    # input: non-empty graph, by its root
+    # output: largest element
+    def find_largestKey(root):
+        node = root
+
+        while node.right is not None:
+            node = node.right
+
+        return current.key
+
+    # input: non-empty graph, by its root
+    # output: difference between largest and smallest elements
+    def range(root)
+        return find_largestKey(root) - find_smallestKey(root)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Complexity is $2 \log n = \Theta( \log n )$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For the largest, Note we can step down on left children. Similarly for the smallest, we can step down on right children.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;False. Counter example from the solution manual.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
+               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_70439550a061277046dfe0a24fe77236.webp 400w,
+               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_99f2d4049a6780430a7f0bbf41669978.webp 760w,
+               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://mostafatouny.github.io/msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_70439550a061277046dfe0a24fe77236.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;376&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;6.3.9&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Very similar to binary search tree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Like the previous previous exercise we traverse left-most and right-most nodes. The difference is we consider left key and right key of these nodes, respectively.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def range(root)
+        leftMost = find_leftMostNode(root)
+        rightMost = find_rightMostNode(root)
+
+        return rightMost.rightKey - leftMost.leftKey
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;6.4.2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;6.4.5&lt;/h3&gt;
+&lt;p&gt;Students will be given the following subroutines.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    # input: heap as an array, node by its index
+    # output: None. Given heap is modified in-place
+    def siftUp(heap, index):
+
+        # cannot sift-up root node
+        while index &amp;gt; 0:
+
+            # parent of the node
+            parentIndex = (index - 1) // 2
+          
+            # parental dominance is satisfied
+            if heap[index] &amp;lt;= heap[parentIndex]
+                break
+
+            # if not satisfied, swap with parent
+            swap(heap[index], heap[parentIndex])
+
+            # set the cursor to the parent, and repeat
+            index = parentIndex
+
+    # input: heap as an array, node by its index
+    # output: None. Given heap is modified in-place
+    def siftDown(heap, index):
+
+        # Children indices
+        leftChild_index = (2 * index) + 1
+        rightChild_index = (2 * index) + 2
+
+
+        # Find the largest out of index, leftChild_index, and rightChild_index
+
+        # Initially set
+        largest = index
+
+        # Check if the left child exists. if larger, update largest
+        if leftChild_index &amp;lt; len(heap) and heap[leftChild_index] &amp;gt; heap[largest]
+            largest = leftChild_index
+
+        # Check if the right child exists. if larger, update largest
+        if rightChild_index &amp;lt; len(heap) and heap[rightChild_index] &amp;gt; heap[largest]:
+            largest = rightChild_index
+
+
+        # If the largest element is one of the children.
+        if largest != index:
+
+            # swap the child with parent
+            swap( heap[index], heap[largest] )
+
+            # recursively heapify the smaller tree
+            siftDown(heap, largest)
+
+
+        # parental dominance is satisfied here, whether recursion is called or not, so we are done
+        return
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(a). Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The approach is very similar to &lt;em&gt;Maximum Key Deletion&lt;/em&gt; in Levitin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hint. Same logic of &lt;em&gt;b&lt;/em&gt; but notably restrict search of the min element on leaves, $H[ \lfloor n/2 \rfloor + 1 ], \dots H[n]$. Also since the minimum is in leaves, we will only call \verb#siftUp#.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  def delMin(heap H)
+    # find the minimum node&#39;s index in leaves
+    minElIndex = min(H[n/2 .. n])
+
+    # swap the minimum with last node
+    swapWithLast(minElIndex)
+
+    # remove the last node
+    removeLast()
+
+    # sift-up the node in the index, previously containing the minimum
+    siftUp(minElIndex )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the element removal subroutine, given in the book. Call it &lt;code&gt;removeLast&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use the swap with last indexed node trick, given in the book. Call it &lt;code&gt;swapWithLast&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def findElementIndex(heap, target)
+    for each element i of heap
+        if i == target
+            return i.index
+
+def removeIndexNode(heap, index)
+
+    # swap the indexed node with the last node
+    swapWithLast(heap, index)
+
+    # remove the last node
+    removeLast(heap)
+
+    # One of them must terminate in constant time
+    siftDown(heap, index) # swapping downwards
+    siftUp(heap, index) # swapping upwards
+
+def removeElementNode(heap, target)
+
+    # get the index of target by a linear scan
+    index = findElementIndex(heap, target)
+
+    # remove the element at found index
+    removeIndexNode(heap, index)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is easy to verify, that one of &lt;code&gt;siftDown&lt;/code&gt; and &lt;code&gt;siftUp&lt;/code&gt; must terminate in $\mathcal{O}(1)$, given the structure properties of the heap.&lt;/p&gt;
+&lt;p&gt;Complexity is $\mathcal{O}(n) + \mathcal{O}(1) + \mathcal{O}(1) + \mathcal{O}(\log n) = \mathcal{O}(n)$, respectively, of &lt;code&gt;findElementIndex&lt;/code&gt; and &lt;code&gt;removeIndexNode&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;6.5.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;6.5.9&lt;/h3&gt;
+&lt;p&gt;We ask students how to compute the binary representation of a given number n.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def binaryRepresentation(n)
+      
+        # list storing binary representation
+        # b[i] corresponds to ith digit
+        binRep = []
+
+        # by definition we know left-most digit is not 0
+        # n becomes 0, only when last digit is computed
+        while n != 0
+          # fetch right-most digit
+          b = n mod 2
+          # eliminate right-most digit
+          n = floor( n/2 )
+
+          binRep.append(b)
+
+        return binRep
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally we hint to them, algorithm &lt;code&gt;RightToLeftBinaryExponentiation&lt;/code&gt; in page 238 can be modified, so that it does not require list b(n) as an input.&lt;/p&gt;
+&lt;h3 id=&#34;section-10&#34; class=&#34;unnumbered&#34;&gt;6.6.5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-11&#34; class=&#34;unnumbered&#34;&gt;6.6.6&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-12&#34; class=&#34;unnumbered&#34;&gt;6.6.+&lt;/h3&gt;
+&lt;p&gt;You are given an array of positive integers. Find the maximum element but without using &amp;gt; operator.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Think of a related algorithm that uses &amp;lt; operator&lt;/li&gt;
+&lt;li&gt;Is the knowledge of minimum element useful in anyway?&lt;/li&gt;
+&lt;li&gt;What if we transformed all elements to their negation?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def negationOfArray(A[0..n-1])
+        for i in 0..n-1
+            A[i] = -(A[i])
+
+    def minElement(A[0..n-1])
+        minElement = A[0]
+        
+        for i in 1..n-1
+            if A[i] &amp;lt; minElement
+                minElement = A[i]
+
+        return minElement
+
+    def maxElementByReduction(A[0..n-1])
+        # transform
+        negationOfArray(A)
+
+        # conquer
+        min = minElement(A)
+
+        # solve the main problem
+        return -(min)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 01</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab01/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab01/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1.1.4&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You are given a square number $n$. Given some integer $k$, How can we verify it is the root?&lt;/li&gt;
+&lt;li&gt;Follow the exhaustive search strategy, to find the root of $n$.&lt;/li&gt;
+&lt;li&gt;You are given a real number $r$. Given some integer $k$, How can we verify it is the floor of $r$?&lt;/li&gt;
+&lt;li&gt;Follow the exhaustive search strategy, to find the floor of $n$.&lt;/li&gt;
+&lt;li&gt;Combine all previous hints to find a unique definition of $\lfloor \sqrt{n} \rfloor$.&lt;/li&gt;
+&lt;li&gt;Follow the exhaustive search strategy, to solve the main problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      for i in n-1 .. 0
+        if (i)^2 &amp;lt;= n
+          return i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;1.1.8&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Try this case on concrete examples like $m = 2$ and $n = 3$.&lt;/li&gt;
+&lt;li&gt;Why $m \mod n = m$ when $m &amp;lt; n$?&lt;/li&gt;
+&lt;li&gt;Recall the definition of mod. What are the possible ranges of $x \mod n$ for any integer $x$?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It shall swap them as $r = m \mod n = m$ when $m &amp;lt; n$.&lt;/p&gt;
+&lt;p&gt;Only once. Given $m &amp;gt; n$, Necessarily $n &amp;gt; m \mod n$.&lt;/p&gt;
+&lt;h2 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;1.2.5&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Convert a concrete decimal number to binary. Observe how the right most digit from the binary representation is obtained.&lt;/li&gt;
+&lt;li&gt;Given a binary representation, What is the number we divide on it,
+so that the quotient eliminate the right most digit?&lt;/li&gt;
+&lt;li&gt;Follow the &lt;em&gt;Decrease and Conquer&lt;/em&gt; strategy, with the above two hints, to solve the problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    DecToBin(n):
+      # input: integer n
+      # output: binary representation as a list
+
+      # binary representation
+      l = [ ]
+
+      while n != 0:
+        # kth digit from right to left
+        b.appendLeft( n % 2 )
+
+        # remove the rightmost digit
+        # division output is an integer
+        n = n/2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;1.2.9&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Are there duplicated computations?&lt;/li&gt;
+&lt;li&gt;Are there pairs tested twice?&lt;/li&gt;
+&lt;li&gt;Observe $| a - b | = | b - a |$.&lt;/li&gt;
+&lt;li&gt;If we checked all elements with $A[i]$, Do we need to test $A[j]$ with $A[i]$?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;MinDistance( A ):
+      # input: array of size n
+      # output: minimum distance between two distinct elements
+
+      dmin = infinity
+      for i in 0 .. n-1:
+        for j in i+1 .. n-1:
+          dis = | A[i] - A[j] |
+          if dis &amp;lt; dmin:
+            dmin = dis
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;1.3.1&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;if $A[i] == A[j]$ which index shall be counted? What can we conclude about $S$?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Tedious to typeset.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. No. Observe counting only happens when strictly $i &amp;lt; j$. If $A[i] == A[j]$ then the code counts $A[i]$ not $A[j]$. Therefore $A[i]$&lt;/p&gt;
+&lt;p&gt;shall succeed $A[j]$. In fact equal cells are reversed in the sorted array.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. No. It does not modify array $A$ but output is a different array $S$.&lt;/p&gt;
+&lt;h2 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;1.4.2&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For ascendingly ordered array $A$, Is it possible for the target value $t$ to exist in $A[i..n-1]$ given the fact $t &amp;gt; A[i]$?&lt;/li&gt;
+&lt;li&gt;Use the above hint to prune the search space.&lt;/li&gt;
+&lt;li&gt;Which index of the array you think shall prune the greatest search space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For target value $t$:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Access some element $x$ in the array. If $t \neq x$, We can ignore searching in the right/left side of $x$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. While linear scanning, Terminate the algorithm earlier once some $A[i] &amp;gt; t$.&lt;/p&gt;
+&lt;h2 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;1.4.10&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is it possible for two strings to be anagrams in case they different
+lengths?&lt;/li&gt;
+&lt;li&gt;Is it possible for two strings to be anagrams if one of them has a
+character not present in the other?&lt;/li&gt;
+&lt;li&gt;You can convert a character to its corresponding ascii number. Use
+that for a cheaper data strucutre.&lt;/li&gt;
+&lt;li&gt;the ascii number corresponds to an index.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Two strings are &lt;em&gt;anagrams&lt;/em&gt; if and only if they have the same count of
+characters.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;      AreStringsAnagrams(A, B):
+        # input two strings
+        # output True if anagrams and False otherwise
+        
+        # if lengths are not the same, then not anagrams
+        if length(A) != length(B):
+          return False
+
+        # initialize characters counts to zeros for both strings
+        A_chCount = B_chCount = [ 0 ] * 26
+
+        # Count characters in both strings
+        for ch in A:
+          A_chCount[ int(ch) ] = A_chCount[ int(ch) ] + 1
+
+        for ch in B:
+          B_chCount[ int(ch) ] = B_chCount[ int(ch) ] + 1
+
+        # Anagrams if and only if characters count is exactly the same
+        return A_chCount == B_chCount
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 02</title>
+      <link>https://mostafatouny.github.io/msa-levitin-post/lab02/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/msa-levitin-post/lab02/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2.1.1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def sumOfArrayNumbers(A[0 .. n-1])
+      sum = 0
+      for i in 0..n-1
+        sum = sum + A[i]
+      return sum
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;n; Summation; no.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def factorial(n)
+      res = 1
+      for i in n..1
+        res = res * i
+      return res
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;1; Multiplication; yes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Algorithm is in page 61.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def maxElementInArray(A[0..n-1])
+      max = A[0]
+      for i in 1..n-1
+        if A[i] &amp;gt; max
+          max = A[i]
+      return max
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;n; Comparison; no.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    def gcd(m,n)
+      while n != 0
+        r = m mod n
+        m = n
+        n = r
+      return m
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2; mod operation; yes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(e)&lt;/strong&gt; Homework.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(f)&lt;/strong&gt; Homework.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2.1.3&lt;/h3&gt;
+&lt;p&gt;Yes.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Classical Search&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Worst-case is $\mathcal{O}(n)$.&lt;/li&gt;
+&lt;li&gt;Average-case is $1 \cdot \frac{\displaystyle{1}}{\displaystyle{n}} + \dots + n \cdot \frac{\displaystyle{1}}{\displaystyle{n}} = \frac{\displaystyle{1}}{\displaystyle{n}} (1 + \dots + n) = \frac{\displaystyle{1}}{\displaystyle{n}} \frac{\displaystyle{n(n+1)}}{\displaystyle{2}} = \frac{\displaystyle{n+1}}{\displaystyle{2}} = \mathcal{O}(n)$.&lt;/li&gt;
+&lt;li&gt;Best-case is $\mathcal{O}(1)$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Varied Search&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Worst-case, Average-case, and Best-case, are all $\Omega(n)$. For any determinstic algorithm not reading all the $n$ cells, We can construct a counter-example input.&lt;/p&gt;
+&lt;p&gt;P.S. Big-Oh is used to upper-bound complexity, showing an algorithm is efficient. So it can&amp;rsquo;t be used here while we are showing the inefficiency.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;2.2.5&lt;/h3&gt;
+&lt;p&gt;$5 \lg(n+100)^{10}, \ln^2 n, n^{1/3}, 0.001n^4 + 3n^2 + 1, 3^n, 2^{2n}, (n-2)!$&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;2.2.12&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;2.3.4&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; $s(n)&lt;em&gt;{i=1}^n = \sum&lt;/em&gt;{i=1}^n i*i$, The sum of squares up to $n$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; Multiplication.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt; $\sum_{i=1}^n 1 = n(1) = n$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt; $\mathcal{O}(n)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(e)&lt;/strong&gt; &lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;2.3.6&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; &lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; Comparison.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;
+$\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1 = \sum_{i=0}^{n-2} (n-1) - (i+1) + 1 = \sum_{i=0}^{n-2} n-i-1 = (n+1) + n + \dots + (n - (n-2) - 1) = \frac{\displaystyle{n(n+1)}}{\displaystyle{2}}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt; $\mathcal{O}(n^2)$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(e)&lt;/strong&gt; &lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;2.4.3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+S(n) &amp;amp;= S(n-1) + 2 \
+&amp;amp;= S(n-2) + 4 \
+&amp;amp;\dots \
+&amp;amp;= S(n-(n-1)) + 2(n-1) \
+&amp;amp;= 0 + 2n - 2
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Hence $\mathcal{O}(n)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; &lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;2.4.9&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; &lt;strong&gt;Homework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+S(n) &amp;amp;= S(n-1) + 1 \
+&amp;amp;= S(n-2) + 2 \
+&amp;amp;\dots \
+&amp;amp;= S(n-(n-1)) + n-1 \
+&amp;amp;= 1 + n - 1
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Hence $\mathcal{O}(n)$&lt;/p&gt;
+&lt;h2 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;2.5.10&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;2.5.12&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;section-10&#34; class=&#34;unnumbered&#34;&gt;2.6.1&lt;/h2&gt;
+&lt;p&gt;No count of the comparison basic operation $A[j] &amp;gt; v$ in case it is $False$.&lt;/p&gt;
+&lt;p&gt;Fix by adding &lt;code&gt;if j &amp;gt;= 0 then count = count+1&lt;/code&gt; after the end of while.&lt;/p&gt;
+&lt;h2 id=&#34;section-11&#34; class=&#34;unnumbered&#34;&gt;2.6.10&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

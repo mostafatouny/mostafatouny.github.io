@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Odonnell&#39;s Undergrad Complexity | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/odonnell-undergrad-post/</link>
+      <atom:link href="https://mostafatouny.github.io/odonnell-undergrad-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Odonnell&#39;s Undergrad Complexity</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <title>Odonnell&#39;s Undergrad Complexity</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/</link>
+    </image>
+    
+    <item>
+      <title>Problem Set 06,</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset06/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset06/</guid>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;p&gt;Here is a very illustrative example.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
+               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_9e24854872e9977bde04c7f236460aa7.webp 400w,
+               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_af862dc55ffcf99cc65ce7f2f2f13cac.webp 760w,
+               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://mostafatouny.github.io/odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_9e24854872e9977bde04c7f236460aa7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;355&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The procedure of encoding &lt;em&gt;3COL-UNARY&lt;/em&gt; to &lt;em&gt;3COL&lt;/em&gt; is as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(i) For each group of nodes labeled with some colour &lt;em&gt;x&lt;/em&gt;, create
+two additional connected nodes &lt;em&gt;x1&lt;/em&gt; and &lt;em&gt;x2&lt;/em&gt;, and connect each node
+coloured &lt;em&gt;x&lt;/em&gt; to both of them.&lt;/li&gt;
+&lt;li&gt;(ii) For each two distinct groups of colours &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;, connect
+some node from &lt;em&gt;x&lt;/em&gt; with some node from &lt;em&gt;y&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When encoded input is run on &lt;em&gt;3COL&lt;/em&gt;,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Procedure (i) ensures all nodes coloured &lt;em&gt;x&lt;/em&gt; will have the same
+colour, even if that colour is not exactly &lt;em&gt;x&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Procedure (ii) ensures groups of labeled nodes will have different
+colours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notably the colours outputted by &lt;em&gt;3COL&lt;/em&gt; may not match the given original
+labeled colours. Since colours are symmetric, i.e can be exchanged
+without tampering any required condition, an encoded graph $f(w)$ is
+accepted by &lt;em&gt;3COL&lt;/em&gt; if and only if graph $w$ is accepted by &lt;em&gt;3COL-UNARY&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;p&gt;The goal is to show any language in NP can be polynomially reduced to
+&lt;em&gt;IMPLICIT-4COL&lt;/em&gt;. The exponentiality of number of vertices of graph $G_C$
+is the central key of testing all possible certificates and in turn
+determining whether a given &lt;em&gt;w&lt;/em&gt; belongs to &lt;em&gt;L&lt;/em&gt; language.&lt;/p&gt;
+&lt;p&gt;By cook-levin we know any NP language can be encoded in terms of SAT,
+and hence we can construct a corresponding circuit. Since the circuit&amp;rsquo;s
+input is of length 2n, we can think of it as partitioned into two
+n-length inputs. The first one is problem&amp;rsquo;s input (like a graph) and the
+second is a potential certificate (like a graph-route). The circuit
+evaluates whether a given input along some literals assignments
+(cirtificate) yields true (satisfiable).&lt;/p&gt;
+&lt;p&gt;We assume any language input is prefixed with 0, and any certificate
+input is prefixed with 1. If the circuit is given an invalid encoding it
+immediately outputs &lt;em&gt;FALSE&lt;/em&gt;. In other words, If a circuit accepts some
+input pair, we are ensured the first one indicates a language input and
+the second indicates a possible certificate.&lt;/p&gt;
+&lt;p&gt;Now we can think of graph $G_C$ as being partitioned into two groups;
+One for language inputs and the other for all possible certificates. If
+a vertix prefixed with 0 is connected to a vertix prefixed with 1, we
+can immediately conclude the language input is satisfiable, and
+otherwise it is unsatisfiable.&lt;/p&gt;
+&lt;p&gt;Given any language $L$ we can construct a corresponding $C$, and by
+&lt;em&gt;IMPLICIT-4COL&lt;/em&gt; a corresponding $G_C$. For any input $w$ which we wish
+to check whether it belongs to $L$, We can see whether its encoded
+vertex in $G_C$ is connected to any other vertex.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Notation.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NAE-Constraint: $N_i = (x_1, x_2, x_3)$&lt;/li&gt;
+&lt;li&gt;$XOR(x_i, x_j) = (x_i \vee x_j) \wedge (\neg x_i \vee \neg x_j)$&lt;/li&gt;
+&lt;li&gt;$GXOR(x_i, x_j, x_k) = XOR(x_i, x_j) \wedge XOR(x_i, x_k) \wedge XOR(x_j, x_k)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recall an $XOR$ means exactly one of two literals is true&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $GXOR$ is unsatisfiable.&lt;br&gt;
+Observe each two $XORs$ intersect a literal $x_i$. So either:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$x_i$ is &lt;em&gt;False&lt;/em&gt;, and $x_j$ and $x_k$ are both &lt;em&gt;True&lt;/em&gt;. Or&lt;/li&gt;
+&lt;li&gt;$x_i$ is &lt;em&gt;True&lt;/em&gt;, and $x_j$ and $x_k$ are both &lt;em&gt;False&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But that contradicts the third $XOR$ stipulating exactly one of $x_j$
+and $x_k$ is &lt;em&gt;True&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   5 clauses of $GXOR$ are satisfiable.&lt;br&gt;
+Following the same line of reasoning of the previous lemma, It&amp;rsquo;s clear
+by ignoring some clause of the 6 clauses of $GXOR$, we can have $x_j$
+and $x_k$ both assigned to the same boolean value.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   Equivalence of NAE constraint and 5 clauses of $GXOR$.&lt;br&gt;
+It is clear from the previous discussion that satisfying any 5 clauses
+of $GXOR$ is equivalent to satisfying an NAE constraint. Clearly,
+&lt;em&gt;Not-All-Equal&lt;/em&gt; constraint is exactly the same as either two literals
+are &lt;em&gt;True&lt;/em&gt; and one is &lt;em&gt;False&lt;/em&gt;, or two literals are &lt;em&gt;False&lt;/em&gt; and one is
+&lt;em&gt;True&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt;   An &lt;em&gt;NAE-3SAT:&lt;/em&gt; $N_1, N_2, \dots, N_r$ is equivalent to
+corresponding &lt;em&gt;MAX-2SAT:&lt;/em&gt; $GXOR_1, GXOR_2, \dots, GXOR_r$ with at least
+$5r$ clauses to be satisfied.&lt;br&gt;
+&lt;br&gt;
+If &lt;em&gt;MAX-2SAT&lt;/em&gt; is going to satisfy exactly 5 clauses of each $GXOR_i$,
+Then we are guaranteed of satisfying all $N_i$. In fact, This is the
+only feasible distribution of satisfied clauses. Otherwise all 6 clauses
+of some $GXOR_i$ must be satisfied, contradicting &lt;em&gt;Lemma 2&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;On the other hand, It&amp;rsquo;s clear if a given &lt;em&gt;NAE-3SAT&lt;/em&gt; instance is
+satisfiable, then so is the corresponding &lt;em&gt;MAX-2SAT&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;p&gt;&amp;ldquo;not confident of the solution&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;As mentioned by the instructor we follow the verifier-based definition
+of NP. Our goal is to show $$\begin{aligned}
+&amp;lt;M, x, 1^w, 1^t&amp;gt; \in TS \leftrightarrow \exists u , s.t , S(&amp;lt;M, x, 1^w, 1^t&amp;gt;, u)   , \text{certifies} , &amp;lt;M, x, 1^w, 1^t&amp;gt; \in TS\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;By $S$ we mean an algorithm which simulates $M$ on $(x, u)$, untill it
+accepts on $t$ steps.&lt;/p&gt;
+&lt;p&gt;The definition trivially concludes our intended goal. Note if
+$&amp;lt;M, x, 1^w, 1^t&amp;gt; , \not\in , TS$ then obviously there&amp;rsquo;s no any
+certificate $u$, such that any $M$ computes $(x, u)$ in time bounded by
+$t$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 05</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset05/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset05/</guid>
+      <description>&lt;h2 id=&#34;ex-0&#34;&gt;Ex. 0&lt;/h2&gt;
+&lt;p&gt;Naively we guess any transformation $f$ of Boolean formulas preserves the property of satisfiability. Hence it would always be the case
+$$
+\begin{aligned}
+w \not\in \textit{UNSAT} \leftrightarrow f(w) \in \textit{SAT}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;p&gt;Since the questions is about factor $a$ we can ignore constants. $n^r + {(n^l)}^b = n^{r+lb}$. So $a = r+lb$.&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;p&gt;following NTM simulation by DTM, partition states into H1 and H2 subsets, and apply the same procedure on each. now the combination of delta1 and delta2 reaches all possible states of NTM.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;First.&lt;/strong&gt; &lt;em&gt;sipser-NTM&lt;/em&gt; can be viewed as a sequence of states, Each of which, is a subset of a deterministic TM&amp;rsquo;s states. A state of &lt;em&gt;binary-NTM&lt;/em&gt; can be viewed as a subset of exactly two states from a deterministic TM. Since there are no restrictions on the number of elements of &lt;em&gt;sipser-NTM&lt;/em&gt;&amp;rsquo;s subset, &lt;em&gt;binary-NTM&lt;/em&gt; can be seen as a special case of it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Second.&lt;/strong&gt; Recall the proof idea of a deterministic TM simulating a non-deterministic TM, whereby a determinstic state encodes/resembles a non-determinstic subset of states. Following the same idea, partition $Q = Q_1 \cup Q_2$ and define $Q_1&amp;rsquo; = P(Q_1)$ and $Q_2&amp;rsquo; = P(Q_2)$. Here $P(Q_i)$ means the set of all subsets of states $Q_i$. Let $\delta_1$ and $\delta_2$ be responsible of $Q_1&amp;rsquo;$ and $Q_2&amp;rsquo;$, respectively. Observe any state of $P(Q)$ can be constructed by some $x \cup y$ where
+$x \in Q_1&amp;rsquo;$ and $y \in Q_2&amp;rsquo;$. Therefore, Any configuration sequence of &lt;em&gt;sipser-TM&lt;/em&gt; can be encoded/represented by some configuration sequence of &lt;em&gt;binary-TM&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;p&gt;The proof is shown by constructing a &lt;em&gt;non-deterministic&lt;/em&gt; &lt;em&gt;exponential-time&lt;/em&gt; algorithm for solving &lt;em&gt;IMPLICIT-4COL&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Given a circuit $C$, Construct its graph $G_C$ by enumerating all possible $2^n$ inputs of $i$ and all $2^n$ inputs of $j$, Computing $C(i,j)$, for $i \neq j$. The complexity is $2^n \times 2^n = 2^{n+1}$; Exponential.&lt;/p&gt;
+&lt;p&gt;Check whether the graph $G_C$ is 4-colorable. For each vertex of the graph, non-determinstically brute-force all the possible 4 colours. Since there are $2^n$ vertices, The complexity is &lt;em&gt;NEXP&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Clearly the total complexity of a subroutine of &lt;em&gt;EXP&lt;/em&gt; followed by a subroutine of &lt;em&gt;NEXP&lt;/em&gt;, is &lt;em&gt;NEXP&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;p&gt;We construct the reduction function through a polynomial algorithm. Let &lt;em&gt;C_colorable&lt;/em&gt; and &lt;em&gt;C_uncolorable&lt;/em&gt; be some fixed 4-colorable and 4-uncolorable graphs.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    L-to-3COL(w)
+      check whether w is in L by the given polynomial algorithm
+      if w belongs to L output C_colorable
+      otherwise output C_uncolorable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Observe our mapping necessarily satisfies
+$$
+w \in L \leftrightarrow \textit{L-to-3COL(w)} \in 3COL
+$$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 04</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset04/</link>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset04/</guid>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Obviously the problem has a polynomial-time verifier by specifying the range of the subsequence common among all $w_i$. It&amp;rsquo;s easy to loop on that range $k$, Checking whether corresponding positions of all $w_j$ are the same.&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;Obviously a verifier is some input $x_0$ such that $C_1(x_0) \neq C_2(x_0)$. It&amp;rsquo;s easy to  compute both circuits and check their unequal output.&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;p&gt;Intuitively, If a problem has some varifier, Then we can brute-force all possible verifiers. Observe we can choose the greatest branching factor $c_{max}$ so that time is upper-bounded by $c_{max}^{poly(n)}$. Alternatively, Our argument might be seen through the perspective of a tree of an $NP$ problem, where $poly(n)$ is the time required of the longest path of the tree.&lt;/p&gt;
+&lt;p&gt;I am not aware of any more rigorous proof.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;For clarity and brevity we list all cases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;unit clause $x_i$
+&lt;ul&gt;
+&lt;li&gt;delete any clause containing $x_i$&lt;/li&gt;
+&lt;li&gt;delete $\neg x_i$ from any clase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;unit clause $\neg x_i$
+&lt;ul&gt;
+&lt;li&gt;delete any clause containing $\neg x_i$&lt;/li&gt;
+&lt;li&gt;delete $x_i$ from any clause&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Due to symmetry we mention only the case of unit clause $x_i$.&lt;/p&gt;
+&lt;p&gt;We prove the new propagated $C&amp;rsquo;$ is satisfiable if and only if the given $C$ is satisfiable.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$ Necessarily $x_i = True$. Hence any clause containing $x_i$ is immediately evaluated to $True$ as well. Since $\neg x_i = False$ one of the remaining units of the clause containing $\neg x_i$ must be evaluated to $True$.&lt;/p&gt;
+&lt;p&gt;$(\rightarrow)$ Following the same reasoning, Since $x_i = True$, adding any clause containig $x_i$ is still going to be true regardless of other units boolean values. Also adding $\neg x_i = False$ to any clause evaluated to $True$ won&amp;rsquo;t change the whole clause&amp;rsquo;s boolean value.&lt;/p&gt;
+&lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;We give a constructive polynomial-time algorithm. We follow the hint mentioned in the problem statement.&lt;/p&gt;
+&lt;p&gt;For case (ii), Loop on clauses, and for each:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If no negative literal is assigned any value, Conveniently pick-up the first negative literal $\neg x_k$ and assign $x_k = False$.&lt;/li&gt;
+&lt;li&gt;If a negative literal $\neg x_k$ is assigned $x_k = False$, Continue to the next clause.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Observe we only assign $x_k = False$. As a result, the case of a negative literal $\neg x_k$ assigned $x_k = True$ won&amp;rsquo;t ever be encountered.&lt;/p&gt;
+&lt;p&gt;For case (i), Keep applying the process of $a$, Until all unit-clauses are eliminated. If any clause is empty, It&amp;rsquo;s concluded the given $C$ is unsatisfiable. Now we know every clause contains at least two literals, Including a negative literal. Case (i) is now reduced to case (ii).&lt;/p&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;h3 id=&#34;a-2&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Clearly, If literals $x_i$ which are assigned to $1$ are even, Then they can re-arranged as pairs, Each yielding $0$, and in turn all pairs yield $0$. Observe for an even number, $2k$ mod 2 = 0.&lt;/p&gt;
+&lt;p&gt;Similarly, if literals $x_i$ which are assigned to $1$ are odd, Then we obtain 1 XOR 0 = 1, by separating one literal from the remaining even literals.&lt;/p&gt;
+&lt;h3 id=&#34;b-2&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;We define summation as, $\epsilon_1 + \epsilon_2 = c_1 + c_2 + 1$ where are $\sum_i x_{1i} = c_1$ mod $2$ and $\sum_i x_{2i} = c_2$ mod $2$. Note if $c_1 = c_2 = 1$, Then $c_1 +  c_2 + 1 = 1 + 1 + 1 = 1$ mod $2$ and hence $(\epsilon_1 + \epsilon_2)(x) = 1$. On the other hand, If $1 + c_2 + 1 = 1$ mod $2$, Then $c_2 = -1 = 1$ mod $2$. Hence, $\epsilon_2(x) = 1$.&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
+&lt;p&gt;Consider $k_1$ to be the number of equations in which $x_{11}$ appreas.&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+\text{Update $x_{11}$ to} \hspace{10mm}
+{
+\begin{array}{lr}
+0, &amp;amp;\text{if $k_1$ is even} \\
+k_1 x_{11}, &amp;amp;\text{if $k_1$ is odd}
+\end{array}
+}
+\end{align*}&lt;/p&gt;
+&lt;p&gt;Remark in case $k_1 = 2m$ is even, Then $\sum_{j=1}^{2m} x_{1j} = 2(m x_{11}) = 0$ mod $2$. That, Regardless of $x_{1j}$ values, as we would always obtain an even number.&lt;/p&gt;
+&lt;p&gt;Now consider the whole system of equations by summing all equations as we defined in &lt;em&gt;b&lt;/em&gt;. In  case $k_1$ is even, Then we know $x_{1j}$ evaluates to zero, and hence their removal from the system doesn&amp;rsquo;t affect. In case $k_1$ is odd, Then $k_1 x_{11}$ is exactly equivalent to $x_{11} + x_{12} + \dots + x_{1n}$. Think of redistributing $x_{1j}$ to reconstruct the original equations before the transformation, which clarifies why the new system is equivalent to the original one.&lt;/p&gt;
+&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
+&lt;p&gt;If at any stage $0 = 1$ is concluded, Then no matter what $x$ is inputted, The system won&amp;rsquo;t be satisfied. Since the transformed system is equivalent to the original one, It&amp;rsquo;s trivial why the original system is unsatisfiable.&lt;/p&gt;
+&lt;p&gt;Observe in &lt;em&gt;modulus 2&lt;/em&gt;, the only possible evaluation outcomes are $0$ or $1$. So if $LHS \neq RHS$, then necessarily we get $0 = 1$. If we don&amp;rsquo;t get $0 = 1$, then all equations&amp;rsquo; evaluations are satisfied.&lt;/p&gt;
+&lt;p&gt;Observe also if $k_{ii} x_{ii} = c , mod , 2$ then by our definitions we know $k_{ii}$ is odd. It follows there&amp;rsquo;s exactly one unique solution for $x_ii$.&lt;/p&gt;
+&lt;p&gt;As the instructor hinted, back-substitution can be applied recursively to compute $x_{nn}$, $x_{n-1 , n-1}$, .., $x_{11}$ where once $x_{ii}$ is computed, For all the above equations, Their number of variables are reduced by one. Only one literal $x_{i-1 , i-1}$ is left for the next equation.&lt;/p&gt;
+&lt;p&gt;As a valid assignment $x$ for the transformed system is constructed, The original system is satisfied by $x$ also.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 03</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset03/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset03/</guid>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;p&gt;The proof is already mentioned in sipser. We can easily reprove it using the diagonalization argument.&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;p&gt;Enumerate all the two choices of a node colored in (red or blue), or colored in yellow, on all nodes. Consider the two subgraphs separately; If the yellow subgraph contains any edge reject the instance. Check if the other subgraph is 2-colorable. Only if yes, accept as the whole graph as 3-colorable.&lt;/p&gt;
+&lt;p&gt;The complexity is justified, Since checking 2-colorable is polynomially solved, on each instance of all two choices, on all nodes.&lt;/p&gt;
+&lt;p&gt;Clearly, If the graph is 3-colorable, then the algorithm catches the instance corresponding to nodes correctly colored in yellow and others in either red or blue. On the other hand, If the algorithm found a solution, Then the graph is 3-colorable, As the solution can easily be constructed.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;p&gt;Observe the cases of $x_i$ and $x_j$ of the binary relation $x_i \leq x_j$.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(1) Both are assigned by a given condition&lt;/li&gt;
+&lt;li&gt;(2) One is assigned 0 and the other is equal or less&lt;/li&gt;
+&lt;li&gt;(2) One is assigned 1 and the other is equal or greater&lt;/li&gt;
+&lt;li&gt;(3) Both are not assigned&lt;/li&gt;
+&lt;li&gt;(4) One is assigned 0 and the other is equal or greater&lt;/li&gt;
+&lt;li&gt;(4) One is assigned 1 and the other is equal or less&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We give an algorithm that costs exactly one linear scan. Scan all binary relations $x_i \leq x_j$, If&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;of type (1), Check whether assigned values conform to the relation, and reject satisfiability if not.&lt;/li&gt;
+&lt;li&gt;of type (2), Assign 0 and 1, Correspondingly, So that values conform to the relation. If a conflict is faced, where there&amp;rsquo;s a prior assignment, that precludes from assigning what satisfies the relation, reject.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To see why the algorithm is correct, We construct a valid solution, Given what the algorithm had already verified. For case&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(3), assign $x_i = 0$ and $x_j$ arbitrarily $0$ or $1$&lt;/li&gt;
+&lt;li&gt;(4), assign arbitrarily $0$ or $1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clearly, cases $3$ and $4$, do not conflict with cases $1$ or $2$, Since the algorithm has already checked and assigned what satisfies cases $1$ and $2$. Case $3$ doesn&amp;rsquo;t conflict with $4$, As $4$ allows any assignment. Remaining $x_i$ with no conditions at all, can be arbitrarily assigned as well.&lt;/p&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;p&gt;From &lt;em&gt;hw02-2-b&lt;/em&gt;, We are given a procedure &lt;em&gt;haltMachine(T, f(n))&lt;/em&gt; that produces a Turing Machine $T_{f(n)}$, which is exactly the same as machine $T$, but halts within $f(n)$ steps; If $T$ terminates within $f(n)$, Then $T_{f(n)}$ produces the same output; Otherwise rejects. Note $T_{f(n)}$ is multi-tab, whereby at each step simulated of $T$, a counter on a specific tab is increased by one.&lt;/p&gt;
+&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;For any polynomial time machine $T$, We know it runs in time at most $kn^k$. $T_{kn^k}$ simulates $T$ upto $kn^k$ steps which suffices to ensure it produces the same output.&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;Since $T$ is polynomial, and at each step, counter increase is polynomial, The total resulting complexity is polynomial.&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
+&lt;p&gt;Observe to construct $T_{f(n)}$, We would need to integrate a sub-routine that increases counter by one, where every state points to it after completing its one-step operation. For every state $q_i$, we create a new state $q_{i-counter}$ such that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$q_i$ transitions to $q_{i-counter}$, instead of $q_r$ as in $T$, exactly after one-step.&lt;/li&gt;
+&lt;li&gt;$q_{i-counter}$ transitions to $q_r$, what $q_i$ transitions to in $T$, after completing all steps required for increasing counter by one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clearly the transformation is linear in time.&lt;/p&gt;
+&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
+&lt;p&gt;Alice can basically check for the sub-routine that increases counter by one, and check for the state that terminates the machine, upon the counter reaching $f(n)$.&lt;/p&gt;
+&lt;p&gt;The algorithm of checking polynomiality is clear, if the reader is convinced by the procedure of transformation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 02</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset02/</link>
+      <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset02/</guid>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;p&gt;The set of all unary languages is uncountably infinite but the set of all Turing machines is countably infinite, Hence some unary language isn&amp;rsquo;t recognizable by any turing machine.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s prove uncountability of unary languages. Observe the set $\Sigma^*$ equals
+\begin{align*}
+&amp;amp;\epsilon \quad &amp;amp;s_1\\
+&amp;amp;1 \quad &amp;amp;s_2\\
+&amp;amp;11 \quad &amp;amp;s_3\\
+&amp;amp;111 \quad &amp;amp;s_4\\
+&amp;amp;.. \quad &amp;amp;..\\
+\end{align*}
+Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an infinite binary sequence, where string $s_i$ is in the language if and only if sequence bit $b_i$ is 1. Clearly, there is bijective map from unary languages to infinite binary sequences. But the set of infinite binary sequences is uncountably infinite.&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Assume the input is conveniently given as *w#, and machine&amp;rsquo;s tape-1 is on first character of w (or on # if $w$ is $\epsilon$). Assume also tape-2 is given with * character at its beginning, and tape-2 head is one-step right to it. For brevity we ignore such implementation details.&lt;/p&gt;
+&lt;p&gt;Initial state is $q_{\text{rightDouble1}}$. We assume characters of the alphabet have corresponding other marked characters. e.g 1 has 1&amp;rsquo;. We indicate by saying marking a character, replacing it with its corresponding marked one.&lt;/p&gt;
+&lt;p&gt;$q_{\text{leftUntill*}}:$ move tape-1 left untill * is read, Then move right and $q_{\text{rightDouble1}}$.&lt;/p&gt;
+&lt;p&gt;$q_{\text{rightDouble1}}:$ sequentially, move tape-1 right once, write 1 in tape-2 twice in two sequential slots, untill # is read by tape-1 then move left and $q_{\text{isAllMarked}}$.&lt;/p&gt;
+&lt;p&gt;$q_{\text{isAllMarked}}:$ if a marked character or * is read by tape-1, then $q_{\text{unmarkInput}}$. if a non-marked character is read, then $q_{\text{leftUntill*}}$.&lt;/p&gt;
+&lt;p&gt;$q_{\text{unmarkInput}}:$ move tape-1 left replacing marked characters by their unmarked counterparts untill * is read, then move right and $q_{\text{lefttape2}}$.&lt;/p&gt;
+&lt;p&gt;$q_{\text{lefttape2}}:$ move tape-2 left untill * is read, then move right.&lt;/p&gt;
+&lt;p&gt;It is easy to transform tape-1 to be exactly w and tape-2 to be popped out of * at its left-most. We ignore these implementation details.&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;From &lt;em&gt;a&lt;/em&gt;, We know there&amp;rsquo;s a 2-tape turing machine $T$ that can prepare tape-2 with string $1^{2|w|^2}$. We wish to think of this string as a counter of number of steps taken by the machine. It is possible for it to be augmented, to simulate machine $M$, while ticking tape-2, Accepting if $M$ accepts and tape-2 isn&amp;rsquo;t completely ticked, and rejecting otherwise. The 1-tape turing machine $M$ can be constructed by simulating $T$.&lt;/p&gt;
+&lt;p&gt;$T$ runs in polynomial time, since preparing tape-2 is upperbounded by $n^2$, and ticking tape-2 while simulating $M$ doesn&amp;rsquo;t cost any more steps. The simulation of $T$ by $M&amp;rsquo;$ is polynomially overheaded by $T$, and hence $M&amp;rsquo;$ is polynomially upperbounded.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Let $T$ be the turing machine recognizing $L$. It is possible to construct another turing machine $T&amp;rsquo;$ whose &lt;em&gt;accept&lt;/em&gt; and &lt;em&gt;reject&lt;/em&gt; states are swapped. So, $w \in L$ iff $T$ accepts $w$ iff $T&amp;rsquo;$ rejects $w$ iff $w \not\in L^c$.&lt;/p&gt;
+&lt;p&gt;The number of steps made by $T&amp;rsquo;$ is exactly the same as $T$, and hence of a polynomial complexity.&lt;/p&gt;
+&lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;Let $T_1$ and $T_2$ be two turing machines recognizing $L_1$ and $L_2$ respectively. It is possible to construct a new turing machine $T$ that simulates $T_1$ and memorizes its result, Then instead of termination, simulates $T_2$ on the same input and memorizes its result also. It is easy for $T$ to be designed such that it accepts input $w$ if and only if either the simulation of $T_1$ or $T_1$ accepted.&lt;/p&gt;
+&lt;p&gt;The complexity of $T$ is $\mathcal{O}(poly(n)) + \mathcal{O}(poly(n)) + C = \mathcal{O}(poly(n))$&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
+&lt;p&gt;Similarly to &lt;em&gt;b&lt;/em&gt;, but $T$ accepts input $w$ if and only if both the simulations of $T_1$ and $T_2$ are accepted.&lt;/p&gt;
+&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
+&lt;p&gt;Similarly to &lt;em&gt;b&lt;/em&gt;, but $T$ accepts input $w$ if and only if at least two out of the three simulations of $T_1$, $T_2$, and $T_3$ accepts.&lt;/p&gt;
+&lt;h3 id=&#34;e&#34;&gt;e&lt;/h3&gt;
+&lt;p&gt;Let $T$ be the turing machine recognizing $L$. For any $m \in \mathcal{N}$, It is possible to construct a m-tape turing machine $T_m$, that simulates $T$ on $w_i$ on the ith tape. Hence, complexity of $T_m$ is $\sum_{i=0}^m \mathcal{O}(poly(|w_i|)) = \mathcal{O}(poly(|w|))$. Clearly the processing required to copy substrings $w_i$ on ith tapes is polynomial also, Hence $T_m$&amp;rsquo;s established upperbound remains the same.&lt;/p&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;p&gt;Any turing machine needs at least a linear scan of cost $n$, to behave in number of steps, as a function of $n$. In other words, number of steps $T$, must be $T(n) \geq n$, so that $T = f(n)$ for some function $f$. Since $T$ is upperbounded by $\sqrt{n} = \mathcal{o}(n)$, $T(n) \neq f(n)$ for any $f$. In other words, $T$ isn&amp;rsquo;t based on input size $n$. Therefore, must be a constant.&lt;/p&gt;
+&lt;p&gt;The intuition is very strong that a turing machine cannot behave in relation to $n$ if its memory doesn&amp;rsquo;t contain $n$&amp;rsquo;s value; I am not aware of a more rigorous proof.&lt;/p&gt;
+&lt;p&gt;As final note, For any constant $C$, we can always find some $n$, such that $C \sqrt{n} &amp;lt; n$. Hence, always guaranteeing the turing machine can&amp;rsquo;t read its whole input.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 01</title>
+      <link>https://mostafatouny.github.io/odonnell-undergrad-post/pset01/</link>
+      <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset01/</guid>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+&lt;p&gt;skipped&lt;/p&gt;
+&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
+&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;As the recipe is deterministic, i.e generates only one output given the same input, The assignment is valid and the function is well-defined.&lt;/p&gt;
+&lt;p&gt;For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarrow f(x_0) \neq f(x_1)$. Since, $x_0 + 1 \neq x_1 + 1$, Their binary representation differs in either the number of bits or in some bit not matching. That unmatching bit cannot be the most significant bit as it&amp;rsquo;s always 1. Therefore, resulting strings, $f(x_0)$ and $f(x_1)$ are not the same.&lt;/p&gt;
+&lt;p&gt;For surjectivity, Pick-up any string $w \in {0, 1}^*$ and reverse the recipe to obtain natural number $x$. Namely, add 1 as the most significant bit, interpret string as a binary number, convert to base 10, and finally subtract 1. Clearly $f(x) = w$.&lt;/p&gt;
+&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;Here&amp;rsquo;s a very illustrative example that achieves an encoding in $\lg a + \lg b$.&lt;/p&gt;
+&lt;p&gt;(2, 5), converted to binary, (10, 101); add leading zeros so both have the same number of bits, (010, 101). Finally, Concatenate bit by bit, i.e add the first bit of the first number then first bit of the second then second bit of the first, ..etc, Yielding 011001.&lt;/p&gt;
+&lt;p&gt;The recipe can easily be rolled back.&lt;/p&gt;
+&lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
+&lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Binary search on range (a, a+1, .., b-1, b), where at each step algorithm $D$ is queries on both the first and second halves of the array, Then recursively call the binary search on both halves.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;primeFactor( X = array(a, a+1, .., b-1, b) )
+
+  if X.length == 1
+    if D(x)
+	  return X[0]
+	return FALSE
+  
+  if X.length == 0
+    return FALSE
+	
+  halfIndex = floor(X.length/2)
+  firstHalf = X[: halfIndex]
+  secondHalf = X[halfIndex+1 :]
+  
+  if D(firstHalf)
+    return primeFactor(firstHalf)
+  if D(secondHalf)
+    return primeFactor(secondHalf)
+  return FALSE
+  
+main( X = array (a, a+1, .., b-1, b) )
+  res = primeFactor(X)
+  if res == FALSE
+    print &#39;no&#39;
+  else
+    print &#39;yes&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since $m \geq$ length of $X$, Complexity is $O(\lg m)$.&lt;/p&gt;
+&lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;Solving decision $D$ by $f$. Compute $f(x) = y$ and check whether $y_i = b$.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;y = f(x)
+if y[i] == b
+  return YES
+return FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Computing $f$ by $D$. on each bit $x_i$ of $x$, Call $D$ on string x, bit 0, and position i. if result is YES, let $y_i = 0$; if result is NO, let $y_i = 1$. assign $f(x)$ to $y$.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;y = []
+for i in x.length
+  res = D(x, 0, i)
+  if res == YES
+    y[i] = 0
+  else
+    y[i] = 1
+return y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
+&lt;h3 id=&#34;a-2&#34;&gt;a&lt;/h3&gt;
+&lt;p&gt;Trivially we can transform the input to the form *input#.&lt;/p&gt;
+&lt;p&gt;Initially the machine is on state $q_0$.&lt;/p&gt;
+&lt;p&gt;$q_0:$ move right until # is reached, then $q_1$.&lt;/p&gt;
+&lt;p&gt;$q_1:$ move left until a non-# is reached, then $q_2$.&lt;/p&gt;
+&lt;p&gt;$q_2:$ if * halt; if 0 print # and $q_3$; if 1 print &lt;span&gt;$&lt;/span&gt; and $q_4$.&lt;/p&gt;
+&lt;p&gt;$q_3:$ move right until a blank space is reached, then print 0 and $q_5$.&lt;/p&gt;
+&lt;p&gt;$q_4:$ move right until a blank space is reached, then print 1 and $q_5$.&lt;/p&gt;
+&lt;p&gt;$q_5:$ move left until # is reached, then $q_1$.&lt;/p&gt;
+&lt;h3 id=&#34;b-2&#34;&gt;b&lt;/h3&gt;
+&lt;p&gt;skipped&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
+&lt;p&gt;Assume andrew id is ac12. f(ac12) = 10000110.&lt;/p&gt;
+&lt;p&gt;*10000110# is our assumed input. on step 8, machine is on 0 and state $q_0$. On step 9, machine is on # and state $q_0$. On step 10, machine is on state $q_1$.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

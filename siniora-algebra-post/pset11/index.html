@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: December 20, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Problems 2 $n = 3$.
+The table in page 213 shows that.
+5 $45 = 3^2 \cdot 5^1$. By the fundamental theorem of finite abelian groups, All possible groups are \begin{aligned} Z_9 \oplus Z_5 &amp;\approx Z_{45} \\ Z_3 \oplus Z_3 \oplus Z_5 &amp;\approx Z_3 \oplus Z_{15} \end{aligned}" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/siniora-algebra-post/pset11/" />
+<link rel="canonical" href="https://mostafatouny.github.io/siniora-algebra-post/pset11/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/siniora-algebra-post/pset11/" />
+<meta property="og:title" content="Chapter 11 | Mostafa Touny" />
+<meta property="og:description" content="Problems 2 $n = 3$.
+The table in page 213 shows that.
+5 $45 = 3^2 \cdot 5^1$. By the fundamental theorem of finite abelian groups, All possible groups are \begin{aligned} Z_9 \oplus Z_5 &amp;\approx Z_{45} \\ Z_3 \oplus Z_3 \oplus Z_5 &amp;\approx Z_3 \oplus Z_{15} \end{aligned}" /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-12-18T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-12-18T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Chapter 11 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="222b57c04f98b04af83d8d76fae83b24" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Chapter 11</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 18, 2023
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="problems" class="unnumbered">Problems</h2>
+<h3 id="section" class="unnumbered">2</h3>
+<p>$n = 3$.</p>
+<p>The table in page 213 shows that.</p>
+<h3 id="section-1" class="unnumbered">5</h3>
+<p>$45 = 3^2 \cdot 5^1$. By the <em>fundamental theorem of finite abelian
+groups</em>, All possible groups are
+\begin{aligned}
+Z_9 \oplus Z_5 &amp;\approx Z_{45} \\
+Z_3 \oplus Z_3 \oplus Z_5 &amp;\approx Z_3 \oplus Z_{15}
+\end{aligned}</p>
+<p>Group $(1)$ has element $3$ whose order is $|3| = 15$. Group $(2)$ has element $(0,1)$ whose order is $|(0,1)| = 15$. Therefore, Any finite abelian group of order $45$ has an element of order $15$.</p>
+<p>By <em>The fundamental theorem of cyclic groups</em> (page 81) we know all elements orders of $Z_3$ are: $1, 3$, and all elements orders of $Z_{15}$ are: $1, 3, 5$. But by <em>Theorem 8.1</em> (page 158) all elements&rsquo; orders of $Z_3 \oplus Z_{15}$ are: $1, 3, 5, 15$, by computing $lcm$ of all possible pairs of elements orders. Therefore, It is not necessarily the case any finite abelian group of order $45$ has an element of order $9$.</p>
+<h3 id="section-2" class="unnumbered">10</h3>
+<p>$360 = 2^3 \cdot 3^2 \cdot 5^1$.</p>
+<p>For $2^3$, $k = 3$,
+\begin{aligned}
+3 &amp;\qquad Z_8 \\
+2 + 1 &amp;\qquad Z_4 \oplus Z_2 \\
+1 + 1 + 1 &amp;\qquad Z_2 \oplus Z_2 \oplus Z_2
+\end{aligned}</p>
+<p>For $3^2$, $k = 2$,
+\begin{aligned}
+2 &amp;\qquad Z_9 \\
+1 + 1 &amp;\qquad Z_3 \oplus Z_3
+\end{aligned}$$</p>
+<p>For $5^1$, $k = 1$,
+\begin{aligned}
+1 \qquad Z_5
+\end{aligned}</p>
+<p>It follows all groups are
+\begin{aligned}
+&amp;Z_8 \oplus Z_9 \oplus Z_5 \\
+&amp;Z_8 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\
+&amp;Z_4 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\
+&amp;Z_4 \oplus Z_2 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\
+&amp;Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\
+&amp;Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_3 \oplus Z_3 \oplus Z_5
+\end{aligned}</p>
+<h3 id="section-3" class="unnumbered">22</h3>
+<p>By <em>the fundamental theorem of finite abelian groups</em>, $G \approx Z_{p_1^{n_1}} \oplus Z_{p_2^{n_2}} \oplus \dots \oplus Z_{p_k^{n_k}}$ where $|G| = p_1^{n_1} \cdot .. \cdot p_k^{n_k}$. We claim $n_1 = n_2 = \dots = n_k = 1$.</p>
+<p>Assume for contradiction some $n_i &gt; 1$. Then by the theorem we can substitute $Z_{p_i^{n_i}}$ by $Z_{p_i^1} \oplus Z_{p_i^1} \oplus Z_{p_i^{n_i-2}}$. If $n_i = 2$ then just ignore the third term. It follows we have two distinct subgroups of cardinality $p_i$. In other words, two distinct subgroups of the same order of divisor $p_i$ of $|G|$. Contradiction.</p>
+<p>Therefore $G \approx Z_{p_1^1} \oplus Z_{p_2^1} \oplus \dots \oplus Z_{p_k^1}$. But all $p_i$s are coprime, So $G \approx Z_{p_1 \cdot .. \cdot p_k}$, Concluding it is cyclic.</p>
+<h3 id="section-4" class="unnumbered">31</h3>
+<p>If $a = b$ then $a^2 = b^2$. So $a$ and $b$ are distinct. Moreover $(a^2)^2 = a^4 = e$ and $(b^2)^2 = b^4 = e$. So we have distinct elements $a^2$ and $b^2$ of order 2.</p>
+<p>By the <em>fundamental theorem of finite abelian groups</em>, All possible classes are:
+\begin{aligned}
+&amp;Z_{16} \\
+&amp;Z_8 \oplus Z_2 \\
+&amp;Z_4 \oplus Z_4 \\
+&amp;Z_4 \oplus Z_2 \oplus Z_2 \\
+&amp;Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_2
+\end{aligned}</p>
+<p>$(3)$ is excluded as it has only one element of order $2$, namely $8$.</p>
+<p>$(4)$ is excluded. All orders of elements are $1,2,4,8$ and $1,2$ respectively. Elements of order $4$ in group $(4)$ can be only obtained by an element of order $4$ in $Z_8$. Otherwise the $lcm$ would be $1,2,8$. There are only two elements of order $4$ in $Z_8$, namely $2$ and $6$. So all possible elements of order $4$ in group $(4)$ are $(2,0), (6,0), (2,1), (6,1)$. But the square of any of them is $(4,0)$, Violating the given condition $a^2 \neq b^2$.</p>
+<p>$(6)$ is excluded. All orders of elements are $1,2,4$ and $1,2$ respectively. There are only two elements in $Z_8$ of order $4$, namely $1$ and $3$. So all possible elements of order $4$ in group $(4)$ are $(1,0), (3,0), (1,1), (3,1)$. But the square of any of them is $(2,0)$, Violating the given condition of $a^2 \neq b^2$.</p>
+<p>$(7)$ is excluded as all elements orders of $Z_2$ are $1,2$, So taking $lcm$ would always be $1,2$. So it has no element of order $4$.</p>
+<p>Therefore the class is group $(5)$.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://u.pcloud.link/publink/show?code=XZuk2oVZAtnAxeL0KeQjPPeF0gExu4Qb0HIV" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
