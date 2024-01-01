@@ -279,12 +279,13 @@
 
   
 
-<meta name="description" content="Problems 1 $\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a&#43;b) = 2a &#43; 2b = \phi(a)\phi(b)$, Following by usual properties of integers." />
+<meta name="description" content="$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$
+Exercises Ex. 01 False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/siniora-algebra-post/pset06/" />
-<link rel="canonical" href="https://mostafatouny.github.io/siniora-algebra-post/pset06/" />
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/axler-linear-post/ch07-secb/" />
+<link rel="canonical" href="https://mostafatouny.github.io/axler-linear-post/ch07-secb/" />
 
 
 
@@ -317,18 +318,19 @@
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Mostafa Touny" />
-<meta property="og:url" content="https://mostafatouny.github.io/siniora-algebra-post/pset06/" />
-<meta property="og:title" content="Chapter 06 | Mostafa Touny" />
-<meta property="og:description" content="Problems 1 $\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a&#43;b) = 2a &#43; 2b = \phi(a)\phi(b)$, Following by usual properties of integers." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://mostafatouny.github.io/axler-linear-post/ch07-secb/" />
+<meta property="og:title" content="Ch. 07, Sec. B | Mostafa Touny" />
+<meta property="og:description" content="$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$
+Exercises Ex. 01 False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
       property="article:published_time"
-      content="2023-12-01T00:00:00&#43;00:00"
+      content="2024-01-01T00:00:00&#43;00:00"
     />
   
   
-    <meta property="article:modified_time" content="2023-12-01T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-01-01T00:00:00&#43;00:00">
   
 
 
@@ -353,7 +355,7 @@
 
 
   
-  <title>Chapter 06 | Mostafa Touny</title>
+  <title>Ch. 07, Sec. B | Mostafa Touny</title>
 
   
   
@@ -373,7 +375,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="35fbc67cf5477922e5511551a4c0821a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="16fc05d41de47c769dc3a20deb1a6d1e" >
 
   
   
@@ -555,7 +557,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Chapter 06</h1>
+  <h1>Ch. 07, Sec. B</h1>
 
   
 
@@ -574,7 +576,7 @@
     
       
     
-    Dec 1, 2023
+    Jan 1, 2024
   </span>
   
 
@@ -606,126 +608,16 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="problems" class="unnumbered">Problems</h2>
-<h3 id="section" class="unnumbered">1</h3>
-<p>$\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a+b) = 2a + 2b = \phi(a)\phi(b)$, Following by usual properties of integers.</p>
-<h3 id="section-1" class="unnumbered">2</h3>
-<p>We Follow the same proof approach of <em>Example 15</em> (page 130). Let $\phi \in Aut(Z)$ be arbitrary. Then by the usual properties of integers and isomorphisms, $\phi(k) = \phi(1 + 1 + \dots + 1) = \phi(1) + \dots + \phi(1) = k \cdot \phi(1)$. But by definition $\phi(1) = c$ for some integer $c$. Therefore $\phi(k) = kc$. In other words, $Aut(Z) = { \phi \mid \exists c, ; \forall k ; \phi(k) = kc }$</p>
-<h3 id="section-2" class="unnumbered">4</h3>
-<p>Caylay table of $U(8)$:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>1</th>
-<th>3</th>
-<th>5</th>
-<th>7</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>3</td>
-<td>5</td>
-<td>7</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3</td>
-<td>1</td>
-<td>7</td>
-<td>5</td>
-</tr>
-<tr>
-<td>5</td>
-<td>5</td>
-<td>7</td>
-<td>1</td>
-<td>3</td>
-</tr>
-<tr>
-<td>7</td>
-<td>7</td>
-<td>5</td>
-<td>3</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Caylay table of $U(10)$:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>1</th>
-<th>3</th>
-<th>7</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>3</td>
-<td>7</td>
-<td>9</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3</td>
-<td>9</td>
-<td>1</td>
-<td>7</td>
-</tr>
-<tr>
-<td>7</td>
-<td>7</td>
-<td>1</td>
-<td>9</td>
-<td>3</td>
-</tr>
-<tr>
-<td>9</td>
-<td>9</td>
-<td>7</td>
-<td>3</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Recall from <em>theorem 6.2</em> (page 126), Any $\phi$ maps the identity to the identity of the other group.</p>
-<p>In $U(8)$ we have $3 \cdot 3 = 1$. Then $\phi(3 \cdot 3) = \phi(3) \cdot \phi(3) = \phi(1) = 1$. The only non-identity element in $U(10)$ satisfying that is $9$. Hence $\phi(3) = 9$.</p>
-<p>Similarly $5 \cdot 5 = 1$. Then we must have some $a \in U(10)$ such that $a \cdot a = 1$ where $a \notin { 1, 9 }$. Contradiction.</p>
-<h3 id="section-3" class="unnumbered">8</h3>
-<p><em>Injective.</em> Given $\log_{10} a = \log_{10} b$, we get $10^{\log_{10} a} = 10^{\log_{10} b}$, and $a = b$.</p>
-<p><em>Surjective.</em> Given $x \in \mathcal{R}$, take $a = 10^x \in \mathcal{R}^+$. Then $\log_{10} a = \log_{10} 10^x = x$.</p>
-<p><em>Group Operation.</em> Observe $\phi(ab) = \log_{10} ab = \log_{10} a + \log_{10} b = \phi(a) + \phi(b)$.</p>
-<h3 id="section-4" class="unnumbered">11</h3>
-<p>Observe $\phi(a^3 b^{-2}) = \phi(a^3) + \phi(b^{-2}) = [\phi(a)]^3 + [\phi(b)]^{-2} = (\overline{a})^3 + (\overline{b})^{-2}$. We used <em>theorem 6.2</em> (2).</p>
-<h3 id="section-5" class="unnumbered">12</h3>
-<p>$(\rightarrow)$. For any $a,b \in G$, We have:
-\begin{aligned}
-\alpha(a^{-1}b^{-1})  &amp;= \alpha(a^{-1}) \alpha(b^{-1}) \\
-(a^{-1} b^{-1})^{-1} &amp;= \\
-ba  &amp;= ab
-\end{aligned}</p>
-<p>$(\leftarrow)$. Symmetrically, If we have $b^{-1} a^{-1} = a^{-1} b^{-1}$, Then $\alpha(ab) = \alpha(a) \alpha(b)$. Bijection is clear by properties of inverses.</p>
-<h3 id="section-6" class="unnumbered">14</h3>
-<p>By <em>theorem 6.5</em> (page 131), $Aut(Z_3) \approx U(3)$ and $Aut(Z_4) \approx U(4)$, so $Aut(Z_3) \approx Aut(Z_4)$ by the <em>transitivity</em> of isomorphism. But $Z_3 \not\approx Z_4$ as the two groups have different orders, so no bijection exists.</p>
-<h3 id="section-7" class="unnumbered">21</h3>
-<p>Clearly groups $H$ and $K$ are isomorphic to $S_4$. By transitivity $H \approx K$.</p>
-<h3 id="section-8" class="unnumbered">22</h3>
-<p>For every $c = 2, 3, 4 \dots$, Consider the subset $H_c = { ck \mid k \in \mathcal{Z} }$. It is a subgroup, As it has the identity $c(0)$, inverses $c(-k)$, and closed $ck_1 + ck_2 = c(k_1 + k_2)$.</p>
-<p>It remains to show those subgroups are distinct. For any $c_1$ and $c_2$ where $c_1 &lt; c_2$ we have $c_1(1) \in H_{c_1}$ but $c_1(1) \not\in H_{c_2}$. Therefore $H_{c_1} \neq H_{c_2}$.</p>
-<h3 id="section-9" class="unnumbered">24</h3>
-<p>We use <em>theorem 3.2</em> (page 63). If $\phi(a) = a$ then $\phi(a^{-1}) = (\phi(a))^{-1} = a^{-1}$. Also, If $\phi(a) = a$ and $\phi(b) = b$ then $\phi(ab) = \phi(a) \phi(b) = ab$.</p>
-<h3 id="section-10" class="unnumbered">34</h3>
-<p>Let $K$ be a subgroup of $G$. We use <em>theorem 3.2</em> (page 63).</p>
-<p><strong>Inverse.</strong> For any $\phi(k) \in \phi(K)$, $(\phi(k))^{-1} = \phi(k^{-1})$. But $k^{-1} \in K$, So $\phi(k^{-1}) \in \phi(K)$.</p>
-<p><strong>Closed.</strong> For $\phi(k_1), \phi(k_2) \in \phi(K)$, We have $\phi(k_1) \phi(k_2) = \phi(k_1 k_2)$. But $k_1 k_2 \in K$, So $\phi(k_1 k_2) \in \phi(K)$.</p>
+      <p>$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$</p>
+<h2 id="exercises" class="unnumbered">Exercises</h2>
+<h3 id="ex.-01" class="unnumbered">Ex. 01</h3>
+<p>False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.</p>
+<h3 id="ex.-02" class="unnumbered">Ex. 02</h3>
+<p>Assume $F = \mathbb{R}$.</p>
+<p><strong>Observation.</strong> $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$</p>
+<p>The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.</p>
+<p>By <em>Real Spectral Theorem</em> (p. 221), There is a basis of eigenvectors of $T$ corresponding to eigenvalues $\lambda_1, .., \lambda_n$. By hypothesis we know $\lambda_i = 2$ or $\lambda_i = 3$.</p>
+<p>Let $v$ be an arbitrary vector $v$. Then $v = a_1v_1 + \dots + a_nv_n$. Observe $p(T)(v) = p(T)(a_1v_1) + \dots + p(T)(a_nv_n) = a_1p(\lambda_1)v_1 + \dots + a_np(\lambda_n)v_n$. But $p(\lambda_i) = 0$, so $p(T)v = 0$.</p>
 
     </div>
 

@@ -334,6 +334,11 @@
 &lt;td&gt;Page 214&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
+&lt;td&gt;Page 223&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
@@ -917,10 +922,10 @@
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;thought&#34; srcset=&#34;
-               /post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_4741863bed26e56af2f4678b1e4025a0.webp 400w,
+               /post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_69807db2fc2ff288d12df35b3550c339.webp 400w,
                /post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_f808cd41138687f5eb803b68b90f9b67.webp 760w,
                /post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_4741863bed26e56af2f4678b1e4025a0.webp&#34;
+               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/thought_hua11728bd0547ef08fb0aee96176b8fdc_74279_69807db2fc2ff288d12df35b3550c339.webp&#34;
                width=&#34;760&#34;
                height=&#34;358&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1037,10 +1042,10 @@ For any $0 \leq i \leq n$,&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;surprise-0.jpg&#34; srcset=&#34;
-               /post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_11b18ddd95a291acf9d91b270d139240.webp 400w,
+               /post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_d740c93843418dfffdb4e82df66f289e.webp 400w,
                /post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_a4a011e14d120aee3a01d5063f3b53c5.webp 760w,
                /post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_11b18ddd95a291acf9d91b270d139240.webp&#34;
+               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/surprise-0_huc1c6a3f0d5522c2b79d00975c7357228_80529_d740c93843418dfffdb4e82df66f289e.webp&#34;
                width=&#34;540&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1065,10 +1070,10 @@ For any $0 \leq i \leq n$,&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;surprise-1.jpg&#34; srcset=&#34;
-               /post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_4d5d015ab4bce1cb08d0e86e83390ae5.webp 400w,
+               /post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_086584a726f30e4f3dafad0629715782.webp 400w,
                /post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_2a3521e6251fcd7b3a2b11f409ab8e21.webp 760w,
                /post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_4d5d015ab4bce1cb08d0e86e83390ae5.webp&#34;
+               src=&#34;https://mostafatouny.github.io/post/automata-lower-bound/surprise-1_hu978d0fb745ed39ca5634fb7718d606a5_68011_086584a726f30e4f3dafad0629715782.webp&#34;
                width=&#34;540&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

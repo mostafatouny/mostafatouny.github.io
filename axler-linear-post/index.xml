@@ -5,12 +5,30 @@
     <link>https://mostafatouny.github.io/axler-linear-post/</link>
       <atom:link href="https://mostafatouny.github.io/axler-linear-post/index.xml" rel="self" type="application/rss+xml" />
     <description>Axler&#39;s Linear Algebra</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Axler&#39;s Linear Algebra</title>
       <link>https://mostafatouny.github.io/axler-linear-post/</link>
     </image>
+    
+    <item>
+      <title>Ch. 07, Sec. B</title>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</guid>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
+&lt;p&gt;False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.&lt;/p&gt;
+&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
+&lt;p&gt;Assume $F = \mathbb{R}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$&lt;/p&gt;
+&lt;p&gt;The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.&lt;/p&gt;
+&lt;p&gt;By &lt;em&gt;Real Spectral Theorem&lt;/em&gt; (p. 221), There is a basis of eigenvectors of $T$ corresponding to eigenvalues $\lambda_1, .., \lambda_n$. By hypothesis we know $\lambda_i = 2$ or $\lambda_i = 3$.&lt;/p&gt;
+&lt;p&gt;Let $v$ be an arbitrary vector $v$. Then $v = a_1v_1 + \dots + a_nv_n$. Observe $p(T)(v) = p(T)(a_1v_1) + \dots + p(T)(a_nv_n) = a_1p(\lambda_1)v_1 + \dots + a_np(\lambda_n)v_n$. But $p(\lambda_i) = 0$, so $p(T)v = 0$.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Ch. 07, Sec. A</title>
