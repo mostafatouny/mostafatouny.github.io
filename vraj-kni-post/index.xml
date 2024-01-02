@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/vraj-kni-post/</link>
+      <atom:link href="https://mostafatouny.github.io/vraj-kni-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
+      <link>https://mostafatouny.github.io/vraj-kni-post/</link>
+    </image>
+    
+    <item>
+      <title>Chapter 06 - Section 07</title>
+      <link>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a set $A$ of distinct elements in a random order, The positition of the maximum element of a subset $S \subset A$ is uniform in $S$.&lt;/p&gt;
+&lt;p&gt;Define indicator random variables $L_i$ as
+$$
+L_i =
+\begin{cases}
+1 &amp;amp; a_i &amp;gt; a_{i-1}, a_{i-2}, \dots, a_{1} \
+0 &amp;amp; a_i &amp;lt; a_j, \text{ for some } j = 1,2, \dots, i-1
+\end{cases}
+$$
+So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$.&lt;/p&gt;
+&lt;p&gt;It follows $Pr[L_i = 1] = 1/i$ and $Ex[Li] = 1/i$.&lt;/p&gt;
+&lt;p&gt;Let $X$ be a random variable for the number of times the line &lt;code&gt;a[first] &amp;gt; a[max_loc]&lt;/code&gt; returns &lt;code&gt;True&lt;/code&gt;. Observe $X = L_2 + L_3 + \dots + L_n$. So $Ex[X] = 1/2 + \dots + 1/n = H(n) - 1 \approx \ln n - 1$.&lt;/p&gt;
+&lt;p&gt;$H(n)$ here is the nth harmonic sum.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

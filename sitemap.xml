@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mostafatouny.github.io/post/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/vraj-kni-pset/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mostafatouny.github.io/axler-linear-post/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/siniora-algebra-post/pset09/</loc>
@@ -37,9 +49,6 @@
   </url><url>
     <loc>https://mostafatouny.github.io/msa-levitin-post/</loc>
     <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/</loc>
-    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/harvey-rand-post/pset01/</loc>
     <lastmod>2023-12-11T00:00:00+00:00</lastmod>
