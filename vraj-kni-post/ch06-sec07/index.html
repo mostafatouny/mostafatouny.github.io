@@ -624,13 +624,13 @@ So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$
 <p>It follows $Pr[L_i = 1] = 1/i$ and $Ex[Li] = 1/i$.</p>
 <p>Let $X$ be a random variable for the number of times the line <code>a[first] &gt; a[max_loc]</code> returns <code>True</code>. Observe $X = L_2 + L_3 + \dots + L_n$. So $Ex[X] = 1/2 + \dots + 1/n = H(n) - 1 \approx \ln n - 1$.</p>
 <p>$H(n)$ here is the nth harmonic sum.</p>
-<h3 id="section-1" class="unnumbered">4</h3>
-<h4 id="a" class="unnumbered">a</h4>
-<p><strong>Fact.</strong> Given a set $A$ of distinct elements in a random order, The probability of $A[i] &gt; A[j]$ is $1/2$ for any $i, j$.</p>
-<p>Let $R_i$ be an indicator random variable, Indicating whether $A[i] &gt; A[i+1]$, at the ith step of the loop. Observe the algorithm&rsquo;s operation on a sub-array $A[:k]$ does not tamper the uniform probability of $A[k+1:]$.</p>
-<p>Clearly $Ex[R_i] = \nfrac{1}{2}$. It follows $W = \sum_{i=0}^{n-2} R_i = \nfrac{n-1}{2}$</p>
-<h4 id="b" class="unnumbered">b</h4>
-<p>Trivially the probability is zero.</p>
+<!-- ### 4 {#section-1 .unnumbered} -->
+<!-- #### a {#a .unnumbered} -->
+<!-- **Fact.** Given a set $A$ of distinct elements in a random order, The probability of $A[i] > A[j]$ is $1/2$ for any $i, j$. -->
+<!-- Let $R_i$ be an indicator random variable, Indicating whether $A[i] > A[i+1]$, at the ith step of the loop. Observe the algorithm's operation on a sub-array $A[:k]$ does not tamper the uniform probability of $A[k+1:]$. -->
+<!-- Clearly $Ex[R_i] = \nfrac{1}{2}$. It follows $W = \sum_{i=0}^{n-2} R_i = \nfrac{n-1}{2}$ -->
+<!-- #### b {#b .unnumbered} -->
+<!-- Trivially the probability is zero. -->
 <h3 id="section-2" class="unnumbered">5</h3>
 <p><strong>Fact.</strong> Given a randomly ordered $A$, Any $A[:K]$ is also randomly ordered.</p>
 <p><strong>Fact.</strong> Uniformly $A[k] \in { q_1, q_2, \dots, q_k }$ where $q_i \in A[:k]$ and $q_1 &gt; q_2 &gt; \dots &gt; q_k$.</p>
