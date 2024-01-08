@@ -624,13 +624,20 @@ So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$
 <p>It follows $Pr[L_i = 1] = 1/i$ and $Ex[Li] = 1/i$.</p>
 <p>Let $X$ be a random variable for the number of times the line <code>a[first] &gt; a[max_loc]</code> returns <code>True</code>. Observe $X = L_2 + L_3 + \dots + L_n$. So $Ex[X] = 1/2 + \dots + 1/n = H(n) - 1 \approx \ln n - 1$.</p>
 <p>$H(n)$ here is the nth harmonic sum.</p>
-<!-- ### 4 {#section-1 .unnumbered} -->
-<!-- #### a {#a .unnumbered} -->
-<!-- **Fact.** Given a set $A$ of distinct elements in a random order, The probability of $A[i] > A[j]$ is $1/2$ for any $i, j$. -->
-<!-- Let $R_i$ be an indicator random variable, Indicating whether $A[i] > A[i+1]$, at the ith step of the loop. Observe the algorithm's operation on a sub-array $A[:k]$ does not tamper the uniform probability of $A[k+1:]$. -->
-<!-- Clearly $Ex[R_i] = \nfrac{1}{2}$. It follows $W = \sum_{i=0}^{n-2} R_i = \nfrac{n-1}{2}$ -->
-<!-- #### b {#b .unnumbered} -->
-<!-- Trivially the probability is zero. -->
+<h3 id="section-1" class="unnumbered">4</h3>
+<h4 id="a" class="unnumbered">a</h4>
+<p><strong>Note.</strong> Our solution was initially flawed until we read the description of <em>exercise 6</em> which gave the correct answer. We only reconstructred the proof given the answer.</p>
+<p><strong>Fact 1.</strong> On the ith step of the first pass of bubble-sort, $A[i]$ is the maximum element among $A[0:i]$.</p>
+<p><strong>Fact 2.</strong> Given $A$ is a set of distinct elements in a random order, The probability of $A[i]$ being the maximum element of $A[0:i]$ is $\frac{\displaystyle{1}}{\displaystyle{i+1}}$.</p>
+<p>Let $R_i$ be an indicator random variable, Indicating whether $A[i] &gt; A[i+1]$, at the ith step of the loop. From <em>Fact 1</em>, $R_i = 1$ if and only if $A[i+1]$ is not the maximum among $A[0:i+1]$. The probability of that event is $\frac{\displaystyle{i+1}}{\displaystyle{i+2}}$ from <em>Fact 2</em>.</p>
+<p>Clearly $Ex[R_i] = \frac{\displaystyle{i+1}}{\displaystyle{i+2}}$. It follows $W = \sum_{i=0}^{n-2} R_i = \frac{\displaystyle{1}}{\displaystyle{2}} + \frac{\displaystyle{2}}{\displaystyle{3}} + \dots + \frac{\displaystyle{n-1}}{\displaystyle{n}}$.</p>
+<h4 id="b" class="unnumbered">b</h4>
+<p>That event happens if and only if</p>
+<ul>
+<li>$max(A[1], A[2]) &lt; A[3]$. Its probability is $\frac{\displaystyle{2}}{\displaystyle{3}}$. Or</li>
+<li>$max(A[1], A[2]) &gt; A[3]$ and $A[1] &lt; A[3]$. Its probability is $\frac{\displaystyle{1}}{\displaystyle{3}} \cdot \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{6}}$.</li>
+</ul>
+<p>So the probability $A[1] &lt; A[2]$ after the first pass of bubble-sort is $\frac{\displaystyle{2}}{\displaystyle{3}} + \frac{\displaystyle{1}}{\displaystyle{6}} = \frac{\displaystyle{4}}{\displaystyle{6}} = \frac{\displaystyle{2}}{\displaystyle{3}}$.</p>
 <h3 id="section-2" class="unnumbered">5</h3>
 <p><strong>Fact.</strong> Given a randomly ordered $A$, Any $A[:K]$ is also randomly ordered.</p>
 <p><strong>Fact.</strong> Uniformly $A[k] \in { q_1, q_2, \dots, q_k }$ where $q_i \in A[:k]$ and $q_1 &gt; q_2 &gt; \dots &gt; q_k$.</p>
