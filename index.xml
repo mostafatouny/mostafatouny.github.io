@@ -5,12 +5,62 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Axler&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Source&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 03, Sec. E&lt;/td&gt;
+&lt;td&gt;Page 98&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-secE_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-sece&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
+&lt;td&gt;Page 214&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
+&lt;td&gt;Page 223&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ch. 03, Sec. E</title>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch03-sece/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch03-sece/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
+&lt;p&gt;It follows immediately by &lt;em&gt;dimension of a product&lt;/em&gt; theorem (page 92), As any $dim V_j$ must be upper-bounded by a finite number.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chapter 06 - Section 07</title>
@@ -4069,40 +4119,6 @@ c^2 + a^2 - 2ac + d^2 + b^2 - 2bd &amp;amp;= \\
 ac - bd &amp;amp;=
 \end{aligned}
 $$&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Axler&#39;s Linear Algebra</title>
-      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
-      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Section&lt;/th&gt;
-&lt;th&gt;Source&lt;/th&gt;
-&lt;th&gt;Solution&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
-&lt;td&gt;Page 214&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
-&lt;td&gt;Page 223&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </description>
     </item>
     

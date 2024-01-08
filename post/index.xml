@@ -5,12 +5,51 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
       <link>https://mostafatouny.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Axler&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Source&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 03, Sec. E&lt;/td&gt;
+&lt;td&gt;Page 98&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-secE_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-sece&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
+&lt;td&gt;Page 214&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
+&lt;td&gt;Page 223&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
@@ -331,40 +370,6 @@
 &lt;td&gt;Ch. 12, Sec. 03&lt;/td&gt;
 &lt;td&gt;Page 652&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./ch12-sec03_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/rog-adam-post/ch12-sec03&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Axler&#39;s Linear Algebra</title>
-      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
-      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Section&lt;/th&gt;
-&lt;th&gt;Source&lt;/th&gt;
-&lt;th&gt;Solution&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
-&lt;td&gt;Page 214&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
-&lt;td&gt;Page 223&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
