@@ -5,12 +5,138 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Bartle &amp; Sherbert&#39;s Real Analysis</title>
+      <link>https://mostafatouny.github.io/post/bartle-analysis-pset/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/bartle-analysis-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.wiley.com/en-us/Introduction&amp;#43;to&amp;#43;Real&amp;#43;Analysis%2C&amp;#43;4th&amp;#43;Edition-p-9781119496786&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bartle &amp;amp; Sherbert. Introduction to Real Analysis. Wiley&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 08, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch08-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 10, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chapter 08 - Section 01</title>
+      <link>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-11&#34; class=&#34;unnumbered&#34;&gt;Ex. 11&lt;/h3&gt;
+&lt;p&gt;For $f_n(x) = \frac{\displaystyle{x}}{\displaystyle{x+n}}$, and $f = 0$, Clearly&lt;/p&gt;
+&lt;p&gt;
+
+$||f_n - f ||_{[0,a]} = ||f_n||_{[0,a]} = \frac{\displaystyle{a}}{\displaystyle{a+n}}$. But $\lim_{n \rightarrow \infty} \frac{\displaystyle{a}}{\displaystyle{a+n}} = 0$. Hence by &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244), The uniform convergence on $[0,a]$ follows.&lt;/p&gt;
+&lt;p&gt;We follow &lt;em&gt;Lemma 8.1.5&lt;/em&gt; (page 244). Consider subsequences $n_k = x_k = k$. Then $f_{n_k}(x_k) = \frac{\displaystyle{k + k}}{\displaystyle{k}} = \frac{\displaystyle{1}}{\displaystyle{2}}$. Therefore $|f_{n_k}(x_k) - f(x_k)| = |f_{n_k}(x_k)| = \frac{\displaystyle{1}}{\displaystyle{2}} = \epsilon_0$.&lt;/p&gt;
+&lt;h3 id=&#34;ex.-18&#34; class=&#34;unnumbered&#34;&gt;Ex. 18&lt;/h3&gt;
+&lt;p&gt;We use &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244). Note $f_n(x) = xe^{-nx}$ and $f = 0$. Then $||f_n - f||&lt;em&gt;{[0,\infty)} = ||f_n||&lt;/em&gt;{[0,\infty)} = 1/n$.&lt;/p&gt;
+&lt;p&gt;To see why, Observe $f_n&amp;rsquo;(x) = (e^{-nx})(1-nx)$, and setting $f_n&amp;rsquo;(x) = 0$ yields local max/min at $x = 0$ and $x = 1/n$. That justifies the supremum we aforementioned.&lt;/p&gt;
+&lt;p&gt;But $\lim_{n \rightarrow \infty} 1/n = 0$, Concluding uniform convergence.&lt;/p&gt;
+&lt;h3 id=&#34;ex.-21&#34; class=&#34;unnumbered&#34;&gt;Ex. 21&lt;/h3&gt;
+&lt;p&gt;Observe $| (f_n(x) + g_n(x) ) - ( f(x) + g(x) ) | \leq |f_n(x) - f(x)| + |g_n(x) - g(x)| &amp;lt; \epsilon/2 + \epsilon/2 = \epsilon$, Following by the triangle inequality.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chapter 10 - Section 01</title>
+      <link>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</guid>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
+&lt;p&gt;By definition of a gauge, we have
+\begin{aligned}
+t_i - \delta(t_i) &amp;amp;\leq x_{i-1} \\
+x_i &amp;amp;\leq t_i + \delta(t_i)
+\end{aligned}
+Implying,
+\begin{aligned}
+x_i - x_{i-1} \leq t_i + \delta(t_i) - x_{i-1} \\
+-t_i + \delta(t_i) \geq -x_{i-1}
+\end{aligned}
+Concluding for all $i \in { 1,2, \dots, n }$,
+\begin{aligned}
+x_i - x_{i-1} &amp;amp;\leq t_i + \delta(t_i) - t_i + \delta(t_i) \\
+&amp;amp;\leq 2 \delta(t_i)
+\end{aligned}&lt;/p&gt;
+&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;Clearly 
+
+$x_i - x_{i-1} \leq 2 \delta^*$ for all $i \in {1, 2, \dots, n}$. Then 
+
+$\max \\{x_i - x_{i-1}\\} = ||\dot{p}|| \leq 2 \delta^*$.&lt;/p&gt;
+&lt;h4 id=&#34;c&#34; class=&#34;unnumbered&#34;&gt;c&lt;/h4&gt;
+&lt;p&gt;$\max \{ x_i - x_{i-1} \} \leq \delta_* = inf \{ \delta(t) \}$. Then 
+
+$x_i - x_{i-1} \leq \delta_*$
+\begin{aligned}
+x_i &amp;amp;\leq \delta(t_i) + x_{i-1} \\
+&amp;amp;\leq \delta(t_i) + t_i \qquad \text{by def } x_{i-1} \leq t_i \\
+\end{aligned}
+Analogously,
+
+
+\begin{aligned}
+    x_{i-1} &amp;\geq - \delta_*(t_i) + x_i \\\\
+    &amp;\geq - \delta_*(t_i) + t_i \qquad \text{by def } x_i \geq t_i
+\end{aligned}
+Therefore, $[x_{i-1}, x_i] \subset [ t_i - \delta(t_i), t_i + \delta(t_i) ]$, i.e
+$Q$ is $\delta-$fine.&lt;/p&gt;
+&lt;h4 id=&#34;d&#34; class=&#34;unnumbered&#34;&gt;d&lt;/h4&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;h4 id=&#34;a-1&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
+&lt;p&gt;Observe for interval $[x_{i-1}, x_i]$ for any partition,
+
+
+
+\begin{aligned}
+    \forall i,j, \quad [x_{i-1}, x_i] \cap [x_{j-1}, x_j] = \begin{cases}
+        [x_{i-1}, x_i]\qquad &amp; i = j \\\\
+        \{ x_i \} \qquad &amp;j = i + 1 \\\\
+        \{ x_{i-1} \} \qquad &amp;j= i - 1 \\\\
+        \phi \qquad &amp;\text{otherwise}
+    \end{cases}
+\end{aligned}
+
+It is easy to see considering any third interval containing a point $x$, necessarily implies two intervals share an intermediary point, violating the partitioning condition.&lt;/p&gt;
+&lt;h4 id=&#34;b-1&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;Yes. For example, on $[0,1]$, we have the partition:
+\begin{aligned}
+&amp;amp;([0, 1/4], 1/4),  \\
+&amp;amp;([1/4, 1/2], 1/4), \\
+&amp;amp;([1/2, 3/4], 3/4), \\
+&amp;amp;([3/4, 1], 3/4)
+\end{aligned}&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Axler&#39;s Linear Algebra</title>

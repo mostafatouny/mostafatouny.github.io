@@ -5,12 +5,43 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
       <link>https://mostafatouny.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Bartle &amp; Sherbert&#39;s Real Analysis</title>
+      <link>https://mostafatouny.github.io/post/bartle-analysis-pset/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/bartle-analysis-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.wiley.com/en-us/Introduction&amp;#43;to&amp;#43;Real&amp;#43;Analysis%2C&amp;#43;4th&amp;#43;Edition-p-9781119496786&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bartle &amp;amp; Sherbert. Introduction to Real Analysis. Wiley&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 08, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch08-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 10, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Axler&#39;s Linear Algebra</title>
