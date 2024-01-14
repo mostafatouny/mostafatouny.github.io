@@ -39,7 +39,7 @@ So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$
 &lt;p&gt;&lt;strong&gt;Fact 1.&lt;/strong&gt; On the ith step of the first pass of bubble-sort, $A[i]$ is the maximum element among $A[0:i]$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fact 2.&lt;/strong&gt; Given $A$ is a set of distinct elements in a random order, The probability of $A[i]$ being the maximum element of $A[0:i]$ is $\frac{\displaystyle{1}}{\displaystyle{i+1}}$.&lt;/p&gt;
 &lt;p&gt;Let $R_i$ be an indicator random variable, Indicating whether $A[i] &amp;gt; A[i+1]$, at the ith step of the loop. From &lt;em&gt;Fact 1&lt;/em&gt;, $R_i = 1$ if and only if $A[i+1]$ is not the maximum among $A[0:i+1]$. The probability of that event is $\frac{\displaystyle{i+1}}{\displaystyle{i+2}}$ from &lt;em&gt;Fact 2&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Clearly $Ex[R_i] = \frac{\displaystyle{i+1}}{\displaystyle{i+2}}$. It follows $W = \sum_{i=0}^{n-2} R_i = \frac{\displaystyle{1}}{\displaystyle{2}} + \frac{\displaystyle{2}}{\displaystyle{3}} + \dots + \frac{\displaystyle{n-1}}{\displaystyle{n}}$.&lt;/p&gt;
+&lt;p&gt;Clearly $Ex[R_i] = \frac{\displaystyle{i+1}}{\displaystyle{i+2}}$. It follows $W = \sum_{i=0}^{n-2} R_i = \frac{\displaystyle{1}}{\displaystyle{2}} + \frac{\displaystyle{2}}{\displaystyle{3}} + \dots + \frac{\displaystyle{n-1}}{\displaystyle{n}} = (n-1) - \left ( \nfrac{1}{2} + \nfrac{1}{3} + \dots + \nfrac{1}{n} \right ) = n - 1 - H_n + 1 \approx n - \lg n$.&lt;/p&gt;
 &lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
 &lt;p&gt;That event happens if and only if&lt;/p&gt;
 &lt;ul&gt;
