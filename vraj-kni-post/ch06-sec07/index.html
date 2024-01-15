@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: January 14, 2024 --><html lang="en-us" >
+<!-- Last Published: January 15, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -664,6 +664,42 @@ Ex[A] &amp;= \sum_{k=2}^n \nfrac{k-1}{2} \\
 &amp;= \nfrac{1}{2} \sum_{k=1}^{n-1} k \\
 &amp;= \nfrac{1}{2} \nfrac{n(n-1)}{2} \\
 &amp;= \nfrac{n(n-1)}{4}
+\end{aligned}</p>
+<h3 id="6">6</h3>
+<p>The fact $Ex[W_n] = n - H(n)$ rests on the assumption array $A$ is randomly ordered. That is not the case after the first pass. This is clear from our answer in <em>Ex. 4, b</em>.</p>
+<h3 id="9">9</h3>
+<p><strong>Fact 1.</strong> The number of comparisons took by the algorithm is decided by the smaller-position target.</p>
+<p><strong>Fact 2.</strong> Given $A$ is randomly ordered, target $t_1$ is uniform among all $n$ positions, and target $t_2$ is uniform among all remaining $n-1$ positions.</p>
+<p><strong>Fact 3.</strong> Since we are operating on remaining $n-1$ positions, The choice of $t_1$ is irrelevant. In other words the two events independent.</p>
+<p>Let $R$ be the number of algorithm&rsquo;s comparisons. Let $W$ be the position of smaller-position target. By <em>Fact 1</em> $R = W+1$. Observe $Pr[W=0] = Pr[R=1] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-1}}{\displaystyle{n-1}}$, $Pr[W=1] = Pr[R=2] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-2}}{\displaystyle{n-1}}$</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./ex09-0.png" alt="image" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Generally, for $k \in { 0, 1, \dots, n-1 }$, $Pr[R=k] = \frac{\displaystyle{n-k}}{\displaystyle{n-1}}$. So by definition,
+\begin{aligned}
+Ex[R] &amp;= \sum_{k=1}^{n-1} i \cdot \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-i}}{\displaystyle{n-1}} \\
+&amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \sum_{i=1}^{n-1} i (n-i) \\
+&amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \left ( n \sum_{i=1}^{n-1} i - \sum_{i=1}^{n-1} i^2 \right ) \\
+&amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \left ( n \frac{\displaystyle{n(n-1)}}{\displaystyle{2}} - \frac{\displaystyle{(n-1)n(2n-1)}}{\displaystyle{6}} \right ) \\
+&amp;= \frac{\displaystyle{3n}}{\displaystyle{6}} - \frac{\displaystyle{2n-1}}{\displaystyle{6}} = \frac{\displaystyle{n+1}}{\displaystyle{6}}
 \end{aligned}</p>
 
     </div>
