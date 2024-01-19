@@ -104,6 +104,18 @@ It is easy to see considering any third interval containing a point $x$, necessa
 &amp;amp;([1/2, 3/4], 3/4), \\
 &amp;amp;([3/4, 1], 3/4)
 \end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;3&#34;&gt;3&lt;/h3&gt;
+&lt;h4 id=&#34;a-2&#34;&gt;a&lt;/h4&gt;
+&lt;!-- ![](./2-0.jpg) --&gt;
+&lt;img src=&#34;2-0.jpg&#34; width=60%&gt;
+&lt;p&gt;For every intervals $I_1, I_2$ with a common tag $t_1 = t_2$, subtitute them by a single interval $I$ with tag $t = t_1 = t_2$.&lt;/p&gt;
+&lt;p&gt;Clearly $S(f,{I}) = S(f, {I_1, I_2})$.&lt;/p&gt;
+&lt;h4 id=&#34;b-2&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;Yes.&lt;/p&gt;
+&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
+&lt;!-- ![](./2-1.jpg) --&gt;
+&lt;img src=&#34;2-1.jpg&#34; width=60%&gt;
+&lt;p&gt;For every interval $I$ with a tag $t$ contained only in it, Partition $I$ to $I_1, I_2$ separated at $t$, with tags $t_1 = t_2 = t$.&lt;/p&gt;
 </description>
     </item>
     
