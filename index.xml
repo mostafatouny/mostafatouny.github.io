@@ -199,6 +199,11 @@ It is easy to see considering any third interval containing a point $x$, necessa
 &lt;!-- ![](./2-1.jpg) --&gt;
 &lt;img src=&#34;2-1.jpg&#34; width=60%&gt;
 &lt;p&gt;For every interval $I$ with a tag $t$ contained only in it, Partition $I$ to $I_1, I_2$ separated at $t$, with tags $t_1 = t_2 = t$.&lt;/p&gt;
+&lt;h3 id=&#34;4&#34;&gt;4&lt;/h3&gt;
+&lt;h4 id=&#34;a-3&#34;&gt;a&lt;/h4&gt;
+&lt;p&gt;Let $I$ be an interval containing $1$. Denote its tag by $t = 1 + x$. As both $1$ and $1 + x$ are in $I$, $|I| \geq x$. But by definition $\delta(t) = \delta(1+x) = 0.5 x &amp;lt; x$, Contradiction. Therefore the tag of $I$ is necessarily $1$.&lt;/p&gt;
+&lt;h4 id=&#34;b-3&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;At maximum two intervals $I_1$ and $I_2$ can contain $1$. From &lt;em&gt;a&lt;/em&gt;, their tags are $t_1 = t_1 = 1$. By definition $\delta(1) = 0.01$, So $|I_1| + |I_2| \leq 0.01 + 0.01 = 0.02$.&lt;/p&gt;
 </description>
     </item>
     
