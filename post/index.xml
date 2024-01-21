@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Henry&#39;s Linear Algebra</title>
       <link>https://mostafatouny.github.io/post/henry-linear-pset/</link>
-      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/post/henry-linear-pset/</guid>
       <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
 &lt;ul&gt;
@@ -30,6 +30,10 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 03, Section 02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch03-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Chapter 04, Section 05&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./ch04-sec05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch04-sec05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;

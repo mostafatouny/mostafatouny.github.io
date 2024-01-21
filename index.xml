@@ -5,12 +5,71 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 16 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Chapter 03 - Section 02</title>
+      <link>https://mostafatouny.github.io/henry-linear-post/ch03-sec02/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/henry-linear-post/ch03-sec02/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;B&lt;/h3&gt;
+&lt;h4 id=&#34;ex.-2&#34; class=&#34;unnumbered&#34;&gt;Ex. 2&lt;/h4&gt;
+&lt;p&gt;$(\rightarrow)$ Trivial.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$ Consider
+$$
+v_i = \begin{bmatrix}
+0 \\
+\vdots \\
+1 \\
+\vdots \\
+0
+\end{bmatrix}
+$$
+Where only ith position is $1$. Then
+\begin{align*}
+(Av_i)[Col \ i] &amp;amp;= (Bv_i)[Col \ i] \quad \text{By hypothesis} \\
+&amp;amp;= A[Col \ i] \quad \text{Multiplication by 1}
+\end{align*}
+Then it follows $A[Col \ i] = B[Col \ i]$ for all $i$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Henry&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/post/henry-linear-pset/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/henry-linear-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.taylorfrancis.com/books/mono/10.1201/b16027/modern-introduction-linear-algebra-henry-ricardo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Henry Ricardo. A Modern Introduction to Linear Algebra. CRC&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 03, Section 02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch03-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 04, Section 05&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch04-sec05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch04-sec05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Chapter 04 - Section 05</title>
@@ -34,33 +93,6 @@ A^{-1} &amp;amp;= (P^{-1} D P)^{-1} \\
 &amp;amp;= P^{-1} D^{-1} P \\
 &amp;amp;= P^{-1} D P
 \end{aligned}&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Henry&#39;s Linear Algebra</title>
-      <link>https://mostafatouny.github.io/post/henry-linear-pset/</link>
-      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/henry-linear-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://www.taylorfrancis.com/books/mono/10.1201/b16027/modern-introduction-linear-algebra-henry-ricardo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Henry Ricardo. A Modern Introduction to Linear Algebra. CRC&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Content&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 04, Section 05&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch04-sec05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch04-sec05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </description>
     </item>
     
