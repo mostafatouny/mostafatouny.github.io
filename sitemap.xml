@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mostafatouny.github.io/post/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,9 +21,6 @@
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/post/henry-linear-pset/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/henry-linear-post/ch04-sec05/</loc>
@@ -42,9 +48,6 @@
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</loc>
-    <lastmod>2024-01-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/vraj-kni-post/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/post/vraj-kni-pset/</loc>
