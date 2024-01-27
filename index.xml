@@ -5,12 +5,23 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Ch. 03, Sec. F</title>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
+&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chapter 02 - Section 01</title>
@@ -275,6 +286,11 @@ It is easy to see considering any third interval containing a point $x$, necessa
 &lt;td&gt;Ch. 03, Sec. E&lt;/td&gt;
 &lt;td&gt;Page 98&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./ch03-secE_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-sece&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 03, Sec. F&lt;/td&gt;
+&lt;td&gt;Page 113&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-secF_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-secf&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;

@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/axler-linear-post/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/</loc>
+    <lastmod>2024-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/vraj-kni-post/</loc>
@@ -37,9 +43,6 @@
   </url><url>
     <loc>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/axler-linear-post/</loc>
-    <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/post/axler-linear-pset/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>

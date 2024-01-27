@@ -5,12 +5,23 @@
     <link>https://mostafatouny.github.io/axler-linear-post/</link>
       <atom:link href="https://mostafatouny.github.io/axler-linear-post/index.xml" rel="self" type="application/rss+xml" />
     <description>Axler&#39;s Linear Algebra</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Axler&#39;s Linear Algebra</title>
       <link>https://mostafatouny.github.io/axler-linear-post/</link>
     </image>
+    
+    <item>
+      <title>Ch. 03, Sec. F</title>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
+&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Ch. 03, Sec. E</title>
