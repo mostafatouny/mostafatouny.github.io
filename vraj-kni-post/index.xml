@@ -5,12 +5,41 @@
     <link>https://mostafatouny.github.io/vraj-kni-post/</link>
       <atom:link href="https://mostafatouny.github.io/vraj-kni-post/index.xml" rel="self" type="application/rss+xml" />
     <description>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
       <link>https://mostafatouny.github.io/vraj-kni-post/</link>
     </image>
+    
+    <item>
+      <title>Chapter 04 - Section 02</title>
+      <link>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</link>
+      <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;
+&lt;p&gt;We follow the standard recipe.
+$$
+\begin{align*}
+r^2 &amp;amp;= 3r + 10 \\
+r^2 - 3r - 10 &amp;amp;= 0 \\
+(r + 2)(r - 5) &amp;amp;= 0 \\
+\end{align*}
+$$
+$r = -2$ or $r = 5$. The general solution form is $\alpha_1(-2)^n + \alpha_2(5)^n$. From the base cases:
+$$
+\begin{align*}
+F(0) &amp;amp;= 4 \\
+&amp;amp;= \alpha_1 + \alpha_2 \\
+F(1) &amp;amp;= 13 \\
+&amp;amp;= -2 \alpha_1 + 5 \alpha_2 \\
+\end{align*}
+$$
+Which by substitution implies $\alpha_1 = 1$ and $\alpha_2 = 3$. Therefore $F(n) = (-2)^n + 3 (5)^n$.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chapter 02 - Section 01</title>
