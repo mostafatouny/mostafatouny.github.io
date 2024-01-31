@@ -5,12 +5,43 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Ch.10, Sec.7</title>
+      <link>https://mostafatouny.github.io/rog-adam-post/ch10-sec07/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/rog-adam-post/ch10-sec07/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-703&#34;&gt;Ex. 7.03&lt;/h3&gt;
+&lt;p&gt;denote $a_n = \nfrac{f^n(0)}{n!}$.&lt;/p&gt;
+&lt;p&gt;Observe
+\begin{align*}
+f^0(x) &amp;amp;= \nfrac{1}{1-2x} &amp;amp;f^0(0) = 1 \\
+f&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;amp;f&amp;rsquo;(0) = 1 \cdot 2 \\
+f&amp;rsquo;&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;amp;f&amp;rsquo;&amp;rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\
+\end{align*}
+Generally $f^n(x) = n! \cdot 2^n (1 - 2x)^{-(n+1)}$ and $f^n(0) = n! \cdot 2^n$. It follows:
+\begin{align*}
+\nfrac{1}{1-2x} &amp;amp;= 1 + 2^1 x^1 + 2^2 x^2 + \dots \\
+r &amp;amp;= 2x \\
+\nfrac{1}{1-2x} &amp;amp;= (2x)^0 + (2x)^1 + (2x)^2 + \dots + (2x)^n \\
+&amp;amp;= 1 + 2^1 x + 2^2 x^2 + \dots + 2^n x^n
+\end{align*}
+Hence it is valid for
+\begin{align*}
+|r| &amp;lt; 1 \\
+|2x| &amp;lt; 1 \\
+|x| &amp;lt; \nfrac{1}{2}
+\end{align*}&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chapter 04 - Section 02</title>
@@ -3979,6 +4010,11 @@ S(n) &amp;amp;= S(n-1) + 1 \
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 10, Sec. 07&lt;/td&gt;
+&lt;td&gt;Page 572&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10-sec07_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/rog-adam-post/ch10-sec07&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Ch. 12, Sec. 01&lt;/td&gt;
 &lt;td&gt;Page 635&lt;/td&gt;

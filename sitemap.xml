@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</loc>
-    <lastmod>2024-01-30T00:00:00+00:00</lastmod>
+    <loc>https://mostafatouny.github.io/rog-adam-post/</loc>
+    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/rog-adam-post/ch10-sec07/</loc>
+    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/</loc>
+    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</loc>
     <lastmod>2024-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/vraj-kni-post/</loc>
@@ -162,9 +168,6 @@
     <lastmod>2023-11-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/post/rog-adam-ex/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mostafatouny.github.io/rog-adam-post/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mostafatouny.github.io/rog-adam-post/ch12-sec03/</loc>

@@ -67,6 +67,9 @@
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
@@ -183,9 +186,9 @@
 
       
       
-        
-      
 
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -276,12 +279,14 @@
 
   
 
-<meta name="description" content="TA/RA at MSA" />
+<meta name="description" content="$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$
+Exercises Ex. 7.03 denote $a_n = \nfrac{f^n(0)}{n!}$.
+Observe \begin{align*} f^0(x) &amp;= \nfrac{1}{1-2x} &amp;f^0(0) = 1 \\ f&rsquo;(x) &amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;f&rsquo;(0) = 1 \cdot 2 \\ f&rsquo;&rsquo;(x) &amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;f&rsquo;&rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\ \end{align*} Generally $f^n(x) = n!" />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/siniora-algebra-post/" />
-<link rel="canonical" href="https://mostafatouny.github.io/siniora-algebra-post/" />
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/rog-adam-post/ch10-sec07/" />
+<link rel="canonical" href="https://mostafatouny.github.io/rog-adam-post/ch10-sec07/" />
 
 
 
@@ -314,12 +319,20 @@
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Mostafa Touny" />
-<meta property="og:url" content="https://mostafatouny.github.io/siniora-algebra-post/" />
-<meta property="og:title" content="Gallian&#39;s Abstract Algebra | Mostafa Touny" />
-<meta property="og:description" content="TA/RA at MSA" /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://mostafatouny.github.io/rog-adam-post/ch10-sec07/" />
+<meta property="og:title" content="Ch.10, Sec.7 | Mostafa Touny" />
+<meta property="og:description" content="$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$
+Exercises Ex. 7.03 denote $a_n = \nfrac{f^n(0)}{n!}$.
+Observe \begin{align*} f^0(x) &amp;= \nfrac{1}{1-2x} &amp;f^0(0) = 1 \\ f&rsquo;(x) &amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;f&rsquo;(0) = 1 \cdot 2 \\ f&rsquo;&rsquo;(x) &amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;f&rsquo;&rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\ \end{align*} Generally $f^n(x) = n!" /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta property="og:updated_time" content="2023-12-18T00:00:00&#43;00:00" />
+    <meta
+      property="article:published_time"
+      content="2024-01-31T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-01-31T00:00:00&#43;00:00">
   
 
 
@@ -327,24 +340,24 @@
 
 
 
-
-
-
-
-  
-  
-  
-
-  
-  
-    <link rel="alternate" href="/siniora-algebra-post/index.xml" type="application/rss+xml" title="Mostafa Touny" />
-  
 
   
 
 
+
+
   
-  <title>Gallian&#39;s Abstract Algebra | Mostafa Touny</title>
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Ch.10, Sec.7 | Mostafa Touny</title>
 
   
   
@@ -364,7 +377,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="433b2d96cd2f2d7057ea5b900f5d5f25" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="2ba7a36baebe2e793b9c7808abfe4739" >
 
   
   
@@ -524,47 +537,105 @@
     
     
 
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Ch.10, Sec.7</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 31, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
     
 
 
 
 
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Gallian&#39;s Abstract Algebra</h1>
-
-  
-  <p class="page-subtitle">A course audited by Dr. Daoud Siniora, The American University in Cairo.</p>
-  
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
+    <div class="article-style">
+      <p>$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$</p>
+<h2 id="exercises">Exercises</h2>
+<h3 id="ex-703">Ex. 7.03</h3>
+<p>denote $a_n = \nfrac{f^n(0)}{n!}$.</p>
+<p>Observe
+\begin{align*}
+f^0(x) &amp;= \nfrac{1}{1-2x} &amp;f^0(0) = 1 \\
+f&rsquo;(x) &amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;f&rsquo;(0) = 1 \cdot 2 \\
+f&rsquo;&rsquo;(x) &amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;f&rsquo;&rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\
+\end{align*}
+Generally $f^n(x) = n! \cdot 2^n (1 - 2x)^{-(n+1)}$ and $f^n(0) = n! \cdot 2^n$. It follows:
+\begin{align*}
+\nfrac{1}{1-2x} &amp;= 1 + 2^1 x^1 + 2^2 x^2 + \dots \\
+r &amp;= 2x \\
+\nfrac{1}{1-2x} &amp;= (2x)^0 + (2x)^1 + (2x)^2 + \dots + (2x)^n \\
+&amp;= 1 + 2^1 x + 2^2 x^2 + \dots + 2^n x^n
+\end{align*}
+Hence it is valid for
+\begin{align*}
+|r| &lt; 1 \\
+|2x| &lt; 1 \\
+|x| &lt; \nfrac{1}{2}
+\end{align*}</p>
 
-  
+    </div>
 
-  
-  
     
 
 
@@ -573,143 +644,168 @@
 
 
 
-
-
-
-
-
-<div class="view-list view-list-item">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <a href="/siniora-algebra-post/pset02/" >Chapter 02</a>
-
-  
-
-  
-
-  
-
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="view-list view-list-item">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <a href="/siniora-algebra-post/pset03/" >Chapter 03</a>
-
-  
-
-  
-
-  
-
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="view-list view-list-item">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <a href="/siniora-algebra-post/pset04/" >Chapter 04</a>
-
-  
-
-  
-
-  
-
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="view-list view-list-item">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <a href="/siniora-algebra-post/pset00/" >Chapter 00</a>
-
-  
-
-  
-
-  
-
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="view-list view-list-item">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <a href="/siniora-algebra-post/pset01/" >Chapter 01</a>
-
-  
-
-  
-
-  
-
-</div>
-
-  
-
-  
-
-  
-<nav class="mt-1">
-  <ul class="pagination justify-content-center">
-    
-    <li class="page-item"><a class="page-link" href="/siniora-algebra-post/">&laquo;</a></li>
-    
+<div class="share-box">
+  <ul class="share">
     
   </ul>
-</nav>
-
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
+      <h6 class="card-subtitle">TA/RA at MSA</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
   </div>
 
   <div class="page-footer">
