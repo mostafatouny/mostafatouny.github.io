@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -316,6 +317,12 @@
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/harvey-rand-post/pset01/" />
 <meta property="og:title" content="Chapter 01 | Mostafa Touny" />
@@ -384,7 +391,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -609,49 +616,46 @@
       <h2 id="exercises" class="unnumbered">Exercises</h2>
 <h3 id="ex.-1" class="unnumbered">Ex. 1</h3>
 <h4 id="part-i" class="unnumbered">Part I</h4>
-<pre><code>    def randElement(A[1..n])
-      X = random( [n] )
-      return A[X]
-</code></pre>
-<p>Since the probability space is uniform, For event $M = { \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n }$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def randElement(A[1..n])
+</span></span><span class="line"><span class="cl">      X = random( [n] )
+</span></span><span class="line"><span class="cl">      return A[X]
+</span></span></code></pre></div><p>Since the probability space is uniform, For event $M = { \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n }$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.</p>
 <h4 id="part-ii" class="unnumbered">Part II</h4>
 <p>Additionally we certify if the randomly generated element is in middle half.</p>
-<pre><code>    def randElement2(A[1..n])
-      # Select a random element of A
-      k = randElement(A)
-
-      # Certify whether it is in middle half
-
-      # count values less and greater
-      countLess = countGreater = 0
-      for i in 1..n:
-        if A[i] &lt; k
-          countLess = countLess + 1
-        else if A[i] &gt; k
-          countGreater = countGreater + 1
-
-      # check if k is between first and forth quarters
-      if (countLess &gt;= n/4) and (countGreater &gt;= n/4)
-        return k
-      return FAIL
-</code></pre>
-<p>Let $R$ be the algorithm&rsquo;s output. $R = FAIL$ if and only if $\neg M$. So $Pr[R=FAIL] = Pr[\neg M] = 1 - Pr[M] = 1 - \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def randElement2(A[1..n])
+</span></span><span class="line"><span class="cl">      # Select a random element of A
+</span></span><span class="line"><span class="cl">      k = randElement(A)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Certify whether it is in middle half
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # count values less and greater
+</span></span><span class="line"><span class="cl">      countLess = countGreater = 0
+</span></span><span class="line"><span class="cl">      for i in 1..n:
+</span></span><span class="line"><span class="cl">        if A[i] &lt; k
+</span></span><span class="line"><span class="cl">          countLess = countLess + 1
+</span></span><span class="line"><span class="cl">        else if A[i] &gt; k
+</span></span><span class="line"><span class="cl">          countGreater = countGreater + 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # check if k is between first and forth quarters
+</span></span><span class="line"><span class="cl">      if (countLess &gt;= n/4) and (countGreater &gt;= n/4)
+</span></span><span class="line"><span class="cl">        return k
+</span></span><span class="line"><span class="cl">      return FAIL
+</span></span></code></pre></div><p>Let $R$ be the algorithm&rsquo;s output. $R = FAIL$ if and only if $\neg M$. So $Pr[R=FAIL] = Pr[\neg M] = 1 - Pr[M] = 1 - \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.</p>
 <h4 id="part-iii" class="unnumbered">Part III</h4>
 <p>We repeat until the probability is upperbounded by $0.01$.</p>
-<pre><code>    def randElement3(A[1..n])
-      # repeat 7 times
-      for i in 1..7
-        # generate a random element
-        out = randElement2(A[1..n])
-
-        # if the number is certified to be correct return it
-        if out != FAIL
-          return out
-      
-      # if 7 trials failed
-      return FAIL
-</code></pre>
-<p>Setting $0.5^{x} = 0.01$ we get $x = \log_{1/2} 0.01 = \frac{\displaystyle{\log_2 100^{-1} }}{\displaystyle{\log_2 2^{-1} }} = \frac{\displaystyle{(-1) \log_2 100}}{\displaystyle{(-1) \log_2 2}} = \log_2 100 \leq \log_2 128 = \log_2 2^7 = 7$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def randElement3(A[1..n])
+</span></span><span class="line"><span class="cl">      # repeat 7 times
+</span></span><span class="line"><span class="cl">      for i in 1..7
+</span></span><span class="line"><span class="cl">        # generate a random element
+</span></span><span class="line"><span class="cl">        out = randElement2(A[1..n])
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # if the number is certified to be correct return it
+</span></span><span class="line"><span class="cl">        if out != FAIL
+</span></span><span class="line"><span class="cl">          return out
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      # if 7 trials failed
+</span></span><span class="line"><span class="cl">      return FAIL
+</span></span></code></pre></div><p>Setting $0.5^{x} = 0.01$ we get $x = \log_{1/2} 0.01 = \frac{\displaystyle{\log_2 100^{-1} }}{\displaystyle{\log_2 2^{-1} }} = \frac{\displaystyle{(-1) \log_2 100}}{\displaystyle{(-1) \log_2 2}} = \log_2 100 \leq \log_2 128 = \log_2 2^7 = 7$</p>
 <p>Let $R$ be the algorithm&rsquo;s output, and let $R_i$ be the output of subroutine <em>randElement2</em> in iteration $i$. Then $R = FAIL$ if and only if $R_1 = FAIL \wedge \dots \wedge R_7 = FAIL$. We know $Pr[R_i = FAIL] = \frac{\displaystyle{1}}{\displaystyle{2}}$ and $R_i$ are pairwise independent. We conclude $Pr[R = FAIL] = Pr[ R_1 = FAIL \wedge R_2 = FAIL \wedge \dots \wedge R_7 = FAIL] = \left ( \frac{\displaystyle{1}}{\displaystyle{2}} \right )^7 \leq 0.01$.</p>
 <h3 id="ex.-2" class="unnumbered">Ex. 2</h3>
 <h4 id="part-i-1" class="unnumbered">Part I</h4>
@@ -731,142 +735,6 @@ $$</p>
 
 
 
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -932,7 +800,7 @@ $$</p>
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -944,7 +812,7 @@ $$</p>
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -955,6 +823,16 @@ $$</p>
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -988,7 +866,6 @@ $$</p>
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1000,7 +877,7 @@ $$</p>
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

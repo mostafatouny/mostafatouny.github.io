@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -319,6 +320,12 @@ Explain why is the formulation $F(n) = F(n-1) &#43; p_1$ is wrong. Derive a coun
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/msa-levitin-post/lab08/" />
 <meta property="og:title" content="Lab 08 | Mostafa Touny" />
@@ -390,7 +397,7 @@ Explain why is the formulation $F(n) = F(n-1) &#43; p_1$ is wrong. Derive a coun
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -631,37 +638,36 @@ F(0) &amp;= 0 \\
 F(n) &amp;= \underset{1 \leq j \leq n}{\max} {p_j + F(n-j) }
 \end{aligned}</p>
 <p>Algorithm.</p>
-<pre><code>    # input: Length n, and values of pieces of length i, P[i]
-    # output: Maximum value of all possible cuts on a rod of length n
-    def dynamicRodCut(n, P[0..n])
-
-        # a rod of length zero contributes nothing to revenue
-        P[0] = 0
-
-        # Initialize an array of size n
-        F = [] * (n+1)
-
-        # Set the base case
-        F[0] = 0
-
-        # Compute bottom-up F[i]
-        for i in 1..n
-
-            maxVal = 0
-
-            # Compute the maximum among all js
-            for j in 0..i
-                # call memoized subinstances
-                # update if found a greater value
-                maxVal = max( maxVal, P[j] + F(i-j) )
-
-            # memoize
-            F[i] = maxVal
-
-        # return max value of cuts, on given length n
-        return F[n]
-</code></pre>
-<p>Complexity. Time is $1 + \dots + n = n(n+1)/2$. Additional space is $n+1$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    # input: Length n, and values of pieces of length i, P[i]
+</span></span><span class="line"><span class="cl">    # output: Maximum value of all possible cuts on a rod of length n
+</span></span><span class="line"><span class="cl">    def dynamicRodCut(n, P[0..n])
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # a rod of length zero contributes nothing to revenue
+</span></span><span class="line"><span class="cl">        P[0] = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Initialize an array of size n
+</span></span><span class="line"><span class="cl">        F = [] * (n+1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Set the base case
+</span></span><span class="line"><span class="cl">        F[0] = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # Compute bottom-up F[i]
+</span></span><span class="line"><span class="cl">        for i in 1..n
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            maxVal = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            # Compute the maximum among all js
+</span></span><span class="line"><span class="cl">            for j in 0..i
+</span></span><span class="line"><span class="cl">                # call memoized subinstances
+</span></span><span class="line"><span class="cl">                # update if found a greater value
+</span></span><span class="line"><span class="cl">                maxVal = max( maxVal, P[j] + F(i-j) )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            # memoize
+</span></span><span class="line"><span class="cl">            F[i] = maxVal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # return max value of cuts, on given length n
+</span></span><span class="line"><span class="cl">        return F[n]
+</span></span></code></pre></div><p>Complexity. Time is $1 + \dots + n = n(n+1)/2$. Additional space is $n+1$.</p>
 <h3 id="section-3" class="unnumbered">8.2.2</h3>
 <p><strong>Homework.</strong></p>
 <h3 id="section-4" class="unnumbered">8.2.3</h3>
@@ -679,48 +685,47 @@ F(W) &amp;= 0 \qquad &amp;\text{if } W &lt; w_j, ; 1 \leq j \leq n \\
 F(W) &amp;= \underset{j: W \geq w_j}{\max} F(W - w_j) + v_j &amp;\text{otherwise}
 \end{aligned}</p>
 <p>Algorithm</p>
-<pre><code>    # memory function
-    # input: i indicating selecting a multiset of item 1, item 2, .., item i
-             j capacity
-    # output: optimal value of a feasible multiset from item 1, item 2, .., item i
-    def MFKnapsack(i, j, weight, value, F)
-        
-        # only if not memoized, compute and cache it
-        if F[i,j] &lt; 0
-
-            # find the maximum value among all cases
-            # item i added 0, 1, 2, .. times constrained by capacity
-            count = 0
-            while (count * weight[i]) &lt; j
-                maxVal = max( 
-                            maxVal, 
-                            (count * value[i]) + MFKnapsack( i-1, j - (count * weight[i]) )                     
-                        )
-            
-            # memoize
-            F[i,j] = maxVal
-
-        return F[i,j]
-
-    # input: weight of ith item, value of ith item, total capacity W
-    # output: max value of a multiset of all given n items
-    #         constrained by capacity W
-    def dynamicKnapsack(weight[1..n], value[1..n], W)
-
-        # memoization table
-        # all cells -1, indicating no value is computed
-        F[0..n, 0..W] = -1
-        # except row 0 and column 0, values are 0, by definition of base case
-        for i in 0..n, F[i,0] = 0
-        for i in 0..W, F[0,i] = 0
-
-        # compute memoization table F, and read F[n, W]
-        sol = MFKnapsack(n, W, weight, value, F)
-
-        # problem solution is F[n, W]
-        return sol
-</code></pre>
-<h3 id="section-6" class="unnumbered">8.3.4</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zed" data-lang="zed"><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="n">function</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">input</span><span class="o">:</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">indicating</span><span class="w"> </span><span class="n">selecting</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">multiset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="err">1</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="err">2</span><span class="p">,</span><span class="w"> </span><span class="p">..,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">i</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">             </span><span class="n">j</span><span class="w"> </span><span class="n">capacity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">output</span><span class="o">:</span><span class="w"> </span><span class="n">optimal</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">feasible</span><span class="w"> </span><span class="n">multiset</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="err">1</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="err">2</span><span class="p">,</span><span class="w"> </span><span class="p">..,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">i</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">MFKnapsack</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">if</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">memoized</span><span class="p">,</span><span class="w"> </span><span class="n">compute</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">it</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">if</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="err">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">maximum</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">among</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">cases</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="err">0</span><span class="p">,</span><span class="w"> </span><span class="err">1</span><span class="p">,</span><span class="w"> </span><span class="err">2</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"> </span><span class="n">times</span><span class="w"> </span><span class="n">constrained</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">capacity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">while</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weight</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">maxVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                            </span><span class="n">maxVal</span><span class="p">,</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                            </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MFKnapsack</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="o">-</span><span class="err">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">weight</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">)</span><span class="w">                     
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">memoize</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxVal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">return</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">input</span><span class="o">:</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">ith</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">ith</span><span class="w"> </span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="n">capacity</span><span class="w"> </span><span class="n">W</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">output</span><span class="o">:</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">multiset</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="n">items</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">#</span><span class="w">         </span><span class="n">constrained</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">capacity</span><span class="w"> </span><span class="n">W</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">dynamicKnapsack</span><span class="p">(</span><span class="n">weight</span><span class="p">[</span><span class="err">1</span><span class="p">..</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="err">1</span><span class="p">..</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="n">W</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">memoization</span><span class="w"> </span><span class="n">table</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">cells</span><span class="w"> </span><span class="o">-</span><span class="err">1</span><span class="p">,</span><span class="w"> </span><span class="n">indicating</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">computed</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">F</span><span class="p">[</span><span class="err">0</span><span class="p">..</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="err">0</span><span class="p">..</span><span class="n">W</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="err">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">except</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="err">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="err">0</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="err">0</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="kt">definition</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="n">case</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="err">0</span><span class="p">..</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="err">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="err">0</span><span class="p">..</span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="err">0</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">compute</span><span class="w"> </span><span class="n">memoization</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MFKnapsack</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">problem</span><span class="w"> </span><span class="n">solution</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">W</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">return</span><span class="w"> </span><span class="n">sol</span><span class="w">
+</span></span></span></code></pre></div><h3 id="section-6" class="unnumbered">8.3.4</h3>
 <p><strong>Homework.</strong></p>
 <h3 id="section-7" class="unnumbered">8.3.8</h3>
 <p><strong>Hints.</strong></p>
@@ -729,30 +734,29 @@ F(W) &amp;= \underset{j: W \geq w_j}{\max} F(W - w_j) + v_j &amp;\text{otherwise
 <li>Recall how the optimal solution of knapsack was constructed.</li>
 </ul>
 <p><strong>Solution.</strong></p>
-<pre><code>    # global variables: table R of roots indices
-                        keys A
-    # input: root node of a tree, and indices i and j of keys covered
-    # output: None. Tree is modified so the root points to its children
-    # initialize with i = 1 and j = n
-    # def optimalBST(root, i, j)
-
-        # base case
-        if root = NULL
-            return
-
-        # index of the root of subtree of keys A_i, .., A_j
-        k = R[i,j]
-
-        # left child
-        root.left = A[ R[i, k-1] ]
-        # right child
-        root.right = A[ R[k+1, j] ]
-
-        # Recursively, Call the child
-        optimalBST(root.left, i, k-1)
-        optimalBST(root.right, k+1, j)
-</code></pre>
-<p>P.S. Anything by Donald Knuth is worthwhile studying, however for our
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">    <span class="c1"># global variables: table R of roots indices</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">keys</span> <span class="n">A</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># input: root node of a tree, and indices i and j of keys covered</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: None. Tree is modified so the root points to its children</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># initialize with i = 1 and j = n</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># def optimalBST(root, i, j)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># base case</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">root</span> <span class="o">=</span> <span class="n">NULL</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># index of the root of subtree of keys A_i, .., A_j</span>
+</span></span><span class="line"><span class="cl">        <span class="n">k</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># left child</span>
+</span></span><span class="line"><span class="cl">        <span class="n">root</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># right child</span>
+</span></span><span class="line"><span class="cl">        <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span> <span class="n">R</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># Recursively, Call the child</span>
+</span></span><span class="line"><span class="cl">        <span class="n">optimalBST</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">optimalBST</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span></span></code></pre></div><p>P.S. Anything by Donald Knuth is worthwhile studying, however for our
 pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
 
     </div>
@@ -771,142 +775,6 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -982,7 +850,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -994,7 +862,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -1005,6 +873,16 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1038,7 +916,6 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1050,7 +927,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.</p>
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

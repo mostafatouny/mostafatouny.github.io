@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -319,6 +320,12 @@ We denote by coll the collision event of $f(k_1) = f(k_2)$ for fixed $k_1 \neq k
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/erik-alg-post/pset05/" />
 <meta property="og:title" content="Problem Set 05 | Mostafa Touny" />
@@ -390,7 +397,7 @@ We denote by coll the collision event of $f(k_1) = f(k_2)$ for fixed $k_1 \neq k
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -690,23 +697,22 @@ variable $bestInterval$, Updating it whenever a better overlapping
 interval is found. If the algorithm found an interval, and $x.left.max$
 is less than $i.low$, It terminates. If $x.left.max$ were at least
 $i.low$, It steps to left subtree.</p>
-<pre><code>INTERVAL-SEARCH(T, i)
-  bestIntervalNode = nil
-  x = T.root
-
-  while x != T.nil
-    if i overlaps with x.int and x.int is better than bestIntervalNode
-      bestIntervalNode = x
-
-    if x.left != T:nil and x.left.max &gt;= i.low
-      x = x.left
-    else
-      if bestIntervalNode == nil
-        x = x.right
-      else return bestIntervalNode
-  return bestIntervalNode
-</code></pre>
-<h3 id="ex-5">Ex. 5</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">INTERVAL-SEARCH(T, i)
+</span></span><span class="line"><span class="cl">  bestIntervalNode = nil
+</span></span><span class="line"><span class="cl">  x = T.root
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  while x != T.nil
+</span></span><span class="line"><span class="cl">    if i overlaps with x.int and x.int is better than bestIntervalNode
+</span></span><span class="line"><span class="cl">      bestIntervalNode = x
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if x.left != T:nil and x.left.max &gt;= i.low
+</span></span><span class="line"><span class="cl">      x = x.left
+</span></span><span class="line"><span class="cl">    else
+</span></span><span class="line"><span class="cl">      if bestIntervalNode == nil
+</span></span><span class="line"><span class="cl">        x = x.right
+</span></span><span class="line"><span class="cl">      else return bestIntervalNode
+</span></span><span class="line"><span class="cl">  return bestIntervalNode
+</span></span></code></pre></div><h3 id="ex-5">Ex. 5</h3>
 <p>Done.</p>
 <h3 id="ex-6">Ex. 6</h3>
 <p>In <em>Memoized-Cut-Rod</em>, Initalize a new binary array $c[0..n-1]$ where
@@ -794,14 +800,13 @@ moves is, Moves until all head tosses (upward moves) are consumed.</p>
 <li><code>N.l</code>, As the left node of node <code>N</code></li>
 <li><code>N.key</code>, As the key of node <code>N</code></li>
 </ul>
-<pre><code>Finger-Search(x,k)
-  curN = x
-  while curN.key != k:
-    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &lt;= k), then curN = curN.u
-    else if curN.r.key &lt;= k, then curN = curN.r
-    else curN = curN.d
-</code></pre>
-<p>Recall we are assuming a successful search, so the case of finding a key
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Finger-Search(x,k)
+</span></span><span class="line"><span class="cl">  curN = x
+</span></span><span class="line"><span class="cl">  while curN.key != k:
+</span></span><span class="line"><span class="cl">    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &lt;= k), then curN = curN.u
+</span></span><span class="line"><span class="cl">    else if curN.r.key &lt;= k, then curN = curN.r
+</span></span><span class="line"><span class="cl">    else curN = curN.d
+</span></span></code></pre></div><p>Recall we are assuming a successful search, so the case of finding a key
 greater than <em>k</em> while we are in <em>level-0</em> is impossible. So is the case
 of reaching <em>+inf</em>. So we omit those validations.</p>
 <p><strong>Lemma.</strong>   The height, i.e maximum node&rsquo;s upward levels, is bounded by
@@ -909,23 +914,21 @@ observe the following diagrams as a convincing evidence.</p>
   </div></figure>
 </p>
 <h4 id="c">c</h4>
-<pre><code>Compute-Rank(x)
-  curN = x
-  counter = 0
-  while curN != -inf:
-    if curN.u != NULL, then curN = curN.u
-    else counter = counter + curN.leftCount; curN = curN.l
-  return counter
-</code></pre>
-<pre><code>Rank-Search(x,r)
-  counter = Compute-Rank(curN)
-  while counter != r:
-    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &lt;= k), then curN = curN.u
-    else if curN.r.leftCount + counter &lt;= k, then curN = curN.r
-    else curN = curN.d
-    return curN
-</code></pre>
-<p>Again, As we assume a succesful search we do not check the cases of
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Compute-Rank(x)
+</span></span><span class="line"><span class="cl">  curN = x
+</span></span><span class="line"><span class="cl">  counter = 0
+</span></span><span class="line"><span class="cl">  while curN != -inf:
+</span></span><span class="line"><span class="cl">    if curN.u != NULL, then curN = curN.u
+</span></span><span class="line"><span class="cl">    else counter = counter + curN.leftCount; curN = curN.l
+</span></span><span class="line"><span class="cl">  return counter
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Rank-Search(x,r)
+</span></span><span class="line"><span class="cl">  counter = Compute-Rank(curN)
+</span></span><span class="line"><span class="cl">  while counter != r:
+</span></span><span class="line"><span class="cl">    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &lt;= k), then curN = curN.u
+</span></span><span class="line"><span class="cl">    else if curN.r.leftCount + counter &lt;= k, then curN = curN.r
+</span></span><span class="line"><span class="cl">    else curN = curN.d
+</span></span><span class="line"><span class="cl">    return curN
+</span></span></code></pre></div><p>Again, As we assume a succesful search we do not check the cases of
 <em>+inf</em> and stepping downward while being in <em>level-0</em>.</p>
 <p>Again, Proofs are identical to <strong>a</strong> and they are omitted for brevity.
 `</p>
@@ -1035,142 +1038,6 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
 
 
 
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1236,7 +1103,7 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1248,7 +1115,7 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -1259,6 +1126,16 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1292,7 +1169,6 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1304,7 +1180,7 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

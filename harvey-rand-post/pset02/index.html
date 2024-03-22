@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -317,6 +318,12 @@ Exercises Ex. 1 Part I Take $m = n-1$, and let $R$ be the algorithm&rsquo;s outp
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/harvey-rand-post/pset02/" />
 <meta property="og:title" content="Chapter 02 | Mostafa Touny" />
@@ -386,7 +393,7 @@ Exercises Ex. 1 Part I Take $m = n-1$, and let $R$ be the algorithm&rsquo;s outp
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -615,16 +622,15 @@ Exercises Ex. 1 Part I Take $m = n-1$, and let $R$ be the algorithm&rsquo;s outp
 <p>Take $m = n-1$, and let $R$ be the algorithm&rsquo;s output. $R = 0$ if and only if $RNG()$ returned $0$ or $n-1$. So $Pr[R = 0] = 2/n$ and $Pr[R = i] = 1/n$ for $i \neq 0$.</p>
 <h4 id="part-ii" class="unnumbered">Part II</h4>
 <p>Define $k = \lfloor n/m \rfloor$, So $k$ is the greatest integer such that $mk \leq n$. Define $r = n \mod mk$, so $n = mk + r$ where $0 \leq r &lt; m$.</p>
-<pre><code>    def goodSampler(m)
-      k = floor( n/m )
-
-      do
-        r = RNG()
-      while r &gt;= mk
-
-      return r mod m
-</code></pre>
-<p><strong>Uniformity</strong>. Assume the algorithm terminates. So we are given $r &lt; mk$ and we want to prove $Pr[r \mod m = i \mid r &lt; mk] = \nfrac{1}{m}$ for $i \in [m]$. Observe
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def goodSampler(m)
+</span></span><span class="line"><span class="cl">      k = floor( n/m )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      do
+</span></span><span class="line"><span class="cl">        r = RNG()
+</span></span><span class="line"><span class="cl">      while r &gt;= mk
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      return r mod m
+</span></span></code></pre></div><p><strong>Uniformity</strong>. Assume the algorithm terminates. So we are given $r &lt; mk$ and we want to prove $Pr[r \mod m = i \mid r &lt; mk] = \nfrac{1}{m}$ for $i \in [m]$. Observe
 \begin{aligned}
 Pr[r \mod m = i \mid r &lt; mk] &amp;= \nfrac{Pr[r \mod m = i \cap r &lt; mk]}{Pr[r &lt; mk]} \\
 &amp;= \nfrac{k/n}{mk/n} = \nfrac{k}{n} \cdot \nfrac{n}{mk} = \nfrac{1}{m}
@@ -688,27 +694,26 @@ Concluding its time is $\mathcal{O}(1)$.</p>
 <h3 id="ex.-3" class="unnumbered">Ex. 3</h3>
 <h4 id="part-i-1" class="unnumbered">Part I</h4>
 <p><strong>Algorithm.</strong></p>
-<pre><code>    # input: Probabilities P[i]
-    # output: category sampled
-    def categoricalSampler( P[1..k] )
-
-      # initially the universe is all probabilities
-      totalProb = sum( P[1..k] )
-
-      # for each ith probability
-      for i in 1..k
-
-        # compute P[i] probability in ratio to the universe
-        i_prob_uni = (1/totalProb) * P[i]
-
-        # return i by that probability
-        if biasedBit( i_prob_uni )
-          return i
-
-        # remove P[i] from the universe
-        totalProb -= P[i]
-</code></pre>
-<p><strong>Correctness.</strong> Computing a probability out of a subset of probabilities.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    # input: Probabilities P[i]
+</span></span><span class="line"><span class="cl">    # output: category sampled
+</span></span><span class="line"><span class="cl">    def categoricalSampler( P[1..k] )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # initially the universe is all probabilities
+</span></span><span class="line"><span class="cl">      totalProb = sum( P[1..k] )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # for each ith probability
+</span></span><span class="line"><span class="cl">      for i in 1..k
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # compute P[i] probability in ratio to the universe
+</span></span><span class="line"><span class="cl">        i_prob_uni = (1/totalProb) * P[i]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # return i by that probability
+</span></span><span class="line"><span class="cl">        if biasedBit( i_prob_uni )
+</span></span><span class="line"><span class="cl">          return i
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # remove P[i] from the universe
+</span></span><span class="line"><span class="cl">        totalProb -= P[i]
+</span></span></code></pre></div><p><strong>Correctness.</strong> Computing a probability out of a subset of probabilities.</p>
 <p>We want to compute a probability but in ratio to some subset of probabilities.</p>
 <p>For example if $Pr[X = i] = 1/4$ for $i \in { 1,2,3,4 }$, But we are given $X \not\in {1, 2}$. Then $Pr[X = 3 \mid X \not\in {1,2}] = \nfrac{Pr[X = 3 \cap X \not\in {1,2}]}{Pr[X \not\in {1,2}]} = \nfrac{1/4}{1/2} = 2 \cdot \nfrac{1}{4}$.</p>
 <p>Generally we want to find $x$ where, For sum $S$ of some subset of probabilities, $\nfrac{Pr[X = i]}{S} = \nfrac{x}{1}$, so $x = \nfrac{1}{S} \cdot Pr[X=i]$.</p>
@@ -717,63 +722,62 @@ Concluding its time is $\mathcal{O}(1)$.</p>
 <p><strong>Time Complexity.</strong> Clearly $\mathcal{O}(k)$.</p>
 <h4 id="part-ii-1" class="unnumbered">Part II</h4>
 <p><strong>Algorithm</strong></p>
-<pre><code>    # input: probabilities P[i]
-    # output: cumulative sum of probabilities S[i]
-    def cumulativeSum( P[1..k] )
-        
-        # S[i] is sum up to P[i]
-        S = []
-
-        sum = 0
-
-        # compute &amp; append S[i]
-        for i in 1..k
-            
-            # cumulative sum up to P[i]
-            sum += P[i]
-            
-            # append as S[i]
-            S.append( sum )
-
-        return S
-
-    # input: probabilities P[i], and cumulative probabilities S[i]
-    # output: sampled category i
-    def recursiveSampler( P[l..r], S[l..r] )
-        # base case. universe is one category so its probability is 1
-        if l = r
-            return l
-
-        # center index
-        mid = floor( (r-l)/2 )
-
-        # total probability of P[l..r]
-        totalProb = S[r] - S[l] + P[l]
-
-        # probability of cumulative half of P in ratio to the universe
-        prob_uni = (1/totalProb) * S[mid]
-
-        # toss a coin by cumulative probability of half of P
-        if biasedBit( prob_uni )
-
-            # if True then the sample is restricted to them
-            return recursiveSampler( P[l..mid], S[l..mid] )
-        else
-            
-            # if False then the sample is not any of them
-            return recursiveSampler( P[mid+1..r], S[mid+1..r] )
-
-    # input: probabilities P[i]
-    # output: sampled category i
-    def categoricalSampler2( P[1..k] )
-        
-        # preprocessing, computing cumulative sum of probabilities
-        S = cumulativeSum( P[1..k] )
-
-        # sample a category
-        return recursiveSampler( P, S )
-</code></pre>
-<p><strong>Correctness.</strong> <code>recursiveSampler</code> won&rsquo;t ever reach array <code>P</code> of size zero.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    # input: probabilities P[i]
+</span></span><span class="line"><span class="cl">    # output: cumulative sum of probabilities S[i]
+</span></span><span class="line"><span class="cl">    def cumulativeSum( P[1..k] )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        # S[i] is sum up to P[i]
+</span></span><span class="line"><span class="cl">        S = []
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        sum = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # compute &amp; append S[i]
+</span></span><span class="line"><span class="cl">        for i in 1..k
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            # cumulative sum up to P[i]
+</span></span><span class="line"><span class="cl">            sum += P[i]
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            # append as S[i]
+</span></span><span class="line"><span class="cl">            S.append( sum )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        return S
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # input: probabilities P[i], and cumulative probabilities S[i]
+</span></span><span class="line"><span class="cl">    # output: sampled category i
+</span></span><span class="line"><span class="cl">    def recursiveSampler( P[l..r], S[l..r] )
+</span></span><span class="line"><span class="cl">        # base case. universe is one category so its probability is 1
+</span></span><span class="line"><span class="cl">        if l = r
+</span></span><span class="line"><span class="cl">            return l
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # center index
+</span></span><span class="line"><span class="cl">        mid = floor( (r-l)/2 )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # total probability of P[l..r]
+</span></span><span class="line"><span class="cl">        totalProb = S[r] - S[l] + P[l]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # probability of cumulative half of P in ratio to the universe
+</span></span><span class="line"><span class="cl">        prob_uni = (1/totalProb) * S[mid]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # toss a coin by cumulative probability of half of P
+</span></span><span class="line"><span class="cl">        if biasedBit( prob_uni )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            # if True then the sample is restricted to them
+</span></span><span class="line"><span class="cl">            return recursiveSampler( P[l..mid], S[l..mid] )
+</span></span><span class="line"><span class="cl">        else
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            # if False then the sample is not any of them
+</span></span><span class="line"><span class="cl">            return recursiveSampler( P[mid+1..r], S[mid+1..r] )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # input: probabilities P[i]
+</span></span><span class="line"><span class="cl">    # output: sampled category i
+</span></span><span class="line"><span class="cl">    def categoricalSampler2( P[1..k] )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        # preprocessing, computing cumulative sum of probabilities
+</span></span><span class="line"><span class="cl">        S = cumulativeSum( P[1..k] )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # sample a category
+</span></span><span class="line"><span class="cl">        return recursiveSampler( P, S )
+</span></span></code></pre></div><p><strong>Correctness.</strong> <code>recursiveSampler</code> won&rsquo;t ever reach array <code>P</code> of size zero.</p>
 <p>That can only happen if either <code>mid = r</code> or <code>mid = l</code>, but then <code>S[mid] = 1</code> or <code>S[mid] = 0</code> respectively. Contradiction.</p>
 <p><strong>Correctness.</strong> The algorithm samples category $i$ with probability $P[i]$.</p>
 <p>The remarks from <em>Part I</em> holds here. We show a more formal proof.</p>
@@ -817,138 +821,136 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
 <li>Output the piece&rsquo;s label.</li>
 </ul>
 <p><strong>Algorithm.</strong></p>
-<pre><code>    # input: probabilities P[i]
-    # output: cumulative sum of probabilities S[i]
-    def cumulativeSum( P[1..k] )
-        S = []
-        sum = 0
-        
-        for i in 1..k
-            sum += P[i]
-            S.append(sum)
-        
-        return S
-
-
-    # input: integer k
-    # output: k-intervals of size 1/k each
-    def kIntervalsConstruction( k )
-
-        # start, end, and separation points, decides a pair of intervals
-        # end - start = 1/k
-        intervals = [
-            [st, end, sep, label]
-        ]
-
-        # construct the k intervals
-        for i in 1..k
-            
-            # length of interval is 1/k
-            intervals.append(
-                [ (i-1)/k, i/k, NULL, NULL ]
-            )
-
-        return intervals
-
-
-    # input: 2d-array of k-intervals, and the cumulative sum S
-    # output: None. It modifies the 2d-array to be filled with separators and labels
-    def sepPointsFromArray( Inter[1..k, 4], S[1..k] )
-        
-        # pointer for S
-        S_poi = 1
-
-        # for each kth interval
-        for i in 1..k
-
-            # if S[S_poi] is contained in the kth interval
-            if Inter[i][st] &lt;= S[ S_poi ] &lt;= Inter[i][en]
-                
-                # set S[S_poi] as the separator
-                Inter[i][sep] = S[ S_poi ]
-
-                # consider next index
-                S_poi += 1
-
-            # otherwise, leave the separator with NULL
-
-            # in either cases cache S_poi
-            # latter case. whole interval is labeled by S_poi
-            # former case. first piece is labeled by S_poi and
-            #   second piece is labeled by S_poi+1
-            Inter[i][label] = S_poi
-
-
-    # input: k-probabilities P[i]
-    # output: k intervals, each of size 1/k, possibly separated to have pairs
-    def intervalToPieces( P[1..k] )
-        
-        # S[i] is cumulative sum up to P[i]
-        S = cumulativeSum( P )
-
-        # construct k-intervals of size 1/k each
-        intervals = kIntervalsConstruction( k )
-
-        # in-place fill &quot;sep&quot; and &quot;label&quot; cells in intervals
-        sepPointsFromArray(intervals, S)
-
-        return intervals
-
-
-    # input: Probabilities P[i]
-    # output: sampled category i
-    def sample( P[1..k] )
-
-        # preprocessing is not needed to be called for every sample call
-        intervals = intervalToPieces( P )
-
-        # uniform random index of intervals
-        randIndex = uniformLBitInteger(lg k)
-
-        # uniform random interval from intervals
-        randInterval = intervals[ randIndex ]
-
-        # if it has no separator
-        if randInterval[sep] = NULL
-            
-            # then it belongs to cached label
-            return randInterval[label]
-        else
-
-        # it has a separator
-            
-            # compute proportion of separator in ratio to the interval of size 1/k
-            prop = (randInterval[sep] - randInterval[st]) / (1/k)
-
-            # toss a coin by a probability proportional to the separator
-            if biasedBit(prop)
-                
-                # if it lands before the separator then we are in a piece labeled by &quot;cached label&quot;
-                return randInterval[label]
-            else
-
-                # if it lands after the separator then we are in the piece next to one labeled by &quot;cached label&quot;
-                return randInterval[label] + 1
-</code></pre>
-<p><strong>Correctness.</strong> No probabilistic claim is outside what we proved and illustrated in previous exercises.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">    <span class="c1"># input: probabilities P[i]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: cumulative sum of probabilities S[i]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cumulativeSum</span><span class="p">(</span> <span class="n">P</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">S</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mf">1.</span><span class="o">.</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sum</span> <span class="o">+=</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">S</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">S</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># input: integer k</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: k-intervals of size 1/k each</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">kIntervalsConstruction</span><span class="p">(</span> <span class="n">k</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># start, end, and separation points, decides a pair of intervals</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># end - start = 1/k</span>
+</span></span><span class="line"><span class="cl">        <span class="n">intervals</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="n">st</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">label</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># construct the k intervals</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mf">1.</span><span class="o">.</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1"># length of interval is 1/k</span>
+</span></span><span class="line"><span class="cl">            <span class="n">intervals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">i</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">NULL</span><span class="p">,</span> <span class="n">NULL</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">intervals</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># input: 2d-array of k-intervals, and the cumulative sum S</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: None. It modifies the 2d-array to be filled with separators and labels</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">sepPointsFromArray</span><span class="p">(</span> <span class="n">Inter</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">S</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># pointer for S</span>
+</span></span><span class="line"><span class="cl">        <span class="n">S_poi</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># for each kth interval</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mf">1.</span><span class="o">.</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># if S[S_poi] is contained in the kth interval</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">Inter</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">st</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">S</span><span class="p">[</span> <span class="n">S_poi</span> <span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Inter</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                <span class="c1"># set S[S_poi] as the separator</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Inter</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">sep</span><span class="p">]</span> <span class="o">=</span> <span class="n">S</span><span class="p">[</span> <span class="n">S_poi</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1"># consider next index</span>
+</span></span><span class="line"><span class="cl">                <span class="n">S_poi</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># otherwise, leave the separator with NULL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># in either cases cache S_poi</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># latter case. whole interval is labeled by S_poi</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># former case. first piece is labeled by S_poi and</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   second piece is labeled by S_poi+1</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Inter</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">S_poi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># input: k-probabilities P[i]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: k intervals, each of size 1/k, possibly separated to have pairs</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">intervalToPieces</span><span class="p">(</span> <span class="n">P</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># S[i] is cumulative sum up to P[i]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">S</span> <span class="o">=</span> <span class="n">cumulativeSum</span><span class="p">(</span> <span class="n">P</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># construct k-intervals of size 1/k each</span>
+</span></span><span class="line"><span class="cl">        <span class="n">intervals</span> <span class="o">=</span> <span class="n">kIntervalsConstruction</span><span class="p">(</span> <span class="n">k</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># in-place fill &#34;sep&#34; and &#34;label&#34; cells in intervals</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sepPointsFromArray</span><span class="p">(</span><span class="n">intervals</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">intervals</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># input: Probabilities P[i]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># output: sampled category i</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span> <span class="n">P</span><span class="p">[</span><span class="mf">1.</span><span class="o">.</span><span class="n">k</span><span class="p">]</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># preprocessing is not needed to be called for every sample call</span>
+</span></span><span class="line"><span class="cl">        <span class="n">intervals</span> <span class="o">=</span> <span class="n">intervalToPieces</span><span class="p">(</span> <span class="n">P</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># uniform random index of intervals</span>
+</span></span><span class="line"><span class="cl">        <span class="n">randIndex</span> <span class="o">=</span> <span class="n">uniformLBitInteger</span><span class="p">(</span><span class="n">lg</span> <span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># uniform random interval from intervals</span>
+</span></span><span class="line"><span class="cl">        <span class="n">randInterval</span> <span class="o">=</span> <span class="n">intervals</span><span class="p">[</span> <span class="n">randIndex</span> <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># if it has no separator</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">randInterval</span><span class="p">[</span><span class="n">sep</span><span class="p">]</span> <span class="o">=</span> <span class="n">NULL</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1"># then it belongs to cached label</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">randInterval</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># it has a separator</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1"># compute proportion of separator in ratio to the interval of size 1/k</span>
+</span></span><span class="line"><span class="cl">            <span class="n">prop</span> <span class="o">=</span> <span class="p">(</span><span class="n">randInterval</span><span class="p">[</span><span class="n">sep</span><span class="p">]</span> <span class="o">-</span> <span class="n">randInterval</span><span class="p">[</span><span class="n">st</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># toss a coin by a probability proportional to the separator</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">biasedBit</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">                <span class="c1"># if it lands before the separator then we are in a piece labeled by &#34;cached label&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">randInterval</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="c1"># if it lands after the separator then we are in the piece next to one labeled by &#34;cached label&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">randInterval</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</span></span></code></pre></div><p><strong>Correctness.</strong> No probabilistic claim is outside what we proved and illustrated in previous exercises.</p>
 <p><strong>Time Complexity.</strong> Preprocessing consumes $O(k)$, Since all its subroutines take $O(k)$ each. Sampling consumes $O(1)$ since both <code>uniformLBitInteger</code> and <code>biasedBit</code> consume $O(1)$.</p>
 <h3 id="ex.-5" class="unnumbered">Ex. 5</h3>
 <p><strong>Postponed.</strong></p>
 <h3 id="ex.-6" class="unnumbered">Ex. 6</h3>
 <p><strong>Note.</strong> It feels weird we derived a solution better than the requested bound.</p>
 <p><strong>Algorithm</strong></p>
-<pre><code>    def uniformPrime(n)
-        do
-            # keep sampling uniform numbers in {1, .., 20n}
-            rand = uniformRandom(20n)
-
-        # as long as the sampled is not prime
-        while not isPrime(rand)
-
-        # only if we found a prime, we return it
-        return rand
-</code></pre>
-<p><strong>Correctness.</strong> We used the technique of <em>Rejection Sampling</em> which guarantees the prime number output is uniform. The proof idea is very similar to our previous probability proofs.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def uniformPrime(n)
+</span></span><span class="line"><span class="cl">        do
+</span></span><span class="line"><span class="cl">            # keep sampling uniform numbers in {1, .., 20n}
+</span></span><span class="line"><span class="cl">            rand = uniformRandom(20n)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # as long as the sampled is not prime
+</span></span><span class="line"><span class="cl">        while not isPrime(rand)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # only if we found a prime, we return it
+</span></span><span class="line"><span class="cl">        return rand
+</span></span></code></pre></div><p><strong>Correctness.</strong> We used the technique of <em>Rejection Sampling</em> which guarantees the prime number output is uniform. The proof idea is very similar to our previous probability proofs.</p>
 <p><strong>Analysis.</strong> From <em>Fact A.2.12</em> (page 226), There are at least $n/\ln n$ primes in $P_n$. So the probability of a successful trial is at least $n/\ln n$. Then the number of trials is at most $\ln n/n$ in expectation by <em>Fact A.3.20</em> (page 233). Observe $\ln n / n \leq \log n / n$. Since we are given <code>isPrime</code> is $\mathcal{O}(\log^7 n)$, The whole algorithm <code>uniformPrime</code> takes at most $\mathcal{O}(\log^8 / n) \subset \mathcal{O}(\log^{10} n)$.</p>
 <h3 id="ex.-7" class="unnumbered">Ex. 7</h3>
 <h4 id="part-i-2" class="unnumbered">Part I</h4>
@@ -995,142 +997,6 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -1206,7 +1072,7 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1218,7 +1084,7 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -1229,6 +1095,16 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1262,7 +1138,6 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1274,7 +1149,7 @@ Pr[X = z] &amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

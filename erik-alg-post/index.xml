@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/erik-alg-post/</link>
       <atom:link href="https://mostafatouny.github.io/erik-alg-post/index.xml" rel="self" type="application/rss+xml" />
     <description>Erik&#39;s Algorithms</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Erik&#39;s Algorithms</title>
@@ -675,39 +675,38 @@ optimal when the weight of $w_{i,j}$ increases. If for vertex $x$,
 $P(x,j) != i$ then $x$ shall never visit edge $\set{i,j}$.&lt;/p&gt;
 &lt;p&gt;Our focus starts on vertices $x$ whose $\Pi(x,j)$ equals $i$. For each such $x$ and each arbitrary vertex $y$, We compute minimum paths from $x$ to $y$ and update if needed. Let $D&amp;rsquo;$ and $\Pi&amp;rsquo;$ denote minimum distance and predecessor matrices after updating the weight of edge $\set{i,j}$ to $r$, respectively. Any path $x \rightarrow y$ either consists of a single edge $\set{x,y}$ or contains an intermediate vertex between $x$ and $y$. We loop on all vertices $z$ to compute $D(x,z) + D(z,y)$ and then set $D&amp;rsquo;(x,y)$. However, we must check whether edge $\set{i,j}$ falls into the path $x \rightarrow z$ or $z \rightarrow y$. if NO, then we know $D&amp;rsquo;(x,z) = D(x,z)$ and $D&amp;rsquo;(z,y) = D(z,y)$. If YES, then the new weight of path $x \rightarrow y$ which equals $D(x,y) + (r-w_{i,j})$, is equal or less than the new weight $D(x,z) + D(z,y) + (r - w_{i,j})$. That follows by $D(x,y) \leq D(x,z) + D(z,y)$ as the additional weight $r - w_{i,j}$ is added on both sides of the inequality. In this case we know $z$ won&amp;rsquo;t offer a less-weight path. So we can restrict our focus on vertices $z$ whose corresponding paths do not include edge $\set{i,j}$.&lt;/p&gt;
 &lt;p&gt;(For LaTeX issues we denote matrix $\Pi$ by $P$)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;isEdgeInPath(edge {i,j}, path x -&amp;gt; y, predecessor P)
-      if P(x,j) != i
-        return False
-
-      s = y
-      while P(x,s) != x
-        if P(x,s) == j
-          return False
-
-      return True
-
-Main()
-      for x = 0 to n
-        if P(x,j) = i
-          for y = 0 to n
-            minDistance = min{ edge (x,y) if exists, D(x,y) + (r - w_i,j) }
-            minVertex = NULL
-            isDistanceUpdated = False
-            for z = 0 to n
-              if isEdgeInPath( {i,j}, x -&amp;gt; y, P) OR z = x OR z = y
-                continue to next iteration of z
-
-              zDistance = D(x,z) + D(z,y)
-              if (distance &amp;lt; minDistance)
-                minDistance = zDistance
-                minVertex = z
-                isDistanceUpdated = True
-
-             if isDistanceUpdated
-               P&#39;(x,y) = P(z,y)
-               P&#39;(x,z) = P(x,z)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; $\mathcal{O}(V^3)$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;isEdgeInPath(edge {i,j}, path x -&amp;gt; y, predecessor P)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if P(x,j) != i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      s = y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      while P(x,s) != x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if P(x,s) == j
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          return False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Main()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      for x = 0 to n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if P(x,j) = i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          for y = 0 to n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            minDistance = min{ edge (x,y) if exists, D(x,y) + (r - w_i,j) }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            minVertex = NULL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            isDistanceUpdated = False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            for z = 0 to n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              if isEdgeInPath( {i,j}, x -&amp;gt; y, P) OR z = x OR z = y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                continue to next iteration of z
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              zDistance = D(x,z) + D(z,y)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              if (distance &amp;lt; minDistance)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                minDistance = zDistance
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                minVertex = z
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                isDistanceUpdated = True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;             if isDistanceUpdated
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               P&amp;#39;(x,y) = P(z,y)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               P&amp;#39;(x,z) = P(x,z)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; $\mathcal{O}(V^3)$&lt;/p&gt;
 &lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
 &lt;p&gt;
 
@@ -929,23 +928,22 @@ variable $bestInterval$, Updating it whenever a better overlapping
 interval is found. If the algorithm found an interval, and $x.left.max$
 is less than $i.low$, It terminates. If $x.left.max$ were at least
 $i.low$, It steps to left subtree.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;INTERVAL-SEARCH(T, i)
-  bestIntervalNode = nil
-  x = T.root
-
-  while x != T.nil
-    if i overlaps with x.int and x.int is better than bestIntervalNode
-      bestIntervalNode = x
-
-    if x.left != T:nil and x.left.max &amp;gt;= i.low
-      x = x.left
-    else
-      if bestIntervalNode == nil
-        x = x.right
-      else return bestIntervalNode
-  return bestIntervalNode
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INTERVAL-SEARCH(T, i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  bestIntervalNode = nil
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x = T.root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while x != T.nil
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if i overlaps with x.int and x.int is better than bestIntervalNode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      bestIntervalNode = x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x.left != T:nil and x.left.max &amp;gt;= i.low
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x = x.left
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if bestIntervalNode == nil
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        x = x.right
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      else return bestIntervalNode
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return bestIntervalNode
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
 &lt;p&gt;Done.&lt;/p&gt;
 &lt;h3 id=&#34;ex-6&#34;&gt;Ex. 6&lt;/h3&gt;
 &lt;p&gt;In &lt;em&gt;Memoized-Cut-Rod&lt;/em&gt;, Initalize a new binary array $c[0..n-1]$ where
@@ -1033,14 +1031,13 @@ moves is, Moves until all head tosses (upward moves) are consumed.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;N.l&lt;/code&gt;, As the left node of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;N.key&lt;/code&gt;, As the key of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;Finger-Search(x,k)
-  curN = x
-  while curN.key != k:
-    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
-    else if curN.r.key &amp;lt;= k, then curN = curN.r
-    else curN = curN.d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Recall we are assuming a successful search, so the case of finding a key
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Finger-Search(x,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  curN = x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while curN.key != k:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else if curN.r.key &amp;lt;= k, then curN = curN.r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else curN = curN.d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Recall we are assuming a successful search, so the case of finding a key
 greater than &lt;em&gt;k&lt;/em&gt; while we are in &lt;em&gt;level-0&lt;/em&gt; is impossible. So is the case
 of reaching &lt;em&gt;+inf&lt;/em&gt;. So we omit those validations.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   The height, i.e maximum node&amp;rsquo;s upward levels, is bounded by
@@ -1148,23 +1145,21 @@ observe the following diagrams as a convincing evidence.&lt;/p&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;Compute-Rank(x)
-  curN = x
-  counter = 0
-  while curN != -inf:
-    if curN.u != NULL, then curN = curN.u
-    else counter = counter + curN.leftCount; curN = curN.l
-  return counter
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Rank-Search(x,r)
-  counter = Compute-Rank(curN)
-  while counter != r:
-    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
-    else if curN.r.leftCount + counter &amp;lt;= k, then curN = curN.r
-    else curN = curN.d
-    return curN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Again, As we assume a succesful search we do not check the cases of
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Compute-Rank(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  curN = x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  counter = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while curN != -inf:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if curN.u != NULL, then curN = curN.u
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else counter = counter + curN.leftCount; curN = curN.l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return counter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rank-Search(x,r)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  counter = Compute-Rank(curN)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while counter != r:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else if curN.r.leftCount + counter &amp;lt;= k, then curN = curN.r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else curN = curN.d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return curN
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Again, As we assume a succesful search we do not check the cases of
 &lt;em&gt;+inf&lt;/em&gt; and stepping downward while being in &lt;em&gt;level-0&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Again, Proofs are identical to &lt;strong&gt;a&lt;/strong&gt; and they are omitted for brevity.
 `&lt;/p&gt;
@@ -1394,41 +1389,39 @@ i+1-i=1, &amp;amp; \text{i is a power of 2} \\
 &lt;p&gt;&lt;code&gt;vEB-TREE-PREDOCESSOR(V, x)&lt;/code&gt; Symmetric, Skipped.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;vEB-EMPTY-TREE-INSERT(V, x)&lt;/code&gt; No Changes.&lt;/p&gt;
 &lt;p&gt;Intuitively, We apply the same trick of swapping &lt;code&gt;V.min&lt;/code&gt;. Complexity is the same, as we only re-ordered a constant-complexity code block.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vEB-TREE-INSERT(V, x)
-  if V.min == NIL
-    vEB-EMPTY-TREE-INSERT(V, x)
-  else 
-    if x &amp;lt; V.min
-      exchange x with V.min
-    if x &amp;gt; V.max
-      exchange x with V.max
-    if V.u &amp;gt; 2
-      if vEB-TREE-MINIMUM(V.cluster[high(x)] == NIL
-        vEB-TREE-INSERT(V.summary, high(x))
-        vEB-EMPTY-TREE-INSERT(V.cluster[high(x)], low.x)
-    else
-	  vEB-TREE-INSERT(V.cluster[high(x)], low.x)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Intuitively, We apply the same trick of updating &lt;code&gt;V.min&lt;/code&gt; and assigning &lt;code&gt;x&lt;/code&gt; to a new value before the delete operation. In this case, there&amp;rsquo;s no need to check for &lt;code&gt;summary&lt;/code&gt; as &lt;code&gt;V.max&lt;/code&gt; will be already set to either &lt;code&gt;V.min&lt;/code&gt; or the suitable &lt;code&gt;index&lt;/code&gt; value. Complexity is the same for exactly the same reasoning&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vEB-TREE-DELETE(V, x)
-.
-..
-else
-  if x == V.min
-    first-cluster = vEB-TREE-MINIMUM(V.summary)
-    x = index(first-cluster, vEB-TREE-MINIMUM(V.cluster[first-cluster]))
-    V.min = x
-  elseif x == V.max
-    last-cluster = vEB-TREE-MAXIMUM(V.summary)
-	x = index(high(x), vEB-TREE-MAXIMUM(V.cluster[high(x)]))
-    V.max = x
-	
-  vEB-TREE-DELETE(V.cluster[high(x)], low(x))
-
-  if vEB-TREE-MINIMUM(V.cluster[high(x)]) == NIL
-    vEB-TREE-DELETE(V.summary, high.x)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Algorithm&amp;rsquo;s correctness are not proved. We relied only on our intuition. Not comfortable the new modification is simpler and yet offers the same complexity; Why not illustrated in this way by the author?&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vEB-TREE-INSERT(V, x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if V.min == NIL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vEB-EMPTY-TREE-INSERT(V, x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x &amp;lt; V.min
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      exchange x with V.min
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x &amp;gt; V.max
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      exchange x with V.max
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if V.u &amp;gt; 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if vEB-TREE-MINIMUM(V.cluster[high(x)] == NIL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        vEB-TREE-INSERT(V.summary, high(x))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        vEB-EMPTY-TREE-INSERT(V.cluster[high(x)], low.x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  vEB-TREE-INSERT(V.cluster[high(x)], low.x)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Intuitively, We apply the same trick of updating &lt;code&gt;V.min&lt;/code&gt; and assigning &lt;code&gt;x&lt;/code&gt; to a new value before the delete operation. In this case, there&amp;rsquo;s no need to check for &lt;code&gt;summary&lt;/code&gt; as &lt;code&gt;V.max&lt;/code&gt; will be already set to either &lt;code&gt;V.min&lt;/code&gt; or the suitable &lt;code&gt;index&lt;/code&gt; value. Complexity is the same for exactly the same reasoning&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vEB-TREE-DELETE(V, x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if x == V.min
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    first-cluster = vEB-TREE-MINIMUM(V.summary)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    x = index(first-cluster, vEB-TREE-MINIMUM(V.cluster[first-cluster]))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    V.min = x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  elseif x == V.max
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    last-cluster = vEB-TREE-MAXIMUM(V.summary)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	x = index(high(x), vEB-TREE-MAXIMUM(V.cluster[high(x)]))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    V.max = x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  vEB-TREE-DELETE(V.cluster[high(x)], low(x))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if vEB-TREE-MINIMUM(V.cluster[high(x)]) == NIL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vEB-TREE-DELETE(V.summary, high.x)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Algorithm&amp;rsquo;s correctness are not proved. We relied only on our intuition. Not comfortable the new modification is simpler and yet offers the same complexity; Why not illustrated in this way by the author?&lt;/p&gt;
 </description>
     </item>
     
@@ -1445,285 +1438,273 @@ else
 &lt;p&gt;$A(x) = -10 + x + 0x^2 + 0x^3$&lt;/p&gt;
 &lt;p&gt;$B(x) = 3 - 6x + 0x^2 + 0x^3$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Computing A(x) on sample&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-FFT(-10, 1, 0, 0)
-  n = 4
-  w_4 = e^{2 pi i / 4}
-  w = w_4^0 = 1
-  a[even] = (-10, 0)
-  a[odd] = (1, 0)
-  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
-  y[odd] = Recursive-FFT(1, 0) = (1, 1)
-  for k=0 to 1
-    k=0
-	  y_0 = (-10) + (1)(1) = -9
-	  y_2 = (-10) - (1)(1) = -11
-	  w = w_4^1
-	k=1
-	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
-	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
-	  w = w_4^2
-  return (-9, -10+i, -11, -10-i)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-FFT(-10, 0)
-  n = 2
-  w_2 = e^{2 pi i / 2}
-  w = w_2^0 = 1
-  a[even] = (-10)
-  a[odd] = (0)
-  y[even] = Recursive-FFT(-10) = (-10)  // base case
-  y[odd] = Recursive-FFT(0) = (0)
-  for k=0 to 0
-    k=0
-	  y_0 = (-10) + w (0) = -10
-	  y_1 = (-10) - w (0) = -10
-	  w = w_2^1
-  return (-10, -10)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-FFT(1, 0)
-  n = 2
-  w_2 = e^{2 pi i / 2}
-  w = w_2^0 = 1
-  a[even] = (1)
-  a[odd] = (0)
-  y[even] = Recursive-FFT(1) = (1) // base case
-  y[odd] = Recursive-FFT(0) = (0)
-  for k=0 to 0
-    k=0
-	  y_0 = 1 + w(0) = 1
-	  y_1 = 1 - w(0) = 1
-	  w = w_2^1
-  return (1, 1)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(-10, 1, 0, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_4 = e^{2 pi i / 4}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_4^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (-10, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (1, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(1, 0) = (1, 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-10) + (1)(1) = -9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_2 = (-10) - (1)(1) = -11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-9, -10+i, -11, -10-i)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(-10, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2 = e^{2 pi i / 2}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (-10)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(-10) = (-10)  // base case
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(0) = (0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-10) + w (0) = -10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-10) - w (0) = -10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-10, -10)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(1, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2 = e^{2 pi i / 2}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(1) = (1) // base case
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(0) = (0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = 1 + w(0) = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = 1 - w(0) = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (1, 1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Similarly, we get $y=(-3, 3-6i, 9, 3+6i)$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Computing C(x) on sample, By multiplying corresponding sample points of A and B&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;$y = ((-9)(-3), (-10+i)(3-6i), (-11)(9), (-10-i)(3+6i)) = (27, -24+63i, -99, -24-63i)$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Interpolating C(x) coefficients&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-IFFT(27, -24+63i, -99, -24-63i)
-  n = 4
-  w_4^-1 = e^{-1 i 2 pi / 4}
-  w = w_4^0 = 1
-  y[even] = (27, -99)
-  y[odd] = (-24+63i, -24-63i)
-  a[even] = Recursive-IFFT(27, -99) = (-72, 126)
-  a[odd] = Recursive-IFFT(-24+63i, -24-63i) = (-48, 126i)
-  for k=0 to 1
-    k=0
-	  y_0 = (-72) + (1)(-48) = -120
-	  y_2 = (-72) - (1)(-48) = -24
-	  w = w_4^-1
-	
-	k=1
-	  y_1 = (126) + (e^{-1 i 2 pi / 4})(126i) = 252
-	  y_3 = (126) - (e^{-1 i 2 pi / 4})(126i) = 0
-	  w = w_4^-2
-  return (-120, 252, -24, 0)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-IFFT(27, -99)
-  n = 2
-  w_2^-1 = e^{-1 i 2 pi / 2}
-  w = w_2^0 = 1
-  y[even] = (27)
-  y[odd] (-99)
-  a[even] = Recursive-IFFT(27) = (27)  // base case
-  a[odd] = Recursive-IFFT(-99) = (-99)
-  for k=0 to 0
-    k=0
-	  y_0 = 27 + (1)(-99) = -72
-	  y_1 = 27 - (1)(-99) = 126
-	  w = w_2^-1
-  return (-72, 126)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-IFFT(-24+63i, -24-63i)
-  n = 2
-  w_2^-1 = e^{-1 i 2 pi /2}
-  w = w_2^0 = 1
-  y[even] = (-24+63i)
-  y[odd] = (-24-63i)
-  a[even] = Recursive-IFFT(-24+63i) = (-24+63i)
-  a[odd] = Recursive-IFFT(-24-63i) = (-24-63i)
-  for k=0 to 0
-    k=0
-	  y_0 = (-24+63i) + (1)(-24-63i) = -48
-	  y_1 = (-24+63i) - (1)(-24-63i) = 126i
-  return (-48, 126i)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Hence, Final answer is (-120, 252, -24, 0)/4 = (-30, 63, -6, 0), and resulting polynomial is $C(x) = -30 + 63x - 6x^2$.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(27, -24+63i, -99, -24-63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_4^-1 = e^{-1 i 2 pi / 4}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_4^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (27, -99)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (-24+63i, -24-63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(27, -99) = (-72, 126)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-24+63i, -24-63i) = (-48, 126i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-72) + (1)(-48) = -120
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_2 = (-72) - (1)(-48) = -24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (126) + (e^{-1 i 2 pi / 4})(126i) = 252
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_3 = (126) - (e^{-1 i 2 pi / 4})(126i) = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^-2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-120, 252, -24, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(27, -99)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2^-1 = e^{-1 i 2 pi / 2}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (27)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] (-99)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(27) = (27)  // base case
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-99) = (-99)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = 27 + (1)(-99) = -72
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = 27 - (1)(-99) = 126
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-72, 126)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(-24+63i, -24-63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2^-1 = e^{-1 i 2 pi /2}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (-24+63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (-24-63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(-24+63i) = (-24+63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-24-63i) = (-24-63i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-24+63i) + (1)(-24-63i) = -48
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-24+63i) - (1)(-24-63i) = 126i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-48, 126i)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hence, Final answer is (-120, 252, -24, 0)/4 = (-30, 63, -6, 0), and resulting polynomial is $C(x) = -30 + 63x - 6x^2$.&lt;/p&gt;
 &lt;h2 id=&#34;ex-2-3&#34;&gt;Ex. 2-3&lt;/h2&gt;
 &lt;p&gt;Modifying &lt;code&gt;Recursive-FFT&lt;/code&gt;, by switching $a$ and $y$, replacing $w_n$ by $w_n^{-1}$. Finally, result vector is divided by $n$.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Recursive-IFFT(y)
-  n = y.length
-  if n == 1
-    return y
-  w_n^-1 = e^{-1 2 pi i / n}
-  w = 1
-  y[even] = (y_0, y_2, ..., y_n-2})
-  y[odd] = (y_1, y_3, ..., y_n-1)
-  a[even] = Recursive-IFFT(y[even])
-  a[odd] = Recursive-IFFT(y[odd])
-  for k=0 to n/2 - 1
-    a_k = a[even]_k + w a[odd]_k
-	a_k+(n/2) = a[even]_k - w a[odd]_k
-	w = w w_n^-1
-  return a
-  
-a = a/n
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;ex-2-4&#34;&gt;Ex. 2-4&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(y)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = y.length
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if n == 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_n^-1 = e^{-1 2 pi i / n}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (y_0, y_2, ..., y_n-2})
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (y_1, y_3, ..., y_n-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(y[even])
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(y[odd])
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to n/2 - 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    a_k = a[even]_k + w a[odd]_k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	a_k+(n/2) = a[even]_k - w a[odd]_k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w = w w_n^-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = a/n
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ex-2-4&#34;&gt;Ex. 2-4&lt;/h2&gt;
 &lt;p&gt;done&lt;/p&gt;
 &lt;h2 id=&#34;ex-2-5&#34;&gt;Ex. 2-5&lt;/h2&gt;
 &lt;p&gt;Create operation accounts for number of pointers filled. Insert operations are modified to allow up to $2t-1$ keys in case of internal node, and up to $(2t-1) + (2t) = 4t-1$ keys in case of leaf node. That, by basically modifying the if condition. Also, insertion in place of pointers happens by checking whether a leaf have $2t-1$ keys.&lt;/p&gt;
 &lt;p&gt;Note we haven&amp;rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;B-TREE-CREATE(T)
-  x = ALLOCATE-NODE()
-  x.leaf = TRUE
-  x.n = 0
-  x.n&#39; = 0  // number of pointers to children filled
-  DISK-WRITE(x)
-  T.root = x
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;B-TREE-INSERT(T,k)
-  r = T.root
-  if (r.n == 2t-1 and not r.leaf) or (r.n == 4t-1 and r.leaf)  // different cases for internal and leaf nodes
-    s = ALLOCATE-NODE()
-	T.root = s
-	s.leaf = FALSE
-	s.n = 0
-	s.c1 = r
-	B-TREE-SPLIT-CHILD(s,1)
-	B-TREE-INSERT-NONFULL(s,k)
-  else
-    B-TREE-INSERT-NONFULL(r,k)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;B-TREE-INSERT-NONFULL(x,k)
-  if x.leaf
-    i = x.n + x.n&#39;  // sum of both keys and pointers
-
-    while i &amp;gt;= x.n + 1 and k &amp;lt; x.c_(i-x.n)
-	  x.c_(i-x.n+1) = x.c_(i-x.n)
-	  i = i-1
-    while i &amp;gt;= 1 and k &amp;lt; x.key_i
-	  x.key_i+1 = x.key_i
-	  i = i-1
-	
-	if i &amp;gt;= x.n + 1
-	  x.c_i+1 = k
-	  x.n&#39; = x.n&#39; + 1
-	else
-	  x.key_i+1 = k
-	  x.n = x.n + 1
-	
-	DISK-WRITE(x)
-
-  else
-    i = x.n
-  
-    while i&amp;gt;=1 and k&amp;lt;x.key_i
-	  i = i-1
-	i = i+1
-	
-	DISK-READ(x,c_i)
-	
-	if (x.c_i).n == 2t-1  // note this is an internal node
-	  B-TREE-SPLIT-CHILD(x,i)
-	  if k &amp;gt; x.key_i
-	    i = i+1
-	
-	B-TREE-INSERT-NONFULL(x.c_i, k)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;ex-3-2&#34;&gt;Ex. 3-2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-CREATE(T)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x = ALLOCATE-NODE()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.leaf = TRUE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.n = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.n&amp;#39; = 0  // number of pointers to children filled
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DISK-WRITE(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  T.root = x
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT(T,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  r = T.root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if (r.n == 2t-1 and not r.leaf) or (r.n == 4t-1 and r.leaf)  // different cases for internal and leaf nodes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s = ALLOCATE-NODE()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	T.root = s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.leaf = FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.n = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.c1 = r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-SPLIT-CHILD(s,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-INSERT-NONFULL(s,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B-TREE-INSERT-NONFULL(r,k)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT-NONFULL(x,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if x.leaf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = x.n + x.n&amp;#39;  // sum of both keys and pointers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= x.n + 1 and k &amp;lt; x.c_(i-x.n)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.c_(i-x.n+1) = x.c_(i-x.n)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= 1 and k &amp;lt; x.key_i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.key_i+1 = x.key_i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if i &amp;gt;= x.n + 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.c_i+1 = k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.n&amp;#39; = x.n&amp;#39; + 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.key_i+1 = k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.n = x.n + 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DISK-WRITE(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = x.n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i&amp;gt;=1 and k&amp;lt;x.key_i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i = i+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DISK-READ(x,c_i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if (x.c_i).n == 2t-1  // note this is an internal node
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  B-TREE-SPLIT-CHILD(x,i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if k &amp;gt; x.key_i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    i = i+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-INSERT-NONFULL(x.c_i, k)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ex-3-2&#34;&gt;Ex. 3-2&lt;/h2&gt;
 &lt;p&gt;We implement the prescription described in p.500.&lt;/p&gt;
 &lt;p&gt;Note we haven&amp;rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;B-TREE-DELETE(x, k)
-  // check if k is in node x
-  i = x.n
-  while i&amp;gt;=1 and x.key_i != k
-    i = i-1
-
-  // k is found
-  if i&amp;gt;=1
-
-    // x is a leaf node
-    if x.leaf
-      key_i = NULL
-      x.n = x.n - 1
-      x.shiftKeysAndPointers()  // for brevity we ignore implementing this subroutine
-
-    // x is an internal node
-    else
-	  y = x.c_i  // child preceeding k
-	  z = x.c_i+1  // child following k
-	  
-	  // number of keys in child preceeding k is at least t
-	  if y.n &amp;gt;= t
-	    k&#39; = y.lastKey()  // implementation is ignored
-		B-TREE-DELETE(y, k&#39;)
-        key_i = k = k&#39;
-	
-	  // number of keys in child following k is at least t
-	  else if z.n &amp;gt;= t
-		// symmetrically replace k by k&#39;
-
-      // number of keys in both child following and preceeding k, is less than t
-      else 
-        mergeInto([y, k, z])  // merge k and z into y. implementation is ignored
-		x.c_i+1 = NULL
-		B-TREE-DELETE(k)
-
-
-  // k isn&#39;t found in x
-  else
-    // find k in children
-	i = x.n
-    while i &amp;gt;= 1 and k &amp;lt; x.key_i
-	  i = i-1
-    y = x.c_(i+1) // subtree y containing k
-
-    // guarantee we descend to a node containing at least t keys
-	if y.n == t-1
-	
-   	  if i+2 &amp;lt;= x.n
-	    z = x.c_(i+2)  // immediate forward sibling of y
-	  if i &amp;gt;= 1
-	    r = x.c_(i)  // immediate preceeding sibling of y
-	
-	  // some sibling contains at least t keys
-      if z and z.n &amp;gt;= t
-	    B-TREE-INSERT(y, key_i)
-	    B-TREE-DELETE(key_i)
-	    B-TREE-INSERT(x, z.firstKey())
-	    B-TREE-DELETE(z, z.firstKey())
-	    // don&#39;t get why a pointer from sibling should be moved to y
-	  else if r and r.n &amp;gt;= t
-	    // symmetrically
-	
-	  // both immediate siblings have t-1 keys
-	  else
-	    mergeInto([r, key_i, y])
-		x.c_(i+1) = NULL
-        B-TREE-DELETE(x, key_i)
-    
-	// remove k from child y
-    B-TREE-DELETE(y, k)  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-DELETE(x, k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // check if k is in node x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  i = x.n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while i&amp;gt;=1 and x.key_i != k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = i-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // k is found
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if i&amp;gt;=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // x is a leaf node
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x.leaf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      key_i = NULL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x.n = x.n - 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x.shiftKeysAndPointers()  // for brevity we ignore implementing this subroutine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // x is an internal node
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y = x.c_i  // child preceeding k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  z = x.c_i+1  // child following k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // number of keys in child preceeding k is at least t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if y.n &amp;gt;= t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    k&amp;#39; = y.lastKey()  // implementation is ignored
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		B-TREE-DELETE(y, k&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        key_i = k = k&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // number of keys in child following k is at least t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else if z.n &amp;gt;= t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		// symmetrically replace k by k&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      // number of keys in both child following and preceeding k, is less than t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      else 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        mergeInto([y, k, z])  // merge k and z into y. implementation is ignored
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		x.c_i+1 = NULL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		B-TREE-DELETE(k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // k isn&amp;#39;t found in x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // find k in children
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i = x.n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= 1 and k &amp;lt; x.key_i
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    y = x.c_(i+1) // subtree y containing k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // guarantee we descend to a node containing at least t keys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if y.n == t-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	  if i+2 &amp;lt;= x.n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    z = x.c_(i+2)  // immediate forward sibling of y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if i &amp;gt;= 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    r = x.c_(i)  // immediate preceeding sibling of y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // some sibling contains at least t keys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if z and z.n &amp;gt;= t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-INSERT(y, key_i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-DELETE(key_i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-INSERT(x, z.firstKey())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-DELETE(z, z.firstKey())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    // don&amp;#39;t get why a pointer from sibling should be moved to y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else if r and r.n &amp;gt;= t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    // symmetrically
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // both immediate siblings have t-1 keys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    mergeInto([r, key_i, y])
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		x.c_(i+1) = NULL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        B-TREE-DELETE(x, key_i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	// remove k from child y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B-TREE-DELETE(y, k)  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;problem-2-1&#34;&gt;Problem 2-1&lt;/h2&gt;
 &lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Match(S, P)
-  n = S.length
-  m = P.length
-  
-  M = []
-  
-  for i = 0..n-m+1
-    flag = true
-    for j = 0..m
-	  if P[j] != S[i+j] flag = false
-	if flag M.append(i)
-
-  return M
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Match(S, P)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = S.length
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  m = P.length
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  M = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for i = 0..n-m+1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    flag = true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for j = 0..m
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if P[j] != S[i+j] flag = false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if flag M.append(i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return M
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
 &lt;p&gt;Source string $S$ gets encoded as $S(x) = s_0x^0 + s_1x^1 + \dots + s_{n-1}x^{n-1}$, and pattern string $P$ as $P(x) = p_0x^{m-1} + p_1x^{m-2} + \dots + p_{m-1}x^0$, where $s_i$ and $p_i$ are, $1$ or $-1$, if characters $S[i]$ and $P[i]$, are $a$ or $b$, respectively. If $P[i] = *$, Then $p_i = 0$.&lt;/p&gt;
 &lt;p&gt;Observe $s_jp_k = 1$ if $S[j] = P[k]$, $s_jp_k = -1$ if $S[j] \neq P[k]$, and $s_jp_k = 0$ if $P[k] = *$. Observe for resulting polynomial $(s \cdot p)(x) = r_0x^0 + r_1x^1 + \cdots + r_{m+n-2}x^{m+n-2}$, Coefficient $r_i = \sum_{j+k=i} s_jp_k$, Exactly matches the sum of multiplying $s_{i-m+1}$, $s_{i-m+2}$, $\dots$, $s_{i-1}$, $s_i$ with $p_0$, $p_1$, $\dots$, $p_{m-1}$, respectively, for $i = m-1, m, \dots, n-1$. If and only if, All corresponding alphabetic characters are equal, Then each contributes to the sum by $+1$. Asterik $*$ always contributes nothing to the sum. Therefore, if $k$ is the number of alphabetic character in $P$ (non asterik characters), Then $r_i = k$ if and only if $P$ matches substring $S[i-m+1..i]$.&lt;/p&gt;
 &lt;p&gt;Now we can set output $M$ to be the ordered list of $i$ such that $r_i = k$, Then subtract each entry by $m-1$, so that $i$ matches the position of the first character of the substring.&lt;/p&gt;
@@ -1784,21 +1765,20 @@ M &amp;amp;= [0, 2]
 &lt;p&gt;As in &lt;em&gt;a&lt;/em&gt;, Merge $T_1$, $k$, and $T_2$. The new root has at most $(4t^2 - 1) + (2t-1) + 1 = (2t+2)(2t-1) + 1 = 4t^2 + 2t - 1$ keys. Hence we are going to split around $\mathcal{O}(\lg t^2) = \mathcal{O}(\lg t)$ times. Note that shall result in many one-key nodes. So, at most $\mathcal{O}(\lg t)$ merge of one-key nodes, to finally fix the tree. But since $t$ is assumed to be a constant, the total complexity is $\mathcal{O}(1)$.&lt;/p&gt;
 &lt;h3 id=&#34;c-1&#34;&gt;c&lt;/h3&gt;
 &lt;p&gt;The tree&amp;rsquo;s height is increased only when the root has a full capacity of keys, and a new root is allocated.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;B-TREE-INSERT(T,k)
-r = T.root
-if r.n == 2t-1
-  s = ALLOCATE-NODE()
-  T.root = s
-  s.leaf = FALSE
-  s.n = 0
-  s.c1 = r
-  s.height = r.height+1  // new root is of height +1 than the previous one
-  B-TREE-SPLIT-CHILD(s,1)
-  B-TREE-INSERT-NONFULL(s,k)
-else
-  B-TREE-INSERT-NONFULL(r,k)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Tree shrinks only when a merge happens with the root alongside its children. If we assumed the new root is updated to point to one of the children, Then no height variable needs to be updated.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT(T,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;r = T.root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if r.n == 2t-1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s = ALLOCATE-NODE()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  T.root = s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.leaf = FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.n = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.c1 = r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.height = r.height+1  // new root is of height +1 than the previous one
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-SPLIT-CHILD(s,1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-INSERT-NONFULL(s,k)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-INSERT-NONFULL(r,k)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tree shrinks only when a merge happens with the root alongside its children. If we assumed the new root is updated to point to one of the children, Then no height variable needs to be updated.&lt;/p&gt;
 &lt;h3 id=&#34;d-1&#34;&gt;d&lt;/h3&gt;
 &lt;p&gt;Without the loss of generality assume $h_1 \geq h_2$. Then the procedure of $b$ is applied $h_1 - h_2$ times so $T_1$ and $T_2$ have the same weight. Then the procedure of &lt;em&gt;a&lt;/em&gt; is applied to combine them. Each operation costs a constant time, Hence a complexity upperbounded by $\mathcal{O}((h_1 - h_2) + 1)$.&lt;/p&gt;
 </description>
@@ -1874,37 +1854,36 @@ else
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Psuedo Code&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;optimalSubsetProfit(tree G, tree root v_r)
-  if (verticesNumber(G) == 1)
-    return (True, profit(v_r), profit(v_r))
-
-  subtreesOptimalData = ()
-
-  for v_neig in neighbours(v_r)
-    out = (optimalProfit, isRootIncluded, profitRootExcluded) = optimalSubsetProfit(subtree(v_neig), v_neih)
-    subtreesOptimalData.append(out)
-  
-  
-  profitRootExcluded = 0
-  for subtree in subtreesOptimalData
-    profitRootExluded += subtree.optimalProfit
-  
-  profitRootIncluded = 0
-  for subtree in subtreesOptimalData
-	if subtree.isRootIncluded == False
-	  profitRootIncluded += subtree.optimalProfit
-	else
-	  profitRootIncluded += subtree.profitRootExcluded
-  
-  optimalProfit = max{profitRootExcluded, profitRootIncluded}
-  if optimalProfit == profitRootExcluded
-	isRootIncluded = False
-  else
-    isRootIncluded = True
-  
-  return optimalProfit, isRootIncluded, profitRootExcluded
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalSubsetProfit(tree G, tree root v_r)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if (verticesNumber(G) == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (True, profit(v_r), profit(v_r))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  subtreesOptimalData = ()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for v_neig in neighbours(v_r)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    out = (optimalProfit, isRootIncluded, profitRootExcluded) = optimalSubsetProfit(subtree(v_neig), v_neih)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    subtreesOptimalData.append(out)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  profitRootExcluded = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for subtree in subtreesOptimalData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    profitRootExluded += subtree.optimalProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  profitRootIncluded = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for subtree in subtreesOptimalData
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if subtree.isRootIncluded == False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  profitRootIncluded += subtree.optimalProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  profitRootIncluded += subtree.profitRootExcluded
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  optimalProfit = max{profitRootExcluded, profitRootIncluded}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if optimalProfit == profitRootExcluded
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	isRootIncluded = False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    isRootIncluded = True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return optimalProfit, isRootIncluded, profitRootExcluded
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt; Stacks&amp;rsquo; Vertices Number&lt;/p&gt;
 &lt;p&gt;Think of the given graph as levels of stacks from bottom to top as shown below&lt;/p&gt;
 &lt;p&gt;
@@ -1945,29 +1924,28 @@ else
 &lt;/ul&gt;
 &lt;p&gt;By alternatively toggling between stacks, We ensure no adjacent vertices are selected, and we greedily select stacks of greatest number of vertices.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Psuedo-code&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;optimalProfit(tree G, tree&#39;s root v_r)
-
-  if G contains one vertex
-	return (True, 1)
-
-
-  someChildIncluded = False
-  count = 0
-
-  for each child v_chi of root v_r
-    (isChildIncluded, childCount) =  optimalProfit(G, v_chi)
-    
-	if isChildIncluded == True
-	  someChildIncluded = True
-	increase count by childCount
-
-
-  if someChildIncluded == True
-    return (False, count)
-  else
-    return (True, count+1)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Complexity&lt;/strong&gt; $\log(n)$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalProfit(tree G, tree&amp;#39;s root v_r)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if G contains one vertex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	return (True, 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  someChildIncluded = False
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  count = 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for each child v_chi of root v_r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (isChildIncluded, childCount) =  optimalProfit(G, v_chi)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if isChildIncluded == True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  someChildIncluded = True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	increase count by childCount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if someChildIncluded == True
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (False, count)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (True, count+1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Complexity&lt;/strong&gt; $\log(n)$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem. 1&lt;/strong&gt; If the given graph contains only vertices with at most 1 child branch, Then the algorithm selects maximum number of valid vertices.&lt;/p&gt;
 &lt;p&gt;Note the graph in this case is basically a linear path of vertices. Note also the number of vertices selected by our algorithm is $\lceil \frac{n}{2} \rceil$, where $n$ is the number of graph&amp;rsquo;s vertices.&lt;/p&gt;
@@ -2063,29 +2041,28 @@ else
 &lt;p&gt;&lt;strong&gt;Algorithm Description&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;For each row, we loop on all remaining graph subsets alongside their memoized profits. Then for the remaining graph selected, and for each vertex of it, We sum its profit to previous total profit and remove the vertex from remaining graph, to generate a new solution.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Psuedo-code&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;optimalProfit(row, maxRowProfit)
-  if row == n
-    return maxRowProfit
-
-  maxNextRowProfit = -1
-  
-  for each ith profit of table[row, ]
-    for each vertex v of ith graph subset
-	  totalProfit = profit + v.profit
-	  remGra = removeAdj(ith graph subset, v)
-	  	  
-	  if table[row+1, remGra] &amp;lt; totalProfit
-	    table[row+1, remGra] = totalProfit
-
-	  if table[row+1, remGra] &amp;gt; maxNextRowProfit
-	    maxNextRowProfit = totalProfit
-
-  if maxNextRowProfit == -1
-    return maxRowProfit
-  
-  optimalProfit(row+1, maxNextRowProfit)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note the algorithm can be trivially extended to output the solution subset by outputting $G(V)$ - $remGra$, where $remGra$ is the last remaining graph found by the algorithm.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalProfit(row, maxRowProfit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if row == n
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return maxRowProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  maxNextRowProfit = -1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for each ith profit of table[row, ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for each vertex v of ith graph subset
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  totalProfit = profit + v.profit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  remGra = removeAdj(ith graph subset, v)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  	  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if table[row+1, remGra] &amp;lt; totalProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    table[row+1, remGra] = totalProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if table[row+1, remGra] &amp;gt; maxNextRowProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    maxNextRowProfit = totalProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if maxNextRowProfit == -1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return maxRowProfit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  optimalProfit(row+1, maxNextRowProfit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the algorithm can be trivially extended to output the solution subset by outputting $G(V)$ - $remGra$, where $remGra$ is the last remaining graph found by the algorithm.&lt;/p&gt;
 &lt;h2 id=&#34;problem-2&#34;&gt;Problem 2&lt;/h2&gt;
 &lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
 &lt;p&gt;Maximum distance between two requests $r_i$ and $r_j$ is $\sqrt{(1/2)^2 + (1/2)^2} = \sqrt{1/4 + 1/4} = 1\sqrt{2} \leq 1$&lt;/p&gt;

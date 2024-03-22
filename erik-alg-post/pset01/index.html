@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -317,6 +318,12 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/erik-alg-post/pset01/" />
 <meta property="og:title" content="Problem Set 01 | Mostafa Touny" />
@@ -386,7 +393,7 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -673,37 +680,36 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
   </div></figure>
 </p>
 <p><strong>Psuedo Code</strong></p>
-<pre><code>optimalSubsetProfit(tree G, tree root v_r)
-  if (verticesNumber(G) == 1)
-    return (True, profit(v_r), profit(v_r))
-
-  subtreesOptimalData = ()
-
-  for v_neig in neighbours(v_r)
-    out = (optimalProfit, isRootIncluded, profitRootExcluded) = optimalSubsetProfit(subtree(v_neig), v_neih)
-    subtreesOptimalData.append(out)
-  
-  
-  profitRootExcluded = 0
-  for subtree in subtreesOptimalData
-    profitRootExluded += subtree.optimalProfit
-  
-  profitRootIncluded = 0
-  for subtree in subtreesOptimalData
-	if subtree.isRootIncluded == False
-	  profitRootIncluded += subtree.optimalProfit
-	else
-	  profitRootIncluded += subtree.profitRootExcluded
-  
-  optimalProfit = max{profitRootExcluded, profitRootIncluded}
-  if optimalProfit == profitRootExcluded
-	isRootIncluded = False
-  else
-    isRootIncluded = True
-  
-  return optimalProfit, isRootIncluded, profitRootExcluded
-</code></pre>
-<h3 id="c">c</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">optimalSubsetProfit(tree G, tree root v_r)
+</span></span><span class="line"><span class="cl">  if (verticesNumber(G) == 1)
+</span></span><span class="line"><span class="cl">    return (True, profit(v_r), profit(v_r))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  subtreesOptimalData = ()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  for v_neig in neighbours(v_r)
+</span></span><span class="line"><span class="cl">    out = (optimalProfit, isRootIncluded, profitRootExcluded) = optimalSubsetProfit(subtree(v_neig), v_neih)
+</span></span><span class="line"><span class="cl">    subtreesOptimalData.append(out)
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  profitRootExcluded = 0
+</span></span><span class="line"><span class="cl">  for subtree in subtreesOptimalData
+</span></span><span class="line"><span class="cl">    profitRootExluded += subtree.optimalProfit
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  profitRootIncluded = 0
+</span></span><span class="line"><span class="cl">  for subtree in subtreesOptimalData
+</span></span><span class="line"><span class="cl">	if subtree.isRootIncluded == False
+</span></span><span class="line"><span class="cl">	  profitRootIncluded += subtree.optimalProfit
+</span></span><span class="line"><span class="cl">	else
+</span></span><span class="line"><span class="cl">	  profitRootIncluded += subtree.profitRootExcluded
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  optimalProfit = max{profitRootExcluded, profitRootIncluded}
+</span></span><span class="line"><span class="cl">  if optimalProfit == profitRootExcluded
+</span></span><span class="line"><span class="cl">	isRootIncluded = False
+</span></span><span class="line"><span class="cl">  else
+</span></span><span class="line"><span class="cl">    isRootIncluded = True
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  return optimalProfit, isRootIncluded, profitRootExcluded
+</span></span></code></pre></div><h3 id="c">c</h3>
 <p><strong>Remark</strong> Stacks&rsquo; Vertices Number</p>
 <p>Think of the given graph as levels of stacks from bottom to top as shown below</p>
 <p>
@@ -744,29 +750,28 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
 </ul>
 <p>By alternatively toggling between stacks, We ensure no adjacent vertices are selected, and we greedily select stacks of greatest number of vertices.</p>
 <p><strong>Psuedo-code</strong></p>
-<pre><code>optimalProfit(tree G, tree's root v_r)
-
-  if G contains one vertex
-	return (True, 1)
-
-
-  someChildIncluded = False
-  count = 0
-
-  for each child v_chi of root v_r
-    (isChildIncluded, childCount) =  optimalProfit(G, v_chi)
-    
-	if isChildIncluded == True
-	  someChildIncluded = True
-	increase count by childCount
-
-
-  if someChildIncluded == True
-    return (False, count)
-  else
-    return (True, count+1)
-</code></pre>
-<p><strong>Complexity</strong> $\log(n)$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">optimalProfit(tree G, tree&#39;s root v_r)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if G contains one vertex
+</span></span><span class="line"><span class="cl">	return (True, 1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  someChildIncluded = False
+</span></span><span class="line"><span class="cl">  count = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  for each child v_chi of root v_r
+</span></span><span class="line"><span class="cl">    (isChildIncluded, childCount) =  optimalProfit(G, v_chi)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">	if isChildIncluded == True
+</span></span><span class="line"><span class="cl">	  someChildIncluded = True
+</span></span><span class="line"><span class="cl">	increase count by childCount
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if someChildIncluded == True
+</span></span><span class="line"><span class="cl">    return (False, count)
+</span></span><span class="line"><span class="cl">  else
+</span></span><span class="line"><span class="cl">    return (True, count+1)
+</span></span></code></pre></div><p><strong>Complexity</strong> $\log(n)$</p>
 <p><strong>Proof</strong></p>
 <p><strong>Theorem. 1</strong> If the given graph contains only vertices with at most 1 child branch, Then the algorithm selects maximum number of valid vertices.</p>
 <p>Note the graph in this case is basically a linear path of vertices. Note also the number of vertices selected by our algorithm is $\lceil \frac{n}{2} \rceil$, where $n$ is the number of graph&rsquo;s vertices.</p>
@@ -862,29 +867,28 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
 <p><strong>Algorithm Description</strong></p>
 <p>For each row, we loop on all remaining graph subsets alongside their memoized profits. Then for the remaining graph selected, and for each vertex of it, We sum its profit to previous total profit and remove the vertex from remaining graph, to generate a new solution.</p>
 <p><strong>Psuedo-code</strong></p>
-<pre><code>optimalProfit(row, maxRowProfit)
-  if row == n
-    return maxRowProfit
-
-  maxNextRowProfit = -1
-  
-  for each ith profit of table[row, ]
-    for each vertex v of ith graph subset
-	  totalProfit = profit + v.profit
-	  remGra = removeAdj(ith graph subset, v)
-	  	  
-	  if table[row+1, remGra] &lt; totalProfit
-	    table[row+1, remGra] = totalProfit
-
-	  if table[row+1, remGra] &gt; maxNextRowProfit
-	    maxNextRowProfit = totalProfit
-
-  if maxNextRowProfit == -1
-    return maxRowProfit
-  
-  optimalProfit(row+1, maxNextRowProfit)
-</code></pre>
-<p>Note the algorithm can be trivially extended to output the solution subset by outputting $G(V)$ - $remGra$, where $remGra$ is the last remaining graph found by the algorithm.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">optimalProfit(row, maxRowProfit)
+</span></span><span class="line"><span class="cl">  if row == n
+</span></span><span class="line"><span class="cl">    return maxRowProfit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  maxNextRowProfit = -1
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  for each ith profit of table[row, ]
+</span></span><span class="line"><span class="cl">    for each vertex v of ith graph subset
+</span></span><span class="line"><span class="cl">	  totalProfit = profit + v.profit
+</span></span><span class="line"><span class="cl">	  remGra = removeAdj(ith graph subset, v)
+</span></span><span class="line"><span class="cl">	  	  
+</span></span><span class="line"><span class="cl">	  if table[row+1, remGra] &lt; totalProfit
+</span></span><span class="line"><span class="cl">	    table[row+1, remGra] = totalProfit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	  if table[row+1, remGra] &gt; maxNextRowProfit
+</span></span><span class="line"><span class="cl">	    maxNextRowProfit = totalProfit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if maxNextRowProfit == -1
+</span></span><span class="line"><span class="cl">    return maxRowProfit
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  optimalProfit(row+1, maxNextRowProfit)
+</span></span></code></pre></div><p>Note the algorithm can be trivially extended to output the solution subset by outputting $G(V)$ - $remGra$, where $remGra$ is the last remaining graph found by the algorithm.</p>
 <h2 id="problem-2">Problem 2</h2>
 <h3 id="a-1">a</h3>
 <p>Maximum distance between two requests $r_i$ and $r_j$ is $\sqrt{(1/2)^2 + (1/2)^2} = \sqrt{1/4 + 1/4} = 1\sqrt{2} \leq 1$</p>
@@ -933,142 +937,6 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -1144,7 +1012,7 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1156,7 +1024,7 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -1167,6 +1035,16 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1200,7 +1078,6 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1212,7 +1089,7 @@ The optimal subset is $v_2, v_3$ of profit sum equal to $6 &#43; 6 = 12$, But th
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

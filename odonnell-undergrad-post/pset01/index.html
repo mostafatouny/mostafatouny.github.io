@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -318,6 +319,12 @@ For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarr
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/odonnell-undergrad-post/pset01/" />
 <meta property="og:title" content="Problem Set 01 | Mostafa Touny" />
@@ -388,7 +395,7 @@ For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarr
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -624,52 +631,49 @@ For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarr
 <h2 id="ex-3">Ex. 3</h2>
 <h3 id="a-1">a</h3>
 <p>Binary search on range (a, a+1, .., b-1, b), where at each step algorithm $D$ is queries on both the first and second halves of the array, Then recursively call the binary search on both halves.</p>
-<pre><code>primeFactor( X = array(a, a+1, .., b-1, b) )
-
-  if X.length == 1
-    if D(x)
-	  return X[0]
-	return FALSE
-  
-  if X.length == 0
-    return FALSE
-	
-  halfIndex = floor(X.length/2)
-  firstHalf = X[: halfIndex]
-  secondHalf = X[halfIndex+1 :]
-  
-  if D(firstHalf)
-    return primeFactor(firstHalf)
-  if D(secondHalf)
-    return primeFactor(secondHalf)
-  return FALSE
-  
-main( X = array (a, a+1, .., b-1, b) )
-  res = primeFactor(X)
-  if res == FALSE
-    print 'no'
-  else
-    print 'yes'
-</code></pre>
-<p>Since $m \geq$ length of $X$, Complexity is $O(\lg m)$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">primeFactor( X = array(a, a+1, .., b-1, b) )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if X.length == 1
+</span></span><span class="line"><span class="cl">    if D(x)
+</span></span><span class="line"><span class="cl">	  return X[0]
+</span></span><span class="line"><span class="cl">	return FALSE
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  if X.length == 0
+</span></span><span class="line"><span class="cl">    return FALSE
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">  halfIndex = floor(X.length/2)
+</span></span><span class="line"><span class="cl">  firstHalf = X[: halfIndex]
+</span></span><span class="line"><span class="cl">  secondHalf = X[halfIndex+1 :]
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  if D(firstHalf)
+</span></span><span class="line"><span class="cl">    return primeFactor(firstHalf)
+</span></span><span class="line"><span class="cl">  if D(secondHalf)
+</span></span><span class="line"><span class="cl">    return primeFactor(secondHalf)
+</span></span><span class="line"><span class="cl">  return FALSE
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">main( X = array (a, a+1, .., b-1, b) )
+</span></span><span class="line"><span class="cl">  res = primeFactor(X)
+</span></span><span class="line"><span class="cl">  if res == FALSE
+</span></span><span class="line"><span class="cl">    print &#39;no&#39;
+</span></span><span class="line"><span class="cl">  else
+</span></span><span class="line"><span class="cl">    print &#39;yes&#39;
+</span></span></code></pre></div><p>Since $m \geq$ length of $X$, Complexity is $O(\lg m)$.</p>
 <h3 id="b-1">b</h3>
 <p>Solving decision $D$ by $f$. Compute $f(x) = y$ and check whether $y_i = b$.</p>
-<pre><code>y = f(x)
-if y[i] == b
-  return YES
-return FALSE
-</code></pre>
-<p>Computing $f$ by $D$. on each bit $x_i$ of $x$, Call $D$ on string x, bit 0, and position i. if result is YES, let $y_i = 0$; if result is NO, let $y_i = 1$. assign $f(x)$ to $y$.</p>
-<pre><code>y = []
-for i in x.length
-  res = D(x, 0, i)
-  if res == YES
-    y[i] = 0
-  else
-    y[i] = 1
-return y
-</code></pre>
-<h2 id="ex-4">Ex. 4</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">y = f(x)
+</span></span><span class="line"><span class="cl">if y[i] == b
+</span></span><span class="line"><span class="cl">  return YES
+</span></span><span class="line"><span class="cl">return FALSE
+</span></span></code></pre></div><p>Computing $f$ by $D$. on each bit $x_i$ of $x$, Call $D$ on string x, bit 0, and position i. if result is YES, let $y_i = 0$; if result is NO, let $y_i = 1$. assign $f(x)$ to $y$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">y = []
+</span></span><span class="line"><span class="cl">for i in x.length
+</span></span><span class="line"><span class="cl">  res = D(x, 0, i)
+</span></span><span class="line"><span class="cl">  if res == YES
+</span></span><span class="line"><span class="cl">    y[i] = 0
+</span></span><span class="line"><span class="cl">  else
+</span></span><span class="line"><span class="cl">    y[i] = 1
+</span></span><span class="line"><span class="cl">return y
+</span></span></code></pre></div><h2 id="ex-4">Ex. 4</h2>
 <h3 id="a-2">a</h3>
 <p>Trivially we can transform the input to the form *input#.</p>
 <p>Initially the machine is on state $q_0$.</p>
@@ -701,142 +705,6 @@ return y
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -912,7 +780,7 @@ return y
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -924,7 +792,7 @@ return y
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -935,6 +803,16 @@ return y
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -968,7 +846,6 @@ return y
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -980,7 +857,7 @@ return y
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

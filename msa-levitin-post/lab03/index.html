@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -73,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -215,7 +215,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -236,6 +236,7 @@
 
   
   
+
 
 
 
@@ -322,6 +323,12 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/msa-levitin-post/lab03/" />
 <meta property="og:title" content="Lab 03 | Mostafa Touny" />
@@ -396,7 +403,7 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -681,32 +688,30 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 </ul>
 <p><em>Solution</em></p>
 <p><strong>(a)</strong></p>
-<pre><code>    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
-      count = 0
-
-      for i in 0..n-2
-          if S[i] == A
-              for j in i+1..n-1
-                  if S[j] == B
-                      count = count + 1
-
-      return count
-</code></pre>
-<p>The number of basic operations is upperbounded by $\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1 = \mathcal{O}(n^2)$.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
+</span></span><span class="line"><span class="cl">      count = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      for i in 0..n-2
+</span></span><span class="line"><span class="cl">          if S[i] == A
+</span></span><span class="line"><span class="cl">              for j in i+1..n-1
+</span></span><span class="line"><span class="cl">                  if S[j] == B
+</span></span><span class="line"><span class="cl">                      count = count + 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      return count
+</span></span></code></pre></div><p>The number of basic operations is upperbounded by $\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1 = \mathcal{O}(n^2)$.</p>
 <p><strong>(b)</strong></p>
-<pre><code>    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
-      count_a = 0  # Count of 'A' characters encountered so far
-      count_ab = 0  # Count of substrings starting with 'A' and ending with 'B'
-
-      for i in 0..n-2:
-          if S[i] == A
-              count_a = count_a + 1
-          else if S[i] == B
-              count_ab = count_ab + count_a
-
-      return count_ab
-</code></pre>
-<p>$\sum_{i=0}^{n-2} 1 = \Theta(n)$. Observe count of basic operations is exactly 1 per iteration.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def count_substrings_starting_with_a_ending_with_b(S[0..n-1]):
+</span></span><span class="line"><span class="cl">      count_a = 0  # Count of &#39;A&#39; characters encountered so far
+</span></span><span class="line"><span class="cl">      count_ab = 0  # Count of substrings starting with &#39;A&#39; and ending with &#39;B&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      for i in 0..n-2:
+</span></span><span class="line"><span class="cl">          if S[i] == A
+</span></span><span class="line"><span class="cl">              count_a = count_a + 1
+</span></span><span class="line"><span class="cl">          else if S[i] == B
+</span></span><span class="line"><span class="cl">              count_ab = count_ab + count_a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      return count_ab
+</span></span></code></pre></div><p>$\sum_{i=0}^{n-2} 1 = \Theta(n)$. Observe count of basic operations is exactly 1 per iteration.</p>
 <h3 id="section-3" class="unnumbered">3.2.9</h3>
 <p><strong>Homework</strong></p>
 <h3 id="section-4" class="unnumbered">3.3.3</h3>
@@ -718,35 +723,34 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 <li>What can you conclude about the point of maximum $x$ or $y$ coordinates?</li>
 </ul>
 <p><em>Solution</em></p>
-<pre><code>    # input: array of points, each point is a tuple of x and y coordinates
-    # output: a list of exactly two extreme points
-    def find_extreme_points(P[0..n]) # given n &gt;= 2
-
-      # Initialize extreme points with the first point in the set
-      min_x_point, min_y_point = P[0]
-      max_x_point, max_y_point = P[0]
-
-      # Iterate through the remaining points
-      for i in P[1..n]
-          x, y = i
-
-          # Update max_x_point and max_y_point if needed
-          if x &gt; max_x_point:
-              max_x_point = x
-              max_y_point = y
-          else if x == max_x_point and y &gt; max_y_point:
-              max_y_point = y
-
-          # Update min_x_point and min_y_point if needed
-          if x &lt; min_x_point:
-              min_x_point = x
-              min_y_point = y
-          else if x == min_x_point and y &lt; min_y_point:
-              min_y_point = y
-
-      return [(min_x_point, min_y_point), (max_x_point, max_y_point)]
-</code></pre>
-<h3 id="section-6" class="unnumbered">3.4.6</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    # input: array of points, each point is a tuple of x and y coordinates
+</span></span><span class="line"><span class="cl">    # output: a list of exactly two extreme points
+</span></span><span class="line"><span class="cl">    def find_extreme_points(P[0..n]) # given n &gt;= 2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Initialize extreme points with the first point in the set
+</span></span><span class="line"><span class="cl">      min_x_point, min_y_point = P[0]
+</span></span><span class="line"><span class="cl">      max_x_point, max_y_point = P[0]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Iterate through the remaining points
+</span></span><span class="line"><span class="cl">      for i in P[1..n]
+</span></span><span class="line"><span class="cl">          x, y = i
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          # Update max_x_point and max_y_point if needed
+</span></span><span class="line"><span class="cl">          if x &gt; max_x_point:
+</span></span><span class="line"><span class="cl">              max_x_point = x
+</span></span><span class="line"><span class="cl">              max_y_point = y
+</span></span><span class="line"><span class="cl">          else if x == max_x_point and y &gt; max_y_point:
+</span></span><span class="line"><span class="cl">              max_y_point = y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">          # Update min_x_point and min_y_point if needed
+</span></span><span class="line"><span class="cl">          if x &lt; min_x_point:
+</span></span><span class="line"><span class="cl">              min_x_point = x
+</span></span><span class="line"><span class="cl">              min_y_point = y
+</span></span><span class="line"><span class="cl">          else if x == min_x_point and y &lt; min_y_point:
+</span></span><span class="line"><span class="cl">              min_y_point = y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      return [(min_x_point, min_y_point), (max_x_point, max_y_point)]
+</span></span></code></pre></div><h3 id="section-6" class="unnumbered">3.4.6</h3>
 <p>We assume the problem would always have a solution. We leave it as an exercise for students to detect the case of the non-existince of any solution.</p>
 <p><em>Hints</em></p>
 <ul>
@@ -757,20 +761,19 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 </ul>
 <p><em>Solution</em></p>
 <p>There is an elegant generator based on binary numbers. Since this is not the core focus of the question, We show an easier to understand code by recursion.</p>
-<pre><code>    def generate_subsets(A[0..n-1]):
-      if n == 0:
-          return [ [] ]
-
-      # Generate subsets without the last element
-      subsets_without_last = generate_subsets( A[0..n-2] )
-
-      # Add the last element to each subset in subsets_without_last
-      subsets_with_last = [ subset + [A[n-1]] for subset in subsets_without_last ]
-
-      # Concatenate subsets with and without the last element
-      return subsets_without_last + subsets_with_last
-</code></pre>
-<h3 id="section-7" class="unnumbered">3.4.9</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def generate_subsets(A[0..n-1]):
+</span></span><span class="line"><span class="cl">      if n == 0:
+</span></span><span class="line"><span class="cl">          return [ [] ]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Generate subsets without the last element
+</span></span><span class="line"><span class="cl">      subsets_without_last = generate_subsets( A[0..n-2] )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Add the last element to each subset in subsets_without_last
+</span></span><span class="line"><span class="cl">      subsets_with_last = [ subset + [A[n-1]] for subset in subsets_without_last ]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      # Concatenate subsets with and without the last element
+</span></span><span class="line"><span class="cl">      return subsets_without_last + subsets_with_last
+</span></span></code></pre></div><h3 id="section-7" class="unnumbered">3.4.9</h3>
 <p><strong>Homework.</strong></p>
 <h3 id="section-8" class="unnumbered">3.5.7</h3>
 <p><strong>Homework</strong></p>
@@ -784,52 +787,50 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 <p><em>Solution</em></p>
 <p><strong>(a)</strong></p>
 <p>modify $dfs$ function in page 124 to maintain a two colours switching for each level, rather than $count$.</p>
-<pre><code>    def switchColour(input_colour)
-      if input_colour is white
-        return black
-      if input_colour is black
-        return white
-
-    def dfs(v, current_colour)
-      if v.colour == NULL
-        v.colour = current_colour
-      else
-        return v.colour == current_colour
-
-      for each vertex w in V adjacent to v
-        if not dfs( w, switchColour(current_colour) )
-          return False
-      
-      return True
-</code></pre>
-<p><strong>(b)</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def switchColour(input_colour)
+</span></span><span class="line"><span class="cl">      if input_colour is white
+</span></span><span class="line"><span class="cl">        return black
+</span></span><span class="line"><span class="cl">      if input_colour is black
+</span></span><span class="line"><span class="cl">        return white
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def dfs(v, current_colour)
+</span></span><span class="line"><span class="cl">      if v.colour == NULL
+</span></span><span class="line"><span class="cl">        v.colour = current_colour
+</span></span><span class="line"><span class="cl">      else
+</span></span><span class="line"><span class="cl">        return v.colour == current_colour
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      for each vertex w in V adjacent to v
+</span></span><span class="line"><span class="cl">        if not dfs( w, switchColour(current_colour) )
+</span></span><span class="line"><span class="cl">          return False
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      return True
+</span></span></code></pre></div><p><strong>(b)</strong></p>
 <p>modify $bfs$ to maintain the depth alongside the vertex in the queue, and then colour according to whether the depth is even or odd.</p>
-<pre><code>    def colourByDepth(depth_input)
-      if depth_input is even
-        return white
-      if depth_input is odd
-        return black
-
-    def bfs(v)
-      set v.depth = 0
-      v.colour = colourByDepth(v.depth)
-      initialize a queue with v
-      
-      while the queue is not empty do
-        for each vertex w in V adjacent to the front vertex f
-          if w.colour == NULL
-            w.depth = f.depth + 1
-            w.colour = colourByDepth(w.depth)
-            add w to the queue
-          else
-            if w.colour != colourByDepth(f.depth+1)
-              return False
-
-        remove the front vertex from the queue
-
-      return True
-</code></pre>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">    def colourByDepth(depth_input)
+</span></span><span class="line"><span class="cl">      if depth_input is even
+</span></span><span class="line"><span class="cl">        return white
+</span></span><span class="line"><span class="cl">      if depth_input is odd
+</span></span><span class="line"><span class="cl">        return black
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def bfs(v)
+</span></span><span class="line"><span class="cl">      set v.depth = 0
+</span></span><span class="line"><span class="cl">      v.colour = colourByDepth(v.depth)
+</span></span><span class="line"><span class="cl">      initialize a queue with v
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">      while the queue is not empty do
+</span></span><span class="line"><span class="cl">        for each vertex w in V adjacent to the front vertex f
+</span></span><span class="line"><span class="cl">          if w.colour == NULL
+</span></span><span class="line"><span class="cl">            w.depth = f.depth + 1
+</span></span><span class="line"><span class="cl">            w.colour = colourByDepth(w.depth)
+</span></span><span class="line"><span class="cl">            add w to the queue
+</span></span><span class="line"><span class="cl">          else
+</span></span><span class="line"><span class="cl">            if w.colour != colourByDepth(f.depth+1)
+</span></span><span class="line"><span class="cl">              return False
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        remove the front vertex from the queue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      return True
+</span></span></code></pre></div>
     </div>
 
     
@@ -846,142 +847,6 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -1057,7 +922,7 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1069,7 +934,7 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -1080,6 +945,16 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1113,7 +988,6 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -1125,7 +999,7 @@ Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 

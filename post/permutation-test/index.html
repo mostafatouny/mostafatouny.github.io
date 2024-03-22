@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 1, 2024 --><html lang="en-us" >
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 22, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -10,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -70,14 +70,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -212,7 +212,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.18d89af1ddc2f9d2efb994f3d440dbdf.css" />
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
 
   
   
@@ -233,6 +233,7 @@
 
   
   
+
 
 
 
@@ -312,6 +313,12 @@
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://mostafatouny.github.io/post/permutation-test/featured.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
 <meta property="og:site_name" content="Mostafa Touny" />
 <meta property="og:url" content="https://mostafatouny.github.io/post/permutation-test/" />
 <meta property="og:title" content="Analyzing Disparity Between Users and Journalists Ratings | Mostafa Touny" />
@@ -427,7 +434,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.2a7b4dc7d7846171b6299e17e1f3ac71.js"></script>
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
 
   
 
@@ -605,6 +612,7 @@
   
 
 
+
 <div class="article-container pt-3">
   <h1>Analyzing Disparity Between Users and Journalists Ratings</h1>
 
@@ -655,7 +663,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 449px;">
   <div style="position: relative">
-    <img src="/post/permutation-test/featured_huc58d8c20bb0e6e68f8a9d205dfe621a2_20734_720x2500_fit_q75_h2_lanczos_3.webp" width="720" height="449" alt="" class="featured-image">
+    <img src="/post/permutation-test/featured_huc58d8c20bb0e6e68f8a9d205dfe621a2_20734_9670184cfcfa93553aca5cd4ee118a96.webp" width="720" height="449" alt="" class="featured-image">
     
   </div>
 </div>
@@ -726,40 +734,37 @@ Some games like <em>disco elsiym</em> gets played by only those who like such ge
 </ul>
 <hr>
 <h3 id="import-libraries-and-local-files">Import Libraries and Local Files</h3>
-<pre><code class="language-python"># 3rd-party libraries
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-# local-files
-import jsonRW as jsRW
-import graphs.pie as pieGraph
-import graphs.categoricalHeatmap as categoricalHeatmapGraph
-import graphs.groupedBars as groupedBarsGraph
-import graphs.histogramPdf as histogramPdfGraph
-import transformations.transformations as transform
-import transformations.discretizeIntoCategories as discIntCat
-import statTests.permutationTest as permTest
-</code></pre>
-<hr>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 3rd-party libraries</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># local-files</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">jsonRW</span> <span class="k">as</span> <span class="nn">jsRW</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">graphs.pie</span> <span class="k">as</span> <span class="nn">pieGraph</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">graphs.categoricalHeatmap</span> <span class="k">as</span> <span class="nn">categoricalHeatmapGraph</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">graphs.groupedBars</span> <span class="k">as</span> <span class="nn">groupedBarsGraph</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">graphs.histogramPdf</span> <span class="k">as</span> <span class="nn">histogramPdfGraph</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">transformations.transformations</span> <span class="k">as</span> <span class="nn">transform</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">transformations.discretizeIntoCategories</span> <span class="k">as</span> <span class="nn">discIntCat</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">statTests.permutationTest</span> <span class="k">as</span> <span class="nn">permTest</span>
+</span></span></code></pre></div><hr>
 <h2 id="read-data">Read Data</h2>
 <h3 id="read-local-json-data-into-a-pandas-dataframe">Read Local JSON Data Into a Pandas Dataframe</h3>
-<pre><code class="language-python"># a map from each platform to its corresponding dataframe
-platform_df = {}
-# platform names and their corresonding data file names
-platformsNames = ['ps4', 'xbox', 'switch', 'pc']
-filesNames = ['ps4.csv', 'xbox.csv', 'switch.csv', 'pc.csv']
-
-# for each platform, then 
-for name in platformsNames:
-    # read its local json file
-    metacritic_list = jsRW.readJson(name)
-    # parse it as pandas dataframe, then map platform name to it
-    platform_df[name] = pd.DataFrame(metacritic_list)
-</code></pre>
-<pre><code class="language-python"># take a look at a dataframe
-platform_df['ps4']
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># a map from each platform to its corresponding dataframe</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># platform names and their corresonding data file names</span>
+</span></span><span class="line"><span class="cl"><span class="n">platformsNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">,</span> <span class="s1">&#39;xbox&#39;</span><span class="p">,</span> <span class="s1">&#39;switch&#39;</span><span class="p">,</span> <span class="s1">&#39;pc&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">filesNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ps4.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;xbox.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;switch.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;pc.csv&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># for each platform, then </span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">platformsNames</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># read its local json file</span>
+</span></span><span class="line"><span class="cl">    <span class="n">metacritic_list</span> <span class="o">=</span> <span class="n">jsRW</span><span class="o">.</span><span class="n">readJson</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># parse it as pandas dataframe, then map platform name to it</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">metacritic_list</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># take a look at a dataframe</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -879,14 +884,12 @@ platform_df['ps4']
 </div>
 <hr>
 <h2 id="data-cleansing">Data Cleansing</h2>
-<pre><code class="language-python"># drop unneeded columns and re-organize them 
-for name in platformsNames:
-    platform_df[name] = platform_df[name][['title', 'user_rating', 'critic_rating']]
-</code></pre>
-<pre><code class="language-python"># take a look at a dataframe, again
-platform_df['ps4']
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># drop unneeded columns and re-organize them </span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">platformsNames</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">][[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;user_rating&#39;</span><span class="p">,</span> <span class="s1">&#39;critic_rating&#39;</span><span class="p">]]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># take a look at a dataframe, again</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -985,61 +988,54 @@ platform_df['ps4']
 <li>user_rating must be on the same scale as critic_rating</li>
 <li>data types need to be checked</li>
 </ul>
-<pre><code class="language-python"># check columns data types
-platform_df['ps4'].dtypes
-</code></pre>
-<pre><code>title            object
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># check columns data types</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span>
+</span></span></code></pre></div><pre><code>title            object
 user_rating      object
 critic_rating    object
 dtype: object
 </code></pre>
-<pre><code class="language-python"># convert ratings into a numeric value
-#      error ahead!
-#df['user_rating'] = pd.to_numeric(df['user_rating'])
-#df['critic_rating'] = pd.to_numeric(df['critic_rating'])
-</code></pre>
-<pre><code class="language-python"># get rid of user_rating with value equal to &quot;tbd&quot;
-
-# for each platform
-for name in platformsNames:
-    # get its dataframe
-    df = platform_df[name]
-    # get index set in which user_rating is tbd, a non-numeric value
-    tbdIndex = df[df['user_rating']==&quot;tbd&quot;].index
-    # drop rows specified by indices in which user_rating is tbd
-    df = df.drop(labels=tbdIndex, axis='index')
-    # set updated data to platform_df
-    platform_df[name] = df
-</code></pre>
-<pre><code class="language-python"># convert ratings to a numeric type
-
-# for each platform
-for name in platformsNames:
-    # get its dataframe
-    df = platform_df[name]
-    # convert to a numeric type
-    df['user_rating'] = pd.to_numeric(df['user_rating'])
-    df['critic_rating'] = pd.to_numeric(df['critic_rating'])
-    # set updated data to platform_df
-    platform_df[name] = df
-</code></pre>
-<pre><code class="language-python"># check data types
-platform_df['ps4'].dtypes
-</code></pre>
-<pre><code>title             object
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># convert ratings into a numeric value</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#      error ahead!</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#df[&#39;user_rating&#39;] = pd.to_numeric(df[&#39;user_rating&#39;])</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#df[&#39;critic_rating&#39;] = pd.to_numeric(df[&#39;critic_rating&#39;])</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># get rid of user_rating with value equal to &#34;tbd&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">platformsNames</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get its dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get index set in which user_rating is tbd, a non-numeric value</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tbdIndex</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;tbd&#34;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># drop rows specified by indices in which user_rating is tbd</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">tbdIndex</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># set updated data to platform_df</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># convert ratings to a numeric type</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">platformsNames</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get its dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># convert to a numeric type</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;user_rating&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;critic_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;critic_rating&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># set updated data to platform_df</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># check data types</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span>
+</span></span></code></pre></div><pre><code>title             object
 user_rating      float64
 critic_rating      int64
 dtype: object
 </code></pre>
-<pre><code class="language-python"># user ratings must be on the same scale as critics ratings, so we multiply them by 10
-
-# for each platform
-for platformName in platform_df:
-    platform_df[platformName]['user_rating'] = platform_df[platformName]['user_rating'] * 10
-</code></pre>
-<pre><code class="language-python">platform_df['ps4']
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># user ratings must be on the same scale as critics ratings, so we multiply them by 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">platformName</span> <span class="ow">in</span> <span class="n">platform_df</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">][</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">][</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1135,16 +1131,15 @@ for platformName in platform_df:
 </div>
 <hr>
 <h3 id="optional-store-cleaned-data-into-a-csv-file">Optional: Store Cleaned Data Into a CSV File</h3>
-<pre><code class="language-python">&quot;&quot;&quot;
-# store data to a csv file
-
-# for each platform
-for platformName in platform_df:
-    # save to a csv file
-    platform_df[platformName].to_csv(str(platformName)+'.csv')
-&quot;&quot;&quot;
-</code></pre>
-<pre><code>&quot;\n# store data to a csv file\n\n# for each platform\nfor platformName in platform_df:\n    # save to a csv file\n    platform_df[platformName].to_csv(str(platformName)+'.csv')\n&quot;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2"># store data to a csv file
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2"># for each platform
+</span></span></span><span class="line"><span class="cl"><span class="s2">for platformName in platform_df:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    # save to a csv file
+</span></span></span><span class="line"><span class="cl"><span class="s2">    platform_df[platformName].to_csv(str(platformName)+&#39;.csv&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><pre><code>&quot;\n# store data to a csv file\n\n# for each platform\nfor platformName in platform_df:\n    # save to a csv file\n    platform_df[platformName].to_csv(str(platformName)+'.csv')\n&quot;
 </code></pre>
 <h3 id="data-preprocessing-summary">Data Preprocessing Summary</h3>
 <ul>
@@ -1154,18 +1149,16 @@ for platformName in platform_df:
 </ul>
 <hr>
 <h3 id="compute-disparity-difference-between-users-and-critics">Compute Disparity (Difference) Between Users and Critics</h3>
-<pre><code class="language-python"># for each platform
-for name in platform_df:
-    # get dataframe of the platform
-    df = platform_df[name]
-    # for each record, compute distance between user and critic ratings, then set result to a new column
-    df['userCritic_difference'] = df.apply(lambda x: abs(x['user_rating']-x['critic_rating']), axis=1)
-    # assign updates back to our dataframe
-    platform_df[name] = df
-</code></pre>
-<pre><code class="language-python">platform_df['ps4']
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">platform_df</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get dataframe of the platform</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># for each record, compute distance between user and critic ratings, then set result to a new column</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;critic_rating&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># assign updates back to our dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1272,34 +1265,31 @@ for name in platform_df:
 <p>310 rows × 4 columns</p>
 </div>
 <h3 id="discretize-disparity-computed-earlier-into-categories">Discretize Disparity Computed Earlier Into Categories</h3>
-<pre><code class="language-python"># categories names and their corresponding intervals
-# category at location x corresponds to interval equal or greater than intervals location x and less than location x + 1
-# except for last category, has no end
-categories = pd.Series([&quot;low&quot;, &quot;moderate&quot;, &quot;high&quot;, &quot;very_high&quot;, &quot;extremely_high&quot;])
-intervals_categories = [0, 20, 30, 40, 50]
-</code></pre>
-<pre><code class="language-python"># compute categories as defined earlier
-
-# loop on platforms
-for platformName in platform_df:
-    # get dataframe of the platform
-    df = platform_df[platformName]
-    # add category based on difference just defined
-    df['difference_category'] = df.apply(discIntCat.numToCat, axis=1, args=('userCritic_difference', categories, intervals_categories))
-    
-    # let categories be recognized by pandas
-    df['difference_category'] = df['difference_category'].astype(&quot;category&quot;)
-    # re-order categories
-    df['difference_category'] = df['difference_category'].cat.set_categories(categories, ordered=True)
-    
-    
-    # assign back to our dataframe
-    platform_df[platformName] = df
-</code></pre>
-<pre><code class="language-python"># take a look after our new columns added
-platform_df['ps4']
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># categories names and their corresponding intervals</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># category at location x corresponds to interval equal or greater than intervals location x and less than location x + 1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># except for last category, has no end</span>
+</span></span><span class="line"><span class="cl"><span class="n">categories</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&#34;low&#34;</span><span class="p">,</span> <span class="s2">&#34;moderate&#34;</span><span class="p">,</span> <span class="s2">&#34;high&#34;</span><span class="p">,</span> <span class="s2">&#34;very_high&#34;</span><span class="p">,</span> <span class="s2">&#34;extremely_high&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">intervals_categories</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># compute categories as defined earlier</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># loop on platforms</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">platformName</span> <span class="ow">in</span> <span class="n">platform_df</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get dataframe of the platform</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># add category based on difference just defined</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference_category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">discIntCat</span><span class="o">.</span><span class="n">numToCat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="p">,</span> <span class="n">intervals_categories</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># let categories be recognized by pandas</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference_category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference_category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&#34;category&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># re-order categories</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference_category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference_category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">set_categories</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># assign back to our dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># take a look after our new columns added</span>
+</span></span><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1418,24 +1408,22 @@ platform_df['ps4']
 <p>310 rows × 5 columns</p>
 </div>
 <h3 id="sort-according-to-disparity-between-users-and-critics">Sort According to Disparity Between Users and Critics</h3>
-<pre><code class="language-python"># for each platform
-for platformName in platform_df:
-    # get platform dataframe
-    df = platform_df[platformName]
-    # sort it by userCritic_difference
-    df = df.sort_values(axis=0, by='userCritic_difference', ascending=False)
-    # assign sorted dataframe back to our dataframe
-    platform_df[platformName] = df
-</code></pre>
-<h3 id="basic-stats-on-disparity-between-users-and-critics">Basic Stats on Disparity Between Users and Critics</h3>
-<pre><code class="language-python"># for each platform
-for platformName in platform_df:
-    # print platform name
-    print(&quot;\n&quot;, &quot;on &quot;, platformName)
-    # show basic stat
-    print(platform_df[platformName]['userCritic_difference'].describe())
-</code></pre>
-<pre><code> on  ps4
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">platformName</span> <span class="ow">in</span> <span class="n">platform_df</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># get platform dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># sort it by userCritic_difference</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># assign sorted dataframe back to our dataframe</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+</span></span></code></pre></div><h3 id="basic-stats-on-disparity-between-users-and-critics">Basic Stats on Disparity Between Users and Critics</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># for each platform</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">platformName</span> <span class="ow">in</span> <span class="n">platform_df</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># print platform name</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="s2">&#34;on &#34;</span><span class="p">,</span> <span class="n">platformName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># show basic stat</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code> on  ps4
 count    310.000000
 mean      15.893548
 std       13.074530
@@ -1482,11 +1470,9 @@ Name: userCritic_difference, dtype: float64
 <hr>
 <h2 id="categories-size">Categories Size</h2>
 <h3 id="platform-x-category-2d-sizes-dataframe">Platform x Category 2D Sizes Dataframe</h3>
-<pre><code class="language-python">platform_category_size = transform.map_columnCount(platform_df, 'difference_category')
-</code></pre>
-<pre><code class="language-python">platform_category_size
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_category_size</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">map_columnCount</span><span class="p">(</span><span class="n">platform_df</span><span class="p">,</span> <span class="s1">&#39;difference_category&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_category_size</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1548,11 +1534,9 @@ Name: userCritic_difference, dtype: float64
 </table>
 </div>
 <h3 id="category-x-platform-2d-sizes-dataframe">Category x Platform 2D Sizes Dataframe</h3>
-<pre><code class="language-python">category_platform_size = platform_category_size.transpose()
-</code></pre>
-<pre><code class="language-python">category_platform_size
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">category_platform_size</span> <span class="o">=</span> <span class="n">platform_category_size</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">category_platform_size</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1622,19 +1606,17 @@ Name: userCritic_difference, dtype: float64
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">category_platform_size.loc['low', 'ps4']
-</code></pre>
-<pre><code>211
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">category_platform_size</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;ps4&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><pre><code>211
 </code></pre>
 <hr>
 <h2 id="graphing-disparity-between-users-and-critics">Graphing Disparity Between Users and Critics</h2>
 <h3 id="pie-graph">Pie Graph</h3>
-<pre><code class="language-python">for columnName in category_platform_size:
-    platSeries = category_platform_size[columnName]
-    platName = platSeries.name
-    pieGraph.showPieGraph(platSeries, platName + ' categories percentages', 6, 6)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">columnName</span> <span class="ow">in</span> <span class="n">category_platform_size</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platSeries</span> <span class="o">=</span> <span class="n">category_platform_size</span><span class="p">[</span><span class="n">columnName</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">platName</span> <span class="o">=</span> <span class="n">platSeries</span><span class="o">.</span><span class="n">name</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pieGraph</span><span class="o">.</span><span class="n">showPieGraph</span><span class="p">(</span><span class="n">platSeries</span><span class="p">,</span> <span class="n">platName</span> <span class="o">+</span> <span class="s1">&#39; categories percentages&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -1719,9 +1701,8 @@ Name: userCritic_difference, dtype: float64
   </div></figure>
 </p>
 <h3 id="grouped-bar">Grouped Bar</h3>
-<pre><code class="language-python">groupedBarsGraph.showGroupedBars(platform_category_size, platformsNames, 'categories size', 'categories size by platform')
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">groupedBarsGraph</span><span class="o">.</span><span class="n">showGroupedBars</span><span class="p">(</span><span class="n">platform_category_size</span><span class="p">,</span> <span class="n">platformsNames</span><span class="p">,</span> <span class="s1">&#39;categories size&#39;</span><span class="p">,</span> <span class="s1">&#39;categories size by platform&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -1743,9 +1724,8 @@ Name: userCritic_difference, dtype: float64
   </div></figure>
 </p>
 <h3 id="categorical-heatmap">Categorical Heatmap</h3>
-<pre><code class="language-python">categoricalHeatmapGraph.showCategoricalHeatmap(8, 8, category_platform_size, &quot;categories sizes among platforms&quot;)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">categoricalHeatmapGraph</span><span class="o">.</span><span class="n">showCategoricalHeatmap</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">category_platform_size</span><span class="p">,</span> <span class="s2">&#34;categories sizes among platforms&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -1767,9 +1747,8 @@ Name: userCritic_difference, dtype: float64
   </div></figure>
 </p>
 <h3 id="maximum-disparity-between-users-and-critics-ratings">Maximum Disparity Between Users and Critics Ratings</h3>
-<pre><code class="language-python">platform_df['ps4'].head(20)
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1958,9 +1937,8 @@ Name: userCritic_difference, dtype: float64
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">platform_df['xbox'].head(20)
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;xbox&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2149,9 +2127,8 @@ Name: userCritic_difference, dtype: float64
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">platform_df['pc'].head(20)
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;pc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2340,9 +2317,8 @@ Name: userCritic_difference, dtype: float64
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">platform_df['switch'].head(20)
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;switch&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2531,18 +2507,17 @@ Name: userCritic_difference, dtype: float64
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">def searchforTitleInPlatform(platformStr_in, game_in):
-    tem_df = platform_df[platformStr_in][platform_df[platformStr_in]['title'] == game_in]
-    if len(tem_df) == 1:
-        return tem_df.iloc[0]
-    elif len(tem_df) == 0:
-        return -1
-    else:
-        raise ValueError(&quot;unexpected no of games found&quot;)
-        
-searchforTitleInPlatform('xbox', &quot;hitman hd enhanced collection&quot;)
-</code></pre>
-<pre><code>title                    hitman hd enhanced collection
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">searchforTitleInPlatform</span><span class="p">(</span><span class="n">platformStr_in</span><span class="p">,</span> <span class="n">game_in</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tem_df</span> <span class="o">=</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformStr_in</span><span class="p">][</span><span class="n">platform_df</span><span class="p">[</span><span class="n">platformStr_in</span><span class="p">][</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">game_in</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tem_df</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tem_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">tem_df</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&#34;unexpected no of games found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"><span class="n">searchforTitleInPlatform</span><span class="p">(</span><span class="s1">&#39;xbox&#39;</span><span class="p">,</span> <span class="s2">&#34;hitman hd enhanced collection&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>title                    hitman hd enhanced collection
 user_rating                                         46
 critic_rating                                       66
 userCritic_difference                               20
@@ -2550,9 +2525,8 @@ difference_category                           moderate
 Name: 187, dtype: object
 </code></pre>
 <h3 id="minimum-disparity-between-users-and-critics">Minimum Disparity Between Users and Critics</h3>
-<pre><code class="language-python">platform_df['ps4'].tail(20)
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2742,12 +2716,11 @@ Name: 187, dtype: object
 </table>
 </div>
 <h3 id="games-which-got-higher-ratings-from-users-than-from-critics">Games Which Got Higher Ratings From Users Than From Critics</h3>
-<pre><code class="language-python">def higherUserRatings(platform_in):
-    return platform_df[platform_in][platform_df[platform_in]['user_rating'] &gt; platform_df[platform_in]['critic_rating']].head(10)
-    
-higherUserRatings('pc')
-</code></pre>
-<div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">higherUserRatings</span><span class="p">(</span><span class="n">platform_in</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platform_in</span><span class="p">][</span><span class="n">platform_df</span><span class="p">[</span><span class="n">platform_in</span><span class="p">][</span><span class="s1">&#39;user_rating&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platform_in</span><span class="p">][</span><span class="s1">&#39;critic_rating&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">higherUserRatings</span><span class="p">(</span><span class="s1">&#39;pc&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2868,11 +2841,10 @@ higherUserRatings('pc')
 <h2 id="a-single-permutation-shuffle-based-trial-with-histogram--probability-density-function">A Single Permutation Shuffle Based Trial With Histogram &amp; Probability Density Function</h2>
 <p>We compare platforms distributions through permutation-test. It is a more systematic approach than relying upon intuition of visualizing and comparing distributions. Given two platforms, We concatenate them into one group. That group&rsquo;s elements are randomly shuffled. Then we divide the group into new two groups. We compare the two distributions of the new two groups and assess whether the insight is still present as in the case of the two original groups of platforms. If the insight is not present in the two new groups, then that would count an evidence on behalf of our hypothesis. That is, The insight (difference in distribution) of original distributions is attributed to the two platforms. In addition, We consider average a p-value of a distribution and utilize it in our test. In Next section, We apply this method iteratively.</p>
 <h3 id="ensure-series-data-are-ascendingly-ordered">Ensure Series Data are Ascendingly Ordered</h3>
-<pre><code class="language-python">print(platform_df['ps4']['userCritic_difference'])
-print(&quot;&quot;)
-print(platform_df['switch']['userCritic_difference'])
-</code></pre>
-<pre><code>93     69.0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;switch&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">])</span>
+</span></span></code></pre></div><pre><code>93     69.0
 82     68.0
 116    60.0
 79     52.0
@@ -2899,9 +2871,8 @@ Name: userCritic_difference, Length: 310, dtype: float64
 Name: userCritic_difference, Length: 364, dtype: float64
 </code></pre>
 <h3 id="ps4-distribution">PS4 Distribution</h3>
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['ps4']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'ps4', 10, 8)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">histogramPdfGraph</span><span class="o">.</span><span class="n">showHistPdf</span><span class="p">(</span><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">],</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;#e3e2e2&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;disparity&#39;</span><span class="p">,</span> <span class="s1">&#39;ps4&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -2923,14 +2894,12 @@ Name: userCritic_difference, Length: 364, dtype: float64
   </div></figure>
 </p>
 <h3 id="average-of-ps4s-disparity">Average of PS4&rsquo;s Disparity</h3>
-<pre><code class="language-python">platform_df['ps4']['userCritic_difference'].mean()
-</code></pre>
-<pre><code>15.893548387096773
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>15.893548387096773
 </code></pre>
 <h3 id="switch-distribution">Switch Distribution</h3>
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(platform_df['switch']['userCritic_difference'], 30, '#e3e2e2', 'black', 'disparity', 'switch', 10, 8)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">histogramPdfGraph</span><span class="o">.</span><span class="n">showHistPdf</span><span class="p">(</span><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;switch&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">],</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;#e3e2e2&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;disparity&#39;</span><span class="p">,</span> <span class="s1">&#39;switch&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -2952,9 +2921,8 @@ Name: userCritic_difference, Length: 364, dtype: float64
   </div></figure>
 </p>
 <h3 id="average-of-switch-disparity">Average of Switch Disparity</h3>
-<pre><code class="language-python">platform_df['switch']['userCritic_difference'].mean()
-</code></pre>
-<pre><code>6.876373626373627
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;switch&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>6.876373626373627
 </code></pre>
 <h3 id="conclusion">Conclusion</h3>
 <ul>
@@ -2962,20 +2930,17 @@ Name: userCritic_difference, Length: 364, dtype: float64
 <li>The difference between <em>ps4</em> and <em>switch</em> means is about 9</li>
 </ul>
 <h3 id="concatenate-both-ps4-and-switch">Concatenate Both PS4 and Switch</h3>
-<pre><code class="language-python">bothGroups = pd.concat([platform_df['switch']['userCritic_difference'], platform_df['ps4']['userCritic_difference']])
-</code></pre>
-<h3 id="shuffle-and-divide">Shuffle and Divide</h3>
-<pre><code class="language-python"># permutation based shuffling
-rng = np.random.default_rng()
-bothGroups = rng.permutation(bothGroups)
-# divide into two groups
-firstGroup = bothGroups[:int(len(bothGroups)/2)]
-secondGroup = bothGroups[int(len(bothGroups)/2):]
-</code></pre>
-<h3 id="first-group-distribution">First Group Distribution</h3>
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(firstGroup, 30, '#e3e2e2', 'black', 'disparity', 'first group', 10, 8)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bothGroups</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;switch&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">],</span> <span class="n">platform_df</span><span class="p">[</span><span class="s1">&#39;ps4&#39;</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">]])</span>
+</span></span></code></pre></div><h3 id="shuffle-and-divide">Shuffle and Divide</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># permutation based shuffling</span>
+</span></span><span class="line"><span class="cl"><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">bothGroups</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">bothGroups</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># divide into two groups</span>
+</span></span><span class="line"><span class="cl"><span class="n">firstGroup</span> <span class="o">=</span> <span class="n">bothGroups</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bothGroups</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">secondGroup</span> <span class="o">=</span> <span class="n">bothGroups</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bothGroups</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
+</span></span></code></pre></div><h3 id="first-group-distribution">First Group Distribution</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">histogramPdfGraph</span><span class="o">.</span><span class="n">showHistPdf</span><span class="p">(</span><span class="n">firstGroup</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;#e3e2e2&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;disparity&#39;</span><span class="p">,</span> <span class="s1">&#39;first group&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -2997,14 +2962,12 @@ secondGroup = bothGroups[int(len(bothGroups)/2):]
   </div></figure>
 </p>
 <h3 id="first-group-average">First Group Average</h3>
-<pre><code class="language-python">firstGroup.mean()
-</code></pre>
-<pre><code>11.0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">firstGroup</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>11.0
 </code></pre>
 <h3 id="second-group-distribution">Second Group Distribution</h3>
-<pre><code class="language-python">histogramPdfGraph.showHistPdf(secondGroup, 30, '#e3e2e2', 'black', 'disparity', 'second group', 10, 8)
-</code></pre>
-<p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">histogramPdfGraph</span><span class="o">.</span><span class="n">showHistPdf</span><span class="p">(</span><span class="n">secondGroup</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;#e3e2e2&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;disparity&#39;</span><span class="p">,</span> <span class="s1">&#39;second group&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span></code></pre></div><p>
 
 
 
@@ -3026,9 +2989,8 @@ secondGroup = bothGroups[int(len(bothGroups)/2):]
   </div></figure>
 </p>
 <h3 id="second-group-average">Second Group Average</h3>
-<pre><code class="language-python">secondGroup.mean()
-</code></pre>
-<pre><code>11.047477744807122
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">secondGroup</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>11.047477744807122
 </code></pre>
 <h3 id="conclusion-1">Conclusion</h3>
 <ul>
@@ -3038,24 +3000,22 @@ secondGroup = bothGroups[int(len(bothGroups)/2):]
 <hr>
 <h2 id="permutation-test-and-p-value-based-statistical-significance">Permutation Test and P-Value Based Statistical Significance</h2>
 <p>We apply the above method iteratively. The more tests, The more confident we are of our hypothesis. That is, The pattern of two distributions is attributed to the difference in two platforms.</p>
-<pre><code class="language-python"># computes average of a list
-def avgOfList(list_in):
-    return pd.Series(list_in).mean()
-</code></pre>
-<pre><code class="language-python"># loop on pairs of platforms
-for idx, platformName in enumerate(platformsNames):
-    for idx_, platformName_ in enumerate(platformsNames):
-        # compare only unique pairs
-        if idx_ &gt; idx:
-            # print pairs of platforms which are compared
-            print(platformName, platformName_)
-            # apply test for 25 iterations on first and second platforms of the nested loop
-            testResults = permTest.permutationTest(25, platform_df[platformName]['userCritic_difference'], platform_df[platformName_]['userCritic_difference'])
-            # print results average
-            print(avgOfList(testResults))
-            print(&quot;&quot;)
-</code></pre>
-<pre><code>ps4 xbox
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># computes average of a list</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">avgOfList</span><span class="p">(</span><span class="n">list_in</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">list_in</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># loop on pairs of platforms</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">platformName</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">platformsNames</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">idx_</span><span class="p">,</span> <span class="n">platformName_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">platformsNames</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># compare only unique pairs</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">idx_</span> <span class="o">&gt;</span> <span class="n">idx</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># print pairs of platforms which are compared</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">platformName</span><span class="p">,</span> <span class="n">platformName_</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># apply test for 25 iterations on first and second platforms of the nested loop</span>
+</span></span><span class="line"><span class="cl">            <span class="n">testResults</span> <span class="o">=</span> <span class="n">permTest</span><span class="o">.</span><span class="n">permutationTest</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">],</span> <span class="n">platform_df</span><span class="p">[</span><span class="n">platformName_</span><span class="p">][</span><span class="s1">&#39;userCritic_difference&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># print results average</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">avgOfList</span><span class="p">(</span><span class="n">testResults</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>ps4 xbox
 0.6639999999999998
 
 ps4 switch
@@ -3101,142 +3061,6 @@ switch pc
   </ul>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <a href="https://mostafatouny.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/mostafa-touny/avatar_hudd54214bfd99d38ea46f42c72f0cfc91_878326_270x270_fill_q75_lanczos_center.jpg" alt="Mostafa Touny"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://mostafatouny.github.io/">Mostafa Touny</a></h5>
-      <h6 class="card-subtitle">TA/RA at MSA</h6>
-      
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener">
-        <i class="ai ai-cv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://twitter.com/Mostafa_Touny" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.reddit.com/user/xTouny" target="_blank" rel="noopener">
-        <i class="fab fa-reddit"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
 
 
 
@@ -3312,7 +3136,7 @@ switch pc
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -3324,7 +3148,7 @@ switch pc
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
 
 
 
@@ -3335,6 +3159,16 @@ switch pc
   
 
   
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3368,7 +3202,6 @@ switch pc
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
-
   <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
@@ -3380,7 +3213,7 @@ switch pc
 
 
 
-<script src="/en/js/wowchemy.min.e250aa98ea6f87c6f943e9e06909f6ca.js"></script>
+<script src="/en/js/wowchemy.min.57af632a84a05835124f04e4f75dcd29.js"></script>
 
 
 
