@@ -1,0 +1,101 @@
+,order_id,user_id,order_number,order_dow,order_hour_of_day,days_since_prior_order,product_id,add_to_cart_order,reordered,department_id,department,product_name
+11530,1420904,57939,36,6,16,5.0,31,9,0,7,beverages,refrigerated
+497823,1539623,137850,10,6,9,9.0,69,5,1,15,canned goods,soup broth bouillon
+1872253,1039940,172148,3,0,17,30.0,86,2,1,16,dairy eggs,eggs
+1955128,2611664,148080,3,6,17,13.0,21,11,1,16,dairy eggs,packaged cheese
+1851317,2705945,82371,4,5,9,6.0,70,2,0,11,personal care,digestion
+509968,2904314,128627,33,1,12,5.0,88,4,1,13,pantry,spreads
+1097777,2360511,173048,6,0,16,7.0,120,8,0,16,dairy eggs,yogurt
+1488899,633207,90840,4,2,14,9.0,116,5,1,1,frozen,frozen produce
+118683,3285683,178906,23,2,13,3.0,99,2,1,15,canned goods,canned fruit applesauce
+1903846,3073780,144842,21,0,0,5.0,84,3,0,16,dairy eggs,milk
+1209497,285176,150265,33,0,15,2.0,120,3,1,16,dairy eggs,yogurt
+40737,1257031,37507,8,0,16,18.0,37,4,1,1,frozen,ice cream ice
+1388321,1892269,135708,55,0,11,10.0,37,4,0,1,frozen,ice cream ice
+148604,26079,32582,68,4,16,4.0,24,6,1,4,produce,fresh fruits
+1793930,2395867,73700,35,3,12,11.0,120,8,1,16,dairy eggs,yogurt
+1435375,3187542,78321,45,5,17,2.0,31,1,1,7,beverages,refrigerated
+279228,1938361,162007,27,0,9,7.0,85,8,1,17,household,food storage
+1432079,2271822,171158,12,0,11,3.0,69,5,1,15,canned goods,soup broth bouillon
+1951479,2921903,128379,20,3,17,28.0,40,6,0,8,pets,dog food care
+932726,1019778,40000,1,0,14,,24,7,0,4,produce,fresh fruits
+1874814,583199,59119,6,0,19,27.0,66,8,1,6,international,asian foods
+1375303,2564473,193731,20,5,6,11.0,24,5,1,4,produce,fresh fruits
+910480,2411570,4062,2,3,12,21.0,21,10,0,16,dairy eggs,packaged cheese
+1009710,1390212,8253,8,3,14,30.0,83,21,0,4,produce,fresh vegetables
+1194681,2544871,181687,13,3,14,30.0,77,1,1,7,beverages,soft drinks
+1593514,1490048,153525,5,0,15,7.0,16,4,1,4,produce,fresh herbs
+1095574,1149515,122878,17,1,8,30.0,127,2,0,11,personal care,body lotions soap
+893405,937856,98798,19,5,0,8.0,83,9,0,4,produce,fresh vegetables
+70820,1352855,26630,12,4,11,30.0,106,27,0,12,meat seafood,hot dogs bacon sausage
+1144140,117657,26961,21,6,13,7.0,30,3,1,6,international,latino foods
+1938012,58826,196474,12,3,14,3.0,120,8,1,16,dairy eggs,yogurt
+493685,1436930,45897,26,5,13,9.0,121,7,1,14,breakfast,cereal
+1416159,50711,171718,15,5,6,10.0,91,3,1,16,dairy eggs,soy lactosefree
+1259934,918823,103508,63,4,9,2.0,81,3,1,15,canned goods,canned jarred vegetables
+323039,1159872,120908,1,5,14,,38,2,0,1,frozen,frozen meals
+730843,2255552,140400,2,5,9,5.0,116,5,0,1,frozen,frozen produce
+1076597,1114672,15093,10,5,15,16.0,24,21,1,4,produce,fresh fruits
+754804,59793,71885,23,5,17,16.0,115,12,1,7,beverages,water seltzer sparkling water
+921203,1187210,153167,2,1,16,30.0,84,3,1,16,dairy eggs,milk
+1427075,2224676,132372,38,1,11,2.0,128,17,0,3,bakery,tortillas flat bread
+1559080,2150741,199953,1,3,22,,121,1,0,14,breakfast,cereal
+225580,293169,19848,47,3,10,2.0,72,68,0,13,pantry,condiments
+1221253,2845956,7612,19,1,15,12.0,108,8,0,16,dairy eggs,other creams cheeses
+532125,2043752,57009,27,4,14,5.0,24,4,1,4,produce,fresh fruits
+1928844,1839706,176182,1,6,10,,17,3,0,13,pantry,baking ingredients
+520528,1262942,183638,13,6,20,10.0,117,8,1,19,snacks,nuts seeds dried fruit
+656538,2261391,177234,38,5,16,5.0,24,10,0,4,produce,fresh fruits
+1920969,3104374,21999,28,3,12,1.0,45,7,0,19,snacks,candy chocolate
+1998107,3172659,70508,20,6,9,13.0,24,1,1,4,produce,fresh fruits
+808251,3209632,69937,12,6,11,7.0,123,3,1,4,produce,packaged vegetables fruits
+808906,1192433,52934,8,6,18,17.0,120,10,0,16,dairy eggs,yogurt
+180513,2161952,169542,10,3,13,24.0,21,2,0,16,dairy eggs,packaged cheese
+1176710,490967,18314,15,6,19,30.0,120,3,1,16,dairy eggs,yogurt
+983790,2302521,62303,3,5,12,30.0,121,4,1,14,breakfast,cereal
+1929708,705052,26554,22,1,13,12.0,24,7,1,4,produce,fresh fruits
+661164,603632,64659,3,2,14,30.0,86,5,1,16,dairy eggs,eggs
+1266275,2332152,82670,15,1,11,3.0,31,3,1,7,beverages,refrigerated
+1549017,324423,104931,20,6,9,12.0,69,12,1,15,canned goods,soup broth bouillon
+1640858,1030472,187486,1,1,18,,24,2,0,4,produce,fresh fruits
+809512,901779,59827,28,6,19,4.0,24,8,1,4,produce,fresh fruits
+1651504,2952535,7216,4,6,14,14.0,13,12,0,20,deli,prepared meals
+1691469,2236650,36471,66,2,17,3.0,129,4,0,1,frozen,frozen appetizers sides
+689772,3129140,73135,6,6,8,19.0,123,12,1,4,produce,packaged vegetables fruits
+1423424,741862,26493,2,0,13,30.0,83,17,0,4,produce,fresh vegetables
+915909,2577823,203372,14,0,9,21.0,107,8,1,19,snacks,chips pretzels
+1392338,3291538,126765,3,0,16,24.0,84,3,1,16,dairy eggs,milk
+1372508,2325989,81358,28,0,15,7.0,4,6,1,9,dry goods pasta,instant foods
+27717,1164493,162889,11,5,14,21.0,14,5,1,20,deli,tofu meat alternatives
+473265,2873174,38,1,0,10,,115,1,0,7,beverages,water seltzer sparkling water
+1300479,3053614,47808,7,0,14,12.0,86,3,0,16,dairy eggs,eggs
+166324,1504762,16931,26,1,21,0.0,92,1,1,18,babies,baby food formula
+189354,2048844,78189,6,1,16,10.0,24,7,0,4,produce,fresh fruits
+1768677,2798236,147222,23,0,11,12.0,120,2,1,16,dairy eggs,yogurt
+1770496,210449,64382,15,3,16,2.0,59,6,0,15,canned goods,canned meals beans
+1035176,1381966,40656,14,1,13,6.0,128,2,1,3,bakery,tortillas flat bread
+1583838,1159743,125549,7,0,15,15.0,106,5,1,12,meat seafood,hot dogs bacon sausage
+958600,1653650,183949,3,6,10,7.0,124,7,1,5,alcohol,spirits
+64910,218346,112395,1,0,11,,24,11,0,4,produce,fresh fruits
+311460,1710401,10967,10,5,12,7.0,79,7,1,1,frozen,frozen pizza
+72910,2698173,144935,14,5,15,8.0,110,27,0,13,pantry,pickled goods olives
+1401686,1299780,176346,18,2,15,8.0,90,9,0,7,beverages,cocoa drink mixes
+491710,1073664,164907,2,4,23,3.0,21,13,0,16,dairy eggs,packaged cheese
+1955873,1351895,52733,4,0,17,30.0,123,2,0,4,produce,packaged vegetables fruits
+1454958,1580091,69834,6,4,15,5.0,64,2,1,7,beverages,energy sports drinks
+872388,769717,150097,9,3,12,18.0,94,26,0,7,beverages,tea
+1246872,829226,55435,4,0,16,30.0,123,7,1,4,produce,packaged vegetables fruits
+1835246,2938998,70704,19,2,14,11.0,24,8,1,4,produce,fresh fruits
+726154,547832,200245,49,1,6,12.0,130,1,1,14,breakfast,hot cereal pancake mixes
+29736,1267453,52232,24,6,14,14.0,83,18,1,4,produce,fresh vegetables
+1319992,1708495,56889,25,6,13,13.0,87,16,0,17,household,more household
+1999509,1228379,58213,17,1,17,5.0,78,4,1,19,snacks,crackers
+568218,206079,76524,8,4,19,18.0,123,12,1,4,produce,packaged vegetables fruits
+231058,2592913,104988,10,4,11,30.0,116,10,0,1,frozen,frozen produce
+431922,374963,17320,4,5,12,10.0,54,15,0,17,household,paper goods
+660961,2045826,24195,29,0,19,13.0,123,11,1,4,produce,packaged vegetables fruits
+103251,3349652,33585,9,1,23,4.0,83,2,1,4,produce,fresh vegetables
+540646,2913968,44935,20,6,13,11.0,112,9,1,3,bakery,bread
+893874,3303752,34112,5,0,19,9.0,106,2,1,12,meat seafood,hot dogs bacon sausage
+427489,1598894,161428,6,1,17,30.0,24,2,1,4,produce,fresh fruits
+279400,693776,126091,16,0,21,7.0,24,1,1,4,produce,fresh fruits

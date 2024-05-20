@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mostafatouny.github.io/post/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/msa-math-lab/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://mostafatouny.github.io/</loc>
     <lastmod>2024-03-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,10 +40,6 @@
   </url><url>
     <loc>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</loc>
     <lastmod>2024-01-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/henry-linear-post/ch03-sec02/</loc>
