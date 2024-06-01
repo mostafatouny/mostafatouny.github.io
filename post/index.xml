@@ -5,12 +5,99 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
       <link>https://mostafatouny.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Isabel&#39;s Graph Theory</title>
+      <link>https://mostafatouny.github.io/post/isabel-graph-pset/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/isabel-graph-pset/</guid>
+      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./isabel-notes.pdf&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Book: Harris, Hirst, and Mossinghoff. Combinatorics and Graph Theory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem-set&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;th&gt;Grading&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;Pset-01&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;15/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;Pset-02&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;20/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03.pdf&#34;&gt;Pset-03&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04.pdf&#34;&gt;Pset-04&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05.pdf&#34;&gt;Pset-05&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;15/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06.pdf&#34;&gt;Pset-06&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;7/8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07.pdf&#34;&gt;Pset-07&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08.pdf&#34;&gt;Pset-08&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;18/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset09.pdf&#34;&gt;Pset-09&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset09_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;18/24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset10.pdf&#34;&gt;Pset-10&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset10_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset11.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset11_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset12.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Math with Application at MSA Uni.</title>

@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: June 1, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/post/isabel-graph-pset/" />
+<link rel="canonical" href="https://mostafatouny.github.io/post/isabel-graph-pset/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/post/isabel-graph-pset/featured.jpg" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/post/isabel-graph-pset/" />
+<meta property="og:title" content="Isabel&#39;s Graph Theory | Mostafa Touny" />
+<meta property="og:description" content="A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)" /><meta property="og:image" content="https://mostafatouny.github.io/post/isabel-graph-pset/featured.jpg" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-06-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-06-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mostafatouny.github.io/post/isabel-graph-pset/"
+  },
+  "headline": "Isabel's Graph Theory",
+  
+  "image": [
+    "https://mostafatouny.github.io/post/isabel-graph-pset/featured.jpg"
+  ],
+  
+  "datePublished": "2024-06-01T00:00:00Z",
+  "dateModified": "2024-06-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Mostafa Touny"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mostafa Touny",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Isabel&#39;s Graph Theory | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="f28bb42d53d82d11bd249e1bd27dc82b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+<div class="article-container pt-3">
+  <h1>Isabel&#39;s Graph Theory</h1>
+
+  
+  <p class="page-subtitle">A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 1, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 540px;">
+  <div style="position: relative">
+    <img src="/post/isabel-graph-pset/featured_hu00f3f84f514352f7e174b063829ab56d_178566_e17a27ad0d2ff7c4cb2e4611505bf1c3.webp" width="720" height="540" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="forward">Forward</h2>
+<p>TBD</p>
+<h2 id="materials">Materials</h2>
+<ul>
+<li><a href="./isabel-notes.pdf">Lecture Notes</a></li>
+<li>Book: Harris, Hirst, and Mossinghoff. Combinatorics and Graph Theory.</li>
+</ul>
+<h2 id="problem-set">Problem Set</h2>
+<table>
+<thead>
+<tr>
+<th>Problem-set</th>
+<th>Solution</th>
+<th>Grading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./pset01.pdf">Pset-01</a></td>
+<td><a href="./pset01_sol.pdf">PDF</a></td>
+<td>15/20</td>
+</tr>
+<tr>
+<td><a href="./pset02.pdf">Pset-02</a></td>
+<td><a href="./pset02_sol.pdf">PDF</a></td>
+<td>20/22</td>
+</tr>
+<tr>
+<td><a href="./pset03.pdf">Pset-03</a></td>
+<td><a href="./pset03_sol.pdf">PDF</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./pset04.pdf">Pset-04</a></td>
+<td><a href="./pset04_sol.pdf">PDF</a></td>
+<td>11/20</td>
+</tr>
+<tr>
+<td><a href="./pset05.pdf">Pset-05</a></td>
+<td><a href="./pset05_sol.pdf">PDF</a></td>
+<td>15/22</td>
+</tr>
+<tr>
+<td><a href="./pset06.pdf">Pset-06</a></td>
+<td><a href="./pset06_sol.pdf">PDF</a></td>
+<td>7/8</td>
+</tr>
+<tr>
+<td><a href="./pset07.pdf">Pset-07</a></td>
+<td><a href="./pset07_sol.pdf">PDF</a></td>
+<td>11/20</td>
+</tr>
+<tr>
+<td><a href="./pset08.pdf">Pset-08</a></td>
+<td><a href="./pset08_sol.pdf">PDF</a></td>
+<td>18/22</td>
+</tr>
+<tr>
+<td><a href="./pset09.pdf">Pset-09</a></td>
+<td><a href="./pset09_sol.pdf">PDF</a></td>
+<td>18/24</td>
+</tr>
+<tr>
+<td><a href="./pset10.pdf">Pset-10</a></td>
+<td><a href="./pset10_sol.pdf">PDF</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./pset11.pdf">Pset-11</a></td>
+<td><a href="./pset11_sol.pdf">PDF</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="./pset12.pdf">Pset-11</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.dddc448a63b69628e8b50b98438b6866.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: June 1, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Exercises 1 Any $C_n$ with vertices $\{ v_1, v_2, \dots, v_n \}$ is 3-colorable by $k = \{ 1, 2, 3, 1, 2, 3, 1, \dots \}$.
+Any $C_n$, where $n$ is even, is 2-colorable by $k = \{ 1, 2, 1, 2, 1, \dots \}$." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/isabel-graph-post/pset09/" />
+<link rel="canonical" href="https://mostafatouny.github.io/isabel-graph-post/pset09/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/isabel-graph-post/pset09/" />
+<meta property="og:title" content="Homework 09 | Mostafa Touny" />
+<meta property="og:description" content="Exercises 1 Any $C_n$ with vertices $\{ v_1, v_2, \dots, v_n \}$ is 3-colorable by $k = \{ 1, 2, 3, 1, 2, 3, 1, \dots \}$.
+Any $C_n$, where $n$ is even, is 2-colorable by $k = \{ 1, 2, 1, 2, 1, \dots \}$." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-06-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-06-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Homework 09 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="936f76b6f147c45a66bbc4f5464ea5b0" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Homework 09</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 1, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="exercises" class="unnumbered">Exercises</h2>
+<h3 id="section" class="unnumbered">1</h3>
+<p>Any $C_n$ with vertices $\{ v_1, v_2, \dots, v_n \}$ is <em>3-colorable</em> by $k = \{ 1, 2, 3, 1, 2, 3, 1, \dots \}$.</p>
+<p>Any $C_n$, where $n$ is even, is <em>2-colorable</em> by $k = \{ 1, 2, 1, 2, 1, \dots \}$. Observe $k(v_i) = 1$ if $i$ is odd and $k(v_i) = 2$ if $i$ is even. Particularly $k(v_1) \neq k(v_n)$.</p>
+<h3 id="section-1" class="unnumbered">2</h3>
+<p><strong>Fact 1.</strong> Colouring a graph is equivalent to partitioning it into independent subsets.</p>
+<p><strong>Fact 2.</strong> Since a colouring exists of any graph, It follows there exist independent subsets $P_i$ of $V(G)$ such that $\bigcup P_i = V(G)$, and $P_i \cap P_j = \phi$ for $i \neq j$.</p>
+<p><strong>Fact 3.</strong> $|P_i| \leq \alpha(G)$.</p>
+<p><strong>(a).</strong></p>
+<p>Given a graph, Colour it with $\chi(G)$ colours. By <em>Fact 1</em> there exists equivalent independent subsets $P_1, P_2, \dots, P_{\chi(G)}$. By <em>Fact 3</em> $$|G| = \sum_{i=1}^{\chi(G)} |P_i| \leq \sum_{i=1}^{\chi(G)} \alpha(G) = \chi(G) \cdot \alpha(G) \quad \blacksquare$$</p>
+<p><strong>(b).</strong></p>
+<p>Given a graph $G$ of order $n$, label its vertices by $v_1, v_2, \dots, v_{\alpha(G)}, v_{\alpha(G)+1}, \dots, v_n$.</p>
+<p>We know the greedy algorithm constructs a valid colouring for $G$. So the number of colours will be at least $\chi{G}$.</p>
+<p>By independency, $v_1, v_2, \dots, v_{\alpha(G)}$ counts one colour. It follows $v_{\alpha(G) + 1}, \dots, v_n$ contains at least $\chi_{G} - 1$ vertices to fulfill remaining colours. Therefore
+$$
+|G| = n \geq \alpha(G) + \chi(G) - 1
+$$</p>
+<h3 id="section-2" class="unnumbered">3</h3>
+<p><strong>Fact 4.</strong> For a possibly disconnected graph $G$, $\Delta(G) = \max \{ \Delta(G_i) \mid G_i \text{ is a component in } G \}$, and $\chi(G) = \max \{ \chi(G_i) \mid G_i \text{ is a component in } G \}$.</p>
+<p>The condition is that the graph $G$ contains a component $G_i = C_n$ or $G_i = K_n$ whereby $\Delta(G_i) = \Delta(G)$.</p>
+<p><strong>Sufficient.</strong></p>
+<p><em>Case 1.</em> If the graph contains a component $K_n$ where $\Delta(K_n) = \Delta(G)$, Then $\chi(G) = \chi(K_n)$. To see why, Assume for the sake of contradiction $\chi(G_i) &gt; \chi(K_n)$ for some component $G_i$, Then
+$$
+\chi(G_i) &gt; \chi(K_n) = \Delta(K_n) + 1 = \Delta(G) + 1 \geq \Delta(G_i) + 1
+$$</p>
+<p><em>Case 2.</em> If the graph contains a component $C_n$ for odd $n$ where $2 = \Delta(C_n) = \Delta(G)$ then also $3 = \chi(C_n) = \chi(G)$. To see why, Symmetrically to <em>Case 1</em>, Assuming $\chi(G_i) &gt; \chi(C_n)$ for any component $G_i$ yields $\chi(G_i) &gt; \Delta(G_i) + 1$.</p>
+<p>Now for both <em>Case 1</em> and <em>Case 2</em>, By <em>Brooke</em> we know the bound is sharp for component $K_n$ and $C_n$. That implies it is sharp for the whole graph also. For example $\chi(K_n) = \Delta(K_n) + 1$ implies $\chi(G) = \Delta(G) + 1$.</p>
+<p><strong>Necessary.</strong></p>
+<p>We show the contrapositive. Assume for any component $G_i$, If $\Delta(G_i) = \Delta(G)$ then neither $G_i = K_n$ nor $G_i = C_n$. By <em>Brooke</em>
+$$
+\chi(G_i) &lt; \Delta(G_i) + 1 = \Delta(G) + 1 \quad (1)
+$$
+For components $G_j$ where $\Delta(G_j) &lt; \Delta(G)$, We get
+$$
+\chi(G_j) \leq \Delta(G_j) + 1 &lt; \Delta(G) + 1 \quad (2) \
+$$
+From $(1)$ and $(2)$, It follows $\chi(G) &lt; \Delta(G) + 1$, i.e the bound is not sharp. $\blacksquare$</p>
+<h3 id="section-3" class="unnumbered">4</h3>
+<p>We reduce the problem to graph colouring as follows:</p>
+<ul>
+<li>Vertices of the graph are the committees.</li>
+<li>Two distinct committees $C_i$ and $C_j$ are connected if and only if some member is in both of them.</li>
+<li>Number of meetings is the number of colours.</li>
+</ul>
+<p>The resulting graph is</p>
+<img src=./committee.jpg width=600>
+<p>So 3 meetings are needed.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.dddc448a63b69628e8b50b98438b6866.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: June 1, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Exercises Lemma 1.
+If a graph is a subdivision of $K_{3,3}$, then it contains $3$ vertices of $deg$ $3$. If a graph is a subdivision of $K_5$, then it contains $5$ vertices of $deg$ $4$." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/isabel-graph-post/pset08/" />
+<link rel="canonical" href="https://mostafatouny.github.io/isabel-graph-post/pset08/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/isabel-graph-post/pset08/" />
+<meta property="og:title" content="Homework 08 | Mostafa Touny" />
+<meta property="og:description" content="Exercises Lemma 1.
+If a graph is a subdivision of $K_{3,3}$, then it contains $3$ vertices of $deg$ $3$. If a graph is a subdivision of $K_5$, then it contains $5$ vertices of $deg$ $4$." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-06-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-06-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Homework 08 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="66b60d988fd2ef7cb5d8f7c5dab85ece" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Homework 08</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 1, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="exercises" class="unnumbered">Exercises</h2>
+<p><strong>Lemma 1.</strong></p>
+<ul>
+<li>If a graph is a subdivision of $K_{3,3}$, then it contains $3$ vertices of $deg$ $3$.</li>
+<li>If a graph is a subdivision of $K_5$, then it contains $5$ vertices of $deg$ $4$.</li>
+</ul>
+<p><strong>Corollary 2.</strong> If a graph neither has a subgraph with $3$ vertices of
+$deg$ $3$, nor a subgraph with $5$ vertices of $deg$ $4$, Then it is
+planar.</p>
+<h3 id="section" class="unnumbered">1</h3>
+<p><strong>(1).</strong> $K_{r,s}$ is not planar $\leftrightarrow$ $r \geq 3$ and $s \geq 3$.</p>
+<p>$(\leftarrow).$ Clear as $K_{r,s}$ shall contain $K_{3,3}$ as a subgraph.</p>
+<p>$(\rightarrow).$ We show the contrapositive. Given $r &lt; 3$ or $s &lt; 3$, The premise of <em>Corollary 2</em> is clearly satisfied, and hence $K_{r,s}$ is planar.</p>
+<p><strong>(2).</strong> $K_{r_1, r_2, \dots, r_k}$ is not planar $\leftrightarrow$ there are consecutive $r_i \geq 3$ and $r_{i+1} \geq 3$.</p>
+<p>Similar to <em>(1)</em>.</p>
+<h3 id="section-1" class="unnumbered">2</h3>
+<p><strong>(a).</strong></p>
+<p>$(\leftarrow)$ Trivial as by definition $\bigg \{ \{x,y\}, \{y,z\} \bigg \}$ is a subdivision of $\bigg \{ \{x,z\} \bigg \}$, resulting in graph $G$ from $H$.</p>
+<p><strong>Fact 3.</strong> For any new vertices $a$ and $b$ resulting from subdivisions, incident to existing vertices $x$ and $z$ respectively, $a \neq b$, prohibiting $\bigg \{ \{x,a\}, \{a,z\} \bigg \}$.</p>
+<p><strong>Fact 4.</strong> Newly added edges from subdivisions are incident to a newly added vertex and to an existing vertex.</p>
+<p>$(\rightarrow)$. We are given $G$ is a subdivision of $H$. Call the sequence of subdivisions $S_1, S_2, \dots, S_k$, and the corresponding graphs $G_0, G_1, \dots, G_k$, whereby $G_0 = H$ and $G_k = G$.</p>
+<p>Necessarily some $S_i$ is on edge $\{xz\}$. Otherwise by <em>Fact 3</em> we won&rsquo;t have $\bigg \{ \{x,y\}, \{y,z\} \bigg \}$ in $G$. Clearly a subdivision on $\{xz\}$ is unique, Call it $S_m$.</p>
+<p>By <em>Fact 4</em> a newly added edge cannot be incident to two existing vertices. It follows edge $\{ xz \}$ is not in any $G_j$ for $j \geq m$. In particular $G_k = G$ has no edge $\{ xz \}$. $\blacksquare$</p>
+<p><strong>(b).</strong></p>
+<p>Given a graph $G_i$, If $\{xy\}, \{yz\} \in E(G_i)$ and $\{xz\} \notin E(G_i)$, Construct $G_{i+1} = G_i - \{xy\} - \{yz\} + \{xz\}$. Now given an arbitrary graph $G$ keep applying this procedure until it can no longer be applied. Since the graph has finite edges, The process terminates. So we get $G_0, G_1, \dots, G_k$ where $G_0 = G$ and $G_{i+1}$ is a subdivision of $G_i$. Set $H = G_k$. Now $H$ is not a proper subdivision of any other graph by <em>(a)</em> $\blacksquare$</p>
+<p><strong>(c).</strong></p>
+<p>Given a graph $H$ is not a subdivision of any other graph, and following the same line of reasoning of <em>(b)</em>, For any $\{xy\}, \{yz\} \in E(H)$, $\{xz\} \in E(H)$. Assuming $H$ is connected,</p>
+<p>Case $\Delta(G) = 0$. Then $G = K_1$.</p>
+<p>Case $\Delta(G) = 1$. Then $G = K_2$.</p>
+<p>Case $\Delta(G) = 2$. Then $G = K_3$, As we must have a vertex of $deg$ $2$, and by hypothesis the endpoints are connected by an edge. The existince of any additional edge shall construct a vertex with $deg$ $3$.</p>
+<p>If $H$ is not connected, Then each of its components are either $K_1$, $K_2$, or $K_3$. $\blacksquare$</p>
+<h3 id="section-2" class="unnumbered">3</h3>
+<p><strong>(a).</strong></p>
+<p>\begin{aligned}
+2m &amp;= \sum deg , v \\
+&amp;= 24 \cdot 3 \\
+m &amp;= 12 \cdot 3 = 36
+\end{aligned}
+\begin{aligned}
+n - m + r &amp;= 2 \\
+12 - 36 + r &amp;= 2 \\
+r &amp;= 26
+\end{aligned}</p>
+<p><strong>(b).</strong> Assume for contradiction $\delta(G) \geq 5$. Then
+$$
+m = \frac{1}{2} \sum deg , v \geq \frac{5}{2} n
+$$</p>
+<p>By <em>theorem 5.15</em>
+$$
+m \leq 3 (n - 2) = 3n - 6
+$$</p>
+<p>It suffices to show $3n - 6 &lt; \frac{5}{2} n$ to obtain a contradiction. Given $n &lt; 12$,
+\begin{aligned}
+n + 5n - 12 &amp;&lt; 12 + 5n - 12 \\
+6n - 12 &amp;&lt; 5n \\
+3n - 6 &amp;&lt; \frac{5}{2} n \quad \blacksquare
+\end{aligned}</p>
+<h3 id="section-3" class="unnumbered">4</h3>
+<p>Not-planar as it contains a subdivision of $K_5$.</p>
+<img src=./non-planar.jpg width=700>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.dddc448a63b69628e8b50b98438b6866.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

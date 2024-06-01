@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: June 1, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08764d393984928e0719bd53b26ed27a.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" disabled>
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" >
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Mostafa Touny" />
+
+
+
+
+
+  
+
+<meta name="description" content="Exercises 1 We prove by strong induction the statement: For any $m \geq 0$, If $G$ is a graph with $m$ edges and $n$ vertices, Then
+$P_G(k) = a_0 &#43; a_1 k^1 &#43; \dots &#43; a_n k^n$, For some polynomial representation." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/isabel-graph-post/pset10/" />
+<link rel="canonical" href="https://mostafatouny.github.io/isabel-graph-post/pset10/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#bbdefb" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mostafa Touny" />
+<meta property="og:url" content="https://mostafatouny.github.io/isabel-graph-post/pset10/" />
+<meta property="og:title" content="Homework 10 | Mostafa Touny" />
+<meta property="og:description" content="Exercises 1 We prove by strong induction the statement: For any $m \geq 0$, If $G$ is a graph with $m$ edges and $n$ vertices, Then
+$P_G(k) = a_0 &#43; a_1 k^1 &#43; \dots &#43; a_n k^n$, For some polynomial representation." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-06-01T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-06-01T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Homework 10 | Mostafa Touny</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="4482020571386a9c23274280f92be33f" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.db21e13b9b5c4f4b947717750ec8b3cc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Mostafa Touny</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/post/"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Homework 10</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 1, 2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="exercises" class="unnumbered">Exercises</h2>
+<h3 id="section" class="unnumbered">1</h3>
+<p>We prove by strong induction the statement: For any $m \geq 0$, If $G$ is a graph with $m$ edges and $n$ vertices, Then</p>
+<ul>
+<li>$P_G(k) = a_0 + a_1 k^1 + \dots + a_n k^n$, For some polynomial representation.</li>
+<li>$a_0 = 0$</li>
+<li>$a_n = 1$</li>
+</ul>
+<p>Base case. $m = 0$. Then $G = E_n$, the empty graph with $n$ vertices. By combinatorics we know $P_G(k) = k^n = 0 + (1) k^n$.</p>
+<p>Induction hypothesis. Assume the statement holds for any graph with at most $m$ edges for $m \geq 0$.</p>
+<p>Induction step. For a graph $G$ with $m+1$ edges and $n$ vertices, Note $G$ has some edge $e$ and the graphs $G-e$ and $G/e$ have at most $m$ edges. By <em>Birkhoff</em> and the <em>induction hypothesis</em>,
+\begin{aligned}
+P_G(k) &amp;= P_{G-e}(k) - P_{G/e}(k) \\
+&amp;= (0 + a_1 k^1 + \dots + (1) k^n) - (0 + a_1&rsquo; k^1 + \dots + (1) k^{n-1}) \\
+&amp;= 0 + (a_1 - a_1&rsquo;) k^1 + \dots + (a_{n-1} - 1) k^{n-1} + (1) k^n \quad \blacksquare
+\end{aligned}</p>
+<h3 id="section-1" class="unnumbered">2</h3>
+<p><strong>(i).</strong> For a maximum matching $M$, if adding an additional edge results in a valid matching, then $M$ won&rsquo;t be maximum. Hence it is maximal.</p>
+<p><strong>(ii).</strong> For a perfect matching $M$ let $k = |M|$. If there were a matching with more than $k$ edges, then that matching shall cover more than $2k$ vertices. That implies the graph contains more than $2k$ vertices, and as a result $M$ does not cover all graph&rsquo;s vertices, so not perfect.</p>
+<p><strong>(iii).</strong> Consider the set $AM = \{ M \mid M \text{ is a matching of } G \}$. Since a matching $M$ is a subgraph, and there are finitely many subgraphs, it follows $AM$ is finite. Moreover it has a maximum edge size matching.</p>
+<p><strong>(iv).</strong> Call the perfect matching $M_0$ and let $k_0 = |M_0|$. By definition it covers all vertices of the graph, and in turn $G$ has exactly $2k_0$ vertices, Concluding $|G|$ is even.</p>
+<p>It suffices to prove, If an arbitrary matching $M$ is not perfect, Then it is not maximum. By definition $M$ covers less than $2k_0$ vertices. Then $M$ has less than $k_0$ edges, So $|M| &lt; |M_0|$. Since $M_0$ is a valid matching, It follows $M$ is not maximum. $\blacksquare$</p>
+<h3 id="section-2" class="unnumbered">3</h3>
+<p><strong>(1).</strong> This is exactly the definition of matching $X$ into $Y$.</p>
+<p><strong>(2).</strong> We reduce it to <em>Hall&rsquo;s Marriage</em>. Let $X = \{ S_i \mid i \in I \}$ and $Y = \bigcup_{i \in I} S_i$. Now the problem of <em>system of distinct representatives</em> is equivalent to matching hall of $X$ into $Y$. In other words, Matching childs injectively to gifts is equivalent to matching $S_i$ to representatives. By <em>Hall&rsquo;s Marriage Theorem</em>, This is possible if and only if $|X| \leq |N(X)|$. However, $|X| = |I|$ and $N(X) = Y$. Therefore <em>system of distinct representatives</em> is possible <em>iff</em> $|I| \leq |\bigcup_{i \in I} S_i|$.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/en/js/wowchemy.min.dddc448a63b69628e8b50b98438b6866.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
