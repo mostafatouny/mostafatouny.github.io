@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/post/</link>
       <atom:link href="https://mostafatouny.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 03 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
@@ -13,157 +13,23 @@
     </image>
     
     <item>
-      <title>Siniora&#39;s Formal Logic</title>
-      <link>https://mostafatouny.github.io/post/siniora-logic-pset/</link>
-      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/siniora-logic-pset/</guid>
-      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;
-&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./lecture-notes.pdf&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Cori &amp;amp; Lascar. Mathematical Logic: A Course with Exercises.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Problem-set&lt;/th&gt;
-&lt;th&gt;Solution&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;Pset-01&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset01_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;Pset-02&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset02_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset03.pdf&#34;&gt;Pset-03&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset03_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset04.pdf&#34;&gt;Pset-04&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset04_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset05.pdf&#34;&gt;Pset-05&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset05_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset06.pdf&#34;&gt;Pset-06&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset07.pdf&#34;&gt;Pset-07&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset07_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset08.pdf&#34;&gt;Pset-08&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset08_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Isabel&#39;s Graph Theory</title>
-      <link>https://mostafatouny.github.io/post/isabel-graph-pset/</link>
-      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/isabel-graph-pset/</guid>
-      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;
-&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;./isabel-notes.pdf&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Book: Harris, Hirst, and Mossinghoff. Combinatorics and Graph Theory.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Problem-set&lt;/th&gt;
-&lt;th&gt;Solution&lt;/th&gt;
-&lt;th&gt;Grading&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;Pset-01&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset01_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;15/20&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;Pset-02&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset02_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;20/22&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset03.pdf&#34;&gt;Pset-03&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset03_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset04.pdf&#34;&gt;Pset-04&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset04_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;11/20&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset05.pdf&#34;&gt;Pset-05&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset05_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;15/22&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset06.pdf&#34;&gt;Pset-06&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;7/8&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset07.pdf&#34;&gt;Pset-07&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset07_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;11/20&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset08.pdf&#34;&gt;Pset-08&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset08_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;18/22&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset09.pdf&#34;&gt;Pset-09&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset09_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;18/24&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset10.pdf&#34;&gt;Pset-10&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset10_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset11.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset11_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;./pset12.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Math with Application at MSA Uni.</title>
       <link>https://mostafatouny.github.io/post/msa-math-lab/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/post/msa-math-lab/</guid>
-      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;
+      <description>&lt;h2 id=&#34;best-student-project&#34;&gt;Best Student Project&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Predictive Population Model By &lt;a href=&#34;https://www.linkedin.com/in/eyad-magdy-819b23303/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eyad Magdy&lt;/a&gt;, A rising freshman (1st year) student.&lt;/li&gt;
+&lt;li&gt;Before completing Programming I, He learned Python, and made a practical project.&lt;/li&gt;
+&lt;li&gt;Before completing Calculus I, He learned partial derivatives and implemented the gradient descent algorithm, to train a linear model.&lt;/li&gt;
+&lt;li&gt;He well explains the case-study motivation, population growth prediction, behind his algorithm and analytics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/eyadXE/population-prediction-model-/tree/main&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github Source Code&lt;/a&gt;, &lt;a href=&#34;https://huggingface.co/spaces/eyad222/apptest2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugging Face Deployed Model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;eyad-1.jpg&#34; width=900&gt;
+&lt;img src=&#34;eyad-2.jpg&#34; width=500&gt;
+&lt;img src=&#34;eyad-3.jpg&#34; width=500&gt;
+&lt;img src=&#34;eyad-4.jpg&#34; width=500&gt;
+&lt;img src=&#34;eyad-5.jpg&#34; width=900&gt;
 &lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Briggs, Cochran, Gillett &amp;amp; Schulz. Calculus for Scientists and Engineers, Early Transcendentals. Pearson.&lt;/li&gt;
@@ -544,6 +410,151 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Week 14&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Siniora&#39;s Formal Logic</title>
+      <link>https://mostafatouny.github.io/post/siniora-logic-pset/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/siniora-logic-pset/</guid>
+      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./lecture-notes.pdf&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cori &amp;amp; Lascar. Mathematical Logic: A Course with Exercises.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem-set&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;Pset-01&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;Pset-02&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03.pdf&#34;&gt;Pset-03&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04.pdf&#34;&gt;Pset-04&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05.pdf&#34;&gt;Pset-05&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06.pdf&#34;&gt;Pset-06&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07.pdf&#34;&gt;Pset-07&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08.pdf&#34;&gt;Pset-08&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Isabel&#39;s Graph Theory</title>
+      <link>https://mostafatouny.github.io/post/isabel-graph-pset/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/isabel-graph-pset/</guid>
+      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./isabel-notes.pdf&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Book: Harris, Hirst, and Mossinghoff. Combinatorics and Graph Theory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem-set&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;th&gt;Grading&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;Pset-01&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;15/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;Pset-02&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;20/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03.pdf&#34;&gt;Pset-03&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset03_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04.pdf&#34;&gt;Pset-04&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset04_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05.pdf&#34;&gt;Pset-05&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset05_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;15/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06.pdf&#34;&gt;Pset-06&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;7/8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07.pdf&#34;&gt;Pset-07&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset07_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;11/20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08.pdf&#34;&gt;Pset-08&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset08_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;18/22&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset09.pdf&#34;&gt;Pset-09&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset09_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;18/24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset10.pdf&#34;&gt;Pset-10&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset10_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset11.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset11_sol.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;./pset12.pdf&#34;&gt;Pset-11&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
