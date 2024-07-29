@@ -98,19 +98,11 @@
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://mostafatouny.github.io/post/henry-linear-pset/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://mostafatouny.github.io/henry-linear-post/ch04-sec05/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/bartle-analysis-post/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/bartle-analysis-pset/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -122,20 +114,12 @@
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://mostafatouny.github.io/post/axler-linear-pset/</loc>
-    <lastmod>2024-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://mostafatouny.github.io/axler-linear-post/ch03-sece/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/vraj-kni-pset/</loc>
-    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</loc>
@@ -178,6 +162,10 @@
     <lastmod>2023-12-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://mostafatouny.github.io/post/siniora-algebra-pset/</loc>
+    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://mostafatouny.github.io/harvey-rand-post/pset01/</loc>
     <lastmod>2023-12-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -195,10 +183,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/harvey-rand-post/</loc>
-    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/harvey-rand-pset/</loc>
     <lastmod>2023-12-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -235,10 +219,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/siniora-algebra-post/pset04/</loc>
-    <lastmod>2023-11-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/post/siniora-algebra-pset/</loc>
     <lastmod>2023-11-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -280,6 +260,10 @@
   </url><url>
     <loc>https://mostafatouny.github.io/rog-adam-post/ch12-sec03/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/harvey-rand-pset/</loc>
+    <lastmod>2023-10-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/rog-adam-post/ch12-sec02/</loc>
@@ -406,8 +390,24 @@
     <lastmod>2023-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://mostafatouny.github.io/post/henry-linear-pset/</loc>
+    <lastmod>2023-01-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://mostafatouny.github.io/mit-analysis1c-post/pset01/</loc>
     <lastmod>2023-01-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/bartle-analysis-pset/</loc>
+    <lastmod>2023-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/axler-linear-pset/</loc>
+    <lastmod>2023-01-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://mostafatouny.github.io/post/vraj-kni-pset/</loc>
+    <lastmod>2023-01-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/post/hobbyist-talk/</loc>

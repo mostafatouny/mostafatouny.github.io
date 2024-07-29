@@ -563,171 +563,101 @@
     </item>
     
     <item>
-      <title>Henry&#39;s Linear Algebra</title>
-      <link>https://mostafatouny.github.io/post/henry-linear-pset/</link>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/henry-linear-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+      <title>Gallian&#39;s Abstract Algebra</title>
+      <link>https://mostafatouny.github.io/post/siniora-algebra-pset/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/siniora-algebra-pset/</guid>
+      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://www.taylorfrancis.com/books/mono/10.1201/b16027/modern-introduction-linear-algebra-henry-ricardo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Henry Ricardo. A Modern Introduction to Linear Algebra. CRC&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/daoudsiniora/lecture-notes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Book: Abstract Algebra by Joseph Gallian, 9th ed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Content&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 03, Section 02&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch03-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch03-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 04, Section 05&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch04-sec05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch04-sec05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bartle &amp; Sherbert&#39;s Real Analysis</title>
-      <link>https://mostafatouny.github.io/post/bartle-analysis-pset/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/bartle-analysis-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://www.wiley.com/en-us/Introduction&amp;#43;to&amp;#43;Real&amp;#43;Analysis%2C&amp;#43;4th&amp;#43;Edition-p-9781119496786&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bartle &amp;amp; Sherbert. Introduction to Real Analysis. Wiley&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Content&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 08, Section 01&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch08-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 10, Section 01&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch10-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Axler&#39;s Linear Algebra</title>
-      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Section&lt;/th&gt;
-&lt;th&gt;Source&lt;/th&gt;
 &lt;th&gt;Solution&lt;/th&gt;
+&lt;th&gt;Grading&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Ch. 03, Sec. E&lt;/td&gt;
-&lt;td&gt;Page 98&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch03-secE_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-sece&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch00&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch00_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset00&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch00_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ch. 03, Sec. F&lt;/td&gt;
-&lt;td&gt;Page 113&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch03-secF_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-secf&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch01_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
-&lt;td&gt;Page 214&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch02_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
-&lt;td&gt;Page 223&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
-      <link>https://mostafatouny.github.io/post/vraj-kni-pset/</link>
-      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/vraj-kni-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-319-09888-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vrajitoru &amp;amp; Knight. Practical Analysis of Algorithms. Springer&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Content&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chapter 02, Section 01&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch02-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch02-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch03&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset03&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Chapter 04, Section 02&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch04-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch04-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch04&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch04_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset04&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch04_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Chapter 06, Section 07&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch06-sec07_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch06-sec07&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Harvey&#39;s Randomized Algorithms</title>
-      <link>https://mostafatouny.github.io/post/harvey-rand-pset/</link>
-      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/harvey-rand-pset/</guid>
-      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Book: &lt;a href=&#34;https://www.cs.ubc.ca/~nickhar/Book1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Volume I. A First Course in Randomized Algorithms by Nick Harvey&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Content&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch 01&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/harvey-rand-post/pset01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch05&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch05_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ch 02&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/harvey-rand-post/pset02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Ch06&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch06_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset06&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch06_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch07&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset07&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch08&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch08_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset08&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch08_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch09&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch09_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset09&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch09_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch10&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset10&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch11&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch11_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset11&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch12&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch12_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset12&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch13&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch13_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset13&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch14&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch14_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset14&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -861,108 +791,6 @@
     </item>
     
     <item>
-      <title>Gallian&#39;s Abstract Algebra</title>
-      <link>https://mostafatouny.github.io/post/siniora-algebra-pset/</link>
-      <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/post/siniora-algebra-pset/</guid>
-      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
-&lt;p&gt;TBD&lt;/p&gt;
-&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/daoudsiniora/lecture-notes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture Notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Book: Abstract Algebra by Joseph Gallian, 9th ed.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chapter&lt;/th&gt;
-&lt;th&gt;Solution&lt;/th&gt;
-&lt;th&gt;Grading&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch00&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch00_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset00&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch00_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch01&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch01_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch02&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch02_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch03&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch03_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset03&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch03_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch04&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch04_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset04&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch04_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch05&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch05_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch06&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch06_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset06&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch06_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch07&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset07&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch07_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch08&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch08_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset08&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch08_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch09&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch09_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset09&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch09_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch10&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch10_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset10&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch10_graded.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch11&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch11_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset11&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch12&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch12_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset12&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch13&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch13_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset13&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ch14&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;./ch14_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/siniora-algebra-post/pset14&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Calculus</title>
       <link>https://mostafatouny.github.io/post/rog-adam-ex/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
@@ -1000,6 +828,37 @@
 &lt;td&gt;Ch. 12, Sec. 03&lt;/td&gt;
 &lt;td&gt;Page 652&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./ch12-sec03_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/rog-adam-post/ch12-sec03&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Harvey&#39;s Randomized Algorithms</title>
+      <link>https://mostafatouny.github.io/post/harvey-rand-pset/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/harvey-rand-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.cs.ubc.ca/~nickhar/Book1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Volume I. A First Course in Randomized Algorithms by Nick Harvey&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset01.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/harvey-rand-post/pset01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch 02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./pset02.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/harvey-rand-post/pset02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1194,6 +1053,147 @@
 &lt;td&gt;P. Set 06&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~odonnell/15455-s17/homework06.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Here&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;./pset06_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/odonnell-undergrad-post/pset06&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Henry&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/post/henry-linear-pset/</link>
+      <pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/henry-linear-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.taylorfrancis.com/books/mono/10.1201/b16027/modern-introduction-linear-algebra-henry-ricardo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Henry Ricardo. A Modern Introduction to Linear Algebra. CRC&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 03, Section 02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch03-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 04, Section 05&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch04-sec05_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/henry-linear-post/ch04-sec05&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bartle &amp; Sherbert&#39;s Real Analysis</title>
+      <link>https://mostafatouny.github.io/post/bartle-analysis-pset/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/bartle-analysis-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://www.wiley.com/en-us/Introduction&amp;#43;to&amp;#43;Real&amp;#43;Analysis%2C&amp;#43;4th&amp;#43;Edition-p-9781119496786&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bartle &amp;amp; Sherbert. Introduction to Real Analysis. Wiley&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 08, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch08-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 10, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch10-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Axler&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/post/axler-linear-pset/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/axler-linear-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: Linear Algebra Done Right by Sheldon Axler, 3rd ed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Section&lt;/th&gt;
+&lt;th&gt;Source&lt;/th&gt;
+&lt;th&gt;Solution&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 03, Sec. E&lt;/td&gt;
+&lt;td&gt;Page 98&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-secE_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-sece&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 03, Sec. F&lt;/td&gt;
+&lt;td&gt;Page 113&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch03-secF_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch03-secf&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. A&lt;/td&gt;
+&lt;td&gt;Page 214&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secA_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-seca&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ch. 07, Sec. B&lt;/td&gt;
+&lt;td&gt;Page 223&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch07-secB_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/axler-linear-post/ch07-secb&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
+      <link>https://mostafatouny.github.io/post/vraj-kni-pset/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/vraj-kni-pset/</guid>
+      <description>&lt;h2 id=&#34;materials&#34;&gt;Materials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Book: &lt;a href=&#34;https://link.springer.com/book/10.1007/978-3-319-09888-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vrajitoru &amp;amp; Knight. Practical Analysis of Algorithms. Springer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;problem-set&#34;&gt;Problem Set&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chapter&lt;/th&gt;
+&lt;th&gt;Content&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 02, Section 01&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch02-sec01_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch02-sec01&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 04, Section 02&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch04-sec02_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch04-sec02&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chapter 06, Section 07&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;./ch06-sec07_sol.pdf&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://mostafatouny.github.io/vraj-kni-post/ch06-sec07&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
