@@ -7,7 +7,7 @@
     <description>Odonnell&#39;s Undergrad Complexity</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Odonnell&#39;s Undergrad Complexity</title>
       <link>https://mostafatouny.github.io/odonnell-undergrad-post/</link>
     </image>
@@ -36,12 +36,12 @@
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_1c70cb697e95da0303a9e289486ff2ee.webp 400w,
-               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_bf484466c77a9128d3e8d6d33dc4bf3f.webp 760w,
-               /odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/odonnell-undergrad-post/pset06/example_hu2c6ab7b1b8480e879a3ed4ec3e8e8c8c_68342_1c70cb697e95da0303a9e289486ff2ee.webp&#34;
+               /odonnell-undergrad-post/pset06/example_hu4736243373980525162.webp 400w,
+               /odonnell-undergrad-post/pset06/example_hu10349360022823922930.webp 760w,
+               /odonnell-undergrad-post/pset06/example_hu14974452134500482200.webp 1200w&#34;
+               src=&#34;https://mostafatouny.github.io/odonnell-undergrad-post/pset06/example_hu4736243373980525162.webp&#34;
                width=&#34;760&#34;
                height=&#34;355&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -49,10 +49,10 @@
 &lt;/p&gt;
 &lt;p&gt;The procedure of encoding &lt;em&gt;3COL-UNARY&lt;/em&gt; to &lt;em&gt;3COL&lt;/em&gt; is as:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(i) For each group of nodes labeled with some colour &lt;em&gt;x&lt;/em&gt;, create
+&lt;li&gt;\(i\) For each group of nodes labeled with some colour &lt;em&gt;x&lt;/em&gt;, create
 two additional connected nodes &lt;em&gt;x1&lt;/em&gt; and &lt;em&gt;x2&lt;/em&gt;, and connect each node
 coloured &lt;em&gt;x&lt;/em&gt; to both of them.&lt;/li&gt;
-&lt;li&gt;(ii) For each two distinct groups of colours &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;, connect
+&lt;li&gt;\(ii\) For each two distinct groups of colours &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;, connect
 some node from &lt;em&gt;x&lt;/em&gt; with some node from &lt;em&gt;y&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When encoded input is run on &lt;em&gt;3COL&lt;/em&gt;,&lt;/p&gt;
@@ -132,12 +132,12 @@ satisfiable, then so is the corresponding &lt;em&gt;MAX-2SAT&lt;/em&gt;.&lt;/p&g
 &lt;p&gt;&amp;ldquo;not confident of the solution&amp;rdquo;&lt;/p&gt;
 &lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
 &lt;p&gt;As mentioned by the instructor we follow the verifier-based definition
-of NP. Our goal is to show $$\begin{aligned}
-&amp;lt;M, x, 1^w, 1^t&amp;gt; \in TS \leftrightarrow \exists u , s.t , S(&amp;lt;M, x, 1^w, 1^t&amp;gt;, u)   , \text{certifies} , &amp;lt;M, x, 1^w, 1^t&amp;gt; \in TS\end{aligned}$$&lt;/p&gt;
-&lt;p&gt;By $S$ we mean an algorithm which simulates $M$ on $(x, u)$, untill it
+of NP. Our goal is to show &lt;/p&gt;
+$$\begin{aligned}
+&lt;M, x, 1^w, 1^t&gt; \in TS \leftrightarrow \exists u \, s.t \, S(&lt;M, x, 1^w, 1^t&gt;, u)   \, \text{certifies} \, &lt;M, x, 1^w, 1^t&gt; \in TS\end{aligned}$$&lt;p&gt;By $S$ we mean an algorithm which simulates $M$ on $(x, u)$, untill it
 accepts on $t$ steps.&lt;/p&gt;
 &lt;p&gt;The definition trivially concludes our intended goal. Note if
-$&amp;lt;M, x, 1^w, 1^t&amp;gt; , \not\in , TS$ then obviously there&amp;rsquo;s no any
+$&lt;M, x, 1^w, 1^t&gt; \, \not\in \, TS$ then obviously there&amp;rsquo;s no any
 certificate $u$, such that any $M$ computes $(x, u)$ in time bounded by
 $t$.&lt;/p&gt;
 </description>
@@ -150,18 +150,18 @@ $t$.&lt;/p&gt;
       <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset05/</guid>
       <description>&lt;h2 id=&#34;ex-0&#34;&gt;Ex. 0&lt;/h2&gt;
 &lt;p&gt;Naively we guess any transformation $f$ of Boolean formulas preserves the property of satisfiability. Hence it would always be the case
+&lt;/p&gt;
 $$
 \begin{aligned}
 w \not\in \textit{UNSAT} \leftrightarrow f(w) \in \textit{SAT}
 \end{aligned}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
+$$&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
 &lt;p&gt;Since the questions is about factor $a$ we can ignore constants. $n^r + {(n^l)}^b = n^{r+lb}$. So $a = r+lb$.&lt;/p&gt;
 &lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
 &lt;p&gt;following NTM simulation by DTM, partition states into H1 and H2 subsets, and apply the same procedure on each. now the combination of delta1 and delta2 reaches all possible states of NTM.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;First.&lt;/strong&gt; &lt;em&gt;sipser-NTM&lt;/em&gt; can be viewed as a sequence of states, Each of which, is a subset of a deterministic TM&amp;rsquo;s states. A state of &lt;em&gt;binary-NTM&lt;/em&gt; can be viewed as a subset of exactly two states from a deterministic TM. Since there are no restrictions on the number of elements of &lt;em&gt;sipser-NTM&lt;/em&gt;&amp;rsquo;s subset, &lt;em&gt;binary-NTM&lt;/em&gt; can be seen as a special case of it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Second.&lt;/strong&gt; Recall the proof idea of a deterministic TM simulating a non-deterministic TM, whereby a determinstic state encodes/resembles a non-determinstic subset of states. Following the same idea, partition $Q = Q_1 \cup Q_2$ and define $Q_1&amp;rsquo; = P(Q_1)$ and $Q_2&amp;rsquo; = P(Q_2)$. Here $P(Q_i)$ means the set of all subsets of states $Q_i$. Let $\delta_1$ and $\delta_2$ be responsible of $Q_1&amp;rsquo;$ and $Q_2&amp;rsquo;$, respectively. Observe any state of $P(Q)$ can be constructed by some $x \cup y$ where
-$x \in Q_1&amp;rsquo;$ and $y \in Q_2&amp;rsquo;$. Therefore, Any configuration sequence of &lt;em&gt;sipser-TM&lt;/em&gt; can be encoded/represented by some configuration sequence of &lt;em&gt;binary-TM&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Second.&lt;/strong&gt; Recall the proof idea of a deterministic TM simulating a non-deterministic TM, whereby a determinstic state encodes/resembles a non-determinstic subset of states. Following the same idea, partition $Q = Q_1 \cup Q_2$ and define $Q_1&#39; = P(Q_1)$ and $Q_2&#39; = P(Q_2)$. Here $P(Q_i)$ means the set of all subsets of states $Q_i$. Let $\delta_1$ and $\delta_2$ be responsible of $Q_1&#39;$ and $Q_2&#39;$, respectively. Observe any state of $P(Q)$ can be constructed by some $x \cup y$ where
+$x \in Q_1&#39;$ and $y \in Q_2&#39;$. Therefore, Any configuration sequence of &lt;em&gt;sipser-TM&lt;/em&gt; can be encoded/represented by some configuration sequence of &lt;em&gt;binary-TM&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
 &lt;p&gt;The proof is shown by constructing a &lt;em&gt;non-deterministic&lt;/em&gt; &lt;em&gt;exponential-time&lt;/em&gt; algorithm for solving &lt;em&gt;IMPLICIT-4COL&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Given a circuit $C$, Construct its graph $G_C$ by enumerating all possible $2^n$ inputs of $i$ and all $2^n$ inputs of $j$, Computing $C(i,j)$, for $i \neq j$. The complexity is $2^n \times 2^n = 2^{n+1}$; Exponential.&lt;/p&gt;
@@ -174,10 +174,10 @@ $x \in Q_1&amp;rsquo;$ and $y \in Q_2&amp;rsquo;$. Therefore, Any configuration 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if w belongs to L output C_colorable
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      otherwise output C_uncolorable
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Observe our mapping necessarily satisfies
+&lt;/p&gt;
 $$
 w \in L \leftrightarrow \textit{L-to-3COL(w)} \in 3COL
-$$&lt;/p&gt;
-</description>
+$$</description>
     </item>
     
     <item>
@@ -211,7 +211,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Due to symmetry we mention only the case of unit clause $x_i$.&lt;/p&gt;
-&lt;p&gt;We prove the new propagated $C&amp;rsquo;$ is satisfiable if and only if the given $C$ is satisfiable.&lt;/p&gt;
+&lt;p&gt;We prove the new propagated $C&#39;$ is satisfiable if and only if the given $C$ is satisfiable.&lt;/p&gt;
 &lt;p&gt;$(\leftarrow)$ Necessarily $x_i = True$. Hence any clause containing $x_i$ is immediately evaluated to $True$ as well. Since $\neg x_i = False$ one of the remaining units of the clause containing $\neg x_i$ must be evaluated to $True$.&lt;/p&gt;
 &lt;p&gt;$(\rightarrow)$ Following the same reasoning, Since $x_i = True$, adding any clause containig $x_i$ is still going to be true regardless of other units boolean values. Also adding $\neg x_i = False$ to any clause evaluated to $True$ won&amp;rsquo;t change the whole clause&amp;rsquo;s boolean value.&lt;/p&gt;
 &lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
@@ -245,8 +245,8 @@ k_1 x_{11}, &amp;amp;\text{if $k_1$ is odd}
 &lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
 &lt;p&gt;If at any stage $0 = 1$ is concluded, Then no matter what $x$ is inputted, The system won&amp;rsquo;t be satisfied. Since the transformed system is equivalent to the original one, It&amp;rsquo;s trivial why the original system is unsatisfiable.&lt;/p&gt;
 &lt;p&gt;Observe in &lt;em&gt;modulus 2&lt;/em&gt;, the only possible evaluation outcomes are $0$ or $1$. So if $LHS \neq RHS$, then necessarily we get $0 = 1$. If we don&amp;rsquo;t get $0 = 1$, then all equations&amp;rsquo; evaluations are satisfied.&lt;/p&gt;
-&lt;p&gt;Observe also if $k_{ii} x_{ii} = c , mod , 2$ then by our definitions we know $k_{ii}$ is odd. It follows there&amp;rsquo;s exactly one unique solution for $x_ii$.&lt;/p&gt;
-&lt;p&gt;As the instructor hinted, back-substitution can be applied recursively to compute $x_{nn}$, $x_{n-1 , n-1}$, .., $x_{11}$ where once $x_{ii}$ is computed, For all the above equations, Their number of variables are reduced by one. Only one literal $x_{i-1 , i-1}$ is left for the next equation.&lt;/p&gt;
+&lt;p&gt;Observe also if $k_{ii} x_{ii} = c \, mod \, 2$ then by our definitions we know $k_{ii}$ is odd. It follows there&amp;rsquo;s exactly one unique solution for $x_ii$.&lt;/p&gt;
+&lt;p&gt;As the instructor hinted, back-substitution can be applied recursively to compute $x_{nn}$, $x_{n-1 \, n-1}$, .., $x_{11}$ where once $x_{ii}$ is computed, For all the above equations, Their number of variables are reduced by one. Only one literal $x_{i-1 \, i-1}$ is left for the next equation.&lt;/p&gt;
 &lt;p&gt;As a valid assignment $x$ for the transformed system is constructed, The original system is satisfied by $x$ also.&lt;/p&gt;
 </description>
     </item>
@@ -309,7 +309,7 @@ k_1 x_{11}, &amp;amp;\text{if $k_1$ is odd}
       <guid>https://mostafatouny.github.io/odonnell-undergrad-post/pset02/</guid>
       <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
 &lt;p&gt;The set of all unary languages is uncountably infinite but the set of all Turing machines is countably infinite, Hence some unary language isn&amp;rsquo;t recognizable by any turing machine.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s prove uncountability of unary languages. Observe the set $\Sigma^*$ equals
+&lt;p&gt;Let&amp;rsquo;s prove uncountability of unary languages. Observe the set $\Sigma^\*$ equals
 \begin{align*}
 &amp;amp;\epsilon \quad &amp;amp;s_1\\
 &amp;amp;1 \quad &amp;amp;s_2\\
@@ -330,11 +330,11 @@ Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an in
 &lt;p&gt;It is easy to transform tape-1 to be exactly w and tape-2 to be popped out of * at its left-most. We ignore these implementation details.&lt;/p&gt;
 &lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
 &lt;p&gt;From &lt;em&gt;a&lt;/em&gt;, We know there&amp;rsquo;s a 2-tape turing machine $T$ that can prepare tape-2 with string $1^{2|w|^2}$. We wish to think of this string as a counter of number of steps taken by the machine. It is possible for it to be augmented, to simulate machine $M$, while ticking tape-2, Accepting if $M$ accepts and tape-2 isn&amp;rsquo;t completely ticked, and rejecting otherwise. The 1-tape turing machine $M$ can be constructed by simulating $T$.&lt;/p&gt;
-&lt;p&gt;$T$ runs in polynomial time, since preparing tape-2 is upperbounded by $n^2$, and ticking tape-2 while simulating $M$ doesn&amp;rsquo;t cost any more steps. The simulation of $T$ by $M&amp;rsquo;$ is polynomially overheaded by $T$, and hence $M&amp;rsquo;$ is polynomially upperbounded.&lt;/p&gt;
+&lt;p&gt;$T$ runs in polynomial time, since preparing tape-2 is upperbounded by $n^2$, and ticking tape-2 while simulating $M$ doesn&amp;rsquo;t cost any more steps. The simulation of $T$ by $M&#39;$ is polynomially overheaded by $T$, and hence $M&#39;$ is polynomially upperbounded.&lt;/p&gt;
 &lt;h2 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h2&gt;
 &lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;Let $T$ be the turing machine recognizing $L$. It is possible to construct another turing machine $T&amp;rsquo;$ whose &lt;em&gt;accept&lt;/em&gt; and &lt;em&gt;reject&lt;/em&gt; states are swapped. So, $w \in L$ iff $T$ accepts $w$ iff $T&amp;rsquo;$ rejects $w$ iff $w \not\in L^c$.&lt;/p&gt;
-&lt;p&gt;The number of steps made by $T&amp;rsquo;$ is exactly the same as $T$, and hence of a polynomial complexity.&lt;/p&gt;
+&lt;p&gt;Let $T$ be the turing machine recognizing $L$. It is possible to construct another turing machine $T&#39;$ whose &lt;em&gt;accept&lt;/em&gt; and &lt;em&gt;reject&lt;/em&gt; states are swapped. So, $w \in L$ iff $T$ accepts $w$ iff $T&#39;$ rejects $w$ iff $w \not\in L^c$.&lt;/p&gt;
+&lt;p&gt;The number of steps made by $T&#39;$ is exactly the same as $T$, and hence of a polynomial complexity.&lt;/p&gt;
 &lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
 &lt;p&gt;Let $T_1$ and $T_2$ be two turing machines recognizing $L_1$ and $L_2$ respectively. It is possible to construct a new turing machine $T$ that simulates $T_1$ and memorizes its result, Then instead of termination, simulates $T_2$ on the same input and memorizes its result also. It is easy for $T$ to be designed such that it accepts input $w$ if and only if either the simulation of $T_1$ or $T_1$ accepted.&lt;/p&gt;
 &lt;p&gt;The complexity of $T$ is $\mathcal{O}(poly(n)) + \mathcal{O}(poly(n)) + C = \mathcal{O}(poly(n))$&lt;/p&gt;
@@ -347,7 +347,7 @@ Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an in
 &lt;h2 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h2&gt;
 &lt;p&gt;Any turing machine needs at least a linear scan of cost $n$, to behave in number of steps, as a function of $n$. In other words, number of steps $T$, must be $T(n) \geq n$, so that $T = f(n)$ for some function $f$. Since $T$ is upperbounded by $\sqrt{n} = \mathcal{o}(n)$, $T(n) \neq f(n)$ for any $f$. In other words, $T$ isn&amp;rsquo;t based on input size $n$. Therefore, must be a constant.&lt;/p&gt;
 &lt;p&gt;The intuition is very strong that a turing machine cannot behave in relation to $n$ if its memory doesn&amp;rsquo;t contain $n$&amp;rsquo;s value; I am not aware of a more rigorous proof.&lt;/p&gt;
-&lt;p&gt;As final note, For any constant $C$, we can always find some $n$, such that $C \sqrt{n} &amp;lt; n$. Hence, always guaranteeing the turing machine can&amp;rsquo;t read its whole input.&lt;/p&gt;
+&lt;p&gt;As final note, For any constant $C$, we can always find some $n$, such that $C \sqrt{n} &lt; n$. Hence, always guaranteeing the turing machine can&amp;rsquo;t read its whole input.&lt;/p&gt;
 </description>
     </item>
     
@@ -362,7 +362,7 @@ Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an in
 &lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
 &lt;p&gt;As the recipe is deterministic, i.e generates only one output given the same input, The assignment is valid and the function is well-defined.&lt;/p&gt;
 &lt;p&gt;For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarrow f(x_0) \neq f(x_1)$. Since, $x_0 + 1 \neq x_1 + 1$, Their binary representation differs in either the number of bits or in some bit not matching. That unmatching bit cannot be the most significant bit as it&amp;rsquo;s always 1. Therefore, resulting strings, $f(x_0)$ and $f(x_1)$ are not the same.&lt;/p&gt;
-&lt;p&gt;For surjectivity, Pick-up any string $w \in {0, 1}^*$ and reverse the recipe to obtain natural number $x$. Namely, add 1 as the most significant bit, interpret string as a binary number, convert to base 10, and finally subtract 1. Clearly $f(x) = w$.&lt;/p&gt;
+&lt;p&gt;For surjectivity, Pick-up any string $w \in \{0, 1\}^*$ and reverse the recipe to obtain natural number $x$. Namely, add 1 as the most significant bit, interpret string as a binary number, convert to base 10, and finally subtract 1. Clearly $f(x) = w$.&lt;/p&gt;
 &lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
 &lt;p&gt;Here&amp;rsquo;s a very illustrative example that achieves an encoding in $\lg a + \lg b$.&lt;/p&gt;
 &lt;p&gt;(2, 5), converted to binary, (10, 101); add leading zeros so both have the same number of bits, (010, 101). Finally, Concatenate bit by bit, i.e add the first bit of the first number then first bit of the second then second bit of the first, ..etc, Yielding 011001.&lt;/p&gt;

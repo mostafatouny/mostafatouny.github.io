@@ -7,7 +7,7 @@
     <description>Levitin&#39;s Algorithms</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Levitin&#39;s Algorithms</title>
       <link>https://mostafatouny.github.io/msa-levitin-post/</link>
     </image>
@@ -60,10 +60,10 @@
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;9.3.1&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(c) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
-&lt;li&gt;(c) Fixing vertices, What kind of modification is required on edges?&lt;/li&gt;
-&lt;li&gt;(d) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
-&lt;li&gt;(d) We will use &lt;em&gt;Dijkstra&lt;/em&gt; as a subroutine, So the graph will be transformed to the usual form given in the book.&lt;/li&gt;
+&lt;li&gt;\(c\) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
+&lt;li&gt;\(c\) Fixing vertices, What kind of modification is required on edges?&lt;/li&gt;
+&lt;li&gt;\(d\) Use &lt;em&gt;Transform-and-conquer&lt;/em&gt; strategy.&lt;/li&gt;
+&lt;li&gt;\(d\) We will use &lt;em&gt;Dijkstra&lt;/em&gt; as a subroutine, So the graph will be transformed to the usual form given in the book.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
@@ -71,7 +71,7 @@
 &lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Same algorithm. You may terminate once you find the destination.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Each vertex $v_i$ is mapped to $v_i^{st}$ and $v_i^{en}$, with directed edge $( v_i^{st}, v_i^{en} )$ whose weight is the number labeled on $v_i$. Any vertex in $G$ neighbour to $v_i$, can travel to $v_i^{st}$ but not $v_i^{en}$ in $G&amp;rsquo;$. Only vertices $v_i^{en}$ but not $v_i^{st}$ can travel to other vertices. Those edges in $G&amp;rsquo;$ are assigned zero weights.&lt;/p&gt;
+&lt;p&gt;Each vertex $v_i$ is mapped to $v_i^{st}$ and $v_i^{en}$, with directed edge $( v_i^{st}, v_i^{en} )$ whose weight is the number labeled on $v_i$. Any vertex in $G$ neighbour to $v_i$, can travel to $v_i^{st}$ but not $v_i^{en}$ in $G&#39;$. Only vertices $v_i^{en}$ but not $v_i^{st}$ can travel to other vertices. Those edges in $G&#39;$ are assigned zero weights.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# input: graph G with weighted vertices&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# output: graph G with weighted edges and no weighted vertices&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;vertexWeightToEdgeWeight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -160,7 +160,7 @@
 &lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Explain why is the formulation $F(n) = F(n-1) + p_1$ is wrong. Derive a counter example.&lt;/li&gt;
-&lt;li&gt;The optimal solution may be $F(n) = p_n$. Modify it so that it is in terms of $F(k)$ for some $k &amp;lt; n$.&lt;/li&gt;
+&lt;li&gt;The optimal solution may be $F(n) = p_n$. Modify it so that it is in terms of $F(k)$ for some $k &lt; n$.&lt;/li&gt;
 &lt;li&gt;Generalize.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
@@ -376,7 +376,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # if no position matches
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return False
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Observe greatest value of &lt;code&gt;x&lt;/code&gt; is $n-1 + n-1 = 2n - 2 &amp;lt; 2n$. So our function &lt;code&gt;myPosition&lt;/code&gt; is equivalent to &lt;code&gt;mod&lt;/code&gt; operation in this case.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Observe greatest value of &lt;code&gt;x&lt;/code&gt; is $n-1 + n-1 = 2n - 2 &lt; 2n$. So our function &lt;code&gt;myPosition&lt;/code&gt; is equivalent to &lt;code&gt;mod&lt;/code&gt; operation in this case.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Extra space is $\mathcal{O}(1)$. Time is $\mathcal{O}(n^2)$.&lt;/p&gt;
 &lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
@@ -457,7 +457,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3-1-4.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -478,7 +478,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3-1-4_1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -487,7 +487,7 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3.2.8&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z &amp;gt; i$, What can you infer?&lt;/li&gt;
+&lt;li&gt;Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z &gt; i$, What can you infer?&lt;/li&gt;
 &lt;li&gt;Utilize that observation in algorithm design.&lt;/li&gt;
 &lt;li&gt;Consider a flag which stores whether character $A$ is read.&lt;/li&gt;
 &lt;li&gt;Generalize for a variable that counts how many $A$ was read.&lt;/li&gt;
@@ -647,9 +647,9 @@ pragmatic purposes we omit the analysis bounding $\mathcal{O}(n^2)$.&lt;/p&gt;
       <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;instructor-notes&#34; class=&#34;unnumbered&#34;&gt;Instructor Notes&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\lfloor \log n \rfloor + 1 = \lceil \log (n+1) \rceil$.&lt;/p&gt;
-&lt;p&gt;We know $n = 2^k + r$ for some $k \geq 0$ and $0 \leq r &amp;lt; 2^k$, By&lt;em&gt;Euclid&amp;rsquo;s Theorem&lt;/em&gt; and &lt;em&gt;Archimedean Property&lt;/em&gt;. Then
+&lt;p&gt;We know $n = 2^k + r$ for some $k \geq 0$ and $0 \leq r &lt; 2^k$, By&lt;em&gt;Euclid&amp;rsquo;s Theorem&lt;/em&gt; and &lt;em&gt;Archimedean Property&lt;/em&gt;. Then
 \begin{aligned}
-k + 1 = \log 2^{k+1} \geq \log (2^k + r + 1) &amp;gt; \log (2^k + r) \geq \log 2^k = k
+k + 1 = \log 2^{k+1} \geq \log (2&lt;sup&gt;k + r + 1) &amp;gt; \log (2&lt;/sup&gt;k + r) \geq \log 2^k = k
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;Thus, $\lceil \log(n + 1) \rceil = \lceil \log (2^k + r + 1) \rceil = k + 1$ and $\lfloor \log (n+1) \rfloor  = \lfloor \log(2^k + 1) \rfloor = k$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Given $n$, If we repeatedly apply the operation $\lfloor n/2 \rfloor$ Then we reach $1$ after exactly $\lfloor \log n \rfloor + 1$.&lt;/p&gt;
@@ -805,7 +805,7 @@ k + 1 = \log 2^{k+1} \geq \log (2^k + r + 1) &amp;gt; \log (2^k + r) \geq \log 2
 &lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;4.5.13&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Given the target $t &amp;gt;$ cell $c$, for some cell in the matrix. Which elements of the matrix can we exclude from the search?&lt;/li&gt;
+&lt;li&gt;Given the target $t &gt;$ cell $c$, for some cell in the matrix. Which elements of the matrix can we exclude from the search?&lt;/li&gt;
 &lt;li&gt;Consider the case if the cell $c$ is at the corner.&lt;/li&gt;
 &lt;li&gt;Try to reduce the problem size by $1$.&lt;/li&gt;
 &lt;/ul&gt;
@@ -883,13 +883,13 @@ T(n) &amp;amp;= 2T(n/2) + 1
 It follows
 \begin{aligned}
 T(n) &amp;amp;= 2T(n/2) + 1 \\
-&amp;amp;= 2^2 T(n/2^2) + 2^1 + 2^0 \\
-&amp;amp;= 2^3 T(n/2^3) + 2^2 + 2^1 + 2^0 \\
-&amp;amp;= 2^k T(n/2^k) + 2^{k-1} + \dots + 2^0 \\
-&amp;amp;= 2^{\log n} T(n/2^{\log n}) + 2^{(\log n) - 1} + \dots + 2^0 \\
-&amp;amp;= 2^{\log n} T(1) + 2^{(\log n) - 1} + \dots + 2^0 \\
-&amp;amp;= 2^{(\log n) - 1} + \dots + 2^0 \\
-&amp;amp;= 2^{\log n } - 1 = n - 1 = \Theta(n)
+&amp;amp;= 2&lt;sup&gt;2 T(n/2&lt;/sup&gt;2) + 2&lt;sup&gt;1 + 2&lt;/sup&gt;0 \\
+&amp;amp;= 2&lt;sup&gt;3 T(n/2&lt;/sup&gt;3) + 2&lt;sup&gt;2 + 2&lt;/sup&gt;1 + 2&lt;sup&gt;0 \\
+&amp;amp;= 2&lt;/sup&gt;k T(n/2&lt;sup&gt;k) + 2&lt;/sup&gt;{k-1} + \dots + 2&lt;sup&gt;0 \\
+&amp;amp;= 2&lt;/sup&gt;{\log n} T(n/2^{\log n}) + 2^{(\log n) - 1} + \dots + 2&lt;sup&gt;0 \\
+&amp;amp;= 2&lt;/sup&gt;{\log n} T(1) + 2^{(\log n) - 1} + \dots + 2&lt;sup&gt;0 \\
+&amp;amp;= 2&lt;/sup&gt;{(\log n) - 1} + \dots + 2&lt;sup&gt;0 \\
+&amp;amp;= 2&lt;/sup&gt;{\log n } - 1 = n - 1 = \Theta(n)
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;P.S. Generally speaking we can ignore floors and ceilings in asymptotic notation (see page 885 in MIT&amp;rsquo;s Math for CS).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(c). Homework&lt;/strong&gt;&lt;/p&gt;
@@ -925,7 +925,7 @@ T(n) &amp;amp;= 2T(n/2) + 1 \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-5.3.1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -986,7 +986,7 @@ T(n) &amp;amp;= 2T(n/2) + 1 \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-5.5.1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -1007,7 +1007,7 @@ T(n) &amp;amp;= 2T(n/2) + 1 \\
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sort the array as a preprocessing step.&lt;/li&gt;
-&lt;li&gt;Given a sorted array, and an adjacent pair $A[i],A[i+1]$, Could the distance between $A[i]$ and $A[j]$ where $j &amp;gt; i+1$, be strictly less?&lt;/li&gt;
+&lt;li&gt;Given a sorted array, and an adjacent pair $A[i],A[i+1]$, Could the distance between $A[i]$ and $A[j]$ where $j &gt; i+1$, be strictly less?&lt;/li&gt;
 &lt;li&gt;Use that to design your algorithm.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
@@ -1101,12 +1101,12 @@ T(n) &amp;amp;= 2T(n/2) + 1 \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_3c809170eaddcc85d3055af618253bd4.webp 400w,
-               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_62f817a1f4e49bb0d3f9b27f91423c2c.webp 760w,
-               /msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/msa-levitin-post/lab06/ex-6.3.5_hu20487f532a374fff88820af30ef449ed_28306_3c809170eaddcc85d3055af618253bd4.webp&#34;
+               /msa-levitin-post/lab06/ex-6.3.5_hu3142327048812072494.webp 400w,
+               /msa-levitin-post/lab06/ex-6.3.5_hu2948419535040485838.webp 760w,
+               /msa-levitin-post/lab06/ex-6.3.5_hu2335736177780633417.webp 1200w&#34;
+               src=&#34;https://mostafatouny.github.io/msa-levitin-post/lab06/ex-6.3.5_hu3142327048812072494.webp&#34;
                width=&#34;760&#34;
                height=&#34;376&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1319,12 +1319,12 @@ T(n) &amp;amp;= 2T(n/2) + 1 \\
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Try this case on concrete examples like $m = 2$ and $n = 3$.&lt;/li&gt;
-&lt;li&gt;Why $m \mod n = m$ when $m &amp;lt; n$?&lt;/li&gt;
+&lt;li&gt;Why $m \mod n = m$ when $m &lt; n$?&lt;/li&gt;
 &lt;li&gt;Recall the definition of mod. What are the possible ranges of $x \mod n$ for any integer $x$?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;It shall swap them as $r = m \mod n = m$ when $m &amp;lt; n$.&lt;/p&gt;
-&lt;p&gt;Only once. Given $m &amp;gt; n$, Necessarily $n &amp;gt; m \mod n$.&lt;/p&gt;
+&lt;p&gt;It shall swap them as $r = m \mod n = m$ when $m &lt; n$.&lt;/p&gt;
+&lt;p&gt;Only once. Given $m &gt; n$, Necessarily $n &gt; m \mod n$.&lt;/p&gt;
 &lt;h2 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;1.2.5&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1374,20 +1374,20 @@ so that the quotient eliminate the right most digit?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Tedious to typeset.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. No. Observe counting only happens when strictly $i &amp;lt; j$. If $A[i] == A[j]$ then the code counts $A[i]$ not $A[j]$. Therefore $A[i]$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. No. Observe counting only happens when strictly $i &lt; j$. If $A[i] == A[j]$ then the code counts $A[i]$ not $A[j]$. Therefore $A[i]$&lt;/p&gt;
 &lt;p&gt;shall succeed $A[j]$. In fact equal cells are reversed in the sorted array.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;. No. It does not modify array $A$ but output is a different array $S$.&lt;/p&gt;
 &lt;h2 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;1.4.2&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;For ascendingly ordered array $A$, Is it possible for the target value $t$ to exist in $A[i..n-1]$ given the fact $t &amp;gt; A[i]$?&lt;/li&gt;
+&lt;li&gt;For ascendingly ordered array $A$, Is it possible for the target value $t$ to exist in $A[i..n-1]$ given the fact $t &gt; A[i]$?&lt;/li&gt;
 &lt;li&gt;Use the above hint to prune the search space.&lt;/li&gt;
 &lt;li&gt;Which index of the array you think shall prune the greatest search space.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For target value $t$:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;. Access some element $x$ in the array. If $t \neq x$, We can ignore searching in the right/left side of $x$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. While linear scanning, Terminate the algorithm earlier once some $A[i] &amp;gt; t$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;. While linear scanning, Terminate the algorithm earlier once some $A[i] &gt; t$.&lt;/p&gt;
 &lt;h2 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;1.4.10&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1482,7 +1482,7 @@ characters.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;2.2.12&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;2.3.4&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; $s(n)&lt;em&gt;{i=1}^n = \sum&lt;/em&gt;{i=1}^n i*i$, The sum of squares up to $n$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; $s(n)_{i=1}^n = \sum_{i=1}^n i*i$, The sum of squares up to $n$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; Multiplication.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt; $\sum_{i=1}^n 1 = n(1) = n$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt; $\mathcal{O}(n)$.&lt;/p&gt;
@@ -1521,7 +1521,7 @@ S(n) &amp;amp;= S(n-1) + 1 \
 &lt;h2 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;2.5.12&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;section-10&#34; class=&#34;unnumbered&#34;&gt;2.6.1&lt;/h2&gt;
-&lt;p&gt;No count of the comparison basic operation $A[j] &amp;gt; v$ in case it is $False$.&lt;/p&gt;
+&lt;p&gt;No count of the comparison basic operation $A[j] &gt; v$ in case it is $False$.&lt;/p&gt;
 &lt;p&gt;Fix by adding &lt;code&gt;if j &amp;gt;= 0 then count = count+1&lt;/code&gt; after the end of while.&lt;/p&gt;
 &lt;h2 id=&#34;section-11&#34; class=&#34;unnumbered&#34;&gt;2.6.10&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;

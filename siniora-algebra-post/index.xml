@@ -7,7 +7,7 @@
     <description>Gallian&#39;s Abstract Algebra</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Gallian&#39;s Abstract Algebra</title>
       <link>https://mostafatouny.github.io/siniora-algebra-post/</link>
     </image>
@@ -19,41 +19,39 @@
       <guid>https://mostafatouny.github.io/siniora-algebra-post/pset09/</guid>
       <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 175) to show the answer is NO. $(2 3) \in S_3$ and yet, $(2 3)H(2 3) = { (2 3)(1)(2 3), (2 3)(1 2)(2 3) } = { (1), (1 3)} \not\subset H$.&lt;/p&gt;
+&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 175) to show the answer is NO. $(2 3) \in S_3$ and yet, $(2 3)H(2 3) = \{ (2 3)(1)(2 3), (2 3)(1 2)(2 3) \} = \{ (1), (1 3)\} \not\subset H$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
 &lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 174). We know from earlier chapters, $A_n$ is a subgroup of $S_n$. Then for any $x \in S_n$ and any $h \in A_n$, we get a permutation $xhx^{1}$ consisting of even 2-cycles. To see why, Observe we know $x^{-1}$ has the same number of 2-cycles as $x$. Whether $x$ consists of even or odd number of 2-cycles, The contribution of 2-cycles of both $x$ and $x^{-1}$ is even.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;6&lt;/h3&gt;
 &lt;p&gt;NO. It suffices to take some matrix $h \in H$ and a matrix $x \in GL(2,R)$, and show $xhx^{-1} \not\in H$. Clearly:&lt;/p&gt;
-&lt;p&gt;$$
-\begin{bmatrix} 2 &amp;amp; 1 \\ 1 &amp;amp; 2  \end{bmatrix} \begin{bmatrix} 1 &amp;amp; 1 \\ 0 &amp;amp; 1 \end{bmatrix} \begin{bmatrix} 2 &amp;amp; 1 \\ 1  &amp;amp; 2  \end{bmatrix}^{-1} \\ = \begin{bmatrix} 2 &amp;amp; 1 \\ 1 &amp;amp; 2 \end{bmatrix} \begin{bmatrix} 1 &amp;amp; 1 \\ 0 &amp;amp; 1 \end{bmatrix} \begin{bmatrix} 2/3 &amp;amp; -1/3 \\ -1/3  &amp;amp; 2/3 \end{bmatrix} = \begin{bmatrix} 4/3 &amp;amp; -1 \\ -1/3  &amp;amp; 2 \end{bmatrix} \not\in H
-$$&lt;/p&gt;
-&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;
+$$
+\begin{bmatrix} 2 &amp; 1 \\\\ 1 &amp; 2  \end{bmatrix} \begin{bmatrix} 1 &amp; 1 \\\\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 2 &amp; 1 \\\\ 1  &amp; 2  \end{bmatrix}^{-1} \\\\ = \begin{bmatrix} 2 &amp; 1 \\\\ 1 &amp; 2 \end{bmatrix} \begin{bmatrix} 1 &amp; 1 \\\\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 2/3 &amp; -1/3 \\\\ -1/3  &amp; 2/3 \end{bmatrix} = \begin{bmatrix} 4/3 &amp; -1 \\\\ -1/3  &amp; 2 \end{bmatrix} \not\in H
+$$&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;
 &lt;p&gt;We immediately prove the general case of $\langle k \rangle / \langle n \rangle \cong \mathcal{Z}_{n/k}$, given $k$ divides $n$.&lt;/p&gt;
 &lt;p&gt;For arbitrary two elements of under the operation:
 \begin{aligned}
-(k^a \langle n \rangle) (k^b \langle n \rangle)
+(k&lt;sup&gt;a \langle n \rangle) (k&lt;/sup&gt;b \langle n \rangle)
 &amp;amp;= k^{a+b} \langle n \rangle \qquad &amp;amp;\text{Definition} \\
 &amp;amp;= k^{\frac{n}{k} q + r} \langle n \rangle, 0 \leq r &amp;lt; n/k \qquad &amp;amp;\text{Euclidean Division} \\
-&amp;amp;= k^{\frac{n}{k} q} k^r \langle n \rangle \\
-&amp;amp;= k^r (k^{\frac{n}{k} q} \langle n \rangle) \qquad &amp;amp;\text{Commutativity and Associativity of $\mathcal{Z}$} \\
-&amp;amp;= k^r (n \langle n \rangle) \\
-&amp;amp;= k^r \langle n \rangle
+&amp;amp;= k^{\frac{n}{k} q} k&lt;sup&gt;r \langle n \rangle \\
+&amp;amp;= k&lt;/sup&gt;r (k^{\frac{n}{k} q} \langle n \rangle) \qquad &amp;amp;\text{Commutativity and Associativity of $\mathcal{Z}$} \\
+&amp;amp;= k&lt;sup&gt;r (n \langle n \rangle) \\
+&amp;amp;= k&lt;/sup&gt;r \langle n \rangle
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;But in $\mathcal{Z}_{n/k}$, $ab = a + b \mod \frac{n}{k}$, which corresponds to $(k^a \langle n \rangle) (k^b \langle n \rangle) = k^{a + b \mod r} \langle n \rangle$.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Citing from the course TA, Ibrahim, left/right cosets parition
 the group $G$. (msh naseek ya bob).&lt;/p&gt;
-&lt;p&gt;Since the index is given to be $2$, We know $G/H = { H, g_0 H } = { H, Hg_0}$.&lt;/p&gt;
+&lt;p&gt;Since the index is given to be $2$, We know $G/H = \{ H, g_0 H \} = \{ H, Hg_0\}$.&lt;/p&gt;
 &lt;p&gt;Consider arbitrary $x \in G$. If $x \in H$ then $xH = H = Hx$ from &lt;em&gt;Lemma&lt;/em&gt; (page 139). If $x \not\in H$, Then $x \in g_0H$ and $x \in Hg_0$ by our &lt;em&gt;Fact&lt;/em&gt;. It follows $g_0h_0 = x = h_1g_0$ for some $h_0, h_1 \in H$, and in turn $xH = g_0H = Hg_0 = Hx$.&lt;/p&gt;
 &lt;p&gt;It follows $H$ is normal.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;10&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;By &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 175), We construct $xhx^{-1} \not\in H$ for some $x \in A_4$ and $h \in H$.&lt;/p&gt;
 &lt;p&gt;Let $h = (1 2)(3 4)$ and $x = (1 3)(2 3)$. Then $x^{-1} = (2 3)(1 3)$, and in turn $xhx^{-1} = (1 3)(2 3)(1 2)(3 4)(2 3)(1 3)$. In other notation,&lt;/p&gt;
-&lt;p&gt;$$
-xhx^{-1} = \begin{bmatrix} 1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 \\ 3 &amp;amp; 4 &amp;amp; 1 &amp;amp; 2 \end{bmatrix} \neq (1 2)(3 4)
-$$&lt;/p&gt;
-&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;12&lt;/h3&gt;
+$$
+xhx^{-1} = \begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\\\ 3 &amp; 4 &amp; 1 &amp; 2 \end{bmatrix} \neq (1 2)(3 4)
+$$&lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;12&lt;/h3&gt;
 &lt;p&gt;For arbitrary abelian group $G$ with elements $a_0$ and $a_1$, and factor group $G/H$, We have:
 \begin{aligned}
 (a_0 H)(a_1 H) &amp;amp;= (a_0 a_1) H \qquad &amp;amp;\text{Definition} \\
@@ -63,16 +61,16 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;14&lt;/h3&gt;
 &lt;p&gt;We know the identity of $\mathcal{Z}_{24}/ \langle 8 \rangle$ is $0 + \langle 8 \rangle$. We are looking for smallest $k$ satisfying
 \begin{aligned}
-(14 + \langle 8 \rangle)^k &amp;amp;= 0 + \langle 8 \rangle \\
-14^k + \langle 8 \rangle &amp;amp;=
+(14 + \langle 8 \rangle)&lt;sup&gt;k &amp;amp;= 0 + \langle 8 \rangle \\
+14&lt;/sup&gt;k + \langle 8 \rangle &amp;amp;=
 \end{aligned}
 Thanks for the course TA, Ibrahim, That can be satisfied while $14^k \neq 0$.&lt;/p&gt;
 &lt;p&gt;From the &lt;em&gt;lemma&lt;/em&gt; (page 139), This is true if and only if $14^k \in \langle 8 \rangle$. In other words, We want smallest positive $k$, such that $14^k = 8^m$ for some integer $m$. By computation, $k = 3$ as $14^3 = 8$.&lt;/p&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;22&lt;/h3&gt;
-&lt;p&gt;Observe $(Z \oplus Z) / \langle (2,2) \rangle = \{ (0,0)+\langle (2,2) \rangle, (0,1)+\langle (2,2) \rangle), (1,0)+\langle (2,2) \rangle, (1,1)+\langle (2,2) \rangle \}$.&lt;/p&gt;
+&lt;p&gt;Observe $(Z \oplus Z) / \langle (2,2) \rangle = \\{ (0,0)+\langle (2,2) \rangle, (0,1)+\langle (2,2) \rangle), (1,0)+\langle (2,2) \rangle, (1,1)+\langle (2,2) \rangle \\}$.&lt;/p&gt;
 &lt;p&gt;To see why consider arbitrary $(a,b) \in Z \oplus Z$ and apply Euclid&amp;rsquo;s
 division theorem to get $a = 2k_0 + r_0$ and $b = 2k_1 +r_1$ where
-$0 \leq r_0,r_1 &amp;lt; 2$.&lt;/p&gt;
+$0 \leq r_0,r_1 &lt; 2$.&lt;/p&gt;
 &lt;p&gt;Then the order is $4$.&lt;/p&gt;
 &lt;p&gt;It is not cyclic as no single $(a,b)$ can generate all of $(0,0), (0,1), (1,0), (1,1)$.&lt;/p&gt;
 &lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;37&lt;/h3&gt;
@@ -88,11 +86,11 @@ $0 \leq r_0,r_1 &amp;lt; 2$.&lt;/p&gt;
       <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;
 &lt;p&gt;Homomorphism. If $\sigma_1$ and $\sigma_2$ are both even or both odd, then $\sigma_1 \sigma_2$ is even and $sgn(\sigma_1) sgn(\sigma_2) = 1$. If one of them is even and the other is odd, then $\sigma_1 \sigma_2$ is odd and $sgn(\sigma_1) sgn(\sigma_2) = 1 * -1 = -1$.&lt;/p&gt;
-&lt;p&gt;Kernel. $Ker , sgn$ is the subgroup of even permutations of $G$.&lt;/p&gt;
-&lt;p&gt;$A_n$ is a normal subgroup of $S_n$. When $G = S_n$, $Ker , sgn = A_n$. By &lt;em&gt;corollary&lt;/em&gt; (page 198), $Ker , sgn$ is a normal subgroup.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Ex 23&lt;/em&gt; in &lt;em&gt;Ch 05&lt;/em&gt;. Now consider the homomorphism $sgn$ on arbitrary subgroup $H$. We know the identity must be $sgn(H)$. If $sgn(H) = { 1 }$ then all permutations of H are even. Otherwise $sgn(H) = { 0, 1}$. By &lt;em&gt;property 5&lt;/em&gt; in &lt;em&gt;theorem 10.2&lt;/em&gt; (page 197), we have n-to-1 mapping from even permutations, and n-to-1 mapping from odd permutations. Hence exactly half of $H$ are even.&lt;/p&gt;
+&lt;p&gt;Kernel. $Ker \, sgn$ is the subgroup of even permutations of $G$.&lt;/p&gt;
+&lt;p&gt;$A_n$ is a normal subgroup of $S_n$. When $G = S_n$, $Ker \, sgn = A_n$. By &lt;em&gt;corollary&lt;/em&gt; (page 198), $Ker \, sgn$ is a normal subgroup.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ex 23&lt;/em&gt; in &lt;em&gt;Ch 05&lt;/em&gt;. Now consider the homomorphism $sgn$ on arbitrary subgroup $H$. We know the identity must be $sgn(H)$. If $sgn(H) = \{ 1 \}$ then all permutations of H are even. Otherwise $sgn(H) = \{ 0, 1\}$. By &lt;em&gt;property 5&lt;/em&gt; in &lt;em&gt;theorem 10.2&lt;/em&gt; (page 197), we have n-to-1 mapping from even permutations, and n-to-1 mapping from odd permutations. Hence exactly half of $H$ are even.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;12&lt;/h3&gt;
-&lt;p&gt;By definition, $Z_n/\langle k \rangle = { x + \langle k \rangle \mid x \in \mathcal{Z}_n }$. But by &lt;em&gt;Euclid&amp;rsquo;s Division&lt;/em&gt;, $x + \langle k \rangle = (kq + r) + \langle k \rangle = r + (kq + \langle k \rangle) = r + \langle k \rangle$. It follows $\mathcal{Z}_n / \langle k \rangle = { x + \langle k \rangle \mid x \in \mathcal{Z}_k }$.&lt;/p&gt;
+&lt;p&gt;By definition, $Z_n/\langle k \rangle = \{ x + \langle k \rangle \mid x \in \mathcal{Z}_n \}$. But by &lt;em&gt;Euclid&amp;rsquo;s Division&lt;/em&gt;, $x + \langle k \rangle = (kq + r) + \langle k \rangle = r + (kq + \langle k \rangle) = r + \langle k \rangle$. It follows $\mathcal{Z}_n / \langle k \rangle = \{ x + \langle k \rangle \mid x \in \mathcal{Z}_k \}$.&lt;/p&gt;
 &lt;p&gt;Now define $\phi: \mathcal{Z}_n / \langle k \rangle \rightarrow \mathcal{Z}_k$ by $\phi(x + \langle k \rangle) = x$. It is injective as $\phi(x + \langle k \rangle) = \phi(y + \langle k \rangle)$ implies $x = y$. Surjective as for any $y \in \mathcal{Z}_k$ we have $\phi(y + \langle k \rangle = y$. Finally it preservers the operation as $\phi(x + \langle k \rangle) + \phi(y + \langle k \rangle) = x + y = \phi( (x+y) + \langle k \rangle )$.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;15&lt;/h3&gt;
 &lt;p&gt;Let $x$ be arbitrary such that $\phi(x) = 9$. Then
@@ -113,7 +111,7 @@ x &amp;amp;\in \{ 23, 3, 13 \}
 &lt;p&gt;Let $\phi$ be an arbitrary homomorphism. By surjectivity we know $\phi(\mathcal{Z}_{20}) = \mathcal{Z}_8$. By theorem 10.2, 5 (page 197), $20$ is a multiple of $8$. Contradiction. It follows the number of homomorphisms is zero.&lt;/p&gt;
 &lt;p&gt;P.S. The TA Ibrahim notified me Math is not about hacking puzzles but seeing the structure behind. He told me an alternative proof by cosets and quotient groups. For academic integrity I present the proof I discovered on my own.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(2).&lt;/strong&gt; $\mathcal{Z}_{20}$ to $\mathcal{Z}_8$.&lt;/p&gt;
-&lt;p&gt;Let $\phi: \mathcal{Z}_{20} \rightarrow \mathcal{Z}_8$ be an arbitrary homomorphism. We follow the procedure of example 10 (page 199). Let $\phi(1) = a$. Then $|a|$ divides both $20$ and $8$. It follows $|a| \in {1, 2, 4}$ and in turn $a \in { 0, 2, 4, 6 }$. Since $\phi(1)$ decides the homomorphism, There are 4 possible homomorphisms.&lt;/p&gt;
+&lt;p&gt;Let $\phi: \mathcal{Z}_{20} \rightarrow \mathcal{Z}_8$ be an arbitrary homomorphism. We follow the procedure of example 10 (page 199). Let $\phi(1) = a$. Then $|a|$ divides both $20$ and $8$. It follows $|a| \in \{1, 2, 4\}$ and in turn $a \in \{ 0, 2, 4, 6 \}$. Since $\phi(1)$ decides the homomorphism, There are 4 possible homomorphisms.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;24&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; In light of &lt;em&gt;property 2&lt;/em&gt; of &lt;em&gt;theorem 10.1&lt;/em&gt; (page 196), Observe $6 = \phi(7) = \phi(7 \cdot 1) = 7 \cdot \phi(1)$. But $13 \cdot 7 \mod 15 = 1$. It follows $\phi(1) = 13 \cdot 6 = 3$. Therefore $\phi(x) = \phi(1 \cdot x) = \phi(1) \cdot x = 3x$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; The image is all multiples of 3 strictly less than 15.&lt;/p&gt;
@@ -125,7 +123,7 @@ x &amp;amp;\in \{ 23, 3, 13 \}
 x - 1 &amp;amp;= 5i \\
 x &amp;amp;= 5i + 1
 \end{aligned}
-So $\phi^{-1}(3) = \{ 5i + 1 \mid 0 \leq i \leq 9 \}$&lt;/p&gt;
+So $\phi^{-1}(3) = \\{ 5i + 1 \mid 0 \leq i \leq 9 \\}$&lt;/p&gt;
 </description>
     </item>
     
@@ -175,7 +173,7 @@ Z_3 \oplus Z_3 \oplus Z_5 &amp;amp;\approx Z_3 \oplus Z_{15}
 \end{aligned}&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;22&lt;/h3&gt;
 &lt;p&gt;By &lt;em&gt;the fundamental theorem of finite abelian groups&lt;/em&gt;, $G \approx Z_{p_1^{n_1}} \oplus Z_{p_2^{n_2}} \oplus \dots \oplus Z_{p_k^{n_k}}$ where $|G| = p_1^{n_1} \cdot .. \cdot p_k^{n_k}$. We claim $n_1 = n_2 = \dots = n_k = 1$.&lt;/p&gt;
-&lt;p&gt;Assume for contradiction some $n_i &amp;gt; 1$. Then by the theorem we can substitute $Z_{p_i^{n_i}}$ by $Z_{p_i^1} \oplus Z_{p_i^1} \oplus Z_{p_i^{n_i-2}}$. If $n_i = 2$ then just ignore the third term. It follows we have two distinct subgroups of cardinality $p_i$. In other words, two distinct subgroups of the same order of divisor $p_i$ of $|G|$. Contradiction.&lt;/p&gt;
+&lt;p&gt;Assume for contradiction some $n_i &gt; 1$. Then by the theorem we can substitute $Z_{p_i^{n_i}}$ by $Z_{p_i^1} \oplus Z_{p_i^1} \oplus Z_{p_i^{n_i-2}}$. If $n_i = 2$ then just ignore the third term. It follows we have two distinct subgroups of cardinality $p_i$. In other words, two distinct subgroups of the same order of divisor $p_i$ of $|G|$. Contradiction.&lt;/p&gt;
 &lt;p&gt;Therefore $G \approx Z_{p_1^1} \oplus Z_{p_2^1} \oplus \dots \oplus Z_{p_k^1}$. But all $p_i$s are coprime, So $G \approx Z_{p_1 \cdot .. \cdot p_k}$, Concluding it is cyclic.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;31&lt;/h3&gt;
 &lt;p&gt;If $a = b$ then $a^2 = b^2$. So $a$ and $b$ are distinct. Moreover $(a^2)^2 = a^4 = e$ and $(b^2)^2 = b^4 = e$. So we have distinct elements $a^2$ and $b^2$ of order 2.&lt;/p&gt;
@@ -203,16 +201,16 @@ Z_3 \oplus Z_3 \oplus Z_5 &amp;amp;\approx Z_3 \oplus Z_{15}
       <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;It is $6$. For any $i \in \{ 0,2,4,6,8 \}$, $6i \mod 10 = i$.&lt;/p&gt;
+&lt;p&gt;It is $6$. For any $i \in \\{ 0,2,4,6,8 \\}$, $6i \mod 10 = i$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \{ \nfrac{x}{2} \mid x \in \mathbb{Z} \} = \{ x\ \nfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \}$. It is a subgroup as $\nfrac{x_0}{2} + \nfrac{x_1}{2} = \nfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\nfrac{x_0}{2}$ there is $\nfrac{-x_0}{2}$ such that $\nfrac{x_0}{2} + \nfrac{-x_0}{2} = 0$. Observe $\nfrac{1}{2} \cdot \nfrac{1}{2} = \nfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.&lt;/p&gt;
+&lt;p&gt;It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \\{ \nfrac{x}{2} \mid x \in \mathbb{Z} \\} = \\{ x\ \nfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \\}$. It is a subgroup as $\nfrac{x_0}{2} + \nfrac{x_1}{2} = \nfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\nfrac{x_0}{2}$ there is $\nfrac{-x_0}{2}$ such that $\nfrac{x_0}{2} + \nfrac{-x_0}{2} = 0$. Observe $\nfrac{1}{2} \cdot \nfrac{1}{2} = \nfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.&lt;/p&gt;
 &lt;p&gt;P.S.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Any subgroup under addition of a ring, satisfies the ring&amp;rsquo;s definition, except for being closed under multiplication.&lt;/li&gt;
 &lt;li&gt;Any set $S$ closed under usual addition of integers, is also closed under usual multiplication of integers, Since $ab = \underbrace{a + a + \dots + a}_{b \text{ times}} \in S$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Unity&amp;rsquo;s uniqueness.&lt;/strong&gt; Let $1$ and $1&amp;rsquo;$ be two unities. Then by definition $11&amp;rsquo; = 1&#39;1 = 1&amp;rsquo;$, and $1&#39;1 = 11&amp;rsquo; = 1$. So $1 = 1&amp;rsquo;$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Unity&amp;rsquo;s uniqueness.&lt;/strong&gt; Let $1$ and $1&#39;$ be two unities. Then by definition $11&#39; = 1&#39;1 = 1&#39;$, and $1&#39;1 = 11&#39; = 1$. So $1 = 1&#39;$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Multiplicative inverse uniqueness.&lt;/strong&gt; Fix $a_0$. Let $b_0$ and $b_1$ be two multiplicative inverses of $a_0$. Then $b_0a_0 = a_0b_0 = 1$, and $b_1a_0 = a_0b_1 = 1$. So
 \begin{aligned}
 a_0b_0 &amp;amp;= a_0b_1 \\
@@ -261,12 +259,14 @@ As $r_0 - r_1 \in R$.&lt;/p&gt;
 0+0 &amp;amp; 0
 \end{bmatrix}&lt;/p&gt;
 &lt;p&gt;We show (4). For any matrix $M \in R$, where
+&lt;/p&gt;
 $$
-M = \begin{bmatrix} a &amp;amp; a+b \\ a+b &amp;amp; b \end{bmatrix}
-$$
+M = \begin{bmatrix} a &amp; a+b \\\\ a+b &amp; b \end{bmatrix}
+$$&lt;p&gt;
 The matrix $-M$ defined as
-$$ -M =  \begin{bmatrix} -a &amp;amp; -a+(-b) \\ -a+(-b) &amp;amp; -b \end{bmatrix}
-$$
+&lt;/p&gt;
+$$ -M =  \begin{bmatrix} -a &amp; -a+(-b) \\\\ -a+(-b) &amp; -b \end{bmatrix}
+$$&lt;p&gt;
 is in $M_2(Z)$, as $-a \in Z$ whenever $a \in Z$. Clearly $M - M$ is the additive identity.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;46&lt;/h3&gt;
 &lt;p&gt;$2 \in 2Z$ and $3 \in 3Z$ but $2+3 = 5 \not\in 2Z \cup 3Z$, so $2Z \cup 3Z$ is not closed under addition.&lt;/p&gt;
@@ -345,10 +345,10 @@ a(a-1) &amp;amp;= 0
 &lt;p&gt;The proof $I$ is ideal by &lt;em&gt;Theorem 14.1&lt;/em&gt; (ideal test) (page 249) is nearly identical to &lt;em&gt;Ex. 1&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Let $J$ be an arbitrary ideal that contains $a_1,a_2, \dots, a_n$. Then by definition $r a_i \in J$. Since it&amp;rsquo;s a group $r_1 a_1 + \dots + r_n a_n \in J$ for any $r_i \in R$.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
-&lt;p&gt;By the &lt;em&gt;subring test&lt;/em&gt; (page 230), $S = \{ (x,x) \mid x \in Z \}$ is a subring as $(x,x) - (y,y) = (x-y, x-y) \in S$ and $(x,x) (y,y) = (xy,xy) \in S$.&lt;/p&gt;
+&lt;p&gt;By the &lt;em&gt;subring test&lt;/em&gt; (page 230), $S = \\{ (x,x) \mid x \in Z \\}$ is a subring as $(x,x) - (y,y) = (x-y, x-y) \in S$ and $(x,x) (y,y) = (xy,xy) \in S$.&lt;/p&gt;
 &lt;p&gt;$S$ is not an ideal as $(1,1) \in S$ and $(1,2) \in \mathbb{Z} \oplus \mathbb{Z}$ but $(1,2) (1,1) = (1,2) \notin S$. In other words, $(1,1)$ did not absorb $(1,2)$.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;Theorem 12.3&lt;/em&gt; (subring test) (page 230). $(a+bi) - (a&amp;rsquo;+b&amp;rsquo;i) = (a-a&amp;rsquo;) + (b-b&amp;rsquo;)i \in S$ as $b-b&amp;rsquo;$ is even. $(a+bi) (a&amp;rsquo;+b&amp;rsquo;i) = (aa&amp;rsquo; - bb&amp;rsquo;) + (ab&amp;rsquo; + a&amp;rsquo;b)i \in S$ as $ab&amp;rsquo; + a&amp;rsquo;b$ is even.&lt;/p&gt;
+&lt;p&gt;We use &lt;em&gt;Theorem 12.3&lt;/em&gt; (subring test) (page 230). $(a+bi) - (a&#39;+b&#39;i) = (a-a&#39;) + (b-b&#39;)i \in S$ as $b-b&#39;$ is even. $(a+bi) (a&#39;+b&#39;i) = (aa&#39; - bb&#39;) + (ab&#39; + a&#39;b)i \in S$ as $ab&#39; + a&#39;b$ is even.&lt;/p&gt;
 &lt;p&gt;$1 + 2i \in S$ and $1 + 1i \in Z[i]$ but $(1 + 1i)(1 + 2i) = -1 + 3i \not\in S$ as $3$ is not even. A counter-example of $S$ being an ideal.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;11&lt;/h3&gt;
 &lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
@@ -365,11 +365,11 @@ a(a-1) &amp;amp;= 0
 &lt;li&gt;$r = 2$. Similarly $(3(q+1), b+1) \in B$ and $(3(q+1), b+1) - (3q+2, b) = (1, 1) \in B$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;By &lt;em&gt;Ex. 15&lt;/em&gt; $B = \mathbb{Z} \oplus \mathbb{Z}$.&lt;/p&gt;
-&lt;p&gt;Had $A$ been $\{ (4x, y) \mid x,y \in \mathbb{Z} \}$ then the property of it being a maximal ideal fails as the ideal $\{ (2x, y) \}$ is strictly larger.&lt;/p&gt;
-&lt;p&gt;Generally, $\{ (rx,y) \}$ is a maximal ideal if and only if $r$ is a prime. If $r$ is composite then any divisor generates a larger ideal. If $r$ is prime then for any $m$ where $0 &amp;lt; m &amp;lt; r$, $gcd(r, m) = 1$. It follows by &lt;em&gt;Theorem 0.2&lt;/em&gt; (GCD is a linear combination) (page 4) there is a linear combination $xr + ym = 1$.&lt;/p&gt;
+&lt;p&gt;Had $A$ been $\\{ (4x, y) \mid x,y \in \mathbb{Z} \\}$ then the property of it being a maximal ideal fails as the ideal $\\{ (2x, y) \\}$ is strictly larger.&lt;/p&gt;
+&lt;p&gt;Generally, $\\{ (rx,y) \\}$ is a maximal ideal if and only if $r$ is a prime. If $r$ is composite then any divisor generates a larger ideal. If $r$ is prime then for any $m$ where $0 &lt; m &lt; r$, $gcd(r, m) = 1$. It follows by &lt;em&gt;Theorem 0.2&lt;/em&gt; (GCD is a linear combination) (page 4) there is a linear combination $xr + ym = 1$.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;37&lt;/h3&gt;
 &lt;p&gt;If $(x,y), (a,b) \in \mathbb{Z} \oplus \mathbb{Z}$ and $(x,y)(a,b) = (xa,yb) \in I$ then by definition $yb = 0$. So either $y = 0$ or $b = 0$. In other words, either $(x,y) \in I$ or $(a,b) \in I$.&lt;/p&gt;
-&lt;p&gt;The set $\{ (x,2y) \mid x,y \in Z \}$ is an ideal and properly contains $I$. So $I$ is not maximal.&lt;/p&gt;
+&lt;p&gt;The set $\\{ (x,2y) \mid x,y \in Z \\}$ is an ideal and properly contains $I$. So $I$ is not maximal.&lt;/p&gt;
 </description>
     </item>
     
@@ -380,9 +380,9 @@ a(a-1) &amp;amp;= 0
       <guid>https://mostafatouny.github.io/siniora-algebra-post/pset07/</guid>
       <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;Those are $\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \} = \big \{ \{ a \pm 0, a \pm 3, a \pm 6, \dots \} \mid a \in \mathcal{Z} \big \}$.&lt;/p&gt;
+&lt;p&gt;Those are $\\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \\} = \big \\{ \\{ a \pm 0, a \pm 3, a \pm 6, \dots \\} \mid a \in \mathcal{Z} \big \\}$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7&lt;/h3&gt;
-&lt;p&gt;Observe $\langle a^4 \rangle = { 1, a^{4(1)}, a^{4(2)}, \dots, a^{4(14)} }$. Then $\lvert \langle a^4 \rangle \rvert = 15$. It follows by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), The number of distinct left cosets is $30/15 = 2$.&lt;/p&gt;
+&lt;p&gt;Observe $\langle a^4 \rangle = \{ 1, a^{4(1)}, a^{4(2)}, \dots, a^{4(14)} \}$. Then $\lvert \langle a^4 \rangle \rvert = 15$. It follows by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), The number of distinct left cosets is $30/15 = 2$.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;
 &lt;p&gt;Lazy to compute and typeset all left cosets.&lt;/p&gt;
 &lt;p&gt;$H$ is a subgroup. Then by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), the number of left cosets of $H$ in $S_4$ is $4!/4 = 3! = 6$.&lt;/p&gt;
@@ -390,18 +390,18 @@ a(a-1) &amp;amp;= 0
 &lt;p&gt;Assume for contradiction $aH \cap bH = \phi$. Since we are given $aH = bK$, It follows $bK \cap bH = \phi$, Concluding $H \cap K = \phi$. Contradiction as the identity element $e \in G$ is common in both subgroups. Therefore $aH \cap bH \neq \phi$.&lt;/p&gt;
 &lt;p&gt;From &lt;em&gt;Lemma&lt;/em&gt; (page 139), We get $aH = bH$. Then $bK = bH$ as we are given $aH = bK$. It follows $K = H$.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;17&lt;/h3&gt;
-&lt;p&gt;Let $H$ be a proper subgroup of $G$. If $\lvert H \rvert = 1$, Then $H = { e } = \langle e \rangle$. it is cyclic. Now assume $\lvert H \rvert &amp;gt; 1$. Then by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 143), and without the loss of generality, $\lvert H \rvert = p$ for a prime $p$. By &lt;em&gt;corollary 3&lt;/em&gt;, $H$ is cyclic.&lt;/p&gt;
+&lt;p&gt;Let $H$ be a proper subgroup of $G$. If $\lvert H \rvert = 1$, Then $H = \{ e \} = \langle e \rangle$. it is cyclic. Now assume $\lvert H \rvert &gt; 1$. Then by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 143), and without the loss of generality, $\lvert H \rvert = p$ for a prime $p$. By &lt;em&gt;corollary 3&lt;/em&gt;, $H$ is cyclic.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;19&lt;/h3&gt;
 &lt;p&gt;$5^{16} \mod 7 = 6$ and $7^{13} \mod 11 = 2$, Using the fact $ab \mod m = (a \mod m) (b \mod m) \mod m$.&lt;/p&gt;
 &lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;22&lt;/h3&gt;
-&lt;p&gt;Let $H$ and $K$ be finite subgroups of a group $G$, Where $\lvert H \rvert$ and $\lvert K \rvert$ are coprime. Since $H \cap K$ is a subgroup of both $H$ and $K$, By &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), $\lvert H \cap K \rvert = 1$. Then $H \cap K = {e}$, where $e$ is the identity of $G$.&lt;/p&gt;
+&lt;p&gt;Let $H$ and $K$ be finite subgroups of a group $G$, Where $\lvert H \rvert$ and $\lvert K \rvert$ are coprime. Since $H \cap K$ is a subgroup of both $H$ and $K$, By &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), $\lvert H \cap K \rvert = 1$. Then $H \cap K = \{e\}$, where $e$ is the identity of $G$.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;38&lt;/h3&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;39&lt;/h3&gt;
 &lt;p&gt;We know all common divisors among $24$ and $20$ are $1,2,4$. By &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), It follows $\lvert H \cap K \rvert = 1, 2,$ or $4$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt; $\lvert H \cap K \rvert = 1$. Then it is the trivial group of only the identity element.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt; $\lvert H \cap K \rvert = 2$. Then it is ${e, a}$. Trivially abelian.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt; $\lvert H \cap K \rvert = 2$. Then it is $\{e, a\}$. Trivially abelian.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For any two elements $a,b$ of a group. If $ab = b$ then $a = e$, the identity element. Observe we can cancel $b$ in $ab = eb = b$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt; $\lvert H \cap K \rvert = 4$. Assume for contradiction, that $ab \neq ba$ for arbitrary distinct elements $a$ and $b$, Neither of which is the identity. Then $ab \not\in {a, b}$ by the &lt;em&gt;Fact&lt;/em&gt;. Moreover $ab \neq e$ lest $b = a^{-1}$ and then $ab = ba$. Symmetrically these conclusions apply on $ba$. Since we excluded $3$ elements out of $4$, There is only a single element $ab$ and $ba$ can both be assigned to, i.e $ab = ba$. Contradiction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt; $\lvert H \cap K \rvert = 4$. Assume for contradiction, that $ab \neq ba$ for arbitrary distinct elements $a$ and $b$, Neither of which is the identity. Then $ab \not\in \{a, b\}$ by the &lt;em&gt;Fact&lt;/em&gt;. Moreover $ab \neq e$ lest $b = a^{-1}$ and then $ab = ba$. Symmetrically these conclusions apply on $ba$. Since we excluded $3$ elements out of $4$, There is only a single element $ab$ and $ba$ can both be assigned to, i.e $ab = ba$. Contradiction.&lt;/p&gt;
 </description>
     </item>
     
@@ -424,8 +424,8 @@ on $G \oplus H$, and vice verca.&lt;/p&gt;
 &lt;p&gt;Assume for the sake of contradiction $Z \oplus G$ is cyclic. Then by definition there is a generator $(a,b)$. Then necessarily $\langle a \rangle = Z$ and $\langle b \rangle = G$ as by definition we have $(a,b)^k = (a^k,b^k)$. Observe $\langle a \rangle$ is of infinite order. Fix $c \in Z$, Then we know $a^k = c$ for some $k$. Compute $(a,b)^k = (a^k,b^k) = (c,d)$. Let $h$ be the element other than $d$ in $G$. Now we can&amp;rsquo;t generate $(c,h)$. By &lt;em&gt;theorem 4.1&lt;/em&gt; (page 76) if $a^i = a^k$ then $i = k$. In other words, $k$ is the only integer that yields $a^k = c$.&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;6&lt;/h3&gt;
 &lt;p&gt;Clearly $(1,1) \in Z_8 \oplus Z_2$ is of order $8$. We claim no element of $Z_4 \oplus Z_4$ is of order $8$, Which suffices to solve the problem.&lt;/p&gt;
-&lt;p&gt;From &lt;em&gt;Theorem 4.3&lt;/em&gt; (page 81) we know any element of $Z_4$ is of order, which divides $4$. In other words, For any element $a$, there is $k \leq 4$ such that $k |a| = 4$. Similarly for another element $b$ we have $k&amp;rsquo; |b| = 4$.&lt;/p&gt;
-&lt;p&gt;So for any $(a,b) \in Z_4 \oplus Z_4$, Observe $(a,b)^4 = (a^4,b^4) = (a^{k |a|},b^{k&amp;rsquo; |b|}) = ((a^{|a|})^k, (b^{|b|})^{k&amp;rsquo;}) = (0^k, 0^{k&amp;rsquo;}) = (0, 0)$. So order of $(a,b)$ is at most $4$.&lt;/p&gt;
+&lt;p&gt;From &lt;em&gt;Theorem 4.3&lt;/em&gt; (page 81) we know any element of $Z_4$ is of order, which divides $4$. In other words, For any element $a$, there is $k \leq 4$ such that $k |a| = 4$. Similarly for another element $b$ we have $k&#39; |b| = 4$.&lt;/p&gt;
+&lt;p&gt;So for any $(a,b) \in Z_4 \oplus Z_4$, Observe $(a,b)^4 = (a^4,b^4) = (a^{k |a|},b^{k&#39; |b|}) = ((a^{|a|})^k, (b^{|b|})^{k&#39;}) = (0^k, 0^{k&#39;}) = (0, 0)$. So order of $(a,b)$ is at most $4$.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;15&lt;/h3&gt;
 &lt;p&gt;Let $\phi: C \rightarrow R \oplus R$ where $\phi(a+bi) = (a,b)$.&lt;/p&gt;
 &lt;ul&gt;
@@ -449,8 +449,8 @@ on $G \oplus H$, and vice verca.&lt;/p&gt;
 &lt;p&gt;in $\underbrace{Z_3 \oplus .. \oplus Z_3}_{k \text{ times}}$. We claim $| (x_1, \dots, x_k) | = 3$.&lt;/p&gt;
 &lt;p&gt;Following the fact all non-identity elements are of order 3, and we have some $x_i \neq 0$,
 \begin{aligned}
-(x_1, x_2, \dots, x_k)^1 &amp;amp;= (x_1^1, x_2^1, \dots, x_k^1) \neq e \\
-(x_1, x_2, \dots, x_k)^2 &amp;amp;= (x_1^2, x_2^2, \dots, x_k^2) \neq e \\
+(x_1, x_2, \dots, x_k)&lt;sup&gt;1 &amp;amp;= (x_1&lt;/sup&gt;1, x_2&lt;sup&gt;1, \dots, x_k&lt;/sup&gt;1) \neq e \\
+(x_1, x_2, \dots, x_k)&lt;sup&gt;2 &amp;amp;= (x_1&lt;/sup&gt;2, x_2&lt;sup&gt;2, \dots, x_k&lt;/sup&gt;2) \neq e \\
 (x_1, x_2, \dots, x_k)^3 &amp;amp;= (0, 0, \dots,0) = e \\
 \end{aligned}
 Therefore we have $3^k - 1$ elements of order 3 in $\underbrace{Z_3 \oplus \dots \oplus Z_3}_{k \text{ times}}$.&lt;/p&gt;
@@ -460,22 +460,22 @@ Therefore we have $3^k - 1$ elements of order 3 in $\underbrace{Z_3 \oplus \dots
 \begin{aligned}
 \phi(\sqrt{z} \cdot \sqrt{z}) &amp;amp;= (-1,-1) \\
 \phi(\sqrt{z}) \cdot \phi(\sqrt{z}) &amp;amp;= \\
-( \phi(\sqrt{z}) )^2 &amp;amp;= \\
-(a,b)^2 &amp;amp;= \\
-(a^2, b^2) &amp;amp;=
+( \phi(\sqrt{z}) )&lt;sup&gt;2 &amp;amp;= \\
+(a,b)&lt;sup&gt;2 &amp;amp;= \\
+(a&lt;/sup&gt;2, b&lt;/sup&gt;2) &amp;amp;=
 \end{aligned}
 In other words $a^2 = -1$ and $b^2 = -1$, but either of these leads to a contradiction, as no square of a real number is negative.&lt;/p&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;46&lt;/h3&gt;
-&lt;p&gt;The infinite group is $\mathcal{Z} \oplus D_4 \oplus A_4$. Clearly ${ (e_Z, x, e_{A_4}) \mid x \in D_4 }$ and ${ (e_Z, e_{D_4}, x) \mid x \in A_4 }$ are both subgroups.&lt;/p&gt;
+&lt;p&gt;The infinite group is $\mathcal{Z} \oplus D_4 \oplus A_4$. Clearly $\{ (e_Z, x, e_{A_4}) \mid x \in D_4 \}$ and $\{ (e_Z, e_{D_4}, x) \mid x \in A_4 \}$ are both subgroups.&lt;/p&gt;
 &lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;48&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Claim&lt;/strong&gt;. It is all permutations on $\mathcal{Z}_2 \oplus \mathcal{Z}_2$ which maps $(0,0)$ to itself.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;. Our characterization is consistent with the fact the identity is always mapped to itself, and that isomorphism is a bijection.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fact&lt;/strong&gt;. In any group, fixing element $a_0$, then for any elements $b_0 \neq b_1$, we have $a_0 b_0 \neq a_0 b_1$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;. For any $(a,b) \in \mathcal{Z}_2 \oplus \mathcal{Z}_2$, $(a, b)^2 = (a^2, b^2) = (0,0) = e$, As $0^2 = 0$ and $1^2 = 0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;. Any two elements of $X = { (0,1), (1,0), (1,1) }$ multiplies to the third.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;. Any two elements of $X = \{ (0,1), (1,0), (1,1) \}$ multiplies to the third.&lt;/p&gt;
 &lt;p&gt;For distinct $a,b,c \in X$, $ab \neq (0,0)$ since $aa = (0,0)$. Also $ab \neq a$ since $a (0,0) = a$. Similarly $ab \neq b$. Therefore the only remaining choice is $ab = c$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt;. Our permutations preserve the operation.&lt;/p&gt;
-&lt;p&gt;We know for distinct elements $a, b, c \in X$, we have $ab = c$. As $\phi$ is a permutation on these, We have $X = { \phi(a), \phi(b), \phi(c) }$. It follows
+&lt;p&gt;We know for distinct elements $a, b, c \in X$, we have $ab = c$. As $\phi$ is a permutation on these, We have $X = \{ \phi(a), \phi(b), \phi(c) \}$. It follows
 $\phi(a) \phi(b) = \phi(c)$. That concludes $\phi(c) = \phi(ab) = \phi(a) \phi(b)$.&lt;/p&gt;
 </description>
     </item>
@@ -489,95 +489,95 @@ $\phi(a) \phi(b) = \phi(c)$. That concludes $\phi(c) = \phi(ab) = \phi(a) \phi(b
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
 &lt;p&gt;$\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a+b) = 2a + 2b = \phi(a)\phi(b)$, Following by usual properties of integers.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;We Follow the same proof approach of &lt;em&gt;Example 15&lt;/em&gt; (page 130). Let $\phi \in Aut(Z)$ be arbitrary. Then by the usual properties of integers and isomorphisms, $\phi(k) = \phi(1 + 1 + \dots + 1) = \phi(1) + \dots + \phi(1) = k \cdot \phi(1)$. But by definition $\phi(1) = c$ for some integer $c$. Therefore $\phi(k) = kc$. In other words, $Aut(Z) = { \phi \mid \exists c, ; \forall k ; \phi(k) = kc }$&lt;/p&gt;
+&lt;p&gt;We Follow the same proof approach of &lt;em&gt;Example 15&lt;/em&gt; (page 130). Let $\phi \in Aut(Z)$ be arbitrary. Then by the usual properties of integers and isomorphisms, $\phi(k) = \phi(1 + 1 + \dots + 1) = \phi(1) + \dots + \phi(1) = k \cdot \phi(1)$. But by definition $\phi(1) = c$ for some integer $c$. Therefore $\phi(k) = kc$. In other words, $Aut(Z) = \{ \phi \mid \exists c, \; \forall k \; \phi(k) = kc \}$&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
 &lt;p&gt;Caylay table of $U(8)$:&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;1&lt;/th&gt;
-&lt;th&gt;3&lt;/th&gt;
-&lt;th&gt;5&lt;/th&gt;
-&lt;th&gt;7&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;1&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;3&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;5&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;7&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;5&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Caylay table of $U(10)$:&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;1&lt;/th&gt;
-&lt;th&gt;3&lt;/th&gt;
-&lt;th&gt;7&lt;/th&gt;
-&lt;th&gt;9&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;1&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;3&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;7&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;9&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;9&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;9&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;9&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;9&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;7&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Recall from &lt;em&gt;theorem 6.2&lt;/em&gt; (page 126), Any $\phi$ maps the identity to the identity of the other group.&lt;/p&gt;
 &lt;p&gt;In $U(8)$ we have $3 \cdot 3 = 1$. Then $\phi(3 \cdot 3) = \phi(3) \cdot \phi(3) = \phi(1) = 1$. The only non-identity element in $U(10)$ satisfying that is $9$. Hence $\phi(3) = 9$.&lt;/p&gt;
-&lt;p&gt;Similarly $5 \cdot 5 = 1$. Then we must have some $a \in U(10)$ such that $a \cdot a = 1$ where $a \notin { 1, 9 }$. Contradiction.&lt;/p&gt;
+&lt;p&gt;Similarly $5 \cdot 5 = 1$. Then we must have some $a \in U(10)$ such that $a \cdot a = 1$ where $a \notin \{ 1, 9 \}$. Contradiction.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Injective.&lt;/em&gt; Given $\log_{10} a = \log_{10} b$, we get $10^{\log_{10} a} = 10^{\log_{10} b}$, and $a = b$.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Surjective.&lt;/em&gt; Given $x \in \mathcal{R}$, take $a = 10^x \in \mathcal{R}^+$. Then $\log_{10} a = \log_{10} 10^x = x$.&lt;/p&gt;
@@ -597,8 +597,8 @@ ba  &amp;amp;= ab
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;21&lt;/h3&gt;
 &lt;p&gt;Clearly groups $H$ and $K$ are isomorphic to $S_4$. By transitivity $H \approx K$.&lt;/p&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;22&lt;/h3&gt;
-&lt;p&gt;For every $c = 2, 3, 4 \dots$, Consider the subset $H_c = { ck \mid k \in \mathcal{Z} }$. It is a subgroup, As it has the identity $c(0)$, inverses $c(-k)$, and closed $ck_1 + ck_2 = c(k_1 + k_2)$.&lt;/p&gt;
-&lt;p&gt;It remains to show those subgroups are distinct. For any $c_1$ and $c_2$ where $c_1 &amp;lt; c_2$ we have $c_1(1) \in H_{c_1}$ but $c_1(1) \not\in H_{c_2}$. Therefore $H_{c_1} \neq H_{c_2}$.&lt;/p&gt;
+&lt;p&gt;For every $c = 2, 3, 4 \dots$, Consider the subset $H_c = \{ ck \mid k \in \mathcal{Z} \}$. It is a subgroup, As it has the identity $c(0)$, inverses $c(-k)$, and closed $ck_1 + ck_2 = c(k_1 + k_2)$.&lt;/p&gt;
+&lt;p&gt;It remains to show those subgroups are distinct. For any $c_1$ and $c_2$ where $c_1 &lt; c_2$ we have $c_1(1) \in H_{c_1}$ but $c_1(1) \not\in H_{c_2}$. Therefore $H_{c_1} \neq H_{c_2}$.&lt;/p&gt;
 &lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;24&lt;/h3&gt;
 &lt;p&gt;We use &lt;em&gt;theorem 3.2&lt;/em&gt; (page 63). If $\phi(a) = a$ then $\phi(a^{-1}) = (\phi(a))^{-1} = a^{-1}$. Also, If $\phi(a) = a$ and $\phi(b) = b$ then $\phi(ab) = \phi(a) \phi(b) = ab$.&lt;/p&gt;
 &lt;h3 id=&#34;section-10&#34; class=&#34;unnumbered&#34;&gt;34&lt;/h3&gt;
@@ -616,30 +616,30 @@ ba  &amp;amp;= ab
       <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;
+&lt;/p&gt;
 $$
 \alpha^{-1} =
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 \\
-2 &amp;amp; 1 &amp;amp; 3 &amp;amp; 5 &amp;amp; 4 &amp;amp; 6
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
+    2 &amp; 1 &amp; 3 &amp; 5 &amp; 4 &amp; 6
 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;
+$$&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;
+&lt;/p&gt;
 $$
-\beta \alpha =
+\beta \alpha = 
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 \\
-1 &amp;amp; 6 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
+    1 &amp; 6 &amp; 2 &amp; 3 &amp; 4 &amp; 5
 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;
+$$&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;
+&lt;/p&gt;
 $$
-\alpha \beta =
+\alpha \beta = 
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 \\
-6 &amp;amp; 2 &amp;amp; 1 &amp;amp; 5 &amp;amp; 3 &amp;amp; 4
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
+    6 &amp; 2 &amp; 1 &amp; 5 &amp; 3 &amp; 4
 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;3(b)&lt;/h3&gt;
+$$&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;3(b)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $(1 2 4)(3 5)(6)$&lt;/p&gt;
 &lt;h3 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;6(a)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;a.&lt;/strong&gt; disjoint cycles form: $(1 2)(3 5 6)$. Order is $6$.&lt;/p&gt;
@@ -648,26 +648,26 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;d.&lt;/strong&gt; $(2 4)(2 3)(1 5)$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;10&lt;/h3&gt;
 &lt;p&gt;We want to find some permutation
+&lt;/p&gt;
 $$
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 \\
-&amp;amp;   &amp;amp;   &amp;amp;   &amp;amp;   &amp;amp;&lt;br&gt;
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
+      &amp;   &amp;   &amp;   &amp;   &amp;  
 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;where:&lt;/p&gt;
+$$&lt;p&gt;where:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Order is $15$, i.e $lcm$ of disjoint cycles lengths is $15$, and&lt;/li&gt;
 &lt;li&gt;Even, i.e Has an even number of 2-cycles.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Observe $15 = 3 \cdot 5$ which suggests two disjoint cycles of lengths $3$ and $5$. A standard candidate is $(1 2 3)(4 5 6 7 8)$. Its 2-cycles form: $(4 8)(4 7)(4 6)(4 5)(1 3)(1 2)$, A total of even 6 cycles.&lt;/p&gt;
 &lt;p&gt;The permutation in matrix form is:
+&lt;/p&gt;
 $$
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 \\
-2 &amp;amp; 3 &amp;amp; 1 &amp;amp; 5 &amp;amp; 6 &amp;amp; 7 &amp;amp; 8 &amp;amp; 4
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 \\\\
+    2 &amp; 3 &amp; 1 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 4
 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;17&lt;/h3&gt;
+$$&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;17&lt;/h3&gt;
 &lt;p&gt;Using &lt;em&gt;theorem 3.3&lt;/em&gt; (page 64), It suffices to show the set of even permutations are closed under permutation composition. By definition, Given even permutations $\alpha = (a b)(c d) \dots (e f)$ and $\beta = (g h)(i j) \dots (k l)$, The composition $\alpha \beta = (a b) \dots (k l)$ consists of even number of 2-cycles, As even + even = even.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;23&lt;/h3&gt;
 &lt;p&gt;Let $H$ be a subgroup of $S_n$. Assume not every member is even. We show $H$ must have an equal number of even and odd members.&lt;/p&gt;
@@ -677,20 +677,19 @@ $$&lt;/p&gt;
 odd members is even.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;43&lt;/h3&gt;
 &lt;p&gt;For $n \geq 3$, It is easy to see $(1 2) \in S_n$ and $(2 3) \in S_n$. However&lt;/p&gt;
-&lt;p&gt;$$
-(2 3)(1 2) =
+$$
+(2 3)(1 2) = 
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; \dots \\
-3 &amp;amp; 1 &amp;amp; 2 &amp;amp; 4 &amp;amp; 5 &amp;amp; \dots
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; \dots \\\\
+    3 &amp; 1 &amp; 2 &amp; 4 &amp; 5 &amp; \dots
 \end{bmatrix}
 \neq
 \begin{bmatrix}
-1 &amp;amp; 2 &amp;amp; 3 &amp;amp; 4 &amp;amp; 5 &amp;amp; \dots \\
-2 &amp;amp; 3 &amp;amp; 1 &amp;amp; 4 &amp;amp; 5 &amp;amp; \dots
+    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; \dots \\\\
+    2 &amp; 3 &amp; 1 &amp; 4 &amp; 5 &amp; \dots
 \end{bmatrix}
 = (1 2)(2 3)
-$$&lt;/p&gt;
-</description>
+$$</description>
     </item>
     
     <item>
@@ -723,73 +722,73 @@ $\frac{\displaystyle{1/2}}{\displaystyle{3}} = \frac{\displaystyle{1}}{\displays
 &lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;16&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; $x^n$ is an odd integer for any odd $x$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; The summation of two even integers is even.&lt;/p&gt;
-&lt;p&gt;We take a different perspective of the problem by the set ${ (5 \cdot 1), (5 \cdot 3), (5 \cdot 5), (5 \cdot 7) }$ modulo $5 \cdot 8$. Upon multiplying any two elements we get the form $5 \cdot 5 \cdot x \cdot y$ where $x,y \in { 1, 3, 5, 7 }$. Think of the output of multiplication as the factor of $5$ deciding the element.&lt;/p&gt;
+&lt;p&gt;We take a different perspective of the problem by the set $\{ (5 \cdot 1), (5 \cdot 3), (5 \cdot 5), (5 \cdot 7) \}$ modulo $5 \cdot 8$. Upon multiplying any two elements we get the form $5 \cdot 5 \cdot x \cdot y$ where $x,y \in \{ 1, 3, 5, 7 \}$. Think of the output of multiplication as the factor of $5$ deciding the element.&lt;/p&gt;
 &lt;p&gt;Observe the element is decided by $5 \cdot x \cdot y \mod 8$. For example if we knew $5 \cdot 5 \cdot 5 \cdot 1 = (5)(8 + 8 + 8 + 1)$ then we can easily deduce the output of $\mod 5 \cdot 8$ operation is $(5)(1)$.&lt;/p&gt;
-&lt;p&gt;The numbers $1$, $3$, $5$, and $7$ are all odds. So whatever $x$ or $y$ chosen, $5 \cdot x \cdot y$ will be odd. It follows $\textit{odd} \mod 8 = \textit{odd} \in {1, 3, 5, 7}$. To see why note $8k + \textit{odd} = \textit{odd}$.&lt;/p&gt;
+&lt;p&gt;The numbers $1$, $3$, $5$, and $7$ are all odds. So whatever $x$ or $y$ chosen, $5 \cdot x \cdot y$ will be odd. It follows $\textit{odd} \mod 8 = \textit{odd} \in \{1, 3, 5, 7\}$. To see why note $8k + \textit{odd} = \textit{odd}$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; The given set is closed under the given operation.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; The identity is $5 \cdot 5 = 25$.&lt;/p&gt;
 &lt;p&gt;Observe $5 \cdot 5 \cdot x \mod 8 = 24x + x \mod 8 = x \mod 8$ since $24x \mod 8 = 0$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; THe inverse of $5x$ is $5x$ by computation on the given elements.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Associativity is known from integers and modulus properties.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;18&lt;/h3&gt;
-&lt;p&gt;$(R_0)^2 = (R_{180})^2 = H^2 = V^2 = D^2 = (D&amp;rsquo;)^2 = R_0$.&lt;/p&gt;
+&lt;p&gt;$(R_0)^2 = (R_{180})^2 = H^2 = V^2 = D^2 = (D&#39;)^2 = R_0$.&lt;/p&gt;
 &lt;p&gt;$(R_{90})^2 = (R_{270})^2 = R_{180}$.&lt;/p&gt;
-&lt;p&gt;So $K = { R_0, R_{180} }$, and $L = { R_0, R_{180}, H, V, D, D&amp;rsquo; }$.&lt;/p&gt;
+&lt;p&gt;So $K = \{ R_0, R_{180} \}$, and $L = \{ R_0, R_{180}, H, V, D, D&#39; \}$.&lt;/p&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;33&lt;/h3&gt;
 &lt;p&gt;Observe the group follows the same pattern as $\mathcal{Z}_4$.&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;e&lt;/th&gt;
-&lt;th&gt;a&lt;/th&gt;
-&lt;th&gt;b&lt;/th&gt;
-&lt;th&gt;c&lt;/th&gt;
-&lt;th&gt;d&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;td&gt;d&lt;/td&gt;
-&lt;td&gt;e&lt;/td&gt;
-&lt;td&gt;a&lt;/td&gt;
-&lt;td&gt;b&lt;/td&gt;
-&lt;td&gt;c&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;e&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;a&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;b&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;c&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;d&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;d&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;e&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;a&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;b&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;c&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;inverses.&lt;/strong&gt; Since $ad = e$, $d = a^{-1}$. Since $bc = e$, $c = b^{-1}$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ab = c.&lt;/strong&gt; $ab = (cc)b = c(cb) = ce = c$.&lt;/p&gt;
@@ -802,11 +801,11 @@ $\frac{\displaystyle{1/2}}{\displaystyle{3}} = \frac{\displaystyle{1}}{\displays
 &lt;h3 id=&#34;section-9&#34; class=&#34;unnumbered&#34;&gt;34&lt;/h3&gt;
 &lt;p&gt;$(\leftarrow)$. Given $ab = ba$
 \begin{aligned}
-(ab)^2 &amp;amp;= (ab)(ab) \\
+(ab)&lt;sup&gt;2 &amp;amp;= (ab)(ab) \\
 &amp;amp;= a(ba)b, \text{Associativity} \\
 &amp;amp;= a(ab)b \\
 &amp;amp;= (aa)(bb), \text{Associativity} \\
-&amp;amp;= a^2b^2
+&amp;amp;= a&lt;/sup&gt;2b^2
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;$(\rightarrow)$. Given $(ab)^2 = a^2b^2$
 \begin{aligned}
@@ -817,19 +816,19 @@ ba &amp;amp;= ab, \text{Cancellation}
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;$(\leftarrow)$. Given $ab = ba$
 \begin{aligned}
-(ab)^2 &amp;amp;= (ab)^{-1} (ab)^{-1} \\
-&amp;amp;= b^{-1} a^{-1} b^{-1} a^{-1} \\
-&amp;amp;= b^{-1} (ba)^{-1} a^{-1} \\
-&amp;amp;= b^{-1} (ab)^{-1} a^{-1} \\
+(ab)&lt;sup&gt;2 &amp;amp;= (ab)&lt;/sup&gt;{-1} (ab)&lt;sup&gt;{-1} \\
+&amp;amp;= b&lt;/sup&gt;{-1} a^{-1} b^{-1} a^{-1} \\
+&amp;amp;= b^{-1} (ba)&lt;sup&gt;{-1} a&lt;/sup&gt;{-1} \\
+&amp;amp;= b^{-1} (ab)&lt;sup&gt;{-1} a&lt;/sup&gt;{-1} \\
 &amp;amp;= b^{-1} b^{-1} a^{-1} a^{-1} \\
-&amp;amp;= (b)^{-2} (a)^{-2}
+&amp;amp;= (b)&lt;sup&gt;{-2} (a)&lt;/sup&gt;{-2}
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;$(\rightarrow)$. Given $(ab)^{-2} = b^{-2} a^{-2}$
 \begin{aligned}
-(ab)^{-1} (ab)^{-1} &amp;amp;= b^{-1} a^{-1} b^{-1} a^{-1} \\
+(ab)&lt;sup&gt;{-1} (ab)&lt;/sup&gt;{-1} &amp;amp;= b^{-1} a^{-1} b^{-1} a^{-1} \\
 &amp;amp;= b^{-1} b^{-1} a^{-1} a^{-1} \\
 a^{-1} b^{-1} &amp;amp;= b^{-1} a^{-1}, \text{Cancellation} \\
-(ba)^{-1}  &amp;amp;= (ab)^{-1}
+(ba)&lt;sup&gt;{-1}  &amp;amp;= (ab)&lt;/sup&gt;{-1}
 \end{aligned}&lt;/p&gt;
 &lt;p&gt;Now observe by the definition of inverse, if $x = y^{-1}$ then $y = x^{-1}$. Therefore $ab = [ (ab)^{-1} ]^{-1}$ and $ba = [ (ba)^{-1} ]^{-1}$, and $ab = ba$.&lt;/p&gt;
 &lt;h3 id=&#34;section-10&#34; class=&#34;unnumbered&#34;&gt;47&lt;/h3&gt;
@@ -844,17 +843,17 @@ a^{-1} b^{-1} &amp;amp;= b^{-1} a^{-1}, \text{Cancellation} \\
       <guid>https://mostafatouny.github.io/siniora-algebra-post/pset03/</guid>
       <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;$(Q, +)$. ${ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} }$.&lt;/p&gt;
-&lt;p&gt;$(Q^*, *)$. ${ 2^x \mid x \in \mathcal{Z}^+ } \cup { \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^+ } \cup { 1 }$.&lt;/p&gt;
+&lt;p&gt;$(Q, +)$. $\{ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} \}$.&lt;/p&gt;
+&lt;p&gt;$(Q^*, *)$. $\{ 2^x \mid x \in \mathcal{Z}^+ \} \cup \{ \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^+ \} \cup \{ 1 \}$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
-&lt;p&gt;Consider $|x| = n$. Then $x^n = 1$ and no positive $r &amp;lt; n$ where $x^r = 1$. It follows.
+&lt;p&gt;Consider $|x| = n$. Then $x^n = 1$ and no positive $r &lt; n$ where $x^r = 1$. It follows.
 \begin{aligned}
-(x^n)^{-1} &amp;amp;= (1)^{-1} \\
-(x \cdot x \cdot \dots \cdot x)^{-1} &amp;amp;= 1 \\
+(x&lt;sup&gt;n)&lt;/sup&gt;{-1} &amp;amp;= (1)&lt;sup&gt;{-1} \\
+(x \cdot x \cdot \dots \cdot x)&lt;/sup&gt;{-1} &amp;amp;= 1 \\
 x^{-1} \cdot \dots \cdot x^{-1} &amp;amp;= \\
 (x^{-1})^n &amp;amp;=
 \end{aligned}
-Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &amp;lt; n$.&lt;/p&gt;
+Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &lt; n$.&lt;/p&gt;
 &lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;6(b)&lt;/h3&gt;
 &lt;p&gt;Identity is $e = 0$.&lt;/p&gt;
 &lt;p&gt;$|3| = 4$. $|8| = 3$. $|11| = 12$.&lt;/p&gt;
@@ -862,29 +861,29 @@ Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &amp;l
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For any element $x$ in any group, $x^{n+m} = x^n x^m$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For any element $x$ in any group, $(x^{k})^m = x^{km}$.
 \begin{aligned}
-(a^4 c^{-2} b^4)^{-1} &amp;amp;= (b^4)^{-1} (c^{-2})^{-1} (a^4)^{-1} \\
-&amp;amp;= (b^4)^{-1} (c^2 ) (a^4)^{-1} \\
-&amp;amp;= (b^7 b^{-3})^{-1} (c^2) (a^6 a^{-2})^{-1} \\
-&amp;amp;= (b^{-3})^{-1} (c^2) (a^{-2})^{-1} \\
-&amp;amp;= b^3 c^2 a^2
+(a&lt;sup&gt;4 c&lt;/sup&gt;{-2} b&lt;sup&gt;4)&lt;/sup&gt;{-1} &amp;amp;= (b&lt;sup&gt;4)&lt;/sup&gt;{-1} (c^{-2})&lt;sup&gt;{-1} (a&lt;/sup&gt;4)&lt;sup&gt;{-1} \\
+&amp;amp;= (b&lt;/sup&gt;4)&lt;sup&gt;{-1} (c&lt;/sup&gt;2 ) (a&lt;sup&gt;4)&lt;/sup&gt;{-1} \\
+&amp;amp;= (b&lt;sup&gt;7 b&lt;/sup&gt;{-3})&lt;sup&gt;{-1} (c&lt;/sup&gt;2) (a&lt;sup&gt;6 a&lt;/sup&gt;{-2})&lt;sup&gt;{-1} \\
+&amp;amp;= (b&lt;/sup&gt;{-3})&lt;sup&gt;{-1} (c&lt;/sup&gt;2) (a^{-2})&lt;sup&gt;{-1} \\
+&amp;amp;= b&lt;/sup&gt;3 c&lt;sup&gt;2 a&lt;/sup&gt;2
 \end{aligned}&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;10&lt;/h3&gt;
 &lt;p&gt;We naively construct all possible subgroups, pruning possible branches by their properties.&lt;/p&gt;
-&lt;p&gt;Any subgroup must have the identity element. ${R_0}$. (+1)&lt;/p&gt;
-&lt;p&gt;${R_0, X}$ is a subgroup for any reflection $X = H,V,D,D&amp;rsquo;$. (+4)&lt;/p&gt;
+&lt;p&gt;Any subgroup must have the identity element. $\{R_0\}$. (+1)&lt;/p&gt;
+&lt;p&gt;${R_0, X}$ is a subgroup for any reflection $X = H,V,D,D&#39;$. (+4)&lt;/p&gt;
 &lt;p&gt;Considering a subgroup with ${R_0, X_0, X_1}$ for distinct reflections $X_0, X_1$ it must be the case we get rotation $R_s$ for $s \neq 0$. So we cannot have a subgroup restricted on reflections other than the aforementioned case.&lt;/p&gt;
-&lt;p&gt;${ R_0, R_{180} }$. (+1)&lt;/p&gt;
-&lt;p&gt;For any subgroup with $R_{90}$ or $R_{270}$, since it is closed it must contain also ${ R_0, R_{90}, R_{180}, R_{270} }$. (+1)&lt;/p&gt;
-&lt;p&gt;For any subgroup containing ${ R_0, R_{180}, H }$ it must contain also ${ R_0, R_{180}, H, V }$. For any subgroup containing ${ R_0, R_{180}, V }$ it must contain also ${ R_0, R_{180}, V, H }$.
+&lt;p&gt;$\{ R_0, R_{180} \}$. (+1)&lt;/p&gt;
+&lt;p&gt;For any subgroup with $R_{90}$ or $R_{270}$, since it is closed it must contain also $\{ R_0, R_{90}, R_{180}, R_{270} \}$. (+1)&lt;/p&gt;
+&lt;p&gt;For any subgroup containing $\{ R_0, R_{180}, H \}$ it must contain also $\{ R_0, R_{180}, H, V \}$. For any subgroup containing $\{ R_0, R_{180}, V \}$ it must contain also $\{ R_0, R_{180}, V, H \}$.
 (+1)&lt;/p&gt;
-&lt;p&gt;For any subgroup containing ${ R_0, R_{180}, D }$ it must contain also ${ R_0,    R_{180}, D, D&amp;rsquo; }$. For any subgroup containing ${ R_0, R_{180}, D&amp;rsquo; }$ it must contain also ${ R_0, R_{180}, D, D&amp;rsquo; }$. (+1)&lt;/p&gt;
-&lt;p&gt;For any subgroup containing $R_s$ for $s \neq 180$ and any reflection $X = H, V, D, D&amp;rsquo;$, since it is closed, it must contain also ${ R_0, R_{90}, R_{180}, R_{270}, H, V, D, D&amp;rsquo;}$. (+1)&lt;/p&gt;
+&lt;p&gt;For any subgroup containing $\{ R_0, R_{180}, D \}$ it must contain also $\{ R_0,    R_{180}, D, D&#39; \}$. For any subgroup containing $\{ R_0, R_{180}, D&#39; \}$ it must contain also $\{ R_0, R_{180}, D, D&#39; \}$. (+1)&lt;/p&gt;
+&lt;p&gt;For any subgroup containing $R_s$ for $s \neq 180$ and any reflection $X = H, V, D, D&#39;$, since it is closed, it must contain also $\{ R_0, R_{90}, R_{180}, R_{270}, H, V, D, D&#39;\}$. (+1)&lt;/p&gt;
 &lt;p&gt;So far we counted 10 subgroups.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;19&lt;/h3&gt;
-&lt;p&gt;We show the contrapositive. Assume $a^m = a^n$ for $m &amp;gt; n$. Then $a^m a^{-n} = a^n a^{-n}$ implying $a^{m-n} = e$, but $m - n &amp;gt; 0$ so $a$ is of a finite order.&lt;/p&gt;
+&lt;p&gt;We show the contrapositive. Assume $a^m = a^n$ for $m &gt; n$. Then $a^m a^{-n} = a^n a^{-n}$ implying $a^{m-n} = e$, but $m - n &gt; 0$ so $a$ is of a finite order.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;30&lt;/h3&gt;
 &lt;p&gt;The question presumes the uniqueness of $H$. We won&amp;rsquo;t prove it.&lt;/p&gt;
-&lt;p&gt;$H = { 2 (9 k_1 + 15 k_2 + 20 k_3) \mid k_1,k_2,k_3 \in \mathcal{Z} }$.&lt;/p&gt;
+&lt;p&gt;$H = \{ 2 (9 k_1 + 15 k_2 + 20 k_3) \mid k_1,k_2,k_3 \in \mathcal{Z} \}$.&lt;/p&gt;
 &lt;p&gt;Taking $k_1 = k_2 = k_3 = 0$ yields the identity $e = 0$. For $x \in H$ corresponding to $k_i$, Take $-(k_i)$ to obtain the inverse. Closed property is clear from the definition. Associativity follows from $G$. Odd numbers are excluded conforming to the fact $H$ is a proper subgroup.&lt;/p&gt;
 &lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;34&lt;/h3&gt;
 &lt;p&gt;Since $e \in H$ and $e \in K$ by definition, We have $e \in H$.&lt;/p&gt;
@@ -907,10 +906,10 @@ Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &amp;l
 &lt;p&gt;Generators of $\mathcal{Z}_8$ are $1,3,5,7$ since $gcd(1,8) = gcd(3,8) = gcd(5,8) = gcd(7,8) = 1$.&lt;/p&gt;
 &lt;p&gt;Generators of $\mathcal{Z}_{20}$ are $1,3,7,9,11,13,17,19$ since $gcd(1,20) = gcd(3,20) = gcd(7,20) = gcd(9,20) = gcd(11,20) = gcd(13,20) = gcd(17,20) = gcd(19,20) = 1$.&lt;/p&gt;
 &lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;$\langle 3 \rangle = \{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, \dots\} \cup \{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, \dots \} = \{0, 3, 9, 7 , 1, 3, \dots\} \cup \{ -3, 9, -7, 1, -3, \dots \} = \{0, 3, 9, 7 , 1, 3\} \cup \{ 17, 9, 13, 1, 17 \} = \{0, 1, 3, 7, 9, 13, 17\}$.&lt;/p&gt;
-&lt;p&gt;$\langle 7 \rangle = \{ 7^0, 7^1, 7^2, 7^3, 7^4, 7^5, \dots\} \cup \{ 7^{-1}, 7^{-2}, 7^{-3}, 7^{-4}, 7^{-5}, \dots \} = \{ 0, 7, 9, 3, 1, 7, \dots \} \cup \{ -7, 9, -3, 1, -7, \dots \} = \{ 0, 7, 9, 3, 1 \} \cup \{ 13, 1, 17, 1 \} = \{ 0, 1, 3, 7, 9, 13, 17 \}$&lt;/p&gt;
+&lt;p&gt;$\langle 3 \rangle = \\{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, \dots\\} \cup \\{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, \dots \\} = \\{0, 3, 9, 7 , 1, 3, \dots\\} \cup \\{ -3, 9, -7, 1, -3, \dots \\} = \\{0, 3, 9, 7 , 1, 3\\} \cup \\{ 17, 9, 13, 1, 17 \\} = \\{0, 1, 3, 7, 9, 13, 17\\}$.&lt;/p&gt;
+&lt;p&gt;$\langle 7 \rangle = \\{ 7^0, 7^1, 7^2, 7^3, 7^4, 7^5, \dots\\} \cup \\{ 7^{-1}, 7^{-2}, 7^{-3}, 7^{-4}, 7^{-5}, \dots \\} = \\{ 0, 7, 9, 3, 1, 7, \dots \\} \cup \\{ -7, 9, -3, 1, -7, \dots \\} = \\{ 0, 7, 9, 3, 1 \\} \cup \\{ 13, 1, 17, 1 \\} = \\{ 0, 1, 3, 7, 9, 13, 17 \\}$&lt;/p&gt;
 &lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;10&lt;/h3&gt;
-&lt;p&gt;By corollary (page 82). One generator is $\langle 24/8 \rangle = \langle 3 \rangle = \{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, 3^6, 3^7, 3^8, 3^9 \} \cup \{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, 3^{-6}, 3^{-7}, 3^{-8}, 3^{-9} \} = \{ 0, 3, 6, 9, 12, 15, 18, 21, 0 \} \cup \{ 21, 6, 15, 12, 9, 18, 3, 0, 21 \} = \{ 0, 3, 6, 9, 12, 15, 18, 21 \}$&lt;/p&gt;
+&lt;p&gt;By corollary (page 82). One generator is $\langle 24/8 \rangle = \langle 3 \rangle = \\{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, 3^6, 3^7, 3^8, 3^9 \\} \cup \\{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, 3^{-6}, 3^{-7}, 3^{-8}, 3^{-9} \\} = \\{ 0, 3, 6, 9, 12, 15, 18, 21, 0 \\} \cup \\{ 21, 6, 15, 12, 9, 18, 3, 0, 21 \\} = \\{ 0, 3, 6, 9, 12, 15, 18, 21 \\}$&lt;/p&gt;
 &lt;p&gt;Note any generator of that subgroup must be contained in it as $a = a^1 \in \langle a \rangle$.&lt;/p&gt;
 &lt;p&gt;By corollary 3 (page 80). Generators are $3^5 = 15$ and $3^7 = 21$, as $gcd(24,5) = gcd(24, 7) = 1$.&lt;/p&gt;
 &lt;p&gt;By corollary 3 (page 80). Generators of arbitrary $G$ are $1,5,7,11,13,17,19,23$ since $gcd(24,i) = 1$. Observe since $G$ is generated by $a$, Any candidate must be of the form $a^i$. So we covered
@@ -918,59 +917,59 @@ all of them.&lt;/p&gt;
 &lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;11&lt;/h3&gt;
 &lt;p&gt;Follows trivially by corollary 3 (page 80), as $gcd(n, -1) = 1$.&lt;/p&gt;
 &lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;27&lt;/h3&gt;
-&lt;p&gt;We know given a positive integer $n$, there is a complex $z$ such that $z^n = 1$. Then $S_n = \{ z^0, z^1, z^2, \dots \} = \{ z^0, z^1, \dots, z^{n-1} \}$.
+&lt;p&gt;We know given a positive integer $n$, there is a complex $z$ such that $z^n = 1$. Then $S_n = \\{ z^0, z^1, z^2, \dots \\} = \\{ z^0, z^1, \dots, z^{n-1} \\}$.
 Clearly it is a group.&lt;/p&gt;
-&lt;p&gt;For $z^{-i}$ observe $-i = n(m) + r$ where $0 \leq r &amp;lt; n$. Then $-i-r$ is divisable by $n$, and by &lt;em&gt;theorem 4.1&lt;/em&gt; (page 76), $z^{-i} = z^r$. Then $\{ z^{-1}, z^{- 2}, \dots \}$ is contained in $S_n$.&lt;/p&gt;
+&lt;p&gt;For $z^{-i}$ observe $-i = n(m) + r$ where $0 \leq r &lt; n$. Then $-i-r$ is divisable by $n$, and by &lt;em&gt;theorem 4.1&lt;/em&gt; (page 76), $z^{-i} = z^r$. Then $\\{ z^{-1}, z^{- 2}, \dots \\}$ is contained in $S_n$.&lt;/p&gt;
 &lt;p&gt;Thus we conclude $S_n = \langle z \rangle$ is a subgroup of order $n$.&lt;/p&gt;
 &lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;30&lt;/h3&gt;
-&lt;p&gt;We call a subgroup &lt;em&gt;new&lt;/em&gt; if it is not ${e}$ or $G$. Observe constructing it contradicts a given hypothesis.&lt;/p&gt;
+&lt;p&gt;We call a subgroup &lt;em&gt;new&lt;/em&gt; if it is not $\{e\}$ or $G$. Observe constructing it contradicts a given hypothesis.&lt;/p&gt;
 &lt;p&gt;Select $a \neq e$. If $\langle a \rangle$ is of infinite order, then $\langle a^2 \rangle$ is a &lt;em&gt;new&lt;/em&gt; subgroup. So $\langle a \rangle$ is of finite order $n$.&lt;/p&gt;
 &lt;p&gt;If $\langle a \rangle \neq G$ then $\langle a \rangle$ is a &lt;em&gt;new&lt;/em&gt; subgroup. So $\langle a \rangle = G$.&lt;/p&gt;
-&lt;p&gt;If $n$ is not prime, i.e composite, then by &lt;em&gt;theorem 4.3&lt;/em&gt; (page 81), we can take divisor $k$ such that $\langle a^{n/k} \rangle$ is a &lt;em&gt;new&lt;/em&gt; subgroup of order $k$. Note by divisibility $1 &amp;lt; k &amp;lt; n$.&lt;/p&gt;
+&lt;p&gt;If $n$ is not prime, i.e composite, then by &lt;em&gt;theorem 4.3&lt;/em&gt; (page 81), we can take divisor $k$ such that $\langle a^{n/k} \rangle$ is a &lt;em&gt;new&lt;/em&gt; subgroup of order $k$. Note by divisibility $1 &lt; k &lt; n$.&lt;/p&gt;
 &lt;p&gt;It follows $G$ is a finite cyclic group of prime order $n$.&lt;/p&gt;
 &lt;h3 id=&#34;section-6&#34; class=&#34;unnumbered&#34;&gt;36&lt;/h3&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;4&lt;/th&gt;
-&lt;th&gt;8&lt;/th&gt;
-&lt;th&gt;12&lt;/th&gt;
-&lt;th&gt;16&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;12&lt;/td&gt;
-&lt;td&gt;16&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;4&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;8&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;12&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;16&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;16&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;12&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;12&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;16&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;12&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;16&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;12&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;16&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;4&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;8&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;12&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;16&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;All entries are contained in ${ 4, 8, 12, 16 }$, So closed. $16$ is the identity. Every row has an $16$ entry showing inverses existince. The group is cyclic.&lt;/p&gt;
+&lt;p&gt;All entries are contained in $\{ 4, 8, 12, 16 \}$, So closed. $16$ is the identity. Every row has an $16$ entry showing inverses existince. The group is cyclic.&lt;/p&gt;
 &lt;p&gt;Its generators are all its elements, $4, 8, 12$ and $16$. To see why you can trace the table. For example $8^1 = 8$, $8^2 = 4$, $8^3 = 8^2 \cdot 8 = 4 \cdot 8 = 12$, $8^4 = 8^3 \cdot 8 = 12 \cdot 8 = 16$.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;48&lt;/h3&gt;
 &lt;p&gt;$H$ is a subgroup by &lt;em&gt;Theorem 3.2&lt;/em&gt; (page 63). Given $a = 10 k_0 = 8 k_1$ and $b = 10 k_2 = 8 k_3$, Trivially $a+b = 10(k_0 + k_2) = 8(k_1 + k_3) \in H$. Also $-a = 10 (-k_0) = 8 (-k_1) \in H$.&lt;/p&gt;
@@ -1020,7 +1019,7 @@ Clearly it is a group.&lt;/p&gt;
 &lt;p&gt;$2^n \cdot 3^{2n} = 18^n$. Since $18 \mod 17 = 1$, We get $18^2 \mod 17 = 1 \cdot 1 \mod 17 = 1$. Generally $18^n \mod 17 = 1$, and finally $18^n - 1 \mod 17 = 1 - 1 \mod 17 = 0$.&lt;/p&gt;
 &lt;h3 id=&#34;section-7&#34; class=&#34;unnumbered&#34;&gt;33&lt;/h3&gt;
 &lt;p&gt;We prove a relaxed version of the problem and hence assume $a$ is positive.&lt;/p&gt;
-&lt;p&gt;We show the contrapositive. Consider $S$ which does not contain every integer $z \geq a$. Then there&amp;rsquo;s some integer $z_0 \geq a$ where $z_0 \notin S$. In other words the set $R ={ z ; | ; z \geq a \wedge z \notin S }$ is not empty. By the well-ordering principle $R$ has a smallest member, Call it $z_s$. Note $z_s \neq a$ So we can safely take $z_s - 1 \in S$. Therefore it is NOT the case that if integer $z \in S$ then $z+1 \in S$ by the counter-example we constructed.&lt;/p&gt;
+&lt;p&gt;We show the contrapositive. Consider $S$ which does not contain every integer $z \geq a$. Then there&amp;rsquo;s some integer $z_0 \geq a$ where $z_0 \notin S$. In other words the set $R =\{ z \; | \; z \geq a \wedge z \notin S \}$ is not empty. By the well-ordering principle $R$ has a smallest member, Call it $z_s$. Note $z_s \neq a$ So we can safely take $z_s - 1 \in S$. Therefore it is NOT the case that if integer $z \in S$ then $z+1 \in S$ by the counter-example we constructed.&lt;/p&gt;
 &lt;p&gt;For a general version of any integer $a$, We would partition set $R$ to a finite subset of non-positives and another subset of positives. Then we consider the smallest of positives by well-ordering, and smallest of non-positives, and take the minimum of both. Recall any finite set has a smallest member.&lt;/p&gt;
 &lt;h3 id=&#34;section-8&#34; class=&#34;unnumbered&#34;&gt;35&lt;/h3&gt;
 &lt;p&gt;Note $(n+3)^3 = n^3 + 9(n^2 + 3n + 3)$ by trivial algebraic operations.&lt;/p&gt;
@@ -1054,73 +1053,73 @@ $(\beta \alpha)(a_0) = (\beta \alpha)(a_1)$. In other notation, $\beta(\alpha(a_
 &lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
 &lt;h3 id=&#34;2&#34;&gt;2&lt;/h3&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;R_0&lt;/th&gt;
-&lt;th&gt;R_120&lt;/th&gt;
-&lt;th&gt;R_240&lt;/th&gt;
-&lt;th&gt;D&lt;/th&gt;
-&lt;th&gt;D&#39;&lt;/th&gt;
-&lt;th&gt;D&#39;&#39;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;D&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;D&#39;&#39;&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;td&gt;D&#39;&lt;/td&gt;
-&lt;td&gt;R_120&lt;/td&gt;
-&lt;td&gt;R_240&lt;/td&gt;
-&lt;td&gt;R_0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;R_0&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;R_120&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;R_240&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;D&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;D&#39;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;D&#39;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_120&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_240&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;R_0&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Two pictures.
 
@@ -1140,7 +1139,7 @@ $(\beta \alpha)(a_0) = (\beta \alpha)(a_1)$. In other notation, $\beta(\alpha(a_
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./examples.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -1149,7 +1148,7 @@ $(\beta \alpha)(a_0) = (\beta \alpha)(a_1)$. In other notation, $\beta(\alpha(a_
 &lt;p&gt;&lt;strong&gt;a.&lt;/strong&gt; $V$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $R_{270}$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;c.&lt;/strong&gt; $R_0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;d.&lt;/strong&gt; $R_0$, $R_{180}$, $H$, $V$, $D$, $D&amp;rsquo;$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;d.&lt;/strong&gt; $R_0$, $R_{180}$, $H$, $V$, $D$, $D&#39;$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;e.&lt;/strong&gt; None.&lt;/p&gt;
 &lt;h3 id=&#34;5&#34;&gt;5&lt;/h3&gt;
 &lt;p&gt;We follow our intuition and generalize the cases of $D_4$ and $D_3$ with no formal   argumentation.&lt;/p&gt;
@@ -1165,7 +1164,7 @@ $(\beta \alpha)(a_0) = (\beta \alpha)(a_1)$. In other notation, $\beta(\alpha(a_
 &lt;h3 id=&#34;13&#34;&gt;13&lt;/h3&gt;
 &lt;p&gt;$D = H R_{90} = R_{90} V$.&lt;/p&gt;
 &lt;h3 id=&#34;21&#34;&gt;21&lt;/h3&gt;
-&lt;p&gt;$X \neq H, V, D, D&amp;rsquo;, R_0, R_{180}$, As otherwise $X^2 = R_0$ and then $Y = R_{90}$.  For either of the remaining two cases $X = R_{90}$ or $X = R_{270}$, Necessarily $Y  = R_{270}$.&lt;/p&gt;
+&lt;p&gt;$X \neq H, V, D, D&#39;, R_0, R_{180}$, As otherwise $X^2 = R_0$ and then $Y = R_{90}$.  For either of the remaining two cases $X = R_{90}$ or $X = R_{270}$, Necessarily $Y  = R_{270}$.&lt;/p&gt;
 </description>
     </item>
     

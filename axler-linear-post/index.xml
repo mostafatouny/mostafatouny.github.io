@@ -7,7 +7,7 @@
     <description>Axler&#39;s Linear Algebra</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Axler&#39;s Linear Algebra</title>
       <link>https://mostafatouny.github.io/axler-linear-post/</link>
     </image>
@@ -77,7 +77,7 @@
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-11.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -113,13 +113,13 @@
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-17.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For $normal \ T$, $range \ T$ = $range \ T^*$ and $null \ T = null \ T^*$. For any $T$, $range \ T = (null \ T^*)^\bot$. See &lt;em&gt;ex.16&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For $normal \ T$, $range \ T \cap null \ T = {0}$.&lt;/p&gt;
-&lt;p&gt;Observe $L.H.S = (null \ T^*)^\bot \cap (null \ T^*)$ by the aforementioned facts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For $normal \ T$, $range \ T$ = $range \ T^\*$ and $null \ T = null \ T^\*$. For any $T$, $range \ T = (null \ T^\*)^\bot$. See &lt;em&gt;ex.16&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For $normal \ T$, $range \ T \cap null \ T = \{0\}$.&lt;/p&gt;
+&lt;p&gt;Observe $L.H.S = (null \ T^\*)^\bot \cap (null \ T^\*)$ by the aforementioned facts.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $null \ T^k = null \ T$.&lt;/p&gt;
 &lt;p&gt;Clearly $null \ T \subset null \ T^k$ as $T0 = 0$ for any operator $T$. It remains to show $null \ T^k \subset null \ T$.&lt;/p&gt;
 &lt;p&gt;$v \rightarrow^T v_1 \rightarrow^T v_2 \rightarrow^T \dots \rightarrow^T v_k = 0$.&lt;/p&gt;
@@ -128,7 +128,7 @@
 &lt;p&gt;$v_1 \in range \ T \cap null \ T$, so $v_1 = 0$.&lt;/p&gt;
 &lt;p&gt;Thus $Tv = v_1 = 0$, and $v \in null \ T$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $range \ T^k = range \ T$.&lt;/p&gt;
-&lt;p&gt;Let $T&amp;rsquo;$ be the same as $T$ but restricted on subspace $range \ T$. Observe it is a linear operator.&lt;/p&gt;
+&lt;p&gt;Let $T&#39;$ be the same as $T$ but restricted on subspace $range \ T$. Observe it is a linear operator.&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -146,12 +146,12 @@
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./T_dot.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;We prove $null \ T&amp;rsquo; = {0}$. Observe for $v \in null \ T&amp;rsquo;$, $v \in range \ T \cap null \ T$, and hence $v = 0$. Clearly $T&#39;0 = 0$ as $T0 = 0$ for any operator $T$.&lt;/p&gt;
-&lt;p&gt;It follows $dim \ null \ T&amp;rsquo; = 0$. By &lt;em&gt;The Fundamental Theorem of Linear Maps&lt;/em&gt; (See Axler page 63), $dim \ range \ T = dim \ range \ T&amp;rsquo;$. But by definition $range \ T&amp;rsquo; \subset range \ T$, and therefore $range \ T&amp;rsquo; = range \ T$.&lt;/p&gt;
+&lt;p&gt;We prove $null \ T&#39; = \{0\}$. Observe for $v \in null \ T&#39;$, $v \in range \ T \cap null \ T$, and hence $v = 0$. Clearly $T&#39;0 = 0$ as $T0 = 0$ for any operator $T$.&lt;/p&gt;
+&lt;p&gt;It follows $dim \ null \ T&#39; = 0$. By &lt;em&gt;The Fundamental Theorem of Linear Maps&lt;/em&gt; (See Axler page 63), $dim \ range \ T = dim \ range \ T&#39;$. But by definition $range \ T&#39; \subset range \ T$, and therefore $range \ T&#39; = range \ T$.&lt;/p&gt;
 &lt;p&gt;We conclude $T[range \ T] = range \ T$, The image of $range \ T$ under $T$ is exactly $range \ T$. Clearly it suffices to prove our intended theorem.&lt;/p&gt;
 &lt;h3 id=&#34;ex-19&#34;&gt;Ex. 19&lt;/h3&gt;
 &lt;p&gt;
@@ -171,7 +171,7 @@
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-19.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;

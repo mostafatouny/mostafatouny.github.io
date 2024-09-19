@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mostafatouny.github.io/</loc>
+    <lastmod>2024-07-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://mostafatouny.github.io/post/</loc>
     <lastmod>2024-07-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -56,10 +60,6 @@
   </url><url>
     <loc>https://mostafatouny.github.io/post/isabel-graph-pset/</loc>
     <lastmod>2024-06-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/</loc>
-    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/rog-adam-post/</loc>
@@ -464,9 +464,6 @@
   </url><url>
     <loc>https://mostafatouny.github.io/post/global-ai-bootcamp/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://mostafatouny.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://mostafatouny.github.io/publication_types/</loc>

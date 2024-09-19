@@ -7,7 +7,7 @@
     <description>Harvey&#39;s Randomized Algorithms</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Harvey&#39;s Randomized Algorithms</title>
       <link>https://mostafatouny.github.io/harvey-rand-post/</link>
     </image>
@@ -23,7 +23,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def randElement(A[1..n])
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      X = random( [n] )
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return A[X]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since the probability space is uniform, For event $M = { \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n }$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since the probability space is uniform, For event $M = \{ \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n \}$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;
 &lt;h4 id=&#34;part-ii&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
 &lt;p&gt;Additionally we certify if the randomly generated element is in middle half.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def randElement2(A[1..n])
@@ -83,36 +83,38 @@
 &lt;p&gt;&lt;strong&gt;Definition 2.&lt;/strong&gt; Given $x$ denote indices of 1-bits by &lt;em&gt;1-bits-indices&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Lemma 3.&lt;/strong&gt; &lt;em&gt;1-bits-indices&lt;/em&gt; decide the parity.&lt;/p&gt;
 &lt;p&gt;Observe for any $r \in [2^k]$.
+&lt;/p&gt;
 $$
 BitwiseAnd(x_i,r_i) =
 \begin{cases}
-0 &amp;amp; \text{if } x_i = 0 \\
-r_i &amp;amp; \text{if } x_i = 1
+    0 &amp; \text{if } x_i = 0 \\\\
+    r_i &amp; \text{if } x_i = 1
 \end{cases}
-$$
+$$&lt;p&gt;
 So we can restrict our focus only on &lt;em&gt;1-bits-indices&lt;/em&gt; to compute the parity. In other words
+&lt;/p&gt;
 $$
 Parity(BitwiseAnd(x,r)) =
 \begin{cases}
-0 &amp;amp; \text{if $r$ has even 1 bits in } \textit{1-bits-indices} \\
-1 &amp;amp; \text{if $r$ has odd 1 bits in } \textit{1-bits-indices}
+    0 &amp; \text{if $r$ has even 1 bits in } \textit{1-bits-indices} \\\\
+    1 &amp; \text{if $r$ has odd 1 bits in } \textit{1-bits-indices}
 \end{cases}
-$$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 4.&lt;/strong&gt; The number of &lt;em&gt;k-length&lt;/em&gt; strings containing even number of 1 bits in &lt;em&gt;1-bit-indices&lt;/em&gt; is $2^{k-1}$.&lt;/p&gt;
+$$&lt;p&gt;&lt;strong&gt;Lemma 4.&lt;/strong&gt; The number of &lt;em&gt;k-length&lt;/em&gt; strings containing even number of 1 bits in &lt;em&gt;1-bit-indices&lt;/em&gt; is $2^{k-1}$.&lt;/p&gt;
 &lt;p&gt;Define a bijection
+&lt;/p&gt;
 $$
-f: \{ \text{strings of even 1-bits in } \textit{1-bits-indices} \} \rightarrow \{ \text{strings of odd 1-bits in } \textit{1-bits-indices} \}
-$$
+f: \\{ \text{strings of even 1-bits in } \textit{1-bits-indices} \\} \rightarrow \\{ \text{strings of odd 1-bits in } \textit{1-bits-indices} \\}
+$$&lt;p&gt;
 Mapping a binary string to the same string but with last bit in &lt;em&gt;1-bit-indices&lt;/em&gt; flipped. If that bit is $s_m$, Then $f(s_1s_2 \dots s_k) = s_1 s_2 \dots \overline{s_{m}} \dots s_{k-1} s_k$. It follows domain and range have the same cardinality, and since they partition the set of &lt;em&gt;k-length&lt;/em&gt; strings, the result follows.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Theorem 5.&lt;/strong&gt; Fixing any binary $x \neq 0$, Among all $r \in [2^k]$, Exactly half of them yield even parity, i.e $Parity( BitwiseAnd(x,r) ) = 0$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Corollay 6.&lt;/strong&gt; Given $x \in [2^k]$, The number of zeros in the vector mentioned in question is
+&lt;/p&gt;
 $$
 \begin{cases}
-2^k &amp;amp; \text{if } x = 0 \\
-2^{k-1} &amp;amp; \text{if } x \neq 0
+    2^k &amp; \text{if } x = 0 \\\\
+    2^{k-1} &amp; \text{if } x \neq 0
 \end{cases}
-$$&lt;/p&gt;
-</description>
+$$</description>
     </item>
     
     <item>
@@ -126,7 +128,7 @@ $$&lt;/p&gt;
 &lt;h4 id=&#34;part-i&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
 &lt;p&gt;Take $m = n-1$, and let $R$ be the algorithm&amp;rsquo;s output. $R = 0$ if and only if $RNG()$ returned $0$ or $n-1$. So $Pr[R = 0] = 2/n$ and $Pr[R = i] = 1/n$ for $i \neq 0$.&lt;/p&gt;
 &lt;h4 id=&#34;part-ii&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
-&lt;p&gt;Define $k = \lfloor n/m \rfloor$, So $k$ is the greatest integer such that $mk \leq n$. Define $r = n \mod mk$, so $n = mk + r$ where $0 \leq r &amp;lt; m$.&lt;/p&gt;
+&lt;p&gt;Define $k = \lfloor n/m \rfloor$, So $k$ is the greatest integer such that $mk \leq n$. Define $r = n \mod mk$, so $n = mk + r$ where $0 \leq r &lt; m$.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def goodSampler(m)
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      k = floor( n/m )
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -135,16 +137,17 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      while r &amp;gt;= mk
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return r mod m
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Uniformity&lt;/strong&gt;. Assume the algorithm terminates. So we are given $r &amp;lt; mk$ and we want to prove $Pr[r \mod m = i \mid r &amp;lt; mk] = \nfrac{1}{m}$ for $i \in [m]$. Observe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Uniformity&lt;/strong&gt;. Assume the algorithm terminates. So we are given $r &lt; mk$ and we want to prove $Pr[r \mod m = i \mid r &lt; mk] = \nfrac{1}{m}$ for $i \in [m]$. Observe
 \begin{aligned}
 Pr[r \mod m = i \mid r &amp;lt; mk] &amp;amp;= \nfrac{Pr[r \mod m = i \cap r &amp;lt; mk]}{Pr[r &amp;lt; mk]} \\
 &amp;amp;= \nfrac{k/n}{mk/n} = \nfrac{k}{n} \cdot \nfrac{n}{mk} = \nfrac{1}{m}
 \end{aligned}
 Recall by uniformity the probability is basically the number of outcomes satisfying the event over all possible outcomes. Clearly the $k$ outcomes of $r$ yielding $i$ by the algorithm are $(0)m + i, (1)m + i, (2)m + i, \dots, (k-1)m + (i)$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;. For an iteration of &lt;code&gt;do-while&lt;/code&gt;, probability of termination is $mk/n$. So in expectation it takes $n/mk$ trials until it terminates. It follows
+&lt;/p&gt;
 $$
-1 \leq \nfrac{n}{mk} = 1 + \nfrac{r}{mk} &amp;lt; 1 + \nfrac{m}{mk} = 1 + \nfrac{1}{k} \leq 2.
-$$
+1 \leq \nfrac{n}{mk} = 1 + \nfrac{r}{mk} &lt; 1 + \nfrac{m}{mk} = 1 + \nfrac{1}{k} \leq 2.
+$$&lt;p&gt;
 Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
 &lt;h3 id=&#34;ex.-2&#34; class=&#34;unnumbered&#34;&gt;Ex. 2&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Distribution&lt;/strong&gt;. see &lt;em&gt;ex-2.2&lt;/em&gt; notebook.&lt;/p&gt;
@@ -166,7 +169,7 @@ Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.2_0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -188,7 +191,7 @@ Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.2_1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -220,7 +223,7 @@ Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        totalProb -= P[i]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; Computing a probability out of a subset of probabilities.&lt;/p&gt;
 &lt;p&gt;We want to compute a probability but in ratio to some subset of probabilities.&lt;/p&gt;
-&lt;p&gt;For example if $Pr[X = i] = 1/4$ for $i \in { 1,2,3,4 }$, But we are given $X \not\in {1, 2}$. Then $Pr[X = 3 \mid X \not\in {1,2}] = \nfrac{Pr[X = 3 \cap X \not\in {1,2}]}{Pr[X \not\in {1,2}]} = \nfrac{1/4}{1/2} = 2 \cdot \nfrac{1}{4}$.&lt;/p&gt;
+&lt;p&gt;For example if $Pr[X = i] = 1/4$ for $i \in \{ 1,2,3,4 \}$, But we are given $X \not\in \{1, 2\}$. Then $Pr[X = 3 \mid X \not\in \{1,2\}] = \nfrac{Pr[X = 3 \cap X \not\in \{1,2\}]}{Pr[X \not\in \{1,2\}]} = \nfrac{1/4}{1/2} = 2 \cdot \nfrac{1}{4}$.&lt;/p&gt;
 &lt;p&gt;Generally we want to find $x$ where, For sum $S$ of some subset of probabilities, $\nfrac{Pr[X = i]}{S} = \nfrac{x}{1}$, so $x = \nfrac{1}{S} \cdot Pr[X=i]$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; &lt;code&gt;categoricalSampler&lt;/code&gt; returns a category.&lt;/p&gt;
 &lt;p&gt;If the algorithm reached iteration $k$, &lt;code&gt;i_prob_uni&lt;/code&gt; would be $1$ so &lt;code&gt;biasedBit&lt;/code&gt; surely fires.&lt;/p&gt;
@@ -291,7 +294,7 @@ Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
 Pr[X = z] &amp;amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\log k}] \\
 &amp;amp;= Pr[X \notin O_1 \mid X \notin O_2 \cap \dots \cap X \notin O_{\log k}] \\ &amp;amp;\cdot Pr[X \notin O_2 \mid X \notin O_{3} \dots \cap X \notin O_{\log k}] \cdot .. \cdot Pr[X \notin O_{\log k}]
 \end{aligned}&lt;/p&gt;
-&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output, and let $R_i$ correspond to &lt;code&gt;biasedBit&lt;/code&gt; in iteration $i$. Clearly $Pr[R \in {l, l+1, \dots, mid}] = Pr[R_i = True]$ and $Pr[R \in {mid+1, mid+2, \dots, r}] = Pr[R_i = False]$. The algorithm samples $z$ if and only if $R_1 = x_1 \cap R_2 = x_2 \cap \dots \cap R_{\log k} = x_{\log k}$ corresponding to $x_i = True$ if $z \notin {mid+1, \dots, r} = O_i$. In other words the algorithm satisfies the definition of $Pr[X = z]$.&lt;/p&gt;
+&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output, and let $R_i$ correspond to &lt;code&gt;biasedBit&lt;/code&gt; in iteration $i$. Clearly $Pr[R \in \{l, l+1, \dots, mid\}] = Pr[R_i = True]$ and $Pr[R \in \{mid+1, mid+2, \dots, r\}] = Pr[R_i = False]$. The algorithm samples $z$ if and only if $R_1 = x_1 \cap R_2 = x_2 \cap \dots \cap R_{\log k} = x_{\log k}$ corresponding to $x_i = True$ if $z \notin \{mid+1, \dots, r\} = O_i$. In other words the algorithm satisfies the definition of $Pr[X = z]$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;. Clearly &lt;code&gt;cumulativeSum&lt;/code&gt; takes $\mathcal{O}(k)$ and &lt;code&gt;recursiveSampler&lt;/code&gt; takes $\mathcal{O}(\log k)$.&lt;/p&gt;
 &lt;h3 id=&#34;ex.-4&#34; class=&#34;unnumbered&#34;&gt;Ex. 4&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Idea.&lt;/strong&gt; See the following sketch for an intuition.&lt;/p&gt;
@@ -312,7 +315,7 @@ Pr[X = z] &amp;amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin 
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-4_0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -476,7 +479,7 @@ Pr[X = z] &amp;amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin 
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.7_0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;

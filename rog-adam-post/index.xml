@@ -7,7 +7,7 @@
     <description>Calculus</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://mostafatouny.github.io/media/icon_hucf8be6c19c9550cf4f3e1aa359e52dbd_889622_512x512_fill_lanczos_center_3.png</url>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Calculus</title>
       <link>https://mostafatouny.github.io/rog-adam-post/</link>
     </image>
@@ -23,16 +23,16 @@
 &lt;p&gt;denote $a_n = \nfrac{f^n(0)}{n!}$.&lt;/p&gt;
 &lt;p&gt;Observe
 \begin{align*}
-f^0(x) &amp;amp;= \nfrac{1}{1-2x} &amp;amp;f^0(0) = 1 \\
-f&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;amp;f&amp;rsquo;(0) = 1 \cdot 2 \\
-f&amp;rsquo;&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;amp;f&amp;rsquo;&amp;rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\
+f&lt;sup&gt;0(x) &amp;amp;= \nfrac{1}{1-2x} &amp;amp;f&lt;/sup&gt;0(0) = 1 \\
+f&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot (1-2x)&lt;sup&gt;{-2} &amp;amp;f&amp;rsquo;(0) = 1 \cdot 2 \\
+f&amp;rsquo;&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot 2&lt;/sup&gt;2 \cdot (1 - 2x)&lt;sup&gt;{-3} &amp;amp;f&amp;rsquo;&amp;rsquo;(0) = 1 \cdot 2 \cdot 2&lt;/sup&gt;2 \\
 \end{align*}
 Generally $f^n(x) = n! \cdot 2^n (1 - 2x)^{-(n+1)}$ and $f^n(0) = n! \cdot 2^n$. It follows:
 \begin{align*}
-\nfrac{1}{1-2x} &amp;amp;= 1 + 2^1 x^1 + 2^2 x^2 + \dots \\
+\nfrac{1}{1-2x} &amp;amp;= 1 + 2&lt;sup&gt;1 x&lt;/sup&gt;1 + 2&lt;sup&gt;2 x&lt;/sup&gt;2 + \dots \\
 r &amp;amp;= 2x \\
-\nfrac{1}{1-2x} &amp;amp;= (2x)^0 + (2x)^1 + (2x)^2 + \dots + (2x)^n \\
-&amp;amp;= 1 + 2^1 x + 2^2 x^2 + \dots + 2^n x^n
+\nfrac{1}{1-2x} &amp;amp;= (2x)&lt;sup&gt;0 + (2x)&lt;sup&gt;1 + (2x)&lt;sup&gt;2 + \dots + (2x)&lt;sup&gt;n \\
+&amp;amp;= 1 + 2&lt;/sup&gt;1 x + 2&lt;/sup&gt;2 x&lt;/sup&gt;2 + \dots + 2&lt;/sup&gt;n x^n
 \end{align*}
 Hence it is valid for
 \begin{align*}
@@ -68,15 +68,15 @@ Hence it is valid for
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.90.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;\begin{align*}
-c^2 &amp;amp;= (a \sin \theta)^2 + (b - a \cos \theta)^2 \\
-&amp;amp;= a^2 \sin^2 \theta + b^2 + a^2 \cos^2 \theta - 2 ab \cos \theta \\
-&amp;amp;= a^2 (\sin^2 \theta + \cos^2 \theta ) + b^2 - 2ab \cos \theta \\
-&amp;amp;= a^2 + b^2 - 2ab \cos \theta
+c&lt;sup&gt;2 &amp;amp;= (a \sin \theta)&lt;sup&gt;2 + (b - a \cos \theta)&lt;sup&gt;2 \\
+&amp;amp;= a&lt;/sup&gt;2 \sin&lt;/sup&gt;2 \theta + b&lt;/sup&gt;2 + a&lt;sup&gt;2 \cos&lt;/sup&gt;2 \theta - 2 ab \cos \theta \\
+&amp;amp;= a&lt;sup&gt;2 (\sin&lt;/sup&gt;2 \theta + \cos&lt;sup&gt;2 \theta ) + b&lt;/sup&gt;2 - 2ab \cos \theta \\
+&amp;amp;= a&lt;sup&gt;2 + b&lt;/sup&gt;2 - 2ab \cos \theta
 \end{align*}&lt;/p&gt;
 &lt;h3 id=&#34;ex-391&#34;&gt;Ex. 3.91&lt;/h3&gt;
 &lt;p&gt;
@@ -96,7 +96,7 @@ c^2 &amp;amp;= (a \sin \theta)^2 + (b - a \cos \theta)^2 \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.91.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -105,7 +105,7 @@ c^2 &amp;amp;= (a \sin \theta)^2 + (b - a \cos \theta)^2 \\
 L.H.S &amp;amp;= (xv + w) \cdot (xv + w) \\
 &amp;amp;= xv \cdot xv + 2xv \cdot w + w \cdot w \\
 &amp;amp;= x^2 (v \cdot v) + (2v \cdot w)x + ||w||^2 \\
-&amp;amp;= ||v||^2 x^2 + (2v \cdot w)x + ||w||^2 \\
+&amp;amp;= ||v||&lt;sup&gt;2 x&lt;/sup&gt;2 + (2v \cdot w)x + ||w||^2 \\
 &amp;amp;= R.H.S
 \end{align*}&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;. We know $f(x) = ax^2 + bx + c \geq 0$. Geometrically a parabola which  does not intersect the x-axis at two points. So there are no two distinct real       solutions, and hence the discriminent $b^2 - 4ac \leq 0$.&lt;/p&gt;
@@ -127,7 +127,7 @@ L.H.S &amp;amp;= (xv + w) \cdot (xv + w) \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.92.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -155,7 +155,7 @@ Thus, $||v+w|| \leq ||v|| + ||w||$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.93.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -186,14 +186,14 @@ v &amp;amp;\cdot w \\
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.94.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;It suffices to show $\cos \theta = \nfrac{V \cdot V_\theta}{||V|| \cdot ||V_\theta||}$. But $||V|| = ||V_\theta||$, Then
 \begin{align*}
-R.H.S &amp;amp;= \nfrac{(x^2 \cos \theta + xy \sin \theta)+(-xy \sin \theta + y^2 \cos   \theta)}{||V||^2} \\
-&amp;amp;= \nfrac{\cos \theta (x^2 + y^2)}{||V||^2} \\
+R.H.S &amp;amp;= \nfrac{(x&lt;sup&gt;2 \cos \theta + xy \sin \theta)+(-xy \sin \theta + y&lt;/sup&gt;2 \cos   \theta)}{||V||&lt;sup&gt;2} \\
+&amp;amp;= \nfrac{\cos \theta (x&lt;/sup&gt;2 + y^2)}{||V||^2} \\
 &amp;amp;= \nfrac{\cos \theta  ||V||^2}{||V||^2} \\
 &amp;amp;= L.H.S
 \end{align*}&lt;/p&gt;
@@ -215,7 +215,7 @@ R.H.S &amp;amp;= \nfrac{(x^2 \cos \theta + xy \sin \theta)+(-xy \sin \theta + y^
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.95.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -227,7 +227,7 @@ R.H.S &amp;amp;= \nfrac{(x^2 \cos \theta + xy \sin \theta)+(-xy \sin \theta + y^
 \end{align*}
 It follows
 \begin{align*}
-\cos^2 \alpha &amp;amp;+ \cos^2 \beta + \cos^2 \gamma \\
+\cos&lt;sup&gt;2 \alpha &amp;amp;+ \cos&lt;/sup&gt;2 \beta + \cos^2 \gamma \\
 &amp;amp;= (||V_x|| / ||V||)^2 + (||V_y|| / ||V||)^2 + (||V_z|| / ||V||)^2 \\
 &amp;amp;= \nfrac{ ||V_x||^2 + ||V_y||^2 + ||V_z||^2 }{ ||V||^2 } \\
 &amp;amp; = \nfrac{ ||V_{x,y}||^2 + ||V_z||^2 }{ ||V||^2 } \textit{  (Pythagorean Theorem)} \\
@@ -262,7 +262,7 @@ It follows
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.60.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -293,7 +293,7 @@ z = z_0 + tc \rightarrow t = \nfrac{z-z_0}{c}
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.66.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -323,7 +323,7 @@ Hence, The symmetric form is satisfied.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.67.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -333,9 +333,9 @@ Hence, The symmetric form is satisfied.&lt;/p&gt;
 &amp;amp;= \nfrac{1}{2} (w+u) \\
 \vec{OA&amp;rsquo;} - \vec{OA} &amp;amp;= \nfrac{1}{2} w + \nfrac{1}{2} u - v
 \end{align*}
-Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&amp;rsquo;} - \vec{OA}) = \nfrac{1}{3} w +          \nfrac{1}{3} u - \nfrac{2}{3} v$.&lt;/p&gt;
+Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&#39;} - \vec{OA}) = \nfrac{1}{3} w +          \nfrac{1}{3} u - \nfrac{2}{3} v$.&lt;/p&gt;
 &lt;p&gt;$P$ is the terminal of vector: $v + \nfrac{1}{3} w + \nfrac{1}{3} u - \nfrac{2}{3} v = \nfrac{1}{3} w + \nfrac{1}{3} u + \nfrac{1}{3} v$.&lt;/p&gt;
-&lt;p&gt;Symmetrically, Taking $\nfrac{2}{3}$ of segments $BB&amp;rsquo;$ and $CC&amp;rsquo;$ yields the vector   $\nfrac{1}{3} w + \nfrac{1}{3} u + \nfrac{1}{3} v$, and thus point $P$ lies on the   other two medians as well.&lt;/p&gt;
+&lt;p&gt;Symmetrically, Taking $\nfrac{2}{3}$ of segments $BB&#39;$ and $CC&#39;$ yields the vector   $\nfrac{1}{3} w + \nfrac{1}{3} u + \nfrac{1}{3} v$, and thus point $P$ lies on the   other two medians as well.&lt;/p&gt;
 </description>
     </item>
     
@@ -364,7 +364,7 @@ Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&amp;rsquo;} - \vec{OA}) = \nfrac{1}{3
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.66-f.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -385,7 +385,7 @@ Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&amp;rsquo;} - \vec{OA}) = \nfrac{1}{3
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.66.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -406,21 +406,21 @@ Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&amp;rsquo;} - \vec{OA}) = \nfrac{1}{3
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./my-0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;$$
-\begin{aligned}
-||L_3|| &amp;amp;= ||L_2|| \sin \theta_2 \\
-||L_4|| &amp;amp;= ||L_6|| \sin \theta_1 \\
-||L_5|| &amp;amp;= ||L_3|| + ||L_4|| \\
-||L_7|| &amp;amp;= \sqrt{(L_2)^2 - (L_3)^2} \\
-||L_7|| &amp;amp;= ||L_6|| \cos \theta_1 \rightarrow ||L_6|| = ||L_7|| / \cos \theta_1 \\
-||L_8|| &amp;amp;= ||L_1|| - ||L_6|| \\
-||L_9|| &amp;amp;= ||L_8|| \cos \theta_1
-\end{aligned}
 $$
+\begin{aligned}
+    ||L_3|| &amp;= ||L_2|| \sin \theta_2 \\\\
+    ||L_4|| &amp;= ||L_6|| \sin \theta_1 \\\\
+    ||L_5|| &amp;= ||L_3|| + ||L_4|| \\\\
+    ||L_7|| &amp;= \sqrt{(L_2)^2 - (L_3)^2} \\\\
+    ||L_7|| &amp;= ||L_6|| \cos \theta_1 \rightarrow ||L_6|| = ||L_7|| / \cos \theta_1 \\\\
+    ||L_8|| &amp;= ||L_1|| - ||L_6|| \\\\
+    ||L_9|| &amp;= ||L_8|| \cos \theta_1
+\end{aligned}
+$$&lt;p&gt;
 Components are $\langle ||L_5||, ||L_9|| \rangle$.&lt;/p&gt;
 &lt;h3 id=&#34;ex-169&#34;&gt;Ex. 1.69&lt;/h3&gt;
 &lt;p&gt;
@@ -440,18 +440,19 @@ Components are $\langle ||L_5||, ||L_9|| \rangle$.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.69.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;Observe $\overline{AC} = ||v+w||$ and $\overline{BD} = ||v-w||$.&lt;/p&gt;
 &lt;p&gt;By vector algebra,
+&lt;/p&gt;
 $$
 \begin{aligned}
-w + \frac{1}{2} (v-w) &amp;amp;= \frac{1}{2} (v+w) \\
-\text{point of BD midpoint} &amp;amp;= \text{point of AC midpoint}
+    w + \frac{1}{2} (v-w) &amp;= \frac{1}{2} (v+w) \\\\
+    \text{point of BD midpoint} &amp;= \text{point of AC midpoint}
 \end{aligned}
-$$
+$$&lt;p&gt;
 Hence bisects each other.&lt;/p&gt;
 &lt;h3 id=&#34;ex-170&#34;&gt;Ex. 1.70&lt;/h3&gt;
 &lt;p&gt;
@@ -471,7 +472,7 @@ Hence bisects each other.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.70.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -492,7 +493,7 @@ Hence bisects each other.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./my-1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
@@ -519,22 +520,22 @@ Hence bisects each other.&lt;/p&gt;
 
 
 &lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.71.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;vectors $v$ and $w$ are perpendicular if and only if
+&lt;/p&gt;
 $$
 \begin{aligned}
-||w-v||^2 &amp;amp;= ||v||^2 + ||w||^2 \\
-||\langle c-a, d-b \rangle||^2 &amp;amp;= a^2 +b^2 + c^2 + d^2 \\
-(c-a)^2 + (d-b)^2 &amp;amp;= \\
-c^2 + a^2 - 2ac + d^2 + b^2 - 2bd &amp;amp;= \\
--2ac - 2bd &amp;amp;= 0 \\
-ac - bd &amp;amp;=
+  ||w-v||^2 &amp;= ||v||^2 + ||w||^2 \\\\
+  ||\langle c-a, d-b \rangle||^2 &amp;= a^2 +b^2 + c^2 + d^2 \\\\
+  (c-a)^2 + (d-b)^2 &amp;= \\\\
+  c^2 + a^2 - 2ac + d^2 + b^2 - 2bd &amp;= \\\\
+  -2ac - 2bd &amp;= 0 \\\\
+  ac - bd &amp;=
 \end{aligned}
-$$&lt;/p&gt;
-</description>
+$$</description>
     </item>
     
   </channel>
