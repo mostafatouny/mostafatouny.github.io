@@ -5,7 +5,7 @@
     <link>https://mostafatouny.github.io/mit-analysis1c-post/</link>
       <atom:link href="https://mostafatouny.github.io/mit-analysis1c-post/index.xml" rel="self" type="application/rss+xml" />
     <description>Baby Rudin&#39;s Real Analysis</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Baby Rudin&#39;s Real Analysis</title>
@@ -13,140 +13,31 @@
     </image>
     
     <item>
-      <title>Problem Set 08</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</link>
-      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g + \epsilon_g$.&lt;/p&gt;
-&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g + \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.&lt;/p&gt;
-&lt;p&gt;By hypothesis we have can take $N_{max}$ considering also $N_g$ to get
-\begin{aligned}
-|f_n(x) - f(x)| &amp;lt; +\epsilon_0 \\
-|g_n(x) - g(x)| &amp;lt; +\epsilon_1
-\end{aligned}
-By multiplication,
-\begin{aligned}
-|f_n(x) g_n(x) - f(x) g_n(x)| &amp;lt; +\epsilon_0 \cdot |g_n(x)| \\
-|f(x) g_n(x) - f(x) g(x)| &amp;lt; +\epsilon_1 \cdot |f(x)|
-\end{aligned}
-Now observe:
-\begin{aligned}
-|f_n(x) g_n(x) - f(x) g(x)| &amp;amp;= |f_n(x) g_n(x) - f(x) g_n(x) + f(x) g_n(x) - f(x)   g(x)| \\
-&amp;amp;\leq |f_n(x) g_n(x) - f(x) g_n(x)| + |f(x) g_n(x) - f(x)g(x)| \\
-&amp;amp;&amp;lt; \epsilon_0 |g_n(x)| + \epsilon_1 |f(x)| \\
-&amp;amp;\leq \epsilon_0 (M_g + \epsilon_g) + \epsilon_1 (M_f) \\
-&amp;amp;= \epsilon/2 + \epsilon/2 = \epsilon
-\end{aligned}
-The second line follows by triangular inequality.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\hat{f}$ is of the same class.&lt;/p&gt;
-&lt;p&gt;By definition, The domain of $\hat{f}$ is the same as $f$. Clearly $\hat{f}(0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(2 \cdot 0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(0) = \frac{\displaystyle{1}}{\displaystyle{4}} (0) = 0$ and $\hat{f}(1) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2 \cdot 1 - 1) + \frac{\displaystyle{1}}{\displaystyle{4}} = \frac{\displaystyle{3}}{\displaystyle{4}} f(1) +\frac{\displaystyle{1}}{\displaystyle{4}} =          \frac{\displaystyle{3}}{\displaystyle{4}} (1) + \frac{\displaystyle{1}}{\displaystyle{4}} = 1$.&lt;/p&gt;
-&lt;p&gt;The continuity of $\hat{f}$ follows by the continuity of $f$. Consider arbitrary $\hat{f}(q)$ and $\epsilon &gt; 0$. Consider the case of $\hat{f}(q) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2q-1) + \frac{\displaystyle{1}}{\displaystyle{4}}$ and note the other case is symmetric. Take $\grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon$. By continuity of $f$, There exists $\delta$ such that for any $r$, if $| r - p | &lt; \delta$ then $| f(r) - f(p) | &lt; \grave{\epsilon}$. Define $\grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}}$, and observe for any $r$:
-\begin{aligned}
-\text{If  }       &amp;amp; | r - q | &amp;lt; \grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}} \\
-\text{Then  }     &amp;amp; | (2r+1) - (2q+1) | &amp;lt; \delta \\
-\text{By Continuity  }    &amp;amp; | f(2r+1) - f(2q+1) | &amp;lt; \grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon \\
-\text{Then  }     &amp;amp; | (\frac{\displaystyle{3}}{\displaystyle{4}} f(2r+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) -                         (\frac{\displaystyle{3}}{\displaystyle{4}} f(2q+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) | &amp;lt; \epsilon \\
-\text{By definition  }    &amp;amp; | \hat{f}(r) - \hat{f}(q) | &amp;lt; \epsilon
-\end{aligned}&lt;/p&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;We use the following theorem found in Rudin&amp;rsquo;s book in page 59.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp 400w,
-               /mit-analysis1c-post/pset08/serConv_hu4714679590949087741.webp 760w,
-               /mit-analysis1c-post/pset08/serConv_hu5748405692070921284.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;147&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Fix $x \in [a,b]$. The theorem follows by the following lemmas&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;\(i\) $\sum_{k=n}^m f_k(x) \geq 0$ for odd $n$.&lt;/li&gt;
-&lt;li&gt;\(ii\) $\sum_{k=n}^m f_k(x) \leq 0$ for even $n$.&lt;/li&gt;
-&lt;li&gt;\(iii\) Given $f_n(x) = +M$ for odd $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \leq M$.&lt;/li&gt;
-&lt;li&gt;\(iv\) Given $f_n(x) = -M$ for even $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \geq -M$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;(i). Follows by a strong form of induction. Observe for odd $n$, $|f_n(x)| \geq |f_{n+1}(x)|$ yields $f_n(x) + f_{n+1} \geq 0$. The induction step is to show $\sum_{k=n}^{m+2} f_k(x) \geq 0$ given $\sum_{k=n}^{m} f_k(x) \geq 0$ and $\sum_{k=n}^{m+1} f_k(x) \geq 0$.&lt;/p&gt;
-&lt;p&gt;(ii). Symmetric to (i).&lt;/p&gt;
-&lt;p&gt;\(iii\) Expand to $f_n(x) + \sum_{k=n+1}^m f_k(x)$, Then it follows immediately by (ii)&lt;/p&gt;
-&lt;p&gt;(iv). Symmetric to (iii).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; These lemmas conclude, Given $f_n(x) = M$ regardless $n$ is even or odd, $|\sum_{k=n}^m f_k(x)| \leq |M|$. But we are given $f_n(x)$ converges to 0, So we can substitute $M$ by any $\epsilon &gt; 0$.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem Set 07</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</link>
-      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;By hypothesis, For any reals $x$ and $t$, We are given
-$| f(t) - f(x) | \leq (t-x)^2$. Clearly:
-\begin{aligned}
-\frac{\displaystyle{|f(t) - f(x)|}}{\displaystyle{|t-x|}} \leq&amp;amp;                  \frac{\displaystyle{(t-x)^2}}{\displaystyle{|t-x|}} \\
-\left | \frac{\displaystyle{f(t) - f(x)}}{\displaystyle{t-x}} \right | \leq&amp;amp; |t- x|
-\end{aligned}
-But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes
-$\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}}  \right | \leq 0$.
-Since the absolute value is always equal or greater than 0, We get also
-$\lim_{t \rightarrow   x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-   x}} \right | \geq 0$.
-Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem Set 06</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</link>
-      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;The first part is solved by a trivial set-theoretic operations. The second is postponed.&lt;/p&gt;
-&lt;p&gt;Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.&lt;/p&gt;
-&lt;p&gt;Note the proof is independent of continuity.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Our approach is proving the definition of a closed-set is satisfied. Namely, If $p$ is a limit point of of $Z(f)$ then $p \in Z(f)$. Fix $p$ and suppose $\forall \epsilon &gt; 0$ $\exists x \in Z(f)$ such that $d(x,p) &lt; \epsilon$. We can construct a sequence $x_i$ arbitrarily close to $p$ where $f(x_i)  = 0$. By the above observation it must be the case $f(p) = 0$, and hence $p \in Z(f)$.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Problem Set 04</title>
       <link>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$, Then the sequence $\{x_n\}$ gets artbitrarily small&lt;br&gt;
-Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms in the inequality. Given $\epsilon &gt; 0$ we can reach $\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;
-&lt;p&gt;Fix any x in the metric space, Then construct the following sequence: $\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy. Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the &lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by $d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1)   \lambda^{n-1}  d(f^1(x),f^2(x))$. By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our intended result is concluded.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Given $X$ is &lt;em&gt;complete&lt;/em&gt; we know our sequence $\{f^n(x)\}$ converges. Call it $q$. We show it converges also to $f(q)$, and by the uniqueness of limits, The main theorem of $f(x) = x$ for some $x$ is concluded. Observe $d(f^{n+1}(x),f(q)) \leq d(f^n(x),q)$, but the right hand side of the inequality is arbitrarily small. QED.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem was solved with assistance by wonderful friends. The main key idea of using the uniqueness of limits was given by them. See the following chat:&lt;/p&gt;
+      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem. 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$,
+Then the sequence $\{x_n\}$ gets artbitrarily small.&lt;/p&gt;
+&lt;p&gt;Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms
+in the inequality. Given $\epsilon &gt; 0$ we can reach
+$\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;
+&lt;p&gt;Fix any x in the metric space, Then construct the following sequence:
+$\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy.
+Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the
+&lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by
+$d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1) \; \lambda^{n-1} \; d(f^1(x),f^2(x))$.
+By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our
+intended result is concluded.&lt;/p&gt;
+&lt;p&gt;Given $X$ is &lt;em&gt;complete&lt;/em&gt; we know our sequence $\{f^n(x)\}$ converges.
+Call it $q$. We show it converges also to $f(q)$, and by the uniqueness
+of limits, The main theorem of $f(x) = x$ for some $x$ is concluded.
+Observe $d(f^{n+1}(x),f(q)) \leq d(f^n(x),q)$, but the right hand side
+of the inequality is arbitrarily small.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem was solved with assistance by wonderful friends.
+The main key idea of using the uniqueness of limits was given by them.
+See the following chat:&lt;/p&gt;
 &lt;p&gt;
 
 
@@ -420,14 +311,172 @@ Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms in the in
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./12.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;Suppose $(x_k)$ converges to $q$. Let $\epsilon &gt; 0$ be arbitrary. We already have $N_0$ where for any $k \geq N_0$ $x_k - q &lt; \epsilon$. For a given permuted sequence $(x_{g(k)})$, We now show there&amp;rsquo;s $N_1$ where for any $n \geq N_1$, $x&#39;_{n} - q &lt; \epsilon$.&lt;/p&gt;
-&lt;p&gt;Observe $x_1, \dots, x_{N_0-1}$ are finite. Consider indices $g(1), \dots, g(N_0-1)$ and take the maximum. Call it $g_{max}(N_0-1)$. Clearly for any index $i$ greater than it, we know $x_i&#39;$ is not equal to any one of $x_1, \dots, x_{N_0-1}$. So it is contained in the trail $x_{N_0}, x_{N_0+1}, \dots$. Thus, $x_i&#39; - q &lt; \epsilon$ for any $i &gt; g_{max}(N_0-1)$.&lt;/p&gt;
-&lt;p&gt;It is not true if we dropped the assumption that $g$ is one-to-one. A counter example is a permutation function whose range is exactly one element of $\mathcal{N}$.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
+&lt;h2 id=&#34;problem-2&#34;&gt;Problem. 2&lt;/h2&gt;
+&lt;p&gt;Suppose $(x_k)$ converges to $q$. Let $\epsilon &gt; 0$ be arbitrary. We
+already have $N_0$ where for any $k \geq N_0$ $x_k - q &lt; \epsilon$. For
+a given permuted sequence $(x_{g(k)})$, We now show there&amp;rsquo;s $N_1$ where
+for any $n \geq N_1$, $x&#39;_{n} - q &lt; \epsilon$.&lt;/p&gt;
+&lt;p&gt;Observe $x_1, \dots, x_{N_0-1}$ are finite. Consider indices
+$g(1), \dots, g(N_0-1)$ and take the maximum. Call it $g_{max}(N_0-1)$.
+Clearly for any index $i$ greater than it, we know $x_i&#39;$ is not equal
+to any one of $x_1, \dots, x_{N_0-1}$. So it is contained in the trail
+$x_{N_0}, x_{N_0+1}, \dots$. Thus, $x_i&#39; - q &lt; \epsilon$ for any
+$i &gt; g_{max}(N_0-1)$.&lt;/p&gt;
+&lt;p&gt;It is not true if we dropped the assumption that $g$ is one-to-one. A
+counter example is a permutation function whose range is exactly one
+element of $\mathcal{N}$.&lt;/p&gt;
+&lt;h2 id=&#34;problem-3&#34;&gt;Problem. 3&lt;/h2&gt;
 &lt;p&gt;The is exactly the same as theorem 3.4 in Rudin&amp;rsquo;s page 50.&lt;/p&gt;
+&lt;h2 id=&#34;problem-4&#34;&gt;Problem. 4&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $v_p( p^k + p^{ k+1 } + \dots + p^{ k+m } ) = k$.&lt;/p&gt;
+&lt;p&gt;Observe
+$p^k + p^{ k+1 } + \dots + p^{ k+m } = p^k ( 1 + p^1 + \dots + p^m )$.
+Moreover $p \nmid ( 1 + p^1 + \dots + p^m )$ as
+$p \mid ( p^1 + \dots + p^m )$. It holds if $m = 0$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $( x_i ) = \sum_{ j=0 }^i p^i$ is a cauchy sequence.&lt;/p&gt;
+&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. By the Archimedean property
+$\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$ and
+$n,m \geq H_\epsilon$.&lt;/p&gt;
+&lt;p&gt;if $n = m$, then $d( x_n, x_m ) = 0 \leq \epsilon$.&lt;/p&gt;
+&lt;p&gt;WLOG assume $n &gt; m$. It follows &lt;/p&gt;
+$$\begin{aligned}
+    d( x_n, x_m ) &amp;= \left |\sum_{ j=0 }^n p^j - \sum_{ j=0 }^m p^j \right |_p = \left |\sum_{ i=m+1 }^n p^i \right |_p \\
+    v_p \left ( \sum_{ j=m+1 }^n p^j \right ) &amp;= v_p ( p^{ m+1 } + p^{ m+2 } + \dots + p^{ n } ) = m+1
+\end{aligned}$$&lt;p&gt; Hence
+$d( x_n, x_m ) = p^{ -( m+1 ) } \leq \frac{\displaystyle{1}}{\displaystyle{m+1}} \leq \frac{\displaystyle{1}}{\displaystyle{N}} &lt; \epsilon$,
+for all $n,m \geq N$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Convergence when $p = 2$.&lt;/p&gt;
+&lt;p&gt;Observe $(x_i) = \sum_{j=0}^i 2^i = 2^{i+1} - 1$, $\forall i \geq 0$.&lt;/p&gt;
+&lt;p&gt;Then
+$d(x_i, -1) = d(2^{i+1} - 1, -1) = |2^{i+1} - 1 - (-1)|_2 = |2^{i+1}|_2 = 2^{-(i+1)}$.&lt;/p&gt;
+&lt;p&gt;Now as $i \rightarrow \infty$, $d(2^{i+1} - 1, -1) \rightarrow 0$, i.e
+$\lim_{ i \rightarrow \infty } 2^{ i+1 } - 1 = -1$.&lt;/p&gt;
+&lt;p&gt;A more careful proof. set $\epsilon &gt; 0$, then by the Archimedean
+property $\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$. Then for
+$i \geq H_\epsilon$, $2^{ -( i+1 ) } \leq 1/N \leq \epsilon$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 08</title>
+      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</guid>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
+&lt;p&gt;By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g + \epsilon_g$.&lt;/p&gt;
+&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g + \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.&lt;/p&gt;
+&lt;p&gt;By hypothesis we have can take $N_{max}$ considering also $N_g$ to get
+\begin{aligned}
+|f_n(x) - f(x)| &amp;lt; +\epsilon_0 \\
+|g_n(x) - g(x)| &amp;lt; +\epsilon_1
+\end{aligned}
+By multiplication,
+\begin{aligned}
+|f_n(x) g_n(x) - f(x) g_n(x)| &amp;lt; +\epsilon_0 \cdot |g_n(x)| \\
+|f(x) g_n(x) - f(x) g(x)| &amp;lt; +\epsilon_1 \cdot |f(x)|
+\end{aligned}
+Now observe:
+\begin{aligned}
+|f_n(x) g_n(x) - f(x) g(x)| &amp;amp;= |f_n(x) g_n(x) - f(x) g_n(x) + f(x) g_n(x) - f(x)   g(x)| \\
+&amp;amp;\leq |f_n(x) g_n(x) - f(x) g_n(x)| + |f(x) g_n(x) - f(x)g(x)| \\
+&amp;amp;&amp;lt; \epsilon_0 |g_n(x)| + \epsilon_1 |f(x)| \\
+&amp;amp;\leq \epsilon_0 (M_g + \epsilon_g) + \epsilon_1 (M_f) \\
+&amp;amp;= \epsilon/2 + \epsilon/2 = \epsilon
+\end{aligned}
+The second line follows by triangular inequality.&lt;/p&gt;
+&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\hat{f}$ is of the same class.&lt;/p&gt;
+&lt;p&gt;By definition, The domain of $\hat{f}$ is the same as $f$. Clearly $\hat{f}(0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(2 \cdot 0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(0) = \frac{\displaystyle{1}}{\displaystyle{4}} (0) = 0$ and $\hat{f}(1) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2 \cdot 1 - 1) + \frac{\displaystyle{1}}{\displaystyle{4}} = \frac{\displaystyle{3}}{\displaystyle{4}} f(1) +\frac{\displaystyle{1}}{\displaystyle{4}} =          \frac{\displaystyle{3}}{\displaystyle{4}} (1) + \frac{\displaystyle{1}}{\displaystyle{4}} = 1$.&lt;/p&gt;
+&lt;p&gt;The continuity of $\hat{f}$ follows by the continuity of $f$. Consider arbitrary $\hat{f}(q)$ and $\epsilon &gt; 0$. Consider the case of $\hat{f}(q) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2q-1) + \frac{\displaystyle{1}}{\displaystyle{4}}$ and note the other case is symmetric. Take $\grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon$. By continuity of $f$, There exists $\delta$ such that for any $r$, if $| r - p | &lt; \delta$ then $| f(r) - f(p) | &lt; \grave{\epsilon}$. Define $\grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}}$, and observe for any $r$:
+\begin{aligned}
+\text{If  }       &amp;amp; | r - q | &amp;lt; \grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}} \\
+\text{Then  }     &amp;amp; | (2r+1) - (2q+1) | &amp;lt; \delta \\
+\text{By Continuity  }    &amp;amp; | f(2r+1) - f(2q+1) | &amp;lt; \grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon \\
+\text{Then  }     &amp;amp; | (\frac{\displaystyle{3}}{\displaystyle{4}} f(2r+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) -                         (\frac{\displaystyle{3}}{\displaystyle{4}} f(2q+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) | &amp;lt; \epsilon \\
+\text{By definition  }    &amp;amp; | \hat{f}(r) - \hat{f}(q) | &amp;lt; \epsilon
+\end{aligned}&lt;/p&gt;
+&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
+&lt;p&gt;We use the following theorem found in Rudin&amp;rsquo;s book in page 59.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
+               /mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp 400w,
+               /mit-analysis1c-post/pset08/serConv_hu4714679590949087741.webp 760w,
+               /mit-analysis1c-post/pset08/serConv_hu5748405692070921284.webp 1200w&#34;
+               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;147&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Fix $x \in [a,b]$. The theorem follows by the following lemmas&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;\(i\) $\sum_{k=n}^m f_k(x) \geq 0$ for odd $n$.&lt;/li&gt;
+&lt;li&gt;\(ii\) $\sum_{k=n}^m f_k(x) \leq 0$ for even $n$.&lt;/li&gt;
+&lt;li&gt;\(iii\) Given $f_n(x) = +M$ for odd $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \leq M$.&lt;/li&gt;
+&lt;li&gt;\(iv\) Given $f_n(x) = -M$ for even $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \geq -M$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(i). Follows by a strong form of induction. Observe for odd $n$, $|f_n(x)| \geq |f_{n+1}(x)|$ yields $f_n(x) + f_{n+1} \geq 0$. The induction step is to show $\sum_{k=n}^{m+2} f_k(x) \geq 0$ given $\sum_{k=n}^{m} f_k(x) \geq 0$ and $\sum_{k=n}^{m+1} f_k(x) \geq 0$.&lt;/p&gt;
+&lt;p&gt;(ii). Symmetric to (i).&lt;/p&gt;
+&lt;p&gt;\(iii\) Expand to $f_n(x) + \sum_{k=n+1}^m f_k(x)$, Then it follows immediately by (ii)&lt;/p&gt;
+&lt;p&gt;(iv). Symmetric to (iii).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; These lemmas conclude, Given $f_n(x) = M$ regardless $n$ is even or odd, $|\sum_{k=n}^m f_k(x)| \leq |M|$. But we are given $f_n(x)$ converges to 0, So we can substitute $M$ by any $\epsilon &gt; 0$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 07</title>
+      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</guid>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
+&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
+&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
+&lt;p&gt;By hypothesis, For any reals $x$ and $t$, We are given
+$| f(t) - f(x) | \leq (t-x)^2$. Clearly:
+\begin{aligned}
+\frac{\displaystyle{|f(t) - f(x)|}}{\displaystyle{|t-x|}} \leq&amp;amp;                  \frac{\displaystyle{(t-x)^2}}{\displaystyle{|t-x|}} \\
+\left | \frac{\displaystyle{f(t) - f(x)}}{\displaystyle{t-x}} \right | \leq&amp;amp; |t- x|
+\end{aligned}
+But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes
+$\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}}  \right | \leq 0$.
+Since the absolute value is always equal or greater than 0, We get also
+$\lim_{t \rightarrow   x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-   x}} \right | \geq 0$.
+Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 06</title>
+      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</guid>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
+&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
+&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
+&lt;p&gt;The first part is solved by a trivial set-theoretic operations. The second is postponed.&lt;/p&gt;
+&lt;p&gt;Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.&lt;/p&gt;
+&lt;p&gt;Note the proof is independent of continuity.&lt;/p&gt;
 &lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;Postponed&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Our approach is proving the definition of a closed-set is satisfied. Namely, If $p$ is a limit point of of $Z(f)$ then $p \in Z(f)$. Fix $p$ and suppose $\forall \epsilon &gt; 0$ $\exists x \in Z(f)$ such that $d(x,p) &lt; \epsilon$. We can construct a sequence $x_i$ arbitrarily close to $p$ where $f(x_i)  = 0$. By the above observation it must be the case $f(p) = 0$, and hence $p \in Z(f)$.&lt;/p&gt;
 </description>
     </item>
     

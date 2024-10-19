@@ -5,12 +5,357 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Problem Set 04</title>
+      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
+      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem. 1&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$,
+Then the sequence $\{x_n\}$ gets artbitrarily small.&lt;/p&gt;
+&lt;p&gt;Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms
+in the inequality. Given $\epsilon &gt; 0$ we can reach
+$\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;
+&lt;p&gt;Fix any x in the metric space, Then construct the following sequence:
+$\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy.
+Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the
+&lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by
+$d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1) \; \lambda^{n-1} \; d(f^1(x),f^2(x))$.
+By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our
+intended result is concluded.&lt;/p&gt;
+&lt;p&gt;Given $X$ is &lt;em&gt;complete&lt;/em&gt; we know our sequence $\{f^n(x)\}$ converges.
+Call it $q$. We show it converges also to $f(q)$, and by the uniqueness
+of limits, The main theorem of $f(x) = x$ for some $x$ is concluded.
+Observe $d(f^{n+1}(x),f(q)) \leq d(f^n(x),q)$, but the right hand side
+of the inequality is arbitrarily small.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem was solved with assistance by wonderful friends.
+The main key idea of using the uniqueness of limits was given by them.
+See the following chat:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./2.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./3.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./4.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./5.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./6.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./7.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./8.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./9.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./10.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./11.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./12.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;problem-2&#34;&gt;Problem. 2&lt;/h2&gt;
+&lt;p&gt;Suppose $(x_k)$ converges to $q$. Let $\epsilon &gt; 0$ be arbitrary. We
+already have $N_0$ where for any $k \geq N_0$ $x_k - q &lt; \epsilon$. For
+a given permuted sequence $(x_{g(k)})$, We now show there&amp;rsquo;s $N_1$ where
+for any $n \geq N_1$, $x&#39;_{n} - q &lt; \epsilon$.&lt;/p&gt;
+&lt;p&gt;Observe $x_1, \dots, x_{N_0-1}$ are finite. Consider indices
+$g(1), \dots, g(N_0-1)$ and take the maximum. Call it $g_{max}(N_0-1)$.
+Clearly for any index $i$ greater than it, we know $x_i&#39;$ is not equal
+to any one of $x_1, \dots, x_{N_0-1}$. So it is contained in the trail
+$x_{N_0}, x_{N_0+1}, \dots$. Thus, $x_i&#39; - q &lt; \epsilon$ for any
+$i &gt; g_{max}(N_0-1)$.&lt;/p&gt;
+&lt;p&gt;It is not true if we dropped the assumption that $g$ is one-to-one. A
+counter example is a permutation function whose range is exactly one
+element of $\mathcal{N}$.&lt;/p&gt;
+&lt;h2 id=&#34;problem-3&#34;&gt;Problem. 3&lt;/h2&gt;
+&lt;p&gt;The is exactly the same as theorem 3.4 in Rudin&amp;rsquo;s page 50.&lt;/p&gt;
+&lt;h2 id=&#34;problem-4&#34;&gt;Problem. 4&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $v_p( p^k + p^{ k+1 } + \dots + p^{ k+m } ) = k$.&lt;/p&gt;
+&lt;p&gt;Observe
+$p^k + p^{ k+1 } + \dots + p^{ k+m } = p^k ( 1 + p^1 + \dots + p^m )$.
+Moreover $p \nmid ( 1 + p^1 + \dots + p^m )$ as
+$p \mid ( p^1 + \dots + p^m )$. It holds if $m = 0$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $( x_i ) = \sum_{ j=0 }^i p^i$ is a cauchy sequence.&lt;/p&gt;
+&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. By the Archimedean property
+$\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$ and
+$n,m \geq H_\epsilon$.&lt;/p&gt;
+&lt;p&gt;if $n = m$, then $d( x_n, x_m ) = 0 \leq \epsilon$.&lt;/p&gt;
+&lt;p&gt;WLOG assume $n &gt; m$. It follows &lt;/p&gt;
+$$\begin{aligned}
+    d( x_n, x_m ) &amp;= \left |\sum_{ j=0 }^n p^j - \sum_{ j=0 }^m p^j \right |_p = \left |\sum_{ i=m+1 }^n p^i \right |_p \\
+    v_p \left ( \sum_{ j=m+1 }^n p^j \right ) &amp;= v_p ( p^{ m+1 } + p^{ m+2 } + \dots + p^{ n } ) = m+1
+\end{aligned}$$&lt;p&gt; Hence
+$d( x_n, x_m ) = p^{ -( m+1 ) } \leq \frac{\displaystyle{1}}{\displaystyle{m+1}} \leq \frac{\displaystyle{1}}{\displaystyle{N}} &lt; \epsilon$,
+for all $n,m \geq N$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Convergence when $p = 2$.&lt;/p&gt;
+&lt;p&gt;Observe $(x_i) = \sum_{j=0}^i 2^i = 2^{i+1} - 1$, $\forall i \geq 0$.&lt;/p&gt;
+&lt;p&gt;Then
+$d(x_i, -1) = d(2^{i+1} - 1, -1) = |2^{i+1} - 1 - (-1)|_2 = |2^{i+1}|_2 = 2^{-(i+1)}$.&lt;/p&gt;
+&lt;p&gt;Now as $i \rightarrow \infty$, $d(2^{i+1} - 1, -1) \rightarrow 0$, i.e
+$\lim_{ i \rightarrow \infty } 2^{ i+1 } - 1 = -1$.&lt;/p&gt;
+&lt;p&gt;A more careful proof. set $\epsilon &gt; 0$, then by the Archimedean
+property $\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$. Then for
+$i \geq H_\epsilon$, $2^{ -( i+1 ) } \leq 1/N \leq \epsilon$.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Math with Application at MSA Uni.</title>
@@ -7558,302 +7903,6 @@ k_1 x_{11}, &amp;amp;\text{if $k_1$ is odd}
 &lt;p&gt;Observe also if $k_{ii} x_{ii} = c \, mod \, 2$ then by our definitions we know $k_{ii}$ is odd. It follows there&amp;rsquo;s exactly one unique solution for $x_ii$.&lt;/p&gt;
 &lt;p&gt;As the instructor hinted, back-substitution can be applied recursively to compute $x_{nn}$, $x_{n-1 \, n-1}$, .., $x_{11}$ where once $x_{ii}$ is computed, For all the above equations, Their number of variables are reduced by one. Only one literal $x_{i-1 \, i-1}$ is left for the next equation.&lt;/p&gt;
 &lt;p&gt;As a valid assignment $x$ for the transformed system is constructed, The original system is satisfied by $x$ also.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Problem Set 04</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
-      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$, Then the sequence $\{x_n\}$ gets artbitrarily small&lt;br&gt;
-Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms in the inequality. Given $\epsilon &gt; 0$ we can reach $\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;
-&lt;p&gt;Fix any x in the metric space, Then construct the following sequence: $\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy. Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the &lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by $d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1)   \lambda^{n-1}  d(f^1(x),f^2(x))$. By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our intended result is concluded.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Given $X$ is &lt;em&gt;complete&lt;/em&gt; we know our sequence $\{f^n(x)\}$ converges. Call it $q$. We show it converges also to $f(q)$, and by the uniqueness of limits, The main theorem of $f(x) = x$ for some $x$ is concluded. Observe $d(f^{n+1}(x),f(q)) \leq d(f^n(x),q)$, but the right hand side of the inequality is arbitrarily small. QED.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem was solved with assistance by wonderful friends. The main key idea of using the uniqueness of limits was given by them. See the following chat:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./2.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./3.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./4.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./5.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./6.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./7.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./8.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./9.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./10.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./11.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./12.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;Suppose $(x_k)$ converges to $q$. Let $\epsilon &gt; 0$ be arbitrary. We already have $N_0$ where for any $k \geq N_0$ $x_k - q &lt; \epsilon$. For a given permuted sequence $(x_{g(k)})$, We now show there&amp;rsquo;s $N_1$ where for any $n \geq N_1$, $x&#39;_{n} - q &lt; \epsilon$.&lt;/p&gt;
-&lt;p&gt;Observe $x_1, \dots, x_{N_0-1}$ are finite. Consider indices $g(1), \dots, g(N_0-1)$ and take the maximum. Call it $g_{max}(N_0-1)$. Clearly for any index $i$ greater than it, we know $x_i&#39;$ is not equal to any one of $x_1, \dots, x_{N_0-1}$. So it is contained in the trail $x_{N_0}, x_{N_0+1}, \dots$. Thus, $x_i&#39; - q &lt; \epsilon$ for any $i &gt; g_{max}(N_0-1)$.&lt;/p&gt;
-&lt;p&gt;It is not true if we dropped the assumption that $g$ is one-to-one. A counter example is a permutation function whose range is exactly one element of $\mathcal{N}$.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;The is exactly the same as theorem 3.4 in Rudin&amp;rsquo;s page 50.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;Postponed&lt;/p&gt;
 </description>
     </item>
     
