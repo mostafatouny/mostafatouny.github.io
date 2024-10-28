@@ -5,12 +5,127 @@
     <link>https://mostafatouny.github.io/</link>
       <atom:link href="https://mostafatouny.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Mostafa Touny</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 28 Oct 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
       <title>Mostafa Touny</title>
       <link>https://mostafatouny.github.io/</link>
     </image>
+    
+    <item>
+      <title>Extremal Round-Robin and Bipartite Poster Presentation</title>
+      <link>https://mostafatouny.github.io/post/extremal-bipartite-poster/</link>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mostafatouny.github.io/post/extremal-bipartite-poster/</guid>
+      <description>&lt;h2 id=&#34;forward&#34;&gt;Forward&lt;/h2&gt;
+&lt;p&gt;To be presented as a poster presentation in 
+.&lt;/p&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The interaction between discrete and continuous math gained attraction recently.&lt;/p&gt;
+&lt;p&gt;We study the winning domination vs scoring equity of Round-Robin tournaments, Under Erdős&amp;ndash;Rényi Model, where vertices number tends to infinity. Particularly, we show players scoring tend to get closer to the mean.&lt;/p&gt;
+&lt;p&gt;We also prove on complete bipartite matches $U \times V$, No matter how small the proportion of $U$, As vertices number tends to infinity, every player in $V$ is more likely to lose from some player in $U$.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;A curious book illustrating beautiful intersections between discrete and continuous math is Pinsky&amp;rsquo;s 
+.&lt;/p&gt;
+&lt;p&gt;Lázló Lovász initiated the study of graph limits, especially dense graphs through symmetric measurable functions named Graphons. See Yufei
+Zhao&amp;rsquo;s 
+.&lt;/p&gt;
+&lt;h2 id=&#34;definitions&#34;&gt;Definitions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Complete Bipartite Graph.&lt;/strong&gt; A graph $K_{U,V}$ such that its vertices can be divided into two disjoint sets $U$ and $V$, and edges $E = U \times V$ of all possible pairs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Round-Robin Tournament.&lt;/strong&gt; $n$ contestants play $\dbinom{n}{2}$ matches whereby each pair of contestants play against each other exactly once. A match results in a winner and loser. For a player $k$, Let $score[k]$ be the number of winnings out of the total $n-1$ matches she plays.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Erdős&amp;ndash;Rényi Model.&lt;/strong&gt; In $G(n, p)$ a random graph is constructed by randomly connecting each pair of nodes with probability $p$. The number of vertices $n$ is fixed.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Bernoulli Random Variable.&lt;/strong&gt; An $X$ such that $Pr[X=1] = p$ and $Pr[X=0] = 1-p$, for some $0 \leq p \leq 1$.
+&lt;/p&gt;
+$$
+\begin{aligned}
+    \text{Variance} \quad \sigma^2 &amp;= Var[X] = np (1-p) \\
+    \text{Mean} \quad \mu &amp;= Ex[X] = np
+\end{aligned}
+$$&lt;p&gt;
+source: Ross. A First Course in Probability, section 6.1, page 142.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Chebyshev Inequality.&lt;/strong&gt; For any $k &gt; 0$,
+&lt;/p&gt;
+$$
+Pr[ |X - \mu| \geq k ] \leq \frac{\sigma^2}{k^2}
+$$&lt;p&gt;
+source: Ross. A First Course in Probability, proposition 2.2, page 398.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Limit Sandwiching.&lt;/strong&gt; If $g(x) \geq f(x) \geq h(x)$ then
+&lt;/p&gt;
+$$
+\lim_{x \rightarrow c} g(x) \geq \lim_{x \rightarrow c} f(x) \geq \lim_{x \rightarrow c} h(x)
+$$&lt;p&gt;&lt;strong&gt;Murphy&amp;rsquo;s Law.&lt;/strong&gt; For mutually independent events $A_1, A_2, \dots, A_n$, $T_i$ indicator random variable for $A_i$, and $T = T_1 + \dots + T_n$, It follows
+&lt;/p&gt;
+$$
+Pr[T=0] \leq e^{ -Ex[T] }
+$$&lt;p&gt;
+source: MIT&amp;rsquo;s Math for CS, thm 19.6.4, page 815.&lt;/p&gt;
+&lt;h2 id=&#34;remarks&#34;&gt;Remarks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Graph-based interpretation of tournament results.&lt;/strong&gt; Outcomes of $n$ contestants can be interpreted as a direct graph, whereby for each pair of players $(a,b)$, exactly $(a,b) \in G(E)$ or $(b,a) \in G(E)$.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; In a Round-Robin tournament of $n$ players, Drawing is possible for any $n \geq 3$ players.&lt;/p&gt;
+&lt;p&gt;The proof is constructive. Fix players $p1$, $p2$, and $p3$. Assign $p1$ loses from $p2$ and wins remaining $n-2$ players. Assign $p2$ loses from $p3$ and wins remaining $n-2$ players. Then $score[p1] = score[p2] = n-2$. As $p1$ and $p2$ are fully assigned, any other player wins at most $n-3$ times.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; In a Round-Robin tournament of $n$ players, and with a winning probability $p = \frac{1}{2}$ for all players, The probability of &amp;ldquo;Domination&amp;rdquo; where a player beats all others tends to zero as $n \rightarrow \infty$.&lt;/p&gt;
+&lt;p&gt;Let $E_i$ denote ith player wins all others.
+&lt;/p&gt;
+$$
+\begin{aligned}
+    Pr[E_i] &amp;= \left ( \frac{1}{2} \right )^{n-1} \\
+    Pr[U_i E_i] &amp;= \sum_{i=1}^n Pr[E_i] = n \cdot \frac{1}{2^{n-1}} \quad &amp;\text{mutually exclusive events} \\
+    \lim_{n \rightarrow \infty} Pr[U_i E_i] &amp;= \lim_{n \rightarrow \infty} \frac{n}{2^{n-1}} = \lim_{n \rightarrow \infty} \frac{1}{2^{n-1} \ln 2 } = 0 \quad &amp;\text{L&#39;Hopital}
+\end{aligned}
+$$&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; In a Round-Robin tournament of $n$ players, Fix a player $k$. Let $\mu_k$ be the mean of $score[k]$, i.e its expectation. Then
+&lt;/p&gt;
+$$
+\lim_{r \rightarrow 0} \lim_{n \rightarrow \infty} Pr [ |score[k] - \mu_k| \geq r \cdot \mu_k ] = 0
+$$&lt;p&gt;
+Observe
+&lt;/p&gt;
+$$
+\begin{aligned}
+    \text{Variance} \quad \sigma^2 &amp;= (n-1) \left ( \frac{1}{2} \right ) \left ( 1-\frac{1}{2} \right ) = \frac{1}{4} (n-1) \\
+    \text{Mean} \quad \mu &amp;= \frac{n-1}{2}
+\end{aligned}$$&lt;p&gt; Then for any $r &gt; 0$ &lt;/p&gt;
+$$\begin{aligned}
+    Pr[ |score[k] - \mu| \geq r \mu ] &amp;\leq \frac{\frac{1}{4} \cdot (n-1)}{\left (r \cdot \frac{n-1}{2} \right )^2} \\
+    &amp;= \frac{1}{4} \cdot (n-1) \cdot \frac{1}{r^{2}} \cdot \frac{2}{n-1} \cdot \frac{2}{n-1} \\
+    &amp;= \frac{1}{r^2(n-1)}
+\end{aligned}
+$$&lt;p&gt;
+Since $\lim_{n \rightarrow \infty} \frac{1}{r^2(n-1)} = 0$, It follows by Limit Sandwiching
+&lt;/p&gt;
+$$
+\lim_{n \rightarrow \infty} Pr[ |score[k] - \mu| \geq r \mu] = 0
+$$&lt;p&gt; By taking $r$ to be arbitrarily small, The intended result follows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; We are given a complete bipartite graph of matches, with total $n$ vertices, partitioned by $|U| = \lceil rn \rceil$, and $|V| = \lfloor (1-r)n \rfloor$. Also $n \geq 1$, $r &gt; 0$, and $p &gt; 0$. For $T$ the number of players in $V$ who won some match, We show $Ex[T/|V|] = 1$ as $n \rightarrow \infty$.&lt;/p&gt;
+&lt;p&gt;For every player $i = \lceil rn \rceil + 1, \dots, n$ of $V$, Let $T_i = 1$ iff it won some match. Then $T = \sum_{i = \lceil rn \rceil + 1}^n T_i$.&lt;/p&gt;
+&lt;p&gt;By Murphy $Pr[T_i = 1] \geq 1 - e^{ - \lceil rn \rceil \cdot p }$. It follows
+&lt;/p&gt;
+$$
+\begin{aligned}
+    Ex[T]
+    &amp;= Ex[T] \\
+    &amp;= \sum_{i=\lceil rn \rceil + 1}^n Ex[T_i = 1] \\
+    &amp;= \sum_{i=\lceil rn \rceil + 1}^n Pr[T_i = 1] \quad \text{Indicator Variable} \\
+    &amp;\geq \lceil n(1-r) \rceil - \sum_{i=\lceil rn \rceil + 1}^n e^{- \lceil rn \rceil p} \\
+    Ex[T/|V|] &amp;= \frac{1}{|V|} Ex[T] \\
+    &amp;\geq \frac{1}{|V|} \lceil n(1-r) \rceil - \frac{1}{|V|} \sum_{i=\lceil rn \rceil + 1}^n e^{- \lceil rn \rceil p} \\
+    &amp;= \frac{\lceil n(1-r) \rceil}{\lceil n(1-r) \rceil} - \frac{1}{\lceil n(1-r) \rceil} \sum_{i=\lceil rn \rceil + 1}^n e^{- \lceil rn \rceil p} \\
+    &amp;= 1 - \frac{1}{\lceil n(1-r) \rceil} \sum_{i=\lceil rn \rceil + 1}^n e^{- \lceil rn \rceil p}
+\end{aligned}
+$$&lt;p&gt;
+Therefore
+&lt;/p&gt;
+$$
+\lim_{n \rightarrow \infty} 1 - \frac{1}{\lceil n(1-r) \rceil} \sum_{i = \lceil rn \rceil + 1}^n e^{- \lceil rn \rceil p} = 1 - 0 \cdot (0 + \dots + 0) = 1
+$$&lt;p&gt;
+Since $Pr[T_i=1] \leq 1$,
+&lt;/p&gt;
+$$
+Ex[T/|V|] = \frac{1}{\lceil n(1-r) \rceil} \cdot \sum_{\lceil rn \rceil + 1}^n Pr[T_i = 1] \leq \frac{1}{\lceil n(1-r) \rceil} \cdot \sum_{\lceil rn \rceil + 1}^n 1 = 1
+$$&lt;p&gt;By Sandwiching $\lim_{n \rightarrow \infty} Ex[T/|V|] = 1$.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Problem Set 04</title>
