@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Baby Rudin&#39;s Real Analysis | Mostafa Touny</title>
-    <link>https://mostafatouny.github.io/mit-analysis1c-post/</link>
-      <atom:link href="https://mostafatouny.github.io/mit-analysis1c-post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Baby Rudin&#39;s Real Analysis</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
-      <title>Baby Rudin&#39;s Real Analysis</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/</link>
-    </image>
-    
+    <title>Baby Rudin&#39;s Real Analysis on Mostafa Touny</title>
+    <link>https://www.mostafatouny.github.io/mit-analysis1c-post/</link>
+    <description>Recent content in Baby Rudin&#39;s Real Analysis on Mostafa Touny</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mostafatouny.github.io/mit-analysis1c-post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Problem Set 04</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
       <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
       <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$,
 Then the sequence $\{x_n\}$ gets artbitrarily small.&lt;/p&gt;
@@ -29,339 +25,13 @@ Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the
 &lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by
 $d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1) \; \lambda^{n-1} \; d(f^1(x),f^2(x))$.
 By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our
-intended result is concluded.&lt;/p&gt;
-&lt;p&gt;Given $X$ is &lt;em&gt;complete&lt;/em&gt; we know our sequence $\{f^n(x)\}$ converges.
-Call it $q$. We show it converges also to $f(q)$, and by the uniqueness
-of limits, The main theorem of $f(x) = x$ for some $x$ is concluded.
-Observe $d(f^{n+1}(x),f(q)) \leq d(f^n(x),q)$, but the right hand side
-of the inequality is arbitrarily small.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem was solved with assistance by wonderful friends.
-The main key idea of using the uniqueness of limits was given by them.
-See the following chat:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./2.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./3.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./4.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./5.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./6.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./7.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./8.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./9.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./10.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./11.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./12.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;problem-2&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;Suppose $(x_k)$ converges to $q$. Let $\epsilon &gt; 0$ be arbitrary. We
-already have $N_0$ where for any $k \geq N_0$ $x_k - q &lt; \epsilon$. For
-a given permuted sequence $(x_{g(k)})$, We now show there&amp;rsquo;s $N_1$ where
-for any $n \geq N_1$, $x&#39;_{n} - q &lt; \epsilon$.&lt;/p&gt;
-&lt;p&gt;Observe $x_1, \dots, x_{N_0-1}$ are finite. Consider indices
-$g(1), \dots, g(N_0-1)$ and take the maximum. Call it $g_{max}(N_0-1)$.
-Clearly for any index $i$ greater than it, we know $x_i&#39;$ is not equal
-to any one of $x_1, \dots, x_{N_0-1}$. So it is contained in the trail
-$x_{N_0}, x_{N_0+1}, \dots$. Thus, $x_i&#39; - q &lt; \epsilon$ for any
-$i &gt; g_{max}(N_0-1)$.&lt;/p&gt;
-&lt;p&gt;It is not true if we dropped the assumption that $g$ is one-to-one. A
-counter example is a permutation function whose range is exactly one
-element of $\mathcal{N}$.&lt;/p&gt;
-&lt;h2 id=&#34;problem-3&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;The is exactly the same as theorem 3.4 in Rudin&amp;rsquo;s page 50.&lt;/p&gt;
-&lt;h2 id=&#34;problem-4&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $v_p( p^k + p^{ k+1 } + \dots + p^{ k+m } ) = k$.&lt;/p&gt;
-&lt;p&gt;Observe
-$p^k + p^{ k+1 } + \dots + p^{ k+m } = p^k ( 1 + p^1 + \dots + p^m )$.
-Moreover $p \nmid ( 1 + p^1 + \dots + p^m )$ as
-$p \mid ( p^1 + \dots + p^m )$. It holds if $m = 0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $( x_i ) = \sum_{ j=0 }^i p^i$ is a cauchy sequence.&lt;/p&gt;
-&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. By the Archimedean property
-$\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$ and
-$n,m \geq H_\epsilon$.&lt;/p&gt;
-&lt;p&gt;if $n = m$, then $d( x_n, x_m ) = 0 \leq \epsilon$.&lt;/p&gt;
-&lt;p&gt;WLOG assume $n &gt; m$. It follows &lt;/p&gt;
-$$\begin{aligned}
-    d( x_n, x_m ) &amp;= \left |\sum_{ j=0 }^n p^j - \sum_{ j=0 }^m p^j \right |_p = \left |\sum_{ i=m+1 }^n p^i \right |_p \\
-    v_p \left ( \sum_{ j=m+1 }^n p^j \right ) &amp;= v_p ( p^{ m+1 } + p^{ m+2 } + \dots + p^{ n } ) = m+1
-\end{aligned}$$&lt;p&gt; Hence
-$d( x_n, x_m ) = p^{ -( m+1 ) } \leq \frac{\displaystyle{1}}{\displaystyle{m+1}} \leq \frac{\displaystyle{1}}{\displaystyle{N}} &lt; \epsilon$,
-for all $n,m \geq N$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Convergence when $p = 2$.&lt;/p&gt;
-&lt;p&gt;Observe $(x_i) = \sum_{j=0}^i 2^i = 2^{i+1} - 1$, $\forall i \geq 0$.&lt;/p&gt;
-&lt;p&gt;Then
-$d(x_i, -1) = d(2^{i+1} - 1, -1) = |2^{i+1} - 1 - (-1)|_2 = |2^{i+1}|_2 = 2^{-(i+1)}$.&lt;/p&gt;
-&lt;p&gt;Now as $i \rightarrow \infty$, $d(2^{i+1} - 1, -1) \rightarrow 0$, i.e
-$\lim_{ i \rightarrow \infty } 2^{ i+1 } - 1 = -1$.&lt;/p&gt;
-&lt;p&gt;A more careful proof. set $\epsilon &gt; 0$, then by the Archimedean
-property $\exists N, 1/N &lt; \epsilon$. Set $H_\epsilon = N$. Then for
-$i \geq H_\epsilon$, $2^{ -( i+1 ) } \leq 1/N \leq \epsilon$.&lt;/p&gt;
-</description>
+intended result is concluded.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 08</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset08/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset08/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset08/</guid>
       <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;p&gt;By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g + \epsilon_g$.&lt;/p&gt;
 &lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g + \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.&lt;/p&gt;
@@ -383,69 +53,13 @@ Now observe:
 &amp;amp;\leq \epsilon_0 (M_g + \epsilon_g) + \epsilon_1 (M_f) \\
 &amp;amp;= \epsilon/2 + \epsilon/2 = \epsilon
 \end{aligned}
-The second line follows by triangular inequality.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\hat{f}$ is of the same class.&lt;/p&gt;
-&lt;p&gt;By definition, The domain of $\hat{f}$ is the same as $f$. Clearly $\hat{f}(0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(2 \cdot 0) = \frac{\displaystyle{1}}{\displaystyle{4}} f(0) = \frac{\displaystyle{1}}{\displaystyle{4}} (0) = 0$ and $\hat{f}(1) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2 \cdot 1 - 1) + \frac{\displaystyle{1}}{\displaystyle{4}} = \frac{\displaystyle{3}}{\displaystyle{4}} f(1) +\frac{\displaystyle{1}}{\displaystyle{4}} =          \frac{\displaystyle{3}}{\displaystyle{4}} (1) + \frac{\displaystyle{1}}{\displaystyle{4}} = 1$.&lt;/p&gt;
-&lt;p&gt;The continuity of $\hat{f}$ follows by the continuity of $f$. Consider arbitrary $\hat{f}(q)$ and $\epsilon &gt; 0$. Consider the case of $\hat{f}(q) = \frac{\displaystyle{3}}{\displaystyle{4}} f(2q-1) + \frac{\displaystyle{1}}{\displaystyle{4}}$ and note the other case is symmetric. Take $\grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon$. By continuity of $f$, There exists $\delta$ such that for any $r$, if $| r - p | &lt; \delta$ then $| f(r) - f(p) | &lt; \grave{\epsilon}$. Define $\grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}}$, and observe for any $r$:
-\begin{aligned}
-\text{If  }       &amp;amp; | r - q | &amp;lt; \grave{\delta} = \frac{\displaystyle{\delta}}{\displaystyle{2}} \\
-\text{Then  }     &amp;amp; | (2r+1) - (2q+1) | &amp;lt; \delta \\
-\text{By Continuity  }    &amp;amp; | f(2r+1) - f(2q+1) | &amp;lt; \grave{\epsilon} = \frac{\displaystyle{4}}{\displaystyle{3}} \epsilon \\
-\text{Then  }     &amp;amp; | (\frac{\displaystyle{3}}{\displaystyle{4}} f(2r+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) -                         (\frac{\displaystyle{3}}{\displaystyle{4}} f(2q+1) + \frac{\displaystyle{1}}{\displaystyle{4}}) | &amp;lt; \epsilon \\
-\text{By definition  }    &amp;amp; | \hat{f}(r) - \hat{f}(q) | &amp;lt; \epsilon
-\end{aligned}&lt;/p&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;We use the following theorem found in Rudin&amp;rsquo;s book in page 59.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp 400w,
-               /mit-analysis1c-post/pset08/serConv_hu4714679590949087741.webp 760w,
-               /mit-analysis1c-post/pset08/serConv_hu5748405692070921284.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset08/serConv_hu16376749143645352733.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;147&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Fix $x \in [a,b]$. The theorem follows by the following lemmas&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;\(i\) $\sum_{k=n}^m f_k(x) \geq 0$ for odd $n$.&lt;/li&gt;
-&lt;li&gt;\(ii\) $\sum_{k=n}^m f_k(x) \leq 0$ for even $n$.&lt;/li&gt;
-&lt;li&gt;\(iii\) Given $f_n(x) = +M$ for odd $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \leq M$.&lt;/li&gt;
-&lt;li&gt;\(iv\) Given $f_n(x) = -M$ for even $n$ and non-negative $M$, $\sum_{k=n}^m f_n(x) \geq -M$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;(i). Follows by a strong form of induction. Observe for odd $n$, $|f_n(x)| \geq |f_{n+1}(x)|$ yields $f_n(x) + f_{n+1} \geq 0$. The induction step is to show $\sum_{k=n}^{m+2} f_k(x) \geq 0$ given $\sum_{k=n}^{m} f_k(x) \geq 0$ and $\sum_{k=n}^{m+1} f_k(x) \geq 0$.&lt;/p&gt;
-&lt;p&gt;(ii). Symmetric to (i).&lt;/p&gt;
-&lt;p&gt;\(iii\) Expand to $f_n(x) + \sum_{k=n+1}^m f_k(x)$, Then it follows immediately by (ii)&lt;/p&gt;
-&lt;p&gt;(iv). Symmetric to (iii).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; These lemmas conclude, Given $f_n(x) = M$ regardless $n$ is even or odd, $|\sum_{k=n}^m f_k(x)| \leq |M|$. But we are given $f_n(x)$ converges to 0, So we can substitute $M$ by any $\epsilon &gt; 0$.&lt;/p&gt;
-</description>
+The second line follows by triangular inequality.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 07</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset07/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset07/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset07/</guid>
       <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
 &lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
@@ -459,15 +73,13 @@ But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes
 $\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}}  \right | \leq 0$.
 Since the absolute value is always equal or greater than 0, We get also
 $\lim_{t \rightarrow   x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-   x}} \right | \geq 0$.
-Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;
-</description>
+Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 06</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset06/</link>
       <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset06/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset06/</guid>
       <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
 &lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
@@ -475,16 +87,13 @@ Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;
 &lt;p&gt;Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.&lt;/p&gt;
 &lt;p&gt;Note the proof is independent of continuity.&lt;/p&gt;
 &lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Our approach is proving the definition of a closed-set is satisfied. Namely, If $p$ is a limit point of of $Z(f)$ then $p \in Z(f)$. Fix $p$ and suppose $\forall \epsilon &gt; 0$ $\exists x \in Z(f)$ such that $d(x,p) &lt; \epsilon$. We can construct a sequence $x_i$ arbitrarily close to $p$ where $f(x_i)  = 0$. By the above observation it must be the case $f(p) = 0$, and hence $p \in Z(f)$.&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 03</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset03/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset03/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset03/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset03/</guid>
       <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;p&gt;The required conditions follow naturally as:&lt;/p&gt;
 &lt;ul&gt;
@@ -493,146 +102,13 @@ Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;
 &lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d&#39;(y,x)$.&lt;/li&gt;
 &lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d&#39;(x,r) + d&#39;(r,y)$.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For an arbitrary open-set of $d$, $\set{ y | d(x,y) &lt; r \}$ there is an equivalent open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; \sqrt{r} \}$. For an arbitrary open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) &lt; r^2 }$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; Some good friends assisted in solving this problem.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./3.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For any point $p$ in $R$, There exists a smallest element in the set $\set{ q \in E | q &gt; p \}$&lt;br&gt;
-Assume to the contrary that no smallest element exists. Then as the set is bounded below, the &lt;em&gt;infimum&lt;/em&gt; exists, and is a limit point. That contradicts our hypothesis of no limit points in $E$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt;   $E \cap R^+ = E^+$ has a smallest element&lt;br&gt;
-By the above lemma set $p = 0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollarly.&lt;/strong&gt;   Given $x_i \in E^+$ there exists a smallest element among $E^+ \cap \set{y | y &gt; x_i\}$&lt;br&gt;
-By the above lemma set $p = x_i$.&lt;/p&gt;
-&lt;p&gt;Now we have a counting scheme on $E^+$. What is remaining now is to prove every element in $E$ will be hit eventually. The following lemma suffices.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   there are finitely many elements in $E \cap [- |a| , |a|]$&lt;br&gt;
-Assuming the contrary for the sake of contradiction, We get infinite elements in $E \cap [ -|a|, |a| ]$. Those are present in both $E$ and $[ -|a|, |a| ]$ by definition. Since $[ -|a|, |a| ]$ is compact we know any infinite subset has a limit point (&lt;em&gt;Theorem 2.41, p. 40&lt;/em&gt; in &lt;em&gt;baby-rudin&lt;/em&gt;). But then we get a limit point in E. Contradiction.&lt;/p&gt;
-&lt;p&gt;Similarly we can prove $E \cap R^- = E^-$ is countable, and hence $E$ is countable also.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note. 1&lt;/strong&gt; Professor Peng Zhou hinted the solution approach&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./4.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note. 2&lt;/strong&gt; Through chatting with good friends a cleaner alternative proof can be made as, &amp;quot;Because E has no limit points it is closed.
-Assume E is uncountable. Then there is an integer n such that intersection with &lt;/p&gt;
-\[n,n+1\]&lt;p&gt; is also uncountable. This intersection is closed and bounded, thus compact. So we can take a sequence inside this intersection and it will have a convergent subsequence contradicting the assumption on limit points&amp;quot;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./2.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;Assume for the sake of contradiction that the process does not stop after a finite number of steps. Then the sequence $x_i$ is infinite. Consider the infinite subset $\set{x_i\} = S_\delta$; By hypothesis it has a limit point in $X$, Call it $p$. So for neighbourhood $N_{\delta/4}(p)$, some point $q_1 \neq p$ is in that neighbourhood. Let $r_1 = d(p, q_1)$. Consider neighbourhood $N_{r_1/2}(p)$; Clearly $q_1$ is not in it. So there is a point $q_2 \neq q_1$ in it. We have now distinct points $q_1,q_2 \in S$ such that $d(p,q_1) \leq \delta/4$ and $d(p,q_2) \leq \delta/4$. It follows $d(q_1,q_2) \leq d(q_1,p) + d(p,q_2) \leq \delta/4 + \delta/4 = \delta/2$. But the construction of sequence $x_i$ stipulates every pair of points is of distance at least $\delta$. Contradiction.&lt;/p&gt;
-&lt;p&gt;It follows by the above lemma, that for any point $p$ in $X$, the distance between it and some $x_i$ of $S$ is strictly less than $\delta$. Therefore $p$ is covered by $N_\delta{x_i}$.&lt;/p&gt;
-&lt;p&gt;Now we prove $X$ is separable. We know for each $\delta = 1/n$, The corresponding subset $S_{1/n}$ is finite. Clearly $\cup_n S_{1/n} = S$ is countably infinite. It suffices to show, For a point $p \in X - S$, it can get arbitrarily close to points of $S$. Consider arbitrary $\delta &gt; 0$ and its corresponding neighbourhood $N_\delta(p)$.&lt;/p&gt;
-&lt;p&gt;Take $\delta&#39; = \delta/2$, and $n&#39; &gt; 0$ such that $1/n&#39; &lt; \delta&#39;$. Consider $N_{\delta&#39;}(p)$. There are two cases.&lt;br&gt;
-Case 1: A point $q \in S_{1/n&#39;}$ is in $N_{\delta&#39;}(p)$, Then it is also in $N_{\delta}(p)$.&lt;br&gt;
-Case 2: No point $q \in S_{1/n&#39;}$ is in $N_{\delta&#39;}(p)$. Then for any $z \in N_{\delta&#39;}(p)$ some point $q \in S_{1/n&#39;}$ exists such that $d(z,q) &lt; 1/n&#39;$. It follows $\delta = \delta/2 + \delta/2 &gt; \delta&#39; + 1/n&#39; &gt; d(p,z) + d(z,q) \geq d(p,q)$. In other words, $q \in N_{\delta}(p)$.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;Failed to solve.&lt;/p&gt;
-&lt;p&gt;Partial idea: Establish a sequence $x, f^1(x), f^2(x), f^3(x), \dots$. If I proved it is finite then I am done, as it is necessarily the case $f^k(x) = f^{k+1}(x)$. If it is infinite then a limit point of it exists as $X$ is a compact set.&lt;/p&gt;
-</description>
+&lt;p&gt;For an arbitrary open-set of $d$, $\set{ y | d(x,y) &lt; r \}$ there is an equivalent open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; \sqrt{r} \}$. For an arbitrary open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) &lt; r^2 }$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 02</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset02/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset02/</link>
       <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset02/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset02/</guid>
       <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
 &lt;p&gt;We prove each axiom as listed by &lt;em&gt;Rudin&lt;/em&gt; in page 5.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A1&lt;/strong&gt; $(a_0+a_1) + \sqrt{2} (b_0+b_1) \in \mathcal{Q}(\sqrt{2})$, As $(a_0+a_1), (b_0+b_1) \in \mathcal{Q}$.&lt;/p&gt;
@@ -640,209 +116,13 @@ Case 2: No point $q \in S_{1/n&#39;}$ is in $N_{\delta&#39;}(p)$. Then for any $
 &lt;p&gt;&lt;strong&gt;A3&lt;/strong&gt; Follows immediately by properties of $\mathcal{Q}$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A4&lt;/strong&gt; $0_{\mathcal{Q}(2)}$ here is the number $0 + \sqrt{2} \; 0 = 0_{\mathcal{R}}$.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A5&lt;/strong&gt; For an $x_{\mathcal{Q}(2)}$, $-x_{\mathcal{Q}(2)} = -a + \sqrt{2} (-b)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M1&lt;/strong&gt; The product is $(a_0a_1 + 2b_0 b_1) + \sqrt{2} (a_0 b_1 + a_1 b_0)$, Where the formed $a$ and $b$ are in $\mathcal{Q}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M2&lt;/strong&gt; Following properties of $\mathcal{Q}$, The product we formed in &lt;em&gt;M1&lt;/em&gt; is the same in cases of $xy$ and $yx$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M3&lt;/strong&gt; Following properties of $\mathcal{Q}$, The product we formed in &lt;em&gt;M1&lt;/em&gt; is the same in cases of $(xy)z$ and $x(yz)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M4&lt;/strong&gt; $1_{\mathcal{Q}(\sqrt{2})}$ here is $1_{\mathcal{R}} \neq 0_{\mathcal{R}} = 0_{\mathcal{Q}(2)}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M5&lt;/strong&gt; If $x_{\mathcal{Q}(\sqrt{2})} \neq 0_{\mathcal{Q}(2)} = 0 + \sqrt{2} \cdot 0$, Then we know either $a \neq 0$ or $b \neq 0$, and hence $x_{\mathcal{Q}(\sqrt{2})} = a + b \sqrt{2} \neq 0$. Define $x_{\mathcal{Q}(\sqrt{2})}^{-1} = \frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}}$. What is remaining is to show $\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \in \mathcal{Q}(2)$ by a multiplication by its conjugate. Observe:
-&lt;/p&gt;
-$$
-\begin{aligned}
-  &amp;\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \\\\
-  = &amp;\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \cdot \frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a - b \sqrt{2}}} \\\\
-  = &amp;\frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a^2 + 2 b^2}} = (\frac{\displaystyle{a}}{\displaystyle{a^2 + 2b^2}}) + (\frac{\displaystyle{-b}}{\displaystyle{a^2 + 2b^2}}) \sqrt{2}
-\end{aligned}
-$$&lt;p&gt;
-And clearly
-$(\frac{\displaystyle{a}}{\displaystyle{a^2 + 2b^2}}), (\frac{\displaystyle{-b}}{\displaystyle{a^2 + 2b^2}}) \in \mathcal{Q}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; Follows by a trivial algebra.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s look at the special case of $z = (x, 0)$. Then for any $r &gt; 0$, there exists a complex number $w = (x/r, 0)$, such that $rw = z$.&lt;/p&gt;
-&lt;p&gt;From now on we focus on $z = (x, y)$ assuming $y \neq 0$. Before proceeding, we develop a central lemma.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For any complex number $w = (a, b)$, $|w| = 1 \leftrightarrow a^2 + b^2 = 1$.&lt;br&gt;
-Follows immediately by setting $w \cdot \overline{w} = 1$ and multiplying.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   Given any $x$ and $y \neq 0$, Finding reals $r, a, b$ such that $r \cdot a = x$, $r \cdot b = y$ satisfies $z = (x, y) = r \cdot (a, b) = rw$&lt;br&gt;
-Follows immediately by a trivial algebra.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt;   Main Problem&lt;br&gt;
-Now we combine &lt;em&gt;Lemma 1&lt;/em&gt; and &lt;em&gt;Lemma 2&lt;/em&gt; to satisfy both requirements by forming a combined system of equations, Given any $z = (x, y)$ where $y \neq 0$.
-&lt;/p&gt;
-$$
-\begin{aligned}
-  r \cdot a &amp;= x \\\\
-  r \cdot b &amp;= y \\\\
-  a^2 + b^2 &amp;= 1
-\end{aligned}
-$$&lt;p&gt;
-It can be solved by substitution where:
-&lt;/p&gt;
-$$
-\begin{aligned}
-  a &amp;= \sqrt{1 - b^2} \\\\
-  r &amp;= y/b \;\;\; \text{valid as b isn&#39;t zero} \\\\
-  3/b \cdot \sqrt{1-b^2} &amp;= x
-\end{aligned}
-$$&lt;p&gt;
-Note $b \neq 0$ lest $r \cdot b = r \cdot 0 = 0 = y$, Contradicting our assumption.&lt;/p&gt;
-&lt;p&gt;The system uniquely determines the values
-&lt;/p&gt;
-$$
-\begin{aligned}
-  b &amp;= \frac{\displaystyle{3}}{\displaystyle{\sqrt{x^2 + 9}}} \\\\
-  r &amp;= \frac{\displaystyle{y}}{\displaystyle{3}} \cdot \sqrt{x^2 + 9} \\\\
-  a &amp;= \sqrt{1 - \frac{\displaystyle{9}}{\displaystyle{x^2+9}}}
-\end{aligned}
-$$&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset02/3-a_hu17023554481577700982.webp 400w,
-               /mit-analysis1c-post/pset02/3-a_hu1389438155078729261.webp 760w,
-               /mit-analysis1c-post/pset02/3-a_hu12211648455716228549.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset02/3-a_hu17023554481577700982.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;428&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;We show if arbitrary $p \in E^o$ then $p$ is an interior of $E^o$. By definition $p$ is an interior of $E$. So $N_{r_0}(p) \subset E$ for some $r_0 &gt; 0$. Let $r_1 = r_0/2$ and $h = r_0 - r_1$. It suffices to show $N_{r_1}(p) \subset E^o$.&lt;/p&gt;
-&lt;p&gt;Consider $N_h(p&#39;)$ for any $p&#39; \in N_{r_1}(p)$. Through the picture it is clear this new neighbourhood shall be bounded by $N_{r_0}(p)$ and hence falls completely within $E$. That shows $p&#39; \in E^o$ and in turn completes our proof.&lt;/p&gt;
-&lt;p&gt;In greater details, Observe $\forall q \in N_h(p&#39;)$, $d(q, p) \leq d(q, p&#39;) + d(p&#39;, p) &lt; h + r_1 = (r_0 - r_1) + r_1 = r_0$, and hence $q \in N_{r_0}(p) \subset E$.&lt;/p&gt;
-&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;$(\leftarrow)$ Trivial by &lt;em&gt;a&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;$(\rightarrow)$ Trivially $E^o \subset E$. By hypothesis, The definition of open $E$ immediately concludes $E \subset E^o$.&lt;/p&gt;
-&lt;h3 id=&#34;c&#34; class=&#34;unnumbered&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;Any $p \in G$ is an interior point of $G$ by definition. So there is a neighbourhood $N_{r_0}(p) \subset G$ for some $r_0 &gt; 0$. But we know $G \subset E$, So $N_{r_0}(p) \subset E$, $p$ is an interior point of $E$.&lt;/p&gt;
-&lt;h3 id=&#34;e&#34; class=&#34;unnumbered&#34;&gt;e&lt;/h3&gt;
-&lt;p&gt;I guess Yes. We struggled with a formal proof though.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   Given a point $p \in X$, Define $V_p = \{ x &gt; p \; | \; [p,x] \subset X \} \cup \{ x &lt; p \; | \; [x, p] \subset X \}$.\&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remark.&lt;/strong&gt;   $V_p$ constitutes a largest segment $(a,b)$, Given $X$ is an open-set.&lt;br&gt;
-Assuming $V_p = (a, b]$ derives an immediate contradiction as $b$ won&amp;rsquo;t be an interior point of $X$.&lt;/p&gt;
-&lt;p&gt;A more rigorous argument for showing $V_p$ is a segment can be made by constructing a segment $(inf \, V_p, sup \, V_p)$ but for brevity we ignore it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   Given an open-set $X$ and some $V_p \subset X$, For any $q \neq p$, Either $V_p = V_q$ or $V_p \cap V_q = \phi$.&lt;br&gt;
-Easily proven by considering the equivalent logical form of $V_p \cap V_q \neq \phi \rightarrow V_p = V_q$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   Given a non-empty open-set $X$ and some $V_p \subset X$, $X_1 = X - V_p$ is either empty or a non-empty open-set.&lt;br&gt;
-If $V_p = X$ then $X_1$ is empty. Consider $V_p$ as a strict or proper subset of $X$. Then $X_1$ is non-empty.&lt;/p&gt;
-&lt;p&gt;We show now $X_1$ is an open-set. Let $q$ be an arbitrary point of $X_1$, Then also $q \in X$. Since $X$ is an open-set we know there&amp;rsquo;s some neighbour $N_{r0}(q) \subset X$. Clearly $N_{r0}(q) \subset V_q$. By &lt;em&gt;Lemma 3&lt;/em&gt; and since $q \not\in V_p$, It follows $N_{r0}(q) \cap V_p = \phi$. So $N_{r0}(q) \subset X_1$ and $q$ is an interior point of $X_1$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt;   Countable $\{V_i\}$&lt;br&gt;
-Follow the same procedure of &lt;em&gt;Lemma 4&lt;/em&gt; but let the taken point $p_i$ to be a rational number. Take some real number $z_i$ in non-empty $X_i$; As it is interior there is a neighbour such that for any $q$ where $d(z_i, q) &lt; r_0$ for some $r_0 &gt; 0$, $q \in X$. By the density of rational numbers, there is a rational $p_i$ which satisfies $d(z_i, p_i) &lt; r_0$. Hence $p_i \in X_i$.&lt;/p&gt;
-&lt;p&gt;We now know every distinct $V_{p_i}$ corresponds to a distinct rational number $p_i$. So the cardinality of $\{V_{p_i}\}$ is &lt;em&gt;at most countable&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt;   Main Problem&lt;br&gt;
-Following the procedure of &lt;em&gt;Lemma 4&lt;/em&gt; and by &lt;em&gt;Corollary 5&lt;/em&gt; we can keep constructing $V_{p_1}$, $V_{p_2}$, ..etc, which in turn are &lt;em&gt;at most countable&lt;/em&gt;. There are two cases:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;\(i\) We reach some empty $X_i$, So $\{V_i\}$ is finite. Or&lt;/li&gt;
-&lt;li&gt;\(ii\) We do not ever reach an empty $X_i$, and $\{ V_i \}$ is &lt;em&gt;countable&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; I received the following support before being able to solve the problem. I admit it was totally unlikely to think of the formulation $(q-\delta, q+\epsilon) \subset X$ on my own. I admit the problem is completely spoiled.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset02/0_hu2687779547187866287.webp 400w,
-               /mit-analysis1c-post/pset02/0_hu16135252710501213937.webp 760w,
-               /mit-analysis1c-post/pset02/0_hu9420002411297206726.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset02/0_hu2687779547187866287.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;508&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset02/1_hu17294113236748412359.webp 400w,
-               /mit-analysis1c-post/pset02/1_hu8056911258703303938.webp 760w,
-               /mit-analysis1c-post/pset02/1_hu5336444309551012103.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset02/1_hu17294113236748412359.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;302&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /mit-analysis1c-post/pset02/2_hu4288785976669424427.webp 400w,
-               /mit-analysis1c-post/pset02/2_hu12314494924406904576.webp 760w,
-               /mit-analysis1c-post/pset02/2_hu9256611218540277536.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/mit-analysis1c-post/pset02/2_hu4288785976669424427.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;252&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;M1&lt;/strong&gt; The product is $(a_0a_1 + 2b_0 b_1) + \sqrt{2} (a_0 b_1 + a_1 b_0)$, Where the formed $a$ and $b$ are in $\mathcal{Q}$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 01</title>
-      <link>https://mostafatouny.github.io/mit-analysis1c-post/pset01/</link>
+      <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset01/</link>
       <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/mit-analysis1c-post/pset01/</guid>
+      <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset01/</guid>
       <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; &lt;em&gt;simplest-fraction&lt;/em&gt;&lt;br&gt;
 We call $\frac{\displaystyle{x}}{\displaystyle{y}}$ a &lt;em&gt;simplest-fraction&lt;/em&gt; when it is in its simplest form. i.e cannot be reduced by eliminating a common fraction.&lt;/p&gt;
@@ -854,100 +134,7 @@ Observe any common factor among the numerator and denominator is going to necess
 It&amp;rsquo;s possible to set
 $\sqrt{\frac{\displaystyle{m}}{\displaystyle{n}}} = \frac{\displaystyle{a}}{\displaystyle{b}}$
 where $\frac{\displaystyle{a}}{\displaystyle{b}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;. On $\frac{\displaystyle{m}}{\displaystyle{n}} = \frac{\displaystyle{a^2}}{\displaystyle{b^2}}$
-It follows by &lt;em&gt;fact 2&lt;/em&gt; and &lt;em&gt;lemma 3&lt;/em&gt;, Both $\frac{\displaystyle{m}}{\displaystyle{n}}$ and $\frac{\displaystyle{a^2}}{\displaystyle{b^2}}$ are &lt;em&gt;simplest-fractions&lt;/em&gt;. By uniqueness of such forms, $m = a^2$ and $n = b^2$. QED&lt;/p&gt;
-&lt;h2 id=&#34;problem-2&#34;&gt;Problem 2&lt;/h2&gt;
-&lt;p&gt;Assume for the sake of contradiction, There&amp;rsquo;s an order &amp;lt; defined in the complex field, Which turns it into an ordered field.&lt;/p&gt;
-&lt;p&gt;By definition, It&amp;rsquo;s an ordered set also, and hence the following fact applies to it: For any $s, r \in F$ exactly one of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$(i) \, s=r$,&lt;/li&gt;
-&lt;li&gt;$(ii) \, s&lt;r$,&lt;/li&gt;
-&lt;li&gt;$(iii) \, s&gt;r$ is true.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Particularly we have exactly one of the following cases to be true:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(i)&lt;/strong&gt; $\sqrt{-1} = 0$&lt;br&gt;
-Then $-1 = \sqrt{-1} \sqrt{-1} = 0 \cdot 0 = 0$. A contradiction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(ii)&lt;/strong&gt; $\sqrt{-1} &gt; 0$&lt;br&gt;
-Then $-1 = \sqrt{-1} \sqrt{-1} &gt; \sqrt{-1} \cdot 0 = 0$. Also $1 &lt; 0$ and $\sqrt{-1} = \sqrt{-1} \cdot 1 &lt; \sqrt{-1} \cdot 0 = 0$. A contradiction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(iii)&lt;/strong&gt; $\sqrt{-1} &lt; 0$&lt;br&gt;
-Then $-1 = \sqrt{-1} \sqrt{-1} &gt; \sqrt{-1} \cdot 0 = 0$. Also $1 &lt; 0$ and $\sqrt{-1} = \sqrt{-1} \cdot 1 &gt; \sqrt{-1} \cdot 0 = 0$. A contradiction.&lt;/p&gt;
-&lt;h2 id=&#34;problem-3&#34;&gt;Problem 3&lt;/h2&gt;
-&lt;p&gt;The proof of complex numbers being an ordered set follows immediately by the obvious/natural properties of real numbers&amp;rsquo; order and enumerating cases.&lt;/p&gt;
-&lt;p&gt;A counter-example is given to the claim, that the orderd-set of complex numbers have the least-upper-bound property. Let $E = \set {(1/x, y) \mid x&gt;1\}$, which is clearly bounded by any element of the set $B = \set {(1, y) \mid y \in \mathcal{R}\}$. But set $B$ has no least element.&lt;/p&gt;
-&lt;h2 id=&#34;problem-4&#34;&gt;Problem 4&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;$f(0) = f(0+0) = f(0) + f(0)$. Then $f(0) - f(0) = f(0) + f(0) - f(0)$, implying $0 = f(0)$.&lt;/p&gt;
-&lt;p&gt;$f(1) = f(1 \cdot 1) = f(1) \cdot f(1)$. Let $x = f(1)$, Then $x = x^2$ which implies $x(x-1) = 0$, and finally either $x = 0$ or $x = 1$.&lt;/p&gt;
-&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $f(n) = n f(1)$&lt;br&gt;
-$f(n) = f(n-1 + 1) = f(n-1) + f(1)$, implying $f(n) = f(0) + n \cdot f(1)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $f(n/m) = (n/m) f(1)$&lt;br&gt;
-$f(n/m) = f(n \cdot 1/m) = n \cdot f(1/m) \cdot f(1)$. But $f(1) = f(1/m + 1/m \dots + 1/m) = f(1/m) + f(1/m) + \dots + f(1/m) = m \cdot f(1/m)$, which leads to $f(1/m) = f(1)/m$. Finally, Multiply both sides by $n$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; Main Problem&lt;br&gt;
-The final conclusion follows immediately by cases of $f(1)$ being equal to $0$ or $1$.&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $f(x) \geq 0$ if $x \geq 0$&lt;br&gt;
-Since $x$ is a non-negative, we know $\sqrt{n}$ exists. Observe $f(x) = f(\sqrt{x} \cdot \sqrt{x}) = f(\sqrt{x}) \cdot f(\sqrt{x})$. But any square cannot be a negative number.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt;   Main Problem&lt;br&gt;
-If $x &gt; y$, Then $x-y &gt; 0$. By &lt;em&gt;Lemma. 1&lt;/em&gt;, $f(x-y) \geq 0$. But $f(x-y) = f(x) + f((-1) \cdot y) = f(x) - f(y)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; This problem had been solved by the aid of good friends. My original flawed solution is below.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./2.png&#34; alt=&#34;2 png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;c-flawed&#34;&gt;c (Flawed)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; The flaw here is discovered by a good friend.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.png&#34; alt=&#34;1 png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;If $x &gt; y$, Then the decimal expansion of&lt;/p&gt;
-$$x = \frac{x_0}{10^0} + \frac{x_1}{10^1} + \frac{x_2}{10^2} + \dots + \frac{x_k}{10^k}$$$$y = \frac{y_0}{10^0} + \frac{y_1}{10^1} + \frac{y_2}{10^2} + \dots + \frac{y_k}{10^k}$$&lt;p&gt;has some $x_i &gt; y_i$. Assume $i$ is the least such index.&lt;/p&gt;
-&lt;p&gt;It follows by &lt;em&gt;b&lt;/em&gt;
-&lt;/p&gt;
-$$f(x) = f(1) \left [ f(\frac{x_0}{10^0}) + f(\frac{x_1}{10^1}) + f(\frac{x_2}{10^2}) + \dots + f(\frac{x_k}{10^k}) \right ] = f(1) \left [ \frac{x_0}{10^0} + \frac{x_1}{10^1} + \frac{x_2}{10^2} + \dots + \frac{x_k}{10^k} \right ]$$$$f(y) = f(1) \left [ f(\frac{y_0}{10^0}) + f(\frac{y_1}{10^1}) + f(\frac{y_2}{10^2}) + \dots + f(\frac{y_k}{10^k}) \right ] = f(1) \left [ \frac{y_0}{10^0} + \frac{y_1}{10^1} + \frac{y_2}{10^2} + \dots + \frac{y_k}{10^k} \right ]$$&lt;p&gt;Considering both cases of $f(1)$ from &lt;em&gt;a&lt;/em&gt;, The inequality $f(x) \geq f(y)$ follows.&lt;/p&gt;
-&lt;p&gt;Note even if $x$ or $y$ were periodic, i.e the expansion does not end, some sufficiently large $k$ would still exist fulfilling our construction.&lt;/p&gt;
-&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt;   $f(1) = 0$&lt;br&gt;
-For any real number $x$ we can pick-up two rational numbers $q_0$ and $q_1$ such that $q_0 \leq x \leq q_1$, But we know $f(q_0) = f(q_1) = 0$ from &lt;em&gt;b&lt;/em&gt;, and $f(q_0) \leq f(x) \leq f(q_1)$ from &lt;em&gt;c&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case.&lt;/strong&gt;   $f(1) = 1$&lt;br&gt;
-For any real-number $x$, We know there are rational numbers $q_{1a}, q_{2a}, \dots$ which arbitrarily get closer to $x$ from above, and similarly we know there are rational numbers $q_{1b}, q_{2b}, \dots$ which arbitrarily get closer to $x$ from below. So we have $q_{ib} \leq x \leq q_{ia}$ for $i = 1, 2, \dots$.&lt;/p&gt;
-&lt;p&gt;From &lt;em&gt;c&lt;/em&gt;, We get $f(q_{ib}) \leq f(x) \leq f(q_{ia})$, and by &lt;em&gt;b&lt;/em&gt;, $q_{ib} \leq f(x) \leq q_{ia}$, which suffices to prove $f(x) = x$.&lt;/p&gt;
-</description>
+It follows by &lt;em&gt;fact 2&lt;/em&gt; and &lt;em&gt;lemma 3&lt;/em&gt;, Both $\frac{\displaystyle{m}}{\displaystyle{n}}$ and $\frac{\displaystyle{a^2}}{\displaystyle{b^2}}$ are &lt;em&gt;simplest-fractions&lt;/em&gt;. By uniqueness of such forms, $m = a^2$ and $n = b^2$. QED&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

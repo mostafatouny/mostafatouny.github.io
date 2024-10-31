@@ -1,920 +1,337 @@
-<!doctype html>
-<!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: October 28, 2024 --><html lang="en-us" dir="ltr"
-      data-wc-theme-default="dark">
-  
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+<!DOCTYPE html>
+<html lang="en" dir="auto">
 
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Mostafa Touny" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/post/" />
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
-  
-
-  
-  
-    
-    <link href="/dist/wc.min.css" rel="stylesheet" />
-  
-
-  
-  
-  
-
-  
-    
-    <link href="/css/custom.min.ca318089a9c54a1d155902d657869eaad57839491546ce606f11615595739081.css" rel="stylesheet" />
-  
-
-  <script>
-     
-    window.hbb = {
-       defaultTheme: document.documentElement.dataset.wcThemeDefault,
-       setDarkTheme: () => {
-        document.documentElement.classList.add("dark");
-        document.documentElement.style.colorScheme = "dark";
-      },
-       setLightTheme: () => {
-        document.documentElement.classList.remove("dark");
-        document.documentElement.style.colorScheme = "light";
-      }
-    }
-
-    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
-
-    if ("wc-color-theme" in localStorage) {
-      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-    } else {
-      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      if (window.hbb.defaultTheme === "system") {
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      }
-    }
-  </script>
-
-  <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      
-      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
-      checkboxes.forEach(e => {
-        e.parentElement.parentElement.classList.add('task-list');
-      });
-
-      
-      const liNodes = document.querySelectorAll('.task-list li');
-      liNodes.forEach(nodes => {
-        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
-        if (textNodes.length > 0) {
-          const span = document.createElement('label');
-          textNodes[0].after(span);  
-          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
-          span.appendChild(textNodes[0]);
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mostafa Touny</title>
+<meta name="keywords" content="">
+<meta name="description" content=" - Mostafa Touny">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.mostafatouny.github.io/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e6ee52f0fc7c2e3dbd78858fc1b3e06fb86a3c6ee38d351342e06e23a24d02d6.css" integrity="sha256-5u5S8Px8Lj29eIWPwbPgb7hqPG7jjTUTQuBuI6JNAtY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.mostafatouny.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.mostafatouny.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.mostafatouny.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.mostafatouny.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.mostafatouny.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.mostafatouny.github.io/post/index.xml">
+<link rel="alternate" hreflang="en" href="https://www.mostafatouny.github.io/post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
         }
-      });
-    });
-  </script>
 
-  
-  
-  
+    </style>
+</noscript><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.mostafatouny.github.io/post/" />
 
-
-
-
-
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content=""/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Mostafa Touny" />
-  
-
-  
-  <link rel="icon" type="image/png" href="/media/icon_hu15058970365499436532.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2663279629434353957.png" />
-
-  <link rel="canonical" href="https://mostafatouny.github.io/post/" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@GetResearchDev" />
-    <meta property="twitter:creator" content="@GetResearchDev" />
-  
-  <meta property="og:site_name" content="Mostafa Touny" />
-  <meta property="og:url" content="https://mostafatouny.github.io/post/" />
-  <meta property="og:title" content="Mostafa Touny" />
-  <meta property="og:description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" />
-    <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta property="og:updated_time" content="2024-10-28T00:00:00&#43;00:00" />
-    
-  
-
-  
-
-
-
-
-  <title>Mostafa Touny</title>
-
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <style>
-    @font-face {
-      font-family: 'Inter var';
-      font-style: normal;
-      font-weight: 100 900;
-      font-display: swap;
-      src: url(/dist/font/Inter.var.woff2) format(woff2);
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://www.mostafatouny.github.io/post/"
     }
-  </style>
+  ]
+}
+</script>
 
-  
-
-  
-  
-
-
-  
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
     
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [ ['$$', '$$'], ['\\[', '\\]'] ],  
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]      
+    }
+  };
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  <script
-    defer
-    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
-    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
-  ></script>
-
-  
-  
-
-
-
-
-
-
-
-
-  
     
-      
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-      
-    
-  
-
-
-
-
 </head>
 
-  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
-    <div id="page-bg"></div>
-    <div class="page-header sticky top-0 z-30">
-      
-      
-      
-        
-        
-        
-          <header id="site-header" class="header">
-  <nav class="navbar px-3 flex justify-left">
-    <div class="order-0 h-100">
-      
-      <a class="navbar-brand" href="/" title="Mostafa Touny">
-        
-      </a>
-    </div>
-    
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Open Menu</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Close Menu</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
-      </svg>
-    </label>
-    
+<body class="list dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
 
-    
-    
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
-      ">
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/"
-        >About</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link active"
-          
-          href="/post/"
-        >Blog</a
-        >
-      </li>
-      
-      
-      
-    </ul>
+</script>
 
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-
-      
-      
-      
-
-      
-      
-
-      
-      
-
-      
-      
-    </div>
-  </nav>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.mostafatouny.github.io/" accesskey="h" title="Mostafa Touny (Alt + H)">Mostafa Touny</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.mostafatouny.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mostafatouny.github.io/post" title="Blog">
+                    <span class="active">Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-
-
-
-        
-      
-    </div>
-    <div class="page-body  my-10">
-      
-
-<div class="max-w-prose mx-auto flex justify-center">
-  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl"></h1>
-    
-  </article>
-</div>
-
-
-
-
-<div class="flex flex-col items-center">
-
-  <div class="container max-w-[65ch] mx-auto bg-white dark:bg-zinc-900 rounded-xl border-gray-100 dark:border-gray-700 border shadow-md overflow-hidden my-5">
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/extremal-bipartite-poster/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Extremal Round-Robin and Bipartite Poster Presentation</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A poster presentation for Egypt&#39;s ICMA 24 conference</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Oct 28, 2024</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/msa-math-lab/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/msa-math-lab/featured_hu6633315760576730624.webp" height="655" width="655" alt="Math with Application at MSA Uni.">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Math with Application at MSA Uni.</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Four courses TAed in Spring 2024, Modern Sciences and Arts (MSA).</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jul 9, 2024</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/siniora-logic-pset/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/siniora-logic-pset/featured_hu2708857569040143720.webp" height="655" width="655" alt="Siniora&#39;s Formal Logic">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Siniora&#39;s Formal Logic</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A course audited by Dr. Daoud Siniora, at The American University in Cairo (AUC)</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jun 3, 2024</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/isabel-graph-pset/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/isabel-graph-pset/featured_hu15223868418271522997.webp" height="655" width="655" alt="Isabel&#39;s Graph Theory">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Isabel&#39;s Graph Theory</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jun 1, 2024</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/siniora-algebra-pset/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/siniora-algebra-pset/featured_hu12720478890374876477.webp" height="655" width="655" alt="Gallian&#39;s Abstract Algebra">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Gallian&#39;s Abstract Algebra</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A course audited by Dr. Daoud Siniora, The American University in Cairo (AUC)</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Dec 16, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/msa-waikato-lab/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/msa-waikato-lab/featured_hu5704256038855436678.webp" height="655" width="655" alt="Waikato&#39;s Data Mining">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Waikato&#39;s Data Mining</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts (MSA).</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Nov 20, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/msa-levitin-lab/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/msa-levitin-lab/featured_hu14562871310896083024.webp" height="655" width="655" alt="Levitin&#39;s Algorithms">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Levitin&#39;s Algorithms</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts University (MSA)</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Nov 18, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/rog-adam-ex/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/rog-adam-ex/featured_hu8818053170038876430.webp" height="655" width="655" alt="Calculus">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Calculus</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Self-studying Calculus by Rogawski &amp; Adams.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Oct 6, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/harvey-rand-pset/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/harvey-rand-pset/featured_hu16803240832584166782.webp" height="655" width="655" alt="Harvey&#39;s Randomized Algorithms">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Harvey&#39;s Randomized Algorithms</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Self-studying randomized algorithms by Nick Harvey, British Columbia</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Oct 1, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/post/erik-alg-pset/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-        
-        
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/post/erik-alg-pset/featured_hu505189673634868520.webp" height="655" width="655" alt="Erik&#39;s Algorithms">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Erik&#39;s Algorithms</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Self-studying Proof-based Algorithms by Erik Demaine.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Aug 6, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-
-  </div>
-
-
-  
-<nav class="mt-1">
-  <ul class="container mx-auto flex justify-center">
-    
-    
-    <li class="p-5"><a class="page-link" href="/post/page/2/">Next &raquo;</a></li>
-    
-  </ul>
-</nav>
-
-
-
-</div>
-
-
-    </div>
-    <div class="page-footer">
-      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  <p class="powered-by text-center">
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-    
-  </p>
-
+<main class="main"> 
+
+<article class="post-entry"> 
+<figure class="entry-cover"><img loading="lazy" src="https://www.mostafatouny.github.io/featured.jpg" alt="">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Extremal Round-Robin and Bipartite Poster Presentation
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2024-10-28 00:00:00 +0000 UTC'>October 28, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Extremal Round-Robin and Bipartite Poster Presentation" href="https://www.mostafatouny.github.io/post/extremal-bipartite-poster/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/msa-math-lab/featured_hu3455653860284757165.jpg 360w ,https://www.mostafatouny.github.io/post/msa-math-lab/featured_hu10036626679142107282.jpg 480w ,https://www.mostafatouny.github.io/post/msa-math-lab/featured_hu276991952324416451.jpg 720w ,https://www.mostafatouny.github.io/post/msa-math-lab/featured_hu9047778125583048043.jpg 1080w ,https://www.mostafatouny.github.io/post/msa-math-lab/featured_hu4295323525534708085.jpg 1500w ,https://www.mostafatouny.github.io/post/msa-math-lab/featured.jpg 1519w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/msa-math-lab/featured.jpg" alt="" 
+            width="1519" height="1013">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Math with Application at MSA Uni.
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2024-07-09 00:00:00 +0000 UTC'>July 9, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Math with Application at MSA Uni." href="https://www.mostafatouny.github.io/post/msa-math-lab/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/siniora-logic-pset/featured_hu10550875335228974775.jpg 360w ,https://www.mostafatouny.github.io/post/siniora-logic-pset/featured_hu16342573963395920156.jpg 480w ,https://www.mostafatouny.github.io/post/siniora-logic-pset/featured_hu9855469037200363407.jpg 720w ,https://www.mostafatouny.github.io/post/siniora-logic-pset/featured_hu7556743783851808132.jpg 1080w ,https://www.mostafatouny.github.io/post/siniora-logic-pset/featured_hu4137982620655334326.jpg 1500w ,https://www.mostafatouny.github.io/post/siniora-logic-pset/featured.jpg 4032w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/siniora-logic-pset/featured.jpg" alt="" 
+            width="4032" height="3024">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Siniora&#39;s Formal Logic
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2024-06-03 00:00:00 +0000 UTC'>June 3, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Siniora&#39;s Formal Logic" href="https://www.mostafatouny.github.io/post/siniora-logic-pset/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/isabel-graph-pset/featured_hu15920843425079334408.jpg 360w ,https://www.mostafatouny.github.io/post/isabel-graph-pset/featured_hu11767624080317074626.jpg 480w ,https://www.mostafatouny.github.io/post/isabel-graph-pset/featured_hu10922591473832759645.jpg 720w ,https://www.mostafatouny.github.io/post/isabel-graph-pset/featured_hu6363117902950308557.jpg 1080w ,https://www.mostafatouny.github.io/post/isabel-graph-pset/featured_hu16281668976335267924.jpg 1500w ,https://www.mostafatouny.github.io/post/isabel-graph-pset/featured.jpg 1600w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/isabel-graph-pset/featured.jpg" alt="" 
+            width="1600" height="1200">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Isabel&#39;s Graph Theory
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2024-06-01 00:00:00 +0000 UTC'>June 1, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Isabel&#39;s Graph Theory" href="https://www.mostafatouny.github.io/post/isabel-graph-pset/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured_hu5793721239604889611.jpg 360w ,https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured_hu9905814660934712657.jpg 480w ,https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured_hu10064466630772728040.jpg 720w ,https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured_hu4392043809625235060.jpg 1080w ,https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured.jpg 1451w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/siniora-algebra-pset/featured.jpg" alt="" 
+            width="1451" height="650">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Gallian&#39;s Abstract Algebra
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-12-16 00:00:00 +0000 UTC'>December 16, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Gallian&#39;s Abstract Algebra" href="https://www.mostafatouny.github.io/post/siniora-algebra-pset/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/msa-waikato-lab/featured_hu15861192578447341401.jpg 360w ,https://www.mostafatouny.github.io/post/msa-waikato-lab/featured_hu5900282125003142950.jpg 480w ,https://www.mostafatouny.github.io/post/msa-waikato-lab/featured_hu17951292502347161386.jpg 720w ,https://www.mostafatouny.github.io/post/msa-waikato-lab/featured.jpg 778w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/msa-waikato-lab/featured.jpg" alt="" 
+            width="778" height="835">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Waikato&#39;s Data Mining
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-11-20 00:00:00 +0000 UTC'>November 20, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Waikato&#39;s Data Mining" href="https://www.mostafatouny.github.io/post/msa-waikato-lab/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/msa-levitin-lab/featured_hu15288521282740210215.jpg 360w ,https://www.mostafatouny.github.io/post/msa-levitin-lab/featured_hu693092847799475175.jpg 480w ,https://www.mostafatouny.github.io/post/msa-levitin-lab/featured_hu62921588327696463.jpg 720w ,https://www.mostafatouny.github.io/post/msa-levitin-lab/featured.jpg 915w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/msa-levitin-lab/featured.jpg" alt="" 
+            width="915" height="524">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Levitin&#39;s Algorithms
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-11-18 00:00:00 +0000 UTC'>November 18, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Levitin&#39;s Algorithms" href="https://www.mostafatouny.github.io/post/msa-levitin-lab/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/rog-adam-ex/featured_hu10555275066312443477.jpg 360w ,https://www.mostafatouny.github.io/post/rog-adam-ex/featured_hu1548053420265373416.jpg 480w ,https://www.mostafatouny.github.io/post/rog-adam-ex/featured_hu16569063619452538490.jpg 720w ,https://www.mostafatouny.github.io/post/rog-adam-ex/featured_hu8511324507002038128.jpg 1080w ,https://www.mostafatouny.github.io/post/rog-adam-ex/featured.jpg 1189w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/rog-adam-ex/featured.jpg" alt="" 
+            width="1189" height="511">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Calculus
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-10-06 00:00:00 +0000 UTC'>October 6, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Calculus" href="https://www.mostafatouny.github.io/post/rog-adam-ex/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/harvey-rand-pset/featured_hu12733249184476394739.jpg 360w ,https://www.mostafatouny.github.io/post/harvey-rand-pset/featured_hu15242361693425011460.jpg 480w ,https://www.mostafatouny.github.io/post/harvey-rand-pset/featured_hu10489767458209584053.jpg 720w ,https://www.mostafatouny.github.io/post/harvey-rand-pset/featured.jpg 1043w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/harvey-rand-pset/featured.jpg" alt="" 
+            width="1043" height="551">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Harvey&#39;s Randomized Algorithms
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-10-01 00:00:00 +0000 UTC'>October 1, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Harvey&#39;s Randomized Algorithms" href="https://www.mostafatouny.github.io/post/harvey-rand-pset/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" srcset="https://www.mostafatouny.github.io/post/erik-alg-pset/featured_hu1720045950911563064.jpg 360w ,https://www.mostafatouny.github.io/post/erik-alg-pset/featured_hu14035716959684515700.jpg 480w ,https://www.mostafatouny.github.io/post/erik-alg-pset/featured_hu5079818726804303819.jpg 720w ,https://www.mostafatouny.github.io/post/erik-alg-pset/featured.jpg 993w" 
+            sizes="(min-width: 768px) 720px, 100vw" src="https://www.mostafatouny.github.io/post/erik-alg-pset/featured.jpg" alt="" 
+            width="993" height="500">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Erik&#39;s Algorithms
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-08-06 00:00:00 +0000 UTC'>August 6, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Erik&#39;s Algorithms" href="https://www.mostafatouny.github.io/post/erik-alg-pset/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://www.mostafatouny.github.io/post/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
 </footer>
-
-    </div>
-
+    </main>
     
-    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://www.mostafatouny.github.io/">Mostafa Touny</a></span> · 
 
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
+</script>
+</body>
 
-
-
-
-
-  </body>
 </html>

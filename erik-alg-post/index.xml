@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Erik&#39;s Algorithms | Mostafa Touny</title>
-    <link>https://mostafatouny.github.io/erik-alg-post/</link>
-      <atom:link href="https://mostafatouny.github.io/erik-alg-post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Erik&#39;s Algorithms</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
-      <title>Erik&#39;s Algorithms</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/</link>
-    </image>
-    
+    <title>Erik&#39;s Algorithms on Mostafa Touny</title>
+    <link>https://www.mostafatouny.github.io/erik-alg-post/</link>
+    <description>Recent content in Erik&#39;s Algorithms on Mostafa Touny</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mostafatouny.github.io/erik-alg-post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Problem Set 10</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset10/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset10/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset10/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset10/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -27,26 +23,13 @@
 &lt;p&gt;The proof is identical to slide 15. Note the symmetric structure of the ring where, as all processes are identical they send the same message to their right port and receive the same message from their left port.&lt;/p&gt;
 &lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
 &lt;p&gt;A randomized algorithm identical to slide 18, satisfies all the problem&amp;rsquo;s requirements.&lt;/p&gt;
-&lt;p&gt;The sole difference is the subroutine which exchanges all UIDs. In round $1$, A process sends its randomly generated UID to the right port. In round $r &gt; 1$, The received message from the left port in the previous round is sent to the right port. All processes record received UIDs and stop after recording $n$ of them.&lt;/p&gt;
-&lt;p&gt;That subroutine consumes $\mathcal{O}(n)$ rounds and $\mathcal{O}(n^2)$ messages.&lt;/p&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;I conjecture the answer there is no such algorithm; I couldn&amp;rsquo;t come-up with a rigorous proof. Here is an insight justifying my stance.&lt;/p&gt;
-&lt;p&gt;The only way processes can know each other&amp;rsquo;s UIDs is by circulating their UIDs. They cannot ever know whether the whole ring is covered. For example, If a process recorded $(a,b,c,a)$ then it can be tricked by the actual complete ring $(a,b,c,a,d)$ whose size is $5$. It is trivial to generalize the trick to accommodate any number of loops of $a$, like $(a,b,c,a,b,c,a)$ tricked by ring $(a,b,c,a,b,c,a,d)$.&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;I am not sure what is the sufficent degree of clarity the instructor is looking for. Neither do I claim my argument to be formally rigorous or even convincing. However, We hope it fulfills all the practical purposes of two introductory lectures.&lt;/p&gt;
-&lt;p&gt;The key idea is for processes, not to send &lt;em&gt;search&lt;/em&gt; unless the root $v_0$ broadcasts &lt;em&gt;ready&lt;/em&gt;. Also, &lt;em&gt;ready&lt;/em&gt; is broadcasted by $v_0$ only if all of its neighbours signaled level $i$ updated their parents.&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Time.&lt;/strong&gt; For each level, the root $v_0$ broadcasts &lt;em&gt;ready&lt;/em&gt; and receives a response, Accounting for $diam \cdot 2(diam)$ edges traversed. That concludes the desired $\mathcal{O}(diam^2 \cdot d)$ upper-bound.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Messages.&lt;/strong&gt; For each level, At most all vertices, both receive and send a message, Accounting for $diam \cdot 2n$.&lt;/p&gt;
-</description>
+&lt;p&gt;The sole difference is the subroutine which exchanges all UIDs. In round $1$, A process sends its randomly generated UID to the right port. In round $r &gt; 1$, The received message from the left port in the previous round is sent to the right port. All processes record received UIDs and stop after recording $n$ of them.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 09</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset09/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset09/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset09/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset09/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -64,163 +47,13 @@ $$\begin{aligned}
     B &amp;= 50\end{aligned}$$&lt;p&gt;
 Observe the optimal solution is $C = 50$ while &lt;em&gt;Alg1&lt;/em&gt; is of value $C* = 2$. Therefore the approximation ratio is $2/50 = 1/25$.&lt;/p&gt;
 &lt;p&gt;It is easy to see the number $50$ can be set arbitrarily larger, and
-therefore we can reach the desired unbounded approximation ratio.&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;We follow the same convention of assuming the given indices order follow
-non-increasing order of their densities.&lt;/p&gt;
-&lt;p&gt;For the first index $i$ such that $\sum_{j=1}^{i} v_j &gt; B$, denote items up to $i-1$ by &lt;em&gt;Max-Dens-Items&lt;/em&gt; and $i$th item by &lt;em&gt;First-Overweight&lt;/em&gt;. For item $a_i$ denote $D(a_i)$ to be the density of $a_i$, i.e the &lt;em&gt;value&lt;/em&gt; per one unit of &lt;em&gt;weight&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Take &lt;em&gt;D(First-Overweight)&lt;/em&gt; and multiply it by the slack weight in $B$ after consuming weights of &lt;em&gt;Max-Dens-Items&lt;/em&gt;. Sum the resulting value along values of &lt;em&gt;Max-Dens-Items&lt;/em&gt; and let $V_{maxDensities}$ denote that sum.&lt;/p&gt;
-&lt;p&gt;It is very clear $C* \leq V_{maxDensities}$ as we fully utilized the space of $B$ with maximum possible densities.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s return to &lt;em&gt;Alg2&lt;/em&gt; and note how similar it is to the way we defined $V_{maxDensities}$. Remark that $C = max\{ V_{maxDensities}, \textit{value of First-Overweight} \}$. We have two cases:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Case 1. Weights of &lt;em&gt;Max-Dens-Items&lt;/em&gt; $\geq \frac{\displaystyle{B}}{\displaystyle{2}}$.&lt;br&gt;
-Then $C \geq \frac{\displaystyle{ V_{maxDensities} }}{\displaystyle{2}}$, As &lt;em&gt;Max-Dens-Items&lt;/em&gt; accounts for more than 50% of $V_{maxDensities}$.&lt;/li&gt;
-&lt;li&gt;Case 2. Weights of &lt;em&gt;Max-Dens-Items&lt;/em&gt; $&lt; \frac{\displaystyle{B}}{\displaystyle{2}}$.&lt;br&gt;
-Then the weight of &lt;em&gt;First-Overweight&lt;/em&gt; is greater than $\frac{\displaystyle{B}}{\displaystyle{2}}$. It follows $V_{maxDensities}$ is contributed only by &lt;em&gt;Max-Dens-Items&lt;/em&gt; and &lt;em&gt;First-Overweight&lt;/em&gt;. Observe one of them must contribute at least 50% of $V_{maxDensities}$. By definition, that one shall be selected by &lt;em&gt;Alg2&lt;/em&gt;, and therefore $C \geq \frac{\displaystyle{ V_{maxDensities} }}{\displaystyle{2}}$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;That is a standard dynamic programming problem whose solution can be found in any textbook. For brevity we only show the recurrece relation.&lt;/p&gt;
-&lt;p&gt;Base: $S_{1,v} = w(a_1)$ if $w(a_1) = v$.&lt;br&gt;
-Induction Step: $S_{i,v} = min\{ S_{i-1,v}, w(a_i) + S_{i-1, v-v_i} \}$&lt;/p&gt;
-&lt;h4 id=&#34;d&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Polynomial Time Complexity.&lt;/strong&gt; Observe the time complexity of $Alg3$ is
-$\mathcal{O}(n^2 V)$, As the memoization table is:&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;value\items&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;1&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;..&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;n&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;..&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;nV&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Since $Alg4$ basically runs $Alg3$ with additional linear operations, Its time complexity is $\mathcal{O}(n^2 V&#39;)$, where $V&#39;$ is similarly defined but on scaled values $v_i&#39;$.&lt;/p&gt;
-&lt;p&gt;Clearly $V&#39; = \lfloor \frac{\displaystyle{V}}{\displaystyle{V}} \cdot \frac{\displaystyle{n}}{\displaystyle{\epsilon}} \rfloor = \lfloor \frac{\displaystyle{n}}{\displaystyle{\epsilon}} \rfloor$. So complexity of $Alg4$ can be re-written as $\mathcal{O}(n^3 \cdot \frac{1}{\epsilon})$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Approximation Scheme.&lt;/strong&gt; The idea is to use the bound of &lt;strong&gt;b&lt;/strong&gt; but on scaled values $v_i&#39;$, then reverse the scaling to reach the intended ratio.&lt;/p&gt;
-&lt;p&gt;Let $U$ be the upper-bound of optimal solutions which we defined earlier in &lt;strong&gt;b&lt;/strong&gt; on given values $v_i$. Let $U&#39;$ be similarly defined but on scaled values $v_i&#39;$. Define function $f$ so that it scales value as mentioned by the author. Let $C$ and $C&#39;$ denote the value of the subset solution obtained by $Alg4$ but on given and scaled values respectively.&lt;/p&gt;
-&lt;p&gt;From &lt;strong&gt;b&lt;/strong&gt;, We know there exists a solution on scaled values $v_i&#39;$ whose approximation ratio is $2$, out of $U&#39;$. Then trivially the optimal solution also can deviate by a ratio of at most $2$ out of $U&#39;$.&lt;/p&gt;
-&lt;p&gt;Observe if we scaled back a value then the calculated value is no greater than the original given value, since we are taking ceils. In other words, $f^{-1}(v_i&#39;) \leq v_i$.&lt;/p&gt;
-&lt;p&gt;Joining all these remarks:
-\begin{aligned}
-C&amp;rsquo; &amp;amp;\geq \frac{1}{2} U&amp;rsquo; \\
-C \geq f^{-1}(C&amp;rsquo;) &amp;amp;\geq \frac{1}{2} f^{-1}(U&amp;rsquo;) = U
-\end{aligned}
-From &lt;strong&gt;b&lt;/strong&gt;, That suffices to concluding $Alg4$ is an approximation scheme.&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Assume for the sake of contradiction there is a cycle $c_0$ in the reversed graph $\hat{G}$. Then it must contain an edge from $A$. Otherwise $c_0$ would also be in graph $G$ and by definition it must contain an edge from $A$. Call that edge $a$. Returning to $G$, $a$ would be reversed as in the figure below. It is possible to have edges other than $a$ in cycle $c_0$ which would also be reversed in graph $G$ In this case $p_0$ would be constructed by taking the corresponding sub-cycles into it.&lt;/p&gt;
-&lt;p&gt;Since $A$ is minimal there must be a cycle $c_1$ in graph $G$ which would not be covered if not for $a$. Observe we have cycle $c_2$ constructed by paths $p_0$ and $p_1$. What covers $c_2$ in $G$? Clearly no edge in path $p_0$ would do that since we already considered all edges of $A$ we might encounter and took a sub-cycle avoiding them. Then $c_2$ is covered by edge $b$ in path $p_1$ which is part of the cycle $c_1$. That contradicts $c_1$ being a cycle only covered by edge $a$ $\textbf{QED}$.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./cycle.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Remove all isolated vertices as they are irrelevant to cycles. Iteratively &lt;em&gt;contract&lt;/em&gt; edges if they are not a side of a triangle as in the following figure.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./contract.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;By definition, Each edge of the resulting graph is a side of a triangle. Observe the graph is still equivalent to the previous one, When it comes to cycles. Intuitively we just condensed the length of cycles.&lt;/p&gt;
-&lt;p&gt;For a single edge $e$, Consider the number of different triangles it is a side of. If the number is greater than $k$ then we must have $e \in S$; Otherwise, To cover all of these triangles, We will need more than $k$ edges. Note any two different triangles can share at most one edge. Remove edge $e$, and &lt;em&gt;contract&lt;/em&gt; edges as needed if they are no longer a side of a triangle (suffices also to maintain no isolated vertices). Output the resulting graph as $\hat{G}$ but with a capacity
-of at most $k-1$ edges to cover all of its cycles.&lt;/p&gt;
-&lt;p&gt;After repeating this process, We will have a graph where each edge is a side of a triangles, whose count is no more than $k$. Also each vertex is part of a cycle. We show now the number of vertices is upper-bounded by $k^2 + 2k$. They key idea is, If there is an additional vertex, We will have cycles more than what $k$ edges can accommodate.&lt;/p&gt;
-&lt;p&gt;For a single edge $e$, It can cover at most $k$ cycles. Vertices in those cycles are exactly, $2$ of the edge itself, and $k$ for each cycle. That is a total of $2+k$. See the picture below:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./verNum.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Considering all edges of $A$, The total we get is $k(2+k) = 2k + k^2$.&lt;/p&gt;
-&lt;p&gt;It is clear now we cannot have vertices greater than that number. As by our graph structure that vertex $v$ would be part of a cycle, and we have already consumed the maximum number of cycles $k$ edges can cover. In other words, We will miss a cycle which contains vertex $v$.&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;It suffices to have a polynomial-time algorithm of the kernlization
-procedure we illustrated.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Degrees of vertices are computed by a linear scan of edges,    $\mathcal{O}(|E|)$.&lt;/li&gt;
-&lt;li&gt;Contracting edges takes at most $\mathcal{O}(|E|^2)$.&lt;/li&gt;
-&lt;li&gt;Computing number of triangles for each edge takes at most $\mathcal{O}(|E| (|E| + |V|))$ by a trivial graph search, made for each edge.&lt;/li&gt;
-&lt;li&gt;Removing edges consumes $\mathcal{O}(|E|)$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Since each step is polynomial in the size of the input, The sum of these sub-routines is polynomial also.&lt;/p&gt;
-</description>
+therefore we can reach the desired unbounded approximation ratio.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 08</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset08/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset08/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset08/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset08/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -239,191 +72,13 @@ procedure we illustrated.&lt;/p&gt;
 &amp;amp;d_z \leq d_x + w(x,z) \\
 &amp;amp;d_x \leq d_z + w(z,x) \\
 &amp;amp;d_s \leq d_z + w(z,s)
-\end{aligned}&lt;/p&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;\begin{aligned}
-\text{Maximize } \sum_{v \in V} f_{sv} &amp;amp;- \sum_{v \in V} f_{vs} \\
-\text{Subject to } f_{s,v_1} &amp;amp;\leq c(s,v_1) \\
-f_{s,v_2} &amp;amp;\leq c(s,v_2) \\
-f_{v_1,v_3} &amp;amp;\leq c(v_1,v_3) \\
-f_{v_2,v_1} &amp;amp;\leq c(v_2,v_1) \\
-f_{v_2,v_4} &amp;amp;\leq c(v_2,v_4) \\
-f_{v_3,v_2} &amp;amp;\leq c(v_3,v_2) \\
-f_{v_3,t} &amp;amp;\leq c(v_3,t) \\
-f_{v_4,v_3} &amp;amp;\leq c(v_4,v_3) \\
-f_{v_4,t} &amp;amp;\leq c(v_4,t) \\
-\\
-\sum_{v \in V} f_{v_1v} &amp;amp;= \sum_{v \in V} f_{vv_1} \\
-\sum_{v \in V} f_{v_2v} &amp;amp;= \sum_{v \in V} f_{vv_2} \\
-\sum_{v \in V} f_{v_3v} &amp;amp;= \sum_{v \in V} f_{vv_3} \\
-\sum_{v \in V} f_{v_4v} &amp;amp;= \sum_{v \in V} f_{vv_4} \\
-\\
-f_{sv_1} &amp;amp;\geq 0 \\
-f_{sv_2} &amp;amp;\geq 0 \\
-f_{v_1v_3} &amp;amp;\geq 0 \\
-f_{v_2v_1} &amp;amp;\geq 0 \\
-f_{v_2v_4} &amp;amp;\geq 0 \\
-f_{v_3v_2} &amp;amp;\geq 0 \\
-\\
-f_{v_4t} &amp;amp;\geq 0
-\end{aligned}&lt;/p&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;For the sake of time, We cheat by a drawn graph from
-
-.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./feasible.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Standard Form&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Here $n=2$ and $m=4$.
-\begin{aligned}
-\text{Maximize } 4(x_1) &amp;amp;+ 1(x_2) \\
-\text{Subject to } 1(x_1) &amp;amp;+ 1(x_2) \leq 10 \\
-4(x_1) &amp;amp;+ -1(x_2) \leq 20 \\
-1(x_1) &amp;amp;+ 3(x_2) \leq 24 \\
-x_1, x_2 &amp;amp;\geq 0
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Slack Form&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\begin{aligned}
-\text{Maximize } &amp;amp;4(x_1) + 1(x_2) \\
-\text{Subject to } &amp;amp;x_3 = -1(x_1) - 1(x_2) + 10 \\
-&amp;amp;x_4 = -4(x_1) + 1(x_2) + 20 \\
-&amp;amp;x_5 = -1(x_1) - 3(x_2) + 24 \\
-&amp;amp;x_1, x_2, x_3, x_4, x_5 \geq 0
-\end{aligned}&lt;/p&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;The solution form is $(x_1,x_2,x_3,x_4,x_5)$ where $x_1, x_2$ are basic and $x_3,x_4,x_5$ are non-basic.&lt;/p&gt;
-&lt;p&gt;Basic solution, by setting basic variables to zeros is $(0,0,10,20,24)$.&lt;/p&gt;
-&lt;p&gt;Interchange basic $x_1$ with non-basic $x_4$. Solving $x_1$ by the equation of $x_4$, We get $x_1 = 5 + \frac{\displaystyle{1}}{\displaystyle{4}}x_2 + \frac{\displaystyle{-1}}{\displaystyle{4}} x_4$.&lt;/p&gt;
-&lt;p&gt;Substituting the new equation into remaining ones, We get:
-\begin{aligned}
-\text{Maximize } &amp;amp;20 + 2x_2 - x_4 \\
-\text{Subject to } &amp;amp;x_1 = 5 + \frac{\displaystyle{1}}{\displaystyle{4}}x_2 +     \frac{\displaystyle{-1}}{\displaystyle{4}}x_4 \\
-&amp;amp;x_3 = 5 - \frac{\displaystyle{5}}{\displaystyle{4}}x_2 +             \frac{\displaystyle{1}}{\displaystyle{4}}x_4 \\
-&amp;amp;x_5 = 19 + \frac{\displaystyle{-13}}{\displaystyle{4}}x_2 +          \frac{\displaystyle{1}}{\displaystyle{4}}x_4 \\
-&amp;amp;x_1, x_2, x_3, x_4, x_5 \geq 0
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Solution = $(5, 0, 5, 4, 19)$ with objective equal to $20$.&lt;/p&gt;
-&lt;p&gt;Interchange basic $x_2$ with non-basic $x_3$. Solving $x_2$ by the equation of $x_3$, We get $x_2 = 4 - \frac{\displaystyle{4}}{\displaystyle{5}} x_3 + \frac{\displaystyle{1}}{\displaystyle{5}} x_4$.&lt;/p&gt;
-&lt;p&gt;Substituting the new equation into remaining ones, We get:
-\begin{aligned}
-\text{Maximize } &amp;amp;28 - \frac{\displaystyle{8}}{\displaystyle{5}}x_3 -            \frac{\displaystyle{3}}{\displaystyle{5}}x_4 \\
-\text{Subject to } &amp;amp;x_1 = 6 - \frac{\displaystyle{1}}{\displaystyle{5}}x_3 -     \frac{\displaystyle{19}}{\displaystyle{20}}x_4 \\
-&amp;amp;x_2 = 4 - \frac{\displaystyle{4}}{\displaystyle{5}}x_3 +             \frac{\displaystyle{1}}{\displaystyle{5}}x_4 \\
-&amp;amp;x_5 = 6 + \frac{\displaystyle{13}}{\displaystyle{5}}x_3 -            \frac{\displaystyle{8}}{\displaystyle{20}}x_4 \\
-&amp;amp;x_1, x_2, x_3, x_4, x_5 \geq 0
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Solution = $(6, 4, 0, 0, 6)$ with objective equal to $28$.&lt;/p&gt;
-&lt;p&gt;Quoting from CLRS, page 868: &amp;quot;At this point, all coefﬁcients in the
-objective function are negative. As we shall see later in this chapter,
-this situation occurs only when we have rewritten the linear program so
-that the basic solution is an optimal solution.&amp;quot;&lt;/p&gt;
-&lt;h4 id=&#34;d&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;\begin{aligned}
-\text{Minimize } &amp;amp;10y_1 + 20y_2 + 24y_3 \
-\text{Subject to } &amp;amp;1y_1 + 4y_2 + 1y_3 \geq 4\
-&amp;amp;1y_1 - 1y_2 + 3y_3 \geq 1\
-&amp;amp;y_1, y_2, y_3 \geq 0
-\end{aligned}
-From &lt;em&gt;c&lt;/em&gt; we know the optimal value is 28.&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Given a $3SAT$ formula $\phi$, Construct $\phi&#39; = \phi \wedge (x_{n+1} \vee x_{n+2})$. Observe every &lt;em&gt;True&lt;/em&gt; assignment of $\phi$ corresponds to three distinct &lt;em&gt;True&lt;/em&gt; assignments of $\phi&#39;$. It follows $\phi$ is solvable if and only if $\phi&#39;$ is, and the solution of $3SAT$ is basically the output on $\phi$ in formula of $\phi&#39;$. Therefore $3SAT$ is reduced to &lt;em&gt;TRIPLE-SAT&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Observe the following illustrative example reducing $3SAT$ to $DONUT$.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./NP_Hard.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;All profits of vertices equal exactly 1.&lt;/li&gt;
-&lt;li&gt;Every clause is transformed to a complete 3-vertices sub-graph. It
-ensures Every 1 counted of $k$ must be of a distinct sub-graph.&lt;/li&gt;
-&lt;li&gt;$k$, the profit threshold to be satisfied, is equal to the number of
-clauses. It ensures every clause to be satisfied corresponds to
-counting 1 of k.&lt;/li&gt;
-&lt;li&gt;For consistency, There is an edge between every $v_i$ and
-$\neg v_i$, So that we cannot select both of them.&lt;/li&gt;
-&lt;li&gt;It is not problemetic to select $v_i$ multiple times. It is
-interpreted by many clauses being satisfied by the same literal.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now it is clear, Given a problem instance $x$, The transformed
-construction $f(x)$, achieves $x$ is $3SAT$ satisfiable if and only if
-$f(x)$ has a subset of profit at least $k$.&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;We reduce from &lt;em&gt;subset-sum&lt;/em&gt; problem in CLRS p.1097.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./sum.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Given an arbitrary subset-sum set $S$, Transform each integer $i$ to a task with time $i$ and profit $i$. All deadlines are set to the given $t$ of sum aimmed to find. Think of time as a discrete sequence of seconds.&lt;/p&gt;
-&lt;p&gt;Observe the maximum obtainable profit of machines is $t$. Observe also if that maximum is achieved then the integers corresponding to machines form a subset whose sum is $t$. On the other hand, If machines&amp;rsquo; profit found does not meet $t$ then there is no subset of integers summing to $t$, As otherwise machines found won&amp;rsquo;t be maximal.&lt;/p&gt;
-&lt;p&gt;The problem can be stated as a decision problem, by the existince of machines whose profit is at least $k$. The transformation between optimization and decision problems is easily done by a logarithmic binary search. For brevity we omit those details.&lt;/p&gt;
-</description>
+\end{aligned}&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 07</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset07/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset07/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset07/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset07/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -432,198 +87,48 @@ $f(x)$ has a subset of profit at least $k$.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Definitions &amp;amp; Properties&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Extended&lt;/th&gt;
+          &lt;th&gt;Definitions &amp;amp; Properties&lt;/th&gt;
+          &lt;th&gt;Extended&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Network&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Instructed below&lt;/td&gt;
+          &lt;td&gt;Network&lt;/td&gt;
+          &lt;td&gt;Instructed below&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Source s&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Sources $\{s_1, s_2, \dots, s_{k_s}\}$&lt;/td&gt;
+          &lt;td&gt;Source s&lt;/td&gt;
+          &lt;td&gt;Sources $\{s_1, s_2, \dots, s_{k_s}\}$&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Sink t&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Sinks $\{t_1, t_2, \dots, t_{k_t} \}$&lt;/td&gt;
+          &lt;td&gt;Sink t&lt;/td&gt;
+          &lt;td&gt;Sinks $\{t_1, t_2, \dots, t_{k_t} \}$&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Capacity constraint&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Same&lt;/td&gt;
+          &lt;td&gt;Capacity constraint&lt;/td&gt;
+          &lt;td&gt;Same&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Flow conservation&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;V - {sources} - {sinks}&lt;/td&gt;
+          &lt;td&gt;Flow conservation&lt;/td&gt;
+          &lt;td&gt;V - {sources} - {sinks}&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;flow value $\|f\|$&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;$\sum_{s_i} ( \sum_v f(s_i,v) - \sum_v f(v, s_i) )$&lt;/td&gt;
+          &lt;td&gt;flow value $\|f\|$&lt;/td&gt;
+          &lt;td&gt;$\sum_{s_i} ( \sum_v f(s_i,v) - \sum_v f(v, s_i) )$&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;For brevity we illustrate the construction definition by the following
 diagram.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./0.jpg&#34; alt=&#34;image&#34;  /&gt;
 &lt;/p&gt;
-&lt;p&gt;Observe $\sum_v f(s_{sup},v) = \sum_{s_i} \sum_v f(s_i, v)$ and $\sum_v f(v,s_{sup}) = \sum_{s_i} \sum_v f(v,s_i)$ which concludes our goal.&lt;/p&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;Denote $f = \alpha f_1 + (1-\alpha) f_2$. We show $f$ satisfies both definitions of (1) &lt;em&gt;capacity&lt;/em&gt; and (2) &lt;em&gt;reservation&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(1)&lt;/strong&gt; Clearly
-\begin{aligned}
-0 \leq \alpha f_1(u,v) &amp;amp;\leq \alpha c(u,v) \\
-0 \leq (1-\alpha) f_2(u,v) &amp;amp;\leq (1-\alpha) c(u,v)
-\end{aligned}
-Which concludes
-\begin{aligned}
-\alpha f_1(u,v) + (1-\alpha) f_2(u,v) \leq \alpha c(u,v) + (1-\alpha) c(u,v) = c(u,v)
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(2)&lt;/strong&gt; Clearly,
-\begin{aligned}
-\alpha \sum_v f_1(u,v) &amp;amp;= \alpha \sum_v f_1(v,u) \\
-(1-\alpha) \sum_v f_2(u,v) &amp;amp;= (1-\alpha) \sum_v f_2(v,u)
-\end{aligned}
-Which concludes
-\begin{aligned}
-\sum_v \alpha f_1(u,v) + (1-\alpha) f_2(u,v) = \sum_v \alpha f_1(v,u) + (1-\alpha) f_2(v,u)
-\end{aligned}&lt;/p&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;p&gt;Intuitively and without proof, min-cut is $S = \{s, v_1, v_2, v_4\}$ and
-$T = \{v_3, t\}$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;p&gt;Comment: I don&amp;rsquo;t feel confident about the solution.&lt;/p&gt;
-&lt;p&gt;By &lt;em&gt;Ex. 2&lt;/em&gt; we have a construction procedure from &lt;em&gt;multiple&lt;/em&gt; to &lt;em&gt;single&lt;/em&gt;
-with the same flow value. Intuitively and without proof, a flow of
-&lt;em&gt;multiple&lt;/em&gt; corresponds to a flow of the same value in &lt;em&gt;single&lt;/em&gt;. Then
-solving the &lt;em&gt;single&lt;/em&gt; yields a max-flow for &lt;em&gt;multiple&lt;/em&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Notation.&lt;/strong&gt; We say an edge $(u,v)$ is saturated in $F$ if
-$f(u,v) = c(u,v)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Since $F$ is a max-flow, we know there is no augmenting path
-existing in it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Based on the fact, Lest a flow greater than $|f|$ gets
-constructed in $F$, The following cannot happen in $F&#39;$:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Augmenting path, not containing edge $(u,v)$.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Augmenting path, containing $(u,v)$, but $(u,v)$ was not &lt;em&gt;saturated&lt;/em&gt;
-in $F$.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Augmenting path, containing $(u,v)$, but $f(u,v)$ is decreased.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Then, the possible cases of $F&#39;$ are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;No augmenting path exists, Then $|f&#39;| = |f|$.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Augmenting path exists, containing $(u,v)$, which was saturated in
-$F$, and flow increases it in $F&#39;$. Since $c&#39;(u,v) = f(u,v) + 1$,
-Then by definition of taking the minimum values along the path, It
-is concluded the increase in flow is at most 1.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If an augmenting path is taken in $F&#39;$, Then by the same line of
-reasoning, No second augmenting path is possible. Note
-$f&#39;(u,v) = c&#39;(u,v)$ now.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;br&gt;
-Similar.&lt;/p&gt;
-&lt;p&gt;A difference is the increase shall be at most k rather than at most 1,
-Following taking the minimum values along the augmenting path.&lt;/p&gt;
-&lt;p&gt;It is possible to have multiple augmenting paths, but even in that case,
-the overall increase shall be upperbounded by $k$.&lt;/p&gt;
-&lt;p&gt;The same line of reasoning leads to, any existing augmenting path, must
-be in the edge $(u,v)$ whose capacity is increased.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;br&gt;
-Symmetric.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;br&gt;
-Similar.&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Intuitively and without a proof, apply &lt;em&gt;Ford-Fulkerson&lt;/em&gt; method, Searching for paths which only contains edge $(u,v)$ whose capacity is increased. Intuitively that search restriction yields the upperbound $k \cdot (V+E)$.&lt;/p&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;Intuitively and without a proof, If the new capacity $c(u,v)$ is less than the flow of $F$, Fix the flow by decreasing flow values of edges which are in paths containing $(u,v)$, Then similarly to &lt;em&gt;b&lt;/em&gt;, apply &lt;em&gt;Ford-Fulkerson&lt;/em&gt; but only on paths containing $(u,v)$. Intuitively that search restriction yields the upperbound $k \cdot (V+E)$&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;p&gt;Out solution is based on intuition not a rigorous proof. Given a
-&lt;em&gt;directed graph&lt;/em&gt; input, Construct a corresponding &lt;em&gt;flow network&lt;/em&gt; where:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A new source vertex $s$ has a new edge with each $s_i$.&lt;/li&gt;
-&lt;li&gt;All edges have a capacity equal to $1$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then we run &lt;em&gt;Ford-Fulkerson&lt;/em&gt; to find the maximum flow. Now observe&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If max-flow $|f| = k$, output &amp;quot;Possible&amp;quot;&lt;/li&gt;
-&lt;li&gt;if max-flow $|f| \neq k$, output &amp;quot;Impossible&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The goal of edge-disjoint paths is realized by setting all capacities
-to 1. If max-flow is $k$ then each $s_i$ has a path to $t$. If max-flow
-is not $k$ then it must be less than $k$ and means some $s_i$ doesn&amp;rsquo;t
-have a successful flow to $t$.&lt;/p&gt;
-&lt;h3 id=&#34;prob-3&#34;&gt;Prob. 3&lt;/h3&gt;
-&lt;p&gt;Observe the following illustrative diagram which models the problem as a
-&lt;em&gt;max-flow&lt;/em&gt; problem.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;A customer $a_i$ has an edge with food $b_j$ in our constructed graph,
-If we are given $b_j \in A_i$. There is an additional edge for each
-customer to the special vertex &lt;em&gt;10$&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Intuitively and without a proof, Maximizing a flow, corresponds to
-minimizing the 1-flow value output from each customer to the &lt;em&gt;10$&lt;/em&gt;
-vertex as it does not reach vertex &lt;em&gt;t&lt;/em&gt; and hence does not contribute to
-increasing the flow.&lt;/p&gt;
-</description>
+&lt;p&gt;Observe $\sum_v f(s_{sup},v) = \sum_{s_i} \sum_v f(s_i, v)$ and $\sum_v f(v,s_{sup}) = \sum_{s_i} \sum_v f(v,s_i)$ which concludes our goal.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 06</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset06/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset06/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset06/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset06/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -640,218 +145,13 @@ well-gain from lectures.&lt;/p&gt;
 &lt;li&gt;$\overline{w}(p) = w(p) + h(v_0) - h(v_k)$ for path $p$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $\Sigma \overline{w}(v_i, v_{i+1}) = 0$&lt;br&gt;
-&lt;/p&gt;
-$$\begin{aligned}
-  \overline{w}(c) &amp;= w(c) + h(v_0) - h(v_k) \\\\
-  &amp;= 0 + h(v_0) - h(v_0), v_0=v_k \\\\
-  &amp;= 0
-\end{aligned}$$&lt;p&gt;If any $\overline{w}(v_i,v_{i+1}) &gt; 0$ then $\overline{w}(c) &gt; 0$,
-contradicting the proved above lemma.&lt;/p&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;p&gt;skipped in hope of professionally read while solving the exercises, and well-gain from lectures.&lt;/p&gt;
-&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;p&gt;In page 636 there is a hint of using &lt;em&gt;fibonacci-heabs&lt;/em&gt;. I am not sure whether it is the key of solving the problem. Anyway, The exercise is postponed untill we gain a guidance from others. Skimming the chapter did not yield any promising clue to pursue.&lt;/p&gt;
-&lt;h3 id=&#34;ex-6&#34;&gt;Ex. 6&lt;/h3&gt;
-&lt;p&gt;Same as &lt;em&gt;Ex. 5&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Case $r = w_{i,j}$. Nothing to be done.&lt;/p&gt;
-&lt;p&gt;Case $r &lt; w_{i,j}$. Check to see if new paths including edge $(i,j)$
-offer less-weight.&lt;/p&gt;
-&lt;p&gt;(For LaTeX issue we denote matrix $\Pi$ by $P$)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for x = 0 to n
-  for y = 0 to n
-    if d_x,i + r + d_j,y &amp;lt; d_x,y
-      d_x,y = d_x,i + r + d_j,y
-      P(x,j) = i
-      P(x,y) = P(j,y)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Observe $\Pi(x,i)$ is the same, and same for its recursive vertices.
-Similarly to $\Pi(j,y)$.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Complexity.&lt;/em&gt; $\mathcal{O}(V^2)$&lt;/p&gt;
-&lt;p&gt;Case $r &gt; w_{i,j}$. For paths which do not depend on $w_{i,j}$, Nothing
-needs to be updated about them. If their paths are less or equal than
-any path which includes $w_{i,j}$ then obviously these paths are still
-optimal when the weight of $w_{i,j}$ increases. If for vertex $x$,
-$P(x,j) != i$ then $x$ shall never visit edge $\set{i,j\}$.&lt;/p&gt;
-&lt;p&gt;Our focus starts on vertices $x$ whose $\Pi(x,j)$ equals $i$. For each such $x$ and each arbitrary vertex $y$, We compute minimum paths from $x$ to $y$ and update if needed. Let $D&#39;$ and $\Pi&#39;$ denote minimum distance and predecessor matrices after updating the weight of edge $\set{i,j\}$ to $r$, respectively. Any path $x \rightarrow y$ either consists of a single edge $\set{x,y\}$ or contains an intermediate vertex between $x$ and $y$. We loop on all vertices $z$ to compute $D(x,z) + D(z,y)$ and then set $D&#39;(x,y)$. However, we must check whether edge $\set{i,j\}$ falls into the path $x \rightarrow z$ or $z \rightarrow y$. if NO, then we know $D&#39;(x,z) = D(x,z)$ and $D&#39;(z,y) = D(z,y)$. If YES, then the new weight of path $x \rightarrow y$ which equals $D(x,y) + (r-w_{i,j})$, is equal or less than the new weight $D(x,z) + D(z,y) + (r - w_{i,j})$. That follows by $D(x,y) \leq D(x,z) + D(z,y)$ as the additional weight $r - w_{i,j}$ is added on both sides of the inequality. In this case we know $z$ won&amp;rsquo;t offer a less-weight path. So we can restrict our focus on vertices $z$ whose corresponding paths do not include edge $\set{i,j\}$.&lt;/p&gt;
-&lt;p&gt;(For LaTeX issues we denote matrix $\Pi$ by $P$)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;isEdgeInPath(edge {i,j}, path x -&amp;gt; y, predecessor P)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if P(x,j) != i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      s = y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      while P(x,s) != x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if P(x,s) == j
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          return False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Main()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      for x = 0 to n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if P(x,j) = i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          for y = 0 to n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            minDistance = min{ edge (x,y) if exists, D(x,y) + (r - w_i,j) }
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            minVertex = NULL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            isDistanceUpdated = False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            for z = 0 to n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              if isEdgeInPath( {i,j}, x -&amp;gt; y, P) OR z = x OR z = y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                continue to next iteration of z
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              zDistance = D(x,z) + D(z,y)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              if (distance &amp;lt; minDistance)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                minDistance = zDistance
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                minVertex = z
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                isDistanceUpdated = True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;             if isDistanceUpdated
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               P&amp;#39;(x,y) = P(z,y)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               P&amp;#39;(x,z) = P(x,z)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; $\mathcal{O}(V^3)$&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset06/3_hu16382661971693855722.webp 400w,
-               /erik-alg-post/pset06/3_hu10557050098337048442.webp 760w,
-               /erik-alg-post/pset06/3_hu18075572551994528138.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset06/3_hu16382661971693855722.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;439&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;In the same mannger matrices $M$ and $\Pi$ are maintainces &lt;em&gt;distances&lt;/em&gt;
-and &lt;em&gt;predecessors&lt;/em&gt;, We maintain also matrix $W$ for the number of edges
-corresponding to $d_{i,j}$ in $M$. The algorithm then checks $W$ before
-updating a new solution whether its number of edges is at most $h$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; The overhead is constant over the original algorithm. In
-terms of parameters and $h$ is postponed.&lt;/p&gt;
-&lt;h4 id=&#34;d&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;The algorithm constructs a series of matrices $L^1, L^2, .., L^{n-1}$
-where $L^m = \left ( l_{ij}^m \right )$, indicating shortest-paths of
-edges length at most $m$. The adapted algorithm terminates on $L^{h}$
-and outputs it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; At most the complexity of the original algorithm.&lt;/p&gt;
-&lt;h4 id=&#34;e&#34;&gt;e&lt;/h4&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;We prove if there are two different minimum spanning trees, $T_a$ and $T_b$, Then we can construct a minimum spanning tree $T_c$ whose weight is less than either of them.&lt;/p&gt;
-&lt;p&gt;We define:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$E_a = T_a(E)$&lt;/li&gt;
-&lt;li&gt;$E_b = T_b(E)$&lt;/li&gt;
-&lt;li&gt;$E_c = E_a \cap E_b$&lt;/li&gt;
-&lt;li&gt;$E_{a-b} = E_a - E_b$&lt;/li&gt;
-&lt;li&gt;$E_{b-a} = E_b - E_a$&lt;/li&gt;
-&lt;li&gt;$E_{-c} = E_{a-b} \cup E_{b-a}$&lt;/li&gt;
-&lt;li&gt;$e_{a}$, An edge in $E_a$&lt;/li&gt;
-&lt;li&gt;$e_{a0}$, An edge in $E_{a-b}$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For an edge $e_{a0} = \{x,y\}$, $x$ and $y$ are connected by a path in $T_b$ which does not include edge $e_{a0}$. Similarly for $e_{b0}$.&lt;/p&gt;
-&lt;p&gt;Follows immediately as by definition $e_{a0} \not\in E_b$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For an edge $e_{a0} = \{x,y\}$, There exists distinct edges $e_{b}^1$ and $e_{b}^2$ such that $e_b^1$ joins $x$ and $e_b^2$ joins $y$ in $E_b$. Similarly for $e_{b0}$.&lt;/p&gt;
-&lt;p&gt;Follows immediately by &lt;em&gt;Lemma 1&lt;/em&gt;. Note the two edges $e_{b}^1$ and $e_{b}^2$ can share at most one vertix.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   If there is a cycle where all edges are in $E_a$ except exactly one edge $e_b$ in $E_b$, and $w(e_b) &lt; w(e_a^i)$ for some $e_a^i$ in the cycle, then we can construct a MST $T_a&#39; = T_a - e_a^i + e_b$ of weight less than $T_a$&lt;/p&gt;
-&lt;p&gt;Consider two vertices, $v_1$ and $v_2$, whose connectivity relies on edge $e_a^i = \{x,y\}$. The path is $p(v_1,x), (x,y), p(y,v_2)$. By adding $e_b$ we know there is path $p_0(x,y) \neq (x,y)$, i.e $x$ can reach $y$ without edge $(x,y)$. Therefore we can form an alternative path for $v_1$ and $v_2$ without relying on $(x,y)$ by $p(v_1,x), p_0(x,y), p(y,v_2)$. Thus, Removing $e_a^i$ is safe. Note It is clear neither $p(v_1,x)$ nor $p(v_2,x)$ contains edge $(x,y)$ as that means there is an unnecessary cycle in the path.&lt;/p&gt;
-&lt;p&gt;Clearly $E_{-c}$ is non-empty, Otherwise $T_a = T_b$. Without the loss of generality, Assume the selected element of $E_{-c}$ is $\{x,z\} = e_{a0} \in E_{a-b}$. There are only two cases regarding the weight of $e_{a0}$.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset06/0_hu9828678431294402622.webp 400w,
-               /erik-alg-post/pset06/0_hu8995280889754397809.webp 760w,
-               /erik-alg-post/pset06/0_hu8800847630928198261.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset06/0_hu9828678431294402622.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;558&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case 1:&lt;/strong&gt; $w(e_{a0}) = 0$. By &lt;em&gt;Lemma 1&lt;/em&gt; we know there is a path $p(x,y)$ which does not include $e_{a0}$. Clearly have a circle of, edges in $E_b$ and exactly one edge in $E_a$. Since all weights of the graph are distinct and non-negative, $w(e_{a0})$ is strictly less than all edges in the circle. By &lt;em&gt;Lemma 3&lt;/em&gt;, We can form a lower-weight MST. Contradiction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Case 2:&lt;/strong&gt; $w(e_{a0}) &gt; 0$. By &lt;em&gt;Lemma 2&lt;/em&gt; we get edges $e_{b}^1$ and $e_{b}^2$ in $E_b$ where they contain vertices $x$ and $y$. Clearly it is not possible for both $e_b^1$ and $e_b^2$ to be in $E_a$. Otherwise we would have a cycle in $T_a$ contradicting the fact a tree has no cycles. It is easy to justify it by considering $T_a&#39; = T_a - e_{a0}$. Without the loss of generality assume $e_b^1 \not\in E_a$, i.e
-$e_b^1 = e_{b0}^1$. Denote $e_{b0}^1$ by $\{y,z\}$.&lt;/p&gt;
-&lt;p&gt;We claim there is a cycle of edges including $e_{b0}$ and $e_{a0}$, Where all remaining edges are in $E_a$. By connectivity of $T_a$ we know there is a path in $T_a$ between $x$ and $z$. Note the cycle is totally legit if it contained $y$. Similarly, There is a cycle of edges including $e_{a0}$ and $e_{b0}$, Where all remainig edges are in $E_b$.&lt;/p&gt;
-&lt;p&gt;We know $e_{a0} \neq e_{b0}$. In either cases some edge is greater than the other. By &lt;em&gt;Lemma 3&lt;/em&gt;, We get a lower-weight spanning tree. Contradiction.&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; For any graph $G$, There is a unique sub-graph $G_c$, Such that for any cycle $c$ in $G$ whose all edges are in $G_c$ except for exactly one edge $e_x$, The weight of $e_x$ is the maximum along the whole cycle of $c$. The proof is nearly identical to &lt;em&gt;a&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Clearly the MST exerts this property lest we construct another spanning-tree of less weight. Since the algorithm claimed here always prefers less-weight edges, It shall never contradict that property also. By uniqueness the claimed algorithm yields the MST.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm Description.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity Analysis.&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;Counter-example:&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset06/2_hu10178533042768729281.webp 400w,
-               /erik-alg-post/pset06/2_hu1200236374367148422.webp 760w,
-               /erik-alg-post/pset06/2_hu17509283482341222028.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset06/2_hu10178533042768729281.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;172&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id=&#34;d-1&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; Yes. The proof is nearly identical to &lt;em&gt;a&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm Description.&lt;/strong&gt;&lt;/p&gt;
-</description>
+&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 05</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset05/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset05/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset05/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset05/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -873,388 +173,13 @@ functions $f:U \rightarrow B$.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;\(ii\) for any fixed $i$ and $j$,
 $f(i), f(j) \in \{0, \dots, |B|-1\}$ are independently and randomly
-assigned.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;We are not aware whether these properties are part of a hash&amp;rsquo;s family
-definition.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For a family of functions $\mathcal{H}$ whose functions are
-defined on $f:U \rightarrow B$,
-$p[coll] = \frac{\displaystyle{1}}{\displaystyle{|B|}}$&lt;br&gt;
-For a fixed $k \in B$, $|\{f_{coll-i,j} | f(i)=f(j)=k \}| = |B|^{|U|-2}$
-To see why, Think of $f(k_i)$ and $f(k_j)$ as a fixed determined values;
-As a deferred choice, how many choices we have for $f$, for the
-remaining of $|U|-2$ elements?&lt;/p&gt;
-&lt;p&gt;Considering all $x_i \in \{0, \dots, |B|-1\}$ for
-$f(k_i) = x_i = f(k_j)$,
-$|\{f_{coll-i,j}\}| = |B|^{|U|-2} + \dots + |B|^{|U|-2} = |B| \cdot |B|^{|U|-2} = |B|^{|U|-1}$.&lt;/p&gt;
-&lt;p&gt;Finally,
-$\frac{\displaystyle{|\{f_{coll-i,j}\}|}}{\displaystyle{|\mathcal{H}|}} = \frac{\displaystyle{|B|^{|U|-1}}}{\displaystyle{|B|^{|U|}}} =                                     \frac{\displaystyle{1}}{\displaystyle{|B|}}$.
-The result is concluded, recalling a function is drawn randomly from
-$\mathcal{H}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollarly.&lt;/strong&gt;   If $p[coll] \leq \epsilon$, Then
-$\epsilon \geq \frac{\displaystyle{1}}{\displaystyle{|B|}}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt;   If $p[coll] \leq \epsilon$, Then
-$\epsilon \geq \frac{\displaystyle{1}}{\displaystyle{|B|}} - \frac{\displaystyle{1}}{\displaystyle{U}}$.
-Note
-$\epsilon \geq \frac{\displaystyle{1}}{\displaystyle{|B|}} - \frac{\displaystyle{1}}{\displaystyle{U}}$
-is equivalent to $|B| |U| \epsilon + |B| \geq |U|$ by trivial algebraic
-operations. It immediately follows from &lt;em&gt;lemma 4&lt;/em&gt;,
-$|B| |U| \epsilon + |B| \geq |B| |U| \frac{\displaystyle{1}}{\displaystyle{|B|}} = |U|+|B| \geq |U|$,
-since $|B| &gt; 0$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt;   Trees&amp;rsquo; Keys&lt;br&gt;
-Keys of the tree are keyed on low endpoints. i.e nodes on the left
-subtree have low endpoints less than the root&amp;rsquo;s low endpoint and nodes
-on the right subtree have greater low endpoints.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   Goodness&lt;br&gt;
-By an &lt;em&gt;optimal-interval&lt;/em&gt; we mean an overlapping one with the lowest low
-endpoint. We say some interval is &lt;em&gt;better&lt;/em&gt; when its low endpoint is
-strictly lower.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   No &lt;em&gt;better-interval&lt;/em&gt; on the right subtree.&lt;br&gt;
-If any search algorithm terminated upon finding an overlapping interval
-$x$, Then for any other overlapping interval on the right subtree, Its
-low endpoint is going to be at least equal to $x$&amp;rsquo;s low endpoint. That
-due to &lt;em&gt;Fact 1&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt;   Possible &lt;em&gt;better-intervals&lt;/em&gt; on the left subtree.&lt;br&gt;
-For node $x$ whose interval overlaps with the queried interval $i$, The
-possible existince of a &lt;em&gt;better-interval&lt;/em&gt; on the left subtree is
-justified by verifying $x.left.max$ to be at least $i.low$, and &lt;em&gt;Fact
-1&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt;   If $x.left.max$ is less than queried $i.low$, Then the found overlapping interval in $x$ is the &lt;em&gt;optimal&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Tinkering Search Algorithm.&lt;/strong&gt; The previous discussion suggests a
-simple modification to solve our problem. The algorithm maintains a
-variable $bestInterval$, Updating it whenever a better overlapping
-interval is found. If the algorithm found an interval, and $x.left.max$
-is less than $i.low$, It terminates. If $x.left.max$ were at least
-$i.low$, It steps to left subtree.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;INTERVAL-SEARCH(T, i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  bestIntervalNode = nil
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x = T.root
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while x != T.nil
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if i overlaps with x.int and x.int is better than bestIntervalNode
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      bestIntervalNode = x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x.left != T:nil and x.left.max &amp;gt;= i.low
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x = x.left
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if bestIntervalNode == nil
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        x = x.right
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      else return bestIntervalNode
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return bestIntervalNode
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;h3 id=&#34;ex-6&#34;&gt;Ex. 6&lt;/h3&gt;
-&lt;p&gt;In &lt;em&gt;Memoized-Cut-Rod&lt;/em&gt;, Initalize a new binary array $c[0..n-1]$ where
-$c[i]=1$ if there&amp;rsquo;s a cut at the ith possible cut position. In
-&lt;em&gt;Memoized-Cut-Rod-Aux&lt;/em&gt;, While computing the maximum $q$ in $i$&amp;rsquo;s loop,
-store $i_0$ value which corresponds to the maximum $q$. Then set
-$c[i_0]=1$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-7&#34;&gt;Ex. 7&lt;/h3&gt;
-&lt;p&gt;Postponed.&lt;/p&gt;
-&lt;h3 id=&#34;ex-8&#34;&gt;Ex. 8&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   Less-order Sequence&lt;br&gt;
-A sequence &lt;em&gt;A&lt;/em&gt; is &lt;em&gt;less-order&lt;/em&gt; than sequence &lt;em&gt;B&lt;/em&gt; if &lt;em&gt;A&lt;/em&gt; is less in terms
-of the lexicographical order. For example, &lt;em&gt;A C B&lt;/em&gt; is &lt;em&gt;less-order&lt;/em&gt; than
-&lt;em&gt;A D A&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remark.&lt;/strong&gt;   Misleading Equal Character&lt;br&gt;
-Consider sequences &lt;em&gt;A = 1 9 2 5 1 3 4&lt;/em&gt; and &lt;em&gt;B = 1 9 2 6 1 3 4&lt;/em&gt;. On &lt;em&gt;A2 =
-1 9&lt;/em&gt; and &lt;em&gt;B2 = 1 9&lt;/em&gt;, We have a subsequence &lt;em&gt;1 9&lt;/em&gt;. But since &lt;em&gt;9&lt;/em&gt; is a
-huge number we can&amp;rsquo;t append subsequence &lt;em&gt;2 3 4&lt;/em&gt;. In fact the optimal
-subsequence of &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; is &lt;em&gt;1 2 3 4&lt;/em&gt;. Our algorithm must prefer
-&lt;em&gt;less-order&lt;/em&gt; subsequences as they enable better chances of a longer
-subsequence.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Approach.&lt;/strong&gt;   Same but tinkered&lt;br&gt;
-Following exactly the same formulation and solution mentioned in CLRS
-but with a simple tinkering:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A new character appended to a subsequence must be monotonically
-increasing. Otherwise the subsequence is passed as it is without
-appending the new character.&lt;/li&gt;
-&lt;li&gt;if two subsequences collided in the same memoization-table entry,
-the &lt;em&gt;less-order&lt;/em&gt; one is preferred.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example.&lt;/strong&gt;  &lt;br&gt;
-&lt;em&gt;A = 1 9 2 5 1 3 4&lt;/em&gt;&lt;br&gt;
-&lt;em&gt;B = 1 9 2 6 1 3 4&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset05/table_hu2206277812183050985.webp 400w,
-               /erik-alg-post/pset05/table_hu3424225368467410130.webp 760w,
-               /erik-alg-post/pset05/table_hu18290928781756120834.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset05/table_hu2206277812183050985.webp&#34;
-               width=&#34;656&#34;
-               height=&#34;608&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Entry &lt;em&gt;c\[2,2\]&lt;/em&gt; prefers &lt;em&gt;1 2&lt;/em&gt; over &lt;em&gt;1 9&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Entry &lt;em&gt;c\[4,4\]&lt;/em&gt; does not append &lt;em&gt;1&lt;/em&gt; conforming to the monotonic
-increase condition.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt;  &lt;br&gt;
-We rely on our intuition without rigorously proving the correctness of
-our solution.&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;We donte &lt;em&gt;with high probability&lt;/em&gt; by &lt;em&gt;w.h.p&lt;/em&gt;. As instructed in lectures,
-Proofs here are identical to them but on the case of nodes m rather than
-all n nodes. We follow the same assumptions. Namely, Total number of
-moves is, Moves until all head tosses (upward moves) are consumed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Finger-Search Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We define:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;curN&lt;/code&gt;, As currently pointed node&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;N.r&lt;/code&gt;, As the right node of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;N.d&lt;/code&gt;, As the downward node of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;N.u&lt;/code&gt;, As the upward node of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;N.l&lt;/code&gt;, As the left node of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;N.key&lt;/code&gt;, As the key of node &lt;code&gt;N&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Finger-Search(x,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  curN = x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while curN.key != k:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else if curN.r.key &amp;lt;= k, then curN = curN.r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else curN = curN.d
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Recall we are assuming a successful search, so the case of finding a key
-greater than &lt;em&gt;k&lt;/em&gt; while we are in &lt;em&gt;level-0&lt;/em&gt; is impossible. So is the case
-of reaching &lt;em&gt;+inf&lt;/em&gt;. So we omit those validations.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   The height, i.e maximum node&amp;rsquo;s upward levels, is bounded by
-$c\lg m$ &lt;em&gt;w.h.p&lt;/em&gt;&lt;br&gt;
-&lt;/p&gt;
-$$\begin{aligned}
-  Pr[\text{no node&#39;s height} \leq c\lg m] &amp;= 1 - Pr[\text{some node&#39;s height} &gt; c\lg m] \\\\
-  Pr[\text{some node&#39;s height} &gt; c\lg m] &amp;\leq m \cdot Pr[\text{node x height} &gt; c\lg m] \textit{  (union bound)} \\\\
-                                          &amp;\leq m \cdot \left (\frac{\displaystyle{1}}{\displaystyle{2}} \right )^{c \lg m} = m \cdot (2^{\lg m})^{-c} = m \cdot m^{-c} =   \frac{\displaystyle{1}}{\displaystyle{m^{c-1}}} \\\\
-                                          &amp;= \frac{\displaystyle{1}}{\displaystyle{m^\alpha}}, \text{where} \; \alpha=c-1 \\\\
-  Pr[\text{no node&#39;s height} \leq c\lg m] &amp;= 1 - \frac{\displaystyle{1}}{\displaystyle{m^\alpha}}  \end{aligned}$$&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   For every height $c\lg m$ there is a total number of moves
-$d\lg m$ such that $c\lg m$ head tosses (upward moves) appears within
-the $d\lg m$ moves &lt;em&gt;w.h.p&lt;/em&gt;&lt;br&gt;
-Clearly, If we knew the maximum height of any node is $c\lg m$, then the
-height of given node $x$ is upper-bounded by it.&lt;/p&gt;
-&lt;p&gt;As given in the lecture, We use &lt;em&gt;Chernoff&amp;rsquo;s bound&lt;/em&gt; as our hammer:
-&lt;/p&gt;
-$$Pr[Y \geq E[Y] + r] \leq e^{\frac{\displaystyle{-2r^2}}{\displaystyle{m}}}$$&lt;p&gt;Observe among $d\lg m$ total tosses, The following are equivalent:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$\geq c\lg m$ heads &lt;em&gt;w.h.p&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;$&lt; c\lg m$ heads is bounded.&lt;/li&gt;
-&lt;li&gt;$\geq d \lg m - c \lg m$ tails is bounded&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Let $Y$ denote the number of tails. Note
-$Ex[Y] = \frac{\displaystyle{d\lg m}}{\displaystyle{2}}$ by &lt;em&gt;linearity of expectation&lt;/em&gt;, and set $r = (d/2 - c) \lg m$. Thus,
-&lt;/p&gt;
-$$
-\begin{aligned}
-  Pr[Y \geq \frac{\displaystyle{d\lg m}}{\displaystyle{2}} + (d/2 - c) \lg m] &amp;\leq e^{\frac{\displaystyle{-2(d/2 - c)^2 \lg^2 m}}{\displaystyle{d\lg m}}}\\\\
-  Pr[Y \geq (d-c) \lg m] &amp;\leq e^{-9/4 \cdot c \cdot \lg m}, \text{Setting d=8c}\\\\
-                                                       &amp;\leq (2^{\lg m})^{-c}, \text{As $e&gt;2$ and $9/4&gt;1$}\\\\
-  &amp;= \frac{\displaystyle{1}}{\displaystyle{m^c}}
-\end{aligned}
-$$&lt;p&gt;
-Therefore Pr&lt;/p&gt;
-\[$\geq c\lg m$ heads\]&lt;p&gt; = 1 - $\frac{\displaystyle{1}}{\displaystyle{m^c}}$. &lt;em&gt;QED&lt;/em&gt;&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;We begin by augmenting &lt;em&gt;node&lt;/em&gt; with data additional to mentioned ones in
-&lt;strong&gt;a&lt;/strong&gt;. Namely, &lt;em&gt;n.leftCount&lt;/em&gt; which denote the number of nodes additional
-to node &lt;em&gt;n.l&lt;/em&gt; upto current &lt;em&gt;n&lt;/em&gt;. Note the number considers all nodes in
-&lt;em&gt;level-0&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;For &lt;em&gt;Search&lt;/em&gt;, Clearly augmenting new data on nodes do not influence the
-number or order of nodes in the skip list. So nothings needs to be done
-to prove the complexity is maintained.&lt;/p&gt;
-&lt;p&gt;For &lt;em&gt;Insert&lt;/em&gt; and &lt;em&gt;Delete&lt;/em&gt;, &lt;em&gt;n.leftCount&lt;/em&gt; of some nodes must be updated.
-Those nodes are exactly characterized by the same line of reasoning
-mentioned in the lecture and in &lt;strong&gt;a&lt;/strong&gt;. If &lt;em&gt;Search&lt;/em&gt; is getting from a
-top-left node to some level-0 node, Then &lt;em&gt;Reversed-Search&lt;/em&gt; is getting
-from a level-0 node to some top-right node. Nodes along that path are
-exactly the ones which need update. The proofs are identical to &lt;strong&gt;a&lt;/strong&gt;.
-For the sake of brevity we omit them here and invite the reader to
-observe the following diagrams as a convincing evidence.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset05/d1_hu14143868535622858968.webp 400w,
-               /erik-alg-post/pset05/d1_hu136017366018285903.webp 760w,
-               /erik-alg-post/pset05/d1_hu17124951725952156406.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset05/d1_hu14143868535622858968.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;683&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset05/d2_hu13217356157231191907.webp 400w,
-               /erik-alg-post/pset05/d2_hu2908467098377562384.webp 760w,
-               /erik-alg-post/pset05/d2_hu5190320852072306527.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset05/d2_hu13217356157231191907.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;726&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Compute-Rank(x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  curN = x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  counter = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while curN != -inf:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if curN.u != NULL, then curN = curN.u
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else counter = counter + curN.leftCount; curN = curN.l
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return counter
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Rank-Search(x,r)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  counter = Compute-Rank(curN)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while counter != r:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if (curN.u != NULL) AND (curN.u.r.leftCount + counter &amp;lt;= k), then curN = curN.u
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else if curN.r.leftCount + counter &amp;lt;= k, then curN = curN.r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else curN = curN.d
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return curN
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Again, As we assume a succesful search we do not check the cases of
-&lt;em&gt;+inf&lt;/em&gt; and stepping downward while being in &lt;em&gt;level-0&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Again, Proofs are identical to &lt;strong&gt;a&lt;/strong&gt; and they are omitted for brevity.
-`&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;p&gt;For the sake of brevity we only show the &lt;em&gt;optimal-substructure&lt;/em&gt; and
-&lt;em&gt;memoization-table&lt;/em&gt;, Whereby the algorithm should be clear enough.&lt;/p&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Optimal Substructure&lt;/strong&gt;
-&lt;/p&gt;
-$$
-maxSeq(&lt;p_1, \dots, p_n&gt;, m) = max
-\set{
-    \begin{array}{lr}
-        maxSeq(&lt;p_1, \dots, p_{n-1}&gt;, m-1) + p_n,\\\\
-        maxSeq(&lt;p_1, \dots, p_{n-1}&gt;, m)
-    \end{array}
-}
-$$&lt;p&gt;&lt;strong&gt;Memoization Table.&lt;/strong&gt; ith column denote the consideration of prizes $p_1, \dots, p_i$, and ith
-row denote exactly i prizes.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image&#34; srcset=&#34;
-               /erik-alg-post/pset05/a_hu8852271843811849383.webp 400w,
-               /erik-alg-post/pset05/a_hu1180891384097054198.webp 760w,
-               /erik-alg-post/pset05/a_hu17856189356525057862.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset05/a_hu8852271843811849383.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;608&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Since prizes&amp;rsquo; values are non-negative, table&lt;/p&gt;
-\[m,n\]&lt;p&gt; is the answer.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Both time and space complexity are $\mathcal{O}(nm)$&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Remark.&lt;/strong&gt; Observe the given sequence $S$ and the optimal-subsequence $OptS$ can
-both be divided into two segments, $S1, S2$ and $OptS1, OptS2$, where
-$OptS1$ is a subsequence of $S1$ and $OptS2$ is a subsequence of $S2$.&lt;br&gt;
-But neither do we know where exactly $S$ is divided nor how many prizes
-are devoted to &lt;em&gt;blues&lt;/em&gt; and &lt;em&gt;reds&lt;/em&gt;. The solution is basically to
-brute-force all possible cases and apply &lt;em&gt;(a)&lt;/em&gt; to solve a single case.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Optimal Substructure&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\begin{align}
-maxSeq(&amp;lt;p_1, \dots, p_n&amp;gt;, m) = max_{0 \leq i \leq n \wedge 0 \leq j \leq m}
-\set{ maxSeq(&amp;lt;p_1, \dots, p_i&amp;gt;, j) \cdot maxSeq(&amp;lt;p_1, \dots, p_{n-i}&amp;gt;, m-j) }
-\end{align}&lt;/p&gt;
-&lt;p&gt;Where &amp;lsquo;$\cdot$&amp;rsquo; denotes a concatenation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Time is $nm \cdot \mathcal{O}(nm) = \mathcal{O}(n^2m^2)$. Space is the same as &lt;em&gt;(a)&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We can think of this problem as a generalization of &lt;em&gt;(b)&lt;/em&gt; where the
-precedence of &lt;em&gt;Reds&lt;/em&gt; over &lt;em&gt;Blues&lt;/em&gt; is equivalent to prizes $p_i$ being
-all less than some prize $p_0$. This is the crux of our solution.&lt;/p&gt;
-&lt;p&gt;We introduce a trick to colour prizes. Pick-up some arbitrary prize
-$p_0$ and colour and all prizes $p_i &lt; p_0$ blue and all prizes
-$p_i \geq p_0$ red. Call it &lt;em&gt;prizes-colouring&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Recursively apply &lt;em&gt;prizes-colouring&lt;/em&gt; and &lt;em&gt;(b)&lt;/em&gt; on the given sequence
-$S$. Note the base case is the same as &lt;em&gt;(b)&lt;/em&gt;, where a sequence consists
-only of prizes of an equal value.&lt;/p&gt;
-&lt;p&gt;The justification is clear since we are brute-forcing all possible
-cases.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On average we expect the recursion to count $\log n$ iterations. The
-worst case is $n$. So we have time
-$n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
-&lt;em&gt;(a)&lt;/em&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;d&#34;&gt;d&lt;/h4&gt;
-</description>
+assigned.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 04</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset04/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset04/</link>
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset04/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset04/</guid>
       <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
@@ -1262,7 +187,7 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
 &lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
 &lt;p&gt;he amortized cost of n operations is upper-bounded by
 \begin{align*}
-&amp;amp;n + \sum_{i=1}&lt;sup&gt;{\lfloor \lg n \rfloor} 2&lt;/sup&gt;i \\
+&amp;amp;n + \sum_{i=1}^{\lfloor \lg n \rfloor} 2^i \\
 &amp;amp;= n + \ddfrac{2(1-2^{\lfloor \lg n \rfloor})}{1-2} \\
 &amp;amp;\leq n + \ddfrac{2(1-n)}{-1} \\
 &amp;amp;= n - 2 + 2n \\
@@ -1271,108 +196,13 @@ $n \cdot \mathcal{O}(n^2 m^2) = \mathcal{O}(n^3m^2)$, and space same as
 \end{align*}&lt;/p&gt;
 &lt;p&gt;So the amortized cost of one operation is $\ddfrac{\mathcal{O}(n)}{n} = \mathcal{O}(1).$&lt;/p&gt;
 &lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;We assign the following amortized costs:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ith operation isn&amp;rsquo;t a power of 2 $\rightarrow$  4&lt;/li&gt;
-&lt;li&gt;ith operation is an exact power of 2 $\rightarrow$ 0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We prove for each operation $2^i$, There&amp;rsquo;s a sufficient balance for it. For $i \geq 2$, There are exactly $2^{i-1} - 1$ non-power operations before $2^i$ and after $2^{i-1}$. It sufficies to show $4(2^{i-1}-1) \geq 2^i$ which can trivially be proven by induction.&lt;/p&gt;
-&lt;p&gt;Observe amortized cost $= 4n - 4 \lfloor \lg n \rfloor \geq n - \lfloor \lg n \rfloor + 2n    \geq n - \lfloor \lg n \rfloor + \sum_{i=1}^{\lfloor \lg n \rfloor} 2^i$ = actual cost. Note  by the geometric series $\sum_{i=1}^{\lfloor \lg n \rfloor} 2^i = \ddfrac{2(1-2^{\lfloor \lg  n \rfloor})}{1-2} \leq 2n$&lt;/p&gt;
-&lt;p&gt;The amortized cost of n operations is $\mathcal{O}(n)$, and hence the amortzed cost of one    operation is $\mathcal{O}(1)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;p&gt;Define potential function $\Phi(D_i)$ to be the number of 1-bits in the binary representation of i. Note $\Phi(D_0) = 0$ and $\Phi(D_i) \geq 0$ which suffices to show the validity of our    definition.&lt;/p&gt;
-&lt;p&gt;Observe the amortized cost of operations:
-\begin{align}
-c_i&amp;rsquo; =
-\begin{array}{lr}
-i+1-i=1, &amp;amp; \text{i is a power of 2} \\
-1+1=2, &amp;amp; \text{if i is odd} \\
-1 + \Delta \Phi(D_i) \leq 1, &amp;amp; \text{if i is even but not power of 2}
-\end{array}
-\end{align}&lt;/p&gt;
-&lt;p&gt;When i is odd, it has one additional 1-bit over even i-1, due to the right most bit being only flipped from 0 to 1. When i is even, then i-1 is odd, and at least one 1-bit is flipped to     zero and at most one 0-bit is flipped to 1. So $\Delta \Phi(D_i) \leq 0$. When $i = 2^k$, a power of two, then $\Phi(D_i) = 1$ because there&amp;rsquo;s exactly one 1-bit. Also, i-1 contains exactly  i 1-bits, So $\Phi(D_{i-1}) = i$.&lt;/p&gt;
-&lt;p&gt;In all cases, the amortized cost of a single operation is $\mathcal{O}(1)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-5&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;p&gt;Done&lt;/p&gt;
-&lt;h3 id=&#34;ex-6&#34;&gt;Ex. 6&lt;/h3&gt;
-&lt;p&gt;Each element of the array needs to be compared with the &lt;em&gt;pivot&lt;/em&gt; only once to conclude whether it is greater or less than it.&lt;/p&gt;
-&lt;h3 id=&#34;ex-7&#34;&gt;Ex. 7&lt;/h3&gt;
-&lt;p&gt;Since $0 &lt; \alpha \leq \ddfrac{1}{2}$ branching $1 - \alpha$ is greater or equal than         branching $\alpha$. Maximum depth is $\lg_{\ddfrac{1}{1-\alpha}} n = \ddfrac{\lg n}{\lg       \ddfrac{1}{1-\alpha}} = \ddfrac{\lg n}{\lg 1 - \lg (1-\alpha)}$ and minimum depth is          $\lg_{\ddfrac{1}{\alpha}} n = \ddfrac{\lg n}{\lg \ddfrac{1}{\alpha}} = \ddfrac{\lg n}{\lg 1 - \lg\alpha}$. The fact $\lg 1 = 0$ concludes the intended result.&lt;/p&gt;
-&lt;h3 id=&#34;ex-8&#34;&gt;Ex. 8&lt;/h3&gt;
-&lt;p&gt;Failed to solve.&lt;/p&gt;
-&lt;p&gt;Through the same reasoning of establishing upper-bound, we derived a lower-bound of           $\Omega(\lg n)$.&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;p&gt;The obvious FIFO queue satisfies the problem&amp;rsquo;s requirements. Think of a list of numbers where integers are &lt;em&gt;enqueued&lt;/em&gt; to left and &lt;em&gt;dequeued&lt;/em&gt; from right.&lt;/p&gt;
-&lt;p&gt;A &lt;em&gt;list.min&lt;/em&gt; variable is maintained whenever a new integer is added, Checking whether it&amp;rsquo;s less than &lt;em&gt;list.min&lt;/em&gt; and updating accordingly. Whenever &lt;em&gt;dequeue&lt;/em&gt; is called, we check whether      removed integer is equal to &lt;em&gt;list.min&lt;/em&gt;. If not, no additional work is done. If yes, we know by the distinctness of integers, that the &lt;em&gt;list.min&lt;/em&gt; is removed from the list, and hence it must  be updated. A linear scan is implemented to update &lt;em&gt;list.min&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;While the worst-case analysis of &lt;em&gt;dequeue&lt;/em&gt; is linear, That worst case of removing the &lt;em&gt;list.min&lt;/em&gt; happens in proportion to the number of integers enqueued, which in turn allows us to         conclude an amortized cost of $\mathcal{O}(1)$.&lt;/p&gt;
-&lt;p&gt;The central key idea is to loop only once on each element, from left to right, storing in each &lt;em&gt;element.min&lt;/em&gt;, The minimum integer of the sub-array starting from left-most to current         element&amp;rsquo;s position. Now whenever we need to loop again to find &lt;em&gt;list.min&lt;/em&gt;, We do not loop on already-visited elements, but only on newly inserted elements. We assign &lt;em&gt;list.min&lt;/em&gt; to be the    minimum integer of that new sub-array. Observe we can conclude the minimum of the whole list, from &lt;em&gt;list.min&lt;/em&gt; and right-most &lt;em&gt;element.min&lt;/em&gt; stored in visited elements. It&amp;rsquo;s basically         &lt;em&gt;min(list.min, element.min)&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;We continue in this manner untill all visited elements are dequeued. Then we are left with a list of totally no visited elements, and &lt;em&gt;list.min&lt;/em&gt; is the minimum integer of the whole list.&lt;/p&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;element&lt;/strong&gt; contains &lt;em&gt;int&lt;/em&gt; holding the integer value and &lt;em&gt;min&lt;/em&gt; storing the minimum element  of a sub-array.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;list&lt;/strong&gt; contains &lt;em&gt;min&lt;/em&gt; indicating the minimum integer of the unstamped sub-array. That,    besides &lt;em&gt;elements&lt;/em&gt; aforementioned.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;minAllElements&lt;/strong&gt; Loop from left to right on the whole list, Maintaining the minimum of the sub-array from left-most to currently visiting element, and storing it in each &lt;em&gt;element.min&lt;/em&gt;.  Reset &lt;em&gt;list.min&lt;/em&gt; to $+\infty$ so that it considers only newly inserted elements.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Enqueue&lt;/strong&gt; Append element to the left of the list. If it&amp;rsquo;s less than &lt;em&gt;list.min&lt;/em&gt;, Update &lt;em&gt;list.min&lt;/em&gt; to it.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Find-Min&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;(1) No element is visited in a &lt;em&gt;minAllElements&lt;/em&gt; call before.
-&lt;ul&gt;
-&lt;li&gt;return &lt;em&gt;list.min&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;(2) Some elements are visited in a &lt;em&gt;minAllElements&lt;/em&gt; call before.
-&lt;ul&gt;
-&lt;li&gt;return &lt;em&gt;min(list.min, element.min)&lt;/em&gt;, where the element here is the right-most one.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dequeue&lt;/strong&gt; Assign &lt;em&gt;localMin=Find-Min()&lt;/em&gt;, and remove the element. For case (1), if removed element is equal to &lt;em&gt;localMin&lt;/em&gt;, &lt;em&gt;minAllElements&lt;/em&gt; is called.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;c&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;We skip a proof by invariance is it seems unnecessarily. We believe our discussion suffices   to convince the reader our design covers all cases.&lt;/p&gt;
-&lt;h4 id=&#34;d&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;Trivially, &lt;em&gt;Enqueue&lt;/em&gt; and &lt;em&gt;Find-Min&lt;/em&gt; are $\mathcal{O}(1)$, and $minAllElements$ is             $\mathcal{\theta}(n)$. &lt;em&gt;Dequeue&lt;/em&gt;&amp;rsquo;s worst-case is $\mathcal{\theta}(n)$ due to the call of     &lt;em&gt;minAllElements&lt;/em&gt;. So, &lt;em&gt;m&lt;/em&gt; operations are upper-bounded by $\mathcal{\omega}(m^2)$.&lt;/p&gt;
-&lt;p&gt;The goal now, by the &lt;em&gt;accounting&lt;/em&gt; method, is to show we can pay &lt;em&gt;minAllElements&lt;/em&gt; by an        amortized cost of 2 for &lt;em&gt;Enqueue&lt;/em&gt;. Note we cannot visit an element unless it&amp;rsquo;s enqueued. We   already discussed each element is going to be visited by &lt;em&gt;minAllElements&lt;/em&gt; at most once, Hence the additional credit for each element accommodates the payment.&lt;/p&gt;
-&lt;p&gt;Now we have all desired operations to have an amortized cost of $\mathcal{O}(1)$, and a       sequence of m operations costs $\mathcal{O}(m)$.&lt;/p&gt;
-&lt;h3 id=&#34;prob-2&#34;&gt;Prob. 2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;The event is logically equivalent to, assuming $x_i$ is not the pivot the next recursive call containing $x_i$ has a subarray of size at most $3m/4$.&lt;/p&gt;
-&lt;p&gt;Consider the array&amp;rsquo;s elements ordered as $q_1 &lt; q_2 &lt; \dots &lt; q_m$. There are three cases for which the event occurs:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;(i) The pivot $z \in \{ \lceil m/4 \rceil, \dots, \lfloor 3m/4 \rfloor + 1 \}$. Then $x_i$ is always in a subarray of size at most $3m/4$.&lt;/li&gt;
-&lt;li&gt;(ii) $z \in \{ 1, \dots, \lceil m/4 \rceil -1 \}$, and $x_i$ is in the left subarray.&lt;/li&gt;
-&lt;li&gt;(iii) $z \in \{ \lfloor 3m/4 \rfloor + 2, \dots, m \}$, and $x_i$ is in the right subarray.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We ignore (ii) and (iii) and prove (i) concludes the desired lower-bound of probability $1/2$.&lt;/p&gt;
-&lt;p&gt;Since the pivot is randomly selected, we know the probability of $q_i$ being the pivot is $1/m$. There are exactly $\lfloor 3m/4 \rfloor + 1 - \lceil m/4 \rceil + 1$ elements. So the        probability is:&lt;/p&gt;
-&lt;p&gt;\begin{align*}
-\geq &amp;amp; \ddfrac{1}{m} (\left \lfloor \ddfrac{3m}{4} \right \rfloor + 1 - \left \lceil \ddfrac{m}{4} \right \rceil + 1) \\
-\geq &amp;amp; \ddfrac{1}{m} ( \ddfrac{3m}{4} - \ddfrac{m}{4} ) \\
-= &amp;amp; \ddfrac{1}{m} \cdot \ddfrac{m}{2}  = \ddfrac{1}{2}
-\end{align*}&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Assume the algorithm lasted for iteration $3(2 + \ddfrac{1}{\log_2 4/3}) \log_2 n = 3(\alpha + c) \log_2 n$. By the instructor&amp;rsquo;s claim and exercise &lt;em&gt;a&lt;/em&gt;, We know the array size is reduced by a factor of at most $3m/4$ for at least $\ddfrac{1}{\log_2 4/3} \; \log_2 n = \log_{4/3} n$ times. Thus the array size is at most $\ddfrac{n}{(4/3)^{\lg_{4/3}n}} = 1$ and the algorithm      terminates. Therefore with probability at least $1 - \ddfrac{1}{n^2}$, The number of comparisons is logarithmic for $d \leq 3(2+\ddfrac{1}{\log_2 4/3})$.&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Definition 1.&lt;/strong&gt; Let $k_i$ denote the event, that the total comparisons of $x_i$ with pivots is at most $d \lg n$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 2.&lt;/strong&gt; $prob[\neg k_1 \vee \neg k_2 \vee \dots \vee \neg k_n] \leq \ddfrac{1}{n}$.&lt;/p&gt;
-&lt;p&gt;Immediately follows by the fact $prob[\neg k_i] = \ddfrac{1}{n^2}$ and the union bound. Note $\ddfrac{1}{n^2} + \dots + \ddfrac{1}{n^2} = n \ddfrac{1}{n^2} = \ddfrac{1}{n}$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary 3.&lt;/strong&gt; $prob[k_1 \wedge \dots \wedge k_n] \geq 1 - \ddfrac{1}{n}$&lt;/p&gt;
-&lt;p&gt;The event is the logical negation of the event in &lt;strong&gt;lemma 2&lt;/strong&gt;. Hence $prob[k_1 \wedge \dots \wedge k_n] = 1 - prob[\neg k_1 \vee \neg k_2 \vee \dots \vee \neg k_n] \geq 1 - \ddfrac{1}{n}$.&lt;/p&gt;
-&lt;h4 id=&#34;d-1&#34;&gt;d&lt;/h4&gt;
-&lt;p&gt;The procedure of &lt;em&gt;c&lt;/em&gt; yields probability $1 - \ddfrac{1}{n^{\alpha-1}} = 1 -                   \ddfrac{1}{n^{1}}$ from $\alpha = 2$ in &lt;em&gt;b&lt;/em&gt;. But the procedure of &lt;em&gt;b&lt;/em&gt; is general enough, So   we can select any $\alpha$ instead of just $\alpha = 2$. In other words, For any $\alpha$ we  can set $\alpha + 1$ in &lt;em&gt;b&lt;/em&gt; and get the desired probability bound.&lt;/p&gt;
-</description>
+&lt;p&gt;We assign the following amortized costs:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 03</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset03/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset03/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset03/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset03/</guid>
       <description>&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex-31&#34;&gt;Ex. 3.1&lt;/h3&gt;
 &lt;p&gt;Done.&lt;/p&gt;
@@ -1385,56 +215,13 @@ i+1-i=1, &amp;amp; \text{i is a power of 2} \\
 &lt;p&gt;psuedo-code changes; compare new complexity with old one&lt;/p&gt;
 &lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Psuedo-code.&lt;/strong&gt; No Changes at all. Note the sequence $2^9 \rightarrow 2^3 \rightarrow 2^1$, up to the base case of $u = 2$ as before, starting with total data of size $2^9 = 512$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Similarly $\mathcal{O}(\lg \lg u)$. We follow the same reasoning on the master method but on the case of a cluster size $u^{1/3}$. We gain $\lg_b a = \lg_3 1 = 0$, or more accurately $\lg_b a = \lg_{4/3} 1 = 0$, whereby $\lceil m/3 \rceil \leq 3m/4$. Thus, Reaching exactly the same complexity.&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;vEB-TREE-MIN&lt;/code&gt; No Changes.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vEB-TREE-MAX&lt;/code&gt; No Changes.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vEB-TREE-MEMBER(V, x)&lt;/code&gt; No Changes.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vEB-TREE-SUCCESSOR(V, x)&lt;/code&gt; No Changes.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vEB-TREE-PREDOCESSOR(V, x)&lt;/code&gt; Symmetric, Skipped.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vEB-EMPTY-TREE-INSERT(V, x)&lt;/code&gt; No Changes.&lt;/p&gt;
-&lt;p&gt;Intuitively, We apply the same trick of swapping &lt;code&gt;V.min&lt;/code&gt;. Complexity is the same, as we only re-ordered a constant-complexity code block.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vEB-TREE-INSERT(V, x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if V.min == NIL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vEB-EMPTY-TREE-INSERT(V, x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x &amp;lt; V.min
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      exchange x with V.min
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x &amp;gt; V.max
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      exchange x with V.max
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if V.u &amp;gt; 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if vEB-TREE-MINIMUM(V.cluster[high(x)] == NIL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        vEB-TREE-INSERT(V.summary, high(x))
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        vEB-EMPTY-TREE-INSERT(V.cluster[high(x)], low.x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  vEB-TREE-INSERT(V.cluster[high(x)], low.x)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Intuitively, We apply the same trick of updating &lt;code&gt;V.min&lt;/code&gt; and assigning &lt;code&gt;x&lt;/code&gt; to a new value before the delete operation. In this case, there&amp;rsquo;s no need to check for &lt;code&gt;summary&lt;/code&gt; as &lt;code&gt;V.max&lt;/code&gt; will be already set to either &lt;code&gt;V.min&lt;/code&gt; or the suitable &lt;code&gt;index&lt;/code&gt; value. Complexity is the same for exactly the same reasoning&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vEB-TREE-DELETE(V, x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if x == V.min
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    first-cluster = vEB-TREE-MINIMUM(V.summary)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    x = index(first-cluster, vEB-TREE-MINIMUM(V.cluster[first-cluster]))
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    V.min = x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  elseif x == V.max
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    last-cluster = vEB-TREE-MAXIMUM(V.summary)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	x = index(high(x), vEB-TREE-MAXIMUM(V.cluster[high(x)]))
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    V.max = x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  vEB-TREE-DELETE(V.cluster[high(x)], low(x))
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if vEB-TREE-MINIMUM(V.cluster[high(x)]) == NIL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vEB-TREE-DELETE(V.summary, high.x)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Algorithm&amp;rsquo;s correctness are not proved. We relied only on our intuition. Not comfortable the new modification is simpler and yet offers the same complexity; Why not illustrated in this way by the author?&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Similarly $\mathcal{O}(\lg \lg u)$. We follow the same reasoning on the master method but on the case of a cluster size $u^{1/3}$. We gain $\lg_b a = \lg_3 1 = 0$, or more accurately $\lg_b a = \lg_{4/3} 1 = 0$, whereby $\lceil m/3 \rceil \leq 3m/4$. Thus, Reaching exactly the same complexity.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 02</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset02/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset02/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset02/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset02/</guid>
       <description>&lt;h2 id=&#34;ex-2-1&#34;&gt;Ex. 2-1&lt;/h2&gt;
 &lt;p&gt;done&lt;/p&gt;
 &lt;h2 id=&#34;ex-2-2&#34;&gt;Ex. 2-2&lt;/h2&gt;
@@ -1443,664 +230,65 @@ i+1-i=1, &amp;amp; \text{i is a power of 2} \\
 &lt;p&gt;$A(x) = -10 + x + 0x^2 + 0x^3$&lt;/p&gt;
 &lt;p&gt;$B(x) = 3 - 6x + 0x^2 + 0x^3$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Computing A(x) on sample&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(-10, 1, 0, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_4 = e^{2 pi i / 4}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_4^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (-10, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (1, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(1, 0) = (1, 1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-10) + (1)(1) = -9
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_2 = (-10) - (1)(1) = -11
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k=1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-9, -10+i, -11, -10-i)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(-10, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2 = e^{2 pi i / 2}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (-10)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(-10) = (-10)  // base case
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(0) = (0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-10) + w (0) = -10
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-10) - w (0) = -10
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-10, -10)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-FFT(1, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2 = e^{2 pi i / 2}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = (1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = (0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = Recursive-FFT(1) = (1) // base case
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = Recursive-FFT(0) = (0)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = 1 + w(0) = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = 1 - w(0) = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (1, 1)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Similarly, we get $y=(-3, 3-6i, 9, 3+6i)$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Computing C(x) on sample, By multiplying corresponding sample points of A and B&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;$y = ((-9)(-3), (-10+i)(3-6i), (-11)(9), (-10-i)(3+6i)) = (27, -24+63i, -99, -24-63i)$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Interpolating C(x) coefficients&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(27, -24+63i, -99, -24-63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 4
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_4^-1 = e^{-1 i 2 pi / 4}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_4^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (27, -99)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (-24+63i, -24-63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(27, -99) = (-72, 126)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-24+63i, -24-63i) = (-48, 126i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-72) + (1)(-48) = -120
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_2 = (-72) - (1)(-48) = -24
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	k=1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (126) + (e^{-1 i 2 pi / 4})(126i) = 252
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_3 = (126) - (e^{-1 i 2 pi / 4})(126i) = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_4^-2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-120, 252, -24, 0)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(27, -99)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2^-1 = e^{-1 i 2 pi / 2}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (27)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] (-99)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(27) = (27)  // base case
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-99) = (-99)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = 27 + (1)(-99) = -72
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = 27 - (1)(-99) = 126
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  w = w_2^-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-72, 126)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(-24+63i, -24-63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_2^-1 = e^{-1 i 2 pi /2}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = w_2^0 = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (-24+63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (-24-63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(-24+63i) = (-24+63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(-24-63i) = (-24-63i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    k=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_0 = (-24+63i) + (1)(-24-63i) = -48
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y_1 = (-24+63i) - (1)(-24-63i) = 126i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return (-48, 126i)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hence, Final answer is (-120, 252, -24, 0)/4 = (-30, 63, -6, 0), and resulting polynomial is $C(x) = -30 + 63x - 6x^2$.&lt;/p&gt;
-&lt;h2 id=&#34;ex-2-3&#34;&gt;Ex. 2-3&lt;/h2&gt;
-&lt;p&gt;Modifying &lt;code&gt;Recursive-FFT&lt;/code&gt;, by switching $a$ and $y$, replacing $w_n$ by $w_n^{-1}$. Finally, result vector is divided by $n$.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Recursive-IFFT(y)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = y.length
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if n == 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w_n^-1 = e^{-1 2 pi i / n}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  w = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[even] = (y_0, y_2, ..., y_n-2})
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  y[odd] = (y_1, y_3, ..., y_n-1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[even] = Recursive-IFFT(y[even])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  a[odd] = Recursive-IFFT(y[odd])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for k=0 to n/2 - 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    a_k = a[even]_k + w a[odd]_k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	a_k+(n/2) = a[even]_k - w a[odd]_k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	w = w w_n^-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return a
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = a/n
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ex-2-4&#34;&gt;Ex. 2-4&lt;/h2&gt;
-&lt;p&gt;done&lt;/p&gt;
-&lt;h2 id=&#34;ex-2-5&#34;&gt;Ex. 2-5&lt;/h2&gt;
-&lt;p&gt;Create operation accounts for number of pointers filled. Insert operations are modified to allow up to $2t-1$ keys in case of internal node, and up to $(2t-1) + (2t) = 4t-1$ keys in case of leaf node. That, by basically modifying the if condition. Also, insertion in place of pointers happens by checking whether a leaf have $2t-1$ keys.&lt;/p&gt;
-&lt;p&gt;Note we haven&amp;rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-CREATE(T)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x = ALLOCATE-NODE()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.leaf = TRUE
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.n = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  x.n&amp;#39; = 0  // number of pointers to children filled
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DISK-WRITE(x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  T.root = x
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT(T,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  r = T.root
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if (r.n == 2t-1 and not r.leaf) or (r.n == 4t-1 and r.leaf)  // different cases for internal and leaf nodes
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    s = ALLOCATE-NODE()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	T.root = s
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.leaf = FALSE
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.n = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s.c1 = r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-SPLIT-CHILD(s,1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-INSERT-NONFULL(s,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B-TREE-INSERT-NONFULL(r,k)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT-NONFULL(x,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if x.leaf
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = x.n + x.n&amp;#39;  // sum of both keys and pointers
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= x.n + 1 and k &amp;lt; x.c_(i-x.n)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.c_(i-x.n+1) = x.c_(i-x.n)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= 1 and k &amp;lt; x.key_i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.key_i+1 = x.key_i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if i &amp;gt;= x.n + 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.c_i+1 = k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.n&amp;#39; = x.n&amp;#39; + 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.key_i+1 = k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  x.n = x.n + 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DISK-WRITE(x)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = x.n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i&amp;gt;=1 and k&amp;lt;x.key_i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i = i+1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DISK-READ(x,c_i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if (x.c_i).n == 2t-1  // note this is an internal node
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  B-TREE-SPLIT-CHILD(x,i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if k &amp;gt; x.key_i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    i = i+1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	B-TREE-INSERT-NONFULL(x.c_i, k)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ex-3-2&#34;&gt;Ex. 3-2&lt;/h2&gt;
-&lt;p&gt;We implement the prescription described in p.500.&lt;/p&gt;
-&lt;p&gt;Note we haven&amp;rsquo;t rigorously proven our modification is correct; We rely on our intuition to write main parts of new the operations.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-DELETE(x, k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // check if k is in node x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  i = x.n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  while i&amp;gt;=1 and x.key_i != k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    i = i-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // k is found
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if i&amp;gt;=1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // x is a leaf node
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if x.leaf
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      key_i = NULL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x.n = x.n - 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      x.shiftKeysAndPointers()  // for brevity we ignore implementing this subroutine
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // x is an internal node
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  y = x.c_i  // child preceeding k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  z = x.c_i+1  // child following k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // number of keys in child preceeding k is at least t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if y.n &amp;gt;= t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    k&amp;#39; = y.lastKey()  // implementation is ignored
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		B-TREE-DELETE(y, k&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        key_i = k = k&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // number of keys in child following k is at least t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else if z.n &amp;gt;= t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		// symmetrically replace k by k&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      // number of keys in both child following and preceeding k, is less than t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      else 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        mergeInto([y, k, z])  // merge k and z into y. implementation is ignored
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		x.c_i+1 = NULL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		B-TREE-DELETE(k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  // k isn&amp;#39;t found in x
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // find k in children
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	i = x.n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while i &amp;gt;= 1 and k &amp;lt; x.key_i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  i = i-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    y = x.c_(i+1) // subtree y containing k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    // guarantee we descend to a node containing at least t keys
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if y.n == t-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   	  if i+2 &amp;lt;= x.n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    z = x.c_(i+2)  // immediate forward sibling of y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if i &amp;gt;= 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    r = x.c_(i)  // immediate preceeding sibling of y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // some sibling contains at least t keys
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if z and z.n &amp;gt;= t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-INSERT(y, key_i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-DELETE(key_i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-INSERT(x, z.firstKey())
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    B-TREE-DELETE(z, z.firstKey())
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    // don&amp;#39;t get why a pointer from sibling should be moved to y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else if r and r.n &amp;gt;= t
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    // symmetrically
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  // both immediate siblings have t-1 keys
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    mergeInto([r, key_i, y])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		x.c_(i+1) = NULL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        B-TREE-DELETE(x, key_i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	// remove k from child y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    B-TREE-DELETE(y, k)  
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;problem-2-1&#34;&gt;Problem 2-1&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Match(S, P)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  n = S.length
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  m = P.length
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  M = []
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for i = 0..n-m+1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    flag = true
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for j = 0..m
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if P[j] != S[i+j] flag = false
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if flag M.append(i)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return M
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;Source string $S$ gets encoded as $S(x) = s_0x^0 + s_1x^1 + \dots + s_{n-1}x^{n-1}$, and pattern string $P$ as $P(x) = p_0x^{m-1} + p_1x^{m-2} + \dots + p_{m-1}x^0$, where $s_i$ and $p_i$ are, $1$ or $-1$, if characters $S[i]$ and $P[i]$, are $a$ or $b$, respectively. If $P[i] = *$, Then $p_i = 0$.&lt;/p&gt;
-&lt;p&gt;Observe $s_jp_k = 1$ if $S[j] = P[k]$, $s_jp_k = -1$ if $S[j] \neq P[k]$, and $s_jp_k = 0$ if $P[k] = \*$. Observe for resulting polynomial $(s \cdot p)(x) = r_0x^0 + r_1x^1 + \cdots + r_{m+n-2}x^{m+n-2}$, Coefficient $r_i = \sum_{j+k=i} s_jp_k$, Exactly matches the sum of multiplying $s_{i-m+1}$, $s_{i-m+2}$, $\dots$, $s_{i-1}$, $s_i$ with $p_0$, $p_1$, $\dots$, $p_{m-1}$, respectively, for $i = m-1, m, \dots, n-1$. If and only if, All corresponding alphabetic characters are equal, Then each contributes to the sum by $+1$. Asterik $*$ always contributes nothing to the sum. Therefore, if $k$ is the number of alphabetic character in $P$ (non asterik characters), Then $r_i = k$ if and only if $P$ matches substring $S[i-m+1..i]$.&lt;/p&gt;
-&lt;p&gt;Now we can set output $M$ to be the ordered list of $i$ such that $r_i = k$, Then subtract each entry by $m-1$, so that $i$ matches the position of the first character of the substring.&lt;/p&gt;
-&lt;p&gt;Note coefficients $r_0$, $r_1$, $\dots$, $r_{m-2}$ are irrelevant to our consideration, Since they do not consider a matching with the whole characters of pattern string $P$.&lt;/p&gt;
-&lt;p&gt;For the example, $S = ababbab$ and $P = ab*$,
-\begin{align*}
-S(x) &amp;amp;= (1)x&lt;sup&gt;0 + (-1)x&lt;/sup&gt;1 + (1)x&lt;sup&gt;2 + (-1)x&lt;/sup&gt;3 + (-1)x&lt;sup&gt;4 + (1)x&lt;/sup&gt;5 + (-1)x&lt;sup&gt;6 \\
-P(x) &amp;amp;= (1)x&lt;/sup&gt;2 + (-1)x&lt;sup&gt;1 + (0)x&lt;/sup&gt;0 \\
-(S \cdot P)(x) &amp;amp;= (-1)x&lt;sup&gt;1 + (x)x&lt;/sup&gt;2 + (-2)x&lt;sup&gt;3 + (2)x&lt;/sup&gt;4 + (1)x&lt;sup&gt;7 + (-1)x&lt;/sup&gt;8 \\
-M &amp;amp;= [2, 4] \\
-M &amp;amp;= [2 - (m-1), 4 - (m-1)] = [2 - (3-1), 4 - (3-1)] \\
-M &amp;amp;= [0, 2]
-\end{align*}&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;$\mathcal{O}(n \lg n)$, Since each operation of my algorithm requires at most a linear scan of complexity $\mathcal{O}(n)$&lt;/p&gt;
-&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
-&lt;p&gt;Exactly as $b$, but characters are encoded as&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;A&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;C&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;G&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;T&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;*&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;S&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-1&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;i&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-i&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;P&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;1&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-1&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-i&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;i&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Note if characters are matching, Then as before, each contributes to the sum by $+1$. In case of non-matching, A number less than $+1$ or an imaginary number is contributed.&lt;/p&gt;
-&lt;h2 id=&#34;problem-2-2&#34;&gt;Problem 2-2&lt;/h2&gt;
-&lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;Merge roots of $T_1$ and $T_2$, placing $k$ in between them. If new root&amp;rsquo;s keys are greater than $2t-1$, Apply the standard operation of split and push median up.&lt;/p&gt;
-&lt;p&gt;Note roots of $T_1$ and $T_2$, each has at most $2t-1$ keys. When merging the new root is at most $(2t-1) + (2t-1) + 1 = 4t-1$. If we spllitted, We get a new root of key size exactly 1 and two childs, Each is of size at most $2t-1$.&lt;/p&gt;
-&lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;Modify $T_1$ to decrease its height by one, Then apply the same procedure of &lt;em&gt;a&lt;/em&gt;. That, by merging all of $T_1$&amp;rsquo;s children into its root. In other words, $Merge(x.c_0, key_0, x.c_1, key_1, \dots, x.c_{n-1}, key_{n-1}, x.c_{n})$. Note new root of $T_1$ has at most $(2t-1) + (2t)(2t-1) = (2t+1)(2t-1) = 4t^2 - 1$ keys.&lt;/p&gt;
-&lt;p&gt;As in &lt;em&gt;a&lt;/em&gt;, Merge $T_1$, $k$, and $T_2$. The new root has at most $(4t^2 - 1) + (2t-1) + 1 = (2t+2)(2t-1) + 1 = 4t^2 + 2t - 1$ keys. Hence we are going to split around $\mathcal{O}(\lg t^2) = \mathcal{O}(\lg t)$ times. Note that shall result in many one-key nodes. So, at most $\mathcal{O}(\lg t)$ merge of one-key nodes, to finally fix the tree. But since $t$ is assumed to be a constant, the total complexity is $\mathcal{O}(1)$.&lt;/p&gt;
-&lt;h3 id=&#34;c-1&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;The tree&amp;rsquo;s height is increased only when the root has a full capacity of keys, and a new root is allocated.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;B-TREE-INSERT(T,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;r = T.root
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if r.n == 2t-1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s = ALLOCATE-NODE()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  T.root = s
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.leaf = FALSE
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.n = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.c1 = r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  s.height = r.height+1  // new root is of height +1 than the previous one
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-SPLIT-CHILD(s,1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-INSERT-NONFULL(s,k)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  B-TREE-INSERT-NONFULL(r,k)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tree shrinks only when a merge happens with the root alongside its children. If we assumed the new root is updated to point to one of the children, Then no height variable needs to be updated.&lt;/p&gt;
-&lt;h3 id=&#34;d-1&#34;&gt;d&lt;/h3&gt;
-&lt;p&gt;Without the loss of generality assume $h_1 \geq h_2$. Then the procedure of $b$ is applied $h_1 - h_2$ times so $T_1$ and $T_2$ have the same weight. Then the procedure of &lt;em&gt;a&lt;/em&gt; is applied to combine them. Each operation costs a constant time, Hence a complexity upperbounded by $\mathcal{O}((h_1 - h_2) + 1)$.&lt;/p&gt;
-</description>
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 1, 0, 0)
+  n = 4
+  w_4 = e^{2 pi i / 4}
+  w = w_4^0 = 1
+  a[even] = (-10, 0)
+  a[odd] = (1, 0)
+  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
+  y[odd] = Recursive-FFT(1, 0) = (1, 1)
+  for k=0 to 1
+    k=0
+	  y_0 = (-10) + (1)(1) = -9
+	  y_2 = (-10) - (1)(1) = -11
+	  w = w_4^1
+	k=1
+	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
+	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
+	  w = w_4^2
+  return (-9, -10+i, -11, -10-i)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 0)
+  n = 2
+  w_2 = e^{2 pi i / 2}
+  w = w_2^0 = 1
+  a[even] = (-10)
+  a[odd] = (0)
+  y[even] = Recursive-FFT(-10) = (-10)  // base case
+  y[odd] = Recursive-FFT(0) = (0)
+  for k=0 to 0
+    k=0
+	  y_0 = (-10) + w (0) = -10
+	  y_1 = (-10) - w (0) = -10
+	  w = w_2^1
+  return (-10, -10)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(1, 0)
+  n = 2
+  w_2 = e^{2 pi i / 2}
+  w = w_2^0 = 1
+  a[even] = (1)
+  a[odd] = (0)
+  y[even] = Recursive-FFT(1) = (1) // base case
+  y[odd] = Recursive-FFT(0) = (0)
+  for k=0 to 0
+    k=0
+	  y_0 = 1 + w(0) = 1
+	  y_1 = 1 - w(0) = 1
+	  w = w_2^1
+  return (1, 1)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Problem Set 01</title>
-      <link>https://mostafatouny.github.io/erik-alg-post/pset01/</link>
+      <link>https://www.mostafatouny.github.io/erik-alg-post/pset01/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/erik-alg-post/pset01/</guid>
+      <guid>https://www.mostafatouny.github.io/erik-alg-post/pset01/</guid>
       <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;
 &lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
 &lt;p&gt;Consider a graph of vertices $v_1, v_2, v_3$, whose weights are correspondingly $10, 6, 6$, and connected by edges $\{v_1,v_2\}, \{v_2, v_3\}$.&lt;/p&gt;
 &lt;p&gt;The optimal subset is $v_2, v_3$ of profit sum equal to $6 + 6 = 12$, But the algorithm picks subset $v_1$ with profit $10$.&lt;/p&gt;
 &lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;Since the graph is given to be acyclic, Each neighbour of the graph&amp;rsquo;s root, Constitutes a root of a subtree of its own, with no vertex being shared among any two subtrees.&lt;/p&gt;
-&lt;p&gt;We design a divide and conquer algorithm where solutions to smaller subtrees can be merged for a larger subtree.&lt;/p&gt;
-&lt;p&gt;The base case is when the tree has only one vertex, where optimal subset contains only that vertex.&lt;/p&gt;
-&lt;p&gt;Assuming we know solutions of subtrees, How can we merge? Observe the optimal subset of the whole tree either&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;(1) Contains the root&lt;/li&gt;
-&lt;li&gt;(2) Does not contain the root&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For (2), The optimal solution of the whole tree is the sum of all subtrees&amp;rsquo; optimal profits. Assume for the sake of contradiction that is not the case. Then there are different selections of vertices with overall greater profit. Since by definition we are assuming whole tree&amp;rsquo;s root to be excluded, We know the different selection is in one of the subtrees. We know also that subtree&amp;rsquo;s new total profit is greater, But that contradicts the fact subtree is given optimal in the first place to us.&lt;/p&gt;
-&lt;p&gt;For (1), The tricky part comes into play. If we restricted our scope only on a subtree, Then It is possible to choose a non-optimal subset, As it shall be better integrated with the bigger subtree, Yielding a greater profit for the bigger subtree. Particularly, That happens if we had to include the new root in the subset and exclude the subtree&amp;rsquo;s root.&lt;/p&gt;
-&lt;p&gt;The key is to have this information given to us by the main algorithm. So we let it compute also optimal possible profit under the assumption root is excluded. With that in our pocket we can compute the whole big tree&amp;rsquo;s optimal subset profit assuming it contains the root.&lt;/p&gt;
-&lt;p&gt;Specifically, we loop on each given subtree and check whether root is included in optimal solution. If not, we add subtree&amp;rsquo;s optimal profit. If yes we add subtree&amp;rsquo;s optimal profit under the assumption subtree&amp;rsquo;s root is excluded.&lt;/p&gt;
-&lt;p&gt;Finally we select the maximum of case (1) and case (2) and return it as the optimal solution.&lt;/p&gt;
-&lt;p&gt;Observe we have covered all possible cases by such a simple trick!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Black number indicates profit of a single vertex, and red is the optimal profit of the vertice&amp;rsquo;s subtree.&lt;/p&gt;
-&lt;p&gt;For the first tree, Case (1) is maximum, and for the second tree, Case (2) is maximum.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./screen_0.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./screen_1.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Psuedo Code&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalSubsetProfit(tree G, tree root v_r)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if (verticesNumber(G) == 1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (True, profit(v_r), profit(v_r))
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  subtreesOptimalData = ()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for v_neig in neighbours(v_r)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    out = (optimalProfit, isRootIncluded, profitRootExcluded) = optimalSubsetProfit(subtree(v_neig), v_neih)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    subtreesOptimalData.append(out)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  profitRootExcluded = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for subtree in subtreesOptimalData
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    profitRootExluded += subtree.optimalProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  profitRootIncluded = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for subtree in subtreesOptimalData
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if subtree.isRootIncluded == False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  profitRootIncluded += subtree.optimalProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  profitRootIncluded += subtree.profitRootExcluded
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  optimalProfit = max{profitRootExcluded, profitRootIncluded}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if optimalProfit == profitRootExcluded
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	isRootIncluded = False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    isRootIncluded = True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  return optimalProfit, isRootIncluded, profitRootExcluded
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;c&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt; Stacks&amp;rsquo; Vertices Number&lt;/p&gt;
-&lt;p&gt;Think of the given graph as levels of stacks from bottom to top as shown below&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /erik-alg-post/pset01/screen_2_hu6254728274510720819.webp 400w,
-               /erik-alg-post/pset01/screen_2_hu8144670588998374329.webp 760w,
-               /erik-alg-post/pset01/screen_2_hu951701818033489647.webp 1200w&#34;
-               src=&#34;https://mostafatouny.github.io/erik-alg-post/pset01/screen_2_hu6254728274510720819.webp&#34;
-               width=&#34;760&#34;
-               height=&#34;560&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Observe the number of vertices in a stack must be equal or greater than the number of its preceeding stack. So, final stack of leafs is the greatest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm Description&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Include the bottom most stack in solution subset.&lt;/li&gt;
-&lt;li&gt;Ignore the preceeding stack, As every vertex in it is adjacent to some selected vertex.&lt;/li&gt;
-&lt;li&gt;Include the preceeding stack in solution subset.&lt;/li&gt;
-&lt;li&gt;Continue similarly untill the whole graph is covered&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;By alternatively toggling between stacks, We ensure no adjacent vertices are selected, and we greedily select stacks of greatest number of vertices.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Psuedo-code&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalProfit(tree G, tree&amp;#39;s root v_r)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if G contains one vertex
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	return (True, 1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  someChildIncluded = False
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  count = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for each child v_chi of root v_r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (isChildIncluded, childCount) =  optimalProfit(G, v_chi)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	if isChildIncluded == True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  someChildIncluded = True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	increase count by childCount
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if someChildIncluded == True
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (False, count)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return (True, count+1)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Complexity&lt;/strong&gt; $\log(n)$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem. 1&lt;/strong&gt; If the given graph contains only vertices with at most 1 child branch, Then the algorithm selects maximum number of valid vertices.&lt;/p&gt;
-&lt;p&gt;Note the graph in this case is basically a linear path of vertices. Note also the number of vertices selected by our algorithm is $\lceil \frac{n}{2} \rceil$, where $n$ is the number of graph&amp;rsquo;s vertices.&lt;/p&gt;
-&lt;p&gt;It sufficies to show if there is any selection subset $U$ whose number of vertices is more than $\lceil \frac{n}{2} \rceil$, Then $U$ contains two adjacent vertices. The proof is by induction on $n$.&lt;/p&gt;
-&lt;p&gt;The base case of $n = 2$ is trivial. Assume the statement holds for $k \geq 2$, and consider an arbitrary graph $G$ where $n = k+1$.&lt;/p&gt;
-&lt;p&gt;Consider an arbitrary $X \subseteq G(V)$ with vertices number at least $\lceil \frac{k+1}{2} \rceil + 1$. Our goal now is to prove the existince of two adjacent vertices in $X$. By removing a leaf from $G$ we obtain a graph $G&#39;$ whose number of vertices is $n&#39; = n - 1 = k + 1 - 1 = k$. Define $X&#39;$ to be $X \cap G&#39;(V)$. Observe $X&#39;$ contains at least $\lceil \frac{k+1}{2} \rceil + 1 - 1 = \lceil \frac{k+1}{2} \rceil = \lceil \frac{k}{2} \rceil + 1$ vertices. By the induction hypothesis it follows $X&#39;$ contains two adjacent vertices, And so does $X$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Definition. 1&lt;/strong&gt; &lt;em&gt;multiLinearLeafsParent&lt;/em&gt; and &lt;em&gt;branchPath&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;For any vertex v, If all its child generations have degree at most 2, Then we call it &lt;em&gt;multiLinearLeafsParent&lt;/em&gt;. Note on any branch l, Vertices constiute a linear path from v and upto the leaf. We call that path &lt;em&gt;branchPath(v, l)&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma. 1&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If a vertex &lt;em&gt;v&lt;/em&gt; contains more than one branch for children, and it is &lt;em&gt;multiLinearLeafsParent&lt;/em&gt;, Then&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;1.1&lt;/strong&gt; If for any branches &lt;em&gt;l&lt;/em&gt;, The length of &lt;em&gt;branchPath(v, l)&lt;/em&gt; is odd, Then &lt;em&gt;v&lt;/em&gt; is selected by the algorithm.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;1.2&lt;/strong&gt; If for some branch &lt;em&gt;l&lt;/em&gt;, The length of &lt;em&gt;branchPath(v, l)&lt;/em&gt; is even, Then &lt;em&gt;v&lt;/em&gt; is ignored by the algorithm.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Lemma. 2&lt;/strong&gt; If the given graph contains a vertex with more than 2 child branches, and a new graph $G&#39;$ is constructed by removing either&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$(1)$ Two bottom most vertices from odd length &lt;em&gt;branchPath&lt;/em&gt; $l_0$, or&lt;/li&gt;
-&lt;li&gt;$(2)$ One leaf from an even length &lt;em&gt;branchPath&lt;/em&gt;,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;From some vertex $v_0$ which has at least two branches, Then the algorithm&amp;rsquo;s selections on $G&#39;$, are also selected on $G$.&lt;/p&gt;
-&lt;p&gt;Select that given vertex which has more than 2 child branches, and call it $v_0$. Call its branches $l_1, l_2, \dots, l_m$.&lt;/p&gt;
-&lt;p&gt;For case $(1)$, The new pruned branch is still of odd length. It is fine if the branch is completely removed also. Since parity of branches are reserved, By &lt;em&gt;Lemma. 1&lt;/em&gt;, the algorithm makes the same choice on $v_0$ for both $G$ and $G&#39;$ graphs.&lt;/p&gt;
-&lt;p&gt;Note in case the branch is completely removed, Then the choice on $v_0$ is totally dependent on other branches. If there is another even length branch then ignoring $v_0$ is reserved on $G&#39;$; If all branches are of odd length then selecting $v_0$ is reserved also. All these cases follow by &lt;em&gt;Lemma. 1&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;For case $(2)$, We know there is another even length branch in $G&#39;$, and by &lt;em&gt;Lemma. 1&lt;/em&gt;, the algorithm ignores $v_0$ on both $G$ and $G&#39;$ graphs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem. 2&lt;/strong&gt; If the given graph contains a vertex with more than 2 child branches, Then the algorithm selects maximum number of valid vertices.&lt;/p&gt;
-&lt;p&gt;The proof is by strong induction. The base case of $n = 3$ vertices is trivial (if you are super nerd, for $n$ less than $3$, It is vacuously true). Assume the statement holds for $k \leq p$ where $p \geq 3$, and consider arbitrary graph where number of vertices $n$ is $k+1$.&lt;/p&gt;
-&lt;p&gt;Call the count the algorithm produces $p$. Assume for the sake of contradiction there is a valid selection $X$ of vertices with count at least $p + 1$.&lt;/p&gt;
-&lt;p&gt;Select that given vertex which has more than 2 child branches promised by the theorem&amp;rsquo;s hypothesis, and call it $v_0$. Call its branches $l_1, l_2, \dots, l_m$.&lt;/p&gt;
-&lt;p&gt;We are ahead of two cases&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$(1)$ For some branch $l_0$, length of $branchPath(v_0, l_0)$ is odd&lt;/li&gt;
-&lt;li&gt;$(2)$ For any branch $l_i$, length of $branchPath(v_0, l_i)$ is even&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For $(1)$, Construct a new graph $G&#39;$ where the two bottom most vertices are removed from $l_0$.&lt;/p&gt;
-&lt;p&gt;Note existince of at least 2 vertices along the branch is ensured by the definition of branch&amp;rsquo;s existince; There is no odd branch of path length equal to 1.&lt;/p&gt;
-&lt;p&gt;Note also exactly one vertex of the selected two vertices is in $X$, The optimal selection of $G$, As the two vertices are adjacent.&lt;/p&gt;
-&lt;p&gt;By &lt;em&gt;Lemma. 2&lt;/em&gt;, Selections made on $G&#39;$ are exactly the same as selections made on $G$ by the algorithm, Except on $G$ there is an additional leaf selected. So selections number $p=p&#39;+1$.&lt;/p&gt;
-&lt;p&gt;Define $X&#39; = X \cap G&#39;(V)$. At most one vertex selected by the algorithm on $G$ is in $X$ but not in $X&#39;$. So $X&#39;$ has at least $p+1-1=p$ vertices. But we have just established $p=p&#39;+1$, Thus $X&#39;$ has at least $p&#39;+1$ vertices.&lt;/p&gt;
-&lt;p&gt;Number of vertices in $G&#39;$ is $n-2 = k+1-2 = k-1$. By the induction hypothesis, $p&#39;$, The number of selections made by the algorithm, is the greatest valid solution for $G&#39;$.&lt;/p&gt;
-&lt;p&gt;Contradiction, as $X&#39;$ is a valid solution for $G&#39;$.&lt;/p&gt;
-&lt;p&gt;For $(2)$, We fix some branch $l_0$ and construct a new graph $G&#39;$ where leaf of $l_0$ is removed.&lt;/p&gt;
-&lt;p&gt;By a very similar reasoning a contradiction is reached.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollary. 1&lt;/strong&gt; The algorithm produces a the maximum number of selections, Generally&lt;/p&gt;
-&lt;p&gt;Follows immediately by &lt;em&gt;theorem 1&lt;/em&gt; and &lt;em&gt;theorem 2&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;d&#34;&gt;d&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt; Redundant Subproblem&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./screen_3.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;If considered the subset marked by a red rectangle, We notice we are left with exploring remaining search space of $v_1, v_2$. We see two different subsets with the same search subspace, Which is redundant. Moreover, The left subset&amp;rsquo;s profit is $9$ while the right subset&amp;rsquo;s profit is $10$. So we can safely assure the right subset is yielding a better solution.&lt;/p&gt;
-&lt;p&gt;This observation clearly suggests an algorithm based on dynamic programming. It also suggests a subproblem defined in terms of profit and remaining graph vertices.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Table&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./screen_4.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Our algorithm is initialized on row = 0 and maxRowProfit = 0&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm Description&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;For each row, we loop on all remaining graph subsets alongside their memoized profits. Then for the remaining graph selected, and for each vertex of it, We sum its profit to previous total profit and remove the vertex from remaining graph, to generate a new solution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Psuedo-code&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optimalProfit(row, maxRowProfit)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if row == n
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return maxRowProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  maxNextRowProfit = -1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  for each ith profit of table[row, ]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for each vertex v of ith graph subset
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  totalProfit = profit + v.profit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  remGra = removeAdj(ith graph subset, v)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  	  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if table[row+1, remGra] &amp;lt; totalProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    table[row+1, remGra] = totalProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	  if table[row+1, remGra] &amp;gt; maxNextRowProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	    maxNextRowProfit = totalProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if maxNextRowProfit == -1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return maxRowProfit
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  optimalProfit(row+1, maxNextRowProfit)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the algorithm can be trivially extended to output the solution subset by outputting $G(V)$ - $remGra$, where $remGra$ is the last remaining graph found by the algorithm.&lt;/p&gt;
-&lt;h2 id=&#34;problem-2&#34;&gt;Problem 2&lt;/h2&gt;
-&lt;h3 id=&#34;a-1&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;Maximum distance between two requests $r_i$ and $r_j$ is $\sqrt{(1/2)^2 + (1/2)^2} = \sqrt{1/4 + 1/4} = 1\sqrt{2} \leq 1$&lt;/p&gt;
-&lt;h3 id=&#34;b-1&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm Description&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./screen_5.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Recursively the algorithm divides requests into nine sub problems. The first four calls cover all requests, but we also need to check a subproblem between each pair of those four. The base case is when the square length is $1/2$, and if two requests are within the square, Then the algorithm terminates as given requests are not valid.&lt;/p&gt;
-&lt;p&gt;It is not hard to see why those calls between each pair of the first four are necessary and sufficient to merge.&lt;/p&gt;
-&lt;p&gt;We don&amp;rsquo;t see a need for specifying a psuedo-code (and my time is limited to write all details).&lt;/p&gt;
-&lt;h3 id=&#34;c-1&#34;&gt;c&lt;/h3&gt;
-&lt;p&gt;Exactly the same as &lt;strong&gt;b&lt;/strong&gt; but on the base case, The algorithm checks whether there are three requests within the square.&lt;/p&gt;
-</description>
+&lt;p&gt;Since the graph is given to be acyclic, Each neighbour of the graph&amp;rsquo;s root, Constitutes a root of a subtree of its own, with no vertex being shared among any two subtrees.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

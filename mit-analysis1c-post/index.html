@@ -1,811 +1,262 @@
-<!doctype html>
-<!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: October 28, 2024 --><html lang="en-us" dir="ltr"
-      data-wc-theme-default="dark">
-  
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+<!DOCTYPE html>
+<html lang="en" dir="auto">
 
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Mostafa Touny" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/mit-analysis1c-post/" />
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
-  
-
-  
-  
-    
-    <link href="/dist/wc.min.css" rel="stylesheet" />
-  
-
-  
-  
-  
-
-  
-    
-    <link href="/css/custom.min.ca318089a9c54a1d155902d657869eaad57839491546ce606f11615595739081.css" rel="stylesheet" />
-  
-
-  <script>
-     
-    window.hbb = {
-       defaultTheme: document.documentElement.dataset.wcThemeDefault,
-       setDarkTheme: () => {
-        document.documentElement.classList.add("dark");
-        document.documentElement.style.colorScheme = "dark";
-      },
-       setLightTheme: () => {
-        document.documentElement.classList.remove("dark");
-        document.documentElement.style.colorScheme = "light";
-      }
-    }
-
-    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
-
-    if ("wc-color-theme" in localStorage) {
-      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-    } else {
-      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      if (window.hbb.defaultTheme === "system") {
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
-      }
-    }
-  </script>
-
-  <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      
-      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
-      checkboxes.forEach(e => {
-        e.parentElement.parentElement.classList.add('task-list');
-      });
-
-      
-      const liNodes = document.querySelectorAll('.task-list li');
-      liNodes.forEach(nodes => {
-        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
-        if (textNodes.length > 0) {
-          const span = document.createElement('label');
-          textNodes[0].after(span);  
-          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
-          span.appendChild(textNodes[0]);
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Baby Rudin&#39;s Real Analysis | Mostafa Touny</title>
+<meta name="keywords" content="">
+<meta name="description" content="Baby Rudin&#39;s Real Analysis - Mostafa Touny">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.mostafatouny.github.io/mit-analysis1c-post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e6ee52f0fc7c2e3dbd78858fc1b3e06fb86a3c6ee38d351342e06e23a24d02d6.css" integrity="sha256-5u5S8Px8Lj29eIWPwbPgb7hqPG7jjTUTQuBuI6JNAtY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.mostafatouny.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.mostafatouny.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.mostafatouny.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.mostafatouny.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.mostafatouny.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.mostafatouny.github.io/mit-analysis1c-post/index.xml">
+<link rel="alternate" hreflang="en" href="https://www.mostafatouny.github.io/mit-analysis1c-post/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
         }
-      });
-    });
-  </script>
 
-  
-  
-  
+    </style>
+</noscript><meta property="og:title" content="Baby Rudin&#39;s Real Analysis" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.mostafatouny.github.io/mit-analysis1c-post/" />
 
-
-
-
-
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Baby Rudin&#39;s Real Analysis"/>
+<meta name="twitter:description" content=""/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <link rel="alternate" href="/mit-analysis1c-post/index.xml" type="application/rss+xml" title="Mostafa Touny" />
-  
-
-  
-  <link rel="icon" type="image/png" href="/media/icon_hu15058970365499436532.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2663279629434353957.png" />
-
-  <link rel="canonical" href="https://mostafatouny.github.io/mit-analysis1c-post/" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@GetResearchDev" />
-    <meta property="twitter:creator" content="@GetResearchDev" />
-  
-  <meta property="og:site_name" content="Mostafa Touny" />
-  <meta property="og:url" content="https://mostafatouny.github.io/mit-analysis1c-post/" />
-  <meta property="og:title" content="Baby Rudin&#39;s Real Analysis | Mostafa Touny" />
-  <meta property="og:description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" />
-    <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta property="og:updated_time" content="2024-10-19T00:00:00&#43;00:00" />
-    
-  
-
-  
-
-
-
-
-  <title>Baby Rudin&#39;s Real Analysis | Mostafa Touny</title>
-
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <style>
-    @font-face {
-      font-family: 'Inter var';
-      font-style: normal;
-      font-weight: 100 900;
-      font-display: swap;
-      src: url(/dist/font/Inter.var.woff2) format(woff2);
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Baby Rudin's Real Analysis",
+      "item": "https://www.mostafatouny.github.io/mit-analysis1c-post/"
     }
-  </style>
+  ]
+}
+</script>
 
-  
-
-  
-  
-
-
-  
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
     
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [ ['$$', '$$'], ['\\[', '\\]'] ],  
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]      
+    }
+  };
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-  <script
-    defer
-    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
-    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
-  ></script>
-
-  
-  
-
-
-
-
-
-
-
-
-  
     
-      
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-      
-    
-  
-
-
-
-
 </head>
 
-  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
-    <div id="page-bg"></div>
-    <div class="page-header sticky top-0 z-30">
-      
-      
-      
-        
-        
-        
-          <header id="site-header" class="header">
-  <nav class="navbar px-3 flex justify-left">
-    <div class="order-0 h-100">
-      
-      <a class="navbar-brand" href="/" title="Mostafa Touny">
-        
-      </a>
-    </div>
-    
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
-        <title>Open Menu</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-      </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
-        <title>Close Menu</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
-      </svg>
-    </label>
-    
+<body class="list dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
 
-    
-    
-    <ul
-      id="nav-menu"
-      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
-      ">
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/"
-        >About</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/post/"
-        >Blog</a
-        >
-      </li>
-      
-      
-      
-    </ul>
+</script>
 
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-
-      
-      
-      
-
-      
-      
-
-      
-      
-
-      
-      
-    </div>
-  </nav>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.mostafatouny.github.io/" accesskey="h" title="Mostafa Touny (Alt + H)">Mostafa Touny</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.mostafatouny.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mostafatouny.github.io/post" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Baby Rudin&#39;s Real Analysis
+  </h1>
 </header>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 04
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2024-10-19 00:00:00 +0000 UTC'>October 19, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 04" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset04/"></a>
+</article>
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 08
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-06-26 00:00:00 +0000 UTC'>June 26, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 08" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset08/"></a>
+</article>
 
-        
-      
-    </div>
-    <div class="page-body  my-10">
-      
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 07
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-05-14 00:00:00 +0000 UTC'>May 14, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 07" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset07/"></a>
+</article>
 
-<div class="max-w-prose mx-auto flex justify-center">
-  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
-    <h1 class="lg:text-6xl">Baby Rudin&#39;s Real Analysis</h1>
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 06
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-04-23 00:00:00 +0000 UTC'>April 23, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 06" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset06/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 03
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-03-05 00:00:00 +0000 UTC'>March 5, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 03" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset03/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 02
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-02-12 00:00:00 +0000 UTC'>February 12, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 02" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset02/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Problem Set 01
+    </h2>
+  </header>
+  <footer class="entry-footer"><span title='2023-01-20 00:00:00 +0000 UTC'>January 20, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Problem Set 01" href="https://www.mostafatouny.github.io/mit-analysis1c-post/pset01/"></a>
+</article>
+    </main>
     
-  </article>
-</div>
-
-
-
-
-<div class="flex flex-col items-center">
-
-  <div class="container max-w-[65ch] mx-auto bg-white dark:bg-zinc-900 rounded-xl border-gray-100 dark:border-gray-700 border shadow-md overflow-hidden my-5">
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset04/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 04</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 Lemma. If $x_{n&#43;1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$, Then the sequence $\{x_n\}$ gets artbitrarily small.
-Clearly $x_{1&#43;k} \leq \lambda^k x_1$, by substituting successive terms in the inequality. Given $\epsilon &gt; 0$ we can reach $\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Oct 19, 2024</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset08/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 08</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g &#43; \epsilon_g$.
-Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g &#43; \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jun 26, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset07/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 07</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 Problem. 2 Problem. 3 By hypothesis, For any reals $x$ and $t$, We are given $| f(t) - f(x) | \leq (t-x)^2$. Clearly: \begin{aligned} \frac{\displaystyle{|f(t) - f(x)|}}{\displaystyle{|t-x|}} \leq&amp; \frac{\displaystyle{(t-x)^2}}{\displaystyle{|t-x|}} \\ \left | \frac{\displaystyle{f(t) - f(x)}}{\displaystyle{t-x}} \right | \leq&amp; |t- x| \end{aligned} But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes $\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}} \right | \leq 0$. Since the absolute value is always equal or greater than 0, We get also $\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t- x}} \right | \geq 0$. Therefore $f&#39;(x) = 0$ for any real $x$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">May 14, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset06/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 06</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 Problem. 2 Problem. 3 The first part is solved by a trivial set-theoretic operations. The second is postponed.
-Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Apr 23, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset03/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 03</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 The required conditions follow naturally as:
-$d&#39;(x,x) = \sqrt{d(x,x)} = \sqrt{0} = 0$. If $d(x,y) &gt; 0$ then $d&#39;(x,y) &gt; 0$ as the square root of non-zero is non-zero. Otherwise $0^2 = 0$ contradicting the fact $d&#39;(x,y) &gt; 0$. $d&#39;(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d&#39;(y,x)$. $d&#39;(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) &#43; d(r,y)} \leq \sqrt{d(x,r)} &#43; \sqrt{d(r,y)} = d&#39;(x,r) &#43; d&#39;(r,y)$. For an arbitrary open-set of $d$, $\set{ y | d(x,y) &lt; r \}$ there is an equivalent open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; \sqrt{r} \}$. For an arbitrary open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) &lt; r^2 }$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Mar 5, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset02/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 02</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem. 1 We prove each axiom as listed by Rudin in page 5.
-A1 $(a_0&#43;a_1) &#43; \sqrt{2} (b_0&#43;b_1) \in \mathcal{Q}(\sqrt{2})$, As $(a_0&#43;a_1), (b_0&#43;b_1) \in \mathcal{Q}$.
-A2 Follows immediately by properties of $\mathcal{Q}$.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Feb 12, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-  
-
-
-
-
-
-
-
-
-<a href="/mit-analysis1c-post/pset01/"  class="mb-5">
-  <div class="md:flex">
-    <div class="md:flex-shrink-0 overflow-hidden">
-      
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Problem Set 01</div>
-      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
-        Problem 1 Definition. simplest-fraction
-We call $\frac{\displaystyle{x}}{\displaystyle{y}}$ a simplest-fraction when it is in its simplest form. i.e cannot be reduced by eliminating a common fraction.
-Fact. If there are no common factors between $x$ and $y$, Then $\frac{\displaystyle{x}}{\displaystyle{y}}$ is a simplest-fraction.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jan 20, 2023</p>
-    </div>
-  </div>
-</a>
-
-  
-
-  </div>
-
-
-  
-
-
-</div>
-
-
-    </div>
-    <div class="page-footer">
-      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  <p class="powered-by text-center">
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-    
-  </p>
-
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://www.mostafatouny.github.io/">Mostafa Touny</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-    </div>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-    
-    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
+</script>
+</body>
 
-
-
-
-
-
-
-
-  </body>
 </html>

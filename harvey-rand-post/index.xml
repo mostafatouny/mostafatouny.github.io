@@ -1,495 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Harvey&#39;s Randomized Algorithms | Mostafa Touny</title>
-    <link>https://mostafatouny.github.io/harvey-rand-post/</link>
-      <atom:link href="https://mostafatouny.github.io/harvey-rand-post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Harvey&#39;s Randomized Algorithms</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
-      <title>Harvey&#39;s Randomized Algorithms</title>
-      <link>https://mostafatouny.github.io/harvey-rand-post/</link>
-    </image>
-    
+    <title>Harvey&#39;s Randomized Algorithms on Mostafa Touny</title>
+    <link>https://www.mostafatouny.github.io/harvey-rand-post/</link>
+    <description>Recent content in Harvey&#39;s Randomized Algorithms on Mostafa Touny</description>
+    <generator>Hugo -- 0.136.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mostafatouny.github.io/harvey-rand-post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 01</title>
-      <link>https://mostafatouny.github.io/harvey-rand-post/pset01/</link>
+      <link>https://www.mostafatouny.github.io/harvey-rand-post/pset01/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/harvey-rand-post/pset01/</guid>
+      <guid>https://www.mostafatouny.github.io/harvey-rand-post/pset01/</guid>
       <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex.-1&#34; class=&#34;unnumbered&#34;&gt;Ex. 1&lt;/h3&gt;
 &lt;h4 id=&#34;part-i&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def randElement(A[1..n])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      X = random( [n] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return A[X]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since the probability space is uniform, For event $M = \{ \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n \}$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def randElement(A[1..n])
+      X = random( [n] )
+      return A[X]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since the probability space is uniform, For event $M = \{ \frac{\displaystyle{n}}{\displaystyle{4}}+1, \dots, \frac{\displaystyle{3}}{\displaystyle{4}}n \}$, $Pr[M] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot |M| = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;
 &lt;h4 id=&#34;part-ii&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
 &lt;p&gt;Additionally we certify if the randomly generated element is in middle half.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def randElement2(A[1..n])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # Select a random element of A
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      k = randElement(A)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # Certify whether it is in middle half
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # count values less and greater
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      countLess = countGreater = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      for i in 1..n:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if A[i] &amp;lt; k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          countLess = countLess + 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else if A[i] &amp;gt; k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          countGreater = countGreater + 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # check if k is between first and forth quarters
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      if (countLess &amp;gt;= n/4) and (countGreater &amp;gt;= n/4)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return FAIL
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output. $R = FAIL$ if and only if $\neg M$. So $Pr[R=FAIL] = Pr[\neg M] = 1 - Pr[M] = 1 - \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;
-&lt;h4 id=&#34;part-iii&#34; class=&#34;unnumbered&#34;&gt;Part III&lt;/h4&gt;
-&lt;p&gt;We repeat until the probability is upperbounded by $0.01$.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def randElement3(A[1..n])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # repeat 7 times
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      for i in 1..7
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # generate a random element
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        out = randElement2(A[1..n])
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # if the number is certified to be correct return it
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if out != FAIL
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          return out
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # if 7 trials failed
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return FAIL
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Setting $0.5^{x} = 0.01$ we get $x = \log_{1/2} 0.01 = \frac{\displaystyle{\log_2 100^{-1} }}{\displaystyle{\log_2 2^{-1} }} = \frac{\displaystyle{(-1) \log_2 100}}{\displaystyle{(-1) \log_2 2}} = \log_2 100 \leq \log_2 128 = \log_2 2^7 = 7$&lt;/p&gt;
-&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output, and let $R_i$ be the output of subroutine &lt;em&gt;randElement2&lt;/em&gt; in iteration $i$. Then $R = FAIL$ if and only if $R_1 = FAIL \wedge \dots \wedge R_7 = FAIL$. We know $Pr[R_i = FAIL] = \frac{\displaystyle{1}}{\displaystyle{2}}$ and $R_i$ are pairwise independent. We conclude $Pr[R = FAIL] = Pr[ R_1 = FAIL \wedge R_2 = FAIL \wedge \dots \wedge R_7 = FAIL] = \left ( \frac{\displaystyle{1}}{\displaystyle{2}} \right )^7 \leq 0.01$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-2&#34; class=&#34;unnumbered&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;h4 id=&#34;part-i-1&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
-&lt;p&gt;Trivial.&lt;/p&gt;
-&lt;h4 id=&#34;part-ii-1&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Hint.&lt;/strong&gt; By Dr. I. El-Shaarawy, Not to skip &lt;em&gt;Part I&lt;/em&gt;, and to observe the pattern in the following example. It signals the answer is $2^k$ if $x = 0$ and $2^{k-1}$ otherwise.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Binary Number&lt;/strong&gt; &amp;mdash; &lt;strong&gt;Count of Even Parity&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;      000                     8              
-      001                     4              
-      010                     4              
-      011                     4              
-      100                     4              
-      101                     4              
-      110                     4              
-      111                     4              
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 1.&lt;/strong&gt; The zero $0 = \underbrace{00 \dots 0}_{k \text{ times}}$ counts $2^k$ numbers of even parity.&lt;/p&gt;
-&lt;p&gt;Trivially, $BitwiseAnd(0,x) = 0$ for any binary number $x \in [2^k]$, and $Parity(0) = 0$.&lt;/p&gt;
-&lt;p&gt;Now we can focus on $x \neq 0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Definition 2.&lt;/strong&gt; Given $x$ denote indices of 1-bits by &lt;em&gt;1-bits-indices&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma 3.&lt;/strong&gt; &lt;em&gt;1-bits-indices&lt;/em&gt; decide the parity.&lt;/p&gt;
-&lt;p&gt;Observe for any $r \in [2^k]$.
-&lt;/p&gt;
-$$
-BitwiseAnd(x_i,r_i) =
-\begin{cases}
-    0 &amp; \text{if } x_i = 0 \\\\
-    r_i &amp; \text{if } x_i = 1
-\end{cases}
-$$&lt;p&gt;
-So we can restrict our focus only on &lt;em&gt;1-bits-indices&lt;/em&gt; to compute the parity. In other words
-&lt;/p&gt;
-$$
-Parity(BitwiseAnd(x,r)) =
-\begin{cases}
-    0 &amp; \text{if $r$ has even 1 bits in } \textit{1-bits-indices} \\\\
-    1 &amp; \text{if $r$ has odd 1 bits in } \textit{1-bits-indices}
-\end{cases}
-$$&lt;p&gt;&lt;strong&gt;Lemma 4.&lt;/strong&gt; The number of &lt;em&gt;k-length&lt;/em&gt; strings containing even number of 1 bits in &lt;em&gt;1-bit-indices&lt;/em&gt; is $2^{k-1}$.&lt;/p&gt;
-&lt;p&gt;Define a bijection
-&lt;/p&gt;
-$$
-f: \\{ \text{strings of even 1-bits in } \textit{1-bits-indices} \\} \rightarrow \\{ \text{strings of odd 1-bits in } \textit{1-bits-indices} \\}
-$$&lt;p&gt;
-Mapping a binary string to the same string but with last bit in &lt;em&gt;1-bit-indices&lt;/em&gt; flipped. If that bit is $s_m$, Then $f(s_1s_2 \dots s_k) = s_1 s_2 \dots \overline{s_{m}} \dots s_{k-1} s_k$. It follows domain and range have the same cardinality, and since they partition the set of &lt;em&gt;k-length&lt;/em&gt; strings, the result follows.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem 5.&lt;/strong&gt; Fixing any binary $x \neq 0$, Among all $r \in [2^k]$, Exactly half of them yield even parity, i.e $Parity( BitwiseAnd(x,r) ) = 0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Corollay 6.&lt;/strong&gt; Given $x \in [2^k]$, The number of zeros in the vector mentioned in question is
-&lt;/p&gt;
-$$
-\begin{cases}
-    2^k &amp; \text{if } x = 0 \\\\
-    2^{k-1} &amp; \text{if } x \neq 0
-\end{cases}
-$$</description>
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def randElement2(A[1..n])
+      # Select a random element of A
+      k = randElement(A)
+
+      # Certify whether it is in middle half
+
+      # count values less and greater
+      countLess = countGreater = 0
+      for i in 1..n:
+        if A[i] &amp;lt; k
+          countLess = countLess + 1
+        else if A[i] &amp;gt; k
+          countGreater = countGreater + 1
+
+      # check if k is between first and forth quarters
+      if (countLess &amp;gt;= n/4) and (countGreater &amp;gt;= n/4)
+        return k
+      return FAIL
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output. $R = FAIL$ if and only if $\neg M$. So $Pr[R=FAIL] = Pr[\neg M] = 1 - Pr[M] = 1 - \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2}}$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Chapter 02</title>
-      <link>https://mostafatouny.github.io/harvey-rand-post/pset02/</link>
+      <link>https://www.mostafatouny.github.io/harvey-rand-post/pset02/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/harvey-rand-post/pset02/</guid>
+      <guid>https://www.mostafatouny.github.io/harvey-rand-post/pset02/</guid>
       <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
 &lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
 &lt;h3 id=&#34;ex.-1&#34; class=&#34;unnumbered&#34;&gt;Ex. 1&lt;/h3&gt;
 &lt;h4 id=&#34;part-i&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
 &lt;p&gt;Take $m = n-1$, and let $R$ be the algorithm&amp;rsquo;s output. $R = 0$ if and only if $RNG()$ returned $0$ or $n-1$. So $Pr[R = 0] = 2/n$ and $Pr[R = i] = 1/n$ for $i \neq 0$.&lt;/p&gt;
 &lt;h4 id=&#34;part-ii&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
-&lt;p&gt;Define $k = \lfloor n/m \rfloor$, So $k$ is the greatest integer such that $mk \leq n$. Define $r = n \mod mk$, so $n = mk + r$ where $0 \leq r &lt; m$.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def goodSampler(m)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      k = floor( n/m )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      do
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        r = RNG()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      while r &amp;gt;= mk
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      return r mod m
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Uniformity&lt;/strong&gt;. Assume the algorithm terminates. So we are given $r &lt; mk$ and we want to prove $Pr[r \mod m = i \mid r &lt; mk] = \nfrac{1}{m}$ for $i \in [m]$. Observe
-\begin{aligned}
-Pr[r \mod m = i \mid r &amp;lt; mk] &amp;amp;= \nfrac{Pr[r \mod m = i \cap r &amp;lt; mk]}{Pr[r &amp;lt; mk]} \\
-&amp;amp;= \nfrac{k/n}{mk/n} = \nfrac{k}{n} \cdot \nfrac{n}{mk} = \nfrac{1}{m}
-\end{aligned}
-Recall by uniformity the probability is basically the number of outcomes satisfying the event over all possible outcomes. Clearly the $k$ outcomes of $r$ yielding $i$ by the algorithm are $(0)m + i, (1)m + i, (2)m + i, \dots, (k-1)m + (i)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;. For an iteration of &lt;code&gt;do-while&lt;/code&gt;, probability of termination is $mk/n$. So in expectation it takes $n/mk$ trials until it terminates. It follows
-&lt;/p&gt;
-$$
-1 \leq \nfrac{n}{mk} = 1 + \nfrac{r}{mk} &lt; 1 + \nfrac{m}{mk} = 1 + \nfrac{1}{k} \leq 2.
-$$&lt;p&gt;
-Concluding its time is $\mathcal{O}(1)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-2&#34; class=&#34;unnumbered&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Distribution&lt;/strong&gt;. see &lt;em&gt;ex-2.2&lt;/em&gt; notebook.&lt;/p&gt;
-&lt;p&gt;The distribution of the given psuedo-code seems uniform.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.2_0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;The distribution but with modifying the probability to be hardcoded &lt;code&gt;p = 0.7&lt;/code&gt; rather than &lt;code&gt;p = ContinuousUniform()&lt;/code&gt; in line 2, seems normal.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.2_1.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Recall we know in expectation we will get 7 1-bits out of 10 by linearity of random variables.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remark&lt;/strong&gt;. $X = \sum X_i^n$ is equivalent to number of $1$s tossed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;. Probability of tossing $k$ $1s$.&lt;/p&gt;
-&lt;p&gt;For some fixed probability of getting 1 $p$, and number of coin tosses $n$, The probability of drawing $k$ $1s$ is $Pr[X = k] = (p)^k (1-p)^{n-k} \dbinom{n}{k}$, Since the distribution of coin tossing is binomial.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-3&#34; class=&#34;unnumbered&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;h4 id=&#34;part-i-1&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # input: Probabilities P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # output: category sampled
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def categoricalSampler( P[1..k] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # initially the universe is all probabilities
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      totalProb = sum( P[1..k] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      # for each ith probability
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      for i in 1..k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # compute P[i] probability in ratio to the universe
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        i_prob_uni = (1/totalProb) * P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # return i by that probability
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if biasedBit( i_prob_uni )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          return i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # remove P[i] from the universe
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        totalProb -= P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; Computing a probability out of a subset of probabilities.&lt;/p&gt;
-&lt;p&gt;We want to compute a probability but in ratio to some subset of probabilities.&lt;/p&gt;
-&lt;p&gt;For example if $Pr[X = i] = 1/4$ for $i \in \{ 1,2,3,4 \}$, But we are given $X \not\in \{1, 2\}$. Then $Pr[X = 3 \mid X \not\in \{1,2\}] = \nfrac{Pr[X = 3 \cap X \not\in \{1,2\}]}{Pr[X \not\in \{1,2\}]} = \nfrac{1/4}{1/2} = 2 \cdot \nfrac{1}{4}$.&lt;/p&gt;
-&lt;p&gt;Generally we want to find $x$ where, For sum $S$ of some subset of probabilities, $\nfrac{Pr[X = i]}{S} = \nfrac{x}{1}$, so $x = \nfrac{1}{S} \cdot Pr[X=i]$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; &lt;code&gt;categoricalSampler&lt;/code&gt; returns a category.&lt;/p&gt;
-&lt;p&gt;If the algorithm reached iteration $k$, &lt;code&gt;i_prob_uni&lt;/code&gt; would be $1$ so &lt;code&gt;biasedBit&lt;/code&gt; surely fires.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Time Complexity.&lt;/strong&gt; Clearly $\mathcal{O}(k)$.&lt;/p&gt;
-&lt;h4 id=&#34;part-ii-1&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # input: probabilities P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # output: cumulative sum of probabilities S[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def cumulativeSum( P[1..k] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # S[i] is sum up to P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        S = []
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        sum = 0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # compute &amp;amp; append S[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        for i in 1..k
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            # cumulative sum up to P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            sum += P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            # append as S[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            S.append( sum )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return S
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # input: probabilities P[i], and cumulative probabilities S[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # output: sampled category i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def recursiveSampler( P[l..r], S[l..r] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # base case. universe is one category so its probability is 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if l = r
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            return l
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # center index
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        mid = floor( (r-l)/2 )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # total probability of P[l..r]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        totalProb = S[r] - S[l] + P[l]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # probability of cumulative half of P in ratio to the universe
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        prob_uni = (1/totalProb) * S[mid]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # toss a coin by cumulative probability of half of P
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if biasedBit( prob_uni )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            # if True then the sample is restricted to them
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            return recursiveSampler( P[l..mid], S[l..mid] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            # if False then the sample is not any of them
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            return recursiveSampler( P[mid+1..r], S[mid+1..r] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # input: probabilities P[i]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # output: sampled category i
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def categoricalSampler2( P[1..k] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # preprocessing, computing cumulative sum of probabilities
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        S = cumulativeSum( P[1..k] )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # sample a category
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return recursiveSampler( P, S )
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; &lt;code&gt;recursiveSampler&lt;/code&gt; won&amp;rsquo;t ever reach array &lt;code&gt;P&lt;/code&gt; of size zero.&lt;/p&gt;
-&lt;p&gt;That can only happen if either &lt;code&gt;mid = r&lt;/code&gt; or &lt;code&gt;mid = l&lt;/code&gt;, but then &lt;code&gt;S[mid] = 1&lt;/code&gt; or &lt;code&gt;S[mid] = 0&lt;/code&gt; respectively. Contradiction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; The algorithm samples category $i$ with probability $P[i]$.&lt;/p&gt;
-&lt;p&gt;The remarks from &lt;em&gt;Part I&lt;/em&gt; holds here. We show a more formal proof.&lt;/p&gt;
-&lt;p&gt;Let $X = z$ denote the event of sampling category $z$. Let $j_1, j_2, \dots, j_{k-1}$ be the remaining categories. Then $Pr[X = z] = Pr[X \neq j_1 \cap X \neq j_2 \cap \dots \cap X \neq j_{k-1}]$. Partition $j$s on subsets of outcomes $O_1, O_2, \dots, O_{\log k}$.
-\begin{aligned}
-Pr[X = z] &amp;amp;= Pr[X \notin O_1 \cap X \notin O_2 \cap \dots \cap X \notin O_{\log k}] \\
-&amp;amp;= Pr[X \notin O_1 \mid X \notin O_2 \cap \dots \cap X \notin O_{\log k}] \\ &amp;amp;\cdot Pr[X \notin O_2 \mid X \notin O_{3} \dots \cap X \notin O_{\log k}] \cdot .. \cdot Pr[X \notin O_{\log k}]
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Let $R$ be the algorithm&amp;rsquo;s output, and let $R_i$ correspond to &lt;code&gt;biasedBit&lt;/code&gt; in iteration $i$. Clearly $Pr[R \in \{l, l+1, \dots, mid\}] = Pr[R_i = True]$ and $Pr[R \in \{mid+1, mid+2, \dots, r\}] = Pr[R_i = False]$. The algorithm samples $z$ if and only if $R_1 = x_1 \cap R_2 = x_2 \cap \dots \cap R_{\log k} = x_{\log k}$ corresponding to $x_i = True$ if $z \notin \{mid+1, \dots, r\} = O_i$. In other words the algorithm satisfies the definition of $Pr[X = z]$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Time Complexity&lt;/strong&gt;. Clearly &lt;code&gt;cumulativeSum&lt;/code&gt; takes $\mathcal{O}(k)$ and &lt;code&gt;recursiveSampler&lt;/code&gt; takes $\mathcal{O}(\log k)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-4&#34; class=&#34;unnumbered&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Idea.&lt;/strong&gt; See the following sketch for an intuition.&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-4_0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Compute cumulative sums $q_i$.&lt;/li&gt;
-&lt;li&gt;Construct k intervals, each of size $1/k$.&lt;/li&gt;
-&lt;li&gt;If some $q_i$ is sandwiched in some interval, separate that interval to two pieces.&lt;/li&gt;
-&lt;li&gt;Accordingly label pieces which $p_i$ they belong to.&lt;/li&gt;
-&lt;li&gt;Sample a &lt;code&gt;UniformLBitInteger&lt;/code&gt; to select a uniformly random interval out of those k intervals.&lt;/li&gt;
-&lt;li&gt;If it is separated, Toss a coin by &lt;code&gt;BiasedBit&lt;/code&gt; to decide a piece.&lt;/li&gt;
-&lt;li&gt;Output the piece&amp;rsquo;s label.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# input: probabilities P[i]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# output: cumulative sum of probabilities S[i]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;cumulativeSum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# input: integer k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# output: k-intervals of size 1/k each&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;kIntervalsConstruction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# start, end, and separation points, decides a pair of intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# end - start = 1/k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# construct the k intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# length of interval is 1/k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NULL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# input: 2d-array of k-intervals, and the cumulative sum S&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# output: None. It modifies the 2d-array to be filled with separators and labels&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sepPointsFromArray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# pointer for S&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;S_poi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# for each kth interval&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# if S[S_poi] is contained in the kth interval&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S_poi&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;en&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;c1&#34;&gt;# set S[S_poi] as the separator&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S_poi&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;c1&#34;&gt;# consider next index&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;S_poi&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# otherwise, leave the separator with NULL&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# in either cases cache S_poi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# latter case. whole interval is labeled by S_poi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# former case. first piece is labeled by S_poi and&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;#   second piece is labeled by S_poi+1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;Inter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S_poi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# input: k-probabilities P[i]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# output: k intervals, each of size 1/k, possibly separated to have pairs&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;intervalToPieces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# S[i] is cumulative sum up to P[i]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cumulativeSum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# construct k-intervals of size 1/k each&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kIntervalsConstruction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# in-place fill &amp;#34;sep&amp;#34; and &amp;#34;label&amp;#34; cells in intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sepPointsFromArray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# input: Probabilities P[i]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# output: sampled category i&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# preprocessing is not needed to be called for every sample call&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intervalToPieces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;P&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# uniform random index of intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;randIndex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uniformLBitInteger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# uniform random interval from intervals&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intervals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randIndex&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# if it has no separator&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NULL&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# then it belongs to cached label&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# it has a separator&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# compute proportion of separator in ratio to the interval of size 1/k&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;prop&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# toss a coin by a probability proportional to the separator&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;biasedBit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;c1&#34;&gt;# if it lands before the separator then we are in a piece labeled by &amp;#34;cached label&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;c1&#34;&gt;# if it lands after the separator then we are in the piece next to one labeled by &amp;#34;cached label&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;randInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; No probabilistic claim is outside what we proved and illustrated in previous exercises.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Time Complexity.&lt;/strong&gt; Preprocessing consumes $O(k)$, Since all its subroutines take $O(k)$ each. Sampling consumes $O(1)$ since both &lt;code&gt;uniformLBitInteger&lt;/code&gt; and &lt;code&gt;biasedBit&lt;/code&gt; consume $O(1)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-5&#34; class=&#34;unnumbered&#34;&gt;Ex. 5&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Postponed.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;ex.-6&#34; class=&#34;unnumbered&#34;&gt;Ex. 6&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; It feels weird we derived a solution better than the requested bound.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Algorithm&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def uniformPrime(n)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        do
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            # keep sampling uniform numbers in {1, .., 20n}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            rand = uniformRandom(20n)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # as long as the sampled is not prime
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        while not isPrime(rand)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # only if we found a prime, we return it
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return rand
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Correctness.&lt;/strong&gt; We used the technique of &lt;em&gt;Rejection Sampling&lt;/em&gt; which guarantees the prime number output is uniform. The proof idea is very similar to our previous probability proofs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Analysis.&lt;/strong&gt; From &lt;em&gt;Fact A.2.12&lt;/em&gt; (page 226), There are at least $n/\ln n$ primes in $P_n$. So the probability of a successful trial is at least $n/\ln n$. Then the number of trials is at most $\ln n/n$ in expectation by &lt;em&gt;Fact A.3.20&lt;/em&gt; (page 233). Observe $\ln n / n \leq \log n / n$. Since we are given &lt;code&gt;isPrime&lt;/code&gt; is $\mathcal{O}(\log^7 n)$, The whole algorithm &lt;code&gt;uniformPrime&lt;/code&gt; takes at most $\mathcal{O}(\log^8 / n) \subset \mathcal{O}(\log^{10} n)$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-7&#34; class=&#34;unnumbered&#34;&gt;Ex. 7&lt;/h3&gt;
-&lt;h4 id=&#34;part-i-2&#34; class=&#34;unnumbered&#34;&gt;Part I&lt;/h4&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;flex justify-center	&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.7_0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;The probability of sampling from $R$ is $\nfrac{\textit{disk-area}}{\textit{square-area}} = \nfrac{\pi(1)^2}{2*2} \approx \nfrac{22}{7} \cdot \nfrac{1}{4} = \nfrac{22}{28}$.&lt;/p&gt;
-&lt;p&gt;It follows the number of iterations is at most $\nfrac{28}{22} = 1 + \nfrac{3}{11} \leq 2$.&lt;/p&gt;
-&lt;h4 id=&#34;part-ii-2&#34; class=&#34;unnumbered&#34;&gt;Part II&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Partially Solved.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Seemingly we just need to compute volumes of both $S$ and $R$ but in $20th$ dimension, and follow exactly the same recipe of &lt;em&gt;Part I&lt;/em&gt;.&lt;/p&gt;
-</description>
+&lt;p&gt;Define $k = \lfloor n/m \rfloor$, So $k$ is the greatest integer such that $mk \leq n$. Define $r = n \mod mk$, so $n = mk + r$ where $0 \leq r &lt; m$.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
