@@ -1,0 +1,80 @@
+baseURL: https://www.mostafatouny.github.io
+languageCode: en-us
+title: Mostafa Touny
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /post
+      weight: 20
+
+params:
+  # bug workaround: https://github.com/adityatelange/hugo-PaperMod/issues/1573
+  social: true
+  math: true
+  defaultTheme: dark
+  ShowReadingTime: false
+  comments: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: false
+  ShowWordCount: false
+  hideSummary: true
+  showtoc: true
+  ShowRssButtonInSectionTermList: false
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Mostafa Touny
+    subtitle: "Research Assistant at The American University in Cairo"
+    # in static folder
+    imageUrl: "profile.jpg"
+    imageWidth: 400
+    imageHeight: 400
+    buttons:
+      - name: About
+        url: /about
+      - name: Blog
+        url: /blog
+
+  socialIcons:
+    - name: "cv"
+      url: "http://u.pc.cd/lr3rtalK"
+    - name: "email"
+      url: "mailto:mostafatouny@proton.me"
+    - name: "telegram"
+      url: "https:/t.me/mostafatouny"
+    - name: "X"
+      url: "https://x.com/Mostafa_Touny"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/mostafa-touny/"
+    - name: "instagram"
+      url: "https://www.instagram.com/mostafa.touny/"
+
+pagination:
+  # number of blog posts per page
+  pagerSize: 10
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+          - - $
+            - $
+        enable: true

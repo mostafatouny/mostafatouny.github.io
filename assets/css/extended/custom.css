@@ -1,0 +1,42 @@
+/* Navigation Bar */
+#menu a {
+    font-size: 1.5em;
+}
+
+/* Name Title */
+/* #top > header > nav > div { */
+#top > header > nav > div > a {
+    font-size: 1.5em;
+}
+
+/* social icons */
+svg {
+    /* scales icons 150 % of their size */
+    transform: scale(1.5);
+}
+/* button */
+.button {
+    font-size: 1.5em;
+}
+/* source: https://github.com/adityatelange/hugo-PaperMod/blob/a2eb47bb4b805116dcd34c1605d39835121f8dbe/assets/css/common/profile-mode.css */
+
+/* width */
+:root {
+    --main-width: 60%;
+}
+/* source: https://github.com/adityatelange/hugo-PaperMod/blob/a2eb47bb4b805116dcd34c1605d39835121f8dbe/assets/css/core/theme-vars.css */
+
+/* blog titles */
+#top > main > article > header > h2 {
+    font-size: 1.5em;
+}
+
+/* content */
+body {
+    font-size: 1.5em;
+}
+
+/* hide published with hugo footer */
+.footer {
+    display: none;
+}
