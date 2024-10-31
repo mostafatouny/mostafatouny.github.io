@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bartle &amp; Sherbert&#39;s Real Analysis on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/bartle-analysis-post/</link>
     <description>Recent content in Bartle &amp; Sherbert&#39;s Real Analysis on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/bartle-analysis-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,37 +13,14 @@
       <link>https://www.mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex.-11&#34; class=&#34;unnumbered&#34;&gt;Ex. 11&lt;/h3&gt;
-&lt;p&gt;For $f_n(x) = \frac{\displaystyle{x}}{\displaystyle{x+n}}$, and $f = 0$, Clearly&lt;/p&gt;
-&lt;p&gt;$||f_n - f ||_{[0,a]} = ||f_n||_{[0,a]} = \frac{\displaystyle{a}}{\displaystyle{a+n}}$. But $\lim_{n \rightarrow \infty} \frac{\displaystyle{a}}{\displaystyle{a+n}} = 0$. Hence by &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244), The uniform convergence on $[0,a]$ follows.&lt;/p&gt;
-&lt;p&gt;We follow &lt;em&gt;Lemma 8.1.5&lt;/em&gt; (page 244). Consider subsequences $n_k = x_k = k$. Then $f_{n_k}(x_k) = \frac{\displaystyle{k + k}}{\displaystyle{k}} = \frac{\displaystyle{1}}{\displaystyle{2}}$. Therefore $|f_{n_k}(x_k) - f(x_k)| = |f_{n_k}(x_k)| = \frac{\displaystyle{1}}{\displaystyle{2}} = \epsilon_0$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-11&#34; class=&#34;unnumbered&#34;&gt;Ex. 11&lt;/h3&gt;&#xA;&lt;p&gt;For $f_n(x) = \frac{\displaystyle{x}}{\displaystyle{x+n}}$, and $f = 0$, Clearly&lt;/p&gt;&#xA;&lt;p&gt;$||f_n - f ||_{[0,a]} = ||f_n||_{[0,a]} = \frac{\displaystyle{a}}{\displaystyle{a+n}}$. But $\lim_{n \rightarrow \infty} \frac{\displaystyle{a}}{\displaystyle{a+n}} = 0$. Hence by &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244), The uniform convergence on $[0,a]$ follows.&lt;/p&gt;&#xA;&lt;p&gt;We follow &lt;em&gt;Lemma 8.1.5&lt;/em&gt; (page 244). Consider subsequences $n_k = x_k = k$. Then $f_{n_k}(x_k) = \frac{\displaystyle{k + k}}{\displaystyle{k}} = \frac{\displaystyle{1}}{\displaystyle{2}}$. Therefore $|f_{n_k}(x_k) - f(x_k)| = |f_{n_k}(x_k)| = \frac{\displaystyle{1}}{\displaystyle{2}} = \epsilon_0$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 10 - Section 01</title>
       <link>https://www.mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;By definition of a gauge, we have
-\begin{aligned}
-t_i - \delta(t_i) &amp;amp;\leq x_{i-1} \\
-x_i &amp;amp;\leq t_i + \delta(t_i)
-\end{aligned}
-Implying,
-\begin{aligned}
-x_i - x_{i-1} \leq t_i + \delta(t_i) - x_{i-1} \\
--t_i + \delta(t_i) \geq -x_{i-1}
-\end{aligned}
-Concluding for all $i \in \{ 1,2, \dots, n \}$,
-\begin{aligned}
-x_i - x_{i-1} &amp;amp;\leq t_i + \delta(t_i) - t_i + \delta(t_i) \\
-&amp;amp;\leq 2 \delta(t_i)
-\end{aligned}&lt;/p&gt;
-&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Clearly $x_i - x_{i-1} \leq 2 \delta^*$ for all $i \in \{1, 2, \dots, n\}$. Then $\max \\{x_i - x_{i-1}\\} = ||\dot{p}|| \leq 2 \delta^*$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;&#xA;&lt;p&gt;By definition of a gauge, we have&#xA;\begin{aligned}&#xA;t_i - \delta(t_i) &amp;amp;\leq x_{i-1} \\&#xA;x_i &amp;amp;\leq t_i + \delta(t_i)&#xA;\end{aligned}&#xA;Implying,&#xA;\begin{aligned}&#xA;x_i - x_{i-1} \leq t_i + \delta(t_i) - x_{i-1} \\&#xA;-t_i + \delta(t_i) \geq -x_{i-1}&#xA;\end{aligned}&#xA;Concluding for all $i \in \{ 1,2, \dots, n \}$,&#xA;\begin{aligned}&#xA;x_i - x_{i-1} &amp;amp;\leq t_i + \delta(t_i) - t_i + \delta(t_i) \\&#xA;&amp;amp;\leq 2 \delta(t_i)&#xA;\end{aligned}&lt;/p&gt;&#xA;&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;&#xA;&lt;p&gt;Clearly $x_i - x_{i-1} \leq 2 \delta^*$ for all $i \in \{1, 2, \dots, n\}$. Then $\max \\{x_i - x_{i-1}\\} = ||\dot{p}|| \leq 2 \delta^*$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Odonnell&#39;s Undergrad Complexity on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/</link>
     <description>Recent content in Odonnell&#39;s Undergrad Complexity on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/odonnell-undergrad-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,88 +13,42 @@
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset06/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset06/</guid>
-      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;p&gt;Here is a very illustrative example.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;example.jpg&#34; alt=&#34;image&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;The procedure of encoding &lt;em&gt;3COL-UNARY&lt;/em&gt; to &lt;em&gt;3COL&lt;/em&gt; is as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;\(i\) For each group of nodes labeled with some colour &lt;em&gt;x&lt;/em&gt;, create
-two additional connected nodes &lt;em&gt;x1&lt;/em&gt; and &lt;em&gt;x2&lt;/em&gt;, and connect each node
-coloured &lt;em&gt;x&lt;/em&gt; to both of them.&lt;/li&gt;
-&lt;li&gt;\(ii\) For each two distinct groups of colours &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;, connect
-some node from &lt;em&gt;x&lt;/em&gt; with some node from &lt;em&gt;y&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When encoded input is run on &lt;em&gt;3COL&lt;/em&gt;,&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;p&gt;Here is a very illustrative example.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;example.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The procedure of encoding &lt;em&gt;3COL-UNARY&lt;/em&gt; to &lt;em&gt;3COL&lt;/em&gt; is as:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;\(i\) For each group of nodes labeled with some colour &lt;em&gt;x&lt;/em&gt;, create&#xA;two additional connected nodes &lt;em&gt;x1&lt;/em&gt; and &lt;em&gt;x2&lt;/em&gt;, and connect each node&#xA;coloured &lt;em&gt;x&lt;/em&gt; to both of them.&lt;/li&gt;&#xA;&lt;li&gt;\(ii\) For each two distinct groups of colours &lt;em&gt;x&lt;/em&gt; and &lt;em&gt;y&lt;/em&gt;, connect&#xA;some node from &lt;em&gt;x&lt;/em&gt; with some node from &lt;em&gt;y&lt;/em&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;When encoded input is run on &lt;em&gt;3COL&lt;/em&gt;,&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 05</title>
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset05/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset05/</guid>
-      <description>&lt;h2 id=&#34;ex-0&#34;&gt;Ex. 0&lt;/h2&gt;
-&lt;p&gt;Naively we guess any transformation $f$ of Boolean formulas preserves the property of satisfiability. Hence it would always be the case
-&lt;/p&gt;
-$$
-\begin{aligned}
-w \not\in \textit{UNSAT} \leftrightarrow f(w) \in \textit{SAT}
-\end{aligned}
-$$&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;p&gt;Since the questions is about factor $a$ we can ignore constants. $n^r + {(n^l)}^b = n^{r+lb}$. So $a = r+lb$.&lt;/p&gt;
-&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
-&lt;p&gt;following NTM simulation by DTM, partition states into H1 and H2 subsets, and apply the same procedure on each. now the combination of delta1 and delta2 reaches all possible states of NTM.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-0&#34;&gt;Ex. 0&lt;/h2&gt;&#xA;&lt;p&gt;Naively we guess any transformation $f$ of Boolean formulas preserves the property of satisfiability. Hence it would always be the case&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{aligned}&#xA;w \not\in \textit{UNSAT} \leftrightarrow f(w) \in \textit{SAT}&#xA;\end{aligned}&#xA;$$&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;p&gt;Since the questions is about factor $a$ we can ignore constants. $n^r + {(n^l)}^b = n^{r+lb}$. So $a = r+lb$.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;&#xA;&lt;p&gt;following NTM simulation by DTM, partition states into H1 and H2 subsets, and apply the same procedure on each. now the combination of delta1 and delta2 reaches all possible states of NTM.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 04</title>
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset04/</link>
       <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;Obviously the problem has a polynomial-time verifier by specifying the range of the subsequence common among all $w_i$. It&amp;rsquo;s easy to loop on that range $k$, Checking whether corresponding positions of all $w_j$ are the same.&lt;/p&gt;
-&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;Obviously a verifier is some input $x_0$ such that $C_1(x_0) \neq C_2(x_0)$. It&amp;rsquo;s easy to  compute both circuits and check their unequal output.&lt;/p&gt;
-&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
-&lt;p&gt;Intuitively, If a problem has some varifier, Then we can brute-force all possible verifiers. Observe we can choose the greatest branching factor $c_{max}$ so that time is upper-bounded by $c_{max}^{poly(n)}$. Alternatively, Our argument might be seen through the perspective of a tree of an $NP$ problem, where $poly(n)$ is the time required of the longest path of the tree.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;&#xA;&lt;p&gt;Obviously the problem has a polynomial-time verifier by specifying the range of the subsequence common among all $w_i$. It&amp;rsquo;s easy to loop on that range $k$, Checking whether corresponding positions of all $w_j$ are the same.&lt;/p&gt;&#xA;&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;&#xA;&lt;p&gt;Obviously a verifier is some input $x_0$ such that $C_1(x_0) \neq C_2(x_0)$. It&amp;rsquo;s easy to  compute both circuits and check their unequal output.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;&#xA;&lt;p&gt;Intuitively, If a problem has some varifier, Then we can brute-force all possible verifiers. Observe we can choose the greatest branching factor $c_{max}$ so that time is upper-bounded by $c_{max}^{poly(n)}$. Alternatively, Our argument might be seen through the perspective of a tree of an $NP$ problem, where $poly(n)$ is the time required of the longest path of the tree.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 03</title>
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset03/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset03/</guid>
-      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;p&gt;The proof is already mentioned in sipser. We can easily reprove it using the diagonalization argument.&lt;/p&gt;
-&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
-&lt;p&gt;Enumerate all the two choices of a node colored in (red or blue), or colored in yellow, on all nodes. Consider the two subgraphs separately; If the yellow subgraph contains any edge reject the instance. Check if the other subgraph is 2-colorable. Only if yes, accept as the whole graph as 3-colorable.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;p&gt;The proof is already mentioned in sipser. We can easily reprove it using the diagonalization argument.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;&#xA;&lt;p&gt;Enumerate all the two choices of a node colored in (red or blue), or colored in yellow, on all nodes. Consider the two subgraphs separately; If the yellow subgraph contains any edge reject the instance. Check if the other subgraph is 2-colorable. Only if yes, accept as the whole graph as 3-colorable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 02</title>
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset02/</link>
       <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset02/</guid>
-      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;p&gt;The set of all unary languages is uncountably infinite but the set of all Turing machines is countably infinite, Hence some unary language isn&amp;rsquo;t recognizable by any turing machine.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s prove uncountability of unary languages. Observe the set $\Sigma^\*$ equals
-\begin{align*}
-&amp;amp;\epsilon \quad &amp;amp;s_1\\
-&amp;amp;1 \quad &amp;amp;s_2\\
-&amp;amp;11 \quad &amp;amp;s_3\\
-&amp;amp;111 \quad &amp;amp;s_4\\
-&amp;amp;.. \quad &amp;amp;..\\
-\end{align*}
-Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an infinite binary sequence, where string $s_i$ is in the language if and only if sequence bit $b_i$ is 1. Clearly, there is bijective map from unary languages to infinite binary sequences. But the set of infinite binary sequences is uncountably infinite.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;p&gt;The set of all unary languages is uncountably infinite but the set of all Turing machines is countably infinite, Hence some unary language isn&amp;rsquo;t recognizable by any turing machine.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s prove uncountability of unary languages. Observe the set $\Sigma^\*$ equals&#xA;\begin{align*}&#xA;&amp;amp;\epsilon \quad &amp;amp;s_1\\&#xA;&amp;amp;1 \quad &amp;amp;s_2\\&#xA;&amp;amp;11 \quad &amp;amp;s_3\\&#xA;&amp;amp;111 \quad &amp;amp;s_4\\&#xA;&amp;amp;.. \quad &amp;amp;..\\&#xA;\end{align*}&#xA;Any unary language is a subset of $\Sigma^*$, and can be re-interpreted as an infinite binary sequence, where string $s_i$ is in the language if and only if sequence bit $b_i$ is 1. Clearly, there is bijective map from unary languages to infinite binary sequences. But the set of infinite binary sequences is uncountably infinite.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 01</title>
       <link>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset01/</link>
       <pubDate>Sun, 29 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/odonnell-undergrad-post/pset01/</guid>
-      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;
-&lt;p&gt;skipped&lt;/p&gt;
-&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;As the recipe is deterministic, i.e generates only one output given the same input, The assignment is valid and the function is well-defined.&lt;/p&gt;
-&lt;p&gt;For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarrow f(x_0) \neq f(x_1)$. Since, $x_0 + 1 \neq x_1 + 1$, Their binary representation differs in either the number of bits or in some bit not matching. That unmatching bit cannot be the most significant bit as it&amp;rsquo;s always 1. Therefore, resulting strings, $f(x_0)$ and $f(x_1)$ are not the same.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h2&gt;&#xA;&lt;p&gt;skipped&lt;/p&gt;&#xA;&lt;h2 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;&#xA;&lt;p&gt;As the recipe is deterministic, i.e generates only one output given the same input, The assignment is valid and the function is well-defined.&lt;/p&gt;&#xA;&lt;p&gt;For injectivity, we prove the contrapositive; Namely, if $x_0 \neq x_1 \rightarrow f(x_0) \neq f(x_1)$. Since, $x_0 + 1 \neq x_1 + 1$, Their binary representation differs in either the number of bits or in some bit not matching. That unmatching bit cannot be the most significant bit as it&amp;rsquo;s always 1. Therefore, resulting strings, $f(x_0)$ and $f(x_1)$ are not the same.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

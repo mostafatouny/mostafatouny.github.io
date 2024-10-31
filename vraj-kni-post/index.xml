@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/vraj-kni-post/</link>
     <description>Recent content in Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/vraj-kni-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,60 +13,21 @@
       <link>https://www.mostafatouny.github.io/vraj-kni-post/ch04-sec02/</link>
       <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch04-sec02/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;
-&lt;p&gt;We follow the standard recipe.
-&lt;/p&gt;
-$$
-\begin{align*}
-    r^2 &amp;= 3r + 10 \\\\
-    r^2 - 3r - 10 &amp;= 0 \\\\
-    (r + 2)(r - 5) &amp;= 0 \\\\
-\end{align*}
-$$&lt;p&gt;
-$r = -2$ or $r = 5$. The general solution form is $\alpha_1(-2)^n + \alpha_2(5)^n$. From the base cases:
-&lt;/p&gt;
-$$
-\begin{align*}
-    F(0) &amp;= 4 \\\\
-    &amp;= \alpha_1 + \alpha_2 \\\\
-    F(1) &amp;= 13 \\\\
-    &amp;= -2 \alpha_1 + 5 \alpha_2 \\\\
-\end{align*}
-$$&lt;p&gt;
-Which by substitution implies $\alpha_1 = 1$ and $\alpha_2 = 3$. Therefore $F(n) = (-2)^n + 3 (5)^n$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;&#xA;&lt;p&gt;We follow the standard recipe.&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{align*}&#xA;    r^2 &amp;= 3r + 10 \\\\&#xA;    r^2 - 3r - 10 &amp;= 0 \\\\&#xA;    (r + 2)(r - 5) &amp;= 0 \\\\&#xA;\end{align*}&#xA;$$&lt;p&gt;&#xA;$r = -2$ or $r = 5$. The general solution form is $\alpha_1(-2)^n + \alpha_2(5)^n$. From the base cases:&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{align*}&#xA;    F(0) &amp;= 4 \\\\&#xA;    &amp;= \alpha_1 + \alpha_2 \\\\&#xA;    F(1) &amp;= 13 \\\\&#xA;    &amp;= -2 \alpha_1 + 5 \alpha_2 \\\\&#xA;\end{align*}&#xA;$$&lt;p&gt;&#xA;Which by substitution implies $\alpha_1 = 1$ and $\alpha_2 = 3$. Therefore $F(n) = (-2)^n + 3 (5)^n$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 02 - Section 01</title>
       <link>https://www.mostafatouny.github.io/vraj-kni-post/ch02-sec01/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch02-sec01/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;No. The statement holds if and only if $x$ is not integer. For example $\lceil 1 \rceil = 1 \neq 1 + \lfloor 1 \rfloor = 2$.&lt;/p&gt;
-&lt;p&gt;Let $x = z + y$ where $z$ is integer and $0 &lt; y &lt; 1$. Then $\lceil x \rceil = z + 1 = \lfloor x \rfloor + 1$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;No. The statement holds if and only if $x$ is not integer. For example $\lceil 1 \rceil = 1 \neq 1 + \lfloor 1 \rfloor = 2$.&lt;/p&gt;&#xA;&lt;p&gt;Let $x = z + y$ where $z$ is integer and $0 &lt; y &lt; 1$. Then $\lceil x \rceil = z + 1 = \lfloor x \rfloor + 1$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 06 - Section 07</title>
       <link>https://www.mostafatouny.github.io/vraj-kni-post/ch06-sec07/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch06-sec07/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a set $A$ of distinct elements in a random order, The positition of the maximum element of a subset $S \subset A$ is uniform in $S$.&lt;/p&gt;
-&lt;p&gt;Define indicator random variables $L_i$ as
-&lt;/p&gt;
-$$
-L_i =
-    \begin{cases} 
-        1 &amp; a_i &gt; a_{i-1}, a_{i-2}, \dots, a_{1} \\\\
-        0 &amp; a_i &lt; a_j, \text{ for some } j = 1,2, \dots, i-1 
-    \end{cases}
-$$&lt;p&gt;
-So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a set $A$ of distinct elements in a random order, The positition of the maximum element of a subset $S \subset A$ is uniform in $S$.&lt;/p&gt;&#xA;&lt;p&gt;Define indicator random variables $L_i$ as&#xA;&lt;/p&gt;&#xA;$$&#xA;L_i =&#xA;    \begin{cases} &#xA;        1 &amp; a_i &gt; a_{i-1}, a_{i-2}, \dots, a_{1} \\\\&#xA;        0 &amp; a_i &lt; a_j, \text{ for some } j = 1,2, \dots, i-1 &#xA;    \end{cases}&#xA;$$&lt;p&gt;&#xA;So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Competitive Programming on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/competitive-prog-post/</link>
     <description>Recent content in Competitive Programming on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Jun 2020 00:00:01 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/competitive-prog-post/index.xml" rel="self" type="application/rss+xml" />

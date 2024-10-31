@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Levitin&#39;s Algorithms on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/msa-levitin-post/</link>
     <description>Recent content in Levitin&#39;s Algorithms on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/msa-levitin-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,275 +13,63 @@
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab09/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab09/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9.1.1&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use quotient and mod operations.&lt;/li&gt;
-&lt;li&gt;Observe why the quotient yields the maximum possible count of some coin.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      # input: non negative amount n, and a decreasing array of coins D
-      # output: array C where C[i] is number of coins of ith denomination D[i]
-      def greedyCoins(integer n, D[1..m])
-        # for each coin
-        for i in 1..m
-
-            # take max possible number of it
-            C[i] = floor( n/D[i] )
-
-            # remaining amount for next iteration
-            n = n \mod D[i]
-        
-        # if there is still a remaining amount
-        if n != 0 return &amp;#34;no solution&amp;#34;
-
-        # otherwise given n is partitioned by coins
-        return C
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;9.1.15&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9.1.1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hints.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use quotient and mod operations.&lt;/li&gt;&#xA;&lt;li&gt;Observe why the quotient yields the maximum possible count of some coin.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Solution.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;      # input: non negative amount n, and a decreasing array of coins D&#xA;      # output: array C where C[i] is number of coins of ith denomination D[i]&#xA;      def greedyCoins(integer n, D[1..m])&#xA;        # for each coin&#xA;        for i in 1..m&#xA;&#xA;            # take max possible number of it&#xA;            C[i] = floor( n/D[i] )&#xA;&#xA;            # remaining amount for next iteration&#xA;            n = n \mod D[i]&#xA;        &#xA;        # if there is still a remaining amount&#xA;        if n != 0 return &amp;#34;no solution&amp;#34;&#xA;&#xA;        # otherwise given n is partitioned by coins&#xA;        return C&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;9.1.15&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 08</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab08/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab08/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8.1.3&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;8.1.5&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;8.1.6&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Explain why is the formulation $F(n) = F(n-1) + p_1$ is wrong. Derive a counter example.&lt;/li&gt;
-&lt;li&gt;The optimal solution may be $F(n) = p_n$. Modify it so that it is in terms of $F(k)$ for some $k &lt; n$.&lt;/li&gt;
-&lt;li&gt;Generalize.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Recursive formulation.
-\begin{aligned}
-F(0) &amp;amp;= 0 \\
-F(n) &amp;amp;= \underset{1 \leq j \leq n}{\max} {p_j + F(n-j) }
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Algorithm.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    # input: Length n, and values of pieces of length i, P[i]
-    # output: Maximum value of all possible cuts on a rod of length n
-    def dynamicRodCut(n, P[0..n])
-
-        # a rod of length zero contributes nothing to revenue
-        P[0] = 0
-
-        # Initialize an array of size n
-        F = [] * (n+1)
-
-        # Set the base case
-        F[0] = 0
-
-        # Compute bottom-up F[i]
-        for i in 1..n
-
-            maxVal = 0
-
-            # Compute the maximum among all js
-            for j in 0..i
-                # call memoized subinstances
-                # update if found a greater value
-                maxVal = max( maxVal, P[j] + F(i-j) )
-
-            # memoize
-            F[i] = maxVal
-
-        # return max value of cuts, on given length n
-        return F[n]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Complexity. Time is $1 + \dots + n = n(n+1)/2$. Additional space is $n+1$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8.1.3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;8.1.5&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;8.1.6&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Explain why is the formulation $F(n) = F(n-1) + p_1$ is wrong. Derive a counter example.&lt;/li&gt;&#xA;&lt;li&gt;The optimal solution may be $F(n) = p_n$. Modify it so that it is in terms of $F(k)$ for some $k &lt; n$.&lt;/li&gt;&#xA;&lt;li&gt;Generalize.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Recursive formulation.&#xA;\begin{aligned}&#xA;F(0) &amp;amp;= 0 \\&#xA;F(n) &amp;amp;= \underset{1 \leq j \leq n}{\max} {p_j + F(n-j) }&#xA;\end{aligned}&lt;/p&gt;&#xA;&lt;p&gt;Algorithm.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    # input: Length n, and values of pieces of length i, P[i]&#xA;    # output: Maximum value of all possible cuts on a rod of length n&#xA;    def dynamicRodCut(n, P[0..n])&#xA;&#xA;        # a rod of length zero contributes nothing to revenue&#xA;        P[0] = 0&#xA;&#xA;        # Initialize an array of size n&#xA;        F = [] * (n+1)&#xA;&#xA;        # Set the base case&#xA;        F[0] = 0&#xA;&#xA;        # Compute bottom-up F[i]&#xA;        for i in 1..n&#xA;&#xA;            maxVal = 0&#xA;&#xA;            # Compute the maximum among all js&#xA;            for j in 0..i&#xA;                # call memoized subinstances&#xA;                # update if found a greater value&#xA;                maxVal = max( maxVal, P[j] + F(i-j) )&#xA;&#xA;            # memoize&#xA;            F[i] = maxVal&#xA;&#xA;        # return max value of cuts, on given length n&#xA;        return F[n]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Complexity. Time is $1 + \dots + n = n(n+1)/2$. Additional space is $n+1$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 07</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab07/</link>
       <pubDate>Mon, 04 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab07/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;7.1.2&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7.1.5&lt;/h3&gt;
-&lt;p&gt;We tell students sort by a single loop rather than a single-line.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def sortBySingleLoop(A[0..n-1])
-        # initialize a zeros list of size n
-        S = [0] * n
-
-        # loop on A values, Convert to corresponding index, Set that index
-        for i in 0..n-1
-            S[ A[i]-1 ] = A[i]
-
-        # S is A but sorted
-        return S
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;7.1.10&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;7.2.2&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;7.2.3&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;7.2.11&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;7.1.2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7.1.5&lt;/h3&gt;&#xA;&lt;p&gt;We tell students sort by a single loop rather than a single-line.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def sortBySingleLoop(A[0..n-1])&#xA;        # initialize a zeros list of size n&#xA;        S = [0] * n&#xA;&#xA;        # loop on A values, Convert to corresponding index, Set that index&#xA;        for i in 0..n-1&#xA;            S[ A[i]-1 ] = A[i]&#xA;&#xA;        # S is A but sorted&#xA;        return S&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;7.1.10&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;7.2.2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-4&#34; class=&#34;unnumbered&#34;&gt;7.2.3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-5&#34; class=&#34;unnumbered&#34;&gt;7.2.11&lt;/h3&gt;&#xA;&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Hints&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 03</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab03/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab03/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3.1.4&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Observe we can derive $x^i$ from $x^{i-1}$, so we don&amp;rsquo;t need to recompute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Same as manual:&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./ex-3-1-4.png&#34; alt=&#34;image&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./ex-3-1-4_1.png&#34; alt=&#34;image&#34;  /&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3.1.14&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3.2.8&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z &gt; i$, What can you infer?&lt;/li&gt;
-&lt;li&gt;Utilize that observation in algorithm design.&lt;/li&gt;
-&lt;li&gt;Consider a flag which stores whether character $A$ is read.&lt;/li&gt;
-&lt;li&gt;Generalize for a variable that counts how many $A$ was read.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3.1.4&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Observe we can derive $x^i$ from $x^{i-1}$, so we don&amp;rsquo;t need to recompute&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Same as manual:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-3-1-4.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-3-1-4_1.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3.1.14&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Homework&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3.2.8&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Following the definition, If you knew $S[i] = A$, and $S[j] = S[z] = B$ for $j,z &gt; i$, What can you infer?&lt;/li&gt;&#xA;&lt;li&gt;Utilize that observation in algorithm design.&lt;/li&gt;&#xA;&lt;li&gt;Consider a flag which stores whether character $A$ is read.&lt;/li&gt;&#xA;&lt;li&gt;Generalize for a variable that counts how many $A$ was read.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 04</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab04/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab04/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;instructor-notes&#34; class=&#34;unnumbered&#34;&gt;Instructor Notes&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\lfloor \log n \rfloor + 1 = \lceil \log (n+1) \rceil$.&lt;/p&gt;
-&lt;p&gt;We know $n = 2^k + r$ for some $k \geq 0$ and $0 \leq r &lt; 2^k$, By&lt;em&gt;Euclid&amp;rsquo;s Theorem&lt;/em&gt; and &lt;em&gt;Archimedean Property&lt;/em&gt;. Then
-\begin{aligned}
-k + 1 = \log 2^{k+1} \geq \log (2^k + r + 1) &amp;gt; \log (2^k + r) \geq \log 2^k = k
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Thus, $\lceil \log(n + 1) \rceil = \lceil \log (2^k + r + 1) \rceil = k + 1$ and $\lfloor \log (n+1) \rfloor  = \lfloor \log(2^k + 1) \rfloor = k$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;instructor-notes&#34; class=&#34;unnumbered&#34;&gt;Instructor Notes&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\lfloor \log n \rfloor + 1 = \lceil \log (n+1) \rceil$.&lt;/p&gt;&#xA;&lt;p&gt;We know $n = 2^k + r$ for some $k \geq 0$ and $0 \leq r &lt; 2^k$, By&lt;em&gt;Euclid&amp;rsquo;s Theorem&lt;/em&gt; and &lt;em&gt;Archimedean Property&lt;/em&gt;. Then&#xA;\begin{aligned}&#xA;k + 1 = \log 2^{k+1} \geq \log (2^k + r + 1) &amp;gt; \log (2^k + r) \geq \log 2^k = k&#xA;\end{aligned}&lt;/p&gt;&#xA;&lt;p&gt;Thus, $\lceil \log(n + 1) \rceil = \lceil \log (2^k + r + 1) \rceil = k + 1$ and $\lfloor \log (n+1) \rfloor  = \lfloor \log(2^k + 1) \rfloor = k$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 05</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab05/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab05/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;5.1.3&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;you can use floors and ceils as subroutines.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def divConqPower(a,n)
-      if n = 1
-        return a
-      return divConqPower(a, floor(n/2)) * divConqPower(a, ceil(n/2))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Time of basic operations $T(n)$ are $T(n) = T( \lfloor n/2 \rfloor ) + T( \lceil n/2 \rceil) + 1$. Assuming $n = 2^k$, We get $T(n) = 2T(n/2) + 1$. By master theorem,
-$T(n) = \Theta(n)$.&lt;/p&gt;
-&lt;p&gt;For general cases of $n$, Observe $n = 2^{\log n} \leq 2^{\lceil \log n \rceil}$, So by master theorem $T(n) \leq \mathcal{O}(2^{\lceil \log n \rceil}) \leq \mathcal{O}(2^{\log n + 1}) = \mathcal{O}(n)$. Similarly $T(n) \geq \Omega(2^{\lfloor \log n \rfloor}) = \Omega(n)$. That concludes $T(n) = \Theta(n)$ for any $n$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;5.1.3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;you can use floors and ceils as subroutines.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def divConqPower(a,n)&#xA;      if n = 1&#xA;        return a&#xA;      return divConqPower(a, floor(n/2)) * divConqPower(a, ceil(n/2))&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Time of basic operations $T(n)$ are $T(n) = T( \lfloor n/2 \rfloor ) + T( \lceil n/2 \rceil) + 1$. Assuming $n = 2^k$, We get $T(n) = 2T(n/2) + 1$. By master theorem,&#xA;$T(n) = \Theta(n)$.&lt;/p&gt;&#xA;&lt;p&gt;For general cases of $n$, Observe $n = 2^{\log n} \leq 2^{\lceil \log n \rceil}$, So by master theorem $T(n) \leq \mathcal{O}(2^{\lceil \log n \rceil}) \leq \mathcal{O}(2^{\log n + 1}) = \mathcal{O}(n)$. Similarly $T(n) \geq \Omega(2^{\lfloor \log n \rfloor}) = \Omega(n)$. That concludes $T(n) = \Theta(n)$ for any $n$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 06</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab06/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab06/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;6.1.1&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sort the array as a preprocessing step.&lt;/li&gt;
-&lt;li&gt;Given a sorted array, and an adjacent pair $A[i],A[i+1]$, Could the distance between $A[i]$ and $A[j]$ where $j &gt; i+1$, be strictly less?&lt;/li&gt;
-&lt;li&gt;Use that to design your algorithm.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    # input: Array of integers
-    # output: minimum distance between any pairs
-    def ClosestDistance(A[0..n-1])
-
-        # Transformation: Sort the array
-        A.sort()
-
-        # Initialize minimum distance to | A[0] - A[1] |
-        minDistance = abs( A[0] - A[1] )
-
-        # Iterate and compute the distance between adjacent elements
-        for i in 1..n-1:
-            currentDistance = | arr[i] - arr[i + 1] )
-
-            # Update the minimum distance if the current distance is smaller
-            if currentDistance &amp;lt; minDistance:
-                minDistance = currentDistance
-
-        # Return the minimum distance
-        return minDistance
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;(b). Homework&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;6.1.1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sort the array as a preprocessing step.&lt;/li&gt;&#xA;&lt;li&gt;Given a sorted array, and an adjacent pair $A[i],A[i+1]$, Could the distance between $A[i]$ and $A[j]$ where $j &gt; i+1$, be strictly less?&lt;/li&gt;&#xA;&lt;li&gt;Use that to design your algorithm.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    # input: Array of integers&#xA;    # output: minimum distance between any pairs&#xA;    def ClosestDistance(A[0..n-1])&#xA;&#xA;        # Transformation: Sort the array&#xA;        A.sort()&#xA;&#xA;        # Initialize minimum distance to | A[0] - A[1] |&#xA;        minDistance = abs( A[0] - A[1] )&#xA;&#xA;        # Iterate and compute the distance between adjacent elements&#xA;        for i in 1..n-1:&#xA;            currentDistance = | arr[i] - arr[i + 1] )&#xA;&#xA;            # Update the minimum distance if the current distance is smaller&#xA;            if currentDistance &amp;lt; minDistance:&#xA;                minDistance = currentDistance&#xA;&#xA;        # Return the minimum distance&#xA;        return minDistance&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;(b). Homework&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 01</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab01/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab01/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1.1.4&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You are given a square number $n$. Given some integer $k$, How can we verify it is the root?&lt;/li&gt;
-&lt;li&gt;Follow the exhaustive search strategy, to find the root of $n$.&lt;/li&gt;
-&lt;li&gt;You are given a real number $r$. Given some integer $k$, How can we verify it is the floor of $r$?&lt;/li&gt;
-&lt;li&gt;Follow the exhaustive search strategy, to find the floor of $n$.&lt;/li&gt;
-&lt;li&gt;Combine all previous hints to find a unique definition of $\lfloor \sqrt{n} \rfloor$.&lt;/li&gt;
-&lt;li&gt;Follow the exhaustive search strategy, to solve the main problem.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1.1.4&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Hints&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You are given a square number $n$. Given some integer $k$, How can we verify it is the root?&lt;/li&gt;&#xA;&lt;li&gt;Follow the exhaustive search strategy, to find the root of $n$.&lt;/li&gt;&#xA;&lt;li&gt;You are given a real number $r$. Given some integer $k$, How can we verify it is the floor of $r$?&lt;/li&gt;&#xA;&lt;li&gt;Follow the exhaustive search strategy, to find the floor of $n$.&lt;/li&gt;&#xA;&lt;li&gt;Combine all previous hints to find a unique definition of $\lfloor \sqrt{n} \rfloor$.&lt;/li&gt;&#xA;&lt;li&gt;Follow the exhaustive search strategy, to solve the main problem.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lab 02</title>
       <link>https://www.mostafatouny.github.io/msa-levitin-post/lab02/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/msa-levitin-post/lab02/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2.1.1&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def sumOfArrayNumbers(A[0 .. n-1])
-      sum = 0
-      for i in 0..n-1
-        sum = sum + A[i]
-      return sum
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;n; Summation; no.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def factorial(n)
-      res = 1
-      for i in n..1
-        res = res * i
-      return res
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1; Multiplication; yes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Algorithm is in page 61.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def maxElementInArray(A[0..n-1])
-      max = A[0]
-      for i in 1..n-1
-        if A[i] &amp;gt; max
-          max = A[i]
-      return max
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;n; Comparison; no.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2.1.1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def sumOfArrayNumbers(A[0 .. n-1])&#xA;      sum = 0&#xA;      for i in 0..n-1&#xA;        sum = sum + A[i]&#xA;      return sum&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;n; Summation; no.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def factorial(n)&#xA;      res = 1&#xA;      for i in n..1&#xA;        res = res * i&#xA;      return res&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;1; Multiplication; yes.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Algorithm is in page 61.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    def maxElementInArray(A[0..n-1])&#xA;      max = A[0]&#xA;      for i in 1..n-1&#xA;        if A[i] &amp;gt; max&#xA;          max = A[i]&#xA;      return max&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;n; Comparison; no.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

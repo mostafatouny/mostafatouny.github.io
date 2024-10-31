@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gallian&#39;s Abstract Algebra on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/siniora-algebra-post/</link>
     <description>Recent content in Gallian&#39;s Abstract Algebra on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/siniora-algebra-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,310 +13,105 @@
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset09/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset09/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 175) to show the answer is NO. $(2 3) \in S_3$ and yet, $(2 3)H(2 3) = \{ (2 3)(1)(2 3), (2 3)(1 2)(2 3) \} = \{ (1), (1 3)\} \not\subset H$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 174). We know from earlier chapters, $A_n$ is a subgroup of $S_n$. Then for any $x \in S_n$ and any $h \in A_n$, we get a permutation $xhx^{1}$ consisting of even 2-cycles. To see why, Observe we know $x^{-1}$ has the same number of 2-cycles as $x$. Whether $x$ consists of even or odd number of 2-cycles, The contribution of 2-cycles of both $x$ and $x^{-1}$ is even.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 175) to show the answer is NO. $(2 3) \in S_3$ and yet, $(2 3)H(2 3) = \{ (2 3)(1)(2 3), (2 3)(1 2)(2 3) \} = \{ (1), (1 3)\} \not\subset H$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;We use &lt;em&gt;Theorem 9.1&lt;/em&gt; (page 174). We know from earlier chapters, $A_n$ is a subgroup of $S_n$. Then for any $x \in S_n$ and any $h \in A_n$, we get a permutation $xhx^{1}$ consisting of even 2-cycles. To see why, Observe we know $x^{-1}$ has the same number of 2-cycles as $x$. Whether $x$ consists of even or odd number of 2-cycles, The contribution of 2-cycles of both $x$ and $x^{-1}$ is even.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 10</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset10/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset10/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;
-&lt;p&gt;Homomorphism. If $\sigma_1$ and $\sigma_2$ are both even or both odd, then $\sigma_1 \sigma_2$ is even and $sgn(\sigma_1) sgn(\sigma_2) = 1$. If one of them is even and the other is odd, then $\sigma_1 \sigma_2$ is odd and $sgn(\sigma_1) sgn(\sigma_2) = 1 * -1 = -1$.&lt;/p&gt;
-&lt;p&gt;Kernel. $Ker \, sgn$ is the subgroup of even permutations of $G$.&lt;/p&gt;
-&lt;p&gt;$A_n$ is a normal subgroup of $S_n$. When $G = S_n$, $Ker \, sgn = A_n$. By &lt;em&gt;corollary&lt;/em&gt; (page 198), $Ker \, sgn$ is a normal subgroup.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;8&lt;/h3&gt;&#xA;&lt;p&gt;Homomorphism. If $\sigma_1$ and $\sigma_2$ are both even or both odd, then $\sigma_1 \sigma_2$ is even and $sgn(\sigma_1) sgn(\sigma_2) = 1$. If one of them is even and the other is odd, then $\sigma_1 \sigma_2$ is odd and $sgn(\sigma_1) sgn(\sigma_2) = 1 * -1 = -1$.&lt;/p&gt;&#xA;&lt;p&gt;Kernel. $Ker \, sgn$ is the subgroup of even permutations of $G$.&lt;/p&gt;&#xA;&lt;p&gt;$A_n$ is a normal subgroup of $S_n$. When $G = S_n$, $Ker \, sgn = A_n$. By &lt;em&gt;corollary&lt;/em&gt; (page 198), $Ker \, sgn$ is a normal subgroup.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 11</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset11/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset11/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;$n = 3$.&lt;/p&gt;
-&lt;p&gt;The table in page 213 shows that.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;$45 = 3^2 \cdot 5^1$. By the &lt;em&gt;fundamental theorem of finite abelian
-groups&lt;/em&gt;, All possible groups are
-\begin{aligned}
-Z_9 \oplus Z_5 &amp;amp;\approx Z_{45} \\
-Z_3 \oplus Z_3 \oplus Z_5 &amp;amp;\approx Z_3 \oplus Z_{15}
-\end{aligned}&lt;/p&gt;
-&lt;p&gt;Group $(1)$ has element $3$ whose order is $|3| = 15$. Group $(2)$ has element $(0,1)$ whose order is $|(0,1)| = 15$. Therefore, Any finite abelian group of order $45$ has an element of order $15$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;$n = 3$.&lt;/p&gt;&#xA;&lt;p&gt;The table in page 213 shows that.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;&#xA;&lt;p&gt;$45 = 3^2 \cdot 5^1$. By the &lt;em&gt;fundamental theorem of finite abelian&#xA;groups&lt;/em&gt;, All possible groups are&#xA;\begin{aligned}&#xA;Z_9 \oplus Z_5 &amp;amp;\approx Z_{45} \\&#xA;Z_3 \oplus Z_3 \oplus Z_5 &amp;amp;\approx Z_3 \oplus Z_{15}&#xA;\end{aligned}&lt;/p&gt;&#xA;&lt;p&gt;Group $(1)$ has element $3$ whose order is $|3| = 15$. Group $(2)$ has element $(0,1)$ whose order is $|(0,1)| = 15$. Therefore, Any finite abelian group of order $45$ has an element of order $15$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 12</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset12/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset12/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;It is $6$. For any $i \in \\{ 0,2,4,6,8 \\}$, $6i \mod 10 = i$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \\{ \nfrac{x}{2} \mid x \in \mathbb{Z} \\} = \\{ x\ \nfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \\}$. It is a subgroup as $\nfrac{x_0}{2} + \nfrac{x_1}{2} = \nfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\nfrac{x_0}{2}$ there is $\nfrac{-x_0}{2}$ such that $\nfrac{x_0}{2} + \nfrac{-x_0}{2} = 0$. Observe $\nfrac{1}{2} \cdot \nfrac{1}{2} = \nfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;It is $6$. For any $i \in \\{ 0,2,4,6,8 \\}$, $6i \mod 10 = i$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \\{ \nfrac{x}{2} \mid x \in \mathbb{Z} \\} = \\{ x\ \nfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \\}$. It is a subgroup as $\nfrac{x_0}{2} + \nfrac{x_1}{2} = \nfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\nfrac{x_0}{2}$ there is $\nfrac{-x_0}{2}$ such that $\nfrac{x_0}{2} + \nfrac{-x_0}{2} = 0$. Observe $\nfrac{1}{2} \cdot \nfrac{1}{2} = \nfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 13</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset13/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset13/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;Let $R$ be a commutative ring with the cancellation property. Assume for contradiction $a$ is a zero-divisor. Then $a \neq 0$ and there&amp;rsquo;s $b \neq 0$ such that $ab = 0$. By &lt;em&gt;theorem 12.1&lt;/em&gt; (page 229) It follows:
-\begin{aligned}
-ab - ab &amp;amp;= 0 \\
-a(b-b) &amp;amp;= 0 \\
-&amp;amp;= 0 \cdot 0 \\
-&amp;amp;= 0 \cdot (b-b) \\
-a      &amp;amp;= 0
-\end{aligned}
-Contradiction.&lt;/p&gt;
-&lt;h4 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h4&gt;
-&lt;p&gt;Zero-divisors are $2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 5, 15$. To see why assume $ab \mod 20 \equiv 0 \mod 20$. Then $ab - 0 = ab = 20k$ for some $k$. $a$ must contain a common factor with $20$, as otherwise $b \geq 20$. So zero-divisors are multiples of a factor of $20$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;Let $R$ be a commutative ring with the cancellation property. Assume for contradiction $a$ is a zero-divisor. Then $a \neq 0$ and there&amp;rsquo;s $b \neq 0$ such that $ab = 0$. By &lt;em&gt;theorem 12.1&lt;/em&gt; (page 229) It follows:&#xA;\begin{aligned}&#xA;ab - ab &amp;amp;= 0 \\&#xA;a(b-b) &amp;amp;= 0 \\&#xA;&amp;amp;= 0 \cdot 0 \\&#xA;&amp;amp;= 0 \cdot (b-b) \\&#xA;a      &amp;amp;= 0&#xA;\end{aligned}&#xA;Contradiction.&lt;/p&gt;&#xA;&lt;h4 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h4&gt;&#xA;&lt;p&gt;Zero-divisors are $2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 5, 15$. To see why assume $ab \mod 20 \equiv 0 \mod 20$. Then $ab - 0 = ab = 20k$ for some $k$. $a$ must contain a common factor with $20$, as otherwise $b \geq 20$. So zero-divisors are multiples of a factor of $20$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 14</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset14/</link>
       <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset14/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;Theorem 14.1&lt;/em&gt; (ideal test) (page 249).&lt;/p&gt;
-&lt;p&gt;For $r_0 a, r_1 a \in \langle a \rangle$, We have $r_0 a - r_1 a = (r_0 - r_1) a \in \langle a \rangle$ by distributivity and $r_0 - r_1 \in R$.&lt;/p&gt;
-&lt;p&gt;For $r \in R$ and $r_0 a \in \langle a \rangle$, We have $r(r_0 a) = (rr_0)a \in \langle a \rangle$ by associativity and $r r_0 \in R$. Also $(r_0 a)r = r_0(ar) = r_0(ra) = (r_0 r) a$ by associativity and commutativity and $r_0 r \in R$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;We use &lt;em&gt;Theorem 14.1&lt;/em&gt; (ideal test) (page 249).&lt;/p&gt;&#xA;&lt;p&gt;For $r_0 a, r_1 a \in \langle a \rangle$, We have $r_0 a - r_1 a = (r_0 - r_1) a \in \langle a \rangle$ by distributivity and $r_0 - r_1 \in R$.&lt;/p&gt;&#xA;&lt;p&gt;For $r \in R$ and $r_0 a \in \langle a \rangle$, We have $r(r_0 a) = (rr_0)a \in \langle a \rangle$ by associativity and $r r_0 \in R$. Also $(r_0 a)r = r_0(ar) = r_0(ra) = (r_0 r) a$ by associativity and commutativity and $r_0 r \in R$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 07</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset07/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset07/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;Those are $\\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \\} = \big \\{ \\{ a \pm 0, a \pm 3, a \pm 6, \dots \\} \mid a \in \mathcal{Z} \big \\}$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7&lt;/h3&gt;
-&lt;p&gt;Observe $\langle a^4 \rangle = \{ 1, a^{4(1)}, a^{4(2)}, \dots, a^{4(14)} \}$. Then $\lvert \langle a^4 \rangle \rvert = 15$. It follows by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), The number of distinct left cosets is $30/15 = 2$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;Those are $\\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \\} = \big \\{ \\{ a \pm 0, a \pm 3, a \pm 6, \dots \\} \mid a \in \mathcal{Z} \big \\}$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;7&lt;/h3&gt;&#xA;&lt;p&gt;Observe $\langle a^4 \rangle = \{ 1, a^{4(1)}, a^{4(2)}, \dots, a^{4(14)} \}$. Then $\lvert \langle a^4 \rangle \rvert = 15$. It follows by &lt;em&gt;theorem 7.1&lt;/em&gt; (page 142), The number of distinct left cosets is $30/15 = 2$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 08</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset08/</link>
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset08/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
-&lt;p&gt;Clearly, For arbitrary $a,c \in G$ and $b,d \in H$
-\begin{aligned}
-&amp;amp;ac = ca \wedge bd = db \\
-\leftrightarrow &amp;amp;(ac, bd) = (ca, db) \\
-\leftrightarrow &amp;amp;(a,b)(c,d) = (c,d)(a,b)
-\end{aligned}
-I guess the general case is any group-theoretic property on both $G$ and $H$ is also
-on $G \oplus H$, and vice verca.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;Assume for the sake of contradiction $Z \oplus G$ is cyclic. Then by definition there is a generator $(a,b)$. Then necessarily $\langle a \rangle = Z$ and $\langle b \rangle = G$ as by definition we have $(a,b)^k = (a^k,b^k)$. Observe $\langle a \rangle$ is of infinite order. Fix $c \in Z$, Then we know $a^k = c$ for some $k$. Compute $(a,b)^k = (a^k,b^k) = (c,d)$. Let $h$ be the element other than $d$ in $G$. Now we can&amp;rsquo;t generate $(c,h)$. By &lt;em&gt;theorem 4.1&lt;/em&gt; (page 76) if $a^i = a^k$ then $i = k$. In other words, $k$ is the only integer that yields $a^k = c$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;&#xA;&lt;p&gt;Clearly, For arbitrary $a,c \in G$ and $b,d \in H$&#xA;\begin{aligned}&#xA;&amp;amp;ac = ca \wedge bd = db \\&#xA;\leftrightarrow &amp;amp;(ac, bd) = (ca, db) \\&#xA;\leftrightarrow &amp;amp;(a,b)(c,d) = (c,d)(a,b)&#xA;\end{aligned}&#xA;I guess the general case is any group-theoretic property on both $G$ and $H$ is also&#xA;on $G \oplus H$, and vice verca.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;&#xA;&lt;p&gt;Assume for the sake of contradiction $Z \oplus G$ is cyclic. Then by definition there is a generator $(a,b)$. Then necessarily $\langle a \rangle = Z$ and $\langle b \rangle = G$ as by definition we have $(a,b)^k = (a^k,b^k)$. Observe $\langle a \rangle$ is of infinite order. Fix $c \in Z$, Then we know $a^k = c$ for some $k$. Compute $(a,b)^k = (a^k,b^k) = (c,d)$. Let $h$ be the element other than $d$ in $G$. Now we can&amp;rsquo;t generate $(c,h)$. By &lt;em&gt;theorem 4.1&lt;/em&gt; (page 76) if $a^i = a^k$ then $i = k$. In other words, $k$ is the only integer that yields $a^k = c$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 06</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset06/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset06/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;$\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a+b) = 2a + 2b = \phi(a)\phi(b)$, Following by usual properties of integers.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;We Follow the same proof approach of &lt;em&gt;Example 15&lt;/em&gt; (page 130). Let $\phi \in Aut(Z)$ be arbitrary. Then by the usual properties of integers and isomorphisms, $\phi(k) = \phi(1 + 1 + \dots + 1) = \phi(1) + \dots + \phi(1) = k \cdot \phi(1)$. But by definition $\phi(1) = c$ for some integer $c$. Therefore $\phi(k) = kc$. In other words, $Aut(Z) = \{ \phi \mid \exists c, \; \forall k \; \phi(k) = kc \}$&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;$\phi(n) = 2n$. If $2a = 2b$ then $a = b$. For each $2k$ we have $\phi(k) = 2k$. Observe $\phi(ab) = 2(a+b) = 2a + 2b = \phi(a)\phi(b)$, Following by usual properties of integers.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;We Follow the same proof approach of &lt;em&gt;Example 15&lt;/em&gt; (page 130). Let $\phi \in Aut(Z)$ be arbitrary. Then by the usual properties of integers and isomorphisms, $\phi(k) = \phi(1 + 1 + \dots + 1) = \phi(1) + \dots + \phi(1) = k \cdot \phi(1)$. But by definition $\phi(1) = c$ for some integer $c$. Therefore $\phi(k) = kc$. In other words, $Aut(Z) = \{ \phi \mid \exists c, \; \forall k \; \phi(k) = kc \}$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 05</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset05/</link>
       <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset05/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;
-&lt;/p&gt;
-$$
-\alpha^{-1} =
-\begin{bmatrix}
-    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
-    2 &amp; 1 &amp; 3 &amp; 5 &amp; 4 &amp; 6
-\end{bmatrix}
-$$&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;
-&lt;/p&gt;
-$$
-\beta \alpha = 
-\begin{bmatrix}
-    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
-    1 &amp; 6 &amp; 2 &amp; 3 &amp; 4 &amp; 5
-\end{bmatrix}
-$$&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;
-&lt;/p&gt;
-$$
-\alpha \beta = 
-\begin{bmatrix}
-    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\
-    6 &amp; 2 &amp; 1 &amp; 5 &amp; 3 &amp; 4
-\end{bmatrix}
-$$&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;3(b)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $(1 2 4)(3 5)(6)$&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;$$&#xA;\alpha^{-1} =&#xA;\begin{bmatrix}&#xA;    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\&#xA;    2 &amp; 1 &amp; 3 &amp; 5 &amp; 4 &amp; 6&#xA;\end{bmatrix}&#xA;$$&lt;p&gt;&lt;strong&gt;b&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;$$&#xA;\beta \alpha = &#xA;\begin{bmatrix}&#xA;    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\&#xA;    1 &amp; 6 &amp; 2 &amp; 3 &amp; 4 &amp; 5&#xA;\end{bmatrix}&#xA;$$&lt;p&gt;&lt;strong&gt;c&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;$$&#xA;\alpha \beta = &#xA;\begin{bmatrix}&#xA;    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\\\&#xA;    6 &amp; 2 &amp; 1 &amp; 5 &amp; 3 &amp; 4&#xA;\end{bmatrix}&#xA;$$&lt;h3 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;3(b)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $(1 2 4)(3 5)(6)$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 02</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset02/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset02/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; No. 3/2 is not an integer.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(d).&lt;/strong&gt; Yes. $cA$ is a totally valid matrix for any scalar $c$ or matrix $A$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; Yes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; No.
-$\frac{\displaystyle{1/2}}{\displaystyle{3}} = \frac{\displaystyle{1}}{\displaystyle{2}} \frac{\displaystyle{1}}{\displaystyle{3}} \neq \frac{\displaystyle{3}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2/3}}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(e).&lt;/strong&gt; No. $(2^2)^3 = 2^6 \neq 2^8 = 2^{(2^3)}$&lt;/p&gt;
-&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(c).&lt;/strong&gt; No. $3(x^2) \neq 3^2 x^2 = (3x)^2$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(d).&lt;/strong&gt; No. Known from linear algebra.&lt;/p&gt;
-&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; $20 - 13 = 7$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; The problem is reduced to finding $x$ and $y$ such that $13x = 14y + 1$. In other familiar notation from chapter 1, $13x - 14y = 1$. Clearly $13(-1) + (-14)(-1) = 1$ so $13(-1 + 14) + (-14)(-1 + 13) = 1$. Thus the inverse of $13$ is $13$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; No. 3/2 is not an integer.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(d).&lt;/strong&gt; Yes. $cA$ is a totally valid matrix for any scalar $c$ or matrix $A$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; Yes.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; No.&#xA;$\frac{\displaystyle{1/2}}{\displaystyle{3}} = \frac{\displaystyle{1}}{\displaystyle{2}} \frac{\displaystyle{1}}{\displaystyle{3}} \neq \frac{\displaystyle{3}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{2/3}}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(e).&lt;/strong&gt; No. $(2^2)^3 = 2^6 \neq 2^8 = 2^{(2^3)}$&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(c).&lt;/strong&gt; No. $3(x^2) \neq 3^2 x^2 = (3x)^2$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(d).&lt;/strong&gt; No. Known from linear algebra.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; $20 - 13 = 7$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; The problem is reduced to finding $x$ and $y$ such that $13x = 14y + 1$. In other familiar notation from chapter 1, $13x - 14y = 1$. Clearly $13(-1) + (-14)(-1) = 1$ so $13(-1 + 14) + (-14)(-1 + 13) = 1$. Thus the inverse of $13$ is $13$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 03</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset03/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset03/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;p&gt;$(Q, +)$. $\{ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} \}$.&lt;/p&gt;
-&lt;p&gt;$(Q^*, *)$. $\{ 2^x \mid x \in \mathcal{Z}^+ \} \cup \{ \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^+ \} \cup \{ 1 \}$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
-&lt;p&gt;Consider $|x| = n$. Then $x^n = 1$ and no positive $r &lt; n$ where $x^r = 1$. It follows.
-\begin{aligned}
-(x^n)^{-1} &amp;amp;= (1)^{-1} \\
-(x \cdot x \cdot \dots \cdot x)^{-1} &amp;amp;= 1 \\
-x^{-1} \cdot \dots \cdot x^{-1} &amp;amp;= \\
-(x^{-1})^n &amp;amp;=
-\end{aligned}
-Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &lt; n$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;$(Q, +)$. $\{ \frac{\displaystyle{x}}{\displaystyle{2}} \mid x \in \mathcal{Z} \}$.&lt;/p&gt;&#xA;&lt;p&gt;$(Q^*, *)$. $\{ 2^x \mid x \in \mathcal{Z}^+ \} \cup \{ \frac{\displaystyle{1}}{\displaystyle{2^x}} \mid x \in \mathcal{Z}^+ \} \cup \{ 1 \}$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;&#xA;&lt;p&gt;Consider $|x| = n$. Then $x^n = 1$ and no positive $r &lt; n$ where $x^r = 1$. It follows.&#xA;\begin{aligned}&#xA;(x^n)^{-1} &amp;amp;= (1)^{-1} \\&#xA;(x \cdot x \cdot \dots \cdot x)^{-1} &amp;amp;= 1 \\&#xA;x^{-1} \cdot \dots \cdot x^{-1} &amp;amp;= \\&#xA;(x^{-1})^n &amp;amp;=&#xA;\end{aligned}&#xA;Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r &lt; n$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 04</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset04/</link>
       <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;p&gt;By &lt;em&gt;corollary 4&lt;/em&gt; (page 80).&lt;/p&gt;
-&lt;p&gt;Generators of $\mathcal{Z}_6$ are $1,5$ since $gcd(1,6) = gcd(5,6) = 1$.&lt;/p&gt;
-&lt;p&gt;Generators of $\mathcal{Z}_8$ are $1,3,5,7$ since $gcd(1,8) = gcd(3,8) = gcd(5,8) = gcd(7,8) = 1$.&lt;/p&gt;
-&lt;p&gt;Generators of $\mathcal{Z}_{20}$ are $1,3,7,9,11,13,17,19$ since $gcd(1,20) = gcd(3,20) = gcd(7,20) = gcd(9,20) = gcd(11,20) = gcd(13,20) = gcd(17,20) = gcd(19,20) = 1$.&lt;/p&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
-&lt;p&gt;$\langle 3 \rangle = \\{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, \dots\\} \cup \\{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, \dots \\} = \\{0, 3, 9, 7 , 1, 3, \dots\\} \cup \\{ -3, 9, -7, 1, -3, \dots \\} = \\{0, 3, 9, 7 , 1, 3\\} \cup \\{ 17, 9, 13, 1, 17 \\} = \\{0, 1, 3, 7, 9, 13, 17\\}$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;By &lt;em&gt;corollary 4&lt;/em&gt; (page 80).&lt;/p&gt;&#xA;&lt;p&gt;Generators of $\mathcal{Z}_6$ are $1,5$ since $gcd(1,6) = gcd(5,6) = 1$.&lt;/p&gt;&#xA;&lt;p&gt;Generators of $\mathcal{Z}_8$ are $1,3,5,7$ since $gcd(1,8) = gcd(3,8) = gcd(5,8) = gcd(7,8) = 1$.&lt;/p&gt;&#xA;&lt;p&gt;Generators of $\mathcal{Z}_{20}$ are $1,3,7,9,11,13,17,19$ since $gcd(1,20) = gcd(3,20) = gcd(7,20) = gcd(9,20) = gcd(11,20) = gcd(13,20) = gcd(17,20) = gcd(19,20) = 1$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;&#xA;&lt;p&gt;$\langle 3 \rangle = \\{ 3^0, 3^1, 3^2, 3^3, 3^4, 3^5, \dots\\} \cup \\{ 3^{-1}, 3^{-2}, 3^{-3}, 3^{-4}, 3^{-5}, \dots \\} = \\{0, 3, 9, 7 , 1, 3, \dots\\} \cup \\{ -3, 9, -7, 1, -3, \dots \\} = \\{0, 3, 9, 7 , 1, 3\\} \cup \\{ 17, 9, 13, 1, 17 \\} = \\{0, 1, 3, 7, 9, 13, 17\\}$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 00</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset00/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset00/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;d&#34; class=&#34;unnumbered&#34;&gt;2(d)&lt;/h3&gt;
-&lt;p&gt;Observe the prime factorization $21 = 3 \cdot 7$ and $50 = 2 \cdot 5 \cdot 5$. As they share no prime numbers, $gcd(21,50) = 1$.&lt;/p&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
-&lt;p&gt;We have $1 = 7(-3) + 11(2) = -21 + 22$, and $1 = 7(8) + 11(-5) = 56 - 56 - 56 - 56 - 56 - 56 - 55$. Generally $1 = 7(-3 + 11k) + 11(2 - 7k)$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;d&#34; class=&#34;unnumbered&#34;&gt;2(d)&lt;/h3&gt;&#xA;&lt;p&gt;Observe the prime factorization $21 = 3 \cdot 7$ and $50 = 2 \cdot 5 \cdot 5$. As they share no prime numbers, $gcd(21,50) = 1$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;&#xA;&lt;p&gt;We have $1 = 7(-3) + 11(2) = -21 + 22$, and $1 = 7(8) + 11(-5) = 56 - 56 - 56 - 56 - 56 - 56 - 55$. Generally $1 = 7(-3 + 11k) + 11(2 - 7k)$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 01</title>
       <link>https://www.mostafatouny.github.io/siniora-algebra-post/pset01/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/siniora-algebra-post/pset01/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;2&#34;&gt;2&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;/th&gt;
-          &lt;th&gt;R_0&lt;/th&gt;
-          &lt;th&gt;R_120&lt;/th&gt;
-          &lt;th&gt;R_240&lt;/th&gt;
-          &lt;th&gt;D&lt;/th&gt;
-          &lt;th&gt;D&#39;&lt;/th&gt;
-          &lt;th&gt;D&#39;&#39;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;D&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;D&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;D&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;D&lt;/td&gt;
-          &lt;td&gt;D&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;D&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;D&#39;&#39;&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-          &lt;td&gt;D&#39;&lt;/td&gt;
-          &lt;td&gt;R_120&lt;/td&gt;
-          &lt;td&gt;R_240&lt;/td&gt;
-          &lt;td&gt;R_0&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Two pictures.
-&lt;img loading=&#34;lazy&#34; src=&#34;./examples.png&#34; alt=&#34;&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;Not abelian.&lt;/p&gt;
-&lt;h3 id=&#34;3&#34;&gt;3&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;a.&lt;/strong&gt; $V$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $R_{270}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;c.&lt;/strong&gt; $R_0$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;d.&lt;/strong&gt; $R_0$, $R_{180}$, $H$, $V$, $D$, $D&#39;$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;2&#34;&gt;2&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;          &lt;th&gt;R_0&lt;/th&gt;&#xA;          &lt;th&gt;R_120&lt;/th&gt;&#xA;          &lt;th&gt;R_240&lt;/th&gt;&#xA;          &lt;th&gt;D&lt;/th&gt;&#xA;          &lt;th&gt;D&#39;&lt;/th&gt;&#xA;          &lt;th&gt;D&#39;&#39;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&#39;&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;          &lt;td&gt;D&#39;&lt;/td&gt;&#xA;          &lt;td&gt;R_120&lt;/td&gt;&#xA;          &lt;td&gt;R_240&lt;/td&gt;&#xA;          &lt;td&gt;R_0&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;Two pictures.&#xA;&lt;img src=&#34;./examples.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Not abelian.&lt;/p&gt;&#xA;&lt;h3 id=&#34;3&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;a.&lt;/strong&gt; $V$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;b.&lt;/strong&gt; $R_{270}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;c.&lt;/strong&gt; $R_0$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;d.&lt;/strong&gt; $R_0$, $R_{180}$, $H$, $V$, $D$, $D&#39;$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

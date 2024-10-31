@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Erik&#39;s Algorithms on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/erik-alg-post/</link>
     <description>Recent content in Erik&#39;s Algorithms on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/erik-alg-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,282 +13,70 @@
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset10/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset10/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;Done&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;The proof is identical to slide 15. Note the symmetric structure of the ring where, as all processes are identical they send the same message to their right port and receive the same message from their left port.&lt;/p&gt;
-&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;A randomized algorithm identical to slide 18, satisfies all the problem&amp;rsquo;s requirements.&lt;/p&gt;
-&lt;p&gt;The sole difference is the subroutine which exchanges all UIDs. In round $1$, A process sends its randomly generated UID to the right port. In round $r &gt; 1$, The received message from the left port in the previous round is sent to the right port. All processes record received UIDs and stop after recording $n$ of them.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;Done&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;&#xA;&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;&#xA;&lt;p&gt;The proof is identical to slide 15. Note the symmetric structure of the ring where, as all processes are identical they send the same message to their right port and receive the same message from their left port.&lt;/p&gt;&#xA;&lt;h4 id=&#34;b&#34;&gt;b&lt;/h4&gt;&#xA;&lt;p&gt;A randomized algorithm identical to slide 18, satisfies all the problem&amp;rsquo;s requirements.&lt;/p&gt;&#xA;&lt;p&gt;The sole difference is the subroutine which exchanges all UIDs. In round $1$, A process sends its randomly generated UID to the right port. In round $r &gt; 1$, The received message from the left port in the previous round is sent to the right port. All processes record received UIDs and stop after recording $n$ of them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 09</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset09/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset09/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Consider &lt;/p&gt;
-$$\begin{aligned}
-    A &amp;= \{ 1, 2 \} \\\\
-    S &amp;= \{ 1, 50 \} \\\\
-    V &amp;= \{ 2, 50 \} \\\\
-    B &amp;= 50\end{aligned}$$&lt;p&gt;
-Observe the optimal solution is $C = 50$ while &lt;em&gt;Alg1&lt;/em&gt; is of value $C* = 2$. Therefore the approximation ratio is $2/50 = 1/25$.&lt;/p&gt;
-&lt;p&gt;It is easy to see the number $50$ can be set arbitrarily larger, and
-therefore we can reach the desired unbounded approximation ratio.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;&#xA;&lt;h3 id=&#34;ex-4&#34;&gt;Ex. 4&lt;/h3&gt;&#xA;&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;prob-1&#34;&gt;Prob. 1&lt;/h3&gt;&#xA;&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;&#xA;&lt;p&gt;Consider &lt;/p&gt;&#xA;$$\begin{aligned}&#xA;    A &amp;= \{ 1, 2 \} \\\\&#xA;    S &amp;= \{ 1, 50 \} \\\\&#xA;    V &amp;= \{ 2, 50 \} \\\\&#xA;    B &amp;= 50\end{aligned}$$&lt;p&gt;&#xA;Observe the optimal solution is $C = 50$ while &lt;em&gt;Alg1&lt;/em&gt; is of value $C* = 2$. Therefore the approximation ratio is $2/50 = 1/25$.&lt;/p&gt;&#xA;&lt;p&gt;It is easy to see the number $50$ can be set arbitrarily larger, and&#xA;therefore we can reach the desired unbounded approximation ratio.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 08</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset08/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset08/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;Done&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;\begin{aligned}
-\text{Maximize } &amp;amp;d_y \\
-\text{Subject to } &amp;amp;d_s = 0 \\
-&amp;amp;d_t \leq d_s + w(s,t) \\
-&amp;amp;d_y \leq d_s + w(s,y) \\
-&amp;amp;d_y \leq d_t + w(t,y) \\
-&amp;amp;d_x \leq d_t + w(t,x) \\
-&amp;amp;d_t \leq d_y + w(y,t) \\
-&amp;amp;d_x \leq d_y + w(y,x) \\
-&amp;amp;d_z \leq d_y + w(y,z) \\
-&amp;amp;d_z \leq d_x + w(x,z) \\
-&amp;amp;d_x \leq d_z + w(z,x) \\
-&amp;amp;d_s \leq d_z + w(z,s)
-\end{aligned}&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;Done&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;p&gt;\begin{aligned}&#xA;\text{Maximize } &amp;amp;d_y \\&#xA;\text{Subject to } &amp;amp;d_s = 0 \\&#xA;&amp;amp;d_t \leq d_s + w(s,t) \\&#xA;&amp;amp;d_y \leq d_s + w(s,y) \\&#xA;&amp;amp;d_y \leq d_t + w(t,y) \\&#xA;&amp;amp;d_x \leq d_t + w(t,x) \\&#xA;&amp;amp;d_t \leq d_y + w(y,t) \\&#xA;&amp;amp;d_x \leq d_y + w(y,x) \\&#xA;&amp;amp;d_z \leq d_y + w(y,z) \\&#xA;&amp;amp;d_z \leq d_x + w(x,z) \\&#xA;&amp;amp;d_x \leq d_z + w(z,x) \\&#xA;&amp;amp;d_s \leq d_z + w(z,s)&#xA;\end{aligned}&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 07</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset07/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset07/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;Will do while solving the exercises.&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Definitions &amp;amp; Properties&lt;/th&gt;
-          &lt;th&gt;Extended&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Network&lt;/td&gt;
-          &lt;td&gt;Instructed below&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Source s&lt;/td&gt;
-          &lt;td&gt;Sources $\{s_1, s_2, \dots, s_{k_s}\}$&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Sink t&lt;/td&gt;
-          &lt;td&gt;Sinks $\{t_1, t_2, \dots, t_{k_t} \}$&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Capacity constraint&lt;/td&gt;
-          &lt;td&gt;Same&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Flow conservation&lt;/td&gt;
-          &lt;td&gt;V - {sources} - {sinks}&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;flow value $\|f\|$&lt;/td&gt;
-          &lt;td&gt;$\sum_{s_i} ( \sum_v f(s_i,v) - \sum_v f(v, s_i) )$&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;For brevity we illustrate the construction definition by the following
-diagram.&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./0.jpg&#34; alt=&#34;image&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;Observe $\sum_v f(s_{sup},v) = \sum_{s_i} \sum_v f(s_i, v)$ and $\sum_v f(v,s_{sup}) = \sum_{s_i} \sum_v f(v,s_i)$ which concludes our goal.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;Will do while solving the exercises.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Definitions &amp;amp; Properties&lt;/th&gt;&#xA;          &lt;th&gt;Extended&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Network&lt;/td&gt;&#xA;          &lt;td&gt;Instructed below&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Source s&lt;/td&gt;&#xA;          &lt;td&gt;Sources $\{s_1, s_2, \dots, s_{k_s}\}$&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sink t&lt;/td&gt;&#xA;          &lt;td&gt;Sinks $\{t_1, t_2, \dots, t_{k_t} \}$&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Capacity constraint&lt;/td&gt;&#xA;          &lt;td&gt;Same&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Flow conservation&lt;/td&gt;&#xA;          &lt;td&gt;V - {sources} - {sinks}&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;flow value $\|f\|$&lt;/td&gt;&#xA;          &lt;td&gt;$\sum_{s_i} ( \sum_v f(s_i,v) - \sum_v f(v, s_i) )$&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;For brevity we illustrate the construction definition by the following&#xA;diagram.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./0.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Observe $\sum_v f(s_{sup},v) = \sum_{s_i} \sum_v f(s_i, v)$ and $\sum_v f(v,s_{sup}) = \sum_{s_i} \sum_v f(v,s_i)$ which concludes our goal.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 06</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset06/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset06/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;skipped in hope of professionally read while solving the exercises, and
-well-gain from lectures.&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;To definte shortest-path weight function $\delta$, which satisfies the triangle inequality, enabling the second property of $\overline{w}$.&lt;/p&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;For a cycle $c = v_0, v_1, \dots, v_k=v_0$ we are given $w(c) = 0$. It is natural to ignore the case $k = 0$.&lt;/p&gt;
-&lt;p&gt;Recall the facts&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;$\overline{w}(u,v) \geq 0$&lt;/li&gt;
-&lt;li&gt;$\overline{w}(u,v) = w(u,v) + h(u) - h(v)$&lt;/li&gt;
-&lt;li&gt;$\overline{w}(p) = w(p) + h(v_0) - h(v_k)$ for path $p$&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $\Sigma \overline{w}(v_i, v_{i+1}) = 0$&lt;br&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;skipped in hope of professionally read while solving the exercises, and&#xA;well-gain from lectures.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;p&gt;To definte shortest-path weight function $\delta$, which satisfies the triangle inequality, enabling the second property of $\overline{w}$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;&#xA;&lt;p&gt;For a cycle $c = v_0, v_1, \dots, v_k=v_0$ we are given $w(c) = 0$. It is natural to ignore the case $k = 0$.&lt;/p&gt;&#xA;&lt;p&gt;Recall the facts&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;$\overline{w}(u,v) \geq 0$&lt;/li&gt;&#xA;&lt;li&gt;$\overline{w}(u,v) = w(u,v) + h(u) - h(v)$&lt;/li&gt;&#xA;&lt;li&gt;$\overline{w}(p) = w(p) + h(v_0) - h(v_k)$ for path $p$&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt;   $\Sigma \overline{w}(v_i, v_{i+1}) = 0$&lt;br&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 05</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset05/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset05/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   &lt;em&gt;coll&lt;/em&gt;, $p[coll]$&lt;br&gt;
-We denote by &lt;em&gt;coll&lt;/em&gt; the collision event of $f(k_1) = f(k_2)$ for fixed
-$k_1 \neq k_2$, and by $p[coll]$ the probability of that event
-happening.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   $\{f_{coll-i,j}\}$&lt;br&gt;
-We denote all functions with a collision on $i, j \in U$ by
-$\{f_{coll-i,j}\}$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt;   It&amp;rsquo;s explicitly assumed\&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;\(i\) The given hash family $\mathcal{H}$ contains all possible
-functions $f:U \rightarrow B$.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;\(ii\) for any fixed $i$ and $j$,
-$f(i), f(j) \in \{0, \dots, |B|-1\}$ are independently and randomly
-assigned.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;Done.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   &lt;em&gt;coll&lt;/em&gt;, $p[coll]$&lt;br&gt;&#xA;We denote by &lt;em&gt;coll&lt;/em&gt; the collision event of $f(k_1) = f(k_2)$ for fixed&#xA;$k_1 \neq k_2$, and by $p[coll]$ the probability of that event&#xA;happening.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt;   $\{f_{coll-i,j}\}$&lt;br&gt;&#xA;We denote all functions with a collision on $i, j \in U$ by&#xA;$\{f_{coll-i,j}\}$&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt;   It&amp;rsquo;s explicitly assumed\&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;\(i\) The given hash family $\mathcal{H}$ contains all possible&#xA;functions $f:U \rightarrow B$.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;\(ii\) for any fixed $i$ and $j$,&#xA;$f(i), f(j) \in \{0, \dots, |B|-1\}$ are independently and randomly&#xA;assigned.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 04</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset04/</link>
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset04/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;he amortized cost of n operations is upper-bounded by
-\begin{align*}
-&amp;amp;n + \sum_{i=1}^{\lfloor \lg n \rfloor} 2^i \\
-&amp;amp;= n + \ddfrac{2(1-2^{\lfloor \lg n \rfloor})}{1-2} \\
-&amp;amp;\leq n + \ddfrac{2(1-n)}{-1} \\
-&amp;amp;= n - 2 + 2n \\
-&amp;amp;= 3n - 2 \\
-&amp;amp;= \mathcal{O}(n)
-\end{align*}&lt;/p&gt;
-&lt;p&gt;So the amortized cost of one operation is $\ddfrac{\mathcal{O}(n)}{n} = \mathcal{O}(1).$&lt;/p&gt;
-&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;
-&lt;p&gt;We assign the following amortized costs:&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-1&#34;&gt;Ex. 1&lt;/h3&gt;&#xA;&lt;p&gt;Done.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;p&gt;he amortized cost of n operations is upper-bounded by&#xA;\begin{align*}&#xA;&amp;amp;n + \sum_{i=1}^{\lfloor \lg n \rfloor} 2^i \\&#xA;&amp;amp;= n + \ddfrac{2(1-2^{\lfloor \lg n \rfloor})}{1-2} \\&#xA;&amp;amp;\leq n + \ddfrac{2(1-n)}{-1} \\&#xA;&amp;amp;= n - 2 + 2n \\&#xA;&amp;amp;= 3n - 2 \\&#xA;&amp;amp;= \mathcal{O}(n)&#xA;\end{align*}&lt;/p&gt;&#xA;&lt;p&gt;So the amortized cost of one operation is $\ddfrac{\mathcal{O}(n)}{n} = \mathcal{O}(1).$&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-3&#34;&gt;Ex. 3&lt;/h3&gt;&#xA;&lt;p&gt;We assign the following amortized costs:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 03</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset03/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset03/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-31&#34;&gt;Ex. 3.1&lt;/h3&gt;
-&lt;p&gt;Done.&lt;/p&gt;
-&lt;h3 id=&#34;ex-32&#34;&gt;Ex. 3.2&lt;/h3&gt;
-&lt;p&gt;Skipped; I don&amp;rsquo;t understand the problem.&lt;/p&gt;
-&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;
-&lt;p&gt;Skipped; I don&amp;rsquo;t understand the problem.&lt;/p&gt;
-&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;
-&lt;h3 id=&#34;prob-31&#34;&gt;Prob. 3.1&lt;/h3&gt;
-&lt;p&gt;psuedo-code changes; compare new complexity with old one&lt;/p&gt;
-&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Psuedo-code.&lt;/strong&gt; No Changes at all. Note the sequence $2^9 \rightarrow 2^3 \rightarrow 2^1$, up to the base case of $u = 2$ as before, starting with total data of size $2^9 = 512$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Similarly $\mathcal{O}(\lg \lg u)$. We follow the same reasoning on the master method but on the case of a cluster size $u^{1/3}$. We gain $\lg_b a = \lg_3 1 = 0$, or more accurately $\lg_b a = \lg_{4/3} 1 = 0$, whereby $\lceil m/3 \rceil \leq 3m/4$. Thus, Reaching exactly the same complexity.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-31&#34;&gt;Ex. 3.1&lt;/h3&gt;&#xA;&lt;p&gt;Done.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-32&#34;&gt;Ex. 3.2&lt;/h3&gt;&#xA;&lt;p&gt;Skipped; I don&amp;rsquo;t understand the problem.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-2&#34;&gt;Ex. 2&lt;/h3&gt;&#xA;&lt;p&gt;Skipped; I don&amp;rsquo;t understand the problem.&lt;/p&gt;&#xA;&lt;h2 id=&#34;problems&#34;&gt;Problems&lt;/h2&gt;&#xA;&lt;h3 id=&#34;prob-31&#34;&gt;Prob. 3.1&lt;/h3&gt;&#xA;&lt;p&gt;psuedo-code changes; compare new complexity with old one&lt;/p&gt;&#xA;&lt;h4 id=&#34;a&#34;&gt;a&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Psuedo-code.&lt;/strong&gt; No Changes at all. Note the sequence $2^9 \rightarrow 2^3 \rightarrow 2^1$, up to the base case of $u = 2$ as before, starting with total data of size $2^9 = 512$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Complexity.&lt;/strong&gt; Similarly $\mathcal{O}(\lg \lg u)$. We follow the same reasoning on the master method but on the case of a cluster size $u^{1/3}$. We gain $\lg_b a = \lg_3 1 = 0$, or more accurately $\lg_b a = \lg_{4/3} 1 = 0$, whereby $\lceil m/3 \rceil \leq 3m/4$. Thus, Reaching exactly the same complexity.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 02</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset02/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset02/</guid>
-      <description>&lt;h2 id=&#34;ex-2-1&#34;&gt;Ex. 2-1&lt;/h2&gt;
-&lt;p&gt;done&lt;/p&gt;
-&lt;h2 id=&#34;ex-2-2&#34;&gt;Ex. 2-2&lt;/h2&gt;
-&lt;p&gt;For our own convenience of avoiding tedious computations, we multiply $A(x) = -10 + x$ with $B(x) = 3 - 6x$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Double-degree form&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;$A(x) = -10 + x + 0x^2 + 0x^3$&lt;/p&gt;
-&lt;p&gt;$B(x) = 3 - 6x + 0x^2 + 0x^3$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Computing A(x) on sample&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 1, 0, 0)
-  n = 4
-  w_4 = e^{2 pi i / 4}
-  w = w_4^0 = 1
-  a[even] = (-10, 0)
-  a[odd] = (1, 0)
-  y[even] = Recursive-FFT(-10, 0) = (-10, -10)
-  y[odd] = Recursive-FFT(1, 0) = (1, 1)
-  for k=0 to 1
-    k=0
-	  y_0 = (-10) + (1)(1) = -9
-	  y_2 = (-10) - (1)(1) = -11
-	  w = w_4^1
-	k=1
-	  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i
-	  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i
-	  w = w_4^2
-  return (-9, -10+i, -11, -10-i)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 0)
-  n = 2
-  w_2 = e^{2 pi i / 2}
-  w = w_2^0 = 1
-  a[even] = (-10)
-  a[odd] = (0)
-  y[even] = Recursive-FFT(-10) = (-10)  // base case
-  y[odd] = Recursive-FFT(0) = (0)
-  for k=0 to 0
-    k=0
-	  y_0 = (-10) + w (0) = -10
-	  y_1 = (-10) - w (0) = -10
-	  w = w_2^1
-  return (-10, -10)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(1, 0)
-  n = 2
-  w_2 = e^{2 pi i / 2}
-  w = w_2^0 = 1
-  a[even] = (1)
-  a[odd] = (0)
-  y[even] = Recursive-FFT(1) = (1) // base case
-  y[odd] = Recursive-FFT(0) = (0)
-  for k=0 to 0
-    k=0
-	  y_0 = 1 + w(0) = 1
-	  y_1 = 1 - w(0) = 1
-	  w = w_2^1
-  return (1, 1)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;ex-2-1&#34;&gt;Ex. 2-1&lt;/h2&gt;&#xA;&lt;p&gt;done&lt;/p&gt;&#xA;&lt;h2 id=&#34;ex-2-2&#34;&gt;Ex. 2-2&lt;/h2&gt;&#xA;&lt;p&gt;For our own convenience of avoiding tedious computations, we multiply $A(x) = -10 + x$ with $B(x) = 3 - 6x$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Double-degree form&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;$A(x) = -10 + x + 0x^2 + 0x^3$&lt;/p&gt;&#xA;&lt;p&gt;$B(x) = 3 - 6x + 0x^2 + 0x^3$&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Computing A(x) on sample&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 1, 0, 0)&#xA;  n = 4&#xA;  w_4 = e^{2 pi i / 4}&#xA;  w = w_4^0 = 1&#xA;  a[even] = (-10, 0)&#xA;  a[odd] = (1, 0)&#xA;  y[even] = Recursive-FFT(-10, 0) = (-10, -10)&#xA;  y[odd] = Recursive-FFT(1, 0) = (1, 1)&#xA;  for k=0 to 1&#xA;    k=0&#xA;&#x9;  y_0 = (-10) + (1)(1) = -9&#xA;&#x9;  y_2 = (-10) - (1)(1) = -11&#xA;&#x9;  w = w_4^1&#xA;&#x9;k=1&#xA;&#x9;  y_1 = (-10) + (e^{1 2 pi i / 4})(1) = -10+i&#xA;&#x9;  y_3 = (-10) - (e^{1 2 pi i / 4})(1) = -10-i&#xA;&#x9;  w = w_4^2&#xA;  return (-9, -10+i, -11, -10-i)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(-10, 0)&#xA;  n = 2&#xA;  w_2 = e^{2 pi i / 2}&#xA;  w = w_2^0 = 1&#xA;  a[even] = (-10)&#xA;  a[odd] = (0)&#xA;  y[even] = Recursive-FFT(-10) = (-10)  // base case&#xA;  y[odd] = Recursive-FFT(0) = (0)&#xA;  for k=0 to 0&#xA;    k=0&#xA;&#x9;  y_0 = (-10) + w (0) = -10&#xA;&#x9;  y_1 = (-10) - w (0) = -10&#xA;&#x9;  w = w_2^1&#xA;  return (-10, -10)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Recursive-FFT(1, 0)&#xA;  n = 2&#xA;  w_2 = e^{2 pi i / 2}&#xA;  w = w_2^0 = 1&#xA;  a[even] = (1)&#xA;  a[odd] = (0)&#xA;  y[even] = Recursive-FFT(1) = (1) // base case&#xA;  y[odd] = Recursive-FFT(0) = (0)&#xA;  for k=0 to 0&#xA;    k=0&#xA;&#x9;  y_0 = 1 + w(0) = 1&#xA;&#x9;  y_1 = 1 - w(0) = 1&#xA;&#x9;  w = w_2^1&#xA;  return (1, 1)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Computing B(x) on sample&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 01</title>
       <link>https://www.mostafatouny.github.io/erik-alg-post/pset01/</link>
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/erik-alg-post/pset01/</guid>
-      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;
-&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;
-&lt;p&gt;Consider a graph of vertices $v_1, v_2, v_3$, whose weights are correspondingly $10, 6, 6$, and connected by edges $\{v_1,v_2\}, \{v_2, v_3\}$.&lt;/p&gt;
-&lt;p&gt;The optimal subset is $v_2, v_3$ of profit sum equal to $6 + 6 = 12$, But the algorithm picks subset $v_1$ with profit $10$.&lt;/p&gt;
-&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;
-&lt;p&gt;Since the graph is given to be acyclic, Each neighbour of the graph&amp;rsquo;s root, Constitutes a root of a subtree of its own, with no vertex being shared among any two subtrees.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;&#xA;&lt;h3 id=&#34;a&#34;&gt;a&lt;/h3&gt;&#xA;&lt;p&gt;Consider a graph of vertices $v_1, v_2, v_3$, whose weights are correspondingly $10, 6, 6$, and connected by edges $\{v_1,v_2\}, \{v_2, v_3\}$.&lt;/p&gt;&#xA;&lt;p&gt;The optimal subset is $v_2, v_3$ of profit sum equal to $6 + 6 = 12$, But the algorithm picks subset $v_1$ with profit $10$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;b&#34;&gt;b&lt;/h3&gt;&#xA;&lt;p&gt;Since the graph is given to be acyclic, Each neighbour of the graph&amp;rsquo;s root, Constitutes a root of a subtree of its own, with no vertex being shared among any two subtrees.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Baby Rudin&#39;s Real Analysis on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/mit-analysis1c-post/</link>
     <description>Recent content in Baby Rudin&#39;s Real Analysis on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/mit-analysis1c-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,128 +13,49 @@
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset04/</link>
       <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$,
-Then the sequence $\{x_n\}$ gets artbitrarily small.&lt;/p&gt;
-&lt;p&gt;Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms
-in the inequality. Given $\epsilon &gt; 0$ we can reach
-$\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;
-&lt;p&gt;Fix any x in the metric space, Then construct the following sequence:
-$\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy.
-Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the
-&lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by
-$d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1) \; \lambda^{n-1} \; d(f^1(x),f^2(x))$.
-By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our
-intended result is concluded.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $x_{n+1} \leq \lambda x_n$, where $0 \leq \lambda &lt; 1$,&#xA;Then the sequence $\{x_n\}$ gets artbitrarily small.&lt;/p&gt;&#xA;&lt;p&gt;Clearly $x_{1+k} \leq \lambda^k x_1$, by substituting successive terms&#xA;in the inequality. Given $\epsilon &gt; 0$ we can reach&#xA;$\lambda^k x \leq \epsilon$ by setting $k \geq \log_\lambda y/x$.&lt;/p&gt;&#xA;&lt;p&gt;Fix any x in the metric space, Then construct the following sequence:&#xA;$\{f^n(x)\} = f^0(x), f^1(x), f^2(x), \dots$. We prove it is cauchy.&#xA;Consider $d(f^n(x),f^m(x))$ of some tail where $n &lt; m$. By the&#xA;&lt;em&gt;triangular inequality&lt;/em&gt;, We know the distance is upper-bounded by&#xA;$d(f^n(x),f^{n+1}(x)) + d(f^{n+1}(x),f^{n+2}(x)) + \dots + d(f^{m-1}(x),f^m(x)) \leq (m-n+1) \; \lambda^{n-1} \; d(f^1(x),f^2(x))$.&#xA;By &lt;em&gt;Lemma 1&lt;/em&gt; and substituting distances by a sequence $\{x_n\}$ our&#xA;intended result is concluded.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 08</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset08/</link>
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset08/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g + \epsilon_g$.&lt;/p&gt;
-&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g + \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.&lt;/p&gt;
-&lt;p&gt;By hypothesis we have can take $N_{max}$ considering also $N_g$ to get
-\begin{aligned}
-|f_n(x) - f(x)| &amp;lt; +\epsilon_0 \\
-|g_n(x) - g(x)| &amp;lt; +\epsilon_1
-\end{aligned}
-By multiplication,
-\begin{aligned}
-|f_n(x) g_n(x) - f(x) g_n(x)| &amp;lt; +\epsilon_0 \cdot |g_n(x)| \\
-|f(x) g_n(x) - f(x) g(x)| &amp;lt; +\epsilon_1 \cdot |f(x)|
-\end{aligned}
-Now observe:
-\begin{aligned}
-|f_n(x) g_n(x) - f(x) g(x)| &amp;amp;= |f_n(x) g_n(x) - f(x) g_n(x) + f(x) g_n(x) - f(x)   g(x)| \\
-&amp;amp;\leq |f_n(x) g_n(x) - f(x) g_n(x)| + |f(x) g_n(x) - f(x)g(x)| \\
-&amp;amp;&amp;lt; \epsilon_0 |g_n(x)| + \epsilon_1 |f(x)| \\
-&amp;amp;\leq \epsilon_0 (M_g + \epsilon_g) + \epsilon_1 (M_f) \\
-&amp;amp;= \epsilon/2 + \epsilon/2 = \epsilon
-\end{aligned}
-The second line follows by triangular inequality.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;p&gt;By boundedness we get $|f(x)| \leq M_f$ and $|g(x)| \leq M_g$. Clearly there is $N_g$ such that for $n \geq N_g$, $|g_n(x)| \leq M_g + \epsilon_g$.&lt;/p&gt;&#xA;&lt;p&gt;Let $\epsilon &gt; 0$ be arbitrary. Define $\epsilon_0 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_g + \epsilon_g)}}$ and $\epsilon_1 = \frac{\displaystyle{\epsilon}}{\displaystyle{2(M_f)}}$.&lt;/p&gt;&#xA;&lt;p&gt;By hypothesis we have can take $N_{max}$ considering also $N_g$ to get&#xA;\begin{aligned}&#xA;|f_n(x) - f(x)| &amp;lt; +\epsilon_0 \\&#xA;|g_n(x) - g(x)| &amp;lt; +\epsilon_1&#xA;\end{aligned}&#xA;By multiplication,&#xA;\begin{aligned}&#xA;|f_n(x) g_n(x) - f(x) g_n(x)| &amp;lt; +\epsilon_0 \cdot |g_n(x)| \\&#xA;|f(x) g_n(x) - f(x) g(x)| &amp;lt; +\epsilon_1 \cdot |f(x)|&#xA;\end{aligned}&#xA;Now observe:&#xA;\begin{aligned}&#xA;|f_n(x) g_n(x) - f(x) g(x)| &amp;amp;= |f_n(x) g_n(x) - f(x) g_n(x) + f(x) g_n(x) - f(x)   g(x)| \\&#xA;&amp;amp;\leq |f_n(x) g_n(x) - f(x) g_n(x)| + |f(x) g_n(x) - f(x)g(x)| \\&#xA;&amp;amp;&amp;lt; \epsilon_0 |g_n(x)| + \epsilon_1 |f(x)| \\&#xA;&amp;amp;\leq \epsilon_0 (M_g + \epsilon_g) + \epsilon_1 (M_f) \\&#xA;&amp;amp;= \epsilon/2 + \epsilon/2 = \epsilon&#xA;\end{aligned}&#xA;The second line follows by triangular inequality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 07</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset07/</link>
       <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset07/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;By hypothesis, For any reals $x$ and $t$, We are given
-$| f(t) - f(x) | \leq (t-x)^2$. Clearly:
-\begin{aligned}
-\frac{\displaystyle{|f(t) - f(x)|}}{\displaystyle{|t-x|}} \leq&amp;amp;                  \frac{\displaystyle{(t-x)^2}}{\displaystyle{|t-x|}} \\
-\left | \frac{\displaystyle{f(t) - f(x)}}{\displaystyle{t-x}} \right | \leq&amp;amp; |t- x|
-\end{aligned}
-But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes
-$\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}}  \right | \leq 0$.
-Since the absolute value is always equal or greater than 0, We get also
-$\lim_{t \rightarrow   x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-   x}} \right | \geq 0$.
-Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;&#xA;&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;&#xA;&lt;p&gt;By hypothesis, For any reals $x$ and $t$, We are given&#xA;$| f(t) - f(x) | \leq (t-x)^2$. Clearly:&#xA;\begin{aligned}&#xA;\frac{\displaystyle{|f(t) - f(x)|}}{\displaystyle{|t-x|}} \leq&amp;amp;                  \frac{\displaystyle{(t-x)^2}}{\displaystyle{|t-x|}} \\&#xA;\left | \frac{\displaystyle{f(t) - f(x)}}{\displaystyle{t-x}} \right | \leq&amp;amp; |t- x|&#xA;\end{aligned}&#xA;But $\lim_{t \rightarrow x} |t-x| = 0$ which concludes&#xA;$\lim_{t \rightarrow x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-x}}  \right | \leq 0$.&#xA;Since the absolute value is always equal or greater than 0, We get also&#xA;$\lim_{t \rightarrow   x} \left | \frac{\displaystyle{f(t)-f(x)}}{\displaystyle{t-   x}} \right | \geq 0$.&#xA;Therefore $f&#39;(x) = 0$ for any real $x$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 06</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset06/</link>
       <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset06/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;
-&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;
-&lt;p&gt;The first part is solved by a trivial set-theoretic operations. The second is postponed.&lt;/p&gt;
-&lt;p&gt;Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.&lt;/p&gt;
-&lt;p&gt;Note the proof is independent of continuity.&lt;/p&gt;
-&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;h2 id=&#34;problem.-2&#34; class=&#34;unnumbered&#34;&gt;Problem. 2&lt;/h2&gt;&#xA;&lt;h2 id=&#34;problem.-3&#34; class=&#34;unnumbered&#34;&gt;Problem. 3&lt;/h2&gt;&#xA;&lt;p&gt;The first part is solved by a trivial set-theoretic operations. The second is postponed.&lt;/p&gt;&#xA;&lt;p&gt;Observe if $x \in f(\overline{E})$ then $x = f(p)$ for some $p \in \overline{E}$. To prove $x \in \overline{f(E)}$ it suffices to have $f(p) \not\in f(E)$. By contrapositive, It follows by the given $p \not\in E$.&lt;/p&gt;&#xA;&lt;p&gt;Note the proof is independent of continuity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;problem.-4&#34; class=&#34;unnumbered&#34;&gt;Problem. 4&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; In case of a continuous function $f$ at point $p$, If we have a sequence $\{x_i\}$ converging to $p$ and $\{f(x_i)\}$ converges to $a$ then $a = f(p)$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 03</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset03/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset03/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;The required conditions follow naturally as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$d&#39;(x,x) = \sqrt{d(x,x)} = \sqrt{0} = 0$.&lt;/li&gt;
-&lt;li&gt;If $d(x,y) &gt; 0$ then $d&#39;(x,y) &gt; 0$ as the square root of non-zero is non-zero. Otherwise $0^2 = 0$ contradicting the fact $d&#39;(x,y) &gt; 0$.&lt;/li&gt;
-&lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d&#39;(y,x)$.&lt;/li&gt;
-&lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d&#39;(x,r) + d&#39;(r,y)$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For an arbitrary open-set of $d$, $\set{ y | d(x,y) &lt; r \}$ there is an equivalent open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; \sqrt{r} \}$. For an arbitrary open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) &lt; r^2 }$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;p&gt;The required conditions follow naturally as:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;$d&#39;(x,x) = \sqrt{d(x,x)} = \sqrt{0} = 0$.&lt;/li&gt;&#xA;&lt;li&gt;If $d(x,y) &gt; 0$ then $d&#39;(x,y) &gt; 0$ as the square root of non-zero is non-zero. Otherwise $0^2 = 0$ contradicting the fact $d&#39;(x,y) &gt; 0$.&lt;/li&gt;&#xA;&lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d&#39;(y,x)$.&lt;/li&gt;&#xA;&lt;li&gt;$d&#39;(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d&#39;(x,r) + d&#39;(r,y)$.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For an arbitrary open-set of $d$, $\set{ y | d(x,y) &lt; r \}$ there is an equivalent open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; \sqrt{r} \}$. For an arbitrary open-set of $d&#39;$, $\set{ y | d&#39;(x,y) &lt; r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) &lt; r^2 }$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 02</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset02/</link>
       <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset02/</guid>
-      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;
-&lt;p&gt;We prove each axiom as listed by &lt;em&gt;Rudin&lt;/em&gt; in page 5.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A1&lt;/strong&gt; $(a_0+a_1) + \sqrt{2} (b_0+b_1) \in \mathcal{Q}(\sqrt{2})$, As $(a_0+a_1), (b_0+b_1) \in \mathcal{Q}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A2&lt;/strong&gt; Follows immediately by properties of $\mathcal{Q}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A3&lt;/strong&gt; Follows immediately by properties of $\mathcal{Q}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A4&lt;/strong&gt; $0_{\mathcal{Q}(2)}$ here is the number $0 + \sqrt{2} \; 0 = 0_{\mathcal{R}}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A5&lt;/strong&gt; For an $x_{\mathcal{Q}(2)}$, $-x_{\mathcal{Q}(2)} = -a + \sqrt{2} (-b)$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;M1&lt;/strong&gt; The product is $(a_0a_1 + 2b_0 b_1) + \sqrt{2} (a_0 b_1 + a_1 b_0)$, Where the formed $a$ and $b$ are in $\mathcal{Q}$.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem.-1&#34; class=&#34;unnumbered&#34;&gt;Problem. 1&lt;/h2&gt;&#xA;&lt;p&gt;We prove each axiom as listed by &lt;em&gt;Rudin&lt;/em&gt; in page 5.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A1&lt;/strong&gt; $(a_0+a_1) + \sqrt{2} (b_0+b_1) \in \mathcal{Q}(\sqrt{2})$, As $(a_0+a_1), (b_0+b_1) \in \mathcal{Q}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A2&lt;/strong&gt; Follows immediately by properties of $\mathcal{Q}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A3&lt;/strong&gt; Follows immediately by properties of $\mathcal{Q}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A4&lt;/strong&gt; $0_{\mathcal{Q}(2)}$ here is the number $0 + \sqrt{2} \; 0 = 0_{\mathcal{R}}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A5&lt;/strong&gt; For an $x_{\mathcal{Q}(2)}$, $-x_{\mathcal{Q}(2)} = -a + \sqrt{2} (-b)$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;M1&lt;/strong&gt; The product is $(a_0a_1 + 2b_0 b_1) + \sqrt{2} (a_0 b_1 + a_1 b_0)$, Where the formed $a$ and $b$ are in $\mathcal{Q}$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Problem Set 01</title>
       <link>https://www.mostafatouny.github.io/mit-analysis1c-post/pset01/</link>
       <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/mit-analysis1c-post/pset01/</guid>
-      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; &lt;em&gt;simplest-fraction&lt;/em&gt;&lt;br&gt;
-We call $\frac{\displaystyle{x}}{\displaystyle{y}}$ a &lt;em&gt;simplest-fraction&lt;/em&gt; when it is in its simplest form. i.e cannot be reduced by eliminating a common fraction.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; If there are no common factors between $x$ and $y$, Then $\frac{\displaystyle{x}}{\displaystyle{y}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $\frac{\displaystyle{x}}{\displaystyle{y}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;, Then so is
-$\frac{\displaystyle{x^2}}{\displaystyle{y^2}}$&lt;br&gt;
-Observe any common factor among the numerator and denominator is going to necessarily divide both $x$ and $y$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Main Problem&lt;br&gt;
-It&amp;rsquo;s possible to set
-$\sqrt{\frac{\displaystyle{m}}{\displaystyle{n}}} = \frac{\displaystyle{a}}{\displaystyle{b}}$
-where $\frac{\displaystyle{a}}{\displaystyle{b}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;. On $\frac{\displaystyle{m}}{\displaystyle{n}} = \frac{\displaystyle{a^2}}{\displaystyle{b^2}}$
-It follows by &lt;em&gt;fact 2&lt;/em&gt; and &lt;em&gt;lemma 3&lt;/em&gt;, Both $\frac{\displaystyle{m}}{\displaystyle{n}}$ and $\frac{\displaystyle{a^2}}{\displaystyle{b^2}}$ are &lt;em&gt;simplest-fractions&lt;/em&gt;. By uniqueness of such forms, $m = a^2$ and $n = b^2$. QED&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;problem-1&#34;&gt;Problem 1&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; &lt;em&gt;simplest-fraction&lt;/em&gt;&lt;br&gt;&#xA;We call $\frac{\displaystyle{x}}{\displaystyle{y}}$ a &lt;em&gt;simplest-fraction&lt;/em&gt; when it is in its simplest form. i.e cannot be reduced by eliminating a common fraction.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; If there are no common factors between $x$ and $y$, Then $\frac{\displaystyle{x}}{\displaystyle{y}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; If $\frac{\displaystyle{x}}{\displaystyle{y}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;, Then so is&#xA;$\frac{\displaystyle{x^2}}{\displaystyle{y^2}}$&lt;br&gt;&#xA;Observe any common factor among the numerator and denominator is going to necessarily divide both $x$ and $y$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; Main Problem&lt;br&gt;&#xA;It&amp;rsquo;s possible to set&#xA;$\sqrt{\frac{\displaystyle{m}}{\displaystyle{n}}} = \frac{\displaystyle{a}}{\displaystyle{b}}$&#xA;where $\frac{\displaystyle{a}}{\displaystyle{b}}$ is a &lt;em&gt;simplest-fraction&lt;/em&gt;. On $\frac{\displaystyle{m}}{\displaystyle{n}} = \frac{\displaystyle{a^2}}{\displaystyle{b^2}}$&#xA;It follows by &lt;em&gt;fact 2&lt;/em&gt; and &lt;em&gt;lemma 3&lt;/em&gt;, Both $\frac{\displaystyle{m}}{\displaystyle{n}}$ and $\frac{\displaystyle{a^2}}{\displaystyle{b^2}}$ are &lt;em&gt;simplest-fractions&lt;/em&gt;. By uniqueness of such forms, $m = a^2$ and $n = b^2$. QED&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

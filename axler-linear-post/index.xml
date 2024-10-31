@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Axler&#39;s Linear Algebra on Mostafa Touny</title>
     <link>https://www.mostafatouny.github.io/axler-linear-post/</link>
     <description>Recent content in Axler&#39;s Linear Algebra on Mostafa Touny</description>
-    <generator>Hugo -- 0.136.5</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.mostafatouny.github.io/axler-linear-post/index.xml" rel="self" type="application/rss+xml" />
@@ -13,51 +13,28 @@
       <link>https://www.mostafatouny.github.io/axler-linear-post/ch03-secf/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/axler-linear-post/ch03-secf/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
-&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;&#xA;&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ch. 03, Sec. E</title>
       <link>https://www.mostafatouny.github.io/axler-linear-post/ch03-sece/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/axler-linear-post/ch03-sece/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
-&lt;p&gt;It follows immediately by &lt;em&gt;dimension of a product&lt;/em&gt; theorem (page 92), As any $dim V_j$ must be upper-bounded by a finite number.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;&#xA;&lt;p&gt;It follows immediately by &lt;em&gt;dimension of a product&lt;/em&gt; theorem (page 92), As any $dim V_j$ must be upper-bounded by a finite number.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ch. 07, Sec. B</title>
       <link>https://www.mostafatouny.github.io/axler-linear-post/ch07-secb/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/axler-linear-post/ch07-secb/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
-&lt;p&gt;False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
-&lt;p&gt;Assume $F = \mathbb{R}$.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$&lt;/p&gt;
-&lt;p&gt;The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;&#xA;&lt;p&gt;False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;&#xA;&lt;p&gt;Assume $F = \mathbb{R}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$&lt;/p&gt;&#xA;&lt;p&gt;The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ch. 07, Sec. A</title>
       <link>https://www.mostafatouny.github.io/axler-linear-post/ch07-seca/</link>
       <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://www.mostafatouny.github.io/axler-linear-post/ch07-seca/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
-&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex-11&#34;&gt;Ex. 11&lt;/h3&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;./ex-11.jpg&#34; alt=&#34;image&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;$(\rightarrow)$ Observe $v = v_U + v_{U^\bot}$ and $w = w_U + w_{U^\bot}$. Clearly,
-\begin{aligned}
-\langle Pv, w \rangle &amp;amp;= \langle v_U, w \rangle \\
-&amp;amp;= \langle v_U, w_{U^\bot} \rangle + \langle v_U, w_U \rangle \\
-&amp;amp;= 0 + \langle v_U, w_U \rangle \\
-\langle v, Pw \rangle &amp;amp;= \langle v_{U^\bot}, w_U \rangle + \langle v_U, w_U      \rangle \\
-&amp;amp;= 0 + \langle v_U, w_U \rangle
-\end{aligned}&lt;/p&gt;</description>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-11&#34;&gt;Ex. 11&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-11.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;$(\rightarrow)$ Observe $v = v_U + v_{U^\bot}$ and $w = w_U + w_{U^\bot}$. Clearly,&#xA;\begin{aligned}&#xA;\langle Pv, w \rangle &amp;amp;= \langle v_U, w \rangle \\&#xA;&amp;amp;= \langle v_U, w_{U^\bot} \rangle + \langle v_U, w_U \rangle \\&#xA;&amp;amp;= 0 + \langle v_U, w_U \rangle \\&#xA;\langle v, Pw \rangle &amp;amp;= \langle v_{U^\bot}, w_U \rangle + \langle v_U, w_U      \rangle \\&#xA;&amp;amp;= 0 + \langle v_U, w_U \rangle&#xA;\end{aligned}&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
