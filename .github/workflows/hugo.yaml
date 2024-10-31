@@ -60,6 +60,9 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      # my hack
+      - name: Modify links in index.html
+        run: sed -i 's/href=mailto:mostafatouny@proton.me/onclick="alert(String.fromCharCode('109','111','115','116','97','102','97','116','111','117','110','121','64','112','114','111','116','111','110','46','109','101'))";/' ./public/index.html && sed -i 's/href=https:\/\/t.me\/mostafatouny/onclick="alert(String.fromCharCode('116', '46', '109', '101', '47', '109', '111', '115', '116', '97', '102', '97', '116', '111', '117', '110', '121'))";/' ./public/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -73,9 +76,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # my hack
-      - name: proton and telegram alerts
-        run: sed -i 's/href=mailto:mostafatouny@proton.me/onclick="alert(String.fromCharCode('109','111','115','116','97','102','97','116','111','117','110','121','64','112','114','111','116','111','110','46','109','101'))";/' ./public/index.html && sed -i 's/href=https:\/t.me\/mostafatouny/onclick="alert(String.fromCharCode('116', '46', '109', '101', '47', '109', '111', '115', '116', '97', '102', '97', '116', '111', '117', '110', '121'))";/' ./public/index.html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
