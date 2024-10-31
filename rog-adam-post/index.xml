@@ -1,40 +1,542 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Calculus on Mostafa Touny</title>
-    <link>https://www.mostafatouny.github.io/rog-adam-post/</link>
-    <description>Recent content in Calculus on Mostafa Touny</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mostafatouny.github.io/rog-adam-post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Calculus | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/rog-adam-post/</link>
+      <atom:link href="https://mostafatouny.github.io/rog-adam-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Calculus</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
+      <title>Calculus</title>
+      <link>https://mostafatouny.github.io/rog-adam-post/</link>
+    </image>
+    
     <item>
       <title>Ch.10, Sec.7</title>
-      <link>https://www.mostafatouny.github.io/rog-adam-post/ch10-sec07/</link>
+      <link>https://mostafatouny.github.io/rog-adam-post/ch10-sec07/</link>
       <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/rog-adam-post/ch10-sec07/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-703&#34;&gt;Ex. 7.03&lt;/h3&gt;&#xA;&lt;p&gt;denote $a_n = \nfrac{f^n(0)}{n!}$.&lt;/p&gt;&#xA;&lt;p&gt;Observe&#xA;\begin{align*}&#xA;f^0(x) &amp;amp;= \nfrac{1}{1-2x} &amp;amp;f^0(0) = 1 \\&#xA;f&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot (1-2x)^{-2} &amp;amp;f&amp;rsquo;(0) = 1 \cdot 2 \\&#xA;f&amp;rsquo;&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot 2^2 \cdot (1 - 2x)^{-3} &amp;amp;f&amp;rsquo;&amp;rsquo;(0) = 1 \cdot 2 \cdot 2^2 \\&#xA;\end{align*}&#xA;Generally $f^n(x) = n! \cdot 2^n (1 - 2x)^{-(n+1)}$ and $f^n(0) = n! \cdot 2^n$. It follows:&#xA;\begin{align*}&#xA;\nfrac{1}{1-2x} &amp;amp;= 1 + 2^1 x^1 + 2^2 x^2 + \dots \\&#xA;r &amp;amp;= 2x \\&#xA;\nfrac{1}{1-2x} &amp;amp;= (2x)^0 + (2x)^1 + (2x)^2 + \dots + (2x)^n \\&#xA;&amp;amp;= 1 + 2^1 x + 2^2 x^2 + \dots + 2^n x^n&#xA;\end{align*}&#xA;Hence it is valid for&#xA;\begin{align*}&#xA;|r| &amp;lt; 1 \\&#xA;|2x| &amp;lt; 1 \\&#xA;|x| &amp;lt; \nfrac{1}{2}&#xA;\end{align*}&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/rog-adam-post/ch10-sec07/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-703&#34;&gt;Ex. 7.03&lt;/h3&gt;
+&lt;p&gt;denote $a_n = \nfrac{f^n(0)}{n!}$.&lt;/p&gt;
+&lt;p&gt;Observe
+\begin{align*}
+f&lt;sup&gt;0(x) &amp;amp;= \nfrac{1}{1-2x} &amp;amp;f&lt;/sup&gt;0(0) = 1 \\
+f&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot (1-2x)&lt;sup&gt;{-2} &amp;amp;f&amp;rsquo;(0) = 1 \cdot 2 \\
+f&amp;rsquo;&amp;rsquo;(x) &amp;amp;= 1 \cdot 2 \cdot 2&lt;/sup&gt;2 \cdot (1 - 2x)&lt;sup&gt;{-3} &amp;amp;f&amp;rsquo;&amp;rsquo;(0) = 1 \cdot 2 \cdot 2&lt;/sup&gt;2 \\
+\end{align*}
+Generally $f^n(x) = n! \cdot 2^n (1 - 2x)^{-(n+1)}$ and $f^n(0) = n! \cdot 2^n$. It follows:
+\begin{align*}
+\nfrac{1}{1-2x} &amp;amp;= 1 + 2&lt;sup&gt;1 x&lt;/sup&gt;1 + 2&lt;sup&gt;2 x&lt;/sup&gt;2 + \dots \\
+r &amp;amp;= 2x \\
+\nfrac{1}{1-2x} &amp;amp;= (2x)&lt;sup&gt;0 + (2x)&lt;sup&gt;1 + (2x)&lt;sup&gt;2 + \dots + (2x)&lt;sup&gt;n \\
+&amp;amp;= 1 + 2&lt;/sup&gt;1 x + 2&lt;/sup&gt;2 x&lt;/sup&gt;2 + \dots + 2&lt;/sup&gt;n x^n
+\end{align*}
+Hence it is valid for
+\begin{align*}
+|r| &amp;lt; 1 \\
+|2x| &amp;lt; 1 \\
+|x| &amp;lt; \nfrac{1}{2}
+\end{align*}&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch.12, Sec.3</title>
-      <link>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec03/</link>
+      <link>https://mostafatouny.github.io/rog-adam-post/ch12-sec03/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec03/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-390&#34;&gt;Ex. 3.90&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-3.90.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;\begin{align*}&#xA;c^2 &amp;amp;= (a \sin \theta)^2 + (b - a \cos \theta)^2 \\&#xA;&amp;amp;= a^2 \sin^2 \theta + b^2 + a^2 \cos^2 \theta - 2 ab \cos \theta \\&#xA;&amp;amp;= a^2 (\sin^2 \theta + \cos^2 \theta ) + b^2 - 2ab \cos \theta \\&#xA;&amp;amp;= a^2 + b^2 - 2ab \cos \theta&#xA;\end{align*}&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-391&#34;&gt;Ex. 3.91&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-3.91.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;. The goal is $||xv + w||^2 = ||v||^2 x^2 (2v \cdot w)x + ||w||^2$. Then&#xA;\begin{align*}&#xA;L.H.S &amp;amp;= (xv + w) \cdot (xv + w) \\&#xA;&amp;amp;= xv \cdot xv + 2xv \cdot w + w \cdot w \\&#xA;&amp;amp;= x^2 (v \cdot v) + (2v \cdot w)x + ||w||^2 \\&#xA;&amp;amp;= ||v||^2 x^2 + (2v \cdot w)x + ||w||^2 \\&#xA;&amp;amp;= R.H.S&#xA;\end{align*}&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/rog-adam-post/ch12-sec03/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-390&#34;&gt;Ex. 3.90&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.90.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+c&lt;sup&gt;2 &amp;amp;= (a \sin \theta)&lt;sup&gt;2 + (b - a \cos \theta)&lt;sup&gt;2 \\
+&amp;amp;= a&lt;/sup&gt;2 \sin&lt;/sup&gt;2 \theta + b&lt;/sup&gt;2 + a&lt;sup&gt;2 \cos&lt;/sup&gt;2 \theta - 2 ab \cos \theta \\
+&amp;amp;= a&lt;sup&gt;2 (\sin&lt;/sup&gt;2 \theta + \cos&lt;sup&gt;2 \theta ) + b&lt;/sup&gt;2 - 2ab \cos \theta \\
+&amp;amp;= a&lt;sup&gt;2 + b&lt;/sup&gt;2 - 2ab \cos \theta
+\end{align*}&lt;/p&gt;
+&lt;h3 id=&#34;ex-391&#34;&gt;Ex. 3.91&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.91.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;. The goal is $||xv + w||^2 = ||v||^2 x^2 (2v \cdot w)x + ||w||^2$. Then
+\begin{align*}
+L.H.S &amp;amp;= (xv + w) \cdot (xv + w) \\
+&amp;amp;= xv \cdot xv + 2xv \cdot w + w \cdot w \\
+&amp;amp;= x^2 (v \cdot v) + (2v \cdot w)x + ||w||^2 \\
+&amp;amp;= ||v||&lt;sup&gt;2 x&lt;/sup&gt;2 + (2v \cdot w)x + ||w||^2 \\
+&amp;amp;= R.H.S
+\end{align*}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;. We know $f(x) = ax^2 + bx + c \geq 0$. Geometrically a parabola which  does not intersect the x-axis at two points. So there are no two distinct real       solutions, and hence the discriminent $b^2 - 4ac \leq 0$.&lt;/p&gt;
+&lt;h3 id=&#34;ex-392&#34;&gt;Ex. 3.92&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.92.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Observe $(v+w) \cdot (v+w) = (v+w) \cdot v + (v+w) \cdot w$, So hint is proven.
+\begin{align*}
+L.H.S = ||v+w||^2 &amp;amp;\leq ||v+w|| ; ||v|| + ||v+w|| ; ||w|| \\
+&amp;amp;= ||v+w|| (||v|| + ||w||)
+\end{align*}
+Thus, $||v+w|| \leq ||v|| + ||w||$.&lt;/p&gt;
+&lt;h3 id=&#34;ex-393&#34;&gt;Ex. 3.93&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.93.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Recall the &lt;em&gt;cosine additition formula&lt;/em&gt; is $\cos(a-b) = \cos a \cos b + \sin a \sin b$.
+\begin{align*}
+v &amp;amp;\cdot w \\
+&amp;amp;= ||v|| (\cos \theta_1, \sin \theta_1) \cdot ||w|| (\cos \theta_2, \sin       \theta_2) \\
+&amp;amp;= ||v|| \cdot ||w|| \left[ (\cos \theta_1, \sin \theta_1) \cdot (\cos         \theta_2, \sin \theta_2) \right] \\
+&amp;amp;= ||v|| \cdot ||w|| \left[ \cos \theta_2 \cos \theta_1 + \sin \theta_2 \sin   \theta_1 \right] \\
+&amp;amp;= ||v|| \cdot ||w|| \cos(\theta_2 - \theta_1) \\
+&amp;amp;= ||v|| \cdot ||w|| \cos(\theta)    \text{   given } \theta = \theta_2 -       \theta_1
+\end{align*}&lt;/p&gt;
+&lt;h3 id=&#34;ex-394&#34;&gt;Ex. 3.94&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.94.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;It suffices to show $\cos \theta = \nfrac{V \cdot V_\theta}{||V|| \cdot ||V_\theta||}$. But $||V|| = ||V_\theta||$, Then
+\begin{align*}
+R.H.S &amp;amp;= \nfrac{(x&lt;sup&gt;2 \cos \theta + xy \sin \theta)+(-xy \sin \theta + y&lt;/sup&gt;2 \cos   \theta)}{||V||&lt;sup&gt;2} \\
+&amp;amp;= \nfrac{\cos \theta (x&lt;/sup&gt;2 + y^2)}{||V||^2} \\
+&amp;amp;= \nfrac{\cos \theta  ||V||^2}{||V||^2} \\
+&amp;amp;= L.H.S
+\end{align*}&lt;/p&gt;
+&lt;h3 id=&#34;ex-395&#34;&gt;Ex. 3.95&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-3.95.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Let $V_x$, $V_y$, $V_z$ be projected vectors of $V$ on $x$, $y$, and $z$ axis. Then:
+\begin{align*}
+\cos \alpha &amp;amp;= ||V_x|| / ||V|| \\
+\cos \beta  &amp;amp;= ||V_y|| / ||V|| \\
+\cos \gamma &amp;amp;= ||V_z|| / ||V||
+\end{align*}
+It follows
+\begin{align*}
+\cos&lt;sup&gt;2 \alpha &amp;amp;+ \cos&lt;/sup&gt;2 \beta + \cos^2 \gamma \\
+&amp;amp;= (||V_x|| / ||V||)^2 + (||V_y|| / ||V||)^2 + (||V_z|| / ||V||)^2 \\
+&amp;amp;= \nfrac{ ||V_x||^2 + ||V_y||^2 + ||V_z||^2 }{ ||V||^2 } \\
+&amp;amp; = \nfrac{ ||V_{x,y}||^2 + ||V_z||^2 }{ ||V||^2 } \textit{  (Pythagorean Theorem)} \\
+&amp;amp; = \nfrac{ ||V||^2 }{ ||V||^2 } \textit{  (Pythagorean Theorem)} \\
+&amp;amp; = 1
+\end{align*}&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch.12, Sec.2</title>
-      <link>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec02/</link>
+      <link>https://mostafatouny.github.io/rog-adam-post/ch12-sec02/</link>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec02/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-260&#34;&gt;Ex. 2.60&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-2.60.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;\begin{align*}&#xA;L &amp;amp;= P_0 + tv \\&#xA;&amp;amp;= (x_0,y_0,z_0) + t (a,b,c)&#xA;\end{align*}&#xA;\begin{align*}&#xA;x = x_0 + ta \rightarrow t = \nfrac{x-x_0}{a} \\&#xA;y = y_0 + tb \rightarrow t = \nfrac{y-y_0}{b} \\&#xA;z = z_0 + tc \rightarrow t = \nfrac{z-z_0}{c}&#xA;\end{align*}&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-266&#34;&gt;Ex. 2.66&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-2.66.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Be definition of a slope, We have two points on the line: $(x_0, y_0)$ and $(x_0 +   1, y_0 + m)$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/rog-adam-post/ch12-sec02/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-260&#34;&gt;Ex. 2.60&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.60.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+L &amp;amp;= P_0 + tv \\
+&amp;amp;= (x_0,y_0,z_0) + t (a,b,c)
+\end{align*}
+\begin{align*}
+x = x_0 + ta \rightarrow t = \nfrac{x-x_0}{a} \\
+y = y_0 + tb \rightarrow t = \nfrac{y-y_0}{b} \\
+z = z_0 + tc \rightarrow t = \nfrac{z-z_0}{c}
+\end{align*}&lt;/p&gt;
+&lt;h3 id=&#34;ex-266&#34;&gt;Ex. 2.66&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.66.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Be definition of a slope, We have two points on the line: $(x_0, y_0)$ and $(x_0 +   1, y_0 + m)$.&lt;/p&gt;
+&lt;p&gt;By page 640, We take the directional vector: $v = (x_0 + 1, y_0 + m) - (x_0, y_0) =  (1,m)$.&lt;/p&gt;
+&lt;p&gt;Thus,
+\begin{align*}
+x = x_0 + (1)t \rightarrow t = x - x_0 \\
+y = y_0 + (m)t \rightarrow t = \nfrac{y - y_0}{m}
+\end{align*}
+Hence, The symmetric form is satisfied.&lt;/p&gt;
+&lt;h3 id=&#34;ex-267&#34;&gt;Ex. 2.67&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-2.67.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;\begin{align*}
+\vec{OA}  &amp;amp;= v \\
+\vec{OA&amp;rsquo;} &amp;amp;= \nfrac{1}{2} (w-u) + u \\
+&amp;amp;= \nfrac{1}{2} (w+u) \\
+\vec{OA&amp;rsquo;} - \vec{OA} &amp;amp;= \nfrac{1}{2} w + \nfrac{1}{2} u - v
+\end{align*}
+Taking $2/3$ of it: $\nfrac{2}{3} (\vec{OA&#39;} - \vec{OA}) = \nfrac{1}{3} w +          \nfrac{1}{3} u - \nfrac{2}{3} v$.&lt;/p&gt;
+&lt;p&gt;$P$ is the terminal of vector: $v + \nfrac{1}{3} w + \nfrac{1}{3} u - \nfrac{2}{3} v = \nfrac{1}{3} w + \nfrac{1}{3} u + \nfrac{1}{3} v$.&lt;/p&gt;
+&lt;p&gt;Symmetrically, Taking $\nfrac{2}{3}$ of segments $BB&#39;$ and $CC&#39;$ yields the vector   $\nfrac{1}{3} w + \nfrac{1}{3} u + \nfrac{1}{3} v$, and thus point $P$ lies on the   other two medians as well.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch.12, Sec.1</title>
-      <link>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec01/</link>
+      <link>https://mostafatouny.github.io/rog-adam-post/ch12-sec01/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/rog-adam-post/ch12-sec01/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-166&#34;&gt;Ex. 1.66&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-1.66-f.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-1.66.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./my-0.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;$$&#xA;\begin{aligned}&#xA;    ||L_3|| &amp;= ||L_2|| \sin \theta_2 \\\\&#xA;    ||L_4|| &amp;= ||L_6|| \sin \theta_1 \\\\&#xA;    ||L_5|| &amp;= ||L_3|| + ||L_4|| \\\\&#xA;    ||L_7|| &amp;= \sqrt{(L_2)^2 - (L_3)^2} \\\\&#xA;    ||L_7|| &amp;= ||L_6|| \cos \theta_1 \rightarrow ||L_6|| = ||L_7|| / \cos \theta_1 \\\\&#xA;    ||L_8|| &amp;= ||L_1|| - ||L_6|| \\\\&#xA;    ||L_9|| &amp;= ||L_8|| \cos \theta_1&#xA;\end{aligned}&#xA;$$&lt;p&gt;&#xA;Components are $\langle ||L_5||, ||L_9|| \rangle$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex-169&#34;&gt;Ex. 1.69&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-1.69.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Observe $\overline{AC} = ||v+w||$ and $\overline{BD} = ||v-w||$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/rog-adam-post/ch12-sec01/</guid>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-166&#34;&gt;Ex. 1.66&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.66-f.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.66.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./my-0.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+$$
+\begin{aligned}
+    ||L_3|| &amp;= ||L_2|| \sin \theta_2 \\\\
+    ||L_4|| &amp;= ||L_6|| \sin \theta_1 \\\\
+    ||L_5|| &amp;= ||L_3|| + ||L_4|| \\\\
+    ||L_7|| &amp;= \sqrt{(L_2)^2 - (L_3)^2} \\\\
+    ||L_7|| &amp;= ||L_6|| \cos \theta_1 \rightarrow ||L_6|| = ||L_7|| / \cos \theta_1 \\\\
+    ||L_8|| &amp;= ||L_1|| - ||L_6|| \\\\
+    ||L_9|| &amp;= ||L_8|| \cos \theta_1
+\end{aligned}
+$$&lt;p&gt;
+Components are $\langle ||L_5||, ||L_9|| \rangle$.&lt;/p&gt;
+&lt;h3 id=&#34;ex-169&#34;&gt;Ex. 1.69&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.69.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Observe $\overline{AC} = ||v+w||$ and $\overline{BD} = ||v-w||$.&lt;/p&gt;
+&lt;p&gt;By vector algebra,
+&lt;/p&gt;
+$$
+\begin{aligned}
+    w + \frac{1}{2} (v-w) &amp;= \frac{1}{2} (v+w) \\\\
+    \text{point of BD midpoint} &amp;= \text{point of AC midpoint}
+\end{aligned}
+$$&lt;p&gt;
+Hence bisects each other.&lt;/p&gt;
+&lt;h3 id=&#34;ex-170&#34;&gt;Ex. 1.70&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.70.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./my-1.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Observe that we can construct the midpoint between the ends of two vectors by $\frac{1}{2} (v-u)$.&lt;/p&gt;
+&lt;p&gt;The midpoint of $H$ is $\frac{1}{2} [(v + \frac{1}{2} w) - \frac{1}{2} u] + \frac{1}{2} u = \frac{1}{2} v + \frac{1}{4} w + \frac{1}{4} u$.&lt;/p&gt;
+&lt;p&gt;The midpoint of $V$ is $\frac{1}{2} [(u + \frac{1}{2} z) - \frac{1}{2} v] + \frac{1}{2} v = \frac{1}{2} u + \frac{1}{4} z + \frac{1}{4} v$&lt;/p&gt;
+&lt;p&gt;Suffices to show $2u + v + z = 2v + w + u$ which reduces to $u+z = v+w$. By our diagram both yields exactly the same vector.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; I solved the problem without seeing the hint.&lt;/p&gt;
+&lt;h3 id=&#34;ex-171&#34;&gt;Ex. 1.71&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-1.71.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;vectors $v$ and $w$ are perpendicular if and only if
+&lt;/p&gt;
+$$
+\begin{aligned}
+  ||w-v||^2 &amp;= ||v||^2 + ||w||^2 \\\\
+  ||\langle c-a, d-b \rangle||^2 &amp;= a^2 +b^2 + c^2 + d^2 \\\\
+  (c-a)^2 + (d-b)^2 &amp;= \\\\
+  c^2 + a^2 - 2ac + d^2 + b^2 - 2bd &amp;= \\\\
+  -2ac - 2bd &amp;= 0 \\\\
+  ac - bd &amp;=
+\end{aligned}
+$$</description>
     </item>
+    
   </channel>
 </rss>

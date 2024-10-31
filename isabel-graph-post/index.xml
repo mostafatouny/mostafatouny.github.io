@@ -1,75 +1,444 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Isabel&#39;s Graph Theory on Mostafa Touny</title>
-    <link>https://www.mostafatouny.github.io/isabel-graph-post/</link>
-    <description>Recent content in Isabel&#39;s Graph Theory on Mostafa Touny</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mostafatouny.github.io/isabel-graph-post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Isabel&#39;s Graph Theory | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/isabel-graph-post/</link>
+      <atom:link href="https://mostafatouny.github.io/isabel-graph-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Isabel&#39;s Graph Theory</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
+      <title>Isabel&#39;s Graph Theory</title>
+      <link>https://mostafatouny.github.io/isabel-graph-post/</link>
+    </image>
+    
     <item>
       <title>Homework 03</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset03/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset03/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset03/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;h4 id=&#34;i&#34; class=&#34;unnumbered&#34;&gt;(i)&lt;/h4&gt;&#xA;&lt;p&gt;&lt;em&gt;Reflexive&lt;/em&gt;. Consider the identity bijection $\varphi: v \mapsto v$,&#xA;Which trivially satisfies $\\{uv\\} \in E$ iff&#xA;$\varphi(v) \varphi(u) \in E$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Symmetric&lt;/em&gt;. Given a bijection $\varphi$, Its inverse $\varphi^{-1}$&#xA;exists and clearly is a bijection too. Now we prove $\\{uv\\} \in E$ iff&#xA;$\varphi^{-1}(u) \varphi^{-1}(v) \in E$.&lt;/p&gt;&#xA;&lt;p&gt;Denote $\varphi^{-1}(u) = u&#39;$ and $\varphi^{-1}(v) = v&#39;$.&lt;/p&gt;&#xA;&lt;p&gt;$(\rightarrow)$. We are given $\\{ uv \\} \in E$, i.e&#xA;$\{ \varphi(u&#39;) \varphi(v&#39;) \} \in E$. By symmetry hypothesis it follows&#xA;$\\{ u&#39;v&#39; \\} \in E$, i.e $\\{ \varphi^{-1}(u) \varphi^{-1}(v) \\} \in E$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset03/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;h4 id=&#34;i&#34; class=&#34;unnumbered&#34;&gt;(i)&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Reflexive&lt;/em&gt;. Consider the identity bijection $\varphi: v \mapsto v$,
+Which trivially satisfies $\\{uv\\} \in E$ iff
+$\varphi(v) \varphi(u) \in E$.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Symmetric&lt;/em&gt;. Given a bijection $\varphi$, Its inverse $\varphi^{-1}$
+exists and clearly is a bijection too. Now we prove $\\{uv\\} \in E$ iff
+$\varphi^{-1}(u) \varphi^{-1}(v) \in E$.&lt;/p&gt;
+&lt;p&gt;Denote $\varphi^{-1}(u) = u&#39;$ and $\varphi^{-1}(v) = v&#39;$.&lt;/p&gt;
+&lt;p&gt;$(\rightarrow)$. We are given $\\{ uv \\} \in E$, i.e
+$\{ \varphi(u&#39;) \varphi(v&#39;) \} \in E$. By symmetry hypothesis it follows
+$\\{ u&#39;v&#39; \\} \in E$, i.e $\\{ \varphi^{-1}(u) \varphi^{-1}(v) \\} \in E$.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$. We are given
+$\\{ \varphi^{-1}(u) \varphi^{-1}(v) \in E \\}$, i.e $\\{ u&#39;v&#39; \\} \in E$.
+By symmetry hypothesis, &lt;/p&gt;
+$$\begin{aligned}
+    \\{ \varphi(u&#39;)\varphi(v&#39;) \\} &amp;\in E \\\\
+    \\{ \varphi \circ \varphi^{-1}(u) \varphi \circ \varphi^{-1}(v) \\} &amp;\in E \\\\
+    \\{ uv \\} &amp;\in E
+\end{aligned}$$&lt;p&gt;&lt;em&gt;Transitive&lt;/em&gt;. Given bijections $\varphi_0$ and $\varphi_1$, Construct a
+bijection $\varphi = \varphi_1 \circ \varphi_0$. Given $\\{uv\\} \in E$,
+It follows $\\{ \varphi_0(u) \varphi_0(v) \\} \in E$, and in turn
+$\\{ \varphi_1 \circ \varphi_0 (u) \circ \varphi_1 \circ \varphi_0 (v) \\} \in E$.
+The other way follows analogously.&lt;/p&gt;
+&lt;h4 id=&#34;ii&#34; class=&#34;unnumbered&#34;&gt;(ii)&lt;/h4&gt;
+&lt;p&gt;True.&lt;/p&gt;
+&lt;p&gt;Let $X$ and $Y$ be the two sets such that for any $\\{uv\\} \in E_G$,
+$u \in X$ and $v \in Y$. Consider an arbitrary $e \in H$. By &lt;em&gt;(i)&lt;/em&gt;,
+$\varphi^{-1}(e) = \\{xy\\}$ where $x \in X$ and $y \in Y$. It follows
+$\varphi(x) \in \varphi(X)$ and $\varphi(y) \in \varphi(Y)$. So $H$ is
+bipartite.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;$(\leftarrow)$. Given $G$ is complete. Let $S$ be any subset of
+vertices. Consider $G-S$ and let $u,v \in G-S$ be arbitrary. Since $G$
+is complete, $G-S$ has the edge $\\{uv\\}$, and hence connected. It
+follows $S$ is not a cut-set.&lt;/p&gt;
+&lt;p&gt;$(\rightarrow)$. If $G$ has no cut-set, Then for any $S \subset V$,
+$G-S$ is connected. Consider $S_{uv} = V - \{uv\}$. Since $G - S_{uv}$
+is connected, it has some path $(u, u_1, \dots, u_{k-1}, v)$, but the
+graph has only vertices $u$ and $v$. Therefore $G - S_{uv}$ has the edge
+$\\{uv\\}$, and in turn $G$ has $\\{uv\\}$ also. That concludes $G$ is
+complete.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;h4 id=&#34;i-1&#34; class=&#34;unnumbered&#34;&gt;(i)&lt;/h4&gt;
+&lt;p&gt;$P \cong Q$.&lt;/p&gt;
+&lt;h4 id=&#34;ii-1&#34; class=&#34;unnumbered&#34;&gt;(ii)&lt;/h4&gt;
+&lt;img src=&#34;./iso.jpg&#34; width=700&gt;
+&lt;h4 id=&#34;iii&#34; class=&#34;unnumbered&#34;&gt;(iii)&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Not Solved.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Brute-forcing all possible mappings seems non-elegant.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;False. Here is a counter-example.&lt;/p&gt;
+&lt;img src=&#34;./kholy.jpg&#34; width=700&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 04</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset04/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset04/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset04/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;The least path we can construct between $x$ and $y$ is $(x)$ in the case&#xA;of $x = y$. So $d(x,y) \geq 0$.&lt;/p&gt;&#xA;&lt;p&gt;if $x = y$, then $(x)$ is a valid path, concluding $d(x,y) = 0$. If&#xA;$d(x,y) = 0$ then the graph contains a path $(x) = (y)$, concluding&#xA;$x = y$.&lt;/p&gt;&#xA;&lt;p&gt;Since the graph is undirected, It is clear $(v, v_1, \dots, v_k)$ is the&#xA;least $vv_k$ path if and only if $(v_k, v_{k-1}, \dots, v)$ is the least&#xA;$v_kv$ path. It follows $d(x,y) = d(y,x)$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset04/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;The least path we can construct between $x$ and $y$ is $(x)$ in the case
+of $x = y$. So $d(x,y) \geq 0$.&lt;/p&gt;
+&lt;p&gt;if $x = y$, then $(x)$ is a valid path, concluding $d(x,y) = 0$. If
+$d(x,y) = 0$ then the graph contains a path $(x) = (y)$, concluding
+$x = y$.&lt;/p&gt;
+&lt;p&gt;Since the graph is undirected, It is clear $(v, v_1, \dots, v_k)$ is the
+least $vv_k$ path if and only if $(v_k, v_{k-1}, \dots, v)$ is the least
+$v_kv$ path. It follows $d(x,y) = d(y,x)$.&lt;/p&gt;
+&lt;p&gt;The paths $(x, \dots, y)$ and $(y, \dots, z)$ can be concatenated to
+construct a new path $(x, \dots, z)$ whose length is $d(x,y) + d(y,z)$.
+If we considered the minimal-length $xz$ path, Then by definition we get
+$d(x,z) \leq d(x,y) + d(y,z)$. $\blacksquare$.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(i)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;By definition $ecc(v) = diam(G)$. So $d(u,v) = diam(G)$. It follows
+$ecc(u) = diam(G)$ as there is no longer path than the diameter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(ii)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fix $u$ and $v$. Let $u_m$ and $v_m$ be the vertices corresponding to
+maximum paths for $u$ and $v$ respectively.&lt;/p&gt;
+&lt;p&gt;Assume for contradiction the difference between $d(u,u_m)$ and
+$d(v,v_m)$ is greater than 1. WLOG assume $d(u,u_m)$ is the greater.
+Then there is a path $(u, \dots u_m)$ whose length is greater than
+$d(v,v_m)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(iii)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(i)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fact.&lt;/em&gt; $A^k(i,j)$ is the number of $v_iv_j$ paths of length $k$.&lt;/p&gt;
+&lt;p&gt;By definition $d(v_i,v_j)$ is the least length of any path. In other
+words, least $k$ where $A^k(i,j) &gt; 0$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(ii)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Consider $\min \{ k \mid S^k \text{ has some rows with no zeros} \}$.
+Those rows correspond to vertices $C(G)$.&lt;/p&gt;
+&lt;p&gt;Consider $\min \{ k \mid S^k \text{ has no zeros} \}$. Rows with zeros
+in $S^{k-1}$ correspond to vertices $P(G)$.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(i)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; A connected tree of order $n$ has exactly $n-1$ edges.&lt;/p&gt;
+&lt;p&gt;Let $n_i$ denote the order of $i$th connected tree. Then by the &lt;em&gt;Fact&lt;/em&gt;
+$i$th tree has $n_i - 1$ edges. It follows the total number of edges of
+the forest is $\sum_{i=1}^k (n_i - 1) = n - k$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(ii)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If some edge is not a bridge then a cycle shall exist, contradicting the
+fact a tree is acyclic.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 05</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset05/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset05/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset05/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; It follows immediately from &lt;em&gt;theorem 3.5&lt;/em&gt;, which states a graph&#xA;$G$ of order $n$ is a tree iff it is connected and has exactly $n-1$&#xA;edges.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; The condition is $G$ is itself a tree. It is sufficient as $G$&#xA;is a subgraph of itself. It is necessary as if we considered an&#xA;arbitrary induced subgraph spanning tree $T$, Then by definition of&#xA;spanning, $T$ contains all the vertices of $G$. So $T = G$ and $G$ is a&#xA;tree.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset05/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; It follows immediately from &lt;em&gt;theorem 3.5&lt;/em&gt;, which states a graph
+$G$ of order $n$ is a tree iff it is connected and has exactly $n-1$
+edges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; The condition is $G$ is itself a tree. It is sufficient as $G$
+is a subgraph of itself. It is necessary as if we considered an
+arbitrary induced subgraph spanning tree $T$, Then by definition of
+spanning, $T$ contains all the vertices of $G$. So $T = G$ and $G$ is a
+tree.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;(a)&lt;/h4&gt;
+&lt;p&gt;Pick a vertex $v$ with maximal degree $k$. For each neighbour
+$v_1, v_2, \dots, v_k$, We have paths:
+\begin{aligned}
+(v, v_1) \\
+(v, v_2) \\
+\dots
+(v, v_k)
+\end{aligned}
+Since the graph is finite, By the &lt;em&gt;well-ordering&lt;/em&gt; principle, There exists maximal paths $p_1, p_2, \dots, p_k$ such that $p_i$ starts with $(v, v_i)$. It follows $p_i$ ends with a leaf $l_i$.&lt;/p&gt;
+&lt;p&gt;Since the graph is a tree, The paths $p_i$ do not intersect except on $v$, lest forming a cycle. In other words, leaves $l_i$ are distinct, and hence the $k$ paths do count $k$ leaves.&lt;/p&gt;
+&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;(b)&lt;/h4&gt;
+&lt;p&gt;We prove it by induction on the tree&amp;rsquo;s order, i.e number of vertices. For the base case, We have $|T| = 2$. Then $T$&amp;rsquo;s leaves count $L(T)$ is
+\begin{aligned}
+2 &amp;amp;= 2 + \sum_{v \in V(T^-)} ( deg(v) - 2 ) \\
+&amp;amp;= 2 + 0
+\end{aligned}
+Since $T^-$ is empty.&lt;/p&gt;
+&lt;p&gt;Induction hypothesis. Assume the statement is true for any $T$ such that $|T| \geq 2$.&lt;/p&gt;
+&lt;p&gt;Induction step. Consider a tree $T$ where $|T| = n+1$. Fix a leaf $l$ and its connected neighbour $f$ in $T$.&lt;/p&gt;
+&lt;p&gt;Observe $f$ cannot be a leaf, As otherwise $T$ shall be of size $2$, Contradicting our assumption. So $f$ is a non-leaf vertex.&lt;/p&gt;
+&lt;p&gt;Construct tree $T&#39; = T - l$. Then by the induction hypothesis
+\begin{aligned}
+L(T&amp;rsquo;) &amp;amp;= 2 + \sum_{v \in T&amp;rsquo;&lt;sup&gt;-} (deg(v) - 2)
+\end{aligned}
+Then
+\begin{aligned}
+|L(T)| &amp;amp;= |L(T&amp;rsquo;)| + 1 \\
+&amp;amp;= 2 + \sum_{v \in T&amp;rsquo;&lt;/sup&gt;-} (deg_{T&amp;rsquo;}(v) - 2) + 1
+\end{aligned}
+Observe
+\begin{aligned}
+deg_T f &amp;amp;= deg_{T&amp;rsquo;} f + 1 \\
+deg_T u &amp;amp;= deg_{T&amp;rsquo;} u \quad \text{For any non-leaf vertex u } \neq f
+\end{aligned}
+It follows
+\begin{aligned}
+\sum_{v \in T^- - f} (deg_T v - 2) = \sum_{v \in T&amp;rsquo;&lt;sup&gt;- - f} (deg_T&amp;rsquo; v - 2)
+\end{aligned}
+By $(3)$ and $(5)$,
+\begin{aligned}
+\sum_{v \in T&lt;/sup&gt;-} (deg_T(v) - 2) &amp;amp;= \sum_{v \in T^- - f} (deg_T(v) - 2) + (deg_T(f) - 2) \\
+&amp;amp;= \sum_{v \in T&amp;rsquo;&lt;sup&gt;- - f} (deg_{T&amp;rsquo;} v - 2) + (deg_{T&amp;rsquo;}(f) - 2) + 1 \\
+&amp;amp;= \sum_{v \in T&amp;rsquo;&lt;/sup&gt;-} (deg_{T&amp;rsquo;} v - 2) + 1
+\end{aligned}
+Combining that last result with (2), We get
+\begin{aligned}
+|L(T)| &amp;amp;= 2 + \left ( \sum_{v \in T^-} (deg_T(v) - 2) - 1 \right ) + 1 \\
+&amp;amp;= 2 + \sum_{v \in T^-} (deg_T(v) - 2) \quad \blacksquare \\
+\end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Notation.&lt;/strong&gt; We denote the total weight of a graph by $w(G)$, Which is the summation of all edges weights.&lt;/p&gt;
+&lt;p&gt;We show if there are two distinct minimum spanning trees $T_0$ and $T_1$, where $w(T_0) = w(T_1) = k$, then a contradiction occurs. Namely the existince of a spanning tree $T_2$ such that $w(T_2) &lt; k$.&lt;/p&gt;
+&lt;p&gt;Since $T_0$ and $T_1$ are distinct, They do not agree on all edges. WLOG we can select the minimal-weight edge $e_{min} = \{ v_1, v_2 \}$ in $T_0$ not in $T_1$. Since $T_1$ is connected, We know there is a path $p_1 = (v_1, \dots, v_2)$ in $T_1$. Fix an edge $e&#39;$ from $p_1$. Construct $T_2 = T_1 - e&#39; + e_{min}$.&lt;/p&gt;
+&lt;p&gt;The added $e_{min}$ does not construct a new cycle. If that were the case, Then $T_1$ would have had another path $p_2 = (v_1, \dots, v_2)$, Concluding $T_1$ has a cycle by combining $p_1$ and $p_2$. In conclusion $T_2$ is acyclic, i.e a spanning tree.&lt;/p&gt;
+&lt;p&gt;Recall $e_{min}$ was chosen to be the minimum weight edge. So $w(e_{min}) &lt; w(e&#39;)$ and in turn $w(T_2) &lt; w(T_1)$.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;$(\rightarrow)$. Let $e$ be an arbitrary bridge. Let $T$ be an arbitrary spanning tree of $G$. Assume for contradiction $T$ does not contain $e$. By definition there are two vertices in $G$, $v_1$ and $v_2$, which are not connected in $G - e$. Since $E(T) \subset E(G)$, It follows there is no path either connecting $v_1$ and $v_2$ in $T$. Contradiction as $T$ spans $G$.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$. Let $e$ be an edge appearing in any spanning tree of $G$.&lt;/p&gt;
+&lt;p&gt;Consider graph $G-e$, and fix $v_0$ in it. Consider the connected component $C_0$ of $G-e$ containing $v_0$. By definition $e \notin C_0$. Let $T_0$ be the tree spanning $C_0$. By hypothesis $T_0$ does not span the graph $G$. Call the vertex not covered by it $v_1$.&lt;/p&gt;
+&lt;p&gt;We claim there is no path $(v_0, \dots, v_1)$ in $G-e$ and hence concluding it is disconnected, and in turn $e$ is a bridge. Assume for contradiction we have the path $p_0 = (v_0, \dots, v_1)$ in $G-e$, Then $p_0$ is in $C_0$, and in turn $v_1$ is connected to $v_0$ in $T_0$. Contradiction.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 06</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset06/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset06/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset06/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;$(\rightarrow).$ Assume connected $G$ has an Eulerian trail. If $G$ has also an Eulerian circuit then we are done by &lt;em&gt;theorem 3.5&lt;/em&gt;. Then we have trail $t = (v_1, v_2, \dots, v_k)$ where $t$ is not a circuit, i.e $v_1 \neq v_k$.&lt;/p&gt;&#xA;&lt;p&gt;Since the graph is connected, We know all vertices do appear in $t$. For any interior vertex $u$ in $t$ we know it counts two edges by the definition of a trail and the prohibition of self-loops. It follows any vertex $u \neq v_1, v_k$ is of even degree, As its degree is 2 times the number of times it appears in $t$. Moreover $v_1$ counts an additional single edge since the trail starts with it, So its degree is odd. Similarly $v_k$ is of an odd degree.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset06/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;$(\rightarrow).$ Assume connected $G$ has an Eulerian trail. If $G$ has also an Eulerian circuit then we are done by &lt;em&gt;theorem 3.5&lt;/em&gt;. Then we have trail $t = (v_1, v_2, \dots, v_k)$ where $t$ is not a circuit, i.e $v_1 \neq v_k$.&lt;/p&gt;
+&lt;p&gt;Since the graph is connected, We know all vertices do appear in $t$. For any interior vertex $u$ in $t$ we know it counts two edges by the definition of a trail and the prohibition of self-loops. It follows any vertex $u \neq v_1, v_k$ is of even degree, As its degree is 2 times the number of times it appears in $t$. Moreover $v_1$ counts an additional single edge since the trail starts with it, So its degree is odd. Similarly $v_k$ is of an odd degree.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow).$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 1.&lt;/em&gt; All vertices have even degrees.&lt;/p&gt;
+&lt;p&gt;Then by &lt;em&gt;theorem 4.5&lt;/em&gt;, $G$ is Eulerian, So it has an Eulerian trail.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 2.&lt;/em&gt; Exactly 2 vertices have odd degrees. Call them $v_1$ and $v_2$.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 2.1.&lt;/em&gt; Edge $\{ v_1, v_2 \} \in E(G)$.&lt;/p&gt;
+&lt;p&gt;Define $H = G - \{v_1,v_2\}$, Removing the edge in $G$. Then all vertices have even degrees. By &lt;em&gt;Theorem 3.5&lt;/em&gt; $H$ contains an Eulerian circuit $c = (v_1, u_1, u_2, \dots, v_1)$. It follows $G$ has the trail $t = c + (v_1, v_2)$.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 2.2.&lt;/em&gt; Edge $\{ v_1, v_2 \} \notin E(G)$.&lt;/p&gt;
+&lt;p&gt;Define $H = G + \{v_1,v_2\}$, Adding the edge to $G$. Then all vertices have even degrees. By &lt;em&gt;Theorem 3.5&lt;/em&gt; the graph contains an Eulerian circuit $c = (u_1, u_2, \dots, u_{k-1}, u_1)$, Since it covers all the edges, WLOG $(v_1, v_2)$ is contained in it.&lt;/p&gt;
+&lt;p&gt;Construct a new trail $t$ from the circuit $c$, starting at $v_2$ and ending at $v_1$. Clearly $t$ is a trail in $G$. $\blacksquare$&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 07</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset07/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset07/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset07/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; Yes. Let $v_1, \dots, v_n, u_1, \dots, u_n$ be the vertices. Then the cycle $(v_1, u_1, v_2, u_2, \dots, v_n, u_n, v_1)$ is hamiltonian.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;(c).&lt;/strong&gt; No. A counter example is the graph whose vertices are $v_1, v_2, v_3$ and edges are $\\{ v_1, v_2 \\}$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; If $S$ is independent in $G$ then for any $u,v \in S$, $\\{u, v\\} \not\in E(G)$. By definition $\\{u, v\\} \in E(\overline{G})$. So $\\{ u,v \\} \in \langle S \rangle^{\overline{G}}$. The converse holds by symmetry.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset07/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; Yes. Let $v_1, \dots, v_n, u_1, \dots, u_n$ be the vertices. Then the cycle $(v_1, u_1, v_2, u_2, \dots, v_n, u_n, v_1)$ is hamiltonian.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c).&lt;/strong&gt; No. A counter example is the graph whose vertices are $v_1, v_2, v_3$ and edges are $\\{ v_1, v_2 \\}$.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt; If $S$ is independent in $G$ then for any $u,v \in S$, $\\{u, v\\} \not\in E(G)$. By definition $\\{u, v\\} \in E(\overline{G})$. So $\\{ u,v \\} \in \langle S \rangle^{\overline{G}}$. The converse holds by symmetry.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; If $G$ is not $E_k-free$ then $G$ has $E_k$ as an induced subgraph, which in turn is an independent set. It follows $\alpha(G) \geq k$. If $G$ is $E_k-free$ then by definition it does not contain an independent subgraph whose order is at least $k$. So the largest possible independent subgraph is strictly less than $k$. It follows $\alpha(G) &lt; k$.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;The statement is true. If a graph contains a claw as an induced subgraph, Then some vertex has three edges. In other words, Its degree is at least 3. So $\Delta(G) \not \leq 2$. If $\Delta(G) &gt; 2$ then the graph has a vertex with at least 3 edges. The graph induced by that vertex alongside its 3 neighbour vertices is a claw. So $G$ is not claw-free.&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;Denote the vertices of $H$ by $u_1, u_2, \dots, u_n$. Construct $G$, containing $H$ as a subgraph, but with new vertices $\\{ v_i \\}$ and new edges of the path $(v_1, u_1, v_2, u_2, \dots, v_n, u_n, v_1)$.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 08</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset08/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset08/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset08/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Lemma 1.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If a graph is a subdivision of $K_{3,3}$, then it contains $3$ vertices of $deg$ $3$.&lt;/li&gt;&#xA;&lt;li&gt;If a graph is a subdivision of $K_5$, then it contains $5$ vertices of $deg$ $4$.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Corollary 2.&lt;/strong&gt; If a graph neither has a subgraph with $3$ vertices of&#xA;$deg$ $3$, nor a subgraph with $5$ vertices of $deg$ $4$, Then it is&#xA;planar.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;(1).&lt;/strong&gt; $K_{r,s}$ is not planar $\leftrightarrow$ $r \geq 3$ and $s \geq 3$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset08/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma 1.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If a graph is a subdivision of $K_{3,3}$, then it contains $3$ vertices of $deg$ $3$.&lt;/li&gt;
+&lt;li&gt;If a graph is a subdivision of $K_5$, then it contains $5$ vertices of $deg$ $4$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Corollary 2.&lt;/strong&gt; If a graph neither has a subgraph with $3$ vertices of
+$deg$ $3$, nor a subgraph with $5$ vertices of $deg$ $4$, Then it is
+planar.&lt;/p&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(1).&lt;/strong&gt; $K_{r,s}$ is not planar $\leftrightarrow$ $r \geq 3$ and $s \geq 3$.&lt;/p&gt;
+&lt;p&gt;$(\leftarrow).$ Clear as $K_{r,s}$ shall contain $K_{3,3}$ as a subgraph.&lt;/p&gt;
+&lt;p&gt;$(\rightarrow).$ We show the contrapositive. Given $r &lt; 3$ or $s &lt; 3$, The premise of &lt;em&gt;Corollary 2&lt;/em&gt; is clearly satisfied, and hence $K_{r,s}$ is planar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2).&lt;/strong&gt; $K_{r_1, r_2, \dots, r_k}$ is not planar $\leftrightarrow$ there are consecutive $r_i \geq 3$ and $r_{i+1} \geq 3$.&lt;/p&gt;
+&lt;p&gt;Similar to &lt;em&gt;(1)&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$ Trivial as by definition $\bigg \\{ \\{x,y\\}, \\{y,z\\} \bigg \\}$ is a subdivision of $\bigg \\{ \\{x,z\\} \bigg \\}$, resulting in graph $G$ from $H$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 3.&lt;/strong&gt; For any new vertices $a$ and $b$ resulting from subdivisions, incident to existing vertices $x$ and $z$ respectively, $a \neq b$, prohibiting $\bigg \\{ \\{x,a\\}, \\{a,z\\} \bigg \\}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 4.&lt;/strong&gt; Newly added edges from subdivisions are incident to a newly added vertex and to an existing vertex.&lt;/p&gt;
+&lt;p&gt;$(\rightarrow)$. We are given $G$ is a subdivision of $H$. Call the sequence of subdivisions $S_1, S_2, \dots, S_k$, and the corresponding graphs $G_0, G_1, \dots, G_k$, whereby $G_0 = H$ and $G_k = G$.&lt;/p&gt;
+&lt;p&gt;Necessarily some $S_i$ is on edge $\\{xz\\}$. Otherwise by &lt;em&gt;Fact 3&lt;/em&gt; we won&amp;rsquo;t have $\bigg \\{ \\{x,y\\}, \\{y,z\\} \bigg \\}$ in $G$. Clearly a subdivision on $\\{xz\\}$ is unique, Call it $S_m$.&lt;/p&gt;
+&lt;p&gt;By &lt;em&gt;Fact 4&lt;/em&gt; a newly added edge cannot be incident to two existing vertices. It follows edge $\\{ xz \\}$ is not in any $G_j$ for $j \geq m$. In particular $G_k = G$ has no edge $\\{ xz \\}$. $\blacksquare$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a graph $G_i$, If $\\{xy\\}, \\{yz\\} \in E(G_i)$ and $\\{xz\\} \notin E(G_i)$, Construct $G_{i+1} = G_i - \\{xy\\} - \\{yz\\} + \\{xz\\}$. Now given an arbitrary graph $G$ keep applying this procedure until it can no longer be applied. Since the graph has finite edges, The process terminates. So we get $G_0, G_1, \dots, G_k$ where $G_0 = G$ and $G_{i+1}$ is a subdivision of $G_i$. Set $H = G_k$. Now $H$ is not a proper subdivision of any other graph by &lt;em&gt;(a)&lt;/em&gt; $\blacksquare$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(c).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a graph $H$ is not a subdivision of any other graph, and following the same line of reasoning of &lt;em&gt;(b)&lt;/em&gt;, For any $\\{xy\\}, \\{yz\\} \in E(H)$, $\\{xz\\} \in E(H)$. Assuming $H$ is connected,&lt;/p&gt;
+&lt;p&gt;Case $\Delta(G) = 0$. Then $G = K_1$.&lt;/p&gt;
+&lt;p&gt;Case $\Delta(G) = 1$. Then $G = K_2$.&lt;/p&gt;
+&lt;p&gt;Case $\Delta(G) = 2$. Then $G = K_3$, As we must have a vertex of $deg$ $2$, and by hypothesis the endpoints are connected by an edge. The existince of any additional edge shall construct a vertex with $deg$ $3$.&lt;/p&gt;
+&lt;p&gt;If $H$ is not connected, Then each of its components are either $K_1$, $K_2$, or $K_3$. $\blacksquare$&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+2m &amp;amp;= \sum deg , v \\
+&amp;amp;= 24 \cdot 3 \\
+m &amp;amp;= 12 \cdot 3 = 36
+\end{aligned}
+\begin{aligned}
+n - m + r &amp;amp;= 2 \\
+12 - 36 + r &amp;amp;= 2 \\
+r &amp;amp;= 26
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt; Assume for contradiction $\delta(G) \geq 5$. Then
+&lt;/p&gt;
+$$
+m = \frac{1}{2} \sum deg \, v \geq \frac{5}{2} n
+$$&lt;p&gt;By &lt;em&gt;theorem 5.15&lt;/em&gt;
+&lt;/p&gt;
+$$
+m \leq 3 (n - 2) = 3n - 6
+$$&lt;p&gt;It suffices to show $3n - 6 &lt; \frac{5}{2} n$ to obtain a contradiction. Given $n &lt; 12$,
+\begin{aligned}
+n + 5n - 12 &amp;amp;&amp;lt; 12 + 5n - 12 \\
+6n - 12 &amp;amp;&amp;lt; 5n \\
+3n - 6 &amp;amp;&amp;lt; \frac{5}{2} n \quad \blacksquare
+\end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;Not-planar as it contains a subdivision of $K_5$.&lt;/p&gt;
+&lt;img src=./non-planar.jpg width=700&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 09</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset09/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset09/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset09/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;Any $C_n$ with vertices $\\{ v_1, v_2, \dots, v_n \\}$ is &lt;em&gt;3-colorable&lt;/em&gt; by $k = \\{ 1, 2, 3, 1, 2, 3, 1, \dots \\}$.&lt;/p&gt;&#xA;&lt;p&gt;Any $C_n$, where $n$ is even, is &lt;em&gt;2-colorable&lt;/em&gt; by $k = \\{ 1, 2, 1, 2, 1, \dots \\}$. Observe $k(v_i) = 1$ if $i$ is odd and $k(v_i) = 2$ if $i$ is even. Particularly $k(v_1) \neq k(v_n)$.&lt;/p&gt;&#xA;&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fact 1.&lt;/strong&gt; Colouring a graph is equivalent to partitioning it into independent subsets.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset09/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;Any $C_n$ with vertices $\\{ v_1, v_2, \dots, v_n \\}$ is &lt;em&gt;3-colorable&lt;/em&gt; by $k = \\{ 1, 2, 3, 1, 2, 3, 1, \dots \\}$.&lt;/p&gt;
+&lt;p&gt;Any $C_n$, where $n$ is even, is &lt;em&gt;2-colorable&lt;/em&gt; by $k = \\{ 1, 2, 1, 2, 1, \dots \\}$. Observe $k(v_i) = 1$ if $i$ is odd and $k(v_i) = 2$ if $i$ is even. Particularly $k(v_1) \neq k(v_n)$.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact 1.&lt;/strong&gt; Colouring a graph is equivalent to partitioning it into independent subsets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 2.&lt;/strong&gt; Since a colouring exists of any graph, It follows there exist independent subsets $P_i$ of $V(G)$ such that $\bigcup P_i = V(G)$, and $P_i \cap P_j = \phi$ for $i \neq j$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 3.&lt;/strong&gt; $|P_i| \leq \alpha(G)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(a).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a graph, Colour it with $\chi(G)$ colours. By &lt;em&gt;Fact 1&lt;/em&gt; there exists equivalent independent subsets $P_1, P_2, \dots, P_{\chi(G)}$. By &lt;em&gt;Fact 3&lt;/em&gt; &lt;/p&gt;
+$$|G| = \sum_{i=1}^{\chi(G)} |P_i| \leq \sum_{i=1}^{\chi(G)} \alpha(G) = \chi(G) \cdot \alpha(G) \quad \blacksquare$$&lt;p&gt;&lt;strong&gt;(b).&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Given a graph $G$ of order $n$, label its vertices by $v_1, v_2, \dots, v_{\alpha(G)}, v_{\alpha(G)+1}, \dots, v_n$.&lt;/p&gt;
+&lt;p&gt;We know the greedy algorithm constructs a valid colouring for $G$. So the number of colours will be at least $\chi{G}$.&lt;/p&gt;
+&lt;p&gt;By independency, $v_1, v_2, \dots, v_{\alpha(G)}$ counts one colour. It follows $v_{\alpha(G) + 1}, \dots, v_n$ contains at least $\chi_{G} - 1$ vertices to fulfill remaining colours. Therefore
+&lt;/p&gt;
+$$
+|G| = n \geq \alpha(G) + \chi(G) - 1
+$$&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact 4.&lt;/strong&gt; For a possibly disconnected graph $G$, $\Delta(G) = \max \\{ \Delta(G_i) \mid G_i \text{ is a component in } G \\}$, and $\chi(G) = \max \\{ \chi(G_i) \mid G_i \text{ is a component in } G \\}$.&lt;/p&gt;
+&lt;p&gt;The condition is that the graph $G$ contains a component $G_i = C_n$ or $G_i = K_n$ whereby $\Delta(G_i) = \Delta(G)$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sufficient.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case 1.&lt;/em&gt; If the graph contains a component $K_n$ where $\Delta(K_n) = \Delta(G)$, Then $\chi(G) = \chi(K_n)$. To see why, Assume for the sake of contradiction $\chi(G_i) &gt; \chi(K_n)$ for some component $G_i$, Then
+&lt;/p&gt;
+$$
+\chi(G_i) &gt; \chi(K_n) = \Delta(K_n) + 1 = \Delta(G) + 1 \geq \Delta(G_i) + 1
+$$&lt;p&gt;&lt;em&gt;Case 2.&lt;/em&gt; If the graph contains a component $C_n$ for odd $n$ where $2 = \Delta(C_n) = \Delta(G)$ then also $3 = \chi(C_n) = \chi(G)$. To see why, Symmetrically to &lt;em&gt;Case 1&lt;/em&gt;, Assuming $\chi(G_i) &gt; \chi(C_n)$ for any component $G_i$ yields $\chi(G_i) &gt; \Delta(G_i) + 1$.&lt;/p&gt;
+&lt;p&gt;Now for both &lt;em&gt;Case 1&lt;/em&gt; and &lt;em&gt;Case 2&lt;/em&gt;, By &lt;em&gt;Brooke&lt;/em&gt; we know the bound is sharp for component $K_n$ and $C_n$. That implies it is sharp for the whole graph also. For example $\chi(K_n) = \Delta(K_n) + 1$ implies $\chi(G) = \Delta(G) + 1$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Necessary.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We show the contrapositive. Assume for any component $G_i$, If $\Delta(G_i) = \Delta(G)$ then neither $G_i = K_n$ nor $G_i = C_n$. By &lt;em&gt;Brooke&lt;/em&gt;
+&lt;/p&gt;
+$$
+\chi(G_i) &lt; \Delta(G_i) + 1 = \Delta(G) + 1 \quad (1)
+$$&lt;p&gt;
+For components $G_j$ where $\Delta(G_j) &lt; \Delta(G)$, We get
+&lt;/p&gt;
+$$
+\chi(G_j) \leq \Delta(G_j) + 1 &lt; \Delta(G) + 1 \quad (2) \\
+$$&lt;p&gt;
+From $(1)$ and $(2)$, It follows $\chi(G) &lt; \Delta(G) + 1$, i.e the bound is not sharp. $\blacksquare$&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;We reduce the problem to graph colouring as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vertices of the graph are the committees.&lt;/li&gt;
+&lt;li&gt;Two distinct committees $C_i$ and $C_j$ are connected if and only if some member is in both of them.&lt;/li&gt;
+&lt;li&gt;Number of meetings is the number of colours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The resulting graph is&lt;/p&gt;
+&lt;img src=./committee.jpg width=600&gt;
+&lt;p&gt;So 3 meetings are needed.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 10</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset10/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset10/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset10/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;We prove by strong induction the statement: For any $m \geq 0$, If $G$ is a graph with $m$ edges and $n$ vertices, Then&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;$P_G(k) = a_0 + a_1 k^1 + \dots + a_n k^n$, For some polynomial representation.&lt;/li&gt;&#xA;&lt;li&gt;$a_0 = 0$&lt;/li&gt;&#xA;&lt;li&gt;$a_n = 1$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Base case. $m = 0$. Then $G = E_n$, the empty graph with $n$ vertices. By combinatorics we know $P_G(k) = k^n = 0 + (1) k^n$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset10/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;We prove by strong induction the statement: For any $m \geq 0$, If $G$ is a graph with $m$ edges and $n$ vertices, Then&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$P_G(k) = a_0 + a_1 k^1 + \dots + a_n k^n$, For some polynomial representation.&lt;/li&gt;
+&lt;li&gt;$a_0 = 0$&lt;/li&gt;
+&lt;li&gt;$a_n = 1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Base case. $m = 0$. Then $G = E_n$, the empty graph with $n$ vertices. By combinatorics we know $P_G(k) = k^n = 0 + (1) k^n$.&lt;/p&gt;
+&lt;p&gt;Induction hypothesis. Assume the statement holds for any graph with at most $m$ edges for $m \geq 0$.&lt;/p&gt;
+&lt;p&gt;Induction step. For a graph $G$ with $m+1$ edges and $n$ vertices, Note $G$ has some edge $e$ and the graphs $G-e$ and $G/e$ have at most $m$ edges. By &lt;em&gt;Birkhoff&lt;/em&gt; and the &lt;em&gt;induction hypothesis&lt;/em&gt;,
+\begin{aligned}
+P_G(k) &amp;amp;= P_{G-e}(k) - P_{G/e}(k) \\
+&amp;amp;= (0 + a_1 k&lt;sup&gt;1 + \dots + (1) k&lt;/sup&gt;n) - (0 + a_1&amp;rsquo; k&lt;sup&gt;1 + \dots + (1) k&lt;/sup&gt;{n-1}) \\
+&amp;amp;= 0 + (a_1 - a_1&amp;rsquo;) k&lt;sup&gt;1 + \dots + (a_{n-1} - 1) k&lt;/sup&gt;{n-1} + (1) k^n \quad \blacksquare
+\end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(i).&lt;/strong&gt; For a maximum matching $M$, if adding an additional edge results in a valid matching, then $M$ won&amp;rsquo;t be maximum. Hence it is maximal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(ii).&lt;/strong&gt; For a perfect matching $M$ let $k = |M|$. If there were a matching with more than $k$ edges, then that matching shall cover more than $2k$ vertices. That implies the graph contains more than $2k$ vertices, and as a result $M$ does not cover all graph&amp;rsquo;s vertices, so not perfect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(iii).&lt;/strong&gt; Consider the set $AM = \\{ M \mid M \text{ is a matching of } G \\}$. Since a matching $M$ is a subgraph, and there are finitely many subgraphs, it follows $AM$ is finite. Moreover it has a maximum edge size matching.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(iv).&lt;/strong&gt; Call the perfect matching $M_0$ and let $k_0 = |M_0|$. By definition it covers all vertices of the graph, and in turn $G$ has exactly $2k_0$ vertices, Concluding $|G|$ is even.&lt;/p&gt;
+&lt;p&gt;It suffices to prove, If an arbitrary matching $M$ is not perfect, Then it is not maximum. By definition $M$ covers less than $2k_0$ vertices. Then $M$ has less than $k_0$ edges, So $|M| &lt; |M_0|$. Since $M_0$ is a valid matching, It follows $M$ is not maximum. $\blacksquare$&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;(1).&lt;/strong&gt; This is exactly the definition of matching $X$ into $Y$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2).&lt;/strong&gt; We reduce it to &lt;em&gt;Hall&amp;rsquo;s Marriage&lt;/em&gt;. Let $X = \\{ S_i \mid i \in I \\}$ and $Y = \bigcup_{i \in I} S_i$. Now the problem of &lt;em&gt;system of distinct representatives&lt;/em&gt; is equivalent to matching hall of $X$ into $Y$. In other words, Matching childs injectively to gifts is equivalent to matching $S_i$ to representatives. By &lt;em&gt;Hall&amp;rsquo;s Marriage Theorem&lt;/em&gt;, This is possible if and only if $|X| \leq |N(X)|$. However, $|X| = |I|$ and $N(X) = Y$. Therefore &lt;em&gt;system of distinct representatives&lt;/em&gt; is possible &lt;em&gt;iff&lt;/em&gt; $|I| \leq |\bigcup_{i \in I} S_i|$.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Homework 11</title>
-      <link>https://www.mostafatouny.github.io/isabel-graph-post/pset11/</link>
+      <link>https://mostafatouny.github.io/isabel-graph-post/pset11/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/isabel-graph-post/pset11/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;We know a maximum matching $M$ and a minimum covering $C$ do both exist, where $|M| = |C|$.&lt;/p&gt;&#xA;&lt;p&gt;Observe by definition all edges $E(G)$ are exactly the edges incident to cover $C$. Clearly each edge distinctly contributes to the degrees sum. It follows $\sum_{v \in C} deg \ v \geq |E(G)|$.&lt;/p&gt;&#xA;&lt;p&gt;Hence&#xA;&lt;/p&gt;&#xA;$$&#xA;\Delta (G) \ |M| = \Delta (G) \ |C| = \sum_{v \in C} \Delta (G) \geq \sum_{v \in C} deg \ v \geq |E(G)|&#xA;$$&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;&#xA;&lt;p&gt;We reduce the problem to &lt;em&gt;theorem 7.15&lt;/em&gt; and show for any $I \subset \\{1, 2, \dots, r\\}$, $|I| \leq |\bigcup_i S_i|$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/isabel-graph-post/pset11/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;We know a maximum matching $M$ and a minimum covering $C$ do both exist, where $|M| = |C|$.&lt;/p&gt;
+&lt;p&gt;Observe by definition all edges $E(G)$ are exactly the edges incident to cover $C$. Clearly each edge distinctly contributes to the degrees sum. It follows $\sum_{v \in C} deg \ v \geq |E(G)|$.&lt;/p&gt;
+&lt;p&gt;Hence
+&lt;/p&gt;
+$$
+\Delta (G) \ |M| = \Delta (G) \ |C| = \sum_{v \in C} \Delta (G) \geq \sum_{v \in C} deg \ v \geq |E(G)|
+$$&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
+&lt;p&gt;We reduce the problem to &lt;em&gt;theorem 7.15&lt;/em&gt; and show for any $I \subset \\{1, 2, \dots, r\\}$, $|I| \leq |\bigcup_i S_i|$.&lt;/p&gt;
+&lt;p&gt;Take a subset $I = \\{ \pi_1, \pi_2, \dots, \pi_m \\} \subset \\{1, 2, \dots, r\\}$ where $0 \leq m \leq r$. If $m = 0$ then trivially $|I| = 0 = |\phi| = |\bigcup_i S_i|$. Consider $m \geq 1$. Since cardinalities of $S_{\pi_i}$ are all positive and distinct, By the &lt;em&gt;Pigeon Hole Principle&lt;/em&gt;, $m$ subsets cannot be assigned cardinalities between $1$ and $m-1$. Therefore there exists a subset $S$ with $|S| \geq m$. It follows $|\bigcup_i S_{\pi_i}| \geq |S| \geq m = |I|$.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;p&gt;Claim. $R(a,b) \leq R(b,a)$&lt;/p&gt;
+&lt;p&gt;We know there is a $K_{R(b,a)}$ such that any edge 2-coloring either has a red $K_b$ or a green $K_a$ as subgraphs.&lt;/p&gt;
+&lt;p&gt;But if it has a red $K_b$, then trivially it has a green $k_b$, and if it has a green $K_a$, then trivially it has a red $K_a$.&lt;/p&gt;
+&lt;p&gt;Then there is a $K_{R(b,a)}$ such that any edge 2-coloring either has a red $K_a$ or a green $K_b$. Hence, $R(a,b) \leq R(b,a)$.&lt;/p&gt;
+&lt;p&gt;By symmetry $R(b,a) \leq R(a,b)$, Concluding $R(a,b) = R(b,a)$. $\blacksquare$&lt;/p&gt;
+&lt;h3 id=&#34;section-3&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
+&lt;p&gt;Claim. $R(3,3) &gt; 5$.&lt;/p&gt;
+&lt;p&gt;The following edge colouring of $K_5$ neither has a red $K_3$ nor a green $K_3$.&lt;/p&gt;
+&lt;img src=./k5.jpg width=300&gt;
+&lt;p&gt;Observe taking any 3 vertices, 2 of them will be adjacent by a red edge, and 2 of them will be adjacent by a green edge.&lt;/p&gt;
+&lt;p&gt;Claim. $R(3,3) \leq 6$.&lt;/p&gt;
+&lt;p&gt;Fix vertex $v_0$, and consider any edge colouring. Since $deg \ v_0 = 5$, Necessarily $3$ of which are of the same colour. WLOG assume the colour is &lt;em&gt;green&lt;/em&gt;. Call those $3$ vertices $x_1, x_2, x_3$. As in the following figure we have two cases:&lt;/p&gt;
+&lt;img src=./k3-in-k6.jpg width=700&gt;
+&lt;p&gt;Either $x_1, x_2, x_3$ form a red $K_3$, or some edge of them is green, for example edge $\\{x_1, x_3\\}$. Therefore, Either the graph contains a &lt;em&gt;red&lt;/em&gt; $K_3$ or a &lt;em&gt;green&lt;/em&gt; $K_3$. $\blacksquare$&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

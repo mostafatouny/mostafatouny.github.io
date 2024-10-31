@@ -1,11 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Mostafa Touny</title>
-    <link>https://www.mostafatouny.github.io/tags/</link>
-    <description>Recent content in Tags on Mostafa Touny</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://www.mostafatouny.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/tags/</link>
+      <atom:link href="https://mostafatouny.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
+      <title>Tags</title>
+      <link>https://mostafatouny.github.io/tags/</link>
+    </image>
+    
   </channel>
 </rss>

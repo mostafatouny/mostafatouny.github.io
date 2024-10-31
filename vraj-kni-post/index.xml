@@ -1,33 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms on Mostafa Touny</title>
-    <link>https://www.mostafatouny.github.io/vraj-kni-post/</link>
-    <description>Recent content in Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms on Mostafa Touny</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mostafatouny.github.io/vraj-kni-post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/vraj-kni-post/</link>
+      <atom:link href="https://mostafatouny.github.io/vraj-kni-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
+      <title>Vrajitoru &amp; Knight&#39;s Probabilistic Analysis of Algorithms</title>
+      <link>https://mostafatouny.github.io/vraj-kni-post/</link>
+    </image>
+    
     <item>
       <title>Chapter 04 - Section 02</title>
-      <link>https://www.mostafatouny.github.io/vraj-kni-post/ch04-sec02/</link>
+      <link>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</link>
       <pubDate>Tue, 30 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch04-sec02/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;&#xA;&lt;p&gt;We follow the standard recipe.&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{align*}&#xA;    r^2 &amp;= 3r + 10 \\\\&#xA;    r^2 - 3r - 10 &amp;= 0 \\\\&#xA;    (r + 2)(r - 5) &amp;= 0 \\\\&#xA;\end{align*}&#xA;$$&lt;p&gt;&#xA;$r = -2$ or $r = 5$. The general solution form is $\alpha_1(-2)^n + \alpha_2(5)^n$. From the base cases:&#xA;&lt;/p&gt;&#xA;$$&#xA;\begin{align*}&#xA;    F(0) &amp;= 4 \\\\&#xA;    &amp;= \alpha_1 + \alpha_2 \\\\&#xA;    F(1) &amp;= 13 \\\\&#xA;    &amp;= -2 \alpha_1 + 5 \alpha_2 \\\\&#xA;\end{align*}&#xA;$$&lt;p&gt;&#xA;Which by substitution implies $\alpha_1 = 1$ and $\alpha_2 = 3$. Therefore $F(n) = (-2)^n + 3 (5)^n$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/vraj-kni-post/ch04-sec02/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;9&lt;/h3&gt;
+&lt;p&gt;We follow the standard recipe.
+&lt;/p&gt;
+$$
+\begin{align*}
+    r^2 &amp;= 3r + 10 \\\\
+    r^2 - 3r - 10 &amp;= 0 \\\\
+    (r + 2)(r - 5) &amp;= 0 \\\\
+\end{align*}
+$$&lt;p&gt;
+$r = -2$ or $r = 5$. The general solution form is $\alpha_1(-2)^n + \alpha_2(5)^n$. From the base cases:
+&lt;/p&gt;
+$$
+\begin{align*}
+    F(0) &amp;= 4 \\\\
+    &amp;= \alpha_1 + \alpha_2 \\\\
+    F(1) &amp;= 13 \\\\
+    &amp;= -2 \alpha_1 + 5 \alpha_2 \\\\
+\end{align*}
+$$&lt;p&gt;
+Which by substitution implies $\alpha_1 = 1$ and $\alpha_2 = 3$. Therefore $F(n) = (-2)^n + 3 (5)^n$.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Chapter 02 - Section 01</title>
-      <link>https://www.mostafatouny.github.io/vraj-kni-post/ch02-sec01/</link>
+      <link>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch02-sec01/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;&#xA;&lt;p&gt;No. The statement holds if and only if $x$ is not integer. For example $\lceil 1 \rceil = 1 \neq 1 + \lfloor 1 \rfloor = 2$.&lt;/p&gt;&#xA;&lt;p&gt;Let $x = z + y$ where $z$ is integer and $0 &lt; y &lt; 1$. Then $\lceil x \rceil = z + 1 = \lfloor x \rfloor + 1$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/vraj-kni-post/ch02-sec01/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
+&lt;p&gt;No. The statement holds if and only if $x$ is not integer. For example $\lceil 1 \rceil = 1 \neq 1 + \lfloor 1 \rfloor = 2$.&lt;/p&gt;
+&lt;p&gt;Let $x = z + y$ where $z$ is integer and $0 &lt; y &lt; 1$. Then $\lceil x \rceil = z + 1 = \lfloor x \rfloor + 1$.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Chapter 06 - Section 07</title>
-      <link>https://www.mostafatouny.github.io/vraj-kni-post/ch06-sec07/</link>
+      <link>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/vraj-kni-post/ch06-sec07/</guid>
-      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a set $A$ of distinct elements in a random order, The positition of the maximum element of a subset $S \subset A$ is uniform in $S$.&lt;/p&gt;&#xA;&lt;p&gt;Define indicator random variables $L_i$ as&#xA;&lt;/p&gt;&#xA;$$&#xA;L_i =&#xA;    \begin{cases} &#xA;        1 &amp; a_i &gt; a_{i-1}, a_{i-2}, \dots, a_{1} \\\\&#xA;        0 &amp; a_i &lt; a_j, \text{ for some } j = 1,2, \dots, i-1 &#xA;    \end{cases}&#xA;$$&lt;p&gt;&#xA;So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/vraj-kni-post/ch06-sec07/</guid>
+      <description>&lt;p&gt;$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;3&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a set $A$ of distinct elements in a random order, The positition of the maximum element of a subset $S \subset A$ is uniform in $S$.&lt;/p&gt;
+&lt;p&gt;Define indicator random variables $L_i$ as
+&lt;/p&gt;
+$$
+L_i =
+    \begin{cases} 
+        1 &amp; a_i &gt; a_{i-1}, a_{i-2}, \dots, a_{1} \\\\
+        0 &amp; a_i &lt; a_j, \text{ for some } j = 1,2, \dots, i-1 
+    \end{cases}
+$$&lt;p&gt;
+So $L_i = 1$ if and only if the ith item $a_i$ is the maximum in subset $A[1:i]$.&lt;/p&gt;
+&lt;p&gt;It follows $Pr[L_i = 1] = 1/i$ and $Ex[Li] = 1/i$.&lt;/p&gt;
+&lt;p&gt;Let $X$ be a random variable for the number of times the line &lt;code&gt;a[first] &amp;gt; a[max_loc]&lt;/code&gt; returns &lt;code&gt;True&lt;/code&gt;. Observe $X = L_2 + L_3 + \dots + L_n$. So $Ex[X] = 1/2 + \dots + 1/n = H(n) - 1 \approx \ln n - 1$.&lt;/p&gt;
+&lt;p&gt;$H(n)$ here is the nth harmonic sum.&lt;/p&gt;
+&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;4&lt;/h3&gt;
+&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Note.&lt;/strong&gt; Our solution was initially flawed until we read the description of &lt;em&gt;exercise 6&lt;/em&gt; which gave the correct answer. We only reconstructred the proof given the answer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 1.&lt;/strong&gt; On the ith step of the first pass of bubble-sort, $A[i]$ is the maximum element among $A[0:i]$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 2.&lt;/strong&gt; Given $A$ is a set of distinct elements in a random order, The probability of $A[i]$ being the maximum element of $A[0:i]$ is $\frac{\displaystyle{1}}{\displaystyle{i+1}}$.&lt;/p&gt;
+&lt;p&gt;Let $R_i$ be an indicator random variable, Indicating whether $A[i] &gt; A[i+1]$, at the ith step of the loop. From &lt;em&gt;Fact 1&lt;/em&gt;, $R_i = 1$ if and only if $A[i+1]$ is not the maximum among $A[0:i+1]$. The probability of that event is $\frac{\displaystyle{i+1}}{\displaystyle{i+2}}$ from &lt;em&gt;Fact 2&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Clearly $Ex[R_i] = \frac{\displaystyle{i+1}}{\displaystyle{i+2}}$. It follows $W = \sum_{i=0}^{n-2} R_i = \frac{\displaystyle{1}}{\displaystyle{2}} + \frac{\displaystyle{2}}{\displaystyle{3}} + \dots + \frac{\displaystyle{n-1}}{\displaystyle{n}} = (n-1) - \left ( \nfrac{1}{2} + \nfrac{1}{3} + \dots + \nfrac{1}{n} \right ) = n - 1 - H_n + 1 \approx n - \lg n$.&lt;/p&gt;
+&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
+&lt;p&gt;That event happens if and only if&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$max(A[1], A[2]) &lt; A[3]$. Its probability is $\frac{\displaystyle{2}}{\displaystyle{3}}$. Or&lt;/li&gt;
+&lt;li&gt;$max(A[1], A[2]) &gt; A[3]$ and $A[1] &lt; A[3]$. Its probability is $\frac{\displaystyle{1}}{\displaystyle{3}} \cdot \frac{\displaystyle{1}}{\displaystyle{2}} = \frac{\displaystyle{1}}{\displaystyle{6}}$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So the probability $A[1] &lt; A[2]$ after the first pass of bubble-sort is $\frac{\displaystyle{2}}{\displaystyle{3}} + \frac{\displaystyle{1}}{\displaystyle{6}} = \frac{\displaystyle{4}}{\displaystyle{6}} = \frac{\displaystyle{2}}{\displaystyle{3}}$.&lt;/p&gt;
+&lt;h3 id=&#34;section-2&#34; class=&#34;unnumbered&#34;&gt;5&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Given a randomly ordered $A$, Any $A[:K]$ is also randomly ordered.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; Uniformly $A[k] \in \{ q_1, q_2, \dots, q_k \}$ where $q_i \in A[:k]$ and $q_1 &gt; q_2 &gt; \dots &gt; q_k$.&lt;/p&gt;
+&lt;p&gt;In kth iteration, $A[1:k-1]$ is sorted, and $A[k]$ will be uniformly displaced to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;position $k, k-1, \dots, 1$. Respectively,&lt;/li&gt;
+&lt;li&gt;#comparisons $= 1,2, \dots, k$. Respectively,&lt;/li&gt;
+&lt;li&gt;#assignments $= 0, 1, \dots, k-1$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Denote total number of comparisons by $C$ and comparisons in kth iteration by $C_k$. Similarly $A$ and $A_k$ for assignments. In expectation
+\begin{aligned}
+Ex[C_k] &amp;amp;= \nfrac{1}{k} (1 + \dots + k) = \nfrac{1}{k} \nfrac{k \cdot k+1}{2} = \nfrac{k+1}{2} \\
+Ex[A_k] &amp;amp;= \nfrac{1}{k} (1 + \dots + k-1) = \nfrac{1}{k} \nfrac{(k-1)k}{2} = \nfrac{k-1}{2}
+\end{aligned}
+Clearly $C = \sum_{k=2}^n C_k$ and $A = \sum_{k=2}^n A_k$. So
+\begin{aligned}
+Ex[C] &amp;amp;= \sum_{k=2}^n \nfrac{k+1}{2} \\
+&amp;amp;= \nfrac{1}{2} \sum_{k=2}&lt;sup&gt;n k+1 \\
+&amp;amp;= \nfrac{1}{2} \left [ ( \sum_{k=1}&lt;/sup&gt;{n+1} k) - 1 - 2 \right ] \\
+&amp;amp;= \nfrac{1}{2} \left [ \nfrac{(n+1)(n+2)}{2} - 3 \right ] \\
+&amp;amp;= \nfrac{(n+1)(n+2)}{4} - \nfrac{3}{2} \\
+Ex[A] &amp;amp;= \sum_{k=2}^n \nfrac{k-1}{2} \\
+&amp;amp;= \nfrac{1}{2} \sum_{k=2}&lt;sup&gt;n k-1 \\
+&amp;amp;= \nfrac{1}{2} \sum_{k=1}&lt;/sup&gt;{n-1} k \\
+&amp;amp;= \nfrac{1}{2} \nfrac{n(n-1)}{2} \\
+&amp;amp;= \nfrac{n(n-1)}{4}
+\end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;6&#34;&gt;6&lt;/h3&gt;
+&lt;p&gt;The fact $Ex[W_n] = n - H(n)$ rests on the assumption array $A$ is randomly ordered. That is not the case after the first pass. This is clear from our answer in &lt;em&gt;Ex. 4, b&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;9&#34;&gt;9&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Fact 1.&lt;/strong&gt; The number of comparisons took by the algorithm is decided by the smaller-position target.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 2.&lt;/strong&gt; Given $A$ is randomly ordered, target $t_1$ is uniform among all $n$ positions, and target $t_2$ is uniform among all remaining $n-1$ positions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact 3.&lt;/strong&gt; Since we are operating on remaining $n-1$ positions, The choice of $t_1$ is irrelevant. In other words the two events independent.&lt;/p&gt;
+&lt;p&gt;Let $R$ be the number of algorithm&amp;rsquo;s comparisons. Let $W$ be the position of smaller-position target. By &lt;em&gt;Fact 1&lt;/em&gt; $R = W+1$. Observe $Pr[W=0] = Pr[R=1] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-1}}{\displaystyle{n-1}}$, $Pr[W=1] = Pr[R=2] = \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-2}}{\displaystyle{n-1}}$&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex09-0.png&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Generally, for $k \in \{ 0, 1, \dots, n-1 \}$, $Pr[R=k] = \frac{\displaystyle{n-k}}{\displaystyle{n-1}}$. So by definition,
+\begin{aligned}
+Ex[R] &amp;amp;= \sum_{k=1}&lt;sup&gt;{n-1} i \cdot \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{n-i}}{\displaystyle{n-1}} \\
+&amp;amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \sum_{i=1}&lt;/sup&gt;{n-1} i (n-i) \\
+&amp;amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \left ( n \sum_{i=1}&lt;sup&gt;{n-1} i - \sum_{i=1}&lt;/sup&gt;{n-1} i^2 \right ) \\
+&amp;amp;= \frac{\displaystyle{1}}{\displaystyle{n}} \cdot \frac{\displaystyle{1}}{\displaystyle{n-1}} \left ( n \frac{\displaystyle{n(n-1)}}{\displaystyle{2}} - \frac{\displaystyle{(n-1)n(2n-1)}}{\displaystyle{6}} \right ) \\
+&amp;amp;= \frac{\displaystyle{3n}}{\displaystyle{6}} - \frac{\displaystyle{2n-1}}{\displaystyle{6}} = \frac{\displaystyle{n+1}}{\displaystyle{6}}
+\end{aligned}&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

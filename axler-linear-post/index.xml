@@ -1,40 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Axler&#39;s Linear Algebra on Mostafa Touny</title>
-    <link>https://www.mostafatouny.github.io/axler-linear-post/</link>
-    <description>Recent content in Axler&#39;s Linear Algebra on Mostafa Touny</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.mostafatouny.github.io/axler-linear-post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Axler&#39;s Linear Algebra | Mostafa Touny</title>
+    <link>https://mostafatouny.github.io/axler-linear-post/</link>
+      <atom:link href="https://mostafatouny.github.io/axler-linear-post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Axler&#39;s Linear Algebra</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
+      <title>Axler&#39;s Linear Algebra</title>
+      <link>https://mostafatouny.github.io/axler-linear-post/</link>
+    </image>
+    
     <item>
       <title>Ch. 03, Sec. F</title>
-      <link>https://www.mostafatouny.github.io/axler-linear-post/ch03-secf/</link>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</link>
       <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/axler-linear-post/ch03-secf/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;&#xA;&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch03-secf/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
+&lt;p&gt;Assume $\varphi$ is not the zero map. Then for some vector $v_0$, $\varphi(v_0) = \lambda_0 \neq 0$. Let $\lambda \in F$ be arbitrary. Then by linearity $\varphi(\lambda \cdot (\lambda_0)^{-1} v_0) = \lambda (\lambda_0)^{-1} \lambda_0 = \lambda$. Hence surjective.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch. 03, Sec. E</title>
-      <link>https://www.mostafatouny.github.io/axler-linear-post/ch03-sece/</link>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch03-sece/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/axler-linear-post/ch03-sece/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;&#xA;&lt;p&gt;It follows immediately by &lt;em&gt;dimension of a product&lt;/em&gt; theorem (page 92), As any $dim V_j$ must be upper-bounded by a finite number.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch03-sece/</guid>
+      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
+&lt;p&gt;It follows immediately by &lt;em&gt;dimension of a product&lt;/em&gt; theorem (page 92), As any $dim V_j$ must be upper-bounded by a finite number.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch. 07, Sec. B</title>
-      <link>https://www.mostafatouny.github.io/axler-linear-post/ch07-secb/</link>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/axler-linear-post/ch07-secb/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;&#xA;&lt;p&gt;False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.&lt;/p&gt;&#xA;&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;&#xA;&lt;p&gt;Assume $F = \mathbb{R}$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$&lt;/p&gt;&#xA;&lt;p&gt;The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch07-secb/</guid>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex.-01&#34; class=&#34;unnumbered&#34;&gt;Ex. 01&lt;/h3&gt;
+&lt;p&gt;False. If there is a basis consisting of eigenvectors of $T$, Then $M(T)$ is diagonal. It follows $M(T) M(T)^* = M(T)^* M(T)$, Equivalently $TT^* = T^*T$, So $T$ is self-adjoint.&lt;/p&gt;
+&lt;h3 id=&#34;ex.-02&#34; class=&#34;unnumbered&#34;&gt;Ex. 02&lt;/h3&gt;
+&lt;p&gt;Assume $F = \mathbb{R}$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Observation.&lt;/strong&gt; $p(x) = x^2 -5x + 6 = (x-2)(x-3)$. $p(T) = T^2 -5T + 6I = (T-2I)(T-3I)$&lt;/p&gt;
+&lt;p&gt;The goal is $p(T) = 0$. It suffices to show $p(T)v = 0$ for any vector $v$.&lt;/p&gt;
+&lt;p&gt;By &lt;em&gt;Real Spectral Theorem&lt;/em&gt; (p. 221), There is a basis of eigenvectors of $T$ corresponding to eigenvalues $\lambda_1, .., \lambda_n$. By hypothesis we know $\lambda_i = 2$ or $\lambda_i = 3$.&lt;/p&gt;
+&lt;p&gt;Let $v$ be an arbitrary vector $v$. Then $v = a_1v_1 + \dots + a_nv_n$. Observe $p(T)(v) = p(T)(a_1v_1) + \dots + p(T)(a_nv_n) = a_1p(\lambda_1)v_1 + \dots + a_np(\lambda_n)v_n$. But $p(\lambda_i) = 0$, so $p(T)v = 0$.&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>Ch. 07, Sec. A</title>
-      <link>https://www.mostafatouny.github.io/axler-linear-post/ch07-seca/</link>
+      <link>https://mostafatouny.github.io/axler-linear-post/ch07-seca/</link>
       <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.mostafatouny.github.io/axler-linear-post/ch07-seca/</guid>
-      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;&#xA;&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ex-11&#34;&gt;Ex. 11&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./ex-11.jpg&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;$(\rightarrow)$ Observe $v = v_U + v_{U^\bot}$ and $w = w_U + w_{U^\bot}$. Clearly,&#xA;\begin{aligned}&#xA;\langle Pv, w \rangle &amp;amp;= \langle v_U, w \rangle \\&#xA;&amp;amp;= \langle v_U, w_{U^\bot} \rangle + \langle v_U, w_U \rangle \\&#xA;&amp;amp;= 0 + \langle v_U, w_U \rangle \\&#xA;\langle v, Pw \rangle &amp;amp;= \langle v_{U^\bot}, w_U \rangle + \langle v_U, w_U      \rangle \\&#xA;&amp;amp;= 0 + \langle v_U, w_U \rangle&#xA;\end{aligned}&lt;/p&gt;</description>
+      <guid>https://mostafatouny.github.io/axler-linear-post/ch07-seca/</guid>
+      <description>&lt;p&gt;$\newcommand{\ddfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$&lt;/p&gt;
+&lt;h2 id=&#34;exercises&#34;&gt;Exercises&lt;/h2&gt;
+&lt;h3 id=&#34;ex-11&#34;&gt;Ex. 11&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-11.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;$(\rightarrow)$ Observe $v = v_U + v_{U^\bot}$ and $w = w_U + w_{U^\bot}$. Clearly,
+\begin{aligned}
+\langle Pv, w \rangle &amp;amp;= \langle v_U, w \rangle \\
+&amp;amp;= \langle v_U, w_{U^\bot} \rangle + \langle v_U, w_U \rangle \\
+&amp;amp;= 0 + \langle v_U, w_U \rangle \\
+\langle v, Pw \rangle &amp;amp;= \langle v_{U^\bot}, w_U \rangle + \langle v_U, w_U      \rangle \\
+&amp;amp;= 0 + \langle v_U, w_U \rangle
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;$(\leftarrow)$ For $U = range \ T$ and $v = v_U + v_{U^\bot}$, we show $Tv = v_U$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $Tv_U = v_U$.&lt;/p&gt;
+&lt;p&gt;Since $v_U \in range \ T$, by definition we know $Tv_0 = v_U$. So $T(Tv_0) = Tv_0$ as $T^2 = T$, which concludes $Tv_U = v_U$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $Tv_{U^\bot} = 0$.&lt;/p&gt;
+&lt;p&gt;By definition we know $v_{U^\bot} \in (range \ T)^\bot$. But given $T$ is &lt;em&gt;self-adjoint&lt;/em&gt;, $(range \ T)^\bot = null \ T$. So $v_{U^\bot} \in null \ T$.&lt;/p&gt;
+&lt;p&gt;In conclusion, $Tv = Tv_U + Tv_{U^\bot} = v_U + 0 = v_U$.&lt;/p&gt;
+&lt;h3 id=&#34;ex-17&#34;&gt;Ex. 17&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-17.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fact.&lt;/strong&gt; For $normal \ T$, $range \ T$ = $range \ T^\*$ and $null \ T = null \ T^\*$. For any $T$, $range \ T = (null \ T^\*)^\bot$. See &lt;em&gt;ex.16&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For $normal \ T$, $range \ T \cap null \ T = \{0\}$.&lt;/p&gt;
+&lt;p&gt;Observe $L.H.S = (null \ T^\*)^\bot \cap (null \ T^\*)$ by the aforementioned facts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $null \ T^k = null \ T$.&lt;/p&gt;
+&lt;p&gt;Clearly $null \ T \subset null \ T^k$ as $T0 = 0$ for any operator $T$. It remains to show $null \ T^k \subset null \ T$.&lt;/p&gt;
+&lt;p&gt;$v \rightarrow^T v_1 \rightarrow^T v_2 \rightarrow^T \dots \rightarrow^T v_k = 0$.&lt;/p&gt;
+&lt;p&gt;$v_{k-1} \in range \ T \cap null \ T$, so $v_{k-1} = 0$.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;$v_1 \in range \ T \cap null \ T$, so $v_1 = 0$.&lt;/p&gt;
+&lt;p&gt;Thus $Tv = v_1 = 0$, and $v \in null \ T$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; $range \ T^k = range \ T$.&lt;/p&gt;
+&lt;p&gt;Let $T&#39;$ be the same as $T$ but restricted on subspace $range \ T$. Observe it is a linear operator.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./T_dot.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;We prove $null \ T&#39; = \{0\}$. Observe for $v \in null \ T&#39;$, $v \in range \ T \cap null \ T$, and hence $v = 0$. Clearly $T&#39;0 = 0$ as $T0 = 0$ for any operator $T$.&lt;/p&gt;
+&lt;p&gt;It follows $dim \ null \ T&#39; = 0$. By &lt;em&gt;The Fundamental Theorem of Linear Maps&lt;/em&gt; (See Axler page 63), $dim \ range \ T = dim \ range \ T&#39;$. But by definition $range \ T&#39; \subset range \ T$, and therefore $range \ T&#39; = range \ T$.&lt;/p&gt;
+&lt;p&gt;We conclude $T[range \ T] = range \ T$, The image of $range \ T$ under $T$ is exactly $range \ T$. Clearly it suffices to prove our intended theorem.&lt;/p&gt;
+&lt;h3 id=&#34;ex-19&#34;&gt;Ex. 19&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./ex-19.jpg&#34; alt=&#34;image&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;By normality we know $null \ T = (range \ T)^\bot$. So $(z_1, z_2, z_3) \bot v$, for any $v \in ran \ T$. It follows
+\begin{align*}
+(z_1, z_2, z_3) \cdot v &amp;amp;= 0 \\
+(z_1, z_2, z_3) \cdot T(1, 1, 1) &amp;amp;= 0 \\
+&amp;amp;= (z_1, z_2, z_3) \cdot (2, 2, 2) = 2 z_1 + 2 z_2 + 2 z_3 = 2 (z_1 + z_2 +    z_3)
+\end{align*}
+Thus $z_1 + z_2 + z_3 = 0$.&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

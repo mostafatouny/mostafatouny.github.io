@@ -1,0 +1,927 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: October 31, 2024 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="dark">
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mostafa Touny" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mostafatouny.github.io/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+    
+    <link href="/css/custom.min.ca318089a9c54a1d155902d657869eaad57839491546ce606f11615595739081.css" rel="stylesheet" />
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Mostafa Touny" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu15058970365499436532.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2663279629434353957.png" />
+
+  <link rel="canonical" href="https://mostafatouny.github.io/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="Mostafa Touny" />
+  <meta property="og:url" content="https://mostafatouny.github.io/" />
+  <meta property="og:title" content="Mostafa Touny" />
+  <meta property="og:description" content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website." /><meta property="og:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" />
+    <meta property="twitter:image" content="https://mostafatouny.github.io/media/icon_hu8668531883193548421.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta property="og:updated_time" content="2024-10-28T00:00:00&#43;00:00" />
+    
+  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite","url": "https://mostafatouny.github.io/"
+}
+</script>
+
+
+  
+
+
+  <title>Mostafa Touny</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
+    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+      
+    
+  
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Mostafa Touny">
+        
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          
+          href="/"
+        >About</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/post/"
+        >Blog</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+
+        
+      
+    </div>
+    <div class="page-body ">
+      
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-biography" class="relative hbb-section blox-resume-biography  "  >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="profile" class="resume-biography flex justify-center items-center flex-col dark:text-white">
+  
+
+  <div class="avatar-wrapper mt-10">
+    
+    <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1" src="/author/mostafa-touny/avatar_hu17368510515694505972.jpg" alt="Mostafa Touny"
+         width="150" height="150">
+    
+  </div>
+  
+
+  <div class="text-3xl font-bold mb-2 mt-6">Mostafa Touny</div>
+
+  <h3 class="font-semibold mb-1">RA at AUC</h3>
+
+  
+  <div class="mb-2">
+    <a href="https://www.aucegypt.edu/" target="_blank" rel="noopener">
+    <div>AUC | Egypt</div>
+    </a>
+  </div>
+  
+
+  <ul class="network-icon dark:text-zinc-100">
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://u.pc.cd/lr3rtalK" target="_blank" rel="noopener" aria-label="hero/paper-clip"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18.375 12.739l-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13"/></svg>
+      </a>
+    </li>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:mostafatouny%3cat%3eproton%3cdot%3eme"  aria-label="hero/envelope"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+      </a>
+    </li>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://t.me/mostafatouny" target="_blank" rel="noopener" aria-label="brands/telegram"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M236.88 26.19a9 9 0 0 0-9.16-1.57L25.06 103.93a14.22 14.22 0 0 0 2.43 27.21L80 141.45V200a15.92 15.92 0 0 0 10 14.83 15.91 15.91 0 0 0 17.51-3.73l25.32-26.26L173 220a15.88 15.88 0 0 0 10.51 4 16.3 16.3 0 0 0 5-.79 15.85 15.85 0 0 0 10.67-11.63L239.77 35a9 9 0 0 0-2.89-8.81Zm-61.14 36-89.59 64.16-49.6-9.73ZM96 200v-47.48l24.79 21.74Zm87.53 8-82.68-72.5 119-85.29Z"/></svg>
+      </a>
+    </li>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/Mostafa_Touny" target="_blank" rel="noopener" aria-label="brands/x"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+      </a>
+    </li>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/mostafa-touny/" target="_blank" rel="noopener" aria-label="brands/linkedin"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    </li>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/mostafa.touny/" target="_blank" rel="noopener" aria-label="brands/instagram"
+         >
+        <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.91 12.909c.326-.327.582-.72.749-1.151c.16-.414.27-.886.302-1.578c.032-.693.04-.915.04-2.68c0-1.765-.008-1.987-.04-2.68c-.032-.692-.142-1.164-.302-1.578a3.185 3.185 0 0 0-.75-1.151a3.187 3.187 0 0 0-1.151-.75c-.414-.16-.886-.27-1.578-.302C9.487 1.007 9.265 1 7.5 1c-1.765 0-1.987.007-2.68.04c-.692.03-1.164.14-1.578.301a3.2 3.2 0 0 0-1.151.75a3.2 3.2 0 0 0-.75 1.151c-.16.414-.27.886-.302 1.578C1.007 5.513 1 5.735 1 7.5c0 1.765.007 1.987.04 2.68c.03.692.14 1.164.301 1.578c.164.434.42.826.75 1.151c.325.33.718.586 1.151.75c.414.16.886.27 1.578.302c.693.031.915.039 2.68.039c1.765 0 1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.323 3.323 0 0 0 1.151-.75ZM2 6.735v1.53c-.002.821-.002 1.034.02 1.5c.026.586.058 1.016.156 1.34c.094.312.199.63.543 1.012c.344.383.675.556 1.097.684c.423.127.954.154 1.415.175c.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02c.585-.027 1.015-.059 1.34-.156c.311-.094.629-.2 1.011-.543c.383-.344.556-.676.684-1.098c.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096 0-1.303-.023-1.826c-.021-.461-.049-.992-.176-1.414c-.127-.423-.3-.754-.684-1.098c-.383-.344-.7-.449-1.011-.543c-.325-.097-.755-.13-1.34-.156A27.29 27.29 0 0 0 8.24 2H7.057c-1.096 0-1.304 0-1.826.023c-.461.021-.992.049-1.415.176c-.422.128-.753.301-1.097.684c-.344.383-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34c-.022.466-.022.679-.02 1.5ZM7.5 5.25a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5ZM4.25 7.5a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0Zm6.72-2.72a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5Z" clip-rule="evenodd"/></svg>
+      </a>
+    </li>
+    
+  </ul>
+
+  
+  <div class="pt-2 d-flex justify-content-center prose prose-slate lg:prose-xl dark:prose-invert">
+    <div class="bio-text" >
+      <p><strong>Currently</strong></p>
+<ul>
+<li>Research Assistant at The American University in Cairo
+<ul>
+<li>Co-advised by both <a href="https://sites.google.com/view/daoudsiniora" target="_blank" rel="noopener">Dr. Daoud Siniora</a> and <a href="https://www.aucegypt.edu/fac/amr-el-mougy" target="_blank" rel="noopener">Dr. Amr El-Mougy</a>.</li>
+<li>Ethical Autonomous Vehicles with Provable Guarantees.</li>
+<li>Combining Learning-driven Deep Reinforcement Learning with Proven Logical Model.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Interests</strong></p>
+<ul>
+<li>Computational Social Choice, and broadly economics &amp; computation theory.</li>
+<li>Provable algorithms on continuous structures.</li>
+<li>Learning-augmented algorithms.</li>
+<li>Trustworthy and Machine Learning Theory.</li>
+</ul>
+<p><strong>Vision</strong></p>
+<p>The internet revolutionized humanity&rsquo;s connectivity, and AI revolutionized information flow, and yet rarely do we cooperate. Socialists have ambitions for <a href="https://cci.mit.edu" target="_blank" rel="noopener">Collective Intelligence</a>, A paradigm of AI which enables coherent cooperation among the crowd, but it is not recognized in technical communities.</p>
+<p>Theoretical research of optimization, fairness, and social-choice is active on combinatorial structures, but their applicability is limited. Practitioners train predictive models on crowds&rsquo; data, but their pragmatic methods lack theoretical understanding.</p>
+<p>I aspire to:</p>
+<ol>
+<li>
+<p>Study social choice on structures other than combinatorics, Probably on continuous data, Expanding novel ideas, techniques, and applications. I liked <a href="https://arxiv.org/abs/2309.01291" target="_blank" rel="noopener">Generative Social Choice</a>.</p>
+</li>
+<li>
+<p>Extend learning-augmented algorithms on computational social choice and algorithmic game theory, Utilizing data to shed new lights on algorithmic fairness and economics. I liked <a href="https://arxiv.org/abs/2204.01120" target="_blank" rel="noopener">Learning-Augmented Mechanism Design: Leveraging Predictions for Facility Location</a>.</p>
+</li>
+</ol>
+<p>Both of which, Emphasized on theoretical foundations and provably guaranteed frameworks using proof and logic techniques.</p>
+<p>I will always be remembering <a href="https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021" target="_blank" rel="noopener">Oded and Avi&rsquo;s 1996 essay</a>.</p>
+<p><strong>Society &amp; Community.</strong> I am delighted to moderate <a href="https://www.reddit.com/r/theoreticalcs" target="_blank" rel="noopener">TCS&rsquo;s subreddit</a> and <a href="https://github.com/mostafatouny/awesome-theoretical-computer-science" target="_blank" rel="noopener">TCS&rsquo;s awesome list</a>, Getting the chance to meet students from all over the world.</p>
+<p><strong>Good Memories.</strong></p>
+<ul>
+<li><a href="https://x.com/Mostafa_Touny/status/1758206433969963486?s=20" target="_blank" rel="noopener">ACM&rsquo;s Economics &amp; Computation Winter Gathering, With Alvin Roth and Noam Nisam</a></li>
+<li><a href="https://youtu.be/nMm6-20OI94?si=P4bSchKYpLBZzzs9&amp;t=1685" target="_blank" rel="noopener">Asking Gkatzelis about Learning-Augmentation for Voting and Fairness</a></li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1480568006875004930" target="_blank" rel="noopener">Chi-Ning Chou&rsquo;s Minicourse</a> (course details <a href="https://cnchou.github.io/mini-course/" target="_blank" rel="noopener">here</a>)</li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1422972878065184768" target="_blank" rel="noopener">COLT 2021 Mentorship Workshop</a></li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1386012832156749825" target="_blank" rel="noopener">Rahul Llango&rsquo;s talk, Towards Hardness for the Minimum Circuit Size Problem</a></li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1380969863708041218" target="_blank" rel="noopener">qEgypt&rsquo;s First Workshop on Quantum Computing</a></li>
+<li><a href="post/hobbyist-talk/">My Poly Hong Kong Talk</a></li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1373661965185339394" target="_blank" rel="noopener">Toric Quantum Error Correction Codes, Quantum Discord Server</a></li>
+<li><a href="post/math115ah/">Honors Linear Algebra, UCLA</a></li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1360420814806540288" target="_blank" rel="noopener">4-player chess</a> with Ewin Tang, Kuikui Liu, and Ansh Nagda.</li>
+<li><a href="https://youtu.be/ygcEkJQdxAE?t=3960" target="_blank" rel="noopener">Yael Kalai&rsquo;s QnA</a> on <a href="https://www.quantamagazine.org/in-cryptography-advances-in-program-obfuscation-20140130" target="_blank" rel="noopener">obfuscation&rsquo;s breakthrough</a>.</li>
+<li><a href="https://focs2020.cs.duke.edu/" target="_blank" rel="noopener">FOCS 2020</a> (I was granted registration fee waiver). see: <a href="https://twitter.com/BlumLenore/status/1327306067320172544" target="_blank" rel="noopener">1</a>, <a href="https://twitter.com/Mostafa_Touny/status/1329139915104399362" target="_blank" rel="noopener">2</a>, <a href="https://twitter.com/Mostafa_Touny/status/1327331859756425225" target="_blank" rel="noopener">3</a>, <a href="https://twitter.com/Mostafa_Touny/status/1327311589163356162/photo/1" target="_blank" rel="noopener">4</a>. I learned about it <a href="https://twitter.com/ccanonne_/status/1325140475167305728" target="_blank" rel="noopener">through twitter</a>.</li>
+<li><a href="https://twitter.com/Mostafa_Touny/status/1325547607079464960" target="_blank" rel="noopener">Scott Aaronson&rsquo;s QnA</a>.</li>
+</ul>
+<p><strong>Family.</strong> <a href="https://www.instagram.com/p/CpYNgF3MpSe/?img_index=2" target="_blank" rel="noopener">Mum &amp; Dad</a> (Lawyer), <a href="https://www.instagram.com/ahmedxtouny/" target="_blank" rel="noopener">Brother</a> (Athlete Coach), <a href="https://x.com/Mostafa_Touny/status/1600805391826587653" target="_blank" rel="noopener">Sister</a> (Passed out aged 14).</p>
+
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
