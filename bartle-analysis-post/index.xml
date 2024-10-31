@@ -1,46 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Bartle &amp; Sherbert&#39;s Real Analysis | Mostafa Touny</title>
-    <link>https://mostafatouny.github.io/bartle-analysis-post/</link>
-      <atom:link href="https://mostafatouny.github.io/bartle-analysis-post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Bartle &amp; Sherbert&#39;s Real Analysis</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://mostafatouny.github.io/media/icon_hu8668531883193548421.png</url>
-      <title>Bartle &amp; Sherbert&#39;s Real Analysis</title>
-      <link>https://mostafatouny.github.io/bartle-analysis-post/</link>
-    </image>
-    
-    <item>
-      <title>Chapter 08 - Section 01</title>
-      <link>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</guid>
-      <description>&lt;h2 id=&#34;exercises&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;ex.-11&#34; class=&#34;unnumbered&#34;&gt;Ex. 11&lt;/h3&gt;
-&lt;p&gt;For $f_n(x) = \frac{\displaystyle{x}}{\displaystyle{x+n}}$, and $f = 0$, Clearly&lt;/p&gt;
-&lt;p&gt;$||f_n - f ||_{[0,a]} = ||f_n||_{[0,a]} = \frac{\displaystyle{a}}{\displaystyle{a+n}}$
-. But $\lim_{n \rightarrow \infty} \frac{\displaystyle{a}}{\displaystyle{a+n}} = 0$. Hence by &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244), The uniform convergence on $[0,a]$ follows.&lt;/p&gt;
-&lt;p&gt;We follow &lt;em&gt;Lemma 8.1.5&lt;/em&gt; (page 244). Consider subsequences $n_k = x_k = k$. Then $f_{n_k}(x_k) = \frac{\displaystyle{k + k}}{\displaystyle{k}} = \frac{\displaystyle{1}}{\displaystyle{2}}$. Therefore $|f_{n_k}(x_k) - f(x_k)| = |f_{n_k}(x_k)| = \frac{\displaystyle{1}}{\displaystyle{2}} = \epsilon_0$.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-18&#34; class=&#34;unnumbered&#34;&gt;Ex. 18&lt;/h3&gt;
-&lt;p&gt;We use &lt;em&gt;lemma 8.1.8&lt;/em&gt; (page 244). Note $f_n(x) = xe^{-nx}$ and $f = 0$. Then $||f_n - f||_{[0,\infty)} = ||f_n||_{[0,\infty)} = 1/n$.&lt;/p&gt;
-&lt;p&gt;To see why, Observe $f_n&#39;(x) = (e^{-nx})(1-nx)$, and setting $f_n&#39;(x) = 0$ yields local max/min at $x = 0$ and $x = 1/n$. That justifies the supremum we aforementioned.&lt;/p&gt;
-&lt;p&gt;But $\lim_{n \rightarrow \infty} 1/n = 0$, Concluding uniform convergence.&lt;/p&gt;
-&lt;h3 id=&#34;ex.-21&#34; class=&#34;unnumbered&#34;&gt;Ex. 21&lt;/h3&gt;
-&lt;p&gt;Observe $| (f_n(x) + g_n(x) ) - ( f(x) + g(x) ) | \leq |f_n(x) - f(x)| + |g_n(x) - g(x)| &lt; \epsilon/2 + \epsilon/2 = \epsilon$, Following by the triangle inequality.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Chapter 10 - Section 01</title>
-      <link>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</link>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</guid>
-      <description>&lt;h2 id=&#34;problems&#34; class=&#34;unnumbered&#34;&gt;Exercises&lt;/h2&gt;
-&lt;h3 id=&#34;section&#34; class=&#34;unnumbered&#34;&gt;1&lt;/h3&gt;
-&lt;h4 id=&#34;a&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;By definition of a gauge, we have
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Bartle &amp; Sherbert's Real Analysis on Mostafa Touny</title><link>https://mostafatouny.github.io/bartle-analysis-post/</link><description>Recent content in Bartle &amp; Sherbert's Real Analysis on Mostafa Touny</description><generator>Hugo -- 0.136.5</generator><language>en-us</language><lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mostafatouny.github.io/bartle-analysis-post/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter 08 - Section 01</title><link>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://mostafatouny.github.io/bartle-analysis-post/ch08-sec01/</guid><description>&lt;h2 id="exercises" class="unnumbered">Exercises&lt;/h2>
+&lt;h3 id="ex.-11" class="unnumbered">Ex. 11&lt;/h3>
+&lt;p>For $f_n(x) = \frac{\displaystyle{x}}{\displaystyle{x+n}}$, and $f = 0$, Clearly&lt;/p>
+&lt;p>$||f_n - f ||_{[0,a]} = ||f_n||_{[0,a]} = \frac{\displaystyle{a}}{\displaystyle{a+n}}$. But $\lim_{n \rightarrow \infty} \frac{\displaystyle{a}}{\displaystyle{a+n}} = 0$. Hence by &lt;em>lemma 8.1.8&lt;/em> (page 244), The uniform convergence on $[0,a]$ follows.&lt;/p>
+&lt;p>We follow &lt;em>Lemma 8.1.5&lt;/em> (page 244). Consider subsequences $n_k = x_k = k$. Then $f_{n_k}(x_k) = \frac{\displaystyle{k + k}}{\displaystyle{k}} = \frac{\displaystyle{1}}{\displaystyle{2}}$. Therefore $|f_{n_k}(x_k) - f(x_k)| = |f_{n_k}(x_k)| = \frac{\displaystyle{1}}{\displaystyle{2}} = \epsilon_0$.&lt;/p></description></item><item><title>Chapter 10 - Section 01</title><link>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</link><pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><guid>https://mostafatouny.github.io/bartle-analysis-post/ch10-sec01/</guid><description>&lt;h2 id="problems" class="unnumbered">Exercises&lt;/h2>
+&lt;h3 id="section" class="unnumbered">1&lt;/h3>
+&lt;h4 id="a" class="unnumbered">a&lt;/h4>
+&lt;p>By definition of a gauge, we have
 \begin{aligned}
 t_i - \delta(t_i) &amp;amp;\leq x_{i-1} \\
 x_i &amp;amp;\leq t_i + \delta(t_i)
@@ -54,69 +19,6 @@ Concluding for all $i \in \{ 1,2, \dots, n \}$,
 \begin{aligned}
 x_i - x_{i-1} &amp;amp;\leq t_i + \delta(t_i) - t_i + \delta(t_i) \\
 &amp;amp;\leq 2 \delta(t_i)
-\end{aligned}&lt;/p&gt;
-&lt;h4 id=&#34;b&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Clearly $x_i - x_{i-1} \leq 2 \delta^*$
- for all $i \in \{1, 2, \dots, n\}$. Then $\max \\{x_i - x_{i-1}\\} = ||\dot{p}|| \leq 2 \delta^*$
-.&lt;/p&gt;
-&lt;h4 id=&#34;c&#34; class=&#34;unnumbered&#34;&gt;c&lt;/h4&gt;
-&lt;p&gt;$\max \\{ x_i - x_{i-1} \\} \leq \delta_* = inf \\{ \delta(t) \\}$. Then $x_i - x_{i-1} \leq \delta_*$
-
-\begin{aligned}
-x_i &amp;amp;\leq \delta(t_i) + x_{i-1} \\
-&amp;amp;\leq \delta(t_i) + t_i \qquad \text{by def } x_{i-1} \leq t_i \\
-\end{aligned}
-Analogously,
-\begin{aligned}
-    x_{i-1} &amp;\geq - \delta_*(t_i) + x_i \\\\
-    &amp;\geq - \delta_*(t_i) + t_i \qquad \text{by def } x_i \geq t_i
-\end{aligned}
-
-Therefore, $[x_{i-1}, x_i] \subset [ t_i - \delta(t_i), t_i + \delta(t_i) ]$, i.e
-$Q$ is $\delta-$fine.&lt;/p&gt;
-&lt;h4 id=&#34;d&#34; class=&#34;unnumbered&#34;&gt;d&lt;/h4&gt;
-&lt;h3 id=&#34;section-1&#34; class=&#34;unnumbered&#34;&gt;2&lt;/h3&gt;
-&lt;h4 id=&#34;a-1&#34; class=&#34;unnumbered&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Observe for interval $[x_{i-1}, x_i]$ for any partition,
-
-\begin{aligned}
-    \forall i,j, \quad [x_{i-1}, x_i] \cap [x_{j-1}, x_j] = \begin{cases}
-        [x_{i-1}, x_i]\qquad &amp; i = j \\\\
-        \{ x_i \} \qquad &amp;j = i + 1 \\\\
-        \{ x_{i-1} \} \qquad &amp;j= i - 1 \\\\
-        \phi \qquad &amp;\text{otherwise}
-    \end{cases}
-\end{aligned}
-
-
-It is easy to see considering any third interval containing a point $x$, necessarily implies two intervals share an intermediary point, violating the partitioning condition.&lt;/p&gt;
-&lt;h4 id=&#34;b-1&#34; class=&#34;unnumbered&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Yes. For example, on $[0,1]$, we have the partition:
-\begin{aligned}
-&amp;amp;([0, 1/4], 1/4),  \\
-&amp;amp;([1/4, 1/2], 1/4), \\
-&amp;amp;([1/2, 3/4], 3/4), \\
-&amp;amp;([3/4, 1], 3/4)
-\end{aligned}&lt;/p&gt;
-&lt;h3 id=&#34;3&#34;&gt;3&lt;/h3&gt;
-&lt;h4 id=&#34;a-2&#34;&gt;a&lt;/h4&gt;
-&lt;!-- ![](./2-0.jpg) --&gt;
-&lt;img src=&#34;2-0.jpg&#34; width=60%&gt;
-&lt;p&gt;For every intervals $I_1, I_2$ with a common tag $t_1 = t_2$, subtitute them by a single interval $I$ with tag $t = t_1 = t_2$.&lt;/p&gt;
-&lt;p&gt;Clearly $S(f,\{I\}) = S(f, \{I_1, I_2\})$.&lt;/p&gt;
-&lt;h4 id=&#34;b-2&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;Yes.&lt;/p&gt;
-&lt;h4 id=&#34;c-1&#34;&gt;c&lt;/h4&gt;
-&lt;!-- ![](./2-1.jpg) --&gt;
-&lt;img src=&#34;2-1.jpg&#34; width=60%&gt;
-&lt;p&gt;For every interval $I$ with a tag $t$ contained only in it, Partition $I$ to $I_1, I_2$ separated at $t$, with tags $t_1 = t_2 = t$.&lt;/p&gt;
-&lt;h3 id=&#34;4&#34;&gt;4&lt;/h3&gt;
-&lt;h4 id=&#34;a-3&#34;&gt;a&lt;/h4&gt;
-&lt;p&gt;Let $I$ be an interval containing $1$. Denote its tag by $t = 1 + x$. As both $1$ and $1 + x$ are in $I$, $|I| \geq x$. But by definition $\delta(t) = \delta(1+x) = 0.5 x &lt; x$, Contradiction. Therefore the tag of $I$ is necessarily $1$.&lt;/p&gt;
-&lt;h4 id=&#34;b-3&#34;&gt;b&lt;/h4&gt;
-&lt;p&gt;At maximum two intervals $I_1$ and $I_2$ can contain $1$. From &lt;em&gt;a&lt;/em&gt;, their tags are $t_1 = t_1 = 1$. By definition $\delta(1) = 0.01$, So $|I_1| + |I_2| \leq 0.01 + 0.01 = 0.02$.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+\end{aligned}&lt;/p>
+&lt;h4 id="b" class="unnumbered">b&lt;/h4>
+&lt;p>Clearly $x_i - x_{i-1} \leq 2 \delta^*$ for all $i \in \{1, 2, \dots, n\}$. Then $\max \\{x_i - x_{i-1}\\} = ||\dot{p}|| \leq 2 \delta^*$.&lt;/p></description></item></channel></rss>
