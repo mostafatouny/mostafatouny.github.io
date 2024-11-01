@@ -58,9 +58,9 @@ params:
     - name: "instagram"
       url: "https://www.instagram.com/mostafa.touny/"
 
-imaging:
-  quality: 100
-  resamplingFilter: Lanczos
+# imaging:
+#   quality: 100
+#   resamplingFilter: Lanczos
 
 pagination:
   # number of blog posts per page
