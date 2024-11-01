@@ -6,6 +6,7 @@ math: true
 date: "2024-07-09"
 cover:
     image: "featured.jpg"
+    responsiveImages: false
 ---
 
 ## Best Student Project

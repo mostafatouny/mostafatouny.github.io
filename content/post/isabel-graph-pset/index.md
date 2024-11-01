@@ -6,6 +6,7 @@ math: true
 date: "2024-06-01"
 cover:
     image: "featured.jpg"
+    responsiveImages: false
 ---
 
 ## Forward
