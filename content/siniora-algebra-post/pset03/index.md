@@ -15,12 +15,14 @@ $(Q^*, *)$. $\{ 2^x \mid x \in \mathcal{Z}^+ \} \cup \{ \frac{\displaystyle{1}}{
 ### 4 {#section-1 .unnumbered}
 
 Consider $|x| = n$. Then $x^n = 1$ and no positive $r < n$ where $x^r = 1$. It follows.
+$$
 \begin{aligned}
-    (x^n)^{-1} &= (1)^{-1} \\\\
-    (x \cdot x \cdot \dots \cdot x)^{-1} &= 1 \\\\
-    x^{-1} \cdot \dots \cdot x^{-1} &= \\\\
+    (x^n)^{-1} &= (1)^{-1} \\
+    (x \cdot x \cdot \dots \cdot x)^{-1} &= 1 \\
+    x^{-1} \cdot \dots \cdot x^{-1} &= \\
     (x^{-1})^n &=
 \end{aligned}
+$$
 Analogously if $(x^{-1})^r = 1$ then $x^r = 1$. That cannot happen for $r < n$.
 
 ### 6(b) {#b .unnumbered}
@@ -34,13 +36,15 @@ $|3| = 4$. $|8| = 3$. $|11| = 12$.
 **Fact.** For any element $x$ in any group, $x^{n+m} = x^n x^m$.
 
 **Fact.** For any element $x$ in any group, $(x^{k})^m = x^{km}$.
+$$
 \begin{aligned}
-    (a^4 c^{-2} b^4)^{-1} &= (b^4)^{-1} (c^{-2})^{-1} (a^4)^{-1} \\\\
-                          &= (b^4)^{-1} (c^2 ) (a^4)^{-1} \\\\
-                          &= (b^7 b^{-3})^{-1} (c^2) (a^6 a^{-2})^{-1} \\\\
-                          &= (b^{-3})^{-1} (c^2) (a^{-2})^{-1} \\\\
+    (a^4 c^{-2} b^4)^{-1} &= (b^4)^{-1} (c^{-2})^{-1} (a^4)^{-1} \\
+                          &= (b^4)^{-1} (c^2 ) (a^4)^{-1} \\
+                          &= (b^7 b^{-3})^{-1} (c^2) (a^6 a^{-2})^{-1} \\
+                          &= (b^{-3})^{-1} (c^2) (a^{-2})^{-1} \\
                           &= b^3 c^2 a^2
 \end{aligned}
+$$
 
 ### 10 {#section-3 .unnumbered}
 

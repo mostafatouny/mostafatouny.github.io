@@ -25,12 +25,14 @@ P.S.
 **Unity's uniqueness.** Let $1$ and $1'$ be two unities. Then by definition $11' = 1'1 = 1'$, and $1'1 = 11' = 1$. So $1 = 1'$.
 
 **Multiplicative inverse uniqueness.** Fix $a_0$. Let $b_0$ and $b_1$ be two multiplicative inverses of $a_0$. Then $b_0a_0 = a_0b_0 = 1$, and $b_1a_0 = a_0b_1 = 1$. So
+$$
 \begin{aligned}
-    a_0b_0 &= a_0b_1 \\\\
-    b_0(a_0b_0) &= b_0(a_0b_1) \\\\
-    (b_0a_0)b_0 &= (b_0a_0)b_1 \\\\
+    a_0b_0 &= a_0b_1 \\
+    b_0(a_0b_0) &= b_0(a_0b_1) \\
+    (b_0a_0)b_0 &= (b_0a_0)b_1 \\
     b_0 &= b_1
 \end{aligned}
+$$
 
 ### 6 {#section-3 .unnumbered}
 
@@ -43,34 +45,42 @@ P.S.
 ### 12 {#section-4 .unnumbered}
 
 $(\rightarrow)$. By definition for some $k$,
+$$
 \begin{aligned}
-    bk &= c \\\\
-    bk \cdot 1 &= \\\\
-    bk \cdot aa^{-1} &= \\\\
+    bk &= c \\
+    bk \cdot 1 &= \\
+    bk \cdot aa^{-1} &= \\
     ab \cdot ka^{-1} &=
 \end{aligned}
+$$
 
 $(\leftarrow)$. By definition for some $k$,
+$$
 \begin{aligned}
-    ab \cdot k &= c \\\\
+    ab \cdot k &= c \\
     a \cdot bk &=
 \end{aligned}
+$$
 
 ### 39 {#section-5 .unnumbered}
 
 Consider arbitrary $ar_0a, ar_1a \in S$. Then
+$$
 \begin{aligned}
-    ar_0a \cdot ar_1a \\\\
-    &= ar_0a^2r_1a \\\\
+    ar_0a \cdot ar_1a \\
+    &= ar_0a^2r_1a \\
     &= ar_0r_1a \in S
 \end{aligned}
+$$
 As $r_0r_1 \in R$. Also,
+$$
 \begin{aligned}
-    ar_0a - ar_1a \\\\
-    &= a [r_0a - r_1a] \\\\
-    &= a \left [ (r_0 - r_1) a \right ] \\\\
+    ar_0a - ar_1a \\
+    &= a [r_0a - r_1a] \\
+    &= a \left [ (r_0 - r_1) a \right ] \\
     &= a(r_0 - r_1)a \in S
 \end{aligned}
+$$
 As $r_0 - r_1 \in R$.
 
 Since $1 \in R$, $a1a \in S$ but $a1a = a^2 = 1$.
@@ -80,17 +90,19 @@ Since $1 \in R$, $a1a \in S$ but $a1a = a^2 = 1$.
 (1), (2), (3), (5), (6) of a ring's definition in page 227 are satisfied by the usual properties of matrix algebra and integers.
 
 Note the additive identity is the matrix
+$$
 \begin{bmatrix}
-0 & 0+0 \\\\
+0 & 0+0 \\
 0+0 & 0
 \end{bmatrix}
+$$
 
 We show (4). For any matrix $M \in R$, where
 $$
-M = \begin{bmatrix} a & a+b \\\\ a+b & b \end{bmatrix}
+M = \begin{bmatrix} a & a+b \\ a+b & b \end{bmatrix}
 $$
 The matrix $-M$ defined as
-$$ -M =  \begin{bmatrix} -a & -a+(-b) \\\\ -a+(-b) & -b \end{bmatrix}
+$$ -M =  \begin{bmatrix} -a & -a+(-b) \\ -a+(-b) & -b \end{bmatrix}
 $$
 is in $M_2(Z)$, as $-a \in Z$ whenever $a \in Z$. Clearly $M - M$ is the additive identity.
 

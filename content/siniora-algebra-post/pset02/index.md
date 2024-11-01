@@ -108,39 +108,47 @@ Observe the group follows the same pattern as $\mathcal{Z}_4$.
 ### 34 {#section-9 .unnumbered}
 
 $(\leftarrow)$. Given $ab = ba$
+$$
 \begin{aligned}
-    (ab)^2 &= (ab)(ab) \\\\
-           &= a(ba)b, \text{Associativity} \\\\
-           &= a(ab)b \\\\
-           &= (aa)(bb), \text{Associativity} \\\\
+    (ab)^2 &= (ab)(ab) \\
+           &= a(ba)b, \text{Associativity} \\
+           &= a(ab)b \\
+           &= (aa)(bb), \text{Associativity} \\
            &= a^2b^2
 \end{aligned}
+$$
 
 $(\rightarrow)$. Given $(ab)^2 = a^2b^2$
+$$
 \begin{aligned}
-        (ab)^2 &= (ab)(ab) \\\\
-               &= a(ba)b \\\\
-               &= aabb \\\\
+        (ab)^2 &= (ab)(ab) \\
+               &= a(ba)b \\
+               &= aabb \\
             ba &= ab, \text{Cancellation}
 \end{aligned}
+$$
 
 $(\leftarrow)$. Given $ab = ba$
+$$
 \begin{aligned}
-    (ab)^2 &= (ab)^{-1} (ab)^{-1} \\\\
-           &= b^{-1} a^{-1} b^{-1} a^{-1} \\\\
-           &= b^{-1} (ba)^{-1} a^{-1} \\\\
-           &= b^{-1} (ab)^{-1} a^{-1} \\\\
-           &= b^{-1} b^{-1} a^{-1} a^{-1} \\\\
+    (ab)^2 &= (ab)^{-1} (ab)^{-1} \\
+           &= b^{-1} a^{-1} b^{-1} a^{-1} \\
+           &= b^{-1} (ba)^{-1} a^{-1} \\
+           &= b^{-1} (ab)^{-1} a^{-1} \\
+           &= b^{-1} b^{-1} a^{-1} a^{-1} \\
            &= (b)^{-2} (a)^{-2}
 \end{aligned}
+$$
 
 $(\rightarrow)$. Given $(ab)^{-2} = b^{-2} a^{-2}$
+$$
 \begin{aligned}
-    (ab)^{-1} (ab)^{-1} &= b^{-1} a^{-1} b^{-1} a^{-1} \\\\
-                        &= b^{-1} b^{-1} a^{-1} a^{-1} \\\\
-          a^{-1} b^{-1} &= b^{-1} a^{-1}, \text{Cancellation} \\\\
+    (ab)^{-1} (ab)^{-1} &= b^{-1} a^{-1} b^{-1} a^{-1} \\
+                        &= b^{-1} b^{-1} a^{-1} a^{-1} \\
+          a^{-1} b^{-1} &= b^{-1} a^{-1}, \text{Cancellation} \\
              (ba)^{-1}  &= (ab)^{-1}
 \end{aligned}
+$$
 
 Now observe by the definition of inverse, if $x = y^{-1}$ then $y = x^{-1}$. Therefore $ab = [ (ab)^{-1} ]^{-1}$ and $ba = [ (ba)^{-1} ]^{-1}$, and $ab = ba$.
 

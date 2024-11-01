@@ -9,13 +9,15 @@ date: "2023-12-18"
 ### 3 {#section .unnumbered}
 
 Let $R$ be a commutative ring with the cancellation property. Assume for contradiction $a$ is a zero-divisor. Then $a \neq 0$ and there's $b \neq 0$ such that $ab = 0$. By *theorem 12.1* (page 229) It follows:
+$$
 \begin{aligned}
-    ab - ab &= 0 \\\\
-    a(b-b) &= 0 \\\\
-           &= 0 \cdot 0 \\\\
-           &= 0 \cdot (b-b) \\\\
+    ab - ab &= 0 \\
+    a(b-b) &= 0 \\
+           &= 0 \cdot 0 \\
+           &= 0 \cdot (b-b) \\
     a      &= 0
 \end{aligned}
+$$
 Contradiction.
 
 #### 4 {#section-1 .unnumbered}
@@ -39,31 +41,39 @@ Since $Z$ has no zero-divisor, it follows each component is zero in one of $a,b,
 ### 18 {#section-3 .unnumbered}
 
 Let $R$ be an integral domain and $a^2 = a$. Then
+$$
 \begin{aligned}
-    a^2 - a &= 0 \\\\
+    a^2 - a &= 0 \\
     a(a-1) &= 0
-\end{aligned} Since there are no zero-divisors, either $a = 0$ or $a - 1 = 0$.
+\end{aligned}
+$$
+Since there are no zero-divisors, either $a = 0$ or $a - 1 = 0$.
+
 
 #### 32 {#section-4 .unnumbered}
 
 We know $R$ is a group. By usual properties of addition and multiplication, It is a commutative ring.
 
 $6$ is unity as
+$$
 \begin{aligned}
-    6 \cdot 0 = 0 \\\\
-    6 \cdot 2 = 2 \\\\
-    6 \cdot 4 = 4 \\\\
-    6 \cdot 6 = 6 \\\\
+    6 \cdot 0 = 0 \\
+    6 \cdot 2 = 2 \\
+    6 \cdot 4 = 4 \\
+    6 \cdot 6 = 6 \\
     6 \cdot 8 = 8
 \end{aligned}
+$$
 
 Each non-zero element has a unit as
+$$
 \begin{aligned}
-    2 \cdot 8 = 6 \\\\
-    4 \cdot 4 = 6 \\\\
-    6 \cdot 6 = 6 \\\\
+    2 \cdot 8 = 6 \\
+    4 \cdot 4 = 6 \\
+    6 \cdot 6 = 6 \\
     8 \cdot 2 = 6
 \end{aligned}
+$$
 
 #### 57 {#section-5 .unnumbered}
 

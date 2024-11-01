@@ -10,11 +10,13 @@ date: "2023-12-11"
 ### 4 {#section .unnumbered}
 
 Clearly, For arbitrary $a,c \in G$ and $b,d \in H$
+$$
 \begin{aligned}
-  &ac = ca \wedge bd = db \\\\
-  \leftrightarrow &(ac, bd) = (ca, db) \\\\
+  &ac = ca \wedge bd = db \\
+  \leftrightarrow &(ac, bd) = (ca, db) \\
   \leftrightarrow &(a,b)(c,d) = (c,d)(a,b)
 \end{aligned}
+$$
 I guess the general case is any group-theoretic property on both $G$ and $H$ is also
 on $G \oplus H$, and vice verca.
 
@@ -66,11 +68,13 @@ $(x_1, x_2, \dots, x_k) \neq e = \underbrace{(0, .., 0)}_{k \text{ times}}$
 in $\underbrace{Z_3 \oplus .. \oplus Z_3}_{k \text{ times}}$. We claim $| (x_1, \dots, x_k) | = 3$.
 
 Following the fact all non-identity elements are of order 3, and we have some $x_i \neq 0$,
+$$
 \begin{aligned}
-    (x_1, x_2, \dots, x_k)^1 &= (x_1^1, x_2^1, \dots, x_k^1) \neq e \\\\
-    (x_1, x_2, \dots, x_k)^2 &= (x_1^2, x_2^2, \dots, x_k^2) \neq e \\\\
-    (x_1, x_2, \dots, x_k)^3 &= (0, 0, \dots,0) = e \\\\
+    (x_1, x_2, \dots, x_k)^1 &= (x_1^1, x_2^1, \dots, x_k^1) \neq e \\
+    (x_1, x_2, \dots, x_k)^2 &= (x_1^2, x_2^2, \dots, x_k^2) \neq e \\
+    (x_1, x_2, \dots, x_k)^3 &= (0, 0, \dots,0) = e \\
 \end{aligned}
+$$
 Therefore we have $3^k - 1$ elements of order 3 in $\underbrace{Z_3 \oplus \dots \oplus Z_3}_{k \text{ times}}$.
 
 ### 35 {#section-7 .unnumbered}
@@ -78,13 +82,15 @@ Therefore we have $3^k - 1$ elements of order 3 in $\underbrace{Z_3 \oplus \dots
 Recall the square root of any complex number $z$ exists. Observe $C^*$ is closed under the square root operation.
 
 Assume for the sake of contradiction, there is an isomorphism $\phi : C^* \rightarrow R^* \oplus R^*$. Then by surjectivity there is some complex $z$ where $\phi(z) = (-1,-1)$. It follows
+$$
 \begin{aligned}
-    \phi(\sqrt{z} \cdot \sqrt{z}) &= (-1,-1) \\\\
-    \phi(\sqrt{z}) \cdot \phi(\sqrt{z}) &= \\\\
-    ( \phi(\sqrt{z}) )^2 &= \\\\
-    (a,b)^2 &= \\\\
+    \phi(\sqrt{z} \cdot \sqrt{z}) &= (-1,-1) \\
+    \phi(\sqrt{z}) \cdot \phi(\sqrt{z}) &= \\
+    ( \phi(\sqrt{z}) )^2 &= \\
+    (a,b)^2 &= \\
     (a^2, b^2) &=
 \end{aligned}
+$$
 In other words $a^2 = -1$ and $b^2 = -1$, but either of these leads to a contradiction, as no square of a real number is negative.
 
 ### 46 {#section-8 .unnumbered}

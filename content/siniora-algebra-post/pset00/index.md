@@ -42,11 +42,13 @@ By definition $gcd(m,n) = 1$ and hence we get $m(s_0) + n(t_0) = 1$. Multiplying
 
 Assume for contradiction that $p_1 p_2 \dots p_n + 1$ is divisable by $p_i$. Then
 
+$$
 \begin{aligned}
-    \frac{\displaystyle{p_1 p_2 \dots p_n + 1}}{\displaystyle{p_i}} &= \frac{\displaystyle{p_i k_0}}{\displaystyle{p_i}} \\\\
-    \frac{\displaystyle{p_1 \dots p_n}}{\displaystyle{p_i}} + \frac{\displaystyle{1}}{\displaystyle{p_i}} &= k_0 \\\\
+    \frac{\displaystyle{p_1 p_2 \dots p_n + 1}}{\displaystyle{p_i}} &= \frac{\displaystyle{p_i k_0}}{\displaystyle{p_i}} \\
+    \frac{\displaystyle{p_1 \dots p_n}}{\displaystyle{p_i}} + \frac{\displaystyle{1}}{\displaystyle{p_i}} &= k_0 \\
     \frac{\displaystyle{p_1 \dots p_n}}{\displaystyle{p_i}} - k_0 &= \frac{\displaystyle{1}}{\displaystyle{p_i}}
 \end{aligned}
+$$
 
 $L.H.S$ is clearly an integer implying $\frac{\displaystyle{1}}{\displaystyle{p_i}}$ is an integer also. Contradiction.
 

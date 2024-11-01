@@ -1,6 +1,5 @@
 ---
 title: "Problem Set 04"
-math: true
 date: "2024-10-19"
 ---
 
@@ -87,11 +86,14 @@ $n,m \geq H_\epsilon$.
 
 if $n = m$, then $d( x_n, x_m ) = 0 \leq \epsilon$.
 
-WLOG assume $n > m$. It follows $$\begin{aligned}
+WLOG assume $n > m$. It follows
+$$
+\begin{aligned}
     d( x_n, x_m ) &= \left |\sum_{ j=0 }^n p^j - \sum_{ j=0 }^m p^j \right |_p = \left |\sum_{ i=m+1 }^n p^i \right |_p \\
     v_p \left ( \sum_{ j=m+1 }^n p^j \right ) &= v_p ( p^{ m+1 } + p^{ m+2 } + \dots + p^{ n } ) = m+1
-\end{aligned}$$ Hence
-$d( x_n, x_m ) = p^{ -( m+1 ) } \leq \frac{\displaystyle{1}}{\displaystyle{m+1}} \leq \frac{\displaystyle{1}}{\displaystyle{N}} < \epsilon$,
+\end{aligned}
+$$
+Hence $d( x_n, x_m ) = p^{ -( m+1 ) } \leq \frac{\displaystyle{1}}{\displaystyle{m+1}} \leq \frac{\displaystyle{1}}{\displaystyle{N}} < \epsilon$,
 for all $n,m \geq N$.
 
 **Theorem.** Convergence when $p = 2$.

@@ -19,7 +19,7 @@ We use *Theorem 9.1* (page 174). We know from earlier chapters, $A_n$ is a subgr
 NO. It suffices to take some matrix $h \in H$ and a matrix $x \in GL(2,R)$, and show $xhx^{-1} \not\in H$. Clearly:
 
 $$
-\begin{bmatrix} 2 & 1 \\\\ 1 & 2  \end{bmatrix} \begin{bmatrix} 1 & 1 \\\\ 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 \\\\ 1  & 2  \end{bmatrix}^{-1} \\\\ = \begin{bmatrix} 2 & 1 \\\\ 1 & 2 \end{bmatrix} \begin{bmatrix} 1 & 1 \\\\ 0 & 1 \end{bmatrix} \begin{bmatrix} 2/3 & -1/3 \\\\ -1/3  & 2/3 \end{bmatrix} = \begin{bmatrix} 4/3 & -1 \\\\ -1/3  & 2 \end{bmatrix} \not\in H
+\begin{bmatrix} 2 & 1 \\ 1 & 2  \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1  & 2  \end{bmatrix}^{-1} \\ = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} 2/3 & -1/3 \\ -1/3  & 2/3 \end{bmatrix} = \begin{bmatrix} 4/3 & -1 \\ -1/3  & 2 \end{bmatrix} \not\in H
 $$
 
 ### 8 {#section-3 .unnumbered}
@@ -27,15 +27,17 @@ $$
 We immediately prove the general case of $\langle k \rangle / \langle n \rangle \cong \mathcal{Z}_{n/k}$, given $k$ divides $n$.
 
 For arbitrary two elements of under the operation:
+$$
 \begin{aligned}
     (k^a \langle n \rangle) (k^b \langle n \rangle)
-        &= k^{a+b} \langle n \rangle \qquad &\text{Definition} \\\\
-        &= k^{\frac{n}{k} q + r} \langle n \rangle, 0 \leq r < n/k \qquad &\text{Euclidean Division} \\\\
-        &= k^{\frac{n}{k} q} k^r \langle n \rangle \\\\
-        &= k^r (k^{\frac{n}{k} q} \langle n \rangle) \qquad &\text{Commutativity and Associativity of $\mathcal{Z}$} \\\\
-        &= k^r (n \langle n \rangle) \\\\
+        &= k^{a+b} \langle n \rangle \qquad &\text{Definition} \\
+        &= k^{\frac{n}{k} q + r} \langle n \rangle, 0 \leq r < n/k \qquad &\text{Euclidean Division} \\
+        &= k^{\frac{n}{k} q} k^r \langle n \rangle \\
+        &= k^r (k^{\frac{n}{k} q} \langle n \rangle) \qquad &\text{Commutativity and Associativity of $\mathcal{Z}$} \\
+        &= k^r (n \langle n \rangle) \\
         &= k^r \langle n \rangle
 \end{aligned}
+$$
 
 But in $\mathcal{Z}_{n/k}$, $ab = a + b \mod \frac{n}{k}$, which corresponds to $(k^a \langle n \rangle) (k^b \langle n \rangle) = k^{a + b \mod r} \langle n \rangle$.
 
@@ -59,25 +61,29 @@ By *Theorem 9.1* (page 175), We construct $xhx^{-1} \not\in H$ for some $x \in A
 Let $h = (1 2)(3 4)$ and $x = (1 3)(2 3)$. Then $x^{-1} = (2 3)(1 3)$, and in turn $xhx^{-1} = (1 3)(2 3)(1 2)(3 4)(2 3)(1 3)$. In other notation, 
 
 $$
-xhx^{-1} = \begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 3 & 4 & 1 & 2 \end{bmatrix} \neq (1 2)(3 4)
+xhx^{-1} = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 3 & 4 & 1 & 2 \end{bmatrix} \neq (1 2)(3 4)
 $$
 
 ### 12 {#section-6 .unnumbered}
 
 For arbitrary abelian group $G$ with elements $a_0$ and $a_1$, and factor group $G/H$, We have:
+$$
 \begin{aligned}
-  (a_0 H)(a_1 H) &= (a_0 a_1) H \qquad &\text{Definition} \\\\
-                 &= (a_1 a_0) H \qquad &\text{$G$ is Abelian} \\\\
+  (a_0 H)(a_1 H) &= (a_0 a_1) H \qquad &\text{Definition} \\
+                 &= (a_1 a_0) H \qquad &\text{$G$ is Abelian} \\
                  &= (a_1 H)(a_0 H)
 \end{aligned}
+$$
 
 ### 14 {#section-7 .unnumbered}
 
 We know the identity of $\mathcal{Z}_{24}/ \langle 8 \rangle$ is $0 + \langle 8 \rangle$. We are looking for smallest $k$ satisfying 
+$$
 \begin{aligned}
-    (14 + \langle 8 \rangle)^k &= 0 + \langle 8 \rangle \\\\
+    (14 + \langle 8 \rangle)^k &= 0 + \langle 8 \rangle \\
     14^k + \langle 8 \rangle &=
 \end{aligned}
+$$
 Thanks for the course TA, Ibrahim, That can be satisfied while $14^k \neq 0$.
 
 From the *lemma* (page 139), This is true if and only if $14^k \in \langle 8 \rangle$. In other words, We want smallest positive $k$, such that $14^k = 8^m$ for some integer $m$. By computation, $k = 3$ as $14^3 = 8$.

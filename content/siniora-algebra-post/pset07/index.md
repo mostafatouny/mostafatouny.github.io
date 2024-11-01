@@ -8,7 +8,8 @@ date: "2023-12-11"
 
 ### 1 {#section .unnumbered}
 
-Those are $\\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \\} = \big \\{ \\{ a \pm 0, a \pm 3, a \pm 6, \dots \\} \mid a \in \mathcal{Z} \big \\}$.
+Those are $\{ a \langle 3 \rangle \mid a\in \mathcal{Z} \} = \big \{ \{ a \pm 0, a \pm 3, a \pm 6, \dots \} \mid a \in \mathcal{Z} \big \}$.
+
 
 ### 7 {#section-1 .unnumbered}
 

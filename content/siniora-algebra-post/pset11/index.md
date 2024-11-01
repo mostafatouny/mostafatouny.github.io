@@ -16,10 +16,12 @@ The table in page 213 shows that.
 
 $45 = 3^2 \cdot 5^1$. By the *fundamental theorem of finite abelian
 groups*, All possible groups are
+$$
 \begin{aligned}
-    Z_9 \oplus Z_5 &\approx Z_{45} \\\\
+    Z_9 \oplus Z_5 &\approx Z_{45} \\
     Z_3 \oplus Z_3 \oplus Z_5 &\approx Z_3 \oplus Z_{15}
 \end{aligned}
+$$
 
 Group $(1)$ has element $3$ whose order is $|3| = 15$. Group $(2)$ has element $(0,1)$ whose order is $|(0,1)| = 15$. Therefore, Any finite abelian group of order $45$ has an element of order $15$.
 
@@ -30,32 +32,40 @@ By *The fundamental theorem of cyclic groups* (page 81) we know all elements ord
 $360 = 2^3 \cdot 3^2 \cdot 5^1$.
 
 For $2^3$, $k = 3$,
+$$
 \begin{aligned}
-    3 &\qquad Z_8 \\\\
-    2 + 1 &\qquad Z_4 \oplus Z_2 \\\\
+    3 &\qquad Z_8 \\
+    2 + 1 &\qquad Z_4 \oplus Z_2 \\
     1 + 1 + 1 &\qquad Z_2 \oplus Z_2 \oplus Z_2
 \end{aligned}
+$$
 
 For $3^2$, $k = 2$,
+$$
 \begin{aligned}
-    2 &\qquad Z_9 \\\\
+    2 &\qquad Z_9 \\
     1 + 1 &\qquad Z_3 \oplus Z_3
-\end{aligned}$$
+\end{aligned}
+$$
 
 For $5^1$, $k = 1$,
+$$
 \begin{aligned}
     1 \qquad Z_5
 \end{aligned}
+$$
 
 It follows all groups are
+$$
 \begin{aligned}
-    &Z_8 \oplus Z_9 \oplus Z_5 \\\\
-    &Z_8 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\\\
-    &Z_4 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\\\
-    &Z_4 \oplus Z_2 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\\\
-    &Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\\\
+    &Z_8 \oplus Z_9 \oplus Z_5 \\
+    &Z_8 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\
+    &Z_4 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\
+    &Z_4 \oplus Z_2 \oplus Z_3 \oplus Z_3 \oplus Z_5 \\
+    &Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_9 \oplus Z_5 \\
     &Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_3 \oplus Z_3 \oplus Z_5
 \end{aligned}
+$$
 
 ### 22 {#section-3 .unnumbered}
 
@@ -70,13 +80,15 @@ Therefore $G \approx Z_{p_1^1} \oplus Z_{p_2^1} \oplus \dots \oplus Z_{p_k^1}$. 
 If $a = b$ then $a^2 = b^2$. So $a$ and $b$ are distinct. Moreover $(a^2)^2 = a^4 = e$ and $(b^2)^2 = b^4 = e$. So we have distinct elements $a^2$ and $b^2$ of order 2.
 
 By the *fundamental theorem of finite abelian groups*, All possible classes are:
+$$
 \begin{aligned}
-    &Z_{16} \\\\
-    &Z_8 \oplus Z_2 \\\\
-    &Z_4 \oplus Z_4 \\\\
-    &Z_4 \oplus Z_2 \oplus Z_2 \\\\
+    &Z_{16} \\
+    &Z_8 \oplus Z_2 \\
+    &Z_4 \oplus Z_4 \\
+    &Z_4 \oplus Z_2 \oplus Z_2 \\
     &Z_2 \oplus Z_2 \oplus Z_2 \oplus Z_2
 \end{aligned}
+$$
 
 $(3)$ is excluded as it has only one element of order $2$, namely $8$.
 

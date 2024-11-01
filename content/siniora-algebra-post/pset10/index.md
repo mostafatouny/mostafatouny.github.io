@@ -25,13 +25,15 @@ Now define $\phi: \mathcal{Z}_n / \langle k \rangle \rightarrow \mathcal{Z}_k$ b
 ### 15 {#section-2 .unnumbered}
 
 Let $x$ be arbitrary such that $\phi(x) = 9$. Then
+$$
 \begin{aligned}
-    \phi(x) - \phi(23) &= 9 - 9 = 0 \\\\
-    \phi(x - 23) &= 0 \\\\
-    x - 23 &\in \\{ 0, 10, 20 \\} \\\\
-    x + 7 &\in \\{ 0, 10, 20 \\} \\\\
+    \phi(x) - \phi(23) &= 9 - 9 = 0 \\
+    \phi(x - 23) &= 0 \\
+    x - 23 &\in \\{ 0, 10, 20 \\} \\
+    x + 7 &\in \\{ 0, 10, 20 \\} \\
     x &\in \\{ 23, 3, 13 \\}
 \end{aligned}
+$$
 
 ### 16 {#section-3 .unnumbered}
 
@@ -64,10 +66,12 @@ Let $\phi: \mathcal{Z}_{20} \rightarrow \mathcal{Z}_8$ be an arbitrary homomorph
 **(c).** By definition we are looking for $x \in \mathcal{Z}_{50}$ such that $\phi(x) = 3x = 0$. But $3x \equiv 0$ if and only if $3x - 0 = 3x$ is a multiple of $15$ if and only if $x = 5i$. In other words the kernel are multiples of 5 strictly less than $50$.
 
 **(d).** We want to characterize $x$ such that $\phi(x) = 3$. But by definition we know $\phi(x) = 3x$. Then
+$$
 \begin{aligned}
-    3 &\equiv 3x \mod 15 \\\\
-    3x - 3 &= 15i \\\\
-    x - 1 &= 5i \\\\
+    3 &\equiv 3x \mod 15 \\
+    3x - 3 &= 15i \\
+    x - 1 &= 5i \\
     x &= 5i + 1
 \end{aligned}
+$$
 So $\phi^{-1}(3) = \\{ 5i + 1 \mid 0 \leq i \leq 9 \\}$

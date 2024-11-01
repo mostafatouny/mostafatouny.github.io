@@ -8,10 +8,16 @@
 <head>
     {{- partial "head.html" . }}
 
-    <!-- if math is true in a post, enable math -->
+    <!-- if math is true in a post, which is the default for all pages, enable default math engine, KaTeX -->
     {{ if .Param "math" }}
         {{ partialCached "math.html" . }}
     {{ end }}
+
+    <!-- if math_mathjax is true in a post, which is not enabled by default, and math is false, use MathJax engine -->
+    {{ if and (.Param "math_mathjax") (not (.Param "math")) }}
+        {{ partialCached "math_mathjax.html" . }}
+    {{ end }}
+
 </head>
 
 <body class="

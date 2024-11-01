@@ -53,11 +53,13 @@ Observe $\phi(a^3 b^{-2}) = \phi(a^3) + \phi(b^{-2}) = [\phi(a)]^3 + [\phi(b)]^{
 ### 12 {#section-5 .unnumbered}
 
 $(\rightarrow)$. For any $a,b \in G$, We have:
+$$
 \begin{aligned}
-    \alpha(a^{-1}b^{-1})  &= \alpha(a^{-1}) \alpha(b^{-1}) \\\\
-     (a^{-1} b^{-1})^{-1} &= \\\\
+    \alpha(a^{-1}b^{-1})  &= \alpha(a^{-1}) \alpha(b^{-1}) \\
+     (a^{-1} b^{-1})^{-1} &= \\
                       ba  &= ab
 \end{aligned}
+$$
 
 $(\leftarrow)$. Symmetrically, If we have $b^{-1} a^{-1} = a^{-1} b^{-1}$, Then $\alpha(ab) = \alpha(a) \alpha(b)$. Bijection is clear by properties of inverses.
 

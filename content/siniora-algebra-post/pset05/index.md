@@ -13,7 +13,7 @@ date: "2023-11-18"
 $$
 \alpha^{-1} =
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & 6 \\\\
+    1 & 2 & 3 & 4 & 5 & 6 \\
     2 & 1 & 3 & 5 & 4 & 6
 \end{bmatrix}
 $$
@@ -22,7 +22,7 @@ $$
 $$
 \beta \alpha = 
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & 6 \\\\
+    1 & 2 & 3 & 4 & 5 & 6 \\
     1 & 6 & 2 & 3 & 4 & 5
 \end{bmatrix}
 $$
@@ -31,7 +31,7 @@ $$
 $$
 \alpha \beta = 
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & 6 \\\\
+    1 & 2 & 3 & 4 & 5 & 6 \\
     6 & 2 & 1 & 5 & 3 & 4
 \end{bmatrix}
 $$
@@ -55,7 +55,7 @@ $$
 We want to find some permutation
 $$
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & 6 \\\\
+    1 & 2 & 3 & 4 & 5 & 6 \\
       &   &   &   &   &  
 \end{bmatrix}
 $$
@@ -69,7 +69,7 @@ Observe $15 = 3 \cdot 5$ which suggests two disjoint cycles of lengths $3$ and $
 The permutation in matrix form is:
 $$
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\\\
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
     2 & 3 & 1 & 5 & 6 & 7 & 8 & 4
 \end{bmatrix}
 $$
@@ -100,12 +100,12 @@ For $n \geq 3$, It is easy to see $(1 2) \in S_n$ and $(2 3) \in S_n$. However
 $$
 (2 3)(1 2) = 
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & \dots \\\\
+    1 & 2 & 3 & 4 & 5 & \dots \\
     3 & 1 & 2 & 4 & 5 & \dots
 \end{bmatrix}
 \neq
 \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5 & \dots \\\\
+    1 & 2 & 3 & 4 & 5 & \dots \\
     2 & 3 & 1 & 4 & 5 & \dots
 \end{bmatrix}
 = (1 2)(2 3)

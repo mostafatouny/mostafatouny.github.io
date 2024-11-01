@@ -29,8 +29,8 @@ We prove each axiom as listed by *Rudin* in page 5.
 **M5** If $x_{\mathcal{Q}(\sqrt{2})} \neq 0_{\mathcal{Q}(2)} = 0 + \sqrt{2} \cdot 0$, Then we know either $a \neq 0$ or $b \neq 0$, and hence $x_{\mathcal{Q}(\sqrt{2})} = a + b \sqrt{2} \neq 0$. Define $x_{\mathcal{Q}(\sqrt{2})}^{-1} = \frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}}$. What is remaining is to show $\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \in \mathcal{Q}(2)$ by a multiplication by its conjugate. Observe:
 $$
 \begin{aligned}
-  &\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \\\\
-  = &\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \cdot \frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a - b \sqrt{2}}} \\\\
+  &\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \\
+  = &\frac{\displaystyle{1}}{\displaystyle{a + b \sqrt{2}}} \cdot \frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a - b \sqrt{2}}} \\
   = &\frac{\displaystyle{a - b \sqrt{2}}}{\displaystyle{a^2 + 2 b^2}} = (\frac{\displaystyle{a}}{\displaystyle{a^2 + 2b^2}}) + (\frac{\displaystyle{-b}}{\displaystyle{a^2 + 2b^2}}) \sqrt{2}
 \end{aligned}
 $$
@@ -55,16 +55,16 @@ Follows immediately by a trivial algebra.
 Now we combine *Lemma 1* and *Lemma 2* to satisfy both requirements by forming a combined system of equations, Given any $z = (x, y)$ where $y \neq 0$.
 $$
 \begin{aligned}
-  r \cdot a &= x \\\\
-  r \cdot b &= y \\\\
+  r \cdot a &= x \\
+  r \cdot b &= y \\
   a^2 + b^2 &= 1
 \end{aligned}
 $$
 It can be solved by substitution where:
 $$
 \begin{aligned}
-  a &= \sqrt{1 - b^2} \\\\
-  r &= y/b \;\;\; \text{valid as b isn't zero} \\\\
+  a &= \sqrt{1 - b^2} \\
+  r &= y/b \;\;\; \text{valid as b isn't zero} \\
   3/b \cdot \sqrt{1-b^2} &= x
 \end{aligned}
 $$
@@ -73,8 +73,8 @@ Note $b \neq 0$ lest $r \cdot b = r \cdot 0 = 0 = y$, Contradicting our assumpti
 The system uniquely determines the values
 $$
 \begin{aligned}
-  b &= \frac{\displaystyle{3}}{\displaystyle{\sqrt{x^2 + 9}}} \\\\
-  r &= \frac{\displaystyle{y}}{\displaystyle{3}} \cdot \sqrt{x^2 + 9} \\\\
+  b &= \frac{\displaystyle{3}}{\displaystyle{\sqrt{x^2 + 9}}} \\
+  r &= \frac{\displaystyle{y}}{\displaystyle{3}} \cdot \sqrt{x^2 + 9} \\
   a &= \sqrt{1 - \frac{\displaystyle{9}}{\displaystyle{x^2+9}}}
 \end{aligned}
 $$
