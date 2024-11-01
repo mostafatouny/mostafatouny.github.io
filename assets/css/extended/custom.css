@@ -14,6 +14,7 @@ svg {
     /* scales icons 150 % of their size */
     transform: scale(1.5);
 }
+
 /* button */
 .button {
     font-size: 1.5em;
@@ -22,7 +23,8 @@ svg {
 
 /* width */
 :root {
-    --main-width: 60%;
+    /* --main-width: 60%; */
+    --main-width: 1024px;
 }
 /* source: https://github.com/adityatelange/hugo-PaperMod/blob/a2eb47bb4b805116dcd34c1605d39835121f8dbe/assets/css/core/theme-vars.css */
 
