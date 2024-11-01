@@ -1,12 +1,12 @@
 /* Navigation Bar */
 #menu a {
-    font-size: 1.5em;
+    font-size: 1.10em;
 }
 
 /* Name Title */
 /* #top > header > nav > div { */
 #top > header > nav > div > a {
-    font-size: 1.5em;
+    font-size: 1.10em;
 }
 
 /* social icons */
@@ -17,25 +17,25 @@ svg {
 
 /* button */
 .button {
-    font-size: 1.5em;
+    font-size: 1.10em;
 }
 /* source: https://github.com/adityatelange/hugo-PaperMod/blob/a2eb47bb4b805116dcd34c1605d39835121f8dbe/assets/css/common/profile-mode.css */
 
 /* width */
 :root {
     /* --main-width: 60%; */
-    --main-width: 1024px;
+    --main-width: 1024px; /* maintains responsiveness for mobile screens */
 }
 /* source: https://github.com/adityatelange/hugo-PaperMod/blob/a2eb47bb4b805116dcd34c1605d39835121f8dbe/assets/css/core/theme-vars.css */
 
 /* blog titles */
 #top > main > article > header > h2 {
-    font-size: 1.5em;
+    font-size: 1.10em;
 }
 
 /* content */
 body {
-    font-size: 1.5em;
+    font-size: 1.10em;
 }
 
 /* hide published with hugo footer */
