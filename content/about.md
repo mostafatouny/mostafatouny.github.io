@@ -1,7 +1,3 @@
----
-title: About
----
-
 **Currently**
 - Research Assistant at The American University in Cairo
   - Co-advised by both [Dr. Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Dr. Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
