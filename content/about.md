@@ -1,32 +1,29 @@
 **Currently**
-- Research Assistant at The American University in Cairo
+- Research Assistant at The American University in Cairo.
   - Co-advised by both [Dr. Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Dr. Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
-  - Ethical Autonomous Vehicles with Provable Guarantees.
-  - Combining Learning-driven Deep Reinforcement Learning with Proven Logical Model.
+  - Modeling ethics for Autonomous vehicles with provable guarantees.
 
-**Interests**
-- Computational Social Choice, and broadly economics & computation theory.
-- Provable algorithms on continuous structures.
-- Learning-augmented algorithms.
-- Trustworthy and Machine Learning Theory.
+**General Interest**
+- Algorithms & Complexity.
+- Intersection between discrete and continuous math.
+- Trustworthy machine learning.
+- Functional programming between math discovery and computing practice.
 
-**Vision** 
+With emphasis on theoretical foundations and provably guaranteed frameworks using proof and logic techniques.
 
-The internet revolutionized humanity's connectivity, and AI revolutionized information flow, and yet rarely do we cooperate. Socialists have ambitions for [Collective Intelligence](https://cci.mit.edu), A paradigm of AI which enables coherent cooperation among the crowd, but it is not recognized in technical communities.
+**Particular Curiousity**
+- The internet revolutionized humanity's connectivity, and AI revolutionized information flow, and yet rarely do we cooperate. Socialists have ambitions for [Collective Intelligence](https://cci.mit.edu), A paradigm of AI which enables coherent cooperation among the crowd, but no technical progress of practical relevance is witnessed. In the same way Shafi and Silvio's zero-knowledge proofs enabled a new kind of secure communication, collective intelligence could lead to a new kind of economic interaction. See [Generative Social Choice](https://arxiv.org/abs/2309.01291).
+- Combinatorics is rooted in algorithmic toolboxes, but in the data driven world, statistics, algebra, analysis and topology are the mathematical underpinnings. [Algorithms on continuous](https://homes.cs.washington.edu/~jrl/teaching/cse535au21/) inputs with provable guarantees and [Topological Combinatorics](https://www.irif.fr/wtc24) are independently investigated, and connections are not yet clear. In the same way Donald Knuth showed the relevance of Discrete Math to Algorithms, The new algorithmic wave could be analysis and topology.
+- AI safety and alignment became very critical after the unexpected advancement of machine learning. [Learning-augmented algorithms](https://algorithms-with-predictions.github.io/) aims to retain robustness when predictions are inaccurate; [Neuro-Symbolic](https://sites.google.com/view/nesy2024/home) aims to design a hybrid of data-driven and symbolic-proven components. Nonetheless, theory and logic are not catching up with the rapid progress of practitioners. Are there near-term intermediate approaches to bridge theory and practice?
+- Functional programming is a language that enables correct coding by definition. It is closer to a logician than a computer scientist who is used to machinery in Turing machines. Attempts like [Lean](https://lean-lang.org/) and [Terry Tao's project](https://terrytao.wordpress.com/2024/09/25/a-pilot-project-in-universal-algebra-to-explore-new-ways-to-collaborate-and-use-machine-assistance/) explore how CS and LLM could contribute to mathematical discovery. People in [Starth](https://msp.cis.strath.ac.uk/) investigate math contributing to programming languages. Nowadays it is believed natural language is the future of computing, but what about formal languages?
 
-Theoretical research of optimization, fairness, and social-choice is active on combinatorial structures, but their applicability is limited. Practitioners train predictive models on crowds' data, but their pragmatic methods lack theoretical understanding.
+**Philosophy.**
 
-I aspire to:
-1) Study social choice on structures other than combinatorics, Probably on continuous data, Expanding novel ideas, techniques, and applications. I liked [Generative Social Choice](https://arxiv.org/abs/2309.01291).
+I enjoy abstract thinking and truth discovery using pencil and paper. A theory is supposed to be enlightening before it becomes concrete into an application. I want my code to be correct by definition rather than by testing. I care and envision humanity's future and economic growth by means of leadership. Science progress is a social endeavour, and hence it is natural for a mathematician to care about people, teaching, and good communication. CS theory is supposed to be justified; Either conceptually as deep as mathematics or practically as relevant as computer science. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
 
-2) Extend learning-augmented algorithms on computational social choice and algorithmic game theory, Utilizing data to shed new lights on algorithmic fairness and economics. I liked [Learning-Augmented Mechanism Design: Leveraging Predictions for Facility Location](https://arxiv.org/abs/2204.01120).
+**Community.**
 
-Both of which, Emphasized on theoretical foundations and provably guaranteed frameworks using proof and logic techniques.
-
-
-I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
-
-**Society & Community.** I am delighted to moderate [TCS's subreddit](https://www.reddit.com/r/theoreticalcs) and [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), Getting the chance to meet students from all over the world.
+I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), Getting the chance to meet students from all over the world.
 
 **Good Memories.**
 - [ACM's Economics & Computation Winter Gathering, With Alvin Roth and Noam Nisam](https://x.com/Mostafa_Touny/status/1758206433969963486?s=20)
@@ -43,4 +40,6 @@ I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog
 - [FOCS 2020](https://focs2020.cs.duke.edu/) (I was granted registration fee waiver). see: [1](https://twitter.com/BlumLenore/status/1327306067320172544), [2](https://twitter.com/Mostafa_Touny/status/1329139915104399362), [3](https://twitter.com/Mostafa_Touny/status/1327331859756425225), [4](https://twitter.com/Mostafa_Touny/status/1327311589163356162/photo/1). I learned about it [through twitter](https://twitter.com/ccanonne_/status/1325140475167305728).
 - [Scott Aaronson's QnA](https://twitter.com/Mostafa_Touny/status/1325547607079464960).
 
-**Family.** [Mum & Dad](https://www.instagram.com/p/CpYNgF3MpSe/?img_index=2) (Lawyer), [Brother](https://www.instagram.com/ahmedxtouny/) (Athlete Coach), [Sister](https://x.com/Mostafa_Touny/status/1600805391826587653) (Passed out aged 14).
+**Family.**
+
+[Mum & Dad](https://www.instagram.com/p/CpYNgF3MpSe/?img_index=2) (Lawyer), [Brother](https://www.instagram.com/ahmedxtouny/) (Athlete Coach), [Sister](https://x.com/Mostafa_Touny/status/1600805391826587653) (Passed out aged 14).
