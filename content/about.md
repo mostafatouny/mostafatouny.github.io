@@ -19,7 +19,9 @@ With emphasis on theoretical foundations and provably guaranteed frameworks usin
 
 **Philosophy.**
 
-I enjoy abstract thinking and truth discovery using pencil and paper. A theory is supposed to be enlightening before it becomes concrete into an application. I want my code to be correct by definition rather than by testing. I care and envision humanity's future and economic growth by means of leadership. Science progress is a social endeavour, and hence it is natural for a mathematician to care about people, teaching, and communication. CS theory is supposed to be justified; Either conceptually as deep as mathematics or practically as relevant as computer science. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
+A CS theory is supposed to be abstract from specific applications, and yet explains or influences computing practice. CS theory may not solve useful problems but the conceptual idea and concepts are necessarily motivated by practice. Solutions tied to specific concrete problems loses the potential and power of abstraction. CS theory irrelevant to practice may advance math but then it won't be a theory for computing. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
+
+I care about humanity's future and economic growth by means of leadership. Science's intellectual progress is a social endeavour, and hence it is natural for a scientist to care about people, teaching, and communication.
 
 **Community.**
 
