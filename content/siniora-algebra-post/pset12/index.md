@@ -4,8 +4,6 @@ math: true
 date: "2023-12-18"
 ---
 
-$\newcommand{\nfrac}[2]{\frac{\displaystyle{#1}}{\displaystyle{#2}}}$
-
 ## Problems {#problems .unnumbered}
 
 ### 2 {#section .unnumbered}
@@ -14,7 +12,7 @@ It is $6$. For any $i \in \\{ 0,2,4,6,8 \\}$, $6i \mod 10 = i$.
 
 ### 3 {#section-1 .unnumbered}
 
-It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \\{ \nfrac{x}{2} \mid x \in \mathbb{Z} \\} = \\{ x\ \nfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \\}$. It is a subgroup as $\nfrac{x_0}{2} + \nfrac{x_1}{2} = \nfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\nfrac{x_0}{2}$ there is $\nfrac{-x_0}{2}$ such that $\nfrac{x_0}{2} + \nfrac{-x_0}{2} = 0$. Observe $\nfrac{1}{2} \cdot \nfrac{1}{2} = \nfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.
+It suffices to find a ring with a subgroup which in turn is not closed under multiplication. Particularly the ring of rationals $\mathbb{Q}$ and its subset $S = \{ \dfrac{x}{2} \mid x \in \mathbb{Z} \} = \{ x\ \dfrac{r}{2} \mid x \in \mathbb{Z}, y = 0,1 \}$. It is a subgroup as $\dfrac{x_0}{2} + \dfrac{x_1}{2} = \dfrac{x_0 + x_1}{2}$ where $x_0 + x_1 \in \mathbb{Z}$, and for $\dfrac{x_0}{2}$ there is $\dfrac{-x_0}{2}$ such that $\dfrac{x_0}{2} + \dfrac{-x_0}{2} = 0$. Observe $\dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{4} \notin S$, So $S$ is not closed under multiplication.
 
 P.S.
 -   Any subgroup under addition of a ring, satisfies the ring's definition, except for being closed under multiplication.

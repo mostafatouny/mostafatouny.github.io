@@ -2,26 +2,27 @@
 - Research Assistant at The American University in Cairo.
   - Co-advised by both [Dr. Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Dr. Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
   - Modeling ethics for Autonomous vehicles with provable guarantees.
+- Exploring extensions to Noam's paper, [Query Complexity of Cake Cutting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f7a7bb369e48f10e85fce85b67d8c516-Abstract-Conference.html), with [Pei](https://pwu.netlify.app/).
 
 **General Interest**
 - Algorithms & Complexity.
-- Intersection between discrete and continuous math.
+- Intersection of discrete and continuous math.
 - Trustworthy machine learning.
 - Functional programming between math discovery and computing practice.
 
 With emphasis on theoretical foundations and provably guaranteed frameworks using proof and logic techniques.
 
 **Particular Curiousity**
-- The internet revolutionized humanity's connectivity, and AI revolutionized information flow, and yet rarely do we cooperate. Socialists have ambitions for [Collective Intelligence](https://cci.mit.edu), A paradigm of AI which enables coherent cooperation among the crowd, but no technical progress of practical relevance is witnessed. In the same way Shafi and Silvio's zero-knowledge proofs enabled a new kind of secure communication, collective intelligence could lead to a new kind of economic interaction. See [Generative Social Choice](https://arxiv.org/abs/2309.01291).
+- The internet revolutionized humanity's connectivity, AI revolutionized information flow, but rarely do we cooperate. Socialists have ambitions for [Collective Intelligence](https://cci.mit.edu), A paradigm of AI which enables coherent cooperation among the crowd, but no technical progress of practical relevance is witnessed. In the same way Shafi and Silvio's zero-knowledge proofs enabled a new kind of secure communication, collective intelligence could lead to a new kind of economic interaction. See [Generative Social Choice](https://arxiv.org/abs/2309.01291).
 - Combinatorics is rooted in algorithmic toolboxes, but in the data driven world, statistics, algebra, analysis and topology are the mathematical underpinnings. [Topological Combinatorics](https://www.irif.fr/wtc24) within the math community studies connections between Topology and Combinatorics. [Spreer](https://sites.google.com/view/jonathan-spreer/research)'s works are ambitious. Can we use Topological Combinatorics to reduce discrete algorithms to continuous ones, or to understand [continuous algorithms](https://homes.cs.washington.edu/~jrl/teaching/cse535au21/) through our combinatorial toolbox?
 - AI safety and understanding machine learning became very critical after their unexpected advancement. Moitra aims for understanding machine learning by its [algorithmic aspects](https://people.csail.mit.edu/moitra/cs294.html); [Learning-augmented algorithms](https://algorithms-with-predictions.github.io/) retains robustness of algorithms when predictions are inaccurate; [Neuro-symbolic](https://sites.google.com/view/nesy2024/home) designs a hybrid of data-driven and symbolic-proven components. Nonetheless, Theory and logic are not catching up with the rapid progress of practitioners. Are there near-term intermediate approaches to bridge theory and practice?
-- Functional programming is a language that enables correct coding by definition. It is closer to a logician than a computer scientist who is used to machinery in Turing machines. Attempts like [Lean](https://lean-lang.org/) and [Terry Tao's project](https://terrytao.wordpress.com/2024/09/25/a-pilot-project-in-universal-algebra-to-explore-new-ways-to-collaborate-and-use-machine-assistance/) explore how CS and LLM could contribute to mathematical discovery. People in [Starth](https://msp.cis.strath.ac.uk/) investigate math contributing to programming languages. Nowadays it is believed natural language is the future of computing, but what about formal languages?
+- Functional programming is a language that enables correct coding by definition. It is closer to a logician than a computer scientist who is used to machinery in Turing machines. Attempts like [Lean](https://lean-lang.org/) and [Terry Tao's project](https://terrytao.wordpress.com/2024/09/25/a-pilot-project-in-universal-algebra-to-explore-new-ways-to-collaborate-and-use-machine-assistance/) explore how CS and LLM could contribute to mathematical discovery. [Starth](https://msp.cis.strath.ac.uk/) and [Type Theory forall](https://www.typetheoryforall.com/) investigate math contributing to computing. Nowadays it is believed natural language is the future of computing, but what about formal languages?
 
 **Philosophy.**
 
-A CS theory is supposed to be abstract from specific applications, and yet explains or influences computing practice. CS theory may not solve useful problems but the conceptual idea and concepts are necessarily motivated by practice. Solutions tied to specific concrete problems loses the potential and power of abstraction. CS theory irrelevant to practice may advance math but then it won't be a theory for computing. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
+A CS theory is supposed to be abstract from specific applications, and yet explains or influences computing practice. CS theory may not solve useful problems but the conceptual idea and concepts are necessarily motivated by practice. Solutions tied to specific concrete problems loses the potential and power of abstraction. CS theory irrelevant to practice may advance math but then it won't be a theory for computing. Tim's [beyond the worst-case analysis](https://www.cambridge.org/core/books/beyond-the-worstcase-analysis-of-algorithms/8A8128BBF7FC2857471E9CA52E69AC21) is inspiring. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
 
-I care about humanity's future and economic growth by means of leadership. Science's intellectual progress is a social endeavour, and hence it is natural for a scientist to care about people, teaching, and communication.
+I care about humanity's future and economic growth by means of leadership. Science's intellectual progress is a social endeavour, and hence it is natural for a theorist to care about people, teaching, and communication.
 
 **Community.**
 
