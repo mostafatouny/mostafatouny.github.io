@@ -2,18 +2,18 @@
 title: Problem Set 03
 math: true
 date: "2023-03-05"
-last-update: "2024-11-29"
+lastmod: "2024-11-29"
 ---
 
 ## Problem 1
 
 The required conditions follow naturally as:
--   $d'(x,x) = \sqrt{d(x,x)} = \sqrt{0} = 0$.
--   If $d(x,y) > 0$ then $d'(x,y) > 0$ as the square root of non-zero is non-zero. Otherwise $0^2 = 0$ contradicting the fact $d'(x,y) > 0$.
--   $d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x)$.
--   $d'(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d'(x,r) + d'(r,y)$.
+- $d'(x,x) = \sqrt{d(x,x)} = \sqrt{0} = 0$.
+- If $d(x,y) > 0$ then $d'(x,y) > 0$ as the square root of non-zero is non-zero. Otherwise $0^2 = 0$ contradicting the fact $d'(x,y) > 0$.
+- $d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x)$.
+- $d'(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d'(x,r) + d'(r,y)$.
 
-For an arbitrary open-set of $d$, $\set{ y | d(x,y) < r \}$ there is an equivalent open-set of $d'$, $\set{ y | d'(x,y) < \sqrt{r} \}$. For an arbitrary open-set of $d'$, $\set{ y | d'(x,y) < r \}$, there is an equivalent open-set of $d$, $\set{ y | d(x,y) < r^2 }$.
+For an arbitrary open-set of $d$, $\{ y | d(x,y) < r \}$ there is an equivalent open-set of $d'$, $\{ y | d'(x,y) < \sqrt{r} \}$. For an arbitrary open-set of $d'$, $\{ y | d'(x,y) < r \}$, there is an equivalent open-set of $d$, $\{ y \mid d(x,y) < r^2 \}$.
 
 **Note.** Some good friends assisted in solving this problem.
 
@@ -22,13 +22,13 @@ For an arbitrary open-set of $d$, $\set{ y | d(x,y) < r \}$ there is an equivale
 
 ## Problem 2
 
-**Lemma.**   For any point $p$ in $R$, There exists a smallest element in the set $\set{ q \in E | q > p \}$\
+**Lemma.**   For any point $p$ in $R$, There exists a smallest element in the set $\{ q \in E | q > p \}$\
 Assume to the contrary that no smallest element exists. Then as the set is bounded below, the *infimum* exists, and is a limit point. That contradicts our hypothesis of no limit points in $E$.
 
 **Corollary.**   $E \cap R^+ = E^+$ has a smallest element\
 By the above lemma set $p = 0$.
 
-**Corollarly.**   Given $x_i \in E^+$ there exists a smallest element among $E^+ \cap \set{y | y > x_i\}$\
+**Corollarly.**   Given $x_i \in E^+$ there exists a smallest element among $E^+ \cap \{y | y > x_i\}$\
 By the above lemma set $p = x_i$.
 
 Now we have a counting scheme on $E^+$. What is remaining now is to prove every element in $E$ will be hit eventually. The following lemma suffices.
@@ -54,7 +54,7 @@ Assume E is uncountable. Then there is an integer n such that intersection with 
 
 ## Problem 3
 
-Assume for the sake of contradiction that the process does not stop after a finite number of steps. Then the sequence $x_i$ is infinite. Consider the infinite subset $\set{x_i\} = S_\delta$; By hypothesis it has a limit point in $X$, Call it $p$. So for neighbourhood $N_{\delta/4}(p)$, some point $q_1 \neq p$ is in that neighbourhood. Let $r_1 = d(p, q_1)$. Consider neighbourhood $N_{r_1/2}(p)$; Clearly $q_1$ is not in it. So there is a point $q_2 \neq q_1$ in it. We have now distinct points $q_1,q_2 \in S$ such that $d(p,q_1) \leq \delta/4$ and $d(p,q_2) \leq \delta/4$. It follows $d(q_1,q_2) \leq d(q_1,p) + d(p,q_2) \leq \delta/4 + \delta/4 = \delta/2$. But the construction of sequence $x_i$ stipulates every pair of points is of distance at least $\delta$. Contradiction.
+Assume for the sake of contradiction that the process does not stop after a finite number of steps. Then the sequence $x_i$ is infinite. Consider the infinite subset $\{x_i\} = S_\delta$; By hypothesis it has a limit point in $X$, Call it $p$. So for neighbourhood $N_{\delta/4}(p)$, some point $q_1 \neq p$ is in that neighbourhood. Let $r_1 = d(p, q_1)$. Consider neighbourhood $N_{r_1/2}(p)$; Clearly $q_1$ is not in it. So there is a point $q_2 \neq q_1$ in it. We have now distinct points $q_1,q_2 \in S$ such that $d(p,q_1) \leq \delta/4$ and $d(p,q_2) \leq \delta/4$. It follows $d(q_1,q_2) \leq d(q_1,p) + d(p,q_2) \leq \delta/4 + \delta/4 = \delta/2$. But the construction of sequence $x_i$ stipulates every pair of points is of distance at least $\delta$. Contradiction.
 
 It follows by the above lemma, that for any point $p$ in $X$, the distance between it and some $x_i$ of $S$ is strictly less than $\delta$. Therefore $p$ is covered by $N_\delta{x_i}$.
 
