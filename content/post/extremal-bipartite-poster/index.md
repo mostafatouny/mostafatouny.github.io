@@ -68,6 +68,8 @@ source: MIT's Math for CS, thm 19.6.4, page 815.
 
 **Graph-based interpretation of tournament results.** Outcomes of $n$ contestants can be interpreted as a direct graph, whereby for each pair of players $(a,b)$, exactly $(a,b) \in G(E)$ or $(b,a) \in G(E)$.
 
+![](graph-1.jpg#center)
+
 ## Results
 
 **Theorem.** In a Round-Robin tournament of $n$ players, Drawing is possible for any $n \geq 3$ players.
@@ -75,6 +77,8 @@ source: MIT's Math for CS, thm 19.6.4, page 815.
 The proof is constructive. Fix players $p1$, $p2$, and $p3$. Assign $p1$ loses from $p2$ and wins remaining $n-2$ players. Assign $p2$ loses from $p3$ and wins remaining $n-2$ players. Then $score[p1] = score[p2] = n-2$. As $p1$ and $p2$ are fully assigned, any other player wins at most $n-3$ times.
 
 **Theorem.** In a Round-Robin tournament of $n$ players, and with a winning probability $p = \frac{1}{2}$ for all players, The probability of "Domination" where a player beats all others tends to zero as $n \rightarrow \infty$.
+
+![](graph-2.jpg#center)
 
 Let $E_i$ denote ith player wins all others.
 $$
@@ -106,6 +110,8 @@ $$
 $$ By taking $r$ to be arbitrarily small, The intended result follows.
 
 **Theorem.** We are given a complete bipartite graph of matches, with total $n$ vertices, partitioned by $|U| = \lceil rn \rceil$, and $|V| = \lfloor (1-r)n \rfloor$. Also $n \geq 1$, $r > 0$, and $p > 0$. For $T$ the number of players in $V$ who won some match, We show $Ex[T/|V|] = 1$ as $n \rightarrow \infty$.
+
+![](graph-3.jpg#center)
 
 For every player $i = \lceil rn \rceil + 1, \dots, n$ of $V$, Let $T_i = 1$ iff it won some match. Then $T = \sum_{i = \lceil rn \rceil + 1}^n T_i$.
 

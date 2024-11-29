@@ -14,7 +14,7 @@ The required conditions follow naturally as:
 - \(d'(x,y) = \sqrt{d(x,y)} = \sqrt{d(y,x)} = d'(y,x)\).
 - \(d'(x,y) = \sqrt{d(x,y)} \leq \sqrt{d(x,r) + d(r,y)} \leq \sqrt{d(x,r)} + \sqrt{d(r,y)} = d'(x,r) + d'(r,y)\).
 
-For an arbitrary open-set of \(d\), \(\{ y | d(x,y) < r \}\) there is an equivalent open-set of \(d'\), \(\{ y | d'(x,y) < \sqrt{r} \}\). For an arbitrary open-set of \(d'\), \(\{ y | d'(x,y) < r \}\), there is an equivalent open-set of \(d\), \(\{ y \mid d(x,y) < r^2 \}\).
+For an arbitrary open-set of \(d\), \(\{ y \mid d(x,y) < r \}\) there is an equivalent open-set of \(d'\), \(\{ y \mid d'(x,y) < \sqrt{r} \}\). For an arbitrary open-set of \(d'\), \(\{ y \mid d'(x,y) < r \}\), there is an equivalent open-set of \(d\), \(\{ y \mid d(x,y) < r^2 \}\).
 
 **Note.** Some good friends assisted in solving this problem.
 
@@ -23,13 +23,13 @@ For an arbitrary open-set of \(d\), \(\{ y | d(x,y) < r \}\) there is an equival
 
 ## Problem 2
 
-**Lemma.**   For any point \(p\) in \(R\), There exists a smallest element in the set \(\{ q \in E | q > p \}\)\
+**Lemma.**   For any point \(p\) in \(R\), There exists a smallest element in the set \(\{ q \in E \mid q > p \}\)\
 Assume to the contrary that no smallest element exists. Then as the set is bounded below, the *infimum* exists, and is a limit point. That contradicts our hypothesis of no limit points in \(E\).
 
 **Corollary.**   \(E \cap R^+ = E^+\) has a smallest element\
 By the above lemma set \(p = 0\).
 
-**Corollarly.**   Given \(x_i \in E^+\) there exists a smallest element among \(E^+ \cap \{y | y > x_i\}\)\
+**Corollarly.**   Given \(x_i \in E^+\) there exists a smallest element among \(E^+ \cap \{y \mid y > x_i\}\)\
 By the above lemma set \(p = x_i\).
 
 Now we have a counting scheme on \(E^+\). What is remaining now is to prove every element in \(E\) will be hit eventually. The following lemma suffices.
@@ -80,4 +80,4 @@ _Proof._ Define a vector-valued function \(h(x) = ( h_1(x), h_2(x) )\) where \(h
 
 **Theorem.** Problem statement.
 
-_Proof._ As before let \(g: X \rightarrow \mathbb{R}\) by \(x \mapsto d(x, f(x))\). The image \(\{ d(x, f(x)) \mid x \in X \}\) is lower-bounded by \(0\). Since \(X\) is non-empty and \(\mathbb{R}\) has the \textit{greatest-lower-bound property}, It follows \(inf \, X = m\) exists. Assume for contradiction \(m > 0\). By \textit{thm 4.16, p 89, rudin}, there is a point \(p_0 \in X\) where \(g(p_0) = m = d(p_0, f(p_0))\). But we are given \(d(f(p_0), f^2(p_0)) < m\), i.e \(g(f(p_0)) < g(p_0)\). Contradiction. Therefore \(inf \, X = 0\) and there's a point \(p\) such that \(g(p) = d(p, f(p)) = 0\), implying \(f(p) = p\).
+_Proof._ As before let \(g: X \rightarrow \mathbb{R}\) by \(x \mapsto d(x, f(x))\). The image \(\{ d(x, f(x)) \mid x \in X \}\) is lower-bounded by \(0\). Since \(X\) is non-empty and \(\mathbb{R}\) has the _greatest-lower-bound property_, It follows \(inf \, X = m\) exists. Assume for contradiction \(m > 0\). By _thm 4.16, p 89, rudin_, there is a point \(p_0 \in X\) where \(g(p_0) = m = d(p_0, f(p_0))\). But we are given \(d(f(p_0), f^2(p_0)) < m\), i.e \(g(f(p_0)) < g(p_0)\). Contradiction. Therefore \(inf \, X = 0\) and there's a point \(p\) such that \(g(p) = d(p, f(p)) = 0\), implying \(f(p) = p\).

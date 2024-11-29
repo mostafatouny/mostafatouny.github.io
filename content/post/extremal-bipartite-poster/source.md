@@ -61,9 +61,8 @@ source: MIT's Math for CS, thm 19.6.4, page 815.
 
 # Remarks
 
-**Graph-based interpretation of tournament results.** Outcomes of $n$
-contestants can be interpreted as a direct graph, whereby for each pair
-of players $(a,b)$, exactly $(a,b) \in G(E)$ or $(b,a) \in G(E)$.
+**Graph-based interpretation of tournament results.** Outcomes of $n$ contestants can be interpreted as a direct graph, whereby for each pair of players $(a,b)$, exactly $(a,b) \in G(E)$ or $(b,a) \in G(E)$.
+
 
 # Results
 
