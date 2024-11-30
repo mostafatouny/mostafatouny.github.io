@@ -4,13 +4,22 @@ subtitle: "A poster presentation for Egypt's ICMA 24 conference"
 summary: "A poster presentation for Egypt's ICMA 24 conference"
 math: true
 date: "2024-10-28"
+lastmod: "2024-11-30"
 cover:
-    image: "featured.jpg"
+    image: "pic-2.jpg"
 ---
 
 ## Forward
 
-To be presented as a poster presentation in [ICMA 24](https://icma24.egycm.org/).
+A poster presentation in [ICMA 24](https://icma24.egycm.org/). I had a great pleasure to meet prof. [Ali Hadi](https://www.aucegypt.edu/fac/ali-hadi), and prof. [Samir Sakr](https://scholar.google.com/citations?hl=en&user=wzSzuWMAAAAJ&view_op=list_works&sortby=pubdate), alongside others.
+
+## Pictures
+
+![](pic-4.jpg#center)
+![](pic-3.jpg#center)
+![](pic-5.jpg#center)
+![](pic-6.jpg#center)
+![](pic-1.jpg#center)
 
 ## Abstract
 
