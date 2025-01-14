@@ -59,6 +59,8 @@ params:
     #   url: "https://x.com/Mostafa_Touny"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/mostafa-touny/"
+    - name: "reddit"
+      url: "https://www.reddit.com/user/xTouny/"
     - name: "instagram"
       url: "https://www.instagram.com/mostafa.touny/"
 
