@@ -26,7 +26,7 @@ A CS theory is supposed to be abstract from specific applications, and yet expla
 
 _Theory vs Application_
 
-A theorist's mission is to progress the intellect of humanity. It's about enlightening new conceptual ideas, and resolving technical challenges. Theory could lead to applications as number theory preceeded cryptography. Applications could stimulate theory as OpenAI engineers have built what we theoretically thought is not doable. It seems progress is driven by an interplay among diverse fields of inquiry and approaches. A good theorist does not get enclosed within a bubble, but progresses the intellect, following whatever angle is more promising. I don't see boundaries between math, theoretical CS, and practical CS.
+A theorist's mission is to progress the intellect of humanity. It's about enlightening new conceptual ideas, and resolving technical challenges. Theory could lead to applications as number theory preceeded cryptography. Applications could stimulate theory as OpenAI engineers have built what we theoretically thought is not doable. It seems progress is driven by an interplay among diverse fields of inquiry and approaches. A good theorist does not get enclosed within a bubble, but progresses the intellect, following whatever angle is more promising. I don't see boundaries between math, theoretical CS, and practical CS. Roger Penrose's [Fashion, Faith, and Fantasy](https://press.princeton.edu/books/hardcover/9780691119793/fashion-faith-and-fantasy-in-the-new-physics-of-the-universe) is full of wisdom.
 
 _Community_
 
