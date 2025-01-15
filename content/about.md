@@ -1,13 +1,13 @@
 **Currently**
 - Research Assistant at The American University in Cairo.
-  - Co-advised by both [Dr. Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Dr. Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
+  - Co-advised by both [Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
   - Modeling ethics for Autonomous vehicles with provable guarantees.
-- Exploring extensions to Noam's paper, [Query Complexity of Cake Cutting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f7a7bb369e48f10e85fce85b67d8c516-Abstract-Conference.html), with [Pei](https://pwu.netlify.app/).
+- Extending [Query Complexity of Cake Cutting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f7a7bb369e48f10e85fce85b67d8c516-Abstract-Conference.html) with [Pei](https://pwu.netlify.app/).
 
 **General Interest**
-- Algorithms & Complexity.
+- Algorithms and economics.
 - Intersection of discrete and continuous math.
-- Trustworthy machine learning.
+- Mathematical and algorithmic foundations of learning.
 - Functional programming between math discovery and computing practice.
 
 With emphasis on theoretical foundations and provably guaranteed frameworks using proof and logic techniques.
@@ -20,11 +20,19 @@ With emphasis on theoretical foundations and provably guaranteed frameworks usin
 
 **Philosophy.**
 
-A CS theory is supposed to be abstract from specific applications, and yet explains or influences computing practice. CS theory may not solve useful problems but the conceptual idea and concepts are necessarily motivated by practice. Solutions tied to specific concrete problems loses the potential and power of abstraction. CS theory irrelevant to practice may advance math but then it won't be a theory for computing. Tim's [beyond the worst-case analysis](https://www.cambridge.org/core/books/beyond-the-worstcase-analysis-of-algorithms/8A8128BBF7FC2857471E9CA52E69AC21) is inspiring. I will always be remembering [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
+_What is Theoretical CS?_
+
+A CS theory is supposed to be abstract from specific applications, and yet explains or influences computing practice. CS theory may not solve useful problems but the conceptual idea and concepts are necessarily motivated by practice. Solutions tied to specific concrete problems loses the potential and power of abstraction. CS theory irrelevant to practice may advance math but then it won't be a theory for computing. Tim's [beyond the worst-case analysis](https://www.cambridge.org/core/books/beyond-the-worstcase-analysis-of-algorithms/8A8128BBF7FC2857471E9CA52E69AC21) is inspiring, and I like [Oded and Avi's 1996 essay](https://theorydish.blog/2021/04/15/toc-a-personal-perspective-2021).
+
+_Theory vs Application_
+
+A theorist's mission is to progress the intellect of humanity. It's about enlightening new conceptual ideas, and resolving technical challenges. Theory could lead to applications as number theory preceeded cryptography. Applications could stimulate theory as OpenAI engineers have built what we theoretically thought is not doable. It seems progress is driven by an interplay among diverse fields of inquiry and approaches. A good theorist does not get enclosed within a bubble, but progresses the intellect, following whatever angle is more promising. I don't see boundaries between math, theoretical CS, and practical CS.
+
+_Community_
 
 I care about humanity's future and economic growth by means of leadership. Science's intellectual progress is a social endeavour, and hence it is natural for a theorist to care about people, teaching, and communication.
 
-**Community.**
+**Service.**
 
 I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), Getting the chance to meet students from all over the world.
 
@@ -45,4 +53,4 @@ I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theor
 
 **Family.**
 
-[Mum & Dad](https://www.instagram.com/p/CpYNgF3MpSe/?img_index=2) (Lawyer), [Brother](https://www.instagram.com/ahmedxtouny/) (Athlete Coach), [Sister](https://x.com/Mostafa_Touny/status/1600805391826587653) (Passed out aged 14).
+[Mum & Dad](https://www.instagram.com/p/CpYNgF3MpSe/?img_index=2) (Lawyer), [Brother](https://www.instagram.com/ahmedxtouny/) (Athlete Coach), [Sister](https://x.com/Mostafa_Touny/status/1600805391826587653) (Passed away aged 14).
