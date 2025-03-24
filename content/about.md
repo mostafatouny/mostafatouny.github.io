@@ -38,19 +38,22 @@ I care about humanity's future and economic growth by means of leadership. Scien
 I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), getting the chance to meet students all over the world.
 
 **Good Memories.**
-- [Alvin Roth and Noam Nisam. ACM winter gathering](https://cryptpad.fr/drive/#/2/drive/view/J53K-BC7eAQFE2QEDZA43WgEpwT+c+iBk+EWs+Baxf8/).
-- [Gkatzelis. CompSoc Seminar](https://youtu.be/nMm6-20OI94?si=P4bSchKYpLBZzzs9&t=1685).
-- [Chi-Ning Chou's Minicourse](https://cryptpad.fr/file/#/2/file/ERR07xBtAOKCofOTr3crA81W/). Course details [here](https://cnchou.github.io/mini-course/).
+- [Alvin Roth and Noam Nisam. ACM winter gathering](https://photos.app.goo.gl/u8BHUEPABcmWUmVJ9).
+- [Gkatzelis. CompSoc Seminar](https://youtu.be/nMm6-20OI94?si=P4bSchKYpLBZzis9&t=1685).
+- [Chi-Ning Chou's Minicourse](https://photos.app.goo.gl/KLpaq1FbkhYN24F58). Course details [here](https://cnchou.github.io/mini-course/).
 - [COLT 2021 Mentorship Workshop](https://cryptpad.fr/drive/#/2/drive/view/EVpL3s8bxcUqEbjoXfny0-v0Qw2pxu82tcm1DtVTZ0U/).
-- [Rahul Llango](https://cryptpad.fr/file/#/2/file/TrM2yzc8PEIts4SsyKjmp06e/).
-- [qEgypt's First Workshop on Quantum Computing](https://cryptpad.fr/drive/#/2/drive/view/jeO7UQhpN7pS3NaNq3nsV2DrdCowKM4eI52oJLWeRZc/).
+- [Rahul Llango](https://photos.app.goo.gl/YD6qD2KVWrqQhEwG8).
+- [qEgypt's First Workshop on Quantum Computing](https://photos.app.goo.gl/VSLzLkUZajZAGRHE6).
 - [My Poly Hong Kong Talk](post/hobbyist-talk/).
-- [Toric Quantum Error Correction Codes](https://cryptpad.fr/file/#/2/file/gb60YCqVaFXNFr-s-9+bQWHa/).
+- [ALT 2022](https://photos.app.goo.gl/RZ4KPzFpj2vxuXga6)
+- [Colt 2021](https://photos.app.goo.gl/Dy5As3oAt3ZRakTFA)
+- [CWI-75](https://photos.app.goo.gl/EzkYXQa9KuR1vyaJA)
+- [Toric Quantum Error Correction Codes](https://photos.app.goo.gl/zhqySwdPKbTRwhAe7).
 - [Honors Linear Algebra, UCLA](post/math115ah/).
-- [4-player chess](https://cryptpad.fr/drive/#/2/drive/view/XTPRxSoOKckXO4W8+xfg2gXqyqErqkSNp4iR0Zmdzm8/) with Ewin Tang, Kuikui Liu, and Ansh Nagda.
+- [4-player chess](https://photos.app.goo.gl/c65bf13YhzxensVA8) with Ewin Tang, Kuikui Liu, and Ansh Nagda.
 - [Yael Kalai's QnA](https://youtu.be/ygcEkJQdxAE?t=3960).
-- [FOCS 2020](https://cryptpad.fr/drive/#/2/drive/view/LyQ789mrsx1k0RssaPZAL3zQk1s+jgGpxw127Xfrv3Q/) (I was granted registration fee waiver).
-- [Scott Aaronson's QnA](https://cryptpad.fr/file/#/2/file/+Www-hliPVKzKwjjCMRsGVn+/).
+- [FOCS 2020](https://photos.app.goo.gl/kyfZhctPMPv1YKjY7) (I was granted registration fee waiver).
+- [Scott Aaronson's QnA](https://photos.app.goo.gl/PiagM2Ng1Ldomz628).
 
 **Family.**
 
