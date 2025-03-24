@@ -3,7 +3,7 @@
   - Co-advised by both [Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
   - Modeling ethics for Autonomous vehicles with provable guarantees.
 - Extending [Query Complexity of Cake Cutting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f7a7bb369e48f10e85fce85b67d8c516-Abstract-Conference.html) with [Pei](https://pwu.netlify.app/).
-- Auditing _Analysis II_ with [Hany El-Hosseiney](https://www.linkedin.com/in/hany-hosseiny-382380206/), and _Topology_ with [Eslam Badr](https://www.aucegypt.edu/fac/eslam-badr).
+- Auditing Analysis II with [Hany El-Hosseiney](https://www.linkedin.com/in/hany-hosseiny-382380206/), and Topology with [Eslam Badr](https://www.aucegypt.edu/fac/eslam-badr).
 
 **General Interest**
 - Algorithms and economics.
@@ -35,22 +35,22 @@ I care about humanity's future and economic growth by means of leadership. Scien
 
 **Service.**
 
-I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), Getting the chance to meet students from all over the world.
+I do moderate [TCS's awesome list](https://github.com/mostafatouny/awesome-theoretical-computer-science), getting the chance to meet students all over the world.
 
 **Good Memories.**
-- [ACM's Economics & Computation Winter Gathering, With Alvin Roth and Noam Nisam](https://x.com/Mostafa_Touny/status/1758206433969963486?s=20)
-- [Asking Gkatzelis about Learning-Augmentation for Voting and Fairness](https://youtu.be/nMm6-20OI94?si=P4bSchKYpLBZzzs9&t=1685)
-- [Chi-Ning Chou's Minicourse](https://twitter.com/Mostafa_Touny/status/1480568006875004930) (course details [here](https://cnchou.github.io/mini-course/))
-- [COLT 2021 Mentorship Workshop](https://twitter.com/Mostafa_Touny/status/1422972878065184768)
-- [Rahul Llango's talk, Towards Hardness for the Minimum Circuit Size Problem](https://twitter.com/Mostafa_Touny/status/1386012832156749825)
-- [qEgypt's First Workshop on Quantum Computing](https://twitter.com/Mostafa_Touny/status/1380969863708041218)
-- [My Poly Hong Kong Talk](post/hobbyist-talk/)
-- [Toric Quantum Error Correction Codes, Quantum Discord Server](https://twitter.com/Mostafa_Touny/status/1373661965185339394)
-- [Honors Linear Algebra, UCLA](post/math115ah/)
-- [4-player chess](https://twitter.com/Mostafa_Touny/status/1360420814806540288) with Ewin Tang, Kuikui Liu, and Ansh Nagda.
-- [Yael Kalai's QnA](https://youtu.be/ygcEkJQdxAE?t=3960) on [obfuscation's breakthrough](https://www.quantamagazine.org/in-cryptography-advances-in-program-obfuscation-20140130).
-- [FOCS 2020](https://focs2020.cs.duke.edu/) (I was granted registration fee waiver). see: [1](https://twitter.com/BlumLenore/status/1327306067320172544), [2](https://twitter.com/Mostafa_Touny/status/1329139915104399362), [3](https://twitter.com/Mostafa_Touny/status/1327331859756425225), [4](https://twitter.com/Mostafa_Touny/status/1327311589163356162/photo/1). I learned about it [through twitter](https://twitter.com/ccanonne_/status/1325140475167305728).
-- [Scott Aaronson's QnA](https://twitter.com/Mostafa_Touny/status/1325547607079464960).
+- [Alvin Roth and Noam Nisam. ACM winter gathering](https://cryptpad.fr/drive/#/2/drive/view/J53K-BC7eAQFE2QEDZA43WgEpwT+c+iBk+EWs+Baxf8/).
+- [Gkatzelis. CompSoc Seminar](https://youtu.be/nMm6-20OI94?si=P4bSchKYpLBZzzs9&t=1685).
+- [Chi-Ning Chou's Minicourse](https://cryptpad.fr/file/#/2/file/ERR07xBtAOKCofOTr3crA81W/). Course details [here](https://cnchou.github.io/mini-course/).
+- [COLT 2021 Mentorship Workshop](https://cryptpad.fr/drive/#/2/drive/view/EVpL3s8bxcUqEbjoXfny0-v0Qw2pxu82tcm1DtVTZ0U/).
+- [Rahul Llango](https://cryptpad.fr/file/#/2/file/TrM2yzc8PEIts4SsyKjmp06e/).
+- [qEgypt's First Workshop on Quantum Computing](https://cryptpad.fr/drive/#/2/drive/view/jeO7UQhpN7pS3NaNq3nsV2DrdCowKM4eI52oJLWeRZc/).
+- [My Poly Hong Kong Talk](post/hobbyist-talk/).
+- [Toric Quantum Error Correction Codes](https://cryptpad.fr/file/#/2/file/gb60YCqVaFXNFr-s-9+bQWHa/).
+- [Honors Linear Algebra, UCLA](post/math115ah/).
+- [4-player chess](https://cryptpad.fr/drive/#/2/drive/view/XTPRxSoOKckXO4W8+xfg2gXqyqErqkSNp4iR0Zmdzm8/) with Ewin Tang, Kuikui Liu, and Ansh Nagda.
+- [Yael Kalai's QnA](https://youtu.be/ygcEkJQdxAE?t=3960).
+- [FOCS 2020](https://cryptpad.fr/drive/#/2/drive/view/LyQ789mrsx1k0RssaPZAL3zQk1s+jgGpxw127Xfrv3Q/) (I was granted registration fee waiver).
+- [Scott Aaronson's QnA](https://cryptpad.fr/file/#/2/file/+Www-hliPVKzKwjjCMRsGVn+/).
 
 **Family.**
 
