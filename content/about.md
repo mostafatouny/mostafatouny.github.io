@@ -3,7 +3,6 @@
   - Co-advised by both [Daoud Siniora](https://sites.google.com/view/daoudsiniora) and [Amr El-Mougy](https://www.aucegypt.edu/fac/amr-el-mougy).
   - Modeling ethics for Autonomous vehicles with provable guarantees.
 - Extending [Query Complexity of Cake Cutting](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f7a7bb369e48f10e85fce85b67d8c516-Abstract-Conference.html) with [Pei](https://pwu.netlify.app/).
-- Auditing Analysis II with [Hany El-Hosseiney](https://www.linkedin.com/in/hany-hosseiny-382380206/), and Topology with [Eslam Badr](https://www.aucegypt.edu/fac/eslam-badr).
 
 **General Interest**
 - Algorithms and economics.

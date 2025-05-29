@@ -1,7 +1,7 @@
 ---
 title: Siniora's Formal Logic
-subtitle: "A course audited by Dr. Daoud Siniora, at The American University in Cairo (AUC)"
-summary: "A course audited by Dr. Daoud Siniora, at The American University in Cairo (AUC)"
+subtitle: "A course audited by Daoud Siniora, at The American University in Cairo (AUC)"
+summary: "A course audited by Daoud Siniora, at The American University in Cairo (AUC)"
 math: true
 date: "2024-06-03"
 cover:
@@ -9,8 +9,8 @@ cover:
     responsiveImages: false
 ---
 
-## Forward
-TBD
+## Instructor
+- [Daoud Siniora](https://sites.google.com/view/daoudsiniora/)
 
 ## Materials
 - [Lecture Notes](./lecture-notes.pdf)

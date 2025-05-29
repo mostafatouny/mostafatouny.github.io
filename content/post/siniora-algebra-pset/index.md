@@ -1,15 +1,15 @@
 ---
 title: Siniora's Abstract Algebra
-subtitle: "A course audited by Dr. Daoud Siniora, The American University in Cairo (AUC)"
-summary: "A course audited by Dr. Daoud Siniora, The American University in Cairo (AUC)"
+subtitle: "A course audited by Daoud Siniora, The American University in Cairo (AUC)"
+summary: "A course audited by Daoud Siniora, The American University in Cairo (AUC)"
 math: true
 date: "2023-12-16"
 cover:
     image: "featured.jpg"
 ---
 
-## Forward
-TBD
+## Instructor
+- [Daoud Siniora](https://sites.google.com/view/daoudsiniora/)
 
 ## Materials
 - [Lecture Notes](https://sites.google.com/view/daoudsiniora/lecture-notes)

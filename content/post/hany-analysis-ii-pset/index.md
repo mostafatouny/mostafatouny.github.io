@@ -8,6 +8,9 @@ cover:
     image: "featured.jpg"
 ---
 
+## Instructor
+- [Hany El-Hosseiney](https://www.linkedin.com/in/hany-hosseiny-382380206/)
+
 ## Syllabus
 - [PDF](./syllabus.pdf)
 

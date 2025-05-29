@@ -1,7 +1,7 @@
 ---
 title: Isabel's Graph Theory
-subtitle: "A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)"
-summary: "A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC)"
+subtitle: "A course audited by Isabel Muller, at The American University in Cairo (AUC)"
+summary: "A course audited by Isabel Muller, at The American University in Cairo (AUC)"
 math: true
 date: "2024-06-01"
 cover:
@@ -9,8 +9,8 @@ cover:
     responsiveImages: false
 ---
 
-## Forward
-TBD
+## Instructor
+- [Isabel Müller](https://sites.google.com/view/isabelmuller/)
 
 ## Materials
 - [Lecture Notes](./isabel-notes.pdf)

@@ -1,12 +1,15 @@
 ---
 title: Badr's Topology
-subtitle: "A course audited by Dr. Eslam Badr, The American University in Cairo (AUC)"
-summary: "A course audited by Dr. Eslam Badr, The American University in Cairo (AUC)"
+subtitle: "A course audited by Eslam Badr, The American University in Cairo (AUC)"
+summary: "A course audited by Eslam Badr, The American University in Cairo (AUC)"
 math: true
 date: "2025-05-26"
 cover:
     image: "featured.jpg"
 ---
+
+## Instructor
+- [Eslam Badr](https://www.aucegypt.edu/fac/eslam-badr)
 
 ## Materials
 - Topology by Munkres, 3rd ed.
@@ -22,8 +25,8 @@ cover:
 | 5 | 19        | [PDF](./pset-05.pdf), [HTML](/badr-topology-post/pset-05)| 17.5 / 20 |
 | 6 | 20 & 21   | [PDF](./pset-06.pdf), [HTML](/badr-topology-post/pset-06)| 16 / 20   |
 | 7 | 30 & 31   | [PDF](./pset-07.pdf), [HTML](/badr-topology-post/pset-07)| 20.5 / 24 |
-| 8 | 26, 27, 28| [PDF](./pset-08.pdf), [HTML](/badr-topology-post/pset-08)|           |
-| 9 | 23 & 24   | [PDF](./pset-09.pdf), [HTML](/badr-topology-post/pset-09)|           |
+| 8 | 26, 27, 28| [PDF](./pset-08.pdf), [HTML](/badr-topology-post/pset-08)| 20 / 22   |
+| 9 | 23 & 24   | [PDF](./pset-09.pdf), [HTML](/badr-topology-post/pset-09)| 12 / 20   |
 
 ## Project: Topological Combinatorics through Kneser Graph
 
