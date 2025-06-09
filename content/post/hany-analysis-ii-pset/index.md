@@ -24,7 +24,6 @@ cover:
 
 ![3](./hany-3.jpg)
 ![5](./hany-5.jpg)
-![0](./hany-0.jpg)
 
 
 ## Problem Set
