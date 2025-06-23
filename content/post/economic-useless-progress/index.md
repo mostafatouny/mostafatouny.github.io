@@ -44,16 +44,13 @@ Downloaded from [here](./slides-economic-useless-progress.pdf).
 - (2) Accommodating the diversity of mathematicians's domains and motivations, yet under a cohesive framework.
 - (3) Gap between the kind of support students need, and on the other hand, what qualified workforce do expect from students.
 
-**Minority Respecting Mechanism.** We achieved a progress in solving challenge (2) by designing a minority-respecting voting mechanism. The idea is to set the total voting power of each cluster to be the same, irrespective of the quantity of each cluster.
-
-**Next.** Solving challenge (3). We are discussing how to well-utilize the limited resources we have, to achieve a productive and scalable pipeline.
-
 **Request.** On behalf of the government, we request the following:
 - Transporations and national universities network to gather students all over Egypt.
 - A gathering place hosted by the Egyptian government.
 - A communication channel with the government for a fruitful cooperation.
 
-**Conclusion.** We are not gathering by means of naive enthusiasm. We have clear aspired outcomes and short-term quick wins. The Math community took an initiative, and all what we request is minimal support, untill our efforts prove their worthiness. Nations rise up, only and only when, its diverse communities collaborate together.
+**Conclusion.** The problem is not in the lack of resources. The problem is in the utilization of human power.
+
 
 ## Pictures
 
