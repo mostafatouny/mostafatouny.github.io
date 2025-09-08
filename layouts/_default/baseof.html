@@ -1,0 +1,38 @@
+{{- if lt hugo.Version "0.112.4" }}
+{{- errorf "=> hugo v0.112.4 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}
+
+    <!-- if math is true in a post, which is the default for all pages, enable default math engine, KaTeX -->
+    {{ if .Param "math" }}
+        {{ partialCached "math.html" . }}
+    {{ end }}
+
+    <!-- if math_mathjax is true in a post, which is not enabled by default, and math is false, use MathJax engine -->
+    {{ if and (.Param "math_mathjax") (not (.Param "math")) }}
+        {{ partialCached "math_mathjax.html" . }}
+    {{ end }}
+
+</head>
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>
