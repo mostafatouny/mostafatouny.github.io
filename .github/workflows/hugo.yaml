@@ -63,7 +63,7 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
       # my hack
       - name: Modify links in index.html
-        run: sed -i 's/href="myemail"/onclick="alert(String.fromCharCode(99,111,110,116,97,99,116,64,109,111,115,116,97,102,97,116,111,117,110,121,46,99,111,109));"/' ./public/index.html && sed -i 's/href="mytelegram"/onclick="alert(String.fromCharCode(116,46,109,101,47,109,111,115,116,97,102,97,116,111,117,110,121));"/' ./public/index.html
+        run: sed -i 's/href=myemail/onclick="alert(String.fromCharCode(99,111,110,116,97,99,116,64,109,111,115,116,97,102,97,116,111,117,110,121,46,99,111,109));"/' ./public/index.html && sed -i 's/href=mytelegram/onclick="alert(String.fromCharCode(116,46,109,101,47,109,111,115,116,97,102,97,116,111,117,110,121));"/' ./public/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
