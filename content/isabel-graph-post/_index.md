@@ -1,6 +1,6 @@
 ---
 title: Isabel's Graph Theory
-subtitle: A course audited by Dr. Isabel Muller, at The American University in Cairo (AUC).
+subtitle: A course audited by Isabel Muller, at The American University in Cairo (AUC).
 
 # View.
 #   1 = List

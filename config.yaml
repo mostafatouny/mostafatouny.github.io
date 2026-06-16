@@ -35,7 +35,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Mostafa Touny
-    subtitle: "Research Assistant at The American University in Cairo"
+    subtitle: "Stealth Local LLM Builder"
     # in static folder
     imageUrl: "profile.jpg"
     imageWidth: 400
