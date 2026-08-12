@@ -41,8 +41,10 @@ jobs:
       # no dependencies requiring it
       # - name: Install Dart Sass
         # run: sudo snap install dart-sass
+      # node version
+      # see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
           fetch-depth: 0
