@@ -1,7 +1,7 @@
 # indentation size must be 2 in yaml
 
 baseURL: https://mostafatouny.com/
-languageCode: en-us
+locale: en-us
 title: Mostafa Touny
 theme: PaperMod
 
@@ -35,7 +35,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Mostafa Touny
-    subtitle: "Stealth Local LLM Builder"
+    subtitle: "Stealth"
     # in static folder
     imageUrl: "profile.jpg"
     imageWidth: 400
@@ -59,8 +59,8 @@ params:
     #   url: "https://x.com/Mostafa_Touny"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/mostafa-touny/"
-    - name: "reddit"
-      url: "https://www.reddit.com/user/xTouny/"
+    # - name: "reddit"
+    #   url: "https://www.reddit.com/user/xTouny/"
     - name: "instagram"
       url: "https://www.instagram.com/mostafa.touny/"
 
