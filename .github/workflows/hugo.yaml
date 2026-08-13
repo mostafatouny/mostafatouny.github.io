@@ -43,6 +43,7 @@ jobs:
         # run: sudo snap install dart-sass
       # node version
       # see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+      # actions/configure-pages@v6 and actions/deploy-pages@v5 are relevant too
       - name: Checkout
         uses: actions/checkout@v6
         with:
