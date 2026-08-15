@@ -1,5 +1,5 @@
 ---
-title: Calculus
+title: Rogawski & Adams' Calculus
 subtitle: "Self-studying Calculus by Rogawski & Adams."
 summary: "Self-studying Calculus by Rogawski & Adams."
 math: true

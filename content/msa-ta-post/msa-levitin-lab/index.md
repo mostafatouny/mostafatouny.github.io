@@ -1,20 +1,19 @@
 ---
-title: Levitin's Algorithms
+title: Introduciton to Algorithms
 subtitle: "A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts University (MSA)"
 summary: "A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts University (MSA)"
 math: true
 date: "2023-11-18"
 cover:
-    image: "featured.jpg"
+  image: "featured.jpg"
 ---
 
-## Forward
-TBD
-
 ## Materials
+
 - Book: Introduction to The Design and Analysis of Algorithms by Levitin, 3rd edition.
 
 ## Problem Set
+
 
 | Lab      | Content  |
 |--------------|-----------|

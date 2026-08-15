@@ -2,15 +2,12 @@
 title: Proving Graphical Steiner Tree is NP-Complete
 subtitle: Yet, Another NP-Complete Problem. Kleinberg and Tardos' exercise 38 of their algorithm design book
 summary: Yet, Another NP-Complete Problem. Kleinberg and Tardos' exercise 38 of their algorithm design book
-
 date: "2020-06-19T00:00:01Z"
-
 featured: false
-draft: false
 diagram: true
 math: true
 cover:
-    image: "featured.png"
+  image: "featured.png"
 ---
 
 ## Preface

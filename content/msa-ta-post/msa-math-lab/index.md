@@ -1,12 +1,12 @@
 ---
-title: "Math with Application at MSA Uni."
+title: "Math with Application"
 subtitle: "Four courses TAed in Spring 2024, Modern Sciences and Arts (MSA)."
 summary: "Four courses TAed in Spring 2024, Modern Sciences and Arts (MSA)."
 math: true
 date: "2024-07-09"
 cover:
-    image: "featured.jpg"
-    responsiveImages: false
+  image: "featured.jpg"
+  responsiveImages: false
 ---
 
 ## Best Student Project

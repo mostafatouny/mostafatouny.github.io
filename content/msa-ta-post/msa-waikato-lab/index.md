@@ -1,20 +1,19 @@
 ---
-title: "Waikato's Data Mining"
+title: "Data Mining"
 subtitle: "A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts (MSA)."
 summary: "A course TAed with Dr. Islam El-Shaarawy, Modern Sciences and Arts (MSA)."
 math: true
 date: "2023-11-20"
 cover:
-    image: "featured.jpg"
+  image: "featured.jpg"
 ---
 
-## Forward
-TBD
-
 ## Materials
+
 - Data Mining: Practical Machine Learning Tools and Techniques by Witten, Frank, Hall, and Pal, 4th ed.
 
 ## Labs
+
 | Lab | Notebook |
 |-----|----------|
 | Lab 00 | <a href="./" download="DM_PMLTT_00.ipynb">IPYNB</a>, [PDF](./DM_PMLTT_00.pdf) |

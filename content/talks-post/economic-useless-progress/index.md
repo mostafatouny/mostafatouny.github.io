@@ -5,7 +5,7 @@ summary: AUC Tahrir gathering
 # math: true
 date: "2025-02-07T00:00:00Z"
 cover:
-    image: "featured.jpg"
+  image: "featured.jpg"
 ---
 
 ## Forward
