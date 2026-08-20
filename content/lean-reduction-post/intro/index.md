@@ -14,9 +14,9 @@ Let us begin with a familiar process: selling. A street vendor sells items indiv
 
 ![](./returns-to-scale.png)
 
-The aforementioned sale mechanisms illustrate the notion of _returns to scale_ in microeconomics. It explains how increasing output relate to input increase. When the launches multiple stores, revenue increases. However, the revenue growth in proportion to the added cost of coordination and monitoring is less. The total revenue rises but the average revenue per unit of output declines.
+The aforementioned sale mechanisms illustrate the notion of _returns to scale_ in microeconomics. It explains how increases in output relate to increases in input. When multiple stores launch, revenue increases. However, the revenue growth in proportion to the added cost of coordination and monitoring is less. The total revenue rises but the average revenue per unit of output declines.
 
-Microeconomics conventionally represents the production function $F(K,L)$. For our purposes, we use $C(N) = cN + H(N)$ where $C$ is cost function, $N$ is output units, $c$ is the per-unit cost, and $H(N)$ is human coordination cost. Scalability improves when $H(N)$ grows slowly relative to $N$. Owning many stores corresponds to a high $H(N)$ due to the management hierarchy, and a moderate $c$ due to store rent. The website corresponds to low $H(N)$ due to specialized IT administrators, and low $c$ due to server cost. The average cost per unit of output is less in the website. The _returns to scale_ is increasing. The website enables the business to scale its value delivery.
+Microeconomics conventionally presents the production function $F(K,L)$. For our purposes, we use $C(N) = cN + H(N)$ where $C$ is cost function, $N$ is output units, $c$ is the per-unit cost, and $H(N)$ is human coordination cost. Scalability improves when $H(N)$ grows slowly relative to $N$. Owning many stores corresponds to a high $H(N)$ due to the management hierarchy, and a moderate $c$ due to store rent. The website corresponds to low $H(N)$ due to specialized IT administrators, and low $c$ due to server cost. The average cost per unit of output is less in the website. The _returns to scale_ is increasing. The website enables the business to scale its value delivery.
 
 ## eBay and Mechanism Design
 
